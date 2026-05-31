@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#2a0808"/>
+<title>Book Appointment — SJC Counselling Unit</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232a0808'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='34' font-weight='800' text-anchor='middle' fill='%23c9a84c'%3ES%3C/text%3E%3C/svg%3E"/>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+@font-face {
+  font-family: 'SoulsideBetrayed';
+  src: url('/SoulsideBetrayed-3lazX.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--maroon:#7a1818;--maroon-deep:#2a0808;--maroon-mid:#5a1010;--gold:#c9a84c;--gold-bright:#e8c96a;--cream:#faf6ee;--cream-2:#f1e9d8;--cream-3:#e6dcc6;--white:#ffffff;--ink:#1a0e0e;--ink-soft:#3a2828;--muted:#7a6868;--rule:rgba(122,24,24,0.1);--danger:#c0392b;--ok:#2d7a2d;--shadow:0 4px 20px rgba(42,8,8,0.08);--shadow-lg:0 16px 50px rgba(42,8,8,0.16)}
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-thumb{background:var(--maroon);border-radius:3px}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--rule)}
+.nav-inner{display:flex;align-items:center;height:70px;padding:0 28px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-logo{width:42px;height:42px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+.brand-logo img{width:100%;height:100%;object-fit:contain;padding:2px}
+.brand-name{font-family:'DM Serif Display', cursive;font-weight:400;font-size:1.15rem;color:var(--maroon-deep)}
+.brand-sub{font-size:0.62rem;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
+.nav-links{display:flex;gap:2px;list-style:none;margin-left:auto}
+.nav-links a{color:var(--ink-soft);font-size:0.82rem;font-weight:500;padding:8px 12px;border-radius:6px;transition:all .18s}
+.nav-links a:hover{color:var(--maroon);background:rgba(122,24,24,0.05)}
+.nav-cta{background:var(--maroon-deep)!important;color:var(--cream)!important;border-radius:8px!important;font-weight:600!important;padding:9px 18px!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;margin-left:auto}
+.burger span{display:block;width:22px;height:2px;background:var(--maroon-deep);border-radius:1px}
+
+/* HERO */
+.page-hero{background:linear-gradient(135deg,var(--maroon-deep) 0%,#3a0e0e 100%);padding:60px 0 80px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,0.15),transparent 70%);top:-100px;right:-50px;border-radius:50%}
+.page-hero-eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--gold);font-size:0.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;margin-bottom:16px}
+.page-hero-line{width:24px;height:1px;background:var(--gold)}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(2.2rem,4vw,3.2rem);color:var(--cream);margin-bottom:14px;position:relative;z-index:1}
+.page-hero p{font-size:1rem;color:rgba(250,246,238,0.68);max-width:480px;margin:0 auto;line-height:1.7;position:relative;z-index:1}
+
+/* LAYOUT */
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+.booking-layout{display:grid;grid-template-columns:1fr 380px;gap:40px;padding:60px 0}
+
+/* BOOKING FORM */
+.booking-form{display:flex;flex-direction:column;gap:28px}
+.form-card{background:#fff;border-radius:18px;padding:30px;border:1px solid var(--rule);box-shadow:var(--shadow)}
+.form-card-title{font-weight:700;font-size:1.05rem;color:var(--maroon-deep);margin-bottom:20px;display:flex;align-items:center;gap:10px;padding-bottom:14px;border-bottom:2px solid var(--cream-2)}
+.fg{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.fg:last-child{margin-bottom:0}
+.fg label{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--maroon-mid)}
+.fg input,.fg select,.fg textarea{padding:13px 16px;border:1.5px solid var(--cream-3);border-radius:10px;background:#fff;font-family:'Inter',sans-serif;font-size:1rem;color:var(--ink);outline:none;transition:all .15s;width:100%}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--maroon);box-shadow:0 0 0 4px rgba(122,24,24,0.08)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.session-types{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.session-type{padding:18px;border-radius:12px;border:2px solid var(--cream-3);cursor:pointer;transition:all .18s;background:#fff;text-align:left}
+.session-type:hover{border-color:var(--gold);background:rgba(201,168,76,0.04)}
+.session-type.selected{border-color:var(--maroon);background:rgba(122,24,24,0.04)}
+.session-type-icon{font-size:1.6rem;margin-bottom:8px}
+.session-type-name{font-weight:700;font-size:0.9rem;color:var(--maroon-deep)}
+.session-type-desc{font-size:0.78rem;color:var(--muted);margin-top:3px;line-height:1.4}
+.time-slots{display:flex;flex-wrap:wrap;gap:10px}
+.time-slot{padding:10px 16px;border-radius:8px;border:1.5px solid var(--cream-3);cursor:pointer;font-size:0.88rem;font-weight:600;color:var(--ink-soft);transition:all .15s;background:#fff}
+.time-slot:hover{border-color:var(--maroon);color:var(--maroon)}
+.time-slot.selected{background:var(--maroon-deep);border-color:var(--maroon-deep);color:var(--cream)}
+.time-slot.full{opacity:.45;cursor:not-allowed;background:var(--cream-2)}
+.calendar-strip{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+.calendar-strip::-webkit-scrollbar{display:none}
+.cal-day{flex-shrink:0;width:56px;border-radius:12px;padding:10px 8px;text-align:center;cursor:pointer;border:1.5px solid var(--cream-3);transition:all .18s;background:#fff}
+.cal-day:hover{border-color:var(--gold)}
+.cal-day.selected{background:var(--maroon-deep);border-color:var(--maroon-deep);color:var(--cream)}
+.cal-day.today{border-color:var(--gold)}
+.cal-day-name{font-size:0.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.cal-day.selected .cal-day-name{color:rgba(250,246,238,0.65)}
+.cal-day-num{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--ink);line-height:1}
+.cal-day.selected .cal-day-num{color:var(--gold-bright)}
+.cal-day.today .cal-day-num{color:var(--maroon)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:600;padding:15px 24px;border-radius:10px;cursor:pointer;border:none;letter-spacing:.03em;transition:all .2s;width:100%}
+.btn-maroon{background:linear-gradient(135deg,var(--maroon-deep),var(--maroon));color:var(--cream)}
+.btn-maroon:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(42,8,8,0.3)}
+.btn:disabled{opacity:.55;cursor:not-allowed;transform:none!important}
+
+/* SIDEBAR SUMMARY */
+.booking-sidebar{}
+.summary-card{background:var(--cream);border-radius:18px;padding:28px;border:1px solid var(--rule);position:sticky;top:90px}
+.summary-title{font-weight:700;font-size:1rem;color:var(--maroon-deep);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--cream-3)}
+.summary-item{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
+.summary-item-icon{width:34px;height:34px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;border:1px solid var(--rule)}
+.summary-item-label{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.summary-item-value{font-size:0.92rem;font-weight:600;color:var(--ink);margin-top:2px}
+.summary-divider{border:none;border-top:1px solid var(--cream-3);margin:18px 0}
+.info-box{background:#fff;border-radius:12px;padding:16px;border:1px solid var(--rule);margin-top:18px}
+.info-box-title{font-size:0.82rem;font-weight:700;color:var(--maroon-deep);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.info-box-item{display:flex;align-items:flex-start;gap:8px;font-size:0.82rem;color:var(--muted);margin-bottom:8px}
+.info-box-item svg{flex-shrink:0;color:var(--gold);margin-top:1px}
+
+/* SUCCESS */
+#successView{display:none;text-align:center;padding:60px 0}
+.success-icon{width:90px;height:90px;background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 24px;box-shadow:0 8px 24px rgba(45,122,45,0.2)}
+.success-title{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--maroon-deep);margin-bottom:14px}
+.success-sub{font-size:1rem;color:var(--muted);line-height:1.7;max-width:440px;margin:0 auto 32px}
+
+/* TOAST */
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:500;pointer-events:none;width:calc(100% - 32px);max-width:340px;display:flex;flex-direction:column;gap:8px;align-items:center}
+.toast{background:var(--maroon-deep);color:var(--cream);padding:14px 20px;border-radius:10px;font-size:0.92rem;font-weight:500;box-shadow:0 8px 28px rgba(0,0,0,0.2);border-left:4px solid var(--gold);width:100%;text-align:center;animation:toastIn .25s ease}
+.toast.ok{border-left-color:var(--ok)}.toast.err{border-left-color:var(--danger);background:#4a0e0e}
+@keyframes toastIn{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+/* FOOTER MINI */
+.mini-footer{background:var(--maroon-deep);color:rgba(250,246,238,0.5);text-align:center;padding:22px;font-size:0.8rem;border-top:1px solid rgba(201,168,76,0.15)}
+.mini-footer a{color:var(--gold)}
+
+/* RESPONSIVE */
+@media(max-width:900px){.booking-layout{grid-template-columns:1fr}.booking-sidebar{order:-1}}
+@media(max-width:768px){.nav-links{display:none}.burger{display:flex}.wrap{padding:0 16px}.booking-layout{padding:32px 0}.session-types{grid-template-columns:1fr}}
+@media(max-width:480px){.form-row{grid-template-columns:1fr}}
+</style>
+
+<style>
+.nav-dropdown{position:relative}
+.nav-dropdown:hover .nav-dropdown-menu{opacity:1!important;visibility:visible!important;transform:translateY(0)!important}
+.nav-dropdown:hover .nav-dropdown-toggle svg{transform:rotate(180deg)}
+.nav-dropdown-toggle svg{transition:transform .2s}
+.nav-dropdown-menu a:hover{background:#f1e9d8!important;color:#7a1818!important}
+</style>
+<style id="svg-icon-fixes">
+.session-type-icon svg{stroke:#7a1818;width:28px;height:28px}
+.summary-item-icon svg{stroke:#7a1818;width:18px;height:18px}
+.form-card-title svg{stroke:#7a1818;width:18px;height:18px;vertical-align:middle;margin-right:4px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="brand">
+      <div class="brand-logo"><img src="logo.jpg" alt="SJC Logo"/></div>
+      <div>
+        <div class="brand-name">SJC Counselling Unit</div>
+        <div class="brand-sub">Appointments</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/portal">Student Portal</a>
+            </li>
+      <li><a href="/appointments" class="nav-cta">Book Now</a></li>
+    </ul>
+    <button class="burger" onclick="alert('Menu coming soon')" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="page-hero-eyebrow"><span class="page-hero-line"></span>SJC Counselling Unit<span class="page-hero-line"></span></div>
+    <h1>Book a Counselling Session</h1>
+    <p>Schedule a confidential one-to-one session with our qualified counsellors. Choose a date and time that works for you.</p>
+  </div>
+</div>
+
+<!-- BOOKING FORM -->
+<div class="wrap">
+  <div id="bookingView" class="booking-layout">
+    <div class="booking-form">
+
+      <!-- STEP 1: STUDENT INFO -->
+      <div class="form-card">
+        <div class="form-card-title">Your Information</div>
+        <div class="form-row">
+          <div class="fg"><label>Full Name *</label><input type="text" id="bName" placeholder="Your full name" oninput="updateSummary()"/></div>
+          <div class="fg"><label>Admission No.</label><input type="text" id="bAdmission" placeholder="SJC2024001" oninput="updateSummary()"/></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Grade</label>
+            <select id="bGrade" onchange="updateSummary()">
+              <option value="">Select Grade</option>
+              <option>Grade 6</option><option>Grade 7</option><option>Grade 8</option>
+              <option>Grade 9</option><option>Grade 10</option><option>Grade 11</option>
+              <option>Grade 12</option><option>Grade 13</option>
+            </select>
+          </div>
+          <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" id="bPhone" placeholder="+94 7X XXX XXXX" oninput="updateSummary()"/></div>
+        </div>
+        <div class="fg"><label>Email (optional)</label><input type="email" id="bEmail" placeholder="student@email.com"/></div>
+      </div>
+
+      <!-- STEP 2: SESSION TYPE -->
+      <div class="form-card">
+        <div class="form-card-title">Session Type</div>
+        <div class="session-types">
+          <div class="session-type selected" onclick="selectSessionType(this,'Personal Counselling')">
+            <div class="session-type-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+            <div class="session-type-name">Personal Counselling</div>
+            <div class="session-type-desc">Personal, social, or emotional challenges</div>
+          </div>
+          <div class="session-type" onclick="selectSessionType(this,'Career Guidance')">
+            <div class="session-type-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg></div>
+            <div class="session-type-name">Career Guidance</div>
+            <div class="session-type-desc">Career planning and pathway advice</div>
+          </div>
+          <div class="session-type" onclick="selectSessionType(this,'Academic Support')">
+            <div class="session-type-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+            <div class="session-type-name">Academic Support</div>
+            <div class="session-type-desc">Study skills, exam preparation, results</div>
+          </div>
+          <div class="session-type" onclick="selectSessionType(this,'Mental Wellness')">
+            <div class="session-type-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="session-type-name">Mental Wellness</div>
+            <div class="session-type-desc">Stress, anxiety, or motivation support</div>
+          </div>
+        </div>
+        <input type="hidden" id="selectedSessionType" value="Personal Counselling"/>
+      </div>
+
+      <!-- STEP 3: DATE -->
+      <div class="form-card">
+        <div class="form-card-title">Select Date</div>
+        <div class="calendar-strip" id="calendarStrip"></div>
+        <input type="hidden" id="selectedDate"/>
+      </div>
+
+      <!-- STEP 4: TIME SLOT -->
+      <div class="form-card">
+        <div class="form-card-title">Select Time</div>
+        <div class="time-slots" id="timeSlots"></div>
+        <input type="hidden" id="selectedTime"/>
+      </div>
+
+
+
+      <!-- STEP 5: NOTES -->
+      <div class="form-card">
+        <div class="form-card-title">Additional Notes</div>
+        <div class="fg">
+          <label>What would you like to discuss? (optional)</label>
+          <textarea id="bNotes" rows="4" placeholder="Briefly describe what you'd like to discuss in the session..." style="resize:vertical;font-size:0.95rem;line-height:1.6"></textarea>
+        </div>
+        <p style="font-size:0.8rem;color:var(--muted);margin-top:4px">All information shared is strictly confidential.</p>
+      </div>
+
+      <button class="btn btn-maroon" id="bookBtn" onclick="submitBooking()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Confirm Appointment Booking
+      </button>
+      <div class="auth-err" id="bookErr" style="color:var(--danger);font-size:0.85rem;font-weight:600;text-align:center;min-height:20px;margin-top:8px"></div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="booking-sidebar">
+      <div class="summary-card">
+        <div class="summary-title">Booking Summary</div>
+        <div class="summary-item">
+          <div class="summary-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 12 15 2 8.5"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg></div>
+          <div>
+            <div class="summary-item-label">Student</div>
+            <div class="summary-item-value" id="sumName">—</div>
+          </div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+          <div>
+            <div class="summary-item-label">Session Type</div>
+            <div class="summary-item-value" id="sumType">Personal Counselling</div>
+          </div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div>
+            <div class="summary-item-label">Date</div>
+            <div class="summary-item-value" id="sumDate">Not selected</div>
+          </div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div>
+            <div class="summary-item-label">Time</div>
+            <div class="summary-item-value" id="sumTime">Not selected</div>
+          </div>
+        </div>
+        <hr class="summary-divider"/>
+        <div class="info-box">
+          <div class="info-box-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Important Info
+          </div>
+          <div class="info-box-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Sessions are 40 minutes long
+          </div>
+          <div class="info-box-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Please arrive 5 minutes early
+          </div>
+          <div class="info-box-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Strictly confidential
+          </div>
+          <div class="info-box-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Monday – Friday, 7:50 AM – 1:30 PM
+          </div>
+        </div>
+        <div style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:12px;padding:14px;margin-top:16px;font-size:0.82rem;color:var(--muted)">
+          <strong style="color:var(--maroon-deep)">Need urgent help?</strong><br/>
+          Speak to a teacher or call us directly at<br/>
+          <a href="tel:+94252220000" style="color:var(--maroon);font-weight:700">+94 25 222 XXXX</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUCCESS VIEW -->
+  <div id="successView">
+    <div class="success-icon">✅</div>
+    <h2 class="success-title">Appointment Booked!</h2>
+    <p class="success-sub">Your counselling session has been submitted. You will receive a confirmation soon. Please arrive 5 minutes before your appointment time.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+      <a href="/portal" class="btn btn-maroon" style="width:auto;padding:14px 28px">View in My Portal</a>
+      <a href="/" class="btn" style="width:auto;padding:14px 28px;background:var(--cream-2);color:var(--ink);border-radius:10px">← Back to Home</a>
+    </div>
+  </div>
+</div>
+
+<div class="mini-footer">
+  &copy; 2026 SJC Counselling Unit — <a href="/">Back to Home</a> · <a href="/portal">Student Portal</a>
+            &nbsp;·&nbsp; Developed by <span style="color:var(--gold);font-weight:700">JAKE</span>
+</div>
+
+<div id="toast"></div>
+
+<script>
+
+
+// Calendar
+let selectedDateVal = '';
+let selectedTimeVal = '';
+let selectedSessionVal = 'Personal Counselling';
+
+function buildCalendar() {
+  const strip = document.getElementById('calendarStrip');
+  const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const today = new Date();
+  for (let i = 0; i < 14; i++) {
+    const d = new Date(today); d.setDate(today.getDate() + i + 1);
+    if (d.getDay() === 0 || d.getDay() === 6) continue; // skip weekends
+    const el = document.createElement('div');
+    el.className = 'cal-day';
+    el.innerHTML = `<div class="cal-day-name">${days[d.getDay()]}</div><div class="cal-day-num">${d.getDate()}</div>`;
+    const iso = d.toISOString().slice(0, 10);
+    el.onclick = () => selectDate(el, iso, d);
+    strip.appendChild(el);
+  }
+}
+
+function selectDate(el, iso, d) {
+  document.querySelectorAll('.cal-day').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedDateVal = iso;
+  document.getElementById('selectedDate').value = iso;
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  document.getElementById('sumDate').textContent = d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+  buildTimeSlots(iso);
+}
+
+function buildTimeSlots(date) {
+  const slots = document.getElementById('timeSlots');
+  slots.innerHTML = '';
+  const times = ['7:50 AM','8:30 AM','9:10 AM','9:50 AM','10:50 AM','11:30 AM','12:10 PM','12:50 PM'];
+  times.forEach(t => {
+    const el = document.createElement('button');
+    el.className = 'time-slot'; el.textContent = t;
+    el.onclick = () => selectTime(el, t);
+    slots.appendChild(el);
+  });
+}
+
+function selectTime(el, time) {
+  document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedTimeVal = time;
+  document.getElementById('selectedTime').value = time;
+  document.getElementById('sumTime').textContent = time;
+}
+
+function selectSessionType(el, type) {
+  document.querySelectorAll('.session-type').forEach(s => s.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedSessionVal = type;
+  document.getElementById('selectedSessionType').value = type;
+  document.getElementById('sumType').textContent = type;
+}
+
+function updateSummary() {
+  const n = document.getElementById('bName').value.trim();
+  document.getElementById('sumName').textContent = n || '—';
+}
+
+async function submitBooking() {
+  const name = document.getElementById('bName').value.trim();
+  const phone = document.getElementById('bPhone').value.trim();
+  const errEl = document.getElementById('bookErr');
+  const btn = document.getElementById('bookBtn');
+  errEl.textContent = '';
+  if (!name) { errEl.textContent = 'Please enter your name.'; return; }
+  if (!phone) { errEl.textContent = 'Please enter your phone number.'; return; }
+  if (!selectedDateVal) { errEl.textContent = 'Please select a date.'; return; }
+  if (!selectedTimeVal) { errEl.textContent = 'Please select a time slot.'; return; }
+  btn.disabled = true; btn.textContent = 'Booking...';
+  const data = {
+    name, admissionNumber: document.getElementById('bAdmission').value.trim(),
+    grade: document.getElementById('bGrade').value, phone,
+    email: document.getElementById('bEmail').value.trim(),
+    type: selectedSessionVal, date: selectedDateVal,
+    time: selectedTimeVal, notes: document.getElementById('bNotes').value.trim()
+  };
+  try {
+    const r = await fetch('/api/appointments', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data) });
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.error || 'Booking failed');
+    document.getElementById('bookingView').style.display = 'none';
+    document.getElementById('successView').style.display = 'block';
+    window.scrollTo({top:0,behavior:'smooth'});
+  } catch(e) { errEl.textContent = e.message; btn.disabled = false; btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Confirm Appointment Booking'; }
+}
+
+function showToast(msg, type) {
+  const t = document.getElementById('toast'); const d = document.createElement('div');
+  d.className = 'toast' + (type ? ' ' + type : ''); d.textContent = msg;
+  t.appendChild(d); setTimeout(() => d.remove(), 3500);
+}
+
+buildCalendar();
+buildTimeSlots(null);
+</script>
+</body>
+</html>

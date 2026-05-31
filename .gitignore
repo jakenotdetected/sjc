@@ -1,0 +1,5 @@
+.claude/
+*.zip
+__pycache__/
+*.bak
+.env

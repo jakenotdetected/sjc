@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SJC COUNSELLING & CAREER GUIDANCE UNIT — St. Joseph's College, Anuradhapura</title>
+<meta name="description" content="Empowering Josephians with counselling, career guidance, leadership and future opportunities."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&family=Noto+Emoji&display=swap" rel="stylesheet"/>
+<style>
+@font-face {
+  font-family: 'SoulsideBetrayed';
+  src: url('/SoulsideBetrayed-3lazX.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --maroon:#7a1818;
+  --maroon-deep:#2a0808;
+  --maroon-mid:#5a1010;
+  --maroon-light:#9c2424;
+  --maroon-soft:#b03030;
+  --gold:#c9a84c;
+  --gold-bright:#e8c96a;
+  --gold-dark:#a07830;
+  --gold-pale:#f5ecc8;
+  --cream:#faf6ee;
+  --cream-2:#f1e9d8;
+  --cream-3:#e6dcc6;
+  --ink:#1a0e0e;
+  --ink-soft:#3a2828;
+  --muted:#7a6868;
+  --muted-light:#a89898;
+  --white:#ffffff;
+  --rule:rgba(122,24,24,0.1);
+  --rule-light:rgba(122,24,24,0.06);
+  --shadow:0 4px 28px rgba(42,8,8,0.1);
+  --shadow-lg:0 20px 60px rgba(42,8,8,0.18);
+  --r:20px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans','Noto Emoji',sans-serif;color:var(--ink);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:rgba(201,168,76,0.3);color:var(--maroon-deep)}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-thumb{background:var(--maroon);border-radius:3px}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* ── TOPBAR ── */
+.topbar{background:var(--maroon-deep);color:rgba(250,246,238,0.6);font-size:0.76rem;padding:9px 0;letter-spacing:.01em}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.topbar-left{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.topbar-left span{display:inline-flex;align-items:center;gap:7px}
+.topbar-right{display:flex;align-items:center;gap:16px}
+.topbar-right a{color:var(--gold);font-weight:500;font-size:0.74rem;letter-spacing:.06em;text-transform:uppercase;transition:color .15s}
+.topbar-right a:hover{color:var(--gold-bright)}
+.t-sep{opacity:.25;margin:0 2px}
+
+/* ── LAYOUT ── */
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+@media(max-width:768px){.wrap{padding:0 18px}}
+
+/* ── NAV ── */
+nav.main{position:sticky;top:0;z-index:100;background:rgba(250,246,238,0.95);backdrop-filter:blur(20px) saturate(140%);border-bottom:1px solid var(--rule);transition:box-shadow .3s}
+nav.main.scrolled{box-shadow:0 2px 24px rgba(42,8,8,0.1)}
+.nav-inner{display:flex;align-items:center;height:72px;gap:12px}
+.brand{display:flex;align-items:center;gap:14px;flex-shrink:0;text-decoration:none}
+.brand-logo-wrap{width:46px;height:46px;border-radius:8px;overflow:hidden;background:#fff;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.brand-logo-wrap img{width:100%;height:100%;object-fit:contain;padding:3px}
+.brand-name{font-family:'DM Serif Display', cursive;font-weight:400;font-size:1.12rem;color:var(--maroon-deep);line-height:1.2;letter-spacing:.01em}
+.brand-sub{font-size:0.6rem;color:var(--muted);letter-spacing:.18em;text-transform:uppercase;font-weight:500;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:1px;list-style:none;margin-left:auto}
+.nav-links a{color:var(--ink-soft);font-size:0.8rem;font-weight:500;padding:7px 11px;border-radius:6px;transition:all .18s;white-space:nowrap;letter-spacing:.01em}
+.nav-links a:hover{color:var(--maroon);background:rgba(122,24,24,0.05)}
+.nav-links a.active{color:var(--maroon);font-weight:600}
+.nav-cta{margin-left:8px;background:var(--maroon-deep)!important;color:var(--gold-pale)!important;padding:10px 20px!important;border-radius:7px!important;font-weight:600!important;font-size:0.79rem!important;letter-spacing:.04em;transition:all .18s!important}
+.nav-cta:hover{background:var(--maroon)!important;transform:translateY(-1px)!important}
+
+/* ── PORTAL DROPDOWN ── */
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle{display:flex;align-items:center;gap:5px;color:var(--ink-soft);font-size:0.8rem;font-weight:500;padding:7px 11px;border-radius:6px;transition:all .18s;white-space:nowrap;letter-spacing:.01em;cursor:pointer;background:none;border:none;font-family:inherit}
+.nav-dropdown-toggle:hover,.nav-dropdown:hover .nav-dropdown-toggle{color:var(--maroon);background:rgba(122,24,24,0.05)}
+.nav-dropdown-toggle svg{transition:transform .2s}
+.nav-dropdown:hover .nav-dropdown-toggle svg{transform:rotate(180deg)}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid var(--rule-light);border-radius:14px;box-shadow:0 12px 40px rgba(42,8,8,0.14);padding:8px;min-width:200px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .22s cubic-bezier(.34,1.56,.64,1);z-index:200}
+.nav-dropdown:hover .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.nav-dropdown-menu a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:9px;font-size:0.82rem;font-weight:500;color:var(--ink-soft);transition:all .15s;text-decoration:none}
+.nav-dropdown-menu a:hover{background:var(--cream-2);color:var(--maroon)}
+.nav-dropdown-menu a svg{flex-shrink:0;opacity:.7}
+.nav-dropdown-menu a:hover svg{opacity:1}
+.nav-drop-divider{height:1px;background:var(--rule-light);margin:6px 0}
+.nav-drop-label{font-size:0.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:6px 14px 2px}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;margin-left:auto}
+.burger span{display:block;width:22px;height:1.5px;background:var(--maroon-deep);border-radius:1px;transition:all .25s}
+.mob-nav{display:none;position:fixed;inset:0;background:var(--cream);z-index:200;flex-direction:column;padding:28px;overflow-y:auto}
+.mob-nav.open{display:flex}
+.mob-nav-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px}
+.mob-close{font-size:1.6rem;background:none;border:none;cursor:pointer;color:var(--maroon-deep);width:44px;height:44px;display:flex;align-items:center;justify-content:center}
+.mob-links{display:flex;flex-direction:column;gap:2px}
+.mob-links a{padding:15px 18px;border-radius:10px;font-size:1rem;font-weight:500;color:var(--ink);transition:all .15s}
+.mob-links a:hover,.mob-links a.active{background:var(--cream-2);color:var(--maroon)}
+.mob-cta-link{margin-top:24px;padding:18px;background:var(--maroon-deep);color:var(--gold-pale)!important;border-radius:12px;text-align:center;font-size:1rem;font-weight:700;display:block;letter-spacing:.04em}
+.mob-drop-label{font-size:0.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:12px 18px 4px}
+.mob-drop-divider{height:1px;background:var(--rule-light);margin:8px 0}
+
+/* ── HERO ── */
+.hero{position:relative;background:var(--maroon-deep);min-height:95vh;display:flex;align-items:center;overflow:hidden}
+.hero-gradient{position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 75% 40%,rgba(122,24,24,0.6) 0%,transparent 60%),radial-gradient(ellipse 50% 60% at 20% 80%,rgba(201,168,76,0.1) 0%,transparent 60%),linear-gradient(160deg,#110202 0%,#2a0808 45%,#3d0c0c 100%)}
+.hero-noise{position:absolute;inset:0;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:256px}
+.hero-line-art{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:520px;height:520px;opacity:0.05}
+.hero-content{position:relative;z-index:2;padding:120px 0 140px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;width:100%}
+.hero-label{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px}
+.hero-label-line{width:28px;height:1px;background:var(--gold)}
+.hero-label-text{font-size:0.7rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(2.6rem,4.5vw,4.2rem);line-height:1.08;color:var(--cream);letter-spacing:-.02em;margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--gold-bright)}
+.hero-sub{font-size:1.05rem;color:rgba(250,246,238,0.62);line-height:1.8;max-width:480px;margin-bottom:44px;font-weight:300}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:600;padding:13px 24px;border-radius:7px;cursor:pointer;border:none;letter-spacing:.05em;text-transform:uppercase;transition:all .22s;white-space:nowrap;text-decoration:none}
+.btn-gold{background:linear-gradient(135deg,var(--gold-bright),var(--gold));color:var(--maroon-deep);box-shadow:0 4px 20px rgba(201,168,76,0.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,168,76,0.5)}
+.btn-outline{background:rgba(255,255,255,0.07);color:var(--cream);border:1px solid rgba(255,255,255,0.18)}
+.btn-outline:hover{border-color:rgba(250,246,238,0.5);background:rgba(255,255,255,0.12)}
+.btn-maroon{background:var(--maroon-deep);color:var(--gold-pale)}
+.btn-maroon:hover{background:var(--maroon);transform:translateY(-1px)}
+.btn-ghost-dark{background:transparent;color:var(--maroon-deep);border:1.5px solid var(--maroon-deep)}
+.btn-ghost-dark:hover{background:var(--maroon-deep);color:var(--cream)}
+.btn-lg{padding:15px 30px;font-size:0.86rem}
+.btn-sm{padding:9px 16px;font-size:0.76rem}
+
+/* hero right panel */
+.hero-panel{display:flex;flex-direction:column;gap:16px}
+.hero-stat{background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.15);border-radius:16px;padding:22px 24px;display:flex;align-items:center;gap:18px;backdrop-filter:blur(8px);transition:all .3s}
+.hero-stat:hover{background:rgba(201,168,76,0.07);border-color:rgba(201,168,76,0.35);transform:translateX(5px)}
+.hero-stat-icon{width:46px;height:46px;background:rgba(201,168,76,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;font-family:'Noto Emoji',sans-serif}
+.hero-stat-val{font-family:'DM Serif Display',serif;font-size:1.9rem;color:var(--cream);line-height:1}
+.hero-stat-plus{color:var(--gold);font-size:1.4rem}
+.hero-stat-desc{font-size:0.78rem;color:rgba(250,246,238,0.5);margin-top:2px;font-weight:300}
+.scroll-hint{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;z-index:2;animation:scrollBounce 2.2s ease-in-out infinite}
+.scroll-hint span{font-size:0.62rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,246,238,0.3)}
+.scroll-bar{width:1px;height:40px;background:linear-gradient(to bottom,rgba(201,168,76,0.5),transparent)}
+@keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+/* ── QUICK CARDS ── */
+.quick-wrap{margin-top:-64px;position:relative;z-index:10}
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.qcard{background:#fff;border-radius:18px;padding:28px 22px;box-shadow:0 12px 48px rgba(42,8,8,0.13);border:1px solid var(--rule-light);display:flex;flex-direction:column;align-items:flex-start;gap:14px;text-decoration:none;color:inherit;transition:all .3s cubic-bezier(.34,1.56,.64,1)}
+.qcard:hover{transform:translateY(-8px);box-shadow:0 24px 64px rgba(42,8,8,0.2);border-color:rgba(201,168,76,0.3)}
+.qcard-icon{width:50px;height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-family:'Noto Emoji',sans-serif}
+.qi-1{background:linear-gradient(135deg,#fde8cc,#f8d4a8)}
+.qi-2{background:linear-gradient(135deg,#e8eef8,#d4e2f4)}
+.qi-3{background:linear-gradient(135deg,#fce4ec,#f8bbd0)}
+.qi-4{background:linear-gradient(135deg,#e8f4ee,#d4ead8)}
+.qcard-title{font-weight:600;font-size:0.98rem;color:var(--maroon-deep);line-height:1.25}
+.qcard-desc{font-size:0.8rem;color:var(--muted);line-height:1.5;margin-top:2px}
+.qcard-arrow{width:32px;height:32px;border-radius:50%;background:var(--cream-2);display:flex;align-items:center;justify-content:center;margin-top:auto;color:var(--maroon);transition:all .2s}
+.qcard:hover .qcard-arrow{background:var(--maroon-deep);color:var(--gold);transform:translateX(4px)}
+
+/* ── SECTIONS ── */
+section{padding:108px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:0.68rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--maroon);margin-bottom:14px}
+.eyebrow-line{width:22px;height:1.5px;background:var(--gold)}
+.section-title{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(1.9rem,3.2vw,2.7rem);line-height:1.18;color:var(--maroon-deep);margin-bottom:14px;letter-spacing:-.015em}
+.section-sub{font-size:0.95rem;color:var(--muted);line-height:1.75;max-width:540px;font-weight:300}
+.sh{margin-bottom:60px}
+.sh.center{text-align:center}
+.sh.center .eyebrow{justify-content:center;margin:0 auto 14px}
+.sh.center .section-sub{margin:0 auto}
+
+/* ── WHY ── */
+.why{background:linear-gradient(160deg,var(--maroon-deep) 0%,#3a0e0e 50%,var(--maroon-mid) 100%);position:relative;overflow:hidden}
+.why::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(60deg,rgba(201,168,76,0.03) 0,rgba(201,168,76,0.03) 1px,transparent 1px,transparent 44px),repeating-linear-gradient(-60deg,rgba(201,168,76,0.02) 0,rgba(201,168,76,0.02) 1px,transparent 1px,transparent 44px)}
+.why-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
+.why .section-title{color:var(--cream)}
+.why .section-sub{color:rgba(250,246,238,0.6)}
+.why .eyebrow{color:var(--gold)}
+.why-points{display:flex;flex-direction:column;gap:18px;margin-top:36px}
+.why-pt{display:flex;gap:14px;align-items:flex-start;color:rgba(250,246,238,0.82);font-size:0.93rem;line-height:1.6}
+.why-pt-dot{width:24px;height:24px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold);font-size:0.72rem;margin-top:1px}
+.stats-quad{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.sq-card{background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.12);border-radius:18px;padding:28px 24px;text-align:center;transition:all .28s}
+.sq-card:hover{background:rgba(201,168,76,0.07);border-color:rgba(201,168,76,0.3);transform:translateY(-4px)}
+.sq-icon{font-size:1.8rem;margin-bottom:12px;font-family:'Noto Emoji',sans-serif}
+.sq-num{font-family:'DM Serif Display',serif;font-size:2.8rem;color:var(--gold-bright);line-height:1;display:block}
+.sq-suf{color:var(--gold);font-size:2rem}
+.sq-label{font-size:0.8rem;color:rgba(250,246,238,0.5);margin-top:6px;line-height:1.45}
+
+/* ── SERVICES ── */
+.services-bg{background:var(--cream)}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.srv-card{background:#fff;border-radius:18px;padding:34px 26px;box-shadow:var(--shadow);border:1px solid var(--rule-light);transition:all .3s;position:relative;overflow:hidden}
+.srv-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--maroon-deep),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.srv-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.srv-card:hover::after{transform:scaleX(1)}
+.srv-icon{width:56px;height:56px;background:linear-gradient(135deg,var(--cream-2),var(--cream-3));border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:18px;transition:all .25s;font-family:'Noto Emoji',sans-serif}
+.srv-card:hover .srv-icon{background:linear-gradient(135deg,var(--maroon-deep),var(--maroon));transform:scale(1.06);color:var(--gold)}.srv-icon svg{transition:stroke .25s}.srv-card:hover .srv-icon svg{stroke:var(--gold)}
+.srv-title{font-weight:600;font-size:1rem;color:var(--maroon-deep);margin-bottom:10px;line-height:1.3}
+.srv-desc{font-size:0.84rem;color:var(--muted);line-height:1.68}
+.srv-link{display:inline-flex;align-items:center;gap:6px;font-size:0.79rem;font-weight:600;color:var(--maroon);margin-top:18px;transition:all .18s;letter-spacing:.03em}
+.srv-card:hover .srv-link{gap:10px;color:var(--gold-dark)}
+
+/* ── CTA BANNER ── */
+.cta-wrap{padding:80px 0;background:var(--white)}
+.cta-inner{background:linear-gradient(135deg,var(--maroon-deep) 0%,#4a0e0e 55%,var(--maroon-mid) 100%);border-radius:24px;padding:68px 60px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;position:relative;overflow:hidden}
+.cta-inner::before{content:'';position:absolute;top:-100px;right:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(201,168,76,0.2),transparent 70%);border-radius:50%;pointer-events:none}
+.cta-inner::after{content:'';position:absolute;bottom:-80px;left:40px;width:200px;height:200px;background:radial-gradient(circle,rgba(122,24,24,0.4),transparent 70%);border-radius:50%;pointer-events:none}
+.cta-title{font-family:'DM Serif Display',serif;font-size:2.3rem;color:var(--cream);line-height:1.2;margin-bottom:12px;position:relative;z-index:1}
+.cta-sub{font-size:0.98rem;color:rgba(250,246,238,0.65);line-height:1.7;position:relative;z-index:1}
+.cta-btns{display:flex;flex-direction:column;gap:12px;flex-shrink:0;position:relative;z-index:1}
+
+/* ── EVENTS ── */
+.events-bg{background:var(--cream-2)}
+.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ev-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--rule-light);transition:all .28s}
+.ev-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.ev-header{background:linear-gradient(135deg,var(--maroon-deep),var(--maroon-mid));padding:20px 22px;display:flex;align-items:center;gap:16px}
+.ev-day{font-family:'DM Serif Display',serif;font-size:2.6rem;color:var(--gold-bright);line-height:1}
+.ev-month-yr{display:flex;flex-direction:column}
+.ev-month{font-size:0.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,246,238,0.65)}
+.ev-yr{font-size:0.75rem;color:rgba(250,246,238,0.4)}
+.ev-body{padding:20px 22px}
+.ev-tag{display:inline-block;padding:3px 10px;background:var(--cream-2);color:var(--maroon);border-radius:5px;font-size:0.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.ev-title{font-weight:600;font-size:0.97rem;color:var(--maroon-deep);margin-bottom:7px;line-height:1.35}
+.ev-meta{font-size:0.78rem;color:var(--muted);display:flex;align-items:center;gap:6px;margin-bottom:12px}
+.ev-desc{font-size:0.83rem;color:var(--ink-soft);line-height:1.62}
+.ev-reg{display:inline-flex;align-items:center;gap:6px;font-size:0.79rem;font-weight:600;color:var(--maroon);margin-top:14px;padding:9px 16px;border:1.5px solid var(--maroon);border-radius:7px;transition:all .18s;letter-spacing:.04em;text-transform:uppercase}
+.ev-reg:hover{background:var(--maroon-deep);color:var(--gold-pale);border-color:var(--maroon-deep)}
+
+/* ── SHOWCASE ── */
+.showcase{background:var(--white);padding:108px 0}
+.sc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
+.sc-card{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--rule-light);transition:all .34s cubic-bezier(.34,1.56,.64,1);background:#fff}
+.sc-card:hover{transform:translateY(-10px) scale(1.015);box-shadow:0 30px 80px rgba(42,8,8,0.2)}
+.sc-visual{height:190px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.scv-1{background:linear-gradient(135deg,#1a0404,#2a0808,#3d0c0c)}
+.scv-2{background:linear-gradient(135deg,#1a0a00,#3d1800,#5a2a00)}
+.scv-3{background:linear-gradient(135deg,#0a0a1a,#1e1e3d,#2c2c5a)}
+.scv-4{background:linear-gradient(135deg,#1a0808,#3a0e0e,#5a1414)}
+.scv-5{background:linear-gradient(135deg,#0d1a10,#1a3520,#264830)}
+.scv-6{background:linear-gradient(135deg,#1a0e00,#3d2200,#5a3600)}
+.sc-svg{width:130px;height:130px;filter:drop-shadow(0 6px 20px rgba(0,0,0,0.3))}
+.sc-body{padding:20px 22px}
+.sc-tag{display:inline-block;padding:3px 10px;background:var(--cream-2);color:var(--maroon);border-radius:5px;font-size:0.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:9px}
+.sc-title{font-weight:600;font-size:0.98rem;color:var(--maroon-deep);margin-bottom:6px;line-height:1.3}
+.sc-desc{font-size:0.81rem;color:var(--muted);line-height:1.6}
+.sc-link{display:inline-flex;align-items:center;gap:5px;font-size:0.79rem;font-weight:600;color:var(--maroon);margin-top:12px;transition:all .18s}
+.sc-card:hover .sc-link{gap:9px;color:var(--gold-dark)}
+
+/* ── RESOURCES ── */
+.res-strip{background:var(--cream-2);padding:80px 0}
+.res-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:36px}
+.res-chip{background:#fff;border:1.5px solid var(--rule-light);border-radius:14px;padding:20px 12px;text-align:center;transition:all .22s;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:8px;color:inherit}
+.res-chip:hover{border-color:rgba(201,168,76,0.5);background:rgba(201,168,76,0.05);transform:translateY(-3px);box-shadow:0 8px 28px rgba(42,8,8,0.08)}
+.res-chip-icon{font-size:1.8rem;font-family:'Noto Emoji',sans-serif}
+.res-chip-label{font-size:0.76rem;font-weight:600;color:var(--maroon-deep);line-height:1.3}
+
+/* ── TESTIMONIALS ── */
+.testi-bg{background:var(--white)}
+.testi-carousel{position:relative;overflow:hidden}
+.testi-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.testi-slide{flex:0 0 100%}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.testi-card{background:var(--cream);border-radius:18px;padding:30px 26px;border:1px solid var(--rule-light);transition:all .25s}
+.testi-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.testi-q{font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--gold);line-height:1;margin-bottom:10px;opacity:.7;font-style:italic}
+.testi-text{font-size:0.93rem;line-height:1.72;color:var(--ink-soft);margin-bottom:20px;font-style:italic;font-weight:300}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--maroon-deep),var(--maroon));color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0;font-family:'DM Serif Display',serif}
+.testi-name{font-weight:600;font-size:0.88rem;color:var(--maroon-deep)}
+.testi-role{font-size:0.74rem;color:var(--muted);margin-top:2px}
+.testi-stars{color:var(--gold);font-size:0.88rem;margin-bottom:12px;letter-spacing:3px;font-family:serif}
+.testi-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:40px}
+.testi-dot{width:28px;height:2.5px;background:var(--cream-3);border:none;cursor:pointer;border-radius:2px;transition:all .25s;padding:0}
+.testi-dot.active{background:var(--maroon);width:44px}
+.testi-btn{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--rule);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--maroon);transition:all .18s}
+.testi-btn:hover{background:var(--maroon-deep);border-color:var(--maroon-deep);color:var(--gold)}
+
+/* ── FOOTER ── */
+footer{background:var(--maroon-deep);color:rgba(250,246,238,0.6);padding:72px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:56px}
+.footer-brand-row{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.footer-logo{width:48px;height:48px;border-radius:8px;background:#fff;overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.footer-logo img{width:100%;height:100%;object-fit:contain;padding:3px}
+.footer-brand-name{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--cream);line-height:1.25}
+.footer-brand-sub{font-size:0.62rem;color:rgba(250,246,238,0.4);letter-spacing:.15em;text-transform:uppercase;margin-top:2px}
+.footer-desc{font-size:0.84rem;line-height:1.72;color:rgba(250,246,238,0.5)}
+.footer-social{display:flex;gap:10px;margin-top:20px}
+.footer-social a{width:36px;height:36px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:7px;display:flex;align-items:center;justify-content:center;color:rgba(250,246,238,0.5);font-size:0.85rem;transition:all .18s}
+.footer-social a:hover{background:var(--gold);border-color:var(--gold);color:var(--maroon-deep)}
+.footer-col-title{font-size:0.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:0.83rem;color:rgba(250,246,238,0.5);transition:color .15s;display:flex;align-items:center;gap:7px}
+.footer-links a::before{content:'›';opacity:.4}
+.footer-links a:hover{color:var(--gold)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:9px;margin-bottom:12px;font-size:0.83rem;color:rgba(250,246,238,0.5)}
+.footer-contact-icon{color:var(--gold);flex-shrink:0;margin-top:2px;font-style:normal;display:flex;align-items:flex-start}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding:22px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.76rem;color:rgba(250,246,238,0.28)}
+.footer-bottom a{color:var(--gold);transition:color .15s}
+.footer-credit span{color:var(--gold)}
+
+/* ── HERO ART ── */
+.hero-right{display:flex;flex-direction:column;gap:20px}
+.hero-art{display:flex;align-items:center;justify-content:center;perspective:1000px}
+.hero-art svg{width:100%;max-width:400px;height:auto;filter:drop-shadow(0 8px 40px rgba(0,0,0,0.35));animation:heroFloat 7s ease-in-out infinite}
+@media(max-width:1024px){.hero-art svg{max-width:520px}}
+
+/* ── HERO ANIMATED LINE-SKETCH ART ── */
+/* whole scene gently floats + tilts in 3D */
+@keyframes heroFloat{
+  0%,100%{transform:translateY(0) rotateX(0deg) rotateY(0deg)}
+  25%{transform:translateY(-8px) rotateX(1.5deg) rotateY(-1.5deg)}
+  50%{transform:translateY(-4px) rotateX(0deg) rotateY(1deg)}
+  75%{transform:translateY(-10px) rotateX(-1deg) rotateY(-0.5deg)}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-art svg,.bob-1,.bob-2,.bob-3,.bob-4,.twinkle,.bubble-a,.bubble-b,
+  .flag,.q-pulse,.hero-line-art,.sketch,.hero-line-art .bg-stroke{animation:none!important}
+  .sketch,.hero-line-art .bg-stroke{stroke-dashoffset:0!important}
+}
+
+/* self-drawing line strokes */
+@keyframes sketchDraw{
+  from{stroke-dashoffset:var(--len,1000)}
+  to{stroke-dashoffset:0}
+}
+.sketch{
+  stroke-dasharray:var(--len,1000);
+  stroke-dashoffset:var(--len,1000);
+  animation:sketchDraw 2s cubic-bezier(.6,0,.2,1) forwards;
+}
+.sketch.d1{animation-delay:.1s}
+.sketch.d2{animation-delay:.4s}
+.sketch.d3{animation-delay:.7s}
+.sketch.d4{animation-delay:1s}
+.sketch.d5{animation-delay:1.3s}
+.sketch.d6{animation-delay:1.6s}
+
+/* characters bob at staggered offsets */
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.bob-1{transform-box:fill-box;transform-origin:center;animation:bob 3.2s ease-in-out infinite}
+.bob-2{transform-box:fill-box;transform-origin:center;animation:bob 3.6s ease-in-out infinite .4s}
+.bob-3{transform-box:fill-box;transform-origin:center;animation:bob 3.0s ease-in-out infinite .8s}
+.bob-4{transform-box:fill-box;transform-origin:center;animation:bob 3.8s ease-in-out infinite .2s}
+
+/* twinkling decorative sparkles */
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.25)}}
+.twinkle{transform-box:fill-box;transform-origin:center;animation:twinkle 2.4s ease-in-out infinite}
+.twinkle.t2{animation-delay:.6s;animation-duration:3s}
+.twinkle.t3{animation-delay:1.1s;animation-duration:2.7s}
+.twinkle.t4{animation-delay:.3s;animation-duration:3.4s}
+
+/* floating speech bubbles */
+@keyframes bubbleFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.bubble-a{transform-box:fill-box;transform-origin:center;animation:bubbleFloat 4s ease-in-out infinite}
+.bubble-b{transform-box:fill-box;transform-origin:center;animation:bubbleFloat 3.4s ease-in-out infinite .5s}
+
+/* waving flag */
+@keyframes flagWave{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.82) skewY(-3deg)}}
+.flag{transform-box:fill-box;transform-origin:left center;animation:flagWave 2.6s ease-in-out infinite}
+
+/* pulsing question mark */
+@keyframes qPulse{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.18)}}
+.q-pulse{transform-box:fill-box;transform-origin:center;animation:qPulse 1.8s ease-in-out infinite}
+
+/* slowly rotating + self-drawing background geometry */
+.hero-line-art{animation:bgSpin 90s linear infinite;transform-origin:center}
+@keyframes bgSpin{from{transform:translateY(-50%) rotate(0deg)}to{transform:translateY(-50%) rotate(360deg)}}
+.hero-line-art .bg-stroke{
+  stroke-dasharray:1600;stroke-dashoffset:1600;
+  animation:sketchDraw 3.5s ease-out forwards;
+}
+.hero-line-art .bg-stroke.bd2{animation-delay:.5s}
+.hero-line-art .bg-stroke.bd3{animation-delay:1s}
+.hero-line-art .bg-stroke.bd4{animation-delay:1.5s}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:.08s}.rd2{transition-delay:.16s}.rd3{transition-delay:.24s}.rd4{transition-delay:.32s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero-content{grid-template-columns:1fr;gap:48px}
+  .hero-panel{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .hero-stat{flex-direction:column;align-items:center;text-align:center;padding:16px}
+  .quick-grid{grid-template-columns:repeat(2,1fr)}
+  .why-inner{grid-template-columns:1fr}
+  .srv-grid{grid-template-columns:repeat(2,1fr)}
+  .ev-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .cta-inner{grid-template-columns:1fr;gap:28px;padding:48px 40px}
+  .cta-btns{flex-direction:row;flex-wrap:wrap}
+  .res-grid{grid-template-columns:repeat(3,1fr)}
+  .sc-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .topbar-right{display:none}
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  .hero{min-height:82vh}
+  .hero-content{padding:80px 0 100px}
+  .hero-panel{grid-template-columns:1fr 1fr}
+  section{padding:72px 0}
+  .quick-wrap{margin-top:-44px}
+  .srv-grid{grid-template-columns:1fr}
+  .ev-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .cta-inner{border-radius:18px;padding:36px 24px}
+  .cta-title{font-size:1.7rem}
+  .res-grid{grid-template-columns:repeat(3,1fr)}
+  .sc-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero-panel{grid-template-columns:1fr}
+  .quick-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .res-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-btns{flex-direction:column}
+  .hero-btns .btn{justify-content:center}
+  .cta-btns{flex-direction:column}
+}
+</style>
+  <link rel="icon" type="image/png" href="/logo.jpg"/>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        St. Joseph's College, Anuradhapura
+      </span>
+      <span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@sjc.lk
+      </span>
+    </div>
+    <div class="topbar-right">
+      <a href="/teacher/">Teacher Portal</a>
+      <span class="t-sep">|</span>
+      <a href="/portal">Student Login</a>
+      <span class="t-sep">|</span>
+      <a href="/admin/">Admin</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="main" id="mainNav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <a href="/" class="brand">
+        <div class="brand-logo-wrap"><img src="logo.jpg" alt="SJC Logo"/></div>
+        <div>
+          <div class="brand-name">SJC Counselling Unit</div>
+          <div class="brand-sub">St. Joseph's College · Anuradhapura</div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/careers">Careers</a></li>
+        <li><a href="/resources">Wellness</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/parents">Parents</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle">
+            Portals
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <div class="nav-drop-label">Students</div>
+            <a href="/portal">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Student Portal
+            </a>
+            <div class="nav-drop-divider"></div>
+            <div class="nav-drop-label">Staff</div>
+            <a href="/teacher/">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              Teacher Portal
+            </a>
+            <a href="/admin/">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Admin Panel
+            </a>
+          </div>
+        </li>
+        <li><a href="/appointments" class="nav-cta">Book Appointment</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mob-nav" id="mobNav">
+  <div class="mob-nav-head">
+    <div class="brand">
+      <div class="brand-logo-wrap" style="width:42px;height:42px"><img src="logo.jpg" alt="SJC"/></div>
+      <div class="brand-name" style="font-size:1rem;margin-left:10px">SJC Counselling</div>
+    </div>
+    <button class="mob-close" id="mobClose">&#x2715;</button>
+  </div>
+  <div class="mob-links">
+    <a href="/" class="active">Home</a>
+    <a href="/about">About Unit</a>
+    <a href="/services">Services</a>
+    <a href="/careers">Career Guidance</a>
+    <a href="/resources">Mental Wellness</a>
+    <a href="/events">Events</a>
+    <div class="mob-drop-label">Portals</div>
+    <a href="/portal" style="padding-left:28px">Student Portal</a>
+    <a href="/teacher/" style="padding-left:28px">Teacher Portal</a>
+    <a href="/admin/" style="padding-left:28px">Admin Panel</a>
+    <div class="mob-drop-divider"></div>
+    <a href="/parents">Parent Resources</a>
+  </div>
+  <a href="/appointments" class="mob-cta-link">Book Counselling Session</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-noise"></div>
+  <div class="hero-gradient"></div>
+  <svg class="hero-line-art" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle class="bg-stroke" cx="260" cy="260" r="240" stroke="white" stroke-width="1"/>
+    <circle class="bg-stroke bd2" cx="260" cy="260" r="180" stroke="white" stroke-width="0.5"/>
+    <circle class="bg-stroke bd3" cx="260" cy="260" r="120" stroke="white" stroke-width="0.5"/>
+    <line class="bg-stroke bd2" x1="20" y1="260" x2="500" y2="260" stroke="white" stroke-width="0.5"/>
+    <line class="bg-stroke bd3" x1="260" y1="20" x2="260" y2="500" stroke="white" stroke-width="0.5"/>
+    <line class="bg-stroke bd4" x1="90" y1="90" x2="430" y2="430" stroke="white" stroke-width="0.3"/>
+    <line class="bg-stroke bd4" x1="430" y1="90" x2="90" y2="430" stroke="white" stroke-width="0.3"/>
+    <polygon class="bg-stroke bd3" points="260,20 500,190 410,460 110,460 20,190" stroke="white" stroke-width="0.5" fill="none"/>
+  </svg>
+  <div class="wrap" style="width:100%">
+    <div class="hero-content">
+      <div>
+        <div class="hero-label">
+          <span class="hero-label-line"></span>
+          <span class="hero-label-text">SJC COUNSELLING &amp; CAREER GUIDANCE UNIT</span>
+        </div>
+        <h1>Guiding Students<br>Towards a<br><em>Better Future</em></h1>
+        <p class="hero-sub">Empowering Josephians with counselling, career guidance, leadership development, and future opportunities — because every student deserves the right path.</p>
+        <div class="hero-btns">
+          <a href="/portal" class="btn btn-gold btn-lg">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+            Register as Student
+          </a>
+          <a href="/appointments" class="btn btn-outline btn-lg">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Book a Session
+          </a>
+          <a href="/careers" class="btn btn-outline btn-lg">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Explore Careers
+          </a>
+        </div>
+      </div>
+      <div class="hero-right">
+      <div class="hero-art">
+        <svg viewBox="0 0 400 330" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-sketch sketch-art">
+          <defs>
+            <linearGradient id="skGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#e7cd84"/>
+              <stop offset="1" stop-color="#c9a84c"/>
+            </linearGradient>
+          </defs>
+
+          <!-- faint orbit ring -->
+          <circle class="sk" data-order="0" cx="200" cy="158" r="146" stroke="rgba(201,168,76,0.18)" stroke-width="1"/>
+          <circle class="sk" data-order="1" cx="200" cy="158" r="112" stroke="rgba(201,168,76,0.12)" stroke-width="1"/>
+
+          <!-- ===== LIGHTBULB (idea / guidance) ===== -->
+          <g stroke="url(#skGold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <circle class="sk" data-order="3" cx="200" cy="98" r="32"/>
+            <path class="sk" data-order="4" d="M184 130 L216 130"/>
+            <path class="sk" data-order="4" d="M186 137 L214 137"/>
+            <path class="sk" data-order="5" d="M190 144 Q200 150 210 144"/>
+            <path class="sk" data-order="5" d="M191 98 Q200 82 209 98 M195 98 L205 98"/>
+          </g>
+          <!-- bulb rays -->
+          <g class="rays" stroke="#d9bd6a" stroke-width="2" stroke-linecap="round">
+            <path class="sk ray" data-order="6" d="M200 52 L200 40"/>
+            <path class="sk ray" data-order="6" d="M162 98 L148 98"/>
+            <path class="sk ray" data-order="6" d="M238 98 L252 98"/>
+            <path class="sk ray" data-order="7" d="M174 72 L164 62"/>
+            <path class="sk ray" data-order="7" d="M226 72 L236 62"/>
+            <path class="sk ray" data-order="7" d="M170 124 L160 134"/>
+            <path class="sk ray" data-order="7" d="M230 124 L240 134"/>
+          </g>
+
+          <!-- ===== GRADUATION CAP (education) ===== -->
+          <g stroke="#faf6ee" stroke-opacity="0.78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <path class="sk" data-order="2" d="M50 72 L100 54 L150 72 L100 90 Z"/>
+            <path class="sk" data-order="3" d="M76 78 L76 96 Q100 107 124 96 L124 78"/>
+            <path class="sk" data-order="4" d="M150 72 L162 78 L160 104"/>
+            <circle class="sk" data-order="5" cx="160" cy="108" r="3.4" stroke="#d9bd6a"/>
+            <circle class="sk" data-order="3" cx="100" cy="72" r="2.6"/>
+          </g>
+
+          <!-- ===== OPEN BOOK (learning) ===== -->
+          <g stroke="url(#skGold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <path class="sk" data-order="5" d="M200 236 C158 214 108 214 66 230"/>
+            <path class="sk" data-order="5" d="M200 236 C242 214 292 214 334 230"/>
+            <path class="sk" data-order="6" d="M66 230 L66 284"/>
+            <path class="sk" data-order="6" d="M334 230 L334 284"/>
+            <path class="sk" data-order="6" d="M200 236 L200 298"/>
+            <path class="sk" data-order="7" d="M66 284 C108 268 158 268 200 298"/>
+            <path class="sk" data-order="7" d="M334 284 C292 268 242 268 200 298"/>
+          </g>
+          <!-- page text lines -->
+          <g stroke="rgba(250,246,238,0.5)" stroke-width="1.6" stroke-linecap="round" fill="none">
+            <path class="sk" data-order="8" d="M92 244 C118 236 158 238 184 250"/>
+            <path class="sk" data-order="8" d="M90 256 C116 248 158 250 184 262"/>
+            <path class="sk" data-order="9" d="M216 250 C242 238 282 236 308 244"/>
+            <path class="sk" data-order="9" d="M216 262 C242 250 284 248 310 256"/>
+          </g>
+
+          <!-- ===== RISING ARROW → STAR (better future) ===== -->
+          <g stroke="#e7cd84" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <path class="sk" data-order="8" d="M298 256 Q352 212 332 162 Q318 128 354 96"/>
+            <path class="sk" data-order="10" d="M354 96 L344 100"/>
+            <path class="sk" data-order="10" d="M354 96 L352 108"/>
+          </g>
+          <!-- big star -->
+          <path class="sk twinkle" data-order="10" d="M360 60 L365 73 L378 78 L365 83 L360 96 L355 83 L342 78 L355 73 Z"
+            stroke="#e7cd84" stroke-width="2" stroke-linejoin="round" fill="rgba(201,168,76,0.12)"/>
+
+          <!-- ===== sparkles ===== -->
+          <path class="twinkle" d="M44 158 L46 164 L52 166 L46 168 L44 174 L42 168 L36 166 L42 164 Z" fill="rgba(201,168,76,0.7)"/>
+          <path class="twinkle t2" d="M356 226 L358 231 L363 233 L358 235 L356 240 L354 235 L349 233 L354 231 Z" fill="rgba(201,168,76,0.55)"/>
+          <path class="twinkle t3" d="M120 36 L122 41 L127 43 L122 45 L120 50 L118 45 L113 43 L118 41 Z" fill="rgba(250,246,238,0.6)"/>
+          <circle class="twinkle t4" cx="300" cy="40" r="2.4" fill="rgba(201,168,76,0.5)"/>
+          <circle class="twinkle t2" cx="40" cy="250" r="2" fill="rgba(250,246,238,0.4)"/>
+
+          <!-- motto -->
+          <text x="200" y="320" text-anchor="middle" font-size="8" fill="rgba(201,168,76,0.4)" font-family="DM Sans,sans-serif" font-weight="700" letter-spacing="3">DUTY FIRST &#183; EST. 1898</text>
+        </svg>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-stat">
+          <div class="hero-stat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 12 15 2 8.5"/><polyline points="22 8.5 22 15"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg></div>
+          <div>
+            <div class="hero-stat-val"><span id="hStat1">30,000</span><span class="hero-stat-plus">+</span></div>
+            <div class="hero-stat-desc">Josephians Enrolled</div>
+          </div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4a2 2 0 0 1-2-2V5h4m14 4h2a2 2 0 0 0 2-2V5h-4m-8 12V21m-4 0h8M6 5h12v6a6 6 0 0 1-12 0V5z"/></svg></div>
+          <div>
+            <div class="hero-stat-val"><span id="hStat2">574</span><span class="hero-stat-plus"></span></div>
+            <div class="hero-stat-desc">Awards Won</div>
+          </div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+          <div>
+            <div class="hero-stat-val"><span id="hStat3">1898</span><span class="hero-stat-plus"></span></div>
+            <div class="hero-stat-desc">Established Since</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-bar"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- QUICK ACCESS -->
+<div class="quick-wrap">
+  <div class="wrap">
+    <div class="quick-grid">
+
+      <a href="/portal" class="qcard reveal">
+        <div class="qcard-icon qi-1"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7a1818" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div>
+          <div class="qcard-title">Student Registration</div>
+          <div class="qcard-desc">Create your profile, add skills and academic details</div>
+        </div>
+        <div class="qcard-arrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+      <a href="/portal.html#careers" class="qcard reveal rd1">
+        <div class="qcard-icon qi-2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 12 15 2 8.5"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg></div>
+        <div>
+          <div class="qcard-title">Career Guidance</div>
+          <div class="qcard-desc">Discover paths suited to your talents and interests</div>
+        </div>
+        <div class="qcard-arrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+      <a href="/appointments" class="qcard reveal rd2">
+        <div class="qcard-icon qi-3"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#b03060" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div>
+          <div class="qcard-title">Counselling Appointments</div>
+          <div class="qcard-desc">Book a one-to-one session with our counsellors</div>
+        </div>
+        <div class="qcard-arrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+      <a href="/resources" class="qcard reveal rd3">
+        <div class="qcard-icon qi-4"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2e7d52" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div>
+          <div class="qcard-title">Mental Wellness</div>
+          <div class="qcard-desc">Resources for stress, anxiety and exam preparation</div>
+        </div>
+        <div class="qcard-arrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+      <a href="/portal.html#university" class="qcard reveal rd3">
+        <div class="qcard-icon qi-4" style="background:rgba(217,119,6,0.12);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5zM6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <div>
+          <div class="qcard-title">University Guidance</div>
+          <div class="qcard-desc">Explore local and international degree pathways</div>
+        </div>
+        <div class="qcard-arrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+</div>
+  </div>
+</div>
+
+<!-- WHY US + STATS -->
+<section class="why">
+  <div class="wrap">
+    <div class="why-inner">
+      <div class="reveal">
+        <div class="eyebrow"><span class="eyebrow-line"></span>Why Choose Us</div>
+        <h2 class="section-title">Dedicated to Every <em style="font-style:italic;color:var(--gold-bright)">Josephian's</em> Success</h2>
+        <p class="section-sub">Rooted in 125+ years of educational excellence, St. Joseph's College Anuradhapura — home to 30,000+ students — nurtures futures through expert counselling, career guidance, and compassionate mental wellness support.</p>
+        <div class="why-points">
+          <div class="why-pt reveal rd1"><div class="why-pt-dot">✓</div><span>Qualified counselling professionals committed to every student</span></div>
+          <div class="why-pt reveal rd2"><div class="why-pt-dot">✓</div><span>Personalised career pathway testing across 20+ fields</span></div>
+          <div class="why-pt reveal rd3"><div class="why-pt-dot">✓</div><span>Confidential one-on-one sessions in a safe environment</span></div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-bg">
+  <div class="wrap">
+    <div class="sh center reveal">
+      <div class="eyebrow"><span class="eyebrow-line"></span>Our Services</div>
+      <h2 class="section-title">Comprehensive Support for Every Student</h2>
+      <p class="section-sub">From one-to-one counselling to career pathway testing — a full range of services to empower Josephians at every stage.</p>
+    </div>
+    <div class="srv-grid">
+      <div class="srv-card reveal">
+        <div class="srv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="srv-title">One-to-One Counselling</div>
+        <p class="srv-desc">Private, confidential sessions to help students navigate personal, academic, and social challenges with a qualified counsellor.</p>
+        <a href="/appointments" class="srv-link">Book a Session <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="srv-card reveal rd1">
+        <div class="srv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg></div>
+        <div class="srv-title">Career Pathway Testing</div>
+        <p class="srv-desc">Scientifically-based aptitude and interest assessments to identify the best career paths suited to each student's unique strengths.</p>
+        <a href="/careers" class="srv-link">Explore Careers <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="srv-card reveal rd2">
+        <div class="srv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <div class="srv-title">CV Building Support</div>
+        <p class="srv-desc">Expert guidance on crafting professional CVs and portfolios that stand out for university applications and career opportunities.</p>
+        <a href="/portal" class="srv-link">Upload Your CV <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="srv-card reveal">
+        <div class="srv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <div class="srv-title">Interview Training</div>
+        <p class="srv-desc">Mock interview sessions and presentation skills development to build confidence for university admissions and job interviews.</p>
+        <a href="/events" class="srv-link">See Workshops <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="srv-card reveal rd1">
+        <div class="srv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+        <div class="srv-title">Leadership Development</div>
+        <p class="srv-desc">Workshops to develop leadership qualities, teamwork, public speaking, and communication skills in students.</p>
+        <a href="/events" class="srv-link">See Events <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="srv-card reveal rd2">
+        <div class="srv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div>
+        <div class="srv-title">Mental Wellness Programs</div>
+        <p class="srv-desc">Structured programs for stress management, exam anxiety relief, motivation building, and developing healthy long-term habits.</p>
+        <a href="/resources" class="srv-link">Access Resources <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-wrap">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <div>
+        <h2 class="cta-title">Ready to Take the Next Step?</h2>
+        <p class="cta-sub">Book a counselling session today. Our dedicated team is here to listen, guide, and support every Josephian towards a brighter future.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="/appointments" class="btn btn-gold btn-lg">Book Appointment</a>
+        <a href="/portal" class="btn btn-outline btn-lg">Student Portal</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EVENTS -->
+<section class="events-bg">
+  <div class="wrap">
+    <div class="sh center reveal">
+      <div class="eyebrow"><span class="eyebrow-line"></span>Events &amp; Workshops</div>
+      <h2 class="section-title">Upcoming Programmes</h2>
+      <p class="section-sub">Designed to develop skills, explore careers, and support student well-being throughout the year.</p>
+    </div>
+    <div class="ev-grid">
+      <div class="ev-card reveal">
+        <div class="ev-header">
+          <div class="ev-day">15</div>
+          <div class="ev-month-yr">
+            <span class="ev-month">June</span>
+            <span class="ev-yr">2026</span>
+          </div>
+        </div>
+        <div class="ev-body">
+          <span class="ev-tag">Career Guidance</span>
+          <div class="ev-title">Career Pathway Exploration Day</div>
+          <div class="ev-meta">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            9:00 AM – 3:00 PM · Main Hall
+          </div>
+          <p class="ev-desc">Students explore 20+ career fields through hands-on activities and professional guest speakers.</p>
+          <a href="/appointments" class="ev-reg">Register Now →</a>
+        </div>
+      </div>
+      <div class="ev-card reveal rd1">
+        <div class="ev-header">
+          <div class="ev-day">22</div>
+          <div class="ev-month-yr">
+            <span class="ev-month">June</span>
+            <span class="ev-yr">2026</span>
+          </div>
+        </div>
+        <div class="ev-body">
+          <span class="ev-tag">Wellness</span>
+          <div class="ev-title">Exam Stress Management Workshop</div>
+          <div class="ev-meta">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            2:00 PM – 5:00 PM · Counselling Room
+          </div>
+          <p class="ev-desc">Practical techniques for managing exam anxiety and maintaining mental wellness during exam season.</p>
+          <a href="/appointments" class="ev-reg">Register Now →</a>
+        </div>
+      </div>
+      <div class="ev-card reveal rd2">
+        <div class="ev-header">
+          <div class="ev-day">05</div>
+          <div class="ev-month-yr">
+            <span class="ev-month">July</span>
+            <span class="ev-yr">2026</span>
+          </div>
+        </div>
+        <div class="ev-body">
+          <span class="ev-tag">Leadership</span>
+          <div class="ev-title">Leadership &amp; Communication Skills Camp</div>
+          <div class="ev-meta">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Full Day · SJC Grounds
+          </div>
+          <p class="ev-desc">A full-day camp developing leadership qualities, teamwork and public speaking for senior students.</p>
+          <a href="/appointments" class="ev-reg">Register Now →</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px">
+      <a href="/events" class="btn btn-ghost-dark btn-lg">View All Events &amp; Workshops →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="showcase">
+  <div class="wrap">
+    <div class="sh center reveal">
+      <div class="eyebrow"><span class="eyebrow-line"></span>Student Life &amp; Programmes</div>
+      <h2 class="section-title">Explore What We Offer</h2>
+      <p class="section-sub">From career exploration to mental wellness — everything you need to thrive as a Josephian.</p>
+    </div>
+    <div class="sc-grid">
+      <!-- Card 1: Counselling -->
+      <div class="sc-card reveal">
+        <div class="sc-visual scv-1"><img src="/anime_counselling.png" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;"/></div>
+        <div class="sc-body">
+          <span class="sc-tag">Counselling</span>
+          <div class="sc-title">One-to-One Confidential Sessions</div>
+          <p class="sc-desc">Safe, private conversations with qualified counsellors to support your personal and academic growth.</p>
+          <a href="/appointments" class="sc-link">Book a Session <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Card 2: Career Pathway -->
+      <div class="sc-card reveal rd1">
+        <div class="sc-visual scv-2"><img src="/anime_career.png" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;"/></div>
+        <div class="sc-body">
+          <span class="sc-tag">Career</span>
+          <div class="sc-title">Career Pathway Discovery</div>
+          <p class="sc-desc">Aptitude tests and expert guidance to map your strengths to the perfect career — science, arts, tech or beyond.</p>
+          <a href="/careers" class="sc-link">Explore Careers <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Card 3: Leadership -->
+      <div class="sc-card reveal rd2">
+        <div class="sc-visual scv-3"><img src="/anime_leadership.png" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;"/></div>
+        <div class="sc-body">
+          <span class="sc-tag">Leadership</span>
+          <div class="sc-title">Leadership &amp; Skills Development</div>
+          <p class="sc-desc">Workshops to build communication, teamwork and public speaking skills that last a lifetime.</p>
+          <a href="/events" class="sc-link">See Events <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Card 4: Wellness -->
+      <div class="sc-card reveal">
+        <div class="sc-visual scv-4"><img src="/anime_wellness.png" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;"/></div>
+        <div class="sc-body">
+          <span class="sc-tag">Wellness</span>
+          <div class="sc-title">Mental Wellness &amp; Stress Support</div>
+          <p class="sc-desc">Evidence-based techniques for exam anxiety, stress management and building positive mental habits.</p>
+          <a href="/resources" class="sc-link">Access Resources <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Card 5: CV Building -->
+      <div class="sc-card reveal rd1">
+        <div class="sc-visual scv-5"><img src="/anime_cv.png" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;"/></div>
+        <div class="sc-body">
+          <span class="sc-tag">Skill Building</span>
+          <div class="sc-title">CV Building &amp; Interview Prep</div>
+          <p class="sc-desc">Expert help creating standout CVs and practising for university admissions and job interviews with confidence.</p>
+          <a href="/portal" class="sc-link">Build Your Profile <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Card 6: Scholarships -->
+      <div class="sc-card reveal rd2">
+        <div class="sc-visual scv-6"><img src="/anime_scholarship.png" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;"/></div>
+        <div class="sc-body">
+          <span class="sc-tag">Scholarships</span>
+          <div class="sc-title">University &amp; Scholarship Guidance</div>
+          <p class="sc-desc">Navigate university applications, scholarship opportunities and higher education pathways with expert support.</p>
+          <a href="/careers" class="sc-link">Learn More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-row">
+          <div class="footer-logo"><img src="logo.jpg" alt="SJC Logo"/></div>
+          <div>
+            <div class="footer-brand-name">SJC Counselling &amp;<br>Career Guidance Unit</div>
+            <div class="footer-brand-sub">Duty First Since 1898</div>
+          </div>
+        </div>
+        <p class="footer-desc">Empowering Josephians with counselling, career guidance, and mental wellness support. Every student deserves the right path.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <div class="footer-links">
+          <a href="/about">About the Unit</a>
+          <a href="/services">Our Services</a>
+          <a href="/careers">Career Guidance</a>
+          <a href="/resources">Wellness Resources</a>
+          <a href="/events">Events &amp; Workshops</a>
+          <a href="/parents">Parent Resources</a>
+          <a href="/success">Success Stories</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Portals</div>
+        <div class="footer-links">
+          <a href="/portal">Student Portal</a>
+          <a href="/teacher/">Teacher Portal</a>
+          <a href="/admin/">Admin Panel</a>
+          <a href="/appointments">Book Appointment</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item"><i class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></i> Bulankulama Disa Mawatha, Anuradhapura 50000, Sri Lanka</div>
+        <div class="footer-contact-item"><i class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17"/></svg></i> 025 2222269</div>
+        <div class="footer-contact-item"><i class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></i> info@sjc.lk</div>
+        <div class="footer-contact-item"><i class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></i> Mon–Fri, 7:30 AM – 4:00 PM</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SJC COUNSELLING &amp; CAREER GUIDANCE UNIT — St. Joseph's College, Anuradhapura</span>
+      <span class="footer-credit">Developed by <span>JAKE</span> · Guidance by <span>Isira</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Sticky nav
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40), {passive:true});
+
+// Mobile nav
+const burger = document.getElementById('burger');
+const mobNav = document.getElementById('mobNav');
+document.getElementById('mobClose').addEventListener('click', () => mobNav.classList.remove('open'));
+burger.addEventListener('click', () => mobNav.classList.add('open'));
+mobNav.addEventListener('click', e => { if(e.target === mobNav) mobNav.classList.remove('open'); });
+
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Counters
+function animCounter(el, target, dur) {
+  let n = 0;
+  const step = Math.ceil(target / (dur / 16));
+  const t = setInterval(() => { n = Math.min(n + step, target); el.textContent = n.toLocaleString(); if(n >= target) clearInterval(t); }, 16);
+}
+const cObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ animCounter(e.target, +e.target.dataset.target, 1800); cObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('.counter').forEach(el => cObs.observe(el));
+
+// Testimonials
+let idx = 0;
+const track = document.getElementById('testiTrack');
+const dots = document.querySelectorAll('.testi-dot');
+const slides = document.querySelectorAll('.testi-slide');
+function goTo(i){ idx=(i+slides.length)%slides.length; track.style.transform=`translateX(-${idx*100}%)`; dots.forEach((d,j)=>d.classList.toggle('active',j===idx)); }
+document.getElementById('testiPrev').addEventListener('click', ()=>goTo(idx-1));
+document.getElementById('testiNext').addEventListener('click', ()=>goTo(idx+1));
+dots.forEach((d,i)=>d.addEventListener('click',()=>goTo(i)));
+setInterval(()=>goTo(idx+1), 6500);
+
+// ===== LINE-SKETCH: self-drawing pen effect (all .sketch-art) =====
+(function(){
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const arts = document.querySelectorAll('.sketch-art');
+  arts.forEach(art => {
+    const paths = art.querySelectorAll('.sk');
+    paths.forEach(p => {
+      let len;
+      try { len = p.getTotalLength(); } catch(e){ len = 400; }
+      if(!len || !isFinite(len)) len = 400;
+      p.style.strokeDasharray = len;
+      if(reduce){ p.style.strokeDashoffset = 0; return; }
+      p.style.strokeDashoffset = len;
+      const order = parseInt(p.getAttribute('data-order')||'0', 10);
+      p.style.transition = 'stroke-dashoffset 1.2s cubic-bezier(.55,0,.25,1)';
+      p.style.transitionDelay = (order * 0.14) + 's';
+    });
+    if(reduce) return;
+    const runDraw = ()=> requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      paths.forEach(p => { p.style.strokeDashoffset = '0'; });
+    }));
+    if('IntersectionObserver' in window){
+      const io = new IntersectionObserver((ents)=>{
+        ents.forEach(e=>{ if(e.isIntersecting){ runDraw(); io.disconnect(); } });
+      }, {threshold:0.18});
+      io.observe(art);
+    } else { runDraw(); }
+  });
+})();
+</script>
+</body>
+</html>

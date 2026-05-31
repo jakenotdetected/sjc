@@ -1,0 +1,90 @@
+/* ===================================================================
+   SJC Noto Emoji Icon System
+   Uses Google Fonts Noto Emoji for crisp, consistent icons
+   Color palette tuned to SJC maroon + gold brand
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@400;700&display=swap');
+
+/* Base emoji icon class */
+.ejo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Noto Emoji', 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif;
+  font-style: normal;
+  line-height: 1;
+  vertical-align: -0.15em;
+  font-size: 1.1em;
+  flex-shrink: 0;
+}
+
+/* ── Navigation / UI ── */
+.ejo-home::before       { content: '🏠'; }
+.ejo-about::before      { content: '📋'; }
+.ejo-services::before   { content: '💼'; }
+.ejo-guidance::before   { content: '🧭'; }
+.ejo-wellness::before   { content: '💚'; }
+.ejo-events::before     { content: '📅'; }
+.ejo-student::before    { content: '🎓'; }
+.ejo-teacher::before    { content: '👩‍🏫'; }
+
+/* ── Academic / Career ── */
+.ejo-grad::before       { content: '🎓'; }
+.ejo-books::before      { content: '📚'; }
+.ejo-notes::before      { content: '📝'; }
+.ejo-chart::before      { content: '📊'; }
+.ejo-career::before     { content: '🚀'; }
+.ejo-target::before     { content: '🎯'; }
+.ejo-trophy::before     { content: '🏆'; }
+.ejo-medal::before      { content: '🏅'; }
+.ejo-pencil::before     { content: '✏️'; }
+
+/* ── Wellness / Mental Health ── */
+.ejo-brain::before      { content: '🧠'; }
+.ejo-heart::before      { content: '❤️'; }
+.ejo-happy::before      { content: '😊'; }
+.ejo-sad::before        { content: '😢'; }
+.ejo-mad::before        { content: '😤'; }
+.ejo-calm::before       { content: '😌'; }
+.ejo-shock::before      { content: '😲'; }
+.ejo-tired::before      { content: '😴'; }
+.ejo-anxious::before    { content: '😰'; }
+.ejo-proud::before      { content: '🥹'; }
+.ejo-excited::before    { content: '🤩'; }
+.ejo-nervous::before    { content: '😬'; }
+
+/* ── Status / Feedback ── */
+.ejo-check::before      { content: '✅'; }
+.ejo-delete::before     { content: '❌'; }
+.ejo-alert::before      { content: '⚠️'; }
+.ejo-lock::before       { content: '🔒'; }
+.ejo-star::before       { content: '⭐'; }
+.ejo-fire::before       { content: '🔥'; }
+.ejo-rocket::before     { content: '🚀'; }
+.ejo-shield::before     { content: '🛡️'; }
+
+/* ── Communication ── */
+.ejo-chat::before       { content: '💬'; }
+.ejo-phone::before      { content: '📞'; }
+.ejo-email::before      { content: '📧'; }
+.ejo-globe::before      { content: '🌐'; }
+
+/* ── Misc / Fun ── */
+.ejo-money::before      { content: '💰'; }
+.ejo-sun::before        { content: '☀️'; }
+.ejo-clock::before      { content: '⏰'; }
+.ejo-music::before      { content: '🎵'; }
+.ejo-party::before      { content: '🎉'; }
+.ejo-diamond::before    { content: '💎'; }
+.ejo-cloud::before      { content: '☁️'; }
+.ejo-crystal::before    { content: '🔷'; }
+.ejo-wrench::before     { content: '🔧'; }
+.ejo-netch::before      { content: '🔗'; }
+.ejo-creeper::before    { content: '🌿'; }
+
+/* ── Size variants ── */
+.ejo-sm  { font-size: 0.9em; }
+.ejo-lg  { font-size: 1.4em; }
+.ejo-xl  { font-size: 2rem; }
+.ejo-2xl { font-size: 2.6rem; }

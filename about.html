@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#2a0808"/>
+<title>About the Unit — SJC COUNSELLING & CAREER GUIDANCE UNIT</title>
+<meta name="description" content="Learn about the SJC COUNSELLING & CAREER GUIDANCE UNIT at St. Joseph's College, Anuradhapura — our mission, team, history, and commitment to student wellbeing."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232a0808'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='34' font-weight='800' text-anchor='middle' fill='%23c9a84c'%3ES%3C/text%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+@font-face {
+  font-family: 'SoulsideBetrayed';
+  src: url('/SoulsideBetrayed-3lazX.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --maroon:#7a1818;--maroon-deep:#2a0808;--maroon-mid:#5a1010;--maroon-light:#9c2424;
+  --gold:#c9a84c;--gold-bright:#e8c96a;--gold-dark:#a07830;
+  --cream:#faf6ee;--cream-2:#f1e9d8;--cream-3:#e6dcc6;
+  --white:#ffffff;--ink:#1a0e0e;--ink-soft:#3a2828;--muted:#7a6868;
+  --rule:rgba(122,24,24,0.1);
+  --shadow:0 4px 20px rgba(42,8,8,0.08);--shadow-lg:0 16px 50px rgba(42,8,8,0.18);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:rgba(201,168,76,0.3);color:var(--maroon-deep)}
+::-webkit-scrollbar{width:7px}::-webkit-scrollbar-thumb{background:var(--maroon);border-radius:4px}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+.topbar{background:var(--maroon-deep);color:rgba(250,246,238,0.7);font-size:0.78rem;padding:10px 0;border-bottom:1px solid rgba(201,168,76,0.15)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.topbar-left{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.topbar-left span{display:inline-flex;align-items:center;gap:7px}
+.topbar-right{display:flex;align-items:center;gap:14px}
+.topbar-right a{color:var(--gold);font-weight:600;font-size:0.76rem;letter-spacing:.04em;transition:color .15s}
+.topbar-right a:hover{color:var(--gold-bright)}
+.topbar-sep{opacity:.3}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+@media(max-width:768px){.wrap{padding:0 16px}}
+
+nav.main{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(16px) saturate(130%);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--rule);transition:box-shadow .3s}
+nav.main.scrolled{box-shadow:0 4px 24px rgba(42,8,8,0.08)}
+.nav-inner{display:flex;align-items:center;height:76px;gap:16px}
+.brand{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.brand-logo{width:48px;height:48px;border-radius:10px;overflow:hidden;flex-shrink:0;background:#fff;display:flex;align-items:center;justify-content:center}
+.brand-logo img{width:100%;height:100%;object-fit:contain;padding:2px}
+.brand-logo-placeholder{font-weight:800;font-size:1.3rem;color:var(--gold)}
+.brand-name{font-family:'DM Serif Display', cursive;font-weight:600;font-size:1.18rem;color:var(--maroon-deep);line-height:1.15}
+.brand-sub{font-size:0.62rem;color:var(--muted);letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none;margin-left:auto}
+.nav-links a{color:var(--ink-soft);font-size:0.82rem;font-weight:500;padding:8px 12px;border-radius:6px;transition:all .18s;white-space:nowrap;position:relative}
+.nav-links a:hover{color:var(--maroon);background:rgba(122,24,24,0.05)}
+.nav-links a.active{color:var(--maroon);font-weight:600}
+.nav-links a.active::after{content:'';position:absolute;bottom:2px;left:50%;transform:translateX(-50%);width:14px;height:2px;background:var(--gold);border-radius:1px}
+.nav-cta{margin-left:12px;background:var(--maroon-deep)!important;color:var(--cream)!important;padding:10px 20px!important;border-radius:8px!important;font-weight:600!important;letter-spacing:.02em;transition:background .18s!important}
+.nav-cta:hover{background:var(--maroon)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;margin-left:auto}
+.burger span{display:block;width:22px;height:2px;background:var(--maroon-deep);border-radius:1px;transition:all .25s}
+.mob-nav{display:none;position:fixed;inset:0;background:var(--white);z-index:200;flex-direction:column;padding:24px;overflow-y:auto}
+.mob-nav.open{display:flex}
+.mob-nav-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+.mob-nav-close{font-size:2rem;background:none;border:none;cursor:pointer;color:var(--maroon-deep);width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:8px}
+.mob-links{display:flex;flex-direction:column;gap:4px}
+.mob-links a{padding:16px 20px;border-radius:12px;font-size:1.05rem;font-weight:600;color:var(--ink);transition:all .15s;display:flex;align-items:center;gap:10px}
+.mob-links a:hover{background:var(--cream-2);color:var(--maroon)}
+.mob-links a.active{background:var(--maroon-deep);color:var(--cream)}
+.mob-cta{margin-top:20px;padding:18px;background:var(--maroon-deep);color:var(--cream)!important;border-radius:14px;text-align:center;font-size:1.05rem;font-weight:700;display:block}
+
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:600;padding:14px 26px;border-radius:8px;cursor:pointer;border:none;letter-spacing:.04em;text-transform:uppercase;transition:all .2s ease;white-space:nowrap;text-decoration:none}
+.btn-gold{background:linear-gradient(135deg,var(--gold-bright),var(--gold));color:var(--maroon-deep);box-shadow:0 4px 18px rgba(201,168,76,0.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,0.5)}
+.btn-maroon{background:var(--maroon-deep);color:var(--cream)}
+.btn-maroon:hover{background:var(--maroon);transform:translateY(-1px)}
+.btn-line{background:transparent;color:var(--maroon);border:1.5px solid var(--maroon)}
+.btn-line:hover{background:var(--maroon);color:#fff}
+.btn-lg{padding:16px 32px;font-size:0.9rem}
+
+/* PAGE HERO */
+.page-hero{background:var(--maroon-deep);padding:90px 0 80px;position:relative;overflow:hidden}
+.page-hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#1a0404 0%,#2a0808 50%,#3a0a0a 100%)}
+.page-hero-orb{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,0.1) 0%,transparent 70%);top:-150px;right:-100px;border-radius:50%}
+.page-hero-pattern{position:absolute;inset:0;opacity:0.025;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 1px,transparent 1px,transparent 60px),repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 1px,transparent 1px,transparent 60px)}
+.page-hero-inner{position:relative;z-index:2}
+.page-breadcrumb{display:flex;align-items:center;gap:8px;color:rgba(250,246,238,0.5);font-size:0.78rem;margin-bottom:20px}
+.page-breadcrumb a{color:var(--gold);font-weight:500;transition:color .15s}
+.page-breadcrumb a:hover{color:var(--gold-bright)}
+.page-breadcrumb-sep{opacity:.5}
+.page-eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--gold);font-size:0.72rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;margin-bottom:16px}
+.page-eyebrow-line{width:30px;height:1px;background:var(--gold)}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2.4rem,4.5vw,3.8rem);line-height:1.1;color:var(--cream);letter-spacing:-.015em;margin-bottom:18px}
+.page-hero h1 em{font-style:italic;color:var(--gold-bright)}
+.page-hero-lead{font-size:1.05rem;color:rgba(250,246,238,0.7);line-height:1.75;max-width:640px;font-weight:300}
+
+/* SECTIONS */
+section{padding:88px 0}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--maroon);font-size:0.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;margin-bottom:14px}
+.sec-eyebrow-line{width:24px;height:2px;background:var(--gold);border-radius:1px}
+.sec-title{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2rem,3.5vw,3rem);line-height:1.12;color:var(--maroon-deep);margin-bottom:18px;letter-spacing:-.01em}
+.sec-title em{font-style:italic;color:var(--maroon)}
+.sec-lead{color:var(--muted);font-size:1.02rem;line-height:1.75;max-width:640px}
+.sec-head{margin-bottom:56px}
+.sec-head.center{text-align:center}
+.sec-head.center .sec-eyebrow{justify-content:center}
+.sec-head.center .sec-lead{margin:0 auto}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+
+/* VISION MISSION */
+.vm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.vm-card{border-radius:20px;padding:40px 36px;position:relative;overflow:hidden}
+.vm-card-vision{background:var(--maroon-deep);color:var(--cream)}
+.vm-card-mission{background:var(--cream);border:1px solid var(--cream-3)}
+.vm-card-values{background:linear-gradient(135deg,#f8f0e0,var(--cream-2));border:1px solid var(--cream-3)}
+.vm-card-num{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:700;opacity:.08;position:absolute;top:-10px;right:20px;line-height:1;pointer-events:none}
+.vm-icon{font-size:2.2rem;margin-bottom:20px}
+.vm-card-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;margin-bottom:14px}
+.vm-card-vision .vm-card-title{color:var(--gold)}
+.vm-card-mission .vm-card-title,.vm-card-values .vm-card-title{color:var(--maroon-deep)}
+.vm-card-text{font-size:0.95rem;line-height:1.75;opacity:.85}
+.vm-card-vision .vm-card-text{color:rgba(250,246,238,0.8)}
+.vm-values-list{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.vm-value{display:flex;align-items:center;gap:10px;font-size:0.92rem;font-weight:500;color:var(--ink-soft)}
+.vm-value-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* HISTORY */
+.history-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.history-img{background:linear-gradient(135deg,var(--cream-2),var(--cream-3));border-radius:24px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.history-img-placeholder{text-align:center}
+.history-img-icon{font-size:4rem;margin-bottom:16px}
+.history-img-text{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--maroon-deep);font-weight:600}
+.history-badge{position:absolute;bottom:24px;left:24px;background:var(--maroon-deep);color:var(--cream);padding:14px 22px;border-radius:14px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow-lg)}
+.history-badge-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1}
+.history-badge-label{font-size:0.78rem;line-height:1.4;color:rgba(250,246,238,0.8);font-weight:500}
+.history-body p{font-size:1rem;line-height:1.82;color:var(--ink-soft);margin-bottom:18px}
+.history-milestones{margin-top:36px;display:flex;flex-direction:column;gap:0}
+.milestone{display:flex;gap:20px;padding:16px 0;border-bottom:1px solid var(--rule);align-items:flex-start}
+.milestone:last-child{border-bottom:none}
+.milestone-year{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--gold-dark);min-width:58px;flex-shrink:0;line-height:1.2}
+.milestone-text{font-size:0.9rem;color:var(--ink-soft);line-height:1.6}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.team-card{background:var(--cream);border-radius:20px;overflow:hidden;border:1px solid var(--cream-3);transition:all .28s;text-align:center;padding-bottom:30px}
+.team-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(201,168,76,0.4)}
+.team-photo{width:100%;aspect-ratio:1/1;max-width:160px;border-radius:50%;margin:32px auto 20px;background:linear-gradient(135deg,var(--maroon-mid),var(--maroon-deep));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--gold);flex-shrink:0}
+.team-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--maroon-deep);margin-bottom:4px;padding:0 20px}
+.team-role{font-size:0.8rem;color:var(--maroon);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
+.team-bio{font-size:0.88rem;color:var(--muted);line-height:1.65;padding:0 24px;margin-bottom:20px}
+.team-quals{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:0 20px}
+.team-qual{background:rgba(201,168,76,0.15);color:var(--maroon-deep);font-size:0.73rem;font-weight:600;padding:4px 10px;border-radius:20px;letter-spacing:.03em}
+
+/* PILLARS */
+.pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.pillar-card{border-radius:16px;padding:36px 28px;border:1px solid var(--rule);background:var(--white);transition:all .25s;cursor:default}
+.pillar-card:hover{border-color:var(--gold);box-shadow:var(--shadow);background:var(--cream)}
+.pillar-icon{font-size:2.2rem;margin-bottom:20px;display:block}
+.pillar-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--maroon-deep);margin-bottom:10px}
+.pillar-text{font-size:0.88rem;color:var(--muted);line-height:1.7}
+.pillar-num{display:block;font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:700;color:var(--gold-dark);opacity:.15;margin-bottom:4px;line-height:1}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--maroon-deep) 0%,var(--maroon-mid) 100%);padding:80px 0;position:relative;overflow:hidden}
+.cta-band-orb{position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,0.12) 0%,transparent 70%);top:-100px;right:-80px;border-radius:50%;pointer-events:none}
+.cta-band-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.cta-band h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:600;color:var(--cream);line-height:1.2}
+.cta-band h2 em{font-style:italic;color:var(--gold-bright)}
+.cta-band p{color:rgba(250,246,238,0.7);font-size:0.95rem;margin-top:8px}
+.cta-band-btns{display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0}
+
+/* FOOTER */
+footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;padding-bottom:56px;border-bottom:1px solid var(--cream-3)}
+.footer-logo-row{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.footer-logo{width:52px;height:52px;border-radius:10px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.footer-logo img{width:100%;height:100%;object-fit:contain;padding:2px}
+.footer-logo-unit{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--maroon-deep);flex-shrink:0}
+.footer-brand-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--maroon-deep);line-height:1.25}
+.footer-brand-sub{font-size:0.7rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+.footer-desc{font-size:0.88rem;color:var(--muted);line-height:1.75;margin-bottom:22px}
+.footer-social{display:flex;gap:10px}
+.footer-social a{width:36px;height:36px;border-radius:8px;background:var(--maroon-deep);color:var(--cream);display:flex;align-items:center;justify-content:center;transition:all .18s;flex-shrink:0}
+.footer-social a:hover{background:var(--gold);color:var(--maroon-deep);transform:translateY(-2px)}
+.footer-col-title{font-size:0.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--maroon-deep);margin-bottom:18px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:0.88rem;color:var(--muted);transition:color .15s;display:flex;align-items:center;gap:7px}
+.footer-links a:hover{color:var(--maroon)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:0.88rem;color:var(--muted)}
+.footer-contact-item svg{flex-shrink:0;margin-top:2px;color:var(--maroon)}
+.footer-bottom{padding:22px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.8rem;color:var(--muted)}
+.footer-bottom a{color:var(--maroon);transition:color .15s}
+.footer-bottom a:hover{color:var(--gold-dark)}
+
+@media(max-width:1024px){
+  .vm-grid{grid-template-columns:1fr 1fr}
+  .pillars-grid{grid-template-columns:1fr 1fr}
+  .history-grid{grid-template-columns:1fr;gap:40px}
+  .history-img{max-width:500px}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+}
+@media(max-width:768px){
+  section{padding:60px 0}
+  .vm-grid{grid-template-columns:1fr}
+  .pillars-grid{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .burger{display:flex}
+  .cta-band-inner{flex-direction:column;text-align:center}
+}
+@media(max-width:480px){
+  .pillars-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .page-hero{padding:60px 0 50px}
+}
+</style>
+
+<style>
+.nav-dropdown{position:relative}
+.nav-dropdown:hover .nav-dropdown-menu{opacity:1!important;visibility:visible!important;transform:translateY(0)!important}
+.nav-dropdown:hover .nav-dropdown-toggle svg{transform:rotate(180deg)}
+.nav-dropdown-toggle svg{transition:transform .2s}
+.nav-dropdown-menu a:hover{background:#f1e9d8!important;color:#7a1818!important}
+</style>
+<style id="svg-icon-fixes">
+.vm-card-vision .vm-icon svg{stroke:#c9a84c;width:30px;height:30px}
+.vm-card-mission .vm-icon svg,.vm-card-values .vm-icon svg{stroke:#7a1818;width:30px;height:30px}
+.pillar-icon svg{stroke:#7a1818;width:28px;height:28px}
+</style>
+
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        St. Joseph's College, Anuradhapura
+      </span>
+      <span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@sjc.lk
+      </span>
+    </div>
+    <div class="topbar-right">
+      <a href="/teacher/">Teacher Portal</a>
+      <span class="topbar-sep">|</span>
+      <a href="/portal">Student Login</a>
+      <span class="topbar-sep">|</span>
+      <a href="/admin/">Admin</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="main" id="mainNav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <a href="/" class="brand">
+        <div class="brand-logo"><img src="logo.jpg" alt="SJC Logo"/></div>
+        <div>
+          <div class="brand-name">SJC Counselling Unit</div>
+          <div class="brand-sub">St. Joseph's College · Anuradhapura</div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about" class="active">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/careers">Careers</a></li>
+        <li><a href="/resources">Wellness</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/parents">Parents</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle" style="color:var(--ink-soft);font-size:0.82rem;font-weight:500;padding:8px 12px;border-radius:6px;background:none;border:none;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:all .18s">Portals<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="nav-dropdown-menu" style="position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid rgba(122,24,24,0.1);border-radius:14px;box-shadow:0 12px 40px rgba(42,8,8,0.14);padding:8px;min-width:200px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .22s;z-index:200">
+            <div style="font-size:0.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#7a6868;padding:6px 14px 2px">Students</div>
+            <a href="/portal" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:9px;font-size:0.82rem;font-weight:500;color:#3a2828;transition:all .15s;text-decoration:none">Student Portal</a>
+            <div style="height:1px;background:rgba(122,24,24,0.08);margin:6px 0"></div>
+            <div style="font-size:0.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#7a6868;padding:6px 14px 2px">Staff</div>
+            <a href="/teacher/" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:9px;font-size:0.82rem;font-weight:500;color:#3a2828;transition:all .15s;text-decoration:none">Teacher Portal</a>
+            <a href="/admin/" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:9px;font-size:0.82rem;font-weight:500;color:#3a2828;transition:all .15s;text-decoration:none">Admin Panel</a>
+          </div>
+        </li>
+        <li><a href="/appointments" class="nav-cta">Book Appointment</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mob-nav" id="mobNav">
+  <div class="mob-nav-head">
+    <div class="brand">
+      <div class="brand-logo" style="width:44px;height:44px;background:#fff"><img src="logo.jpg" alt="SJC Logo" style="width:100%;height:100%;object-fit:contain;padding:2px"/></div>
+      <div class="brand-name" style="font-size:1rem">SJC Counselling</div>
+    </div>
+    <button class="mob-nav-close" id="mobNavClose" aria-label="Close">&#x2715;</button>
+  </div>
+  <div class="mob-links">
+    <a href="/">Home</a>
+    <a href="/about" class="active">About Unit</a>
+    <a href="/services">Services</a>
+    <a href="/careers">Career Guidance</a>
+    <a href="/resources">Mental Wellness</a>
+    <a href="/events">Events</a>
+    <a href="/portal">Student Portal</a>
+            <a href="/teacher/">Teacher Portal</a>
+  </div>
+  <a href="/appointments" class="mob-cta">Book Counselling Session</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-orb"></div>
+  <div class="page-hero-pattern"></div>
+  <div class="wrap page-hero-inner">
+    <div class="page-breadcrumb">
+      <a href="/">Home</a>
+      <span class="page-breadcrumb-sep">›</span>
+      <span>About the Unit</span>
+    </div>
+    <div class="page-eyebrow"><span class="page-eyebrow-line"></span>Who We Are</div>
+    <h1>About the <em>Counselling &<br/>Career Guidance Unit</em></h1>
+    <p class="page-hero-lead">Established to nurture every Josephian's potential — we provide holistic support through professional counselling, career mentorship, and mental wellness programmes.</p>
+  </div>
+</div>
+
+<!-- VISION MISSION VALUES -->
+<section style="background:var(--white)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>Our Foundation</div>
+      <h2 class="sec-title">Vision, Mission &amp; <em>Core Values</em></h2>
+      <p class="sec-lead">The principles that guide our work and define our commitment to every student we serve.</p>
+    </div>
+    <div class="vm-grid">
+      <div class="vm-card vm-card-vision reveal">
+        <div class="vm-card-num">01</div>
+        <div class="vm-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div>
+        <div class="vm-card-title">Our Vision</div>
+        <p class="vm-card-text">To be the leading career guidance unit in the North Central Province — empowering every Josephian to discover their purpose, develop their potential, and step confidently into the future.</p>
+      </div>
+      <div class="vm-card vm-card-mission reveal reveal-delay-1">
+        <div class="vm-card-num">02</div>
+        <div class="vm-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg></div>
+        <div class="vm-card-title">Our Mission</div>
+        <p class="vm-card-text">To provide accessible, confidential, and compassionate counselling services that support the academic, personal, and career development of students at St. Joseph's College.</p>
+      </div>
+      <div class="vm-card vm-card-values reveal reveal-delay-2">
+        <div class="vm-card-num">03</div>
+        <div class="vm-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+        <div class="vm-card-title">Our Values</div>
+        <div class="vm-values-list">
+          <div class="vm-value"><span class="vm-value-dot"></span>Confidentiality &amp; Trust</div>
+          <div class="vm-value"><span class="vm-value-dot"></span>Inclusivity &amp; Respect</div>
+          <div class="vm-value"><span class="vm-value-dot"></span>Student-Centred Care</div>
+          <div class="vm-value"><span class="vm-value-dot"></span>Professional Excellence</div>
+          <div class="vm-value"><span class="vm-value-dot"></span>Continuous Growth</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHAT WE DO / 4 PILLARS -->
+<section style="background:var(--white)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>Our Approach</div>
+      <h2 class="sec-title">The Four Pillars of <em>Our Work</em></h2>
+      <p class="sec-lead">Everything we do is guided by four core areas of student development and support.</p>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card reveal">
+        <span class="pillar-num">01</span>
+        <span class="pillar-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <div class="pillar-title">Personal Counselling</div>
+        <p class="pillar-text">Confidential one-to-one sessions addressing personal challenges, emotional wellbeing, family issues, and social difficulties that impact a student's school life.</p>
+      </div>
+      <div class="pillar-card reveal reveal-delay-1">
+        <span class="pillar-num">02</span>
+        <span class="pillar-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 12 15 2 8.5"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg></span>
+        <div class="pillar-title">Career Guidance</div>
+        <p class="pillar-text">Helping students discover their strengths, explore career pathways, understand university requirements, and plan strategically for life after school.</p>
+      </div>
+      <div class="pillar-card reveal reveal-delay-2">
+        <span class="pillar-num">03</span>
+        <span class="pillar-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+        <div class="pillar-title">Mental Wellness</div>
+        <p class="pillar-text">Workshops, resources, and group sessions focused on stress management, exam anxiety, mindfulness, and building emotional resilience in students.</p>
+      </div>
+      <div class="pillar-card reveal reveal-delay-3">
+        <span class="pillar-num">04</span>
+        <span class="pillar-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+        <div class="pillar-title">Leadership &amp; Development</div>
+        <p class="pillar-text">Leadership camps, public speaking training, and extracurricular development programmes that equip students with 21st-century soft skills.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>Our Team</div>
+      <h2 class="sec-title">Meet the <em>Guidance Counsellors</em></h2>
+      <p class="sec-lead">Our dedicated team of professionally trained counsellors and educators are here for every student.</p>
+    </div>
+    <div class="team-grid" style="grid-template-columns: repeat(1, minmax(0, 380px)); justify-content: center;">
+      <div class="team-card reveal">
+        <div class="team-photo">AB</div>
+        <div class="team-name">Mr. Asanga Bandara</div>
+        <div class="team-role">Head of Counselling Unit</div>
+        <p class="team-bio">Dedicated to guiding Josephians towards academic excellence, career development, and strong mental wellness.</p>
+        <div class="team-quals">
+          <span class="team-qual">B.Ed (Counselling)</span>
+          <span class="team-qual">M.Sc. Psychology</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-band-orb"></div>
+  <div class="wrap">
+    <div class="cta-band-inner">
+      <div>
+        <h2>Ready to talk with our <em>counsellors?</em></h2>
+        <p>Book a confidential one-to-one session — completely free for all Josephians.</p>
+      </div>
+      <div class="cta-band-btns">
+        <a href="/appointments" class="btn btn-gold btn-lg">Book an Appointment</a>
+        <a href="/portal" class="btn" style="background:rgba(255,255,255,0.1);color:var(--cream);border:1.5px solid rgba(255,255,255,0.2)">Student Portal</a>
+            </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-row">
+          <div class="footer-logo"><img src="logo.jpg" alt="SJC Logo"/></div>
+          <div>
+            <div class="footer-brand-name">SJC Counselling &amp;<br/>Career Guidance Unit</div>
+            <div class="footer-brand-sub">Duty First Since 1898</div>
+          </div>
+        </div>
+        <p class="footer-desc">Empowering Josephians with counselling, career guidance, and mental wellness support. Every student deserves the right path.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <div class="footer-links">
+          <a href="/about">About the Unit</a>
+          <a href="/services">Our Services</a>
+          <a href="/careers">Career Guidance</a>
+          <a href="/resources">Mental Wellness</a>
+          <a href="/events">Events &amp; Workshops</a>
+          <a href="/parents">For Parents</a>
+          <a href="/success">Success Stories</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Portals</div>
+        <div class="footer-links">
+          <a href="/portal">Student Portal</a>
+            <a href="/teacher/">Teacher Portal</a>
+          <a href="/admin/">Admin Panel</a>
+          <a href="/appointments">Book Appointment</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>St. Joseph's College, Anuradhapura, Sri Lanka</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@sjc.lk</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.5 16.13l.41.79z"/></svg>
+          <span>+94 25 222 5678</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 SJC COUNSELLING &amp; CAREER GUIDANCE UNIT — St. Joseph's College, Anuradhapura</span>
+      <span>Developed by <span style="color:var(--gold);font-weight:700">JAKE</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+
+const burger = document.getElementById('burger');
+const mobNav = document.getElementById('mobNav');
+document.getElementById('mobNavClose').addEventListener('click', () => mobNav.classList.remove('open'));
+burger.addEventListener('click', () => mobNav.classList.add('open'));
+
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
