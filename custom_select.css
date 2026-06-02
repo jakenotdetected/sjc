@@ -1,0 +1,99 @@
+/* SJC Custom Dropdown System */
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+  user-select: none;
+}
+
+.custom-select-wrapper select {
+  display: none !important;
+}
+
+.custom-select-trigger {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--cream-3, #e8dfc8);
+  border-radius: 9px;
+  font-size: 0.88rem;
+  color: var(--ink, #2a0808);
+  background: var(--white, #fff);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.custom-select-wrapper.open .custom-select-trigger {
+  border-color: var(--maroon, #7a1818);
+  box-shadow: 0 0 0 3px rgba(122,24,24,0.08);
+}
+
+.custom-select-trigger svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--muted, #7a6868);
+  transition: transform 0.25s ease;
+}
+
+.custom-select-wrapper.open .custom-select-trigger svg {
+  transform: rotate(180deg);
+  stroke: var(--maroon, #7a1818);
+}
+
+.custom-select-options {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1.5px solid var(--cream-3, #e8dfc8);
+  border-radius: 9px;
+  box-shadow: 0 10px 25px rgba(42,8,8,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+  z-index: 1000;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 6px;
+}
+
+.custom-select-wrapper.open .custom-select-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.custom-option {
+  padding: 10px 12px;
+  font-size: 0.86rem;
+  color: var(--ink, #2a0808);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-family: 'Inter', sans-serif;
+}
+
+.custom-option:hover, .custom-option.selected {
+  background: rgba(122,24,24,0.05);
+  color: var(--maroon, #7a1818);
+  font-weight: 500;
+}
+
+/* Custom Scrollbar for Dropdowns */
+.custom-select-options::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-select-options::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-select-options::-webkit-scrollbar-thumb {
+  background: var(--cream-3, #e8dfc8);
+  border-radius: 10px;
+}
+.custom-select-options::-webkit-scrollbar-thumb:hover {
+  background: var(--gold, #c9a84c);
+}

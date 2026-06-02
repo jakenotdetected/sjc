@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Student Portal — SJC COUNSELLING & CAREER GUIDANCE UNIT</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232a0808'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='34' font-weight='800' text-anchor='middle' fill='%23c9a84c'%3ES%3C/text%3E%3C/svg%3E"/>
+<title>Student Portal — SJC Counselling</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 @font-face {
-  font-family: 'SoulsideBetrayed';
-  src: url('/SoulsideBetrayed-3lazX.ttf') format('truetype');
+  font-family: 'Canterbury';
+  src: url('/Canterbury.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -57,7 +57,7 @@ input,select,textarea{font-family:'Inter',sans-serif}
 .form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;border:1.5px solid var(--cream-3);border-radius:9px;font-size:0.88rem;color:var(--ink);background:var(--white);outline:none;transition:border .18s}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--maroon);box-shadow:0 0 0 3px rgba(122,24,24,0.08)}
 .form-group textarea{resize:vertical;min-height:80px}
-.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237a6868' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+.form-group select{background-repeat:no-repeat;background-position:right 12px center}
 .form-err{color:#c0392b;font-size:0.78rem;margin-top:5px}
 .btn-auth{width:100%;padding:13px;border:none;border-radius:9px;font-size:0.88rem;font-weight:700;cursor:pointer;transition:all .18s;letter-spacing:.03em}
 .btn-auth-primary{background:linear-gradient(135deg,var(--maroon),var(--maroon-deep));color:#fff}
@@ -99,7 +99,7 @@ input,select,textarea{font-family:'Inter',sans-serif}
 .tb-brand{display:flex;align-items:center;gap:10px}
 .tb-logo{width:34px;height:34px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
 .tb-logo img{width:100%;height:100%;object-fit:contain;padding:2px}
-.tb-name{font-family:'DM Serif Display', cursive;font-size:1.15rem;font-weight:400;color:var(--cream);line-height:1}
+.tb-name{font-family:'Canterbury', serif;font-size:1.15rem;font-weight:400;color:var(--cream);line-height:1}
 .tb-role{font-size:0.6rem;color:rgba(250,246,238,0.55);letter-spacing:.14em;text-transform:uppercase;margin-top:1px}
 .tb-mid{flex:1}
 .tb-right{display:flex;align-items:center;gap:12px}
@@ -234,9 +234,110 @@ input,select,textarea{font-family:'Inter',sans-serif}
   .sb{position:absolute;top:0;bottom:0;left:0;z-index:50;box-shadow:4px 0 20px rgba(0,0,0,0.3)}
 }
 @media(max-width:600px){.stat-row{grid-template-columns:1fr}.page{padding:20px 16px}}
+
+/* Logo Subtitle Canterbury Override */
+.brand-sub, .footer-brand-sub {
+    font-family: 'Canterbury', serif !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 0.05em !important;
+    text-transform: none !important;
+}
+
 </style>
+
+<style id="global-loader-css">
+#global-loader {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: #1a0404;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-out, visibility 0.5s;
+}
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: loaderFadeUp 0.8s ease-out;
+}
+.loader-logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-bottom: 24px;
+  animation: loaderSubtlePulse 2s infinite ease-in-out;
+}
+.loader-text {
+  font-family: 'Canterbury', 'DM Serif Display', serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #c9a84c 0%, #fff6e0 50%, #c9a84c 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: loaderShimmer 2.5s linear infinite;
+}
+.loader-bar {
+  width: 150px;
+  height: 2px;
+  background: rgba(201, 168, 76, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.loader-bar-fill {
+  position: absolute;
+  top: 0; left: 0; height: 100%;
+  width: 0%;
+  background: #c9a84c;
+  border-radius: 2px;
+  animation: loaderFillBar 1.5s cubic-bezier(0.77, 0, 0.17, 1) infinite;
+}
+@keyframes loaderFadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes loaderSubtlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); box-shadow: 0 15px 40px rgba(201,168,76,0.2); }
+}
+@keyframes loaderShimmer {
+  to { background-position: 200% center; }
+}
+@keyframes loaderFillBar {
+  0% { width: 0%; left: 0; }
+  50% { width: 100%; left: 0; }
+  100% { width: 100%; left: 100%; }
+}
+</style>
+
+  <link rel="stylesheet" href="/custom_select.css" />
+  <link rel="icon" type="image/x-icon" href="./favicon-rounded.ico">
+  <script src="/mock_backend.js?v=2"></script>
 </head>
 <body>
+
+<!-- Global Loader HTML -->
+<div id="global-loader">
+  <div class="loader-content">
+    <img src="/St.-Josephs-College-Anuradhapura-Logo (1).jpg" alt="SJC Logo" class="loader-logo">
+    <div class="loader-text">Student Portal</div>
+    <div class="loader-bar">
+      <div class="loader-bar-fill"></div>
+    </div>
+  </div>
+</div>
+  <div class="loader-spinner"></div>
+</div>
+
 <div id="toast"></div>
 
 <!-- BOOK MODAL -->
@@ -265,7 +366,7 @@ input,select,textarea{font-family:'Inter',sans-serif}
 <div id="authScreen">
   <div class="auth-left">
     <div class="auth-left-orb"></div><div class="auth-left-orb2"></div>
-    <div class="auth-logo"><img src="logo.jpg" alt="SJC" onerror="this.parentElement.innerHTML='<span style=\'font-family:Cormorant Garamond,serif;font-weight:800;font-size:1.6rem;color:#c9a84c\'>S</span>'"/></div>
+    <div class="auth-logo"><img src="St.-Josephs-College-Anuradhapura-Logo (1).jpg" alt="SJC" onerror="this.parentElement.innerHTML='<span style=\'font-family:Cormorant Garamond,serif;font-weight:800;font-size:1.6rem;color:#c9a84c\'>S</span>'"/></div>
     <h1>SJC <em>Student</em><br/>Portal</h1>
     <p>Your personalised gateway to counselling, career guidance, and academic resources at St. Joseph's College.</p>
     <div class="auth-badges">
@@ -412,7 +513,7 @@ input,select,textarea{font-family:'Inter',sans-serif}
   <div class="tb">
     <button class="tb-burger" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
     <a href="/" class="tb-brand">
-      <div class="tb-logo"><img src="logo.jpg" alt="SJC" onerror="this.style.display='none'"/></div>
+      <div class="tb-logo"><img src="St.-Josephs-College-Anuradhapura-Logo (1).jpg" alt="SJC" onerror="this.style.display='none'"/></div>
       <div><div class="tb-name">SJC Counselling</div><div class="tb-role">Student Portal</div></div>
     </a>
     <div class="tb-mid"></div>
@@ -791,7 +892,7 @@ const CAREERS=[
     title:'Government Administrative Officer', field:'Government', tags:['Government'], bg:'#f5f3ff', stroke:'#4c1d95',
     desc:'Manage public resources and formulate policies within government ministries.',
     salary:'LKR 50,000 - 150,000+ per month (plus pensions & perks)',
-    quals:'Any Bachelor's Degree and passing SLAS (Sri Lanka Administrative Service) exam.',
+    quals:'Any Bachelor\'s Degree and passing SLAS (Sri Lanka Administrative Service) exam.',
     uni:'Any recognized state university',
     subjects:'Any stream (Arts, Science, Commerce)',
     local:'Ministries, District Secretariats, Departments',
@@ -1001,7 +1102,8 @@ function updateRing(pct){
   if(el)el.textContent=pct+'%';
 }
 function renderDashAppts(){
-  const apts=(currentUser.appointments||[]).filter(a=>!a.done).slice(0,3);
+  const allApts = DB.get('appointments') || [];
+  const apts = allApts.filter(a => a.email === currentUser.email && !a.done && a.status !== 'cancelled').sort((a,b)=>a.date>b.date?1:-1).slice(0,3);
   const el=document.getElementById('dashAppts');if(!el)return;
   if(!apts.length){el.innerHTML='<div class="appt-empty"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><p>No upcoming appointments.</p></div>';return;}
   el.innerHTML='<div class="appt-list">'+apts.map(a=>apptHTML(a)).join('')+'</div>';
@@ -1010,7 +1112,8 @@ function apptHTML(a){
   const d=new Date(a.date);
   const day=isNaN(d.getDate())?'–':d.getDate();
   const mon=isNaN(d.getMonth())?'':d.toLocaleString('default',{month:'short'});
-  return `<div class="appt-card"><div class="appt-date"><div class="appt-day">${day}</div><div class="appt-mon">${mon}</div></div><div class="appt-divider"></div><div class="appt-info"><div class="appt-title">${a.type}</div><div class="appt-meta">${a.time} · Counselling Unit</div></div><span class="appt-badge ${a.done?'done':'upcoming'}">${a.done?'Completed':'Upcoming'}</span></div>`;
+  const statusStr = a.status ? a.status[0].toUpperCase() + a.status.slice(1) : (a.done ? 'Completed' : 'Upcoming');
+  return `<div class="appt-card"><div class="appt-date"><div class="appt-day">${day}</div><div class="appt-mon">${mon}</div></div><div class="appt-divider"></div><div class="appt-info"><div class="appt-title">${a.type}</div><div class="appt-meta">${a.time} · Counselling Unit</div></div><span class="appt-badge ${a.status==='confirmed'?'confirmed':(a.status==='completed'?'done':(a.status==='cancelled'?'cancelled':'upcoming'))}">${statusStr}</span></div>`;
 }
 function renderDashCareers(){
   const interests=currentUser.careerInterests||[];
@@ -1159,7 +1262,6 @@ function renderCareerExplorer(filter){
       </div>
     </div>
   `).join('');
-}"><i class="ejo ejo-career" style="font-size:1.5rem; color:${c.stroke}"></i></div><div class="career-exp-title">${c.title}</div><div class="career-exp-field">${c.field}</div><div class="career-exp-desc">${c.desc}</div><div class="career-exp-skills">${c.skills.map(s=>`<span class="career-exp-skill">${s}</span>`).join('')}</div></div>`).join('');
 }
 function filterCareers(filter,el){
   document.querySelectorAll('.interest-pill').forEach(p=>p.classList.remove('active'));
@@ -1168,7 +1270,8 @@ function filterCareers(filter,el){
 
 // ── APPOINTMENTS ──
 function renderApptsFull(){
-  const apts=currentUser.appointments||[];
+  const allApts = DB.get('appointments') || [];
+  const apts = allApts.filter(a => a.email === currentUser.email).sort((a,b)=>a.date>b.date?-1:1);
   const countEl=document.getElementById('apptCount');
   if(countEl)countEl.textContent=apts.length+' appointment'+(apts.length!==1?'s':'');
   const el=document.getElementById('apptListFull');if(!el)return;
@@ -1181,12 +1284,22 @@ function submitBooking(){
   const time=document.getElementById('bk-time').value;
   const note=document.getElementById('bk-note').value.trim();
   if(!date){toast('Please select a date.','error');return;}
-  if(!currentUser.appointments)currentUser.appointments=[];
-  currentUser.appointments.push({type,date,time,note,done:false,id:Date.now()});
-  persist();closeModal('bookModal');
+  
+  const allApts = DB.get('appointments') || [];
+  const apt = {
+    id: Date.now().toString(), type, date, time, note, done: false, status: 'pending', createdAt: new Date().toISOString(),
+    name: currentUser.firstName + ' ' + currentUser.lastName,
+    email: currentUser.email, grade: currentUser.grade, phone: currentUser.contact || ''
+  };
+  allApts.push(apt);
+  DB.set('appointments', allApts);
+  
+  closeModal('bookModal');
   toast('Appointment request sent!','success');
   renderDashAppts();renderApptsFull();
-  document.getElementById('stat-appts').textContent=(currentUser.appointments||[]).length;
+  
+  const myApts = allApts.filter(a => a.email === currentUser.email);
+  document.getElementById('stat-appts').textContent=myApts.length;
 }
 
 // ── MODALS & TOAST ──
@@ -1201,5 +1314,25 @@ function toast(msg,type='success'){
   clearTimeout(toastT);toastT=setTimeout(()=>el.className='',3000);
 }
 </script>
+
+<script id="global-loader-js">
+  (function(){
+    let loaderHidden = false;
+    const hideLoader = () => {
+      if(loaderHidden) return;
+      loaderHidden = true;
+      const loader = document.getElementById('global-loader');
+      if(loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+      }
+    };
+    window.addEventListener('load', () => setTimeout(hideLoader, 300));
+    // Fail-safe
+    setTimeout(hideLoader, 2500);
+  })();
+</script>
+
+  <script src="/custom_select.js"></script>
 </body>
 </html>

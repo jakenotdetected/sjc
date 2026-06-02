@@ -1274,6 +1274,8 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
 }
 </style>
 <link rel="stylesheet" href="/emojis.css"/>
+  <link rel="icon" type="image/x-icon" href="../favicon-rounded.ico">
+  <script src="../mock_backend.js?v=2"></script>
 </head>
 <body>
 
@@ -1315,14 +1317,42 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
       <!-- Body -->
       <div class="login-body">
 
+        <!-- Email input -->
+        <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#5a1010;margin-bottom:8px">Email Address</div>
+        <input
+          type="email"
+          id="emailIn"
+          placeholder="Enter your registered email"
+          value="teacher@sjc.lk"
+          autocomplete="email"
+          style="
+            width:100%;
+            padding:14px 16px;
+            border:2px solid #e0d4c8;
+            border-radius:12px;
+            font-size:1rem;
+            font-weight:600;
+            text-align:center;
+            letter-spacing:0;
+            color:#2a0808;
+            background:#fff;
+            outline:none;
+            font-family:'Inter',sans-serif;
+            transition:border-color .2s, box-shadow .2s;
+            margin-bottom:20px;
+          "
+          onfocus="this.style.borderColor='#7a1818';this.style.boxShadow='0 0 0 4px rgba(122,24,24,0.1)'"
+          onblur="this.style.borderColor='#e0d4c8';this.style.boxShadow='none'"
+        />
+        
         <!-- PIN label -->
-        <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#5a1010;margin-bottom:8px" id="lPin">Access PIN</div>
+        <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#5a1010;margin-bottom:8px" id="lPin">Password</div>
 
         <!-- PIN input -->
         <input
           type="password"
           id="pinIn"
-          placeholder="Enter your PIN"
+          placeholder="Enter your Password"
           maxlength="6"
           autocomplete="off"
           inputmode="numeric"
@@ -1345,6 +1375,8 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
           onfocus="this.style.borderColor='#7a1818';this.style.boxShadow='0 0 0 4px rgba(122,24,24,0.1)'"
           onblur="this.style.borderColor='#e0d4c8';this.style.boxShadow='none'"
         />
+        
+        <a href="#" onclick="triggerOTP()" style="font-size:0.8rem;color:var(--maroon-deep);margin-top:10px;display:block;text-align:right;text-decoration:none;font-weight:600;cursor:pointer;position:relative;z-index:999;">Forgot Password?</a>
 
         <!-- Error -->
         <div id="loginErr" style="color:#c0392b;font-size:0.82rem;font-weight:600;text-align:center;min-height:22px;margin-top:8px"></div>
@@ -1359,6 +1391,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
             border:none;border-radius:12px;cursor:pointer;
             font-family:'Inter',sans-serif;margin-top:4px;
             transition:opacity .18s;letter-spacing:.02em;
+            position:relative;z-index:100;
           "
           onmouseenter="this.style.opacity='.88'"
           onmouseleave="this.style.opacity='1'"
@@ -1367,7 +1400,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
         </button>
 
         <!-- Language toggle -->
-        <div style="margin-top:18px;display:flex;border:1.5px solid #e0d4c8;border-radius:10px;overflow:hidden">
+        <div style="margin-top:18px;position:relative;z-index:100;display:flex;border:1.5px solid #e0d4c8;border-radius:10px;overflow:hidden">
           <button id="lEn" onclick="setLang('en')"
             style="flex:1;padding:9px 0;font-size:0.78rem;font-weight:700;letter-spacing:.04em;border:none;background:#2a0808;color:#fff;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s">
             English
@@ -1841,7 +1874,7 @@ let vuRafId = null;
 
 const T = {
   en:{
-    lLoginTitle:'Teacher Portal',lLoginSub:"St. Joseph's College · Anuradhapura",lPin:'Access PIN',lSignIn:'Sign In',
+    lLoginTitle:'Teacher Portal',lLoginSub:"St. Joseph's College · Anuradhapura",lPin:'Password',lSignIn:'Sign In',
     tbTitle:'Counseling',lAddStudent:'Add Student',lCredit:'Developed by Jake<br/>SJC Counseling Team',
     lWelcomeTitle:'Welcome',lWelcomeDesc:'Tap the menu to select a student, or add a new one.',lOpenList:'Open Students',
     lAddNote:'Add Note',lSaveNote:'Save Note',lNotesTitle:'Notes',
@@ -1868,7 +1901,7 @@ const T = {
     voiceTag:'Voice',
   },
   si:{
-    lLoginTitle:'ගුරු ද්වාරය',lLoginSub:'ශාන්ත ජෝශප් විද්‍යාලය · අනුරාධපුරය',lPin:'PIN ඇතුළු කරන්න',lSignIn:'ඇතුළු වන්න',
+    lLoginTitle:'ගුරු ද්වාරය',lLoginSub:'ශාන්ත ජෝශප් විද්‍යාලය · අනුරාධපුරය',lPin:'මුරපදය ඇතුළත් කරන්න',lSignIn:'ඇතුළු වන්න',
     tbTitle:'උපදේශනය',lAddStudent:'සිසුවා එක් කරන්න',lCredit:'Jake විසින් නිර්මාණය<br/>SJC උපදේශන කණ්ඩායම',
     lWelcomeTitle:'ආයුබෝවන්',lWelcomeDesc:'සිසුවෙකු තෝරන්න, නැතහොත් නව සිසුවෙකු එක් කරන්න.',lOpenList:'සිසු ලැයිස්තුව',
     lAddNote:'සටහනක් එක් කරන්න',lSaveNote:'සුරකින්න',lNotesTitle:'සටහන්',
@@ -1918,30 +1951,22 @@ function applyLang(){
   const lEn = document.getElementById('lEn');
   const lSi = document.getElementById('lSi');
   if(lEn && lSi){
-    lEn.style.background = lang==='en' ? '#2a0808' : '#fff';
-    lEn.style.color     = lang==='en' ? '#fff'    : '#aaa';
-    lSi.style.background = lang==='si' ? '#2a0808' : '#fff';
-    lSi.style.color     = lang==='si' ? '#fff'    : '#aaa';
+    lEn.style.background = lang==='en' ? 'var(--maroon-deep)' : '#fff';
+    lEn.style.color      = lang==='en' ? 'var(--cream)'       : '#aaa';
+    lEn.style.borderColor= lang==='en' ? 'var(--maroon-deep)' : '#e0d4c8';
+    
+    lSi.style.background = lang==='si' ? 'var(--maroon-deep)' : '#fff';
+    lSi.style.color      = lang==='si' ? 'var(--cream)'       : '#aaa';
+    lSi.style.borderColor= lang==='si' ? 'var(--maroon-deep)' : '#e0d4c8';
   }
   // Topbar and sidebar actions removed
   // Sidebar buttons removed
-  if(!isRecording){
+  if(typeof isRecording !== 'undefined' && !isRecording){
     const vm = document.getElementById('voiceMemoLabel');
     if(vm) vm.textContent = tr('voiceMemoBtn');
   }
 
   document.body.classList.toggle('si', lang==='si');
-
-  // Login lang button states
-  ['lEn','lSi'].forEach(id=>{
-    const el = document.getElementById(id);
-    const want = id==='lEn' ? 'en' : 'si';
-    if(lang===want){
-      el.style.background='var(--maroon-deep)'; el.style.color='var(--cream)'; el.style.borderColor='var(--maroon-deep)';
-    } else {
-      el.style.background=''; el.style.color=''; el.style.borderColor='';
-    }
-  });
 
   // Categories dropdown — rebuild so custom cats + correct language labels both apply
   rebuildCategoryDropdown();
@@ -1974,16 +1999,86 @@ function observeReveal(container){
   });
 }
 
+function saveResetPIN() {
+  const nw = document.getElementById('reset-in').value;
+  if(nw.length < 4) {
+    document.getElementById('reset-err').style.display = 'block';
+    document.getElementById('reset-err').textContent = 'Password must be at least 4 characters';
+    return;
+  }
+  const db = getDb();
+  const email = document.getElementById('emailIn').value;
+  const tUser = db.teachers.find(t => t.email.toLowerCase() === email.toLowerCase());
+  if(tUser) {
+    tUser.pin = nw;
+    localStorage.setItem('sjc_teachers', JSON.stringify(db.teachers));
+  }
+  
+  document.getElementById('resetModal').classList.remove('active');
+  document.getElementById('otp-in').value = '';
+  document.getElementById('reset-in').value = '';
+  alert("Password reset successful! You may now log in with your new password.");
+}
+
 // ===== LOGIN =====
+
+function getDb() {
+  const db = JSON.parse(localStorage.getItem('sjc_auth')) || { adminEmail: 'admin@sjc.lk', adminPin: '4321' };
+  const teachers = JSON.parse(localStorage.getItem('sjc_teachers')) || [
+    { id: 't1', email: 'teacher@sjc.lk', pin: '1234', name: 'Default Teacher', perms: {canAdd:true, canDelete:true, canEditNote:true} }
+  ];
+  return { ...db, teachers };
+};
+
+let currentOTP = '';
+
 function doLogin(){
-  if(document.getElementById('pinIn').value === PIN){
+  const db = getDb();
+  const email = document.getElementById('emailIn').value;
+  const pin = document.getElementById('pinIn').value;
+  const tUser = db.teachers.find(t => t.email.toLowerCase() === email.toLowerCase() && t.pin === pin);
+  if(tUser){
+    localStorage.setItem('sjc_current_teacher', JSON.stringify(tUser));
+    // Immediate Login
     document.getElementById('login').classList.add('hidden');
     document.getElementById('app').classList.add('visible');
+    enforcePerms();
     loadStudents();
   } else {
-    document.getElementById('loginErr').textContent = tr('wrongPin');
-    document.getElementById('pinIn').value = '';
+    document.getElementById('loginErr').textContent = (currentLang === 'si' ? 'විද්‍යුත් තැපෑල හෝ PIN අංකය වැරදියි' : 'Invalid email or PIN.');
   }
+}
+
+function triggerOTP() {
+  const db = getDb();
+  const email = document.getElementById('emailIn').value;
+  const tUser = db.teachers.find(t => t.email.toLowerCase() === email.toLowerCase());
+  if(!tUser) {
+    alert("Please enter a valid registered email to reset your PIN.");
+    return;
+  }
+  currentOTP = Math.floor(1000 + Math.random() * 9000).toString();
+  alert(`[MOCK EMAIL] Sent to ${email}!
+
+Your Password Reset OTP is: ${currentOTP}`);
+  document.getElementById('otpModal').classList.add('active');
+}
+
+function verifyOTP() {
+  const inp = document.getElementById('otp-in').value;
+  if(inp === currentOTP) {
+    document.getElementById('otpModal').classList.remove('active');
+    document.getElementById('resetModal').classList.add('active');
+  } else {
+    document.getElementById('otp-err').style.display = 'block';
+  }
+}
+function enforcePerms() {
+  const db = getDb();
+  const tUser = JSON.parse(localStorage.getItem('sjc_current_teacher'));
+  const addBtn = document.querySelector('button[onclick="openAddStudent()"]');
+  if(addBtn) addBtn.style.display = (tUser && tUser.perms && tUser.perms.canAdd) ? 'flex' : 'none';
+  window.teacherPerms = tUser ? tUser.perms : {canAdd:true, canDelete:true, canEditNote:true};
 }
 document.getElementById('loginBtn').addEventListener('click', doLogin);
 document.getElementById('pinIn').addEventListener('keydown', e => { if(e.key==='Enter') doLogin(); });
@@ -2616,7 +2711,7 @@ async function renderNotes(){
     const audioPlayer = hasAudio
       ? `<audio class="note-audio" controls preload="none" src="data:${escAttr(n.audioMime||'audio/webm')};base64,${n.audioBase64}"></audio>`
       : '';
-    const voiceTag = hasAudio ? `<span class="note-voice-tag">🎓 ${tr('voiceTag')}</span>` : '';
+    const voiceTag = hasAudio ? `<span class="note-voice-tag"> ${tr('voiceTag')}</span>` : '';
     return `<div class="note reveal" style="animation-delay:${Math.min(i*55,440)}ms">
       <div class="note-meta">
         <span class="note-cat">${escHTML(getCatLabel(n.category))}</span>
@@ -2991,7 +3086,7 @@ async function openReportModal(){
           <div class="report-note-meta">
             <span>${d} ${t}</span>
             <span>Mood: ${n.mood||'—'}</span>
-            ${n.audioBase64?'<span>🎓 Voice memo</span>':''}
+            ${n.audioBase64?'<span> Voice memo</span>':''}
           </div>
           <div class="report-note-body"></div>
         </div>`;
@@ -3198,7 +3293,7 @@ async function saveCounselingReport(generatePdf=false){
     if(generatePdf) await _generateCounselingPDF(cr);
     else {
       const btn = document.querySelector('#crModal .btn-line');
-      if(btn){ const orig=btn.textContent; btn.textContent='Saved ✅'; setTimeout(()=>btn.textContent=orig,1500); }
+      if(btn){ const orig=btn.textContent; btn.textContent='Saved '; setTimeout(()=>btn.textContent=orig,1500); }
     }
   } catch(e){ alert('Could not save: '+e.message); }
 }
@@ -3858,7 +3953,7 @@ async function impProcess(){
       impFiles[i].result = r;
       const th = document.getElementById(`impThumb${i}`);
       const s = th && th.querySelector('.imp-status');
-      if(s) s.textContent = r.ok ? '✅' : '❌';
+      if(s) s.textContent = r.ok ? '' : '❌';
     });
 
     // Switch to step 2
@@ -3963,7 +4058,7 @@ async function impCreateAll(){
     if(!body.name){ failed++; continue; }
     try {
       const res = await fetch('/api/students', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body) });
-      if(res.ok){ created++; const card=document.getElementById(`impCard${i}`); if(card){ card.style.border='1.5px solid var(--success,#2ecc71)'; card.querySelector('.imp-card-head div div').textContent='✅ Created'; } }
+      if(res.ok){ created++; const card=document.getElementById(`impCard${i}`); if(card){ card.style.border='1.5px solid var(--success,#2ecc71)'; card.querySelector('.imp-card-head div div').textContent=' Created'; } }
       else failed++;
     } catch(e){ failed++; }
   }

@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="theme-color" content="#2a0808"/>
-<title>Career Guidance — SJC COUNSELLING & CAREER GUIDANCE UNIT</title>
+<title>Career Guidance â€” SJC Counselling</title>
 <meta name="description" content="Explore career pathways, stream selection advice, CV tips, and university guidance from the SJC Career Guidance programme at St. Joseph's College."/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232a0808'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='34' font-weight='800' text-anchor='middle' fill='%23c9a84c'%3ES%3C/text%3E%3C/svg%3E"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 @font-face {
-  font-family: 'SoulsideBetrayed';
-  src: url('/SoulsideBetrayed-3lazX.ttf') format('truetype');
+  font-family: 'Canterbury';
+  src: url('/Canterbury.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -53,8 +53,8 @@ nav.main.scrolled{box-shadow:0 4px 24px rgba(42,8,8,0.08)}
 .brand-logo{width:48px;height:48px;border-radius:10px;overflow:hidden;flex-shrink:0;background:#fff;display:flex;align-items:center;justify-content:center}
 .brand-logo img{width:100%;height:100%;object-fit:contain;padding:2px}
 .brand-logo-placeholder{font-weight:800;font-size:1.3rem;color:var(--gold)}
-.brand-name{font-family:'DM Serif Display', cursive;font-weight:600;font-size:1.18rem;color:var(--maroon-deep);line-height:1.15}
-.brand-sub{font-size:0.62rem;color:var(--muted);letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.brand-name{font-family:'Canterbury', serif;font-weight:400;font-size:1.18rem;color:var(--maroon-deep);line-height:1.15}
+.brand-sub{font-size:0.9rem;color:var(--muted);letter-spacing:.16em;font-weight:500font-family:\'DM Sans\', sans-serif;text-transform:none;}
 .nav-links{display:flex;align-items:center;gap:2px;list-style:none;margin-left:auto}
 .nav-links a{color:var(--ink-soft);font-size:0.82rem;font-weight:500;padding:8px 12px;border-radius:6px;transition:all .18s;white-space:nowrap;position:relative}
 .nav-links a:hover{color:var(--maroon);background:rgba(122,24,24,0.05)}
@@ -186,8 +186,8 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 .footer-logo{width:52px;height:52px;border-radius:10px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .footer-logo img{width:100%;height:100%;object-fit:contain;padding:2px}
 .footer-logo-unit{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--maroon-deep);flex-shrink:0}
-.footer-brand-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--maroon-deep);line-height:1.25}
-.footer-brand-sub{font-size:0.7rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+.footer-brand-name{font-family:'Canterbury', serif;font-size:1.05rem;font-weight:400;color:var(--maroon-deep);line-height:1.25}
+.footer-brand-sub{font-size:0.9rem;color:var(--muted);letter-spacing:.08em;margin-top:3pxfont-family:'Canterbury', serif;text-transform:none;}
 .footer-desc{font-size:0.88rem;color:var(--muted);line-height:1.75;margin-bottom:22px}
 .footer-social{display:flex;gap:10px}
 .footer-social a{width:36px;height:36px;border-radius:8px;background:var(--maroon-deep);color:var(--cream);display:flex;align-items:center;justify-content:center;transition:all .18s}
@@ -220,6 +220,15 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 @media(max-width:480px){
   .careers-grid{grid-template-columns:1fr}
 }
+
+/* Logo Subtitle Canterbury Override */
+.brand-sub, .footer-brand-sub {
+    font-family: 'Canterbury', serif !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 0.05em !important;
+    text-transform: none !important;
+}
+
 </style>
 
 <style>
@@ -237,8 +246,99 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 </style>
 
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet"/>
+
+<style id="global-loader-css">
+#global-loader {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: #1a0404;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-out, visibility 0.5s;
+}
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: loaderFadeUp 0.8s ease-out;
+}
+.loader-logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-bottom: 24px;
+  animation: loaderSubtlePulse 2s infinite ease-in-out;
+}
+.loader-text {
+  font-family: 'Canterbury', 'DM Serif Display', serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #c9a84c 0%, #fff6e0 50%, #c9a84c 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: loaderShimmer 2.5s linear infinite;
+}
+.loader-bar {
+  width: 150px;
+  height: 2px;
+  background: rgba(201, 168, 76, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.loader-bar-fill {
+  position: absolute;
+  top: 0; left: 0; height: 100%;
+  width: 0%;
+  background: #c9a84c;
+  border-radius: 2px;
+  animation: loaderFillBar 1.5s cubic-bezier(0.77, 0, 0.17, 1) infinite;
+}
+@keyframes loaderFadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes loaderSubtlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); box-shadow: 0 15px 40px rgba(201,168,76,0.2); }
+}
+@keyframes loaderShimmer {
+  to { background-position: 200% center; }
+}
+@keyframes loaderFillBar {
+  0% { width: 0%; left: 0; }
+  50% { width: 100%; left: 0; }
+  100% { width: 100%; left: 100%; }
+}
+</style>
+
+  <link rel="stylesheet" href="/custom_select.css" />
+  <link rel="icon" type="image/x-icon" href="./favicon-rounded.ico">
 </head>
 <body>
+
+<!-- Global Loader HTML -->
+<div id="global-loader">
+  <div class="loader-content">
+    <img src="/St.-Josephs-College-Anuradhapura-Logo (1).jpg" alt="SJC Logo" class="loader-logo">
+    <div class="loader-text">Career Guidance</div>
+    <div class="loader-bar">
+      <div class="loader-bar-fill"></div>
+    </div>
+  </div>
+</div>
+  <div class="loader-spinner"></div>
+</div>
+
 
 <div class="topbar">
   <div class="wrap">
@@ -248,7 +348,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
     </div>
     <div class="topbar-right">
       <a href="/teacher/">Teacher Portal</a><span class="topbar-sep">|</span>
-      <a href="/portal">Student Login</a><span class="topbar-sep">|</span>
+      <a href="/portal.html">Student Login</a><span class="topbar-sep">|</span>
       <a href="/admin/">Admin</a>
     </div>
   </div>
@@ -258,29 +358,31 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
   <div class="wrap">
     <div class="nav-inner">
       <a href="/" class="brand">
-        <div class="brand-logo"><img src="logo.jpg" alt="SJC Logo"/></div>
-        <div><div class="brand-name">SJC Counselling Unit</div><div class="brand-sub">St. Joseph's College · Anuradhapura</div></div>
+        <div class="brand-logo"><img src="St.-Josephs-College-Anuradhapura-Logo (1).jpg" alt="SJC Logo"/></div>
+        <div><div class="brand-name" style="font-size: 1.15rem; line-height: 1.2;">SJC Counselling &amp; Career Guidance Unit</div><div class="brand-sub">St. Joseph's College Â· Anuradhapura</div></div>
       </a>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/careers" class="active">Careers</a></li>
-        <li><a href="/resources">Wellness</a></li>
-        <li><a href="/events">Events</a></li>
-        <li><a href="/parents">Parents</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/careers.html" class="active">Careers</a></li>
+        <li><a href="/university.html">University Guidance</a></li>
+        <li><a href="/resources.html">Wellness</a></li>
+        <li><a href="/events.html">Events</a></li>
+        <li></li>
+        <li></li>
         <li class="nav-dropdown">
           <button class="nav-dropdown-toggle" style="color:var(--ink-soft);font-size:0.82rem;font-weight:500;padding:8px 12px;border-radius:6px;background:none;border:none;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:all .18s">Portals<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
           <div class="nav-dropdown-menu" style="position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid rgba(122,24,24,0.1);border-radius:14px;box-shadow:0 12px 40px rgba(42,8,8,0.14);padding:8px;min-width:200px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .22s;z-index:200">
             <div style="font-size:0.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#7a6868;padding:6px 14px 2px">Students</div>
-            <a href="/portal" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:9px;font-size:0.82rem;font-weight:500;color:#3a2828;transition:all .15s;text-decoration:none">Student Portal</a>
+            <a href="/portal.html" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:9px;font-size:0.82rem;font-weight:500;color:#3a2828;transition:all .15s;text-decoration:none">Student Portal</a>
             <div style="height:1px;background:rgba(122,24,24,0.08);margin:6px 0"></div>
             <div style="font-size:0.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#7a6868;padding:6px 14px 2px">Staff</div>
             <a href="/teacher/" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:9px;font-size:0.82rem;font-weight:500;color:#3a2828;transition:all .15s;text-decoration:none">Teacher Portal</a>
             <a href="/admin/" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:9px;font-size:0.82rem;font-weight:500;color:#3a2828;transition:all .15s;text-decoration:none">Admin Panel</a>
           </div>
         </li>
-        <li><a href="/appointments" class="nav-cta">Book Appointment</a></li>
+        <li><a href="/appointments.html" class="nav-cta">Book Appointment</a></li>
       </ul>
       <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
@@ -289,17 +391,18 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 
 <div class="mob-nav" id="mobNav">
   <div class="mob-nav-head">
-    <div class="brand"><div class="brand-logo" style="width:44px;height:44px;background:#fff"><img src="logo.jpg" alt="SJC Logo" style="width:100%;height:100%;object-fit:contain;padding:2px"/></div><div class="brand-name" style="font-size:1rem">SJC Counselling</div></div>
+    <div class="brand"><div class="brand-logo" style="width:44px;height:44px;background:#fff"><img src="St.-Josephs-College-Anuradhapura-Logo (1).jpg" alt="SJC Logo" style="width:100%;height:100%;object-fit:contain;padding:2px"/></div><div class="brand-name" style="font-size:1rem">SJC Counselling</div></div>
     <button class="mob-nav-close" id="mobNavClose">&#x2715;</button>
   </div>
   <div class="mob-links">
-    <a href="/">Home</a><a href="/about">About Unit</a>
-    <a href="/services">Services</a><a href="/careers" class="active">Career Guidance</a>
-    <a href="/resources">Mental Wellness</a><a href="/events">Events</a>
-    <a href="/portal">Student Portal</a>
+    <a href="/">Home</a><a href="/about.html">About Unit</a>
+    <a href="/services.html">Services</a><a href="/careers.html" class="active">Career Guidance</a>
+    <a href="/university.html">University Guidance</a>
+    <a href="/resources.html">Mental Wellness</a><a href="/events.html">Events</a>
+    <a href="/portal.html">Student Portal</a>
             <a href="/teacher/">Teacher Portal</a>
   </div>
-  <a href="/appointments" class="mob-cta">Book Counselling Session</a>
+  <a href="/appointments.html" class="mob-cta">Book Counselling Session</a>
 </div>
 
 <div class="page-hero">
@@ -307,10 +410,10 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
   <div class="page-hero-orb"></div>
   <div class="page-hero-pattern"></div>
   <div class="wrap page-hero-inner">
-    <div class="page-breadcrumb"><a href="/">Home</a><span class="page-breadcrumb-sep">›</span><span>Career Guidance</span></div>
+    <div class="page-breadcrumb"><a href="/">Home</a><span class="page-breadcrumb-sep">â€º</span><span>Career Guidance</span></div>
     <div class="page-eyebrow"><span class="page-eyebrow-line"></span>Your Future Starts Here</div>
     <h1>Discover Your <em>Career<br/>Pathway</em></h1>
-    <p class="page-hero-lead">Explore careers aligned with your strengths, interests, and A/L stream — with expert guidance, CV support, and university pathway planning from our counsellors.</p>
+    <p class="page-hero-lead">Explore careers aligned with your strengths, interests, and A/L stream â€” with expert guidance, CV support, and university pathway planning from our counsellors.</p>
   </div>
 </div>
 
@@ -334,90 +437,197 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
     </div>
 
     <div class="careers-grid" id="careersGrid">
+      
+      <!-- 1. Medicine -->
       <div class="career-card reveal" data-stream="bio">
-        <span class="career-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+        <span class="career-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
         <span class="career-stream-badge badge-science">Bio Science</span>
         <div class="career-title">Medicine &amp; Surgery</div>
-        <p class="career-desc">Become a doctor through state or private medical faculties. Requires Biology, Chemistry, and Physics at A/L with high Z-scores.</p>
-        <div class="career-tags"><span class="career-tag">MBBS</span><span class="career-tag">University</span><span class="career-tag">6 Years</span></div>
+        <p class="career-desc">A highly respected career focused on diagnosing, treating, and preventing illnesses to improve human health.</p>
+        <details class="career-details" style="margin-top:16px;">
+          <summary style="cursor:pointer; font-size:0.85rem; font-weight:600; color:var(--maroon); margin-bottom:12px;">View Career Details</summary>
+          <div style="font-size:0.8rem; color:var(--ink-soft); display:grid; gap:8px; padding:12px; background:var(--cream); border-radius:8px; border:1px solid rgba(122,24,24,0.08);">
+            <div><strong>Salary Range:</strong> LKR 150K - 1M+ (Monthly)</div>
+            <div><strong>Required Qualifications:</strong> MBBS, MD or equivalent Medical Degree, SLMC Registration</div>
+            <div><strong>University Pathways:</strong> State Medical Faculties (Colombo, Pera, etc.), KDU, Foreign Medical Schools</div>
+            <div><strong>Recommended Subjects:</strong> Biology, Chemistry, Physics</div>
+            <div><strong>Sri Lankan Opportunities:</strong> Government Hospitals (MOH), Private Healthcare, Clinics</div>
+            <div><strong>International Opportunities:</strong> High demand globally (Requires PLAB for UK, AMC for Aus, USMLE for USA)</div>
+          </div>
+        </details>
       </div>
-      <div class="career-card reveal reveal-delay-1" data-stream="bio">
-        <span class="career-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
-        <span class="career-stream-badge badge-science">Bio Science</span>
-        <div class="career-title">Biomedical Science</div>
-        <p class="career-desc">Research-focused career in laboratories, hospitals, and health sciences. Study pathology, immunology, and medical diagnostics.</p>
-        <div class="career-tags"><span class="career-tag">B.Sc.</span><span class="career-tag">Research</span><span class="career-tag">Health</span></div>
-      </div>
-      <div class="career-card reveal reveal-delay-2" data-stream="science">
-        <span class="career-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></span>
+
+      <!-- 2. Engineering -->
+      <div class="career-card reveal" data-stream="science maths tech">
+        <span class="career-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
         <span class="career-stream-badge badge-maths">Physical Science</span>
         <div class="career-title">Engineering</div>
-        <p class="career-desc">Civil, mechanical, electrical, or software engineering. Requires Maths, Physics, and Combined Maths. High demand and excellent career prospects.</p>
-        <div class="career-tags"><span class="career-tag">B.Sc. Eng</span><span class="career-tag">4 Years</span><span class="career-tag">High Demand</span></div>
+        <p class="career-desc">Applying scientific and mathematical principles to design, build, and maintain structures, machines, and systems.</p>
+        <details class="career-details" style="margin-top:16px;">
+          <summary style="cursor:pointer; font-size:0.85rem; font-weight:600; color:var(--maroon); margin-bottom:12px;">View Career Details</summary>
+          <div style="font-size:0.8rem; color:var(--ink-soft); display:grid; gap:8px; padding:12px; background:var(--cream); border-radius:8px; border:1px solid rgba(122,24,24,0.08);">
+            <div><strong>Salary Range:</strong> LKR 100K - 800K+ (Monthly)</div>
+            <div><strong>Required Qualifications:</strong> BScEng, BEng, or equivalent Engineering Degree (IESL recognized)</div>
+            <div><strong>University Pathways:</strong> Moratuwa, Peradeniya, SLIIT, NIBM, Foreign Universities</div>
+            <div><strong>Recommended Subjects:</strong> Combined Maths, Physics, Chemistry / ICT</div>
+            <div><strong>Sri Lankan Opportunities:</strong> Civil construction, Telecommunications, Manufacturing</div>
+            <div><strong>International Opportunities:</strong> Massive demand in Middle East, Australia (Civil/Mining), and Europe</div>
+          </div>
+        </details>
       </div>
-      <div class="career-card reveal reveal-delay-3" data-stream="science maths">
-        <span class="career-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
-        <span class="career-stream-badge badge-maths">Maths / Science</span>
+
+      <!-- 3. IT -->
+      <div class="career-card reveal" data-stream="all science maths tech commerce">
+        <span class="career-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+        <span class="career-stream-badge" style="background:#eef2fa;color:#2a508f;">All Streams</span>
         <div class="career-title">Information Technology</div>
-        <p class="career-desc">Software development, cybersecurity, data science, and AI. One of the fastest-growing fields with opportunities worldwide.</p>
-        <div class="career-tags"><span class="career-tag">B.Sc. IT</span><span class="career-tag">Global</span><span class="career-tag">High Growth</span></div>
+        <p class="career-desc">The fastest-growing global industry covering software development, data science, cybersecurity, and cloud computing.</p>
+        <details class="career-details" style="margin-top:16px;">
+          <summary style="cursor:pointer; font-size:0.85rem; font-weight:600; color:var(--maroon); margin-bottom:12px;">View Career Details</summary>
+          <div style="font-size:0.8rem; color:var(--ink-soft); display:grid; gap:8px; padding:12px; background:var(--cream); border-radius:8px; border:1px solid rgba(122,24,24,0.08);">
+            <div><strong>Salary Range:</strong> LKR 150K - 1.5M+ (Monthly, Highly scalable)</div>
+            <div><strong>Required Qualifications:</strong> BSc in IT/CS, Software Engineering, or strong portfolio</div>
+            <div><strong>University Pathways:</strong> UCSC, Moratuwa (IT), SLIIT, IIT, APIIT</div>
+            <div><strong>Recommended Subjects:</strong> ICT, Logic, Any stream is acceptable for private IT degrees</div>
+            <div><strong>Sri Lankan Opportunities:</strong> WSO2, Sysco LABS, IFS, Virtusa, Startups</div>
+            <div><strong>International Opportunities:</strong> Seamless global mobility, high remote work potential worldwide</div>
+          </div>
+        </details>
       </div>
-      <div class="career-card reveal" data-stream="commerce">
-        <span class="career-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
-        <span class="career-stream-badge badge-commerce">Commerce</span>
-        <div class="career-title">Accountancy &amp; Finance</div>
-        <p class="career-desc">Chartered accountancy (CA Sri Lanka), banking, investment finance, or audit. Highly respected profession with strong earning potential.</p>
-        <div class="career-tags"><span class="career-tag">CASL</span><span class="career-tag">Finance</span><span class="career-tag">Banking</span></div>
-      </div>
-      <div class="career-card reveal reveal-delay-1" data-stream="commerce">
-        <span class="career-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
-        <span class="career-stream-badge badge-commerce">Commerce</span>
-        <div class="career-title">Business Management</div>
-        <p class="career-desc">Marketing, human resources, entrepreneurship, and operations. BBA or MBA pathways at state and private universities.</p>
-        <div class="career-tags"><span class="career-tag">BBA</span><span class="career-tag">MBA</span><span class="career-tag">Entrepreneurship</span></div>
-      </div>
-      <div class="career-card reveal reveal-delay-2" data-stream="arts">
-        <span class="career-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
-        <span class="career-stream-badge badge-arts">Arts</span>
-        <div class="career-title">Law</div>
-        <p class="career-desc">Become an attorney-at-law through Sri Lanka Law College or an LLB at university. Covers civil, criminal, commercial, and constitutional law.</p>
-        <div class="career-tags"><span class="career-tag">LLB</span><span class="career-tag">SLLC</span><span class="career-tag">5 Years</span></div>
-      </div>
-      <div class="career-card reveal reveal-delay-3" data-stream="arts">
-        <span class="career-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 12 15 2 8.5"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg></span>
-        <span class="career-stream-badge badge-arts">Arts</span>
-        <div class="career-title">Education &amp; Teaching</div>
-        <p class="career-desc">Shape the next generation through the National Institute of Education or Faculty of Education. Subject-specific teaching or educational leadership.</p>
-        <div class="career-tags"><span class="career-tag">B.Ed.</span><span class="career-tag">NIE</span><span class="career-tag">Teaching</span></div>
-      </div>
-      <div class="career-card reveal" data-stream="tech">
-        <span class="career-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17"/></svg></span>
-        <span class="career-stream-badge badge-tech">Technology</span>
-        <div class="career-title">Architecture &amp; Design</div>
-        <p class="career-desc">Architectural design, interior design, or urban planning. Creative and technical blend requiring drawing skills and spatial reasoning.</p>
-        <div class="career-tags"><span class="career-tag">B.Arch</span><span class="career-tag">Design</span><span class="career-tag">5 Years</span></div>
-      </div>
-      <div class="career-card reveal reveal-delay-1" data-stream="arts commerce">
-        <span class="career-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+
+      <!-- 4. Law -->
+      <div class="career-card reveal" data-stream="all arts commerce">
+        <span class="career-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
         <span class="career-stream-badge badge-arts">Arts / Commerce</span>
-        <div class="career-title">Journalism &amp; Media</div>
-        <p class="career-desc">Print, digital, broadcast journalism, or public relations. Strong writing, communication, and analytical skills are essential.</p>
-        <div class="career-tags"><span class="career-tag">B.A. Media</span><span class="career-tag">PR</span><span class="career-tag">Digital</span></div>
+        <div class="career-title">Law &amp; Legal Services</div>
+        <p class="career-desc">Advising and representing individuals, businesses, or government agencies on legal issues and disputes.</p>
+        <details class="career-details" style="margin-top:16px;">
+          <summary style="cursor:pointer; font-size:0.85rem; font-weight:600; color:var(--maroon); margin-bottom:12px;">View Career Details</summary>
+          <div style="font-size:0.8rem; color:var(--ink-soft); display:grid; gap:8px; padding:12px; background:var(--cream); border-radius:8px; border:1px solid rgba(122,24,24,0.08);">
+            <div><strong>Salary Range:</strong> LKR 100K - 1M+ (Highly dependent on clientele)</div>
+            <div><strong>Required Qualifications:</strong> LLB Degree and Attorney-at-Law (Law College)</div>
+            <div><strong>University Pathways:</strong> Colombo Law Faculty, Peradeniya, Sri Lanka Law College, Royal Institute</div>
+            <div><strong>Recommended Subjects:</strong> Logic, Political Science, Languages, History</div>
+            <div><strong>Sri Lankan Opportunities:</strong> Private Practice, Corporate Law, State Counsel, Judiciary</div>
+            <div><strong>International Opportunities:</strong> Corporate law and international arbitration (Requires localized bar exams)</div>
+          </div>
+        </details>
       </div>
-      <div class="career-card reveal reveal-delay-2" data-stream="bio science">
-        <span class="career-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
-        <span class="career-stream-badge badge-science">Bio / Science</span>
-        <div class="career-title">Agriculture &amp; Environment</div>
-        <p class="career-desc">Agricultural science, environmental management, or food technology. Growing field with government and private sector opportunities in Sri Lanka.</p>
-        <div class="career-tags"><span class="career-tag">B.Sc. Agri</span><span class="career-tag">Environment</span></div>
+
+      <!-- 5. Business -->
+      <div class="career-card reveal" data-stream="all commerce arts">
+        <span class="career-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+        <span class="career-stream-badge badge-commerce">Commerce</span>
+        <div class="career-title">Business &amp; Finance</div>
+        <p class="career-desc">Roles spanning from corporate management, banking, and marketing to accounting and human resources.</p>
+        <details class="career-details" style="margin-top:16px;">
+          <summary style="cursor:pointer; font-size:0.85rem; font-weight:600; color:var(--maroon); margin-bottom:12px;">View Career Details</summary>
+          <div style="font-size:0.8rem; color:var(--ink-soft); display:grid; gap:8px; padding:12px; background:var(--cream); border-radius:8px; border:1px solid rgba(122,24,24,0.08);">
+            <div><strong>Salary Range:</strong> LKR 80K - 1.2M+ (Varies wildly by corporate level)</div>
+            <div><strong>Required Qualifications:</strong> BBA, BCom, or Professional bodies (CIMA, ACCA, CIM)</div>
+            <div><strong>University Pathways:</strong> Jayewardenepura (Management), Colombo, NSBM, NIBM</div>
+            <div><strong>Recommended Subjects:</strong> Accounting, Business Statistics, Economics</div>
+            <div><strong>Sri Lankan Opportunities:</strong> Banks, FMCG sector (John Keells, MAS, Hemas), Auditing firms</div>
+            <div><strong>International Opportunities:</strong> Highly transferable globally, especially with ACCA/CIMA/CFA</div>
+          </div>
+        </details>
       </div>
-      <div class="career-card reveal reveal-delay-3" data-stream="arts commerce">
-        <span class="career-icon">??</span>
-        <span class="career-stream-badge badge-arts">All Streams</span>
-        <div class="career-title">Psychology &amp; Counselling</div>
-        <p class="career-desc">Clinical psychology, counselling, or social work. Requires compassion, communication skills, and a genuine desire to help others thrive.</p>
-        <div class="career-tags"><span class="career-tag">B.Sc. Psych</span><span class="career-tag">Counselling</span></div>
+
+      <!-- 6. Media -->
+      <div class="career-card reveal" data-stream="all arts">
+        <span class="career-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        <span class="career-stream-badge badge-arts">Arts / Media</span>
+        <div class="career-title">Media &amp; Communications</div>
+        <p class="career-desc">Journalism, broadcasting, public relations, and digital content creation in an increasingly connected world.</p>
+        <details class="career-details" style="margin-top:16px;">
+          <summary style="cursor:pointer; font-size:0.85rem; font-weight:600; color:var(--maroon); margin-bottom:12px;">View Career Details</summary>
+          <div style="font-size:0.8rem; color:var(--ink-soft); display:grid; gap:8px; padding:12px; background:var(--cream); border-radius:8px; border:1px solid rgba(122,24,24,0.08);">
+            <div><strong>Salary Range:</strong> LKR 70K - 500K+ (Monthly)</div>
+            <div><strong>Required Qualifications:</strong> BA in Mass Comm, Journalism, or Strong Portfolio</div>
+            <div><strong>University Pathways:</strong> Kelaniya, Colombo (Sripalee), Private Media Academies</div>
+            <div><strong>Recommended Subjects:</strong> Media, Languages, Logic, Political Science</div>
+            <div><strong>Sri Lankan Opportunities:</strong> TV Networks (Derana, Hiru), Ad Agencies, Digital Media Agencies</div>
+            <div><strong>International Opportunities:</strong> Digital Nomad opportunities, International News Agencies</div>
+          </div>
+        </details>
       </div>
+
+      <!-- 7. Design -->
+      <div class="career-card reveal" data-stream="all arts tech">
+        <span class="career-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></span>
+        <span class="career-stream-badge badge-arts">Creative Arts</span>
+        <div class="career-title">Design &amp; Architecture</div>
+        <p class="career-desc">Combining creativity with functionality across Graphic Design, UI/UX, Fashion, and Architecture.</p>
+        <details class="career-details" style="margin-top:16px;">
+          <summary style="cursor:pointer; font-size:0.85rem; font-weight:600; color:var(--maroon); margin-bottom:12px;">View Career Details</summary>
+          <div style="font-size:0.8rem; color:var(--ink-soft); display:grid; gap:8px; padding:12px; background:var(--cream); border-radius:8px; border:1px solid rgba(122,24,24,0.08);">
+            <div><strong>Salary Range:</strong> LKR 100K - 800K+ (Monthly)</div>
+            <div><strong>Required Qualifications:</strong> BDes, BArch, or highly developed Design Portfolio</div>
+            <div><strong>University Pathways:</strong> Moratuwa (Architecture/Design), AOD, AMDT</div>
+            <div><strong>Recommended Subjects:</strong> Art, Design, Physics (for Architecture)</div>
+            <div><strong>Sri Lankan Opportunities:</strong> Ad Agencies, Tech Companies (UI/UX), Garment Sector (Fashion)</div>
+            <div><strong>International Opportunities:</strong> Excellent remote work potential for Graphic/UI/UX Designers</div>
+          </div>
+        </details>
+      </div>
+
+      <!-- 8. Aviation -->
+      <div class="career-card reveal" data-stream="all science maths">
+        <span class="career-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.6L3 8l6 4-3 3-3-1-1 1 3 4 4 3 1-1-1-3 3-3 4 6l1.2-.7c.4-.2.7-.6.6-1.1z"/></svg></span>
+        <span class="career-stream-badge badge-maths">Maths / Science</span>
+        <div class="career-title">Aviation</div>
+        <p class="career-desc">Careers high in the sky, including Commercial Pilots, Air Traffic Controllers, and Aeronautical Engineers.</p>
+        <details class="career-details" style="margin-top:16px;">
+          <summary style="cursor:pointer; font-size:0.85rem; font-weight:600; color:var(--maroon); margin-bottom:12px;">View Career Details</summary>
+          <div style="font-size:0.8rem; color:var(--ink-soft); display:grid; gap:8px; padding:12px; background:var(--cream); border-radius:8px; border:1px solid rgba(122,24,24,0.08);">
+            <div><strong>Salary Range:</strong> LKR 500K - 3M+ (Monthly, Highly lucrative)</div>
+            <div><strong>Required Qualifications:</strong> CPL/ATPL (Pilots), BEng Aeronautical (Engineers)</div>
+            <div><strong>University Pathways:</strong> Flight Academies (Skyline, Fairway), KDU (Aeronautical)</div>
+            <div><strong>Recommended Subjects:</strong> Physics, Combined Maths, Excellent English</div>
+            <div><strong>Sri Lankan Opportunities:</strong> SriLankan Airlines, FitsAir, Civil Aviation Authority</div>
+            <div><strong>International Opportunities:</strong> Emirates, Qatar Airways, Global Airlines</div>
+          </div>
+        </details>
+      </div>
+
+      <!-- 9. Government -->
+      <div class="career-card reveal" data-stream="all arts commerce science maths">
+        <span class="career-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
+        <span class="career-stream-badge" style="background:#eef2fa;color:#2a508f;">All Streams</span>
+        <div class="career-title">Government Services</div>
+        <p class="career-desc">Serving the nation through the Sri Lanka Administrative Service (SLAS), Foreign Service, and Defense.</p>
+        <details class="career-details" style="margin-top:16px;">
+          <summary style="cursor:pointer; font-size:0.85rem; font-weight:600; color:var(--maroon); margin-bottom:12px;">View Career Details</summary>
+          <div style="font-size:0.8rem; color:var(--ink-soft); display:grid; gap:8px; padding:12px; background:var(--cream); border-radius:8px; border:1px solid rgba(122,24,24,0.08);">
+            <div><strong>Salary Range:</strong> LKR 50K - 150K (Monthly + Significant Government Perks/Pension)</div>
+            <div><strong>Required Qualifications:</strong> Any recognized Degree, Passing SLAS/SLFS Competitive Exams</div>
+            <div><strong>University Pathways:</strong> Any State or Recognized Private Degree</div>
+            <div><strong>Recommended Subjects:</strong> Political Science, Economics, History, Languages</div>
+            <div><strong>Sri Lankan Opportunities:</strong> Ministries, Embassies, Military Academies (KDU/Diyatalawa)</div>
+            <div><strong>International Opportunities:</strong> Diplomatic Postings (Foreign Service), UN Agencies</div>
+          </div>
+        </details>
+      </div>
+
+      <!-- 10. Entrepreneurship -->
+      <div class="career-card reveal" data-stream="all commerce tech arts">
+        <span class="career-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 22h20L12 2z"/><path d="M12 16v.01"/><path d="M12 12l.01-4"/></svg></span>
+        <span class="career-stream-badge" style="background:#eef2fa;color:#2a508f;">All Streams</span>
+        <div class="career-title">Entrepreneurship</div>
+        <p class="career-desc">Building and scaling your own business, tech startup, or creative agency from the ground up.</p>
+        <details class="career-details" style="margin-top:16px;">
+          <summary style="cursor:pointer; font-size:0.85rem; font-weight:600; color:var(--maroon); margin-bottom:12px;">View Career Details</summary>
+          <div style="font-size:0.8rem; color:var(--ink-soft); display:grid; gap:8px; padding:12px; background:var(--cream); border-radius:8px; border:1px solid rgba(122,24,24,0.08);">
+            <div><strong>Salary Range:</strong> Limitless (Dependent on business success & equity)</div>
+            <div><strong>Required Qualifications:</strong> None strictly required, but Business/Tech degrees help</div>
+            <div><strong>University Pathways:</strong> Any, but specialized Entrepreneurship degrees exist (NSBM, SLIIT)</div>
+            <div><strong>Recommended Subjects:</strong> Business Studies, Accounting, IT</div>
+            <div><strong>Sri Lankan Opportunities:</strong> Startup ecosystems (Hatch, Spiralation), SME sector</div>
+            <div><strong>International Opportunities:</strong> Global markets via e-commerce, SaaS, and freelance platforms</div>
+          </div>
+        </details>
+      </div>
+
     </div>
   </div>
 </section>
@@ -475,7 +685,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
         <div class="stream-card-icon">??</div>
         <div class="stream-card-title">Not Sure Yet?</div>
         <p class="stream-card-desc">That's completely normal. Book a career guidance session with our counsellors to take an aptitude assessment and find the right path for you.</p>
-        <a href="/appointments" style="display:inline-flex;align-items:center;gap:7px;font-size:0.83rem;font-weight:600;color:var(--maroon-deep);margin-top:4px">Book Guidance Session <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/appointments.html" style="display:inline-flex;align-items:center;gap:7px;font-size:0.83rem;font-weight:600;color:var(--maroon-deep);margin-top:4px">Book Guidance Session <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
   </div>
@@ -494,9 +704,9 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
         <div class="tip-card-title">Building a Strong CV</div>
         <div class="tip-list">
           <div class="tip-item"><span class="tip-num">1</span>Start with your full name, contact details, and a professional email address</div>
-          <div class="tip-item"><span class="tip-num">2</span>List education in reverse chronological order — A/Ls, O/Ls, primary school</div>
+          <div class="tip-item"><span class="tip-num">2</span>List education in reverse chronological order â€” A/Ls, O/Ls, primary school</div>
           <div class="tip-item"><span class="tip-num">3</span>Include extracurricular activities, leadership roles, and sports achievements</div>
-          <div class="tip-item"><span class="tip-num">4</span>Add skills relevant to the role — languages, IT skills, certifications</div>
+          <div class="tip-item"><span class="tip-num">4</span>Add skills relevant to the role â€” languages, IT skills, certifications</div>
           <div class="tip-item"><span class="tip-num">5</span>Include a brief personal statement highlighting your goals and strengths</div>
           <div class="tip-item"><span class="tip-num">6</span>Get two referee contacts from teachers or community leaders</div>
         </div>
@@ -506,51 +716,12 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
         <div class="tip-card-title">Interview Preparation</div>
         <div class="tip-list">
           <div class="tip-item"><span class="tip-num">1</span>Research the institution or company thoroughly before the interview</div>
-          <div class="tip-item"><span class="tip-num">2</span>Practise answering "Tell me about yourself" — keep it to 2 minutes</div>
+          <div class="tip-item"><span class="tip-num">2</span>Practise answering "Tell me about yourself" â€” keep it to 2 minutes</div>
           <div class="tip-item"><span class="tip-num">3</span>Prepare examples of achievements using the STAR method (Situation, Task, Action, Result)</div>
           <div class="tip-item"><span class="tip-num">4</span>Dress formally and arrive at least 15 minutes early</div>
           <div class="tip-item"><span class="tip-num">5</span>Maintain eye contact and listen carefully before answering</div>
-          <div class="tip-item"><span class="tip-num">6</span>Prepare 2–3 thoughtful questions to ask the interviewer</div>
+          <div class="tip-item"><span class="tip-num">6</span>Prepare 2â€“3 thoughtful questions to ask the interviewer</div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SUCCESS STORIES -->
-<section style="background:var(--cream)">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>Inspiration</div>
-      <h2 class="sec-title">Success Stories from <em>Our Students</em></h2>
-    </div>
-    <div class="success-grid">
-      <div class="success-card reveal">
-        <div class="success-quote">"</div>
-        <p class="success-text">The career guidance sessions helped me understand that engineering was the right fit for me. I got into the University of Moratuwa — something I never thought possible from Anuradhapura.</p>
-        <div class="success-meta">
-          <div class="success-avatar">KP</div>
-          <div><div class="success-name">Kasun Perera</div><div class="success-role">Past Student · 2023</div></div>
-        </div>
-        <div class="success-outcome">University of Moratuwa — B.Sc. Engineering</div>
-      </div>
-      <div class="success-card reveal reveal-delay-1">
-        <div class="success-quote">"</div>
-        <p class="success-text">I didn't know what to do after A/Ls. The unit's aptitude assessment showed I was well-suited to law. I'm now at the Sri Lanka Law College — first in my family to study law.</p>
-        <div class="success-meta">
-          <div class="success-avatar">NW</div>
-          <div><div class="success-name">Nirmali Wijesinghe</div><div class="success-role">Past Student · 2022</div></div>
-        </div>
-        <div class="success-outcome">? Sri Lanka Law College — Attorney-at-Law</div>
-      </div>
-      <div class="success-card reveal reveal-delay-2">
-        <div class="success-quote">"</div>
-        <p class="success-text">The CV workshop and mock interviews the unit ran before my university scholarship interviews made all the difference. I secured a full scholarship to study in Japan.</p>
-        <div class="success-meta">
-          <div class="success-avatar">AP</div>
-          <div><div class="success-name">Ashen Perera</div><div class="success-role">Past Student · 2024</div></div>
-        </div>
-        <div class="success-outcome">? Monbukagakusho Scholarship — Japan</div>
       </div>
     </div>
   </div>
@@ -562,11 +733,11 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
     <div class="cta-band-inner">
       <div>
         <h2>Unsure about your <em>career path?</em></h2>
-        <p>Book a one-to-one career guidance session with our experts — free for all Josephians.</p>
+        <p>Book a one-to-one career guidance session with our experts â€” free for all Josephians.</p>
       </div>
       <div class="cta-band-btns">
-        <a href="/appointments" class="btn btn-gold btn-lg">Book Career Guidance</a>
-        <a href="/portal" class="btn" style="background:rgba(255,255,255,0.1);color:var(--cream);border:1.5px solid rgba(255,255,255,0.2)">Student Portal</a>
+        <a href="/appointments.html" class="btn btn-gold btn-lg">Book Career Guidance</a>
+        <a href="/portal.html" class="btn" style="background:rgba(255,255,255,0.1);color:var(--cream);border:1.5px solid rgba(255,255,255,0.2)">Student Portal</a>
             </div>
     </div>
   </div>
@@ -578,7 +749,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
       <div>
         <div class="footer-logo-row">
           <div class="footer-logo">
-            <img src="logo.jpg" alt="SJC Logo"/>
+            <img src="St.-Josephs-College-Anuradhapura-Logo (1).jpg" alt="SJC Logo"/>
           </div>
           <div><div class="footer-brand-name">SJC Counselling &amp;<br/>Career Guidance Unit</div><div class="footer-brand-sub">Duty First Since 1898</div></div>
         </div>
@@ -586,8 +757,12 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
         </div>
       </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 SJC COUNSELLING &amp; CAREER GUIDANCE UNIT</span>
-      <span>Developed by <span style="color:var(--gold);font-weight:700">JAKE</span></span>
+      <span>&copy; 2026 SJC Counselling - St. Joseph's College, Anuradhapura</span>
+      <span class="footer-credit" style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; font-size:0.85rem;">
+        <span>Developed By <strong style="color:var(--gold);font-weight:700;letter-spacing:0.03em;">Jake</strong></span>
+        <span style="opacity:0.4">|</span>
+        <span>Guidance By <strong style="color:var(--gold);font-weight:700;letter-spacing:0.03em;">Isira Didulatha</strong></span>
+      </span>
     </div>
   </div>
 </footer>
@@ -617,5 +792,25 @@ document.getElementById('streamTabs').addEventListener('click',function(e){
   });
 });
 </script>
+
+<script id="global-loader-js">
+  (function(){
+    let loaderHidden = false;
+    const hideLoader = () => {
+      if(loaderHidden) return;
+      loaderHidden = true;
+      const loader = document.getElementById('global-loader');
+      if(loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+      }
+    };
+    window.addEventListener('load', () => setTimeout(hideLoader, 300));
+    // Fail-safe
+    setTimeout(hideLoader, 2500);
+  })();
+</script>
+
+  <script src="/custom_select.js"></script>
 </body>
 </html>

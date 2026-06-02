@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SJC — Admin Panel</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -23,7 +24,7 @@ body{font-family:'Inter',sans-serif;background:#f5f0e8;color:#1a0808;min-height:
   padding:48px 40px;color:#fff;
 }
 .login-left .logo-mark{
-  width:76px;height:76px;border-radius:50%;
+  width:76px;height:76px;border-radius:16px;overflow:hidden;
   background:rgba(255,255,255,.08);border:2px solid rgba(201,168,76,.35);
   display:flex;align-items:center;justify-content:center;margin-bottom:22px;
 }
@@ -97,7 +98,7 @@ body{font-family:'Inter',sans-serif;background:#f5f0e8;color:#1a0808;min-height:
   background:rgba(201,168,76,.18);border:1px solid rgba(201,168,76,.28);
   display:flex;align-items:center;justify-content:center;
 }
-.topbar-brand .bname{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:#fff;line-height:1.1}
+.topbar-brand .bname{font-family:'Canterbury', serif;font-size:1.15rem;font-weight:700;color:#fff;line-height:1.1}
 .topbar-right{flex:1;display:flex;align-items:center;justify-content:flex-end;gap:14px;padding-right:4px}
 .role-badge{
   font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
@@ -278,15 +279,466 @@ tbody tr:last-child td{border-bottom:none}
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;font-size:.81rem}
 .info-item .il{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#bbb;margin-bottom:4px}
 .info-item .iv{color:#333}
+
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.header-title { font-family: 'Inter', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--text); }
+.header-subtitle { font-size: 0.95rem; color: var(--text-muted); margin-top: 4px; }
+
+
+/* Injected Modal CSS Fixes */
+.modal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.modal-title { font-family: 'Inter', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--text); }
+.btn-icon { background: transparent; border: none; font-size: 1.2rem; cursor: pointer; color: var(--text-muted); display: flex; align-items: center; justify-content: center; transition: color 0.2s; padding: 4px; border-radius: 4px; }
+.btn-icon:hover { color: var(--danger); background: #fef2f2; }
+.modal-body { display: flex; flex-direction: column; gap: 15px; }
+.input-group { display: flex; flex-direction: column; gap: 6px; }
+.input-group label { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.input-group input[type="text"], .input-group input[type="email"], .input-group input[type="password"] {
+  padding: 10px 14px;
+  border: 1.5px solid #ede6da;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s;
+  background: #fff;
+  color: var(--text);
+  width: 100%;
+  box-sizing: border-box;
+}
+.input-group input:focus { border-color: var(--maroon-deep); box-shadow: 0 0 0 3px rgba(92,20,20,0.1); }
+.modal-foot { display: flex; justify-content: flex-end; gap: 10px; margin-top: 25px; padding-top: 15px; border-top: 1px solid #ede6da; }
+.btn-secondary { background: transparent; border: 1.5px solid #ddd; color: #666; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 8px 15px; border-radius: 8px; cursor: pointer; transition: all 0.18s; }
+.btn-secondary:hover { background: #f5f0e8; border-color: #ccc; color: #333; }
+input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; accent-color: var(--maroon-deep); }
+
+
+/* Mobile Compatibility Injections */
+@media (max-width: 768px) {
+  .sidebar {
+    top: auto !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 65px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 0 !important;
+    border-top: 1px solid rgba(0,0,0,0.1) !important;
+    border-right: none !important;
+    z-index: 1000 !important;
+    background: var(--sidebar) !important;
+  }
+  .sidebar-section { display: flex; flex-direction: row; margin: 0; padding: 0; align-items: center; }
+  .sidebar-section-label { display: none !important; }
+  .nav-item { flex-direction: column !important; padding: 8px 12px !important; font-size: 0.65rem !important; gap: 4px !important; justify-content: center !important; border-radius: 0 !important; margin: 0 !important; white-space: nowrap; opacity: 0.7; }
+  .nav-item.active { opacity: 1; background: transparent !important; color: var(--gold) !important; }
+  .main { margin-left: 0 !important; margin-bottom: 65px !important; padding: 15px !important; }
+  
+  table { display: block !important; overflow-x: auto !important; white-space: nowrap !important; }
+  th, td { padding: 10px !important; }
+  
+  .two-col { grid-template-columns: 1fr !important; }
+  
+  .modal { padding: 20px 15px !important; border-radius: 16px 16px 0 0 !important; position: absolute !important; bottom: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; max-height: 90vh !important; max-width: 100% !important; margin: 0 !important; }
+  .modal-overlay { align-items: flex-end !important; padding: 0 !important; }
+}
+
 </style>
+
+<style id="global-loader-css">
+#global-loader {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: #1a0404;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-out, visibility 0.5s;
+}
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: loaderFadeUp 0.8s ease-out;
+}
+.loader-logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-bottom: 24px;
+  animation: loaderSubtlePulse 2s infinite ease-in-out;
+}
+.loader-text {
+  font-family: 'Canterbury', 'DM Serif Display', serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #c9a84c 0%, #fff6e0 50%, #c9a84c 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: loaderShimmer 2.5s linear infinite;
+}
+.loader-bar {
+  width: 150px;
+  height: 2px;
+  background: rgba(201, 168, 76, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.loader-bar-fill {
+  position: absolute;
+  top: 0; left: 0; height: 100%;
+  width: 0%;
+  background: #c9a84c;
+  border-radius: 2px;
+  animation: loaderFillBar 1.5s cubic-bezier(0.77, 0, 0.17, 1) infinite;
+}
+@keyframes loaderFadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes loaderSubtlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); box-shadow: 0 15px 40px rgba(201,168,76,0.2); }
+}
+@keyframes loaderShimmer {
+  to { background-position: 200% center; }
+}
+@keyframes loaderFillBar {
+  0% { width: 0%; left: 0; }
+  50% { width: 100%; left: 0; }
+  100% { width: 100%; left: 100%; }
+}
+
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.header-title { font-family: 'Inter', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--text); }
+.header-subtitle { font-size: 0.95rem; color: var(--text-muted); margin-top: 4px; }
+
+
+/* Injected Modal CSS Fixes */
+.modal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.modal-title { font-family: 'Inter', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--text); }
+.btn-icon { background: transparent; border: none; font-size: 1.2rem; cursor: pointer; color: var(--text-muted); display: flex; align-items: center; justify-content: center; transition: color 0.2s; padding: 4px; border-radius: 4px; }
+.btn-icon:hover { color: var(--danger); background: #fef2f2; }
+.modal-body { display: flex; flex-direction: column; gap: 15px; }
+.input-group { display: flex; flex-direction: column; gap: 6px; }
+.input-group label { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.input-group input[type="text"], .input-group input[type="email"], .input-group input[type="password"] {
+  padding: 10px 14px;
+  border: 1.5px solid #ede6da;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s;
+  background: #fff;
+  color: var(--text);
+  width: 100%;
+  box-sizing: border-box;
+}
+.input-group input:focus { border-color: var(--maroon-deep); box-shadow: 0 0 0 3px rgba(92,20,20,0.1); }
+.modal-foot { display: flex; justify-content: flex-end; gap: 10px; margin-top: 25px; padding-top: 15px; border-top: 1px solid #ede6da; }
+.btn-secondary { background: transparent; border: 1.5px solid #ddd; color: #666; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 8px 15px; border-radius: 8px; cursor: pointer; transition: all 0.18s; }
+.btn-secondary:hover { background: #f5f0e8; border-color: #ccc; color: #333; }
+input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; accent-color: var(--maroon-deep); }
+
+
+/* Mobile Compatibility Injections */
+@media (max-width: 768px) {
+  .sidebar {
+    top: auto !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 65px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 0 !important;
+    border-top: 1px solid rgba(0,0,0,0.1) !important;
+    border-right: none !important;
+    z-index: 1000 !important;
+    background: var(--sidebar) !important;
+  }
+  .sidebar-section { display: flex; flex-direction: row; margin: 0; padding: 0; align-items: center; }
+  .sidebar-section-label { display: none !important; }
+  .nav-item { flex-direction: column !important; padding: 8px 12px !important; font-size: 0.65rem !important; gap: 4px !important; justify-content: center !important; border-radius: 0 !important; margin: 0 !important; white-space: nowrap; opacity: 0.7; }
+  .nav-item.active { opacity: 1; background: transparent !important; color: var(--gold) !important; }
+  .main { margin-left: 0 !important; margin-bottom: 65px !important; padding: 15px !important; }
+  
+  table { display: block !important; overflow-x: auto !important; white-space: nowrap !important; }
+  th, td { padding: 10px !important; }
+  
+  .two-col { grid-template-columns: 1fr !important; }
+  
+  .modal { padding: 20px 15px !important; border-radius: 16px 16px 0 0 !important; position: absolute !important; bottom: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; max-height: 90vh !important; max-width: 100% !important; margin: 0 !important; }
+  .modal-overlay { align-items: flex-end !important; padding: 0 !important; }
+}
+
+</style>
+
+  <link rel="stylesheet" href="/custom_select.css" />
+  <link rel="icon" type="image/x-icon" href="../favicon-rounded.ico">
+  <script src="../mock_backend.js?v=2">
+function rSATeachers(){
+  const db = getDb();
+  const teachers = db.teachers || [];
+  return `
+    <div class="header">
+      <div>
+        <div class="header-title">Teacher Management</div>
+        <div class="header-subtitle">Manage counseling staff and their permissions</div>
+      </div>
+      <button class="btn btn-primary" onclick="openTeacherModal()">${I.plus} Add Teacher</button>
+    </div>
+    <div class="card" style="margin-top:20px; padding:0;">
+      <table style="width:100%; border-collapse:collapse; text-align:left;">
+        <thead>
+          <tr style="border-bottom:1px solid var(--border); background:var(--bg-card); color:var(--text-muted); font-size:0.85rem; text-transform:uppercase;">
+            <th style="padding:15px 20px;">Name</th>
+            <th style="padding:15px 20px;">Email</th>
+            <th style="padding:15px 20px;">Permissions</th>
+            <th style="padding:15px 20px; text-align:right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${teachers.length ? teachers.map(t => `
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:15px 20px; font-weight:500; color:var(--text);">${t.name}</td>
+              <td style="padding:15px 20px; color:var(--text-muted);">${t.email}</td>
+              <td style="padding:15px 20px; color:var(--text-muted); font-size:0.85rem;">
+                ${(t.perms||{}).canAdd ? 'Add ' : ''}${(t.perms||{}).canDelete ? 'Del ' : ''}${(t.perms||{}).canEditNote ? 'Edit' : ''}
+              </td>
+              <td style="padding:15px 20px; text-align:right;">
+                <button class="btn btn-icon" onclick="deleteTeacher('${t.id}')" style="color:var(--danger)">${I.bin}</button>
+              </td>
+            </tr>
+          `).join('') : `<tr><td colspan="4" style="padding:20px; text-align:center; color:var(--text-muted);">No teachers found.</td></tr>`}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function openTeacherModal() {
+  const m = document.getElementById('modalContent');
+  m.innerHTML = `
+    <div class="modal-head">
+      <div class="modal-title">Add New Teacher</div>
+      <button class="btn-icon" onclick="closeModal()">&#x2715;</button>
+    </div>
+    <div class="modal-body">
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="newTName" placeholder="e.g. Jane Doe">
+      </div>
+      <div class="input-group" style="margin-top:15px">
+        <label>Email Address</label>
+        <input type="email" id="newTEmail" placeholder="teacher@sjc.lk">
+      </div>
+      <div class="input-group" style="margin-top:15px">
+        <label>Password</label>
+        <input type="text" id="newTPass" placeholder="Password">
+      </div>
+      <div style="margin-top:15px; font-size:0.9rem;">
+        <label style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+          <input type="checkbox" id="permAdd" checked> Can Add Students/Notes
+        </label>
+        <label style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+          <input type="checkbox" id="permDel" checked> Can Delete Students/Notes
+        </label>
+        <label style="display:flex; align-items:center; gap:8px;">
+          <input type="checkbox" id="permEdit" checked> Can Edit Notes
+        </label>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveNewTeacher()">Save Teacher</button>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function saveNewTeacher() {
+  const name = document.getElementById('newTName').value.trim();
+  const email = document.getElementById('newTEmail').value.trim();
+  const pin = document.getElementById('newTPass').value.trim();
+  if(!name || !email || !pin) { toast('Please fill all fields','err'); return; }
+  
+  const teachers = JSON.parse(localStorage.getItem('sjc_teachers')) || [];
+  if(teachers.some(t => t.email.toLowerCase() === email.toLowerCase())) {
+    toast('Email already exists','err'); return;
+  }
+  
+  teachers.push({
+    id: 't' + Date.now(),
+    name, email, pin,
+    perms: {
+      canAdd: document.getElementById('permAdd').checked,
+      canDelete: document.getElementById('permDel').checked,
+      canEditNote: document.getElementById('permEdit').checked
+    }
+  });
+  
+  localStorage.setItem('sjc_teachers', JSON.stringify(teachers));
+  toast('Teacher added successfully');
+  closeModal();
+  if(document.getElementById('sa-teachers').classList.contains('active')) {
+    document.getElementById('sa-teachers').innerHTML = rSATeachers();
+  }
+}
+
+function deleteTeacher(id) {
+  if(!confirm('Are you sure you want to delete this teacher?')) return;
+  let teachers = JSON.parse(localStorage.getItem('sjc_teachers')) || [];
+  teachers = teachers.filter(t => t.id !== id);
+  localStorage.setItem('sjc_teachers', JSON.stringify(teachers));
+  toast('Teacher deleted');
+  if(document.getElementById('sa-teachers').classList.contains('active')) {
+    document.getElementById('sa-teachers').innerHTML = rSATeachers();
+  }
+}
+
+function rSAStudents(){
+  const students = JSON.parse(localStorage.getItem('sjc_db_students')) || [];
+  return `
+    <div class="header">
+      <div>
+        <div class="header-title">Student Management</div>
+        <div class="header-subtitle">View and manage all registered students</div>
+      </div>
+      <button class="btn btn-primary" onclick="openStudentModal()">${I.plus} Add Student</button>
+    </div>
+    <div class="card" style="margin-top:20px; padding:0;">
+      <table style="width:100%; border-collapse:collapse; text-align:left;">
+        <thead>
+          <tr style="border-bottom:1px solid var(--border); background:var(--bg-card); color:var(--text-muted); font-size:0.85rem; text-transform:uppercase;">
+            <th style="padding:15px 20px;">Register ID</th>
+            <th style="padding:15px 20px;">Name</th>
+            <th style="padding:15px 20px;">Grade</th>
+            <th style="padding:15px 20px; text-align:right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${students.length ? students.map(s => `
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:15px 20px; color:var(--text-muted);">${s.registerId || '-'}</td>
+              <td style="padding:15px 20px; font-weight:500; color:var(--text);">${s.name}</td>
+              <td style="padding:15px 20px; color:var(--text-muted);">${s.grade || '-'}</td>
+              <td style="padding:15px 20px; text-align:right;">
+                <button class="btn btn-icon" onclick="deleteStudent('${s.id}')" style="color:var(--danger)">${I.bin}</button>
+              </td>
+            </tr>
+          `).join('') : `<tr><td colspan="4" style="padding:20px; text-align:center; color:var(--text-muted);">No students found.</td></tr>`}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function openStudentModal() {
+  const m = document.getElementById('modalContent');
+  m.innerHTML = `
+    <div class="modal-head">
+      <div class="modal-title">Add New Student</div>
+      <button class="btn-icon" onclick="closeModal()">&#x2715;</button>
+    </div>
+    <div class="modal-body">
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="newSName" placeholder="e.g. John Doe">
+      </div>
+      <div class="two-col" style="margin-top:15px;">
+        <div class="input-group" style="flex:1;">
+          <label>Register ID</label>
+          <input type="text" id="newSReg" placeholder="ID">
+        </div>
+        <div class="input-group" style="flex:1;">
+          <label>Grade</label>
+          <input type="text" id="newSGrade" placeholder="e.g. 10">
+        </div>
+      </div>
+      <div class="input-group" style="margin-top:15px">
+        <label>Parent Contact</label>
+        <input type="text" id="newSContact" placeholder="07...">
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveNewStudent()">Save Student</button>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function saveNewStudent() {
+  const name = document.getElementById('newSName').value.trim();
+  const registerId = document.getElementById('newSReg').value.trim();
+  const grade = document.getElementById('newSGrade').value.trim();
+  const contact = document.getElementById('newSContact').value.trim();
+  if(!name) { toast('Name is required','err'); return; }
+  
+  const students = JSON.parse(localStorage.getItem('sjc_db_students')) || [];
+  students.push({
+    id: Math.random().toString(36).substr(2, 9),
+    createdAt: new Date().toISOString(),
+    type: 'student',
+    name, registerId, grade, contact
+  });
+  
+  localStorage.setItem('sjc_db_students', JSON.stringify(students));
+  toast('Student added successfully');
+  closeModal();
+  if(document.getElementById('sa-students').classList.contains('active')) {
+    document.getElementById('sa-students').innerHTML = rSAStudents();
+  }
+}
+
+function deleteStudent(id) {
+  if(!confirm('Delete this student permanently?')) return;
+  let students = JSON.parse(localStorage.getItem('sjc_db_students')) || [];
+  students = students.filter(s => s.id !== id);
+  localStorage.setItem('sjc_db_students', JSON.stringify(students));
+  toast('Student deleted');
+  if(document.getElementById('sa-students').classList.contains('active')) {
+    document.getElementById('sa-students').innerHTML = rSAStudents();
+  }
+}
+
+</script>
 </head>
 <body>
+
+<!-- Global Loader HTML -->
+<div id="global-loader">
+  <div class="loader-content">
+    <img src="/St.-Josephs-College-Anuradhapura-Logo (1).jpg" alt="SJC Logo" class="loader-logo">
+    <div class="loader-text">Admin Dashboard</div>
+    <div class="loader-bar">
+      <div class="loader-bar-fill"></div>
+    </div>
+  </div>
+</div>
+  <div class="loader-spinner"></div>
+</div>
+
 
 <!-- ══════════════ LOGIN SCREEN ══════════════ -->
 <div id="loginScreen">
   <div class="login-left">
     <div class="logo-mark">
-      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <img src="/St.-Josephs-College-Anuradhapura-Logo (1).jpg" alt="SJC Logo" style="width:100%;height:100%;object-fit:cover;padding:0;">
     </div>
     <h1>SJC Admin Panel</h1>
     <div class="gold-bar"></div>
@@ -296,7 +748,6 @@ tbody tr:last-child td{border-bottom:none}
       <div style="font-size:.78rem;color:rgba(255,255,255,.45);line-height:2">
         <div>Super Admin — Full system access</div>
         <div>Teacher — Appointment management</div>
-        <div>Student — Personal portal</div>
       </div>
     </div>
   </div>
@@ -309,44 +760,40 @@ tbody tr:last-child td{border-bottom:none}
       <div class="role-tabs">
         <button class="role-tab active" onclick="switchTab('superadmin')">Super Admin</button>
         <button class="role-tab" onclick="switchTab('teacher')">Teacher</button>
-        <button class="role-tab" onclick="switchTab('student')">Student</button>
       </div>
 
       <!-- Super Admin -->
       <div class="login-pane active" id="lp-superadmin">
+        <div class="form-group" style="margin-bottom:15px">
+          <label style="font-size:0.75rem;font-weight:700;color:#5a1010;margin-bottom:6px;display:block">Administrator Email</label>
+          <input type="email" id="sa-email" placeholder="admin@sjc.lk" value="admin@sjc.lk" style="width:100%;padding:12px;border:2px solid #e0d4c8;border-radius:10px;font-size:1rem;background:#fff;outline:none;">
+        </div>
         <div class="form-group">
-          <label>Administrator PIN</label>
-          <input type="password" id="sa-pin" placeholder="Enter secure PIN" onkeydown="if(event.key==='Enter')doLogin('superadmin')">
+          <label>Administrator Password</label>
+          <input type="password" id="sa-pin" placeholder="Enter secure Password" onkeydown="if(event.key==='Enter')doLogin('superadmin')">
+          <a href="#" onclick="triggerOTP('superadmin')" style="font-size:0.75rem;color:var(--maroon);margin-top:8px;display:block;text-align:right;text-decoration:none;">Forgot Password?</a>
         </div>
         <button class="login-btn" onclick="doLogin('superadmin')">Access Admin Panel</button>
-        <div class="login-err" id="sa-err">Incorrect PIN. Please try again.</div>
+        <div class="login-err" id="sa-err">Incorrect Password. Please try again.</div>
         <p class="pin-hint">Authorised personnel only</p>
       </div>
 
       <!-- Teacher -->
       <div class="login-pane" id="lp-teacher">
+        <div class="form-group" style="margin-bottom:15px">
+          <label style="font-size:0.75rem;font-weight:700;color:#5a1010;margin-bottom:6px;display:block">Teacher Email</label>
+          <input type="email" id="t-email" placeholder="teacher@sjc.lk" value="teacher@sjc.lk" style="width:100%;padding:12px;border:2px solid #e0d4c8;border-radius:10px;font-size:1rem;background:#fff;outline:none;">
+        </div>
         <div class="form-group">
-          <label>Teacher Access PIN</label>
-          <input type="password" id="t-pin" placeholder="Enter teacher PIN" onkeydown="if(event.key==='Enter')doLogin('teacher')">
+          <label>Teacher Password</label>
+          <input type="password" id="t-pin" placeholder="Enter teacher Password" onkeydown="if(event.key==='Enter')doLogin('teacher')">
+          <a href="#" onclick="triggerOTP('teacher')" style="font-size:0.75rem;color:var(--maroon);margin-top:8px;display:block;text-align:right;text-decoration:none;">Forgot Password?</a>
         </div>
         <button class="login-btn" onclick="doLogin('teacher')">Access Teacher Panel</button>
-        <div class="login-err" id="t-err">Incorrect PIN. Contact your administrator.</div>
+        <div class="login-err" id="t-err">Incorrect Password. Contact your administrator.</div>
         <p class="pin-hint">Contact your administrator for access</p>
       </div>
 
-      <!-- Student -->
-      <div class="login-pane" id="lp-student">
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" id="s-email" placeholder="your@email.com">
-        </div>
-        <div class="form-group">
-          <label>Password</label>
-          <input type="password" id="s-pass" placeholder="Your password" onkeydown="if(event.key==='Enter')doLogin('student')">
-        </div>
-        <button class="login-btn" onclick="doLogin('student')">Sign In to Student Portal</button>
-        <div class="login-err" id="s-err">Invalid email or password. Please try again.</div>
-        <p class="pin-hint">No account? <a href="/portal.html">Register here</a></p>
       </div>
     </div>
   </div>
@@ -357,7 +804,7 @@ tbody tr:last-child td{border-bottom:none}
   <header class="topbar">
     <div class="topbar-brand">
       <div class="brand-icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <img src="../logo.jpg" alt="SJC Logo" style="width:100%;height:100%;object-fit:contain;border-radius:6px;padding:2px;">
       </div>
       <span class="bname">SJC Admin</span>
     </div>
@@ -386,6 +833,27 @@ tbody tr:last-child td{border-bottom:none}
 </div>
 
 <script>
+
+function toast(msg, type='info') {
+  let t = document.getElementById('toast-container');
+  if(!t) {
+    t = document.createElement('div');
+    t.id = 'toast-container';
+    t.style.cssText = 'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:9999;display:flex;flex-direction:column;gap:10px;pointer-events:none;';
+    document.body.appendChild(t);
+  }
+  const el = document.createElement('div');
+  el.style.cssText = `background:${type==='err'?'#e74c3c':'#333'};color:#fff;padding:12px 24px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);font-size:0.95rem;opacity:0;transition:opacity 0.3s;`;
+  el.textContent = msg;
+  t.appendChild(el);
+  requestAnimationFrame(()=>el.style.opacity='1');
+  setTimeout(()=> {
+    el.style.opacity='0';
+    setTimeout(()=>el.remove(), 300);
+  }, 3000);
+}
+
+
 /* ─── DB ──────────────────────────────────────── */
 const DB = {
   get(k){ try{ return JSON.parse(localStorage.getItem('sjc_'+k)||'null') }catch(e){ return null } },
@@ -421,19 +889,21 @@ function getAllStudents(){ return Object.values(DB.get('users')||{}) }
 function getTeachers(){ return DB.get('teachers')||[] }
 function getEvents(){ return DB.get('events')||[] }
 function getAllAppointments(){
-  const all=[];
-  getAllStudents().forEach(s=>{
-    (s.appointments||[]).forEach(a=>{
-      all.push({...a, studentName:s.name, studentEmail:s.email, studentGrade:s.grade||'—'});
-    });
-  });
-  return all.sort((a,b)=>(b.createdAt||'')>(a.createdAt||'')?1:-1);
+  const apts = DB.get('appointments') || [];
+  return apts.map(a => ({
+    ...a,
+    studentName: a.name || 'Unknown',
+    studentEmail: a.email || '-',
+    studentGrade: a.grade || '—'
+  })).sort((a,b)=>(b.createdAt||'')>(a.createdAt||'')?1:-1);
 }
 function updateAptStatus(email,aptId,newStatus){
-  const users=DB.get('users')||{};
-  if(!users[email]) return;
-  const apt=(users[email].appointments||[]).find(a=>a.id===aptId);
-  if(apt){ apt.status=newStatus; DB.set('users',users); }
+  const apts = DB.get('appointments') || [];
+  const apt = apts.find(a => a.id === aptId);
+  if(apt){ 
+    apt.status = newStatus; 
+    DB.set('appointments', apts); 
+  }
 }
 function calcCompletion(s){
   const c=[true,!!s.photoData,!!(s.grade&&s.grade!==''),!!(s.bio&&s.bio.trim()),
@@ -473,17 +943,108 @@ function switchTab(role){
   document.querySelectorAll('.login-err').forEach(e=>e.classList.remove('show'));
 }
 
-function doLogin(role){
-  document.querySelectorAll('.login-err').forEach(e=>e.classList.remove('show'));
-  if(role==='superadmin'){
-    const pin=document.getElementById('sa-pin').value;
-    if(pin===runtimeSAPin) enterApp('superadmin');
-    else document.getElementById('sa-err').classList.add('show');
-  } else if(role==='teacher'){
-    const pin=document.getElementById('t-pin').value;
-    if(pin===T_PIN) enterApp('teacher');
-    else document.getElementById('t-err').classList.add('show');
-  } else if(role==='student'){
+
+// --- AUTHENTICATION STATE ---
+function getDb() {
+  const db = JSON.parse(localStorage.getItem('sjc_auth')) || { adminEmail: 'admin@sjc.lk', adminPin: '4321' };
+  const teachers = JSON.parse(localStorage.getItem('sjc_teachers')) || [
+    { id: 't1', email: 'teacher@sjc.lk', pin: '1234', name: 'Default Teacher', perms: {canAdd:true, canDelete:true, canEditNote:true} }
+  ];
+  return { ...db, teachers };
+}
+
+function doLogin(role) {
+  const db = getDb();
+  let email = '';
+  let pin = '';
+  
+  if(role === 'superadmin') {
+    email = document.getElementById('sa-email').value;
+    pin = document.getElementById('sa-pin').value;
+    if(email === db.adminEmail && pin === db.adminPin) {
+      enterApp('superadmin');
+    } else {
+      document.getElementById('sa-err').classList.add('show');
+    }
+  } else if(role === 'teacher') {
+    email = document.getElementById('t-email').value;
+    pin = document.getElementById('t-pin').value;
+    const tUser = db.teachers.find(t => t.email.toLowerCase() === email.toLowerCase() && t.pin === pin);
+    if(tUser) {
+      localStorage.setItem('sjc_current_teacher', JSON.stringify(tUser));
+      enterApp('teacher'); // Bypass OTP for regular login
+    } else {
+      document.getElementById('t-err').classList.add('show');
+    }
+  } else {
+    enterApp('student'); 
+  }
+}
+
+function triggerOTP(role) {
+  const db = getDb();
+  let email = '';
+  if(role === 'superadmin') email = document.getElementById('sa-email').value;
+  if(role === 'teacher') email = document.getElementById('t-email').value;
+  
+  if(role === 'superadmin' && email !== db.adminEmail) {
+    alert("Please enter a valid registered email to reset your PIN.");
+    return;
+  }
+  
+  const tUser = role === 'teacher' ? db.teachers.find(t => t.email.toLowerCase() === email.toLowerCase()) : null;
+  if(role === 'teacher' && !tUser) {
+    alert("Please enter a valid registered email to reset your PIN.");
+    return;
+  }
+  
+  pendingRole = role;
+  currentOTP = Math.floor(1000 + Math.random() * 9000).toString();
+  alert(`[MOCK EMAIL] Sent to ${email}!
+
+Your Password Reset OTP is: ${currentOTP}`);
+  document.getElementById('otpModal').classList.add('active');
+}
+
+function verifyOTP() {
+  const inp = document.getElementById('otp-in').value;
+  if(inp === currentOTP) {
+    document.getElementById('otpModal').classList.remove('active');
+    document.getElementById('resetModal').classList.add('active'); // Open reset modal instead of logging in
+  } else {
+    document.getElementById('otp-err').style.display = 'block';
+  }
+}
+
+function saveResetPIN() {
+  const nw = document.getElementById('reset-in').value;
+  if(nw.length < 4) {
+    document.getElementById('reset-err').style.display = 'block';
+    document.getElementById('reset-err').textContent = 'PIN must be at least 4 characters';
+    return;
+  }
+  const db = getDb();
+  if(pendingRole === 'superadmin') {
+    db.adminPin = nw;
+    localStorage.setItem('sjc_auth', JSON.stringify({ adminEmail: db.adminEmail, adminPin: db.adminPin }));
+  }
+  if(pendingRole === 'teacher') {
+    const email = document.getElementById('t-email').value;
+    const tUser = db.teachers.find(t => t.email.toLowerCase() === email.toLowerCase());
+    if(tUser) {
+      tUser.pin = nw;
+      localStorage.setItem('sjc_teachers', JSON.stringify(db.teachers));
+    }
+  }
+  
+  document.getElementById('resetModal').classList.remove('active');
+  document.getElementById('otp-in').value = '';
+  document.getElementById('reset-in').value = '';
+  alert("PIN reset successful! You may now log in with your new PIN.");
+}
+
+
+function legacy_ignore(){ if(role==='student'){
     const email=document.getElementById('s-email').value.trim().toLowerCase();
     const pass=document.getElementById('s-pass').value;
     const users=DB.get('users')||{};
@@ -523,10 +1084,14 @@ function showPane(id){
   document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
   const p=document.getElementById(id);
   const n=document.getElementById('nav-'+id);
-  if(p){ p.classList.add('active'); p.innerHTML=renderPane(id); }
+  if(p){ 
+    p.classList.add('active'); 
+    if(id === 'sa-teachers') p.innerHTML = rSATeachers();
+    else if(id === 'sa-students') p.innerHTML = rSAStudents();
+    else p.innerHTML = renderPane(id); 
+  }
   if(n) n.classList.add('active');
 }
-
 function renderPane(id){
   switch(id){
     case 'sa-overview':    return rSAOverview();
@@ -535,6 +1100,7 @@ function renderPane(id){
     case 'sa-teachers':    return rSATeachers();
     case 'sa-events':      return rSAEvents();
     case 'sa-settings':    return rSASettings();
+    case 'sa-cms':         return rSACms();
     case 't-overview':     return rTOverview();
     case 't-apts':         return rTApts();
     case 't-students':     return rTStudents();
@@ -556,6 +1122,7 @@ function buildSA(){
     </div>
     <div class="sidebar-section">
       <div class="sidebar-section-label">System</div>
+      <a class="nav-item" id="nav-sa-cms" onclick="showPane('sa-cms')">${I.pen} Page Editor</a>
       <a class="nav-item" id="nav-sa-settings" onclick="showPane('sa-settings')">${I.gear} Settings</a>
       <a class="nav-item danger" onclick="doLogout()">${I.out} Sign Out</a>
     </div>
@@ -567,6 +1134,7 @@ function buildSA(){
     <div class="pane" id="sa-students"></div>
     <div class="pane" id="sa-teachers"></div>
     <div class="pane" id="sa-events"></div>
+    <div class="pane" id="sa-cms"></div>
     <div class="pane" id="sa-settings"></div>
   `;
 }
@@ -675,6 +1243,7 @@ function rSAApts(){
   return `
   <div class="page-hdr page-hdr-row">
     <div><h2>All Appointments</h2><p>${all.length} total &middot; ${all.filter(a=>a.status==='pending').length} pending</p></div>
+    <button class="btn btn-primary" onclick="addAdminAppointmentModal()">${I.plus} Add Appointment</button>
   </div>
   <div class="card">
     <div class="search-bar">${I.srch}<input type="text" placeholder="Search by student or type…" oninput="filt(this,'apt-tb')"></div>
@@ -733,10 +1302,11 @@ function rSAStudents(){
 
 /* ─── SA: TEACHERS ───────────────────────────── */
 function rSATeachers(){
-  const teachers=getTeachers();
+  const db = getDb();
+  const teachers = db.teachers || [];
   return `
-  <div class="page-hdr page-hdr-row">
-    <div><h2>Teachers</h2><p>${teachers.length} counsellors &amp; teachers</p></div>
+  <div class="header-action" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+    <div><h2>Teachers</h2><p style="color:#aaa;font-size:0.85rem">Manage counsellors &amp; teachers</p></div>
     <button class="btn btn-primary" onclick="addTeacherModal()">${I.plus} Add Teacher</button>
   </div>
   <div class="card">
@@ -796,13 +1366,32 @@ function rSASettings(){
   return `
   <div class="page-hdr"><h2>Settings</h2><p>System configuration &amp; data management</p></div>
   <div class="card" style="max-width:460px">
-    <h3 style="font-size:.9rem;font-weight:600;color:var(--maroon-deep);margin-bottom:16px">Change Admin PIN</h3>
-    <div class="form-group"><label>Current PIN</label><input type="password" id="set-cur" placeholder="Current PIN"></div>
-    <div class="form-group"><label>New PIN</label><input type="password" id="set-new" placeholder="Min. 4 characters"></div>
-    <div class="form-group"><label>Confirm New PIN</label><input type="password" id="set-con" placeholder="Repeat new PIN"></div>
+    <h3 style="font-size:.9rem;font-weight:600;color:var(--maroon-deep);margin-bottom:16px">Change Admin Password</h3>
+    <div class="form-group"><label>Current Password</label><input type="password" id="set-cur" placeholder="Current Password"></div>
+    <div class="form-group"><label>New Password</label><input type="password" id="set-new" placeholder="Min. 4 characters"></div>
+    <div class="form-group"><label>Confirm New Password</label><input type="password" id="set-con" placeholder="Repeat new Password"></div>
     <div id="set-msg" style="display:none;font-size:.78rem;padding:8px 12px;border-radius:6px;margin-bottom:12px"></div>
     <button class="btn btn-primary" onclick="changePIN()">Update PIN</button>
-    <p style="font-size:.72rem;color:#ccc;margin-top:8px">Note: PIN change applies to this session only and resets on page reload.</p>
+    <p style="font-size:.72rem;color:#ccc;margin-top:8px"></p>
+    <!-- Teacher PIN Management -->
+    <div style="margin-top:24px;border-top:1px solid #eee;padding-top:20px;">
+      <h3 style="font-size:.9rem;font-weight:600;color:var(--maroon-deep);margin-bottom:16px">Change Teacher Password</h3>
+      <div class="form-group"><label>New Teacher PIN</label><input type="password" id="set-t-new" placeholder="Min. 4 characters"></div>
+      <button class="btn btn-primary" onclick="changeTeacherPIN()">Update Teacher Password</button>
+      <div id="set-t-msg" style="display:none;font-size:.78rem;padding:8px 12px;border-radius:6px;margin-bottom:12px;margin-top:12px;"></div>
+    </div>
+
+    <!-- Role Permissions -->
+    <div style="margin-top:24px;border-top:1px solid #eee;padding-top:20px;">
+      <h3 style="font-size:.9rem;font-weight:600;color:var(--maroon-deep);margin-bottom:16px">Teacher Permissions</h3>
+      <div style="display:flex;flex-direction:column;gap:12px;font-size:.85rem;color:#444;">
+        <label><input type="checkbox" id="perm-add-student"> Allow Adding Students</label>
+        <label><input type="checkbox" id="perm-edit-note"> Allow Editing/Deleting Notes</label>
+      </div>
+      <button class="btn btn-primary" style="margin-top:16px;" onclick="savePerms()">Save Permissions</button>
+      <div id="perm-msg" style="display:none;font-size:.78rem;padding:8px 12px;border-radius:6px;margin-bottom:12px;margin-top:12px;"></div>
+    </div>
+
   </div>
   <div class="card" style="max-width:460px">
     <h3 style="font-size:.9rem;font-weight:600;color:var(--maroon-deep);margin-bottom:8px">Data Management</h3>
@@ -988,7 +1577,52 @@ function rTSchedule(){
   }).join('')}`;
 }
 
-/* ─── MODALS: TEACHERS ───────────────────────── */
+/* ─── MODALS: APPOINTMENTS ────────────── */
+function addAdminAppointmentModal(){
+  openModal(`
+    <h3>Add Appointment</h3>
+    <div class="form-group"><label>Student Name</label><input type="text" id="m-apt-name" placeholder="Name"></div>
+    <div class="two-col">
+      <div class="form-group"><label>Grade</label><input type="text" id="m-apt-grade" placeholder="e.g. 10"></div>
+      <div class="form-group"><label>Phone</label><input type="text" id="m-apt-phone" placeholder="Phone Number"></div>
+    </div>
+    <div class="two-col">
+      <div class="form-group"><label>Date</label><input type="date" id="m-apt-date" min="${today()}"></div>
+      <div class="form-group"><label>Time</label><input type="time" id="m-apt-time"></div>
+    </div>
+    <div class="form-group"><label>Type</label>
+      <select id="m-apt-type">
+        <option value="Academic Counselling">Academic Counselling</option>
+        <option value="Career Guidance">Career Guidance</option>
+        <option value="Personal Wellbeing">Personal Wellbeing</option>
+      </select>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveAdminAppointment()">Book Appointment</button>
+    </div>
+  `);
+}
+function saveAdminAppointment(){
+  const name=document.getElementById('m-apt-name').value.trim();
+  const grade=document.getElementById('m-apt-grade').value.trim();
+  const phone=document.getElementById('m-apt-phone').value.trim();
+  const date=document.getElementById('m-apt-date').value;
+  const time=document.getElementById('m-apt-time').value;
+  const type=document.getElementById('m-apt-type').value;
+  if(!name||!date||!time){ alert('Please fill in Name, Date, and Time'); return; }
+  
+  const apts=DB.get('appointments')||[];
+  apts.push({
+    id: uid(), createdAt: new Date().toISOString(), status: 'pending',
+    name, grade, phone, date, time, type
+  });
+  DB.set('appointments', apts);
+  closeModal();
+  showPane('sa-apts');
+}
+
+/* ─── MODALS: TEACHERS ────────────────── */
 function addTeacherModal(){
   openModal(`
     <h3>Add Teacher</h3>
@@ -1127,18 +1761,47 @@ function viewProfile(email){
 
 /* ─── SETTINGS ACTIONS ───────────────────────── */
 function changePIN(){
+  const db = getDb();
+  const runtimeSAPin = db.adminPin;
   const cur=document.getElementById('set-cur').value;
   const nw=document.getElementById('set-new').value;
   const con=document.getElementById('set-con').value;
   const msg=document.getElementById('set-msg');
   msg.style.display='block';
-  if(cur!==runtimeSAPin){ msg.style.cssText='display:block;background:#fdf2f2;color:#c0392b;border-left:3px solid #c0392b;padding:8px 12px;border-radius:6px;font-size:.78rem;margin-bottom:12px'; msg.textContent='Current PIN is incorrect.'; return; }
-  if(nw.length<4){ msg.style.cssText='display:block;background:#fdf2f2;color:#c0392b;border-left:3px solid #c0392b;padding:8px 12px;border-radius:6px;font-size:.78rem;margin-bottom:12px'; msg.textContent='New PIN must be at least 4 characters.'; return; }
+  if(cur!==runtimeSAPin){ msg.style.cssText='display:block;background:#fdf2f2;color:#c0392b;border-left:3px solid #c0392b;padding:8px 12px;border-radius:6px;font-size:.78rem;margin-bottom:12px'; msg.textContent='Current Password is incorrect.'; return; }
+  if(nw.length<4){ msg.style.cssText='display:block;background:#fdf2f2;color:#c0392b;border-left:3px solid #c0392b;padding:8px 12px;border-radius:6px;font-size:.78rem;margin-bottom:12px'; msg.textContent='New Password must be at least 4 characters.'; return; }
   if(nw!==con){ msg.style.cssText='display:block;background:#fdf2f2;color:#c0392b;border-left:3px solid #c0392b;padding:8px 12px;border-radius:6px;font-size:.78rem;margin-bottom:12px'; msg.textContent='PINs do not match.'; return; }
-  runtimeSAPin=nw;
+  db.adminPin=nw; saveDb(db);
   msg.style.cssText='display:block;background:#dcfce7;color:#15803d;border-left:3px solid #15803d;padding:8px 12px;border-radius:6px;font-size:.78rem;margin-bottom:12px';
   msg.textContent='PIN updated for this session.';
 }
+
+function changeTeacherPIN() {
+  const nw = document.getElementById('set-t-new').value;
+  const msg = document.getElementById('set-t-msg');
+  if(nw.length<4) { msg.style.cssText='display:block;color:#c0392b;'; msg.textContent='Min 4 chars.'; return; }
+  const db = getDb();
+  db.teacherPin = nw;
+  saveDb(db);
+  msg.style.cssText='display:block;color:#15803d;'; msg.textContent='Teacher PIN updated.';
+}
+function loadPerms() {
+  const db = getDb();
+  const cAdd = document.getElementById('perm-add-student');
+  const cEdit = document.getElementById('perm-edit-note');
+  if(cAdd) cAdd.checked = db.perms.canAddStudent;
+  if(cEdit) cEdit.checked = db.perms.canEditNote;
+}
+function savePerms() {
+  const db = getDb();
+  db.perms.canAddStudent = document.getElementById('perm-add-student').checked;
+  db.perms.canEditNote = document.getElementById('perm-edit-note').checked;
+  saveDb(db);
+  const msg = document.getElementById('perm-msg');
+  msg.style.cssText='display:block;color:#15803d;'; msg.textContent='Permissions saved.';
+}
+document.addEventListener('DOMContentLoaded', loadPerms);
+
 function exportData(){
   const data={students:getAllStudents(),teachers:getTeachers(),events:getEvents(),appointments:getAllAppointments(),exportedAt:new Date().toISOString()};
   const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
@@ -1171,7 +1834,779 @@ function openModal(html){ document.getElementById('modalContent').innerHTML=html
 function closeModal(){ document.getElementById('modalOverlay').classList.remove('open'); document.getElementById('modalContent').innerHTML=''; }
 
 /* ─── INIT ───────────────────────────────────── */
-initData();
+initData();/* === SA: CMS === */
+function rSACms(){
+  const cms = JSON.parse(localStorage.getItem('sjc_cms') || '{}');
+  return `
+  <div class="page-hdr"><h2>Page Editor</h2><p>Edit the text on the main website (index.html)</p></div>
+  <div class="card" style="max-width:600px">
+    <h3 style="font-size:.9rem;font-weight:600;color:var(--maroon-deep);margin-bottom:16px">Hero Section</h3>
+    <div class="form-group">
+      <label>Main Headline</label>
+      <input type="text" id="cms-h-title" value="${esc(cms.heroTitle || '')}" placeholder="e.g. Empowering Your Journey...">
+    </div>
+    <div class="form-group">
+      <label>Subtitle / Description</label>
+      <textarea id="cms-h-sub" rows="3" placeholder="e.g. Discover your true potential...">${esc(cms.heroSub || '')}</textarea>
+    </div>
+    
+    <h3 style="font-size:.9rem;font-weight:600;color:var(--maroon-deep);margin-top:24px;margin-bottom:16px">Statistics Section</h3>
+    <div class="two-col">
+      <div class="form-group">
+        <label>Stat 1 Value (e.g. 2.4k+)</label>
+        <input type="text" id="cms-s1-v" value="${esc(cms.s1v || '')}">
+      </div>
+      <div class="form-group">
+        <label>Stat 1 Label</label>
+        <input type="text" id="cms-s1-l" value="${esc(cms.s1l || '')}">
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="form-group">
+        <label>Stat 2 Value (e.g. 50+)</label>
+        <input type="text" id="cms-s2-v" value="${esc(cms.s2v || '')}">
+      </div>
+      <div class="form-group">
+        <label>Stat 2 Label</label>
+        <input type="text" id="cms-s2-l" value="${esc(cms.s2l || '')}">
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="form-group">
+        <label>Stat 3 Value (e.g. 95%)</label>
+        <input type="text" id="cms-s3-v" value="${esc(cms.s3v || '')}">
+      </div>
+      <div class="form-group">
+        <label>Stat 3 Label</label>
+        <input type="text" id="cms-s3-l" value="${esc(cms.s3l || '')}">
+      </div>
+    </div>
+
+    <div style="text-align:right; margin-top:20px;">
+      <span id="cms-msg" style="color:green;font-size:0.85rem;font-weight:600;margin-right:15px;display:none;">Saved successfully!</span>
+      <button class="btn btn-primary" onclick="saveCMS()">Save Changes</button>
+    </div>
+  </div>
+  `;
+}
+
+function saveCMS(){
+  const data = {
+    heroTitle: document.getElementById('cms-h-title').value.trim(),
+    heroSub: document.getElementById('cms-h-sub').value.trim(),
+    s1v: document.getElementById('cms-s1-v').value.trim(),
+    s1l: document.getElementById('cms-s1-l').value.trim(),
+    s2v: document.getElementById('cms-s2-v').value.trim(),
+    s2l: document.getElementById('cms-s2-l').value.trim(),
+    s3v: document.getElementById('cms-s3-v').value.trim(),
+    s3l: document.getElementById('cms-s3-l').value.trim(),
+  };
+  localStorage.setItem('sjc_cms', JSON.stringify(data));
+  const msg = document.getElementById('cms-msg');
+  msg.style.display = 'inline';
+  setTimeout(()=>msg.style.display='none', 2000);
+}
+
+function rSATeachers(){
+  const db = getDb();
+  const teachers = db.teachers || [];
+  return `
+    <div class="header">
+      <div>
+        <div class="header-title">Teacher Management</div>
+        <div class="header-subtitle">Manage counseling staff and their permissions</div>
+      </div>
+      <button class="btn btn-primary" onclick="openTeacherModal()">${I.plus} Add Teacher</button>
+    </div>
+    <div class="card" style="margin-top:20px; padding:0;">
+      <table style="width:100%; border-collapse:collapse; text-align:left;">
+        <thead>
+          <tr style="border-bottom:1px solid var(--border); background:var(--bg-card); color:var(--text-muted); font-size:0.85rem; text-transform:uppercase;">
+            <th style="padding:15px 20px;">Name</th>
+            <th style="padding:15px 20px;">Email</th>
+            <th style="padding:15px 20px;">Permissions</th>
+            <th style="padding:15px 20px; text-align:right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${teachers.length ? teachers.map(t => `
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:15px 20px; font-weight:500; color:var(--text);">${t.name}</td>
+              <td style="padding:15px 20px; color:var(--text-muted);">${t.email}</td>
+              <td style="padding:15px 20px; color:var(--text-muted); font-size:0.85rem;">
+                ${(t.perms||{}).canAdd ? 'Add ' : ''}${(t.perms||{}).canDelete ? 'Del ' : ''}${(t.perms||{}).canEditNote ? 'Edit' : ''}
+              </td>
+              <td style="padding:15px 20px; text-align:right;">
+                <button class="btn btn-icon" onclick="deleteTeacher('${t.id}')" style="color:var(--danger)">${I.bin}</button>
+              </td>
+            </tr>
+          `).join('') : `<tr><td colspan="4" style="padding:20px; text-align:center; color:var(--text-muted);">No teachers found.</td></tr>`}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function openTeacherModal() {
+  const m = document.getElementById('modalContent');
+  m.innerHTML = `
+    <div class="modal-head">
+      <div class="modal-title">Add New Teacher</div>
+      <button class="btn-icon" onclick="closeModal()">&#x2715;</button>
+    </div>
+    <div class="modal-body">
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="newTName" placeholder="e.g. Jane Doe">
+      </div>
+      <div class="input-group" style="margin-top:15px">
+        <label>Email Address</label>
+        <input type="email" id="newTEmail" placeholder="teacher@sjc.lk">
+      </div>
+      <div class="input-group" style="margin-top:15px">
+        <label>Password</label>
+        <input type="text" id="newTPass" placeholder="Password">
+      </div>
+      <div style="margin-top:15px; font-size:0.9rem;">
+        <label style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+          <input type="checkbox" id="permAdd" checked> Can Add Students/Notes
+        </label>
+        <label style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+          <input type="checkbox" id="permDel" checked> Can Delete Students/Notes
+        </label>
+        <label style="display:flex; align-items:center; gap:8px;">
+          <input type="checkbox" id="permEdit" checked> Can Edit Notes
+        </label>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveNewTeacher()">Save Teacher</button>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function saveNewTeacher() {
+  const name = document.getElementById('newTName').value.trim();
+  const email = document.getElementById('newTEmail').value.trim();
+  const pin = document.getElementById('newTPass').value.trim();
+  if(!name || !email || !pin) { toast('Please fill all fields','err'); return; }
+  
+  const teachers = JSON.parse(localStorage.getItem('sjc_teachers')) || [];
+  if(teachers.some(t => t.email.toLowerCase() === email.toLowerCase())) {
+    toast('Email already exists','err'); return;
+  }
+  
+  teachers.push({
+    id: 't' + Date.now(),
+    name, email, pin,
+    perms: {
+      canAdd: document.getElementById('permAdd').checked,
+      canDelete: document.getElementById('permDel').checked,
+      canEditNote: document.getElementById('permEdit').checked
+    }
+  });
+  
+  localStorage.setItem('sjc_teachers', JSON.stringify(teachers));
+  toast('Teacher added successfully');
+  closeModal();
+  if(document.getElementById('sa-teachers').classList.contains('active')) {
+    document.getElementById('sa-teachers').innerHTML = rSATeachers();
+  }
+}
+
+function deleteTeacher(id) {
+  if(!confirm('Are you sure you want to delete this teacher?')) return;
+  let teachers = JSON.parse(localStorage.getItem('sjc_teachers')) || [];
+  teachers = teachers.filter(t => t.id !== id);
+  localStorage.setItem('sjc_teachers', JSON.stringify(teachers));
+  toast('Teacher deleted');
+  if(document.getElementById('sa-teachers').classList.contains('active')) {
+    document.getElementById('sa-teachers').innerHTML = rSATeachers();
+  }
+}
+
+function rSAStudents(){
+  const students = JSON.parse(localStorage.getItem('sjc_db_students')) || [];
+  return `
+    <div class="header">
+      <div>
+        <div class="header-title">Student Management</div>
+        <div class="header-subtitle">View and manage all registered students</div>
+      </div>
+      <button class="btn btn-primary" onclick="openStudentModal()">${I.plus} Add Student</button>
+    </div>
+    <div class="card" style="margin-top:20px; padding:0;">
+      <table style="width:100%; border-collapse:collapse; text-align:left;">
+        <thead>
+          <tr style="border-bottom:1px solid var(--border); background:var(--bg-card); color:var(--text-muted); font-size:0.85rem; text-transform:uppercase;">
+            <th style="padding:15px 20px;">Register ID</th>
+            <th style="padding:15px 20px;">Name</th>
+            <th style="padding:15px 20px;">Grade</th>
+            <th style="padding:15px 20px; text-align:right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${students.length ? students.map(s => `
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:15px 20px; color:var(--text-muted);">${s.registerId || '-'}</td>
+              <td style="padding:15px 20px; font-weight:500; color:var(--text);">${s.name}</td>
+              <td style="padding:15px 20px; color:var(--text-muted);">${s.grade || '-'}</td>
+              <td style="padding:15px 20px; text-align:right;">
+                <button class="btn btn-icon" onclick="deleteStudent('${s.id}')" style="color:var(--danger)">${I.bin}</button>
+              </td>
+            </tr>
+          `).join('') : `<tr><td colspan="4" style="padding:20px; text-align:center; color:var(--text-muted);">No students found.</td></tr>`}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function openStudentModal() {
+  const m = document.getElementById('modalContent');
+  m.innerHTML = `
+    <div class="modal-head">
+      <div class="modal-title">Add New Student</div>
+      <button class="btn-icon" onclick="closeModal()">&#x2715;</button>
+    </div>
+    <div class="modal-body">
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="newSName" placeholder="e.g. John Doe">
+      </div>
+      <div class="two-col" style="margin-top:15px;">
+        <div class="input-group" style="flex:1;">
+          <label>Register ID</label>
+          <input type="text" id="newSReg" placeholder="ID">
+        </div>
+        <div class="input-group" style="flex:1;">
+          <label>Grade</label>
+          <input type="text" id="newSGrade" placeholder="e.g. 10">
+        </div>
+      </div>
+      <div class="input-group" style="margin-top:15px">
+        <label>Parent Contact</label>
+        <input type="text" id="newSContact" placeholder="07...">
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveNewStudent()">Save Student</button>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function saveNewStudent() {
+  const name = document.getElementById('newSName').value.trim();
+  const registerId = document.getElementById('newSReg').value.trim();
+  const grade = document.getElementById('newSGrade').value.trim();
+  const contact = document.getElementById('newSContact').value.trim();
+  if(!name) { toast('Name is required','err'); return; }
+  
+  const students = JSON.parse(localStorage.getItem('sjc_db_students')) || [];
+  students.push({
+    id: Math.random().toString(36).substr(2, 9),
+    createdAt: new Date().toISOString(),
+    type: 'student',
+    name, registerId, grade, contact
+  });
+  
+  localStorage.setItem('sjc_db_students', JSON.stringify(students));
+  toast('Student added successfully');
+  closeModal();
+  if(document.getElementById('sa-students').classList.contains('active')) {
+    document.getElementById('sa-students').innerHTML = rSAStudents();
+  }
+}
+
+function deleteStudent(id) {
+  if(!confirm('Delete this student permanently?')) return;
+  let students = JSON.parse(localStorage.getItem('sjc_db_students')) || [];
+  students = students.filter(s => s.id !== id);
+  localStorage.setItem('sjc_db_students', JSON.stringify(students));
+  toast('Student deleted');
+  if(document.getElementById('sa-students').classList.contains('active')) {
+    document.getElementById('sa-students').innerHTML = rSAStudents();
+  }
+}
+
+</script>
+
+<script id="global-loader-js">
+  (function(){
+    let loaderHidden = false;
+    const hideLoader = () => {
+      if(loaderHidden) return;
+      loaderHidden = true;
+      const loader = document.getElementById('global-loader');
+      if(loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+      }
+    };
+    window.addEventListener('load', () => setTimeout(hideLoader, 300));
+    // Fail-safe
+    setTimeout(hideLoader, 2500);
+  })();
+
+function rSATeachers(){
+  const db = getDb();
+  const teachers = db.teachers || [];
+  return `
+    <div class="header">
+      <div>
+        <div class="header-title">Teacher Management</div>
+        <div class="header-subtitle">Manage counseling staff and their permissions</div>
+      </div>
+      <button class="btn btn-primary" onclick="openTeacherModal()">${I.plus} Add Teacher</button>
+    </div>
+    <div class="card" style="margin-top:20px; padding:0;">
+      <table style="width:100%; border-collapse:collapse; text-align:left;">
+        <thead>
+          <tr style="border-bottom:1px solid var(--border); background:var(--bg-card); color:var(--text-muted); font-size:0.85rem; text-transform:uppercase;">
+            <th style="padding:15px 20px;">Name</th>
+            <th style="padding:15px 20px;">Email</th>
+            <th style="padding:15px 20px;">Permissions</th>
+            <th style="padding:15px 20px; text-align:right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${teachers.length ? teachers.map(t => `
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:15px 20px; font-weight:500; color:var(--text);">${t.name}</td>
+              <td style="padding:15px 20px; color:var(--text-muted);">${t.email}</td>
+              <td style="padding:15px 20px; color:var(--text-muted); font-size:0.85rem;">
+                ${(t.perms||{}).canAdd ? 'Add ' : ''}${(t.perms||{}).canDelete ? 'Del ' : ''}${(t.perms||{}).canEditNote ? 'Edit' : ''}
+              </td>
+              <td style="padding:15px 20px; text-align:right;">
+                <button class="btn btn-icon" onclick="deleteTeacher('${t.id}')" style="color:var(--danger)">${I.bin}</button>
+              </td>
+            </tr>
+          `).join('') : `<tr><td colspan="4" style="padding:20px; text-align:center; color:var(--text-muted);">No teachers found.</td></tr>`}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function openTeacherModal() {
+  const m = document.getElementById('modalContent');
+  m.innerHTML = `
+    <div class="modal-head">
+      <div class="modal-title">Add New Teacher</div>
+      <button class="btn-icon" onclick="closeModal()">&#x2715;</button>
+    </div>
+    <div class="modal-body">
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="newTName" placeholder="e.g. Jane Doe">
+      </div>
+      <div class="input-group" style="margin-top:15px">
+        <label>Email Address</label>
+        <input type="email" id="newTEmail" placeholder="teacher@sjc.lk">
+      </div>
+      <div class="input-group" style="margin-top:15px">
+        <label>Password</label>
+        <input type="text" id="newTPass" placeholder="Password">
+      </div>
+      <div style="margin-top:15px; font-size:0.9rem;">
+        <label style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+          <input type="checkbox" id="permAdd" checked> Can Add Students/Notes
+        </label>
+        <label style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+          <input type="checkbox" id="permDel" checked> Can Delete Students/Notes
+        </label>
+        <label style="display:flex; align-items:center; gap:8px;">
+          <input type="checkbox" id="permEdit" checked> Can Edit Notes
+        </label>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveNewTeacher()">Save Teacher</button>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function saveNewTeacher() {
+  const name = document.getElementById('newTName').value.trim();
+  const email = document.getElementById('newTEmail').value.trim();
+  const pin = document.getElementById('newTPass').value.trim();
+  if(!name || !email || !pin) { toast('Please fill all fields','err'); return; }
+  
+  const teachers = JSON.parse(localStorage.getItem('sjc_teachers')) || [];
+  if(teachers.some(t => t.email.toLowerCase() === email.toLowerCase())) {
+    toast('Email already exists','err'); return;
+  }
+  
+  teachers.push({
+    id: 't' + Date.now(),
+    name, email, pin,
+    perms: {
+      canAdd: document.getElementById('permAdd').checked,
+      canDelete: document.getElementById('permDel').checked,
+      canEditNote: document.getElementById('permEdit').checked
+    }
+  });
+  
+  localStorage.setItem('sjc_teachers', JSON.stringify(teachers));
+  toast('Teacher added successfully');
+  closeModal();
+  if(document.getElementById('sa-teachers').classList.contains('active')) {
+    document.getElementById('sa-teachers').innerHTML = rSATeachers();
+  }
+}
+
+function deleteTeacher(id) {
+  if(!confirm('Are you sure you want to delete this teacher?')) return;
+  let teachers = JSON.parse(localStorage.getItem('sjc_teachers')) || [];
+  teachers = teachers.filter(t => t.id !== id);
+  localStorage.setItem('sjc_teachers', JSON.stringify(teachers));
+  toast('Teacher deleted');
+  if(document.getElementById('sa-teachers').classList.contains('active')) {
+    document.getElementById('sa-teachers').innerHTML = rSATeachers();
+  }
+}
+
+function rSAStudents(){
+  const students = JSON.parse(localStorage.getItem('sjc_db_students')) || [];
+  return `
+    <div class="header">
+      <div>
+        <div class="header-title">Student Management</div>
+        <div class="header-subtitle">View and manage all registered students</div>
+      </div>
+      <button class="btn btn-primary" onclick="openStudentModal()">${I.plus} Add Student</button>
+    </div>
+    <div class="card" style="margin-top:20px; padding:0;">
+      <table style="width:100%; border-collapse:collapse; text-align:left;">
+        <thead>
+          <tr style="border-bottom:1px solid var(--border); background:var(--bg-card); color:var(--text-muted); font-size:0.85rem; text-transform:uppercase;">
+            <th style="padding:15px 20px;">Register ID</th>
+            <th style="padding:15px 20px;">Name</th>
+            <th style="padding:15px 20px;">Grade</th>
+            <th style="padding:15px 20px; text-align:right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${students.length ? students.map(s => `
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:15px 20px; color:var(--text-muted);">${s.registerId || '-'}</td>
+              <td style="padding:15px 20px; font-weight:500; color:var(--text);">${s.name}</td>
+              <td style="padding:15px 20px; color:var(--text-muted);">${s.grade || '-'}</td>
+              <td style="padding:15px 20px; text-align:right;">
+                <button class="btn btn-icon" onclick="deleteStudent('${s.id}')" style="color:var(--danger)">${I.bin}</button>
+              </td>
+            </tr>
+          `).join('') : `<tr><td colspan="4" style="padding:20px; text-align:center; color:var(--text-muted);">No students found.</td></tr>`}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function openStudentModal() {
+  const m = document.getElementById('modalContent');
+  m.innerHTML = `
+    <div class="modal-head">
+      <div class="modal-title">Add New Student</div>
+      <button class="btn-icon" onclick="closeModal()">&#x2715;</button>
+    </div>
+    <div class="modal-body">
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="newSName" placeholder="e.g. John Doe">
+      </div>
+      <div class="two-col" style="margin-top:15px;">
+        <div class="input-group" style="flex:1;">
+          <label>Register ID</label>
+          <input type="text" id="newSReg" placeholder="ID">
+        </div>
+        <div class="input-group" style="flex:1;">
+          <label>Grade</label>
+          <input type="text" id="newSGrade" placeholder="e.g. 10">
+        </div>
+      </div>
+      <div class="input-group" style="margin-top:15px">
+        <label>Parent Contact</label>
+        <input type="text" id="newSContact" placeholder="07...">
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveNewStudent()">Save Student</button>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function saveNewStudent() {
+  const name = document.getElementById('newSName').value.trim();
+  const registerId = document.getElementById('newSReg').value.trim();
+  const grade = document.getElementById('newSGrade').value.trim();
+  const contact = document.getElementById('newSContact').value.trim();
+  if(!name) { toast('Name is required','err'); return; }
+  
+  const students = JSON.parse(localStorage.getItem('sjc_db_students')) || [];
+  students.push({
+    id: Math.random().toString(36).substr(2, 9),
+    createdAt: new Date().toISOString(),
+    type: 'student',
+    name, registerId, grade, contact
+  });
+  
+  localStorage.setItem('sjc_db_students', JSON.stringify(students));
+  toast('Student added successfully');
+  closeModal();
+  if(document.getElementById('sa-students').classList.contains('active')) {
+    document.getElementById('sa-students').innerHTML = rSAStudents();
+  }
+}
+
+function deleteStudent(id) {
+  if(!confirm('Delete this student permanently?')) return;
+  let students = JSON.parse(localStorage.getItem('sjc_db_students')) || [];
+  students = students.filter(s => s.id !== id);
+  localStorage.setItem('sjc_db_students', JSON.stringify(students));
+  toast('Student deleted');
+  if(document.getElementById('sa-students').classList.contains('active')) {
+    document.getElementById('sa-students').innerHTML = rSAStudents();
+  }
+}
+
+</script>
+
+  <script src="/custom_select.js">
+function rSATeachers(){
+  const db = getDb();
+  const teachers = db.teachers || [];
+  return `
+    <div class="header">
+      <div>
+        <div class="header-title">Teacher Management</div>
+        <div class="header-subtitle">Manage counseling staff and their permissions</div>
+      </div>
+      <button class="btn btn-primary" onclick="openTeacherModal()">${I.plus} Add Teacher</button>
+    </div>
+    <div class="card" style="margin-top:20px; padding:0;">
+      <table style="width:100%; border-collapse:collapse; text-align:left;">
+        <thead>
+          <tr style="border-bottom:1px solid var(--border); background:var(--bg-card); color:var(--text-muted); font-size:0.85rem; text-transform:uppercase;">
+            <th style="padding:15px 20px;">Name</th>
+            <th style="padding:15px 20px;">Email</th>
+            <th style="padding:15px 20px;">Permissions</th>
+            <th style="padding:15px 20px; text-align:right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${teachers.length ? teachers.map(t => `
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:15px 20px; font-weight:500; color:var(--text);">${t.name}</td>
+              <td style="padding:15px 20px; color:var(--text-muted);">${t.email}</td>
+              <td style="padding:15px 20px; color:var(--text-muted); font-size:0.85rem;">
+                ${(t.perms||{}).canAdd ? 'Add ' : ''}${(t.perms||{}).canDelete ? 'Del ' : ''}${(t.perms||{}).canEditNote ? 'Edit' : ''}
+              </td>
+              <td style="padding:15px 20px; text-align:right;">
+                <button class="btn btn-icon" onclick="deleteTeacher('${t.id}')" style="color:var(--danger)">${I.bin}</button>
+              </td>
+            </tr>
+          `).join('') : `<tr><td colspan="4" style="padding:20px; text-align:center; color:var(--text-muted);">No teachers found.</td></tr>`}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function openTeacherModal() {
+  const m = document.getElementById('modalContent');
+  m.innerHTML = `
+    <div class="modal-head">
+      <div class="modal-title">Add New Teacher</div>
+      <button class="btn-icon" onclick="closeModal()">&#x2715;</button>
+    </div>
+    <div class="modal-body">
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="newTName" placeholder="e.g. Jane Doe">
+      </div>
+      <div class="input-group" style="margin-top:15px">
+        <label>Email Address</label>
+        <input type="email" id="newTEmail" placeholder="teacher@sjc.lk">
+      </div>
+      <div class="input-group" style="margin-top:15px">
+        <label>Password</label>
+        <input type="text" id="newTPass" placeholder="Password">
+      </div>
+      <div style="margin-top:15px; font-size:0.9rem;">
+        <label style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+          <input type="checkbox" id="permAdd" checked> Can Add Students/Notes
+        </label>
+        <label style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+          <input type="checkbox" id="permDel" checked> Can Delete Students/Notes
+        </label>
+        <label style="display:flex; align-items:center; gap:8px;">
+          <input type="checkbox" id="permEdit" checked> Can Edit Notes
+        </label>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveNewTeacher()">Save Teacher</button>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function saveNewTeacher() {
+  const name = document.getElementById('newTName').value.trim();
+  const email = document.getElementById('newTEmail').value.trim();
+  const pin = document.getElementById('newTPass').value.trim();
+  if(!name || !email || !pin) { toast('Please fill all fields','err'); return; }
+  
+  const teachers = JSON.parse(localStorage.getItem('sjc_teachers')) || [];
+  if(teachers.some(t => t.email.toLowerCase() === email.toLowerCase())) {
+    toast('Email already exists','err'); return;
+  }
+  
+  teachers.push({
+    id: 't' + Date.now(),
+    name, email, pin,
+    perms: {
+      canAdd: document.getElementById('permAdd').checked,
+      canDelete: document.getElementById('permDel').checked,
+      canEditNote: document.getElementById('permEdit').checked
+    }
+  });
+  
+  localStorage.setItem('sjc_teachers', JSON.stringify(teachers));
+  toast('Teacher added successfully');
+  closeModal();
+  if(document.getElementById('sa-teachers').classList.contains('active')) {
+    document.getElementById('sa-teachers').innerHTML = rSATeachers();
+  }
+}
+
+function deleteTeacher(id) {
+  if(!confirm('Are you sure you want to delete this teacher?')) return;
+  let teachers = JSON.parse(localStorage.getItem('sjc_teachers')) || [];
+  teachers = teachers.filter(t => t.id !== id);
+  localStorage.setItem('sjc_teachers', JSON.stringify(teachers));
+  toast('Teacher deleted');
+  if(document.getElementById('sa-teachers').classList.contains('active')) {
+    document.getElementById('sa-teachers').innerHTML = rSATeachers();
+  }
+}
+
+function rSAStudents(){
+  const students = JSON.parse(localStorage.getItem('sjc_db_students')) || [];
+  return `
+    <div class="header">
+      <div>
+        <div class="header-title">Student Management</div>
+        <div class="header-subtitle">View and manage all registered students</div>
+      </div>
+      <button class="btn btn-primary" onclick="openStudentModal()">${I.plus} Add Student</button>
+    </div>
+    <div class="card" style="margin-top:20px; padding:0;">
+      <table style="width:100%; border-collapse:collapse; text-align:left;">
+        <thead>
+          <tr style="border-bottom:1px solid var(--border); background:var(--bg-card); color:var(--text-muted); font-size:0.85rem; text-transform:uppercase;">
+            <th style="padding:15px 20px;">Register ID</th>
+            <th style="padding:15px 20px;">Name</th>
+            <th style="padding:15px 20px;">Grade</th>
+            <th style="padding:15px 20px; text-align:right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${students.length ? students.map(s => `
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:15px 20px; color:var(--text-muted);">${s.registerId || '-'}</td>
+              <td style="padding:15px 20px; font-weight:500; color:var(--text);">${s.name}</td>
+              <td style="padding:15px 20px; color:var(--text-muted);">${s.grade || '-'}</td>
+              <td style="padding:15px 20px; text-align:right;">
+                <button class="btn btn-icon" onclick="deleteStudent('${s.id}')" style="color:var(--danger)">${I.bin}</button>
+              </td>
+            </tr>
+          `).join('') : `<tr><td colspan="4" style="padding:20px; text-align:center; color:var(--text-muted);">No students found.</td></tr>`}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function openStudentModal() {
+  const m = document.getElementById('modalContent');
+  m.innerHTML = `
+    <div class="modal-head">
+      <div class="modal-title">Add New Student</div>
+      <button class="btn-icon" onclick="closeModal()">&#x2715;</button>
+    </div>
+    <div class="modal-body">
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="newSName" placeholder="e.g. John Doe">
+      </div>
+      <div class="two-col" style="margin-top:15px;">
+        <div class="input-group" style="flex:1;">
+          <label>Register ID</label>
+          <input type="text" id="newSReg" placeholder="ID">
+        </div>
+        <div class="input-group" style="flex:1;">
+          <label>Grade</label>
+          <input type="text" id="newSGrade" placeholder="e.g. 10">
+        </div>
+      </div>
+      <div class="input-group" style="margin-top:15px">
+        <label>Parent Contact</label>
+        <input type="text" id="newSContact" placeholder="07...">
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveNewStudent()">Save Student</button>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function saveNewStudent() {
+  const name = document.getElementById('newSName').value.trim();
+  const registerId = document.getElementById('newSReg').value.trim();
+  const grade = document.getElementById('newSGrade').value.trim();
+  const contact = document.getElementById('newSContact').value.trim();
+  if(!name) { toast('Name is required','err'); return; }
+  
+  const students = JSON.parse(localStorage.getItem('sjc_db_students')) || [];
+  students.push({
+    id: Math.random().toString(36).substr(2, 9),
+    createdAt: new Date().toISOString(),
+    type: 'student',
+    name, registerId, grade, contact
+  });
+  
+  localStorage.setItem('sjc_db_students', JSON.stringify(students));
+  toast('Student added successfully');
+  closeModal();
+  if(document.getElementById('sa-students').classList.contains('active')) {
+    document.getElementById('sa-students').innerHTML = rSAStudents();
+  }
+}
+
+function deleteStudent(id) {
+  if(!confirm('Delete this student permanently?')) return;
+  let students = JSON.parse(localStorage.getItem('sjc_db_students')) || [];
+  students = students.filter(s => s.id !== id);
+  localStorage.setItem('sjc_db_students', JSON.stringify(students));
+  toast('Student deleted');
+  if(document.getElementById('sa-students').classList.contains('active')) {
+    document.getElementById('sa-students').innerHTML = rSAStudents();
+  }
+}
+
 </script>
 </body>
 </html>
