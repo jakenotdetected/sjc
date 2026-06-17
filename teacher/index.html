@@ -12,14 +12,23 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{
-  --maroon:#7a1818;--maroon-deep:#2a0808;--maroon-mid:#5a1010;
-  --cream:#faf6ee;--cream-2:#f1e9d8;--cream-3:#e6dcc6;
-  --gold:#c9a84c;
-  --ink:#1a0e0e;--ink-soft:#4a3838;--muted:#8a7060;
-  --rule:rgba(122,24,24,0.1);
-  --ok:#2d7a2d;--danger:#c0392b;--rec:#dc2626;
-  --shadow:0 2px 12px rgba(42,8,8,0.08);
-  --shadow-lg:0 12px 40px rgba(42,8,8,0.18);
+  --maroon:#5c0a0a;
+  --maroon-deep:#1d0305;
+  --maroon-mid:#4a0810;
+  --cream:#faf8f5;
+  --cream-2:#f1ece3;
+  --cream-3:#e3dacd;
+  --gold:#d4af37;
+  --gold-hover:#b8962e;
+  --ink:#1d1516;
+  --ink-soft:#4d3e40;
+  --muted:#8d797b;
+  --rule:rgba(92, 10, 10, 0.08);
+  --ok:#15803d;
+  --danger:#991b1b;
+  --rec:#dc2626;
+  --shadow:0 4px 20px rgba(92, 10, 10, 0.03), 0 1px 3px rgba(0,0,0,0.01);
+  --shadow-lg:0 16px 36px rgba(92, 10, 10, 0.07), 0 2px 8px rgba(0,0,0,0.02);
 }
 html,body{height:100%;font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.5}
 body.si,.si{font-family:'Noto Sans Sinhala','Inter',sans-serif}
@@ -1272,12 +1281,241 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important}
 }
+
+
+/* ▬▬▬▬ PREMIUM DESIGN OVERRIDES ▬▬▬▬ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@font-face {
+    font-family: 'Canterbury';
+    src: url('../fonts/Canterbury.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, .tb-title, .login-brand-title, .login-title {
+    font-family: 'Canterbury', serif !important;
+    font-weight: normal !important;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(92, 10, 10, 0.15);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(92, 10, 10, 0.35);
+}
+
+/* Login Screen Overhaul */
+#login {
+  background: linear-gradient(135deg, #1d0305 0%, #35080c 100%) !important;
+}
+.login-left-panel {
+  background: linear-gradient(145deg, #200305 0%, #4a0810 50%, #2f0509 100%) !important;
+}
+.login-left-panel::after {
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.1) 0%, transparent 65%) !important;
+}
+.login-brand-logo {
+  border-radius: 22px !important;
+  overflow: hidden !important;
+  box-shadow: var(--shadow-lg) !important;
+  clip-path: inset(4% round 22px) !important;
+  border: none !important;
+  outline: none !important;
+  background: #ffffff !important;
+}
+.login-brand-logo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  padding: 0 !important;
+}
+.login-logo {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: var(--shadow) !important;
+  clip-path: inset(4% round 14px) !important;
+  border: none !important;
+  outline: none !important;
+  background: #ffffff !important;
+}
+.login-logo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  padding: 0 !important;
+}
+.login-card {
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgba(92, 10, 10, 0.03) !important;
+  border: 1px solid rgba(92, 10, 10, 0.04) !important;
+}
+.login-head {
+  background: linear-gradient(135deg, #1d0305 0%, #35080c 100%) !important;
+  border-bottom: 2px solid rgba(201, 168, 76, 0.15) !important;
+}
+
+/* Sidebar and s-item styling */
+.sidebar {
+  background: #ffffff !important;
+  border-right: 1px solid var(--rule) !important;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.02) !important;
+}
+.s-item {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  border-left: 3px solid transparent !important;
+  border-radius: 8px !important;
+  margin: 4px 12px !important;
+  background: transparent !important;
+}
+.s-item:hover:not(.active) {
+  background: rgba(122, 24, 24, 0.04) !important;
+  transform: translateX(4px);
+  color: var(--maroon) !important;
+}
+.s-item.active {
+  background: linear-gradient(90deg, rgba(201, 168, 76, 0.12) 0%, rgba(201, 168, 76, 0.02) 100%) !important;
+  border-left: 3px solid var(--gold) !important;
+  color: var(--maroon-deep) !important;
+  font-weight: 600 !important;
+}
+.s-avatar {
+  background: linear-gradient(135deg, var(--maroon), var(--maroon-mid)) !important;
+  color: #fff !important;
+  box-shadow: 0 3px 8px rgba(122,24,24,0.15) !important;
+}
+.s-item.active .s-avatar {
+  background: var(--gold) !important;
+  color: var(--maroon-deep) !important;
+}
+.sb-search input {
+  border: 1.5px solid rgba(92, 10, 10, 0.08) !important;
+  border-radius: 10px !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+.sb-search input:focus {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.12) !important;
+}
+
+/* Topbar Crest Rounded No Stroke */
+.tb-crest {
+  border-radius: 8px !important;
+  clip-path: inset(4% round 8px) !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.tb-crest img {
+  padding: 0 !important;
+  object-fit: cover !important;
+}
+
+/* Cards & SV Card Overrides */
+.sv-card, .card {
+  border-radius: 16px !important;
+  border: 1.5px solid rgba(122, 24, 24, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(42,8,8,0.03) !important;
+  background: #fff !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.sv-card:hover, .card:hover {
+  box-shadow: 0 20px 40px rgba(42,8,8,0.06) !important;
+  transform: translateY(-1px);
+}
+
+/* Buttons and Inputs */
+.btn {
+  border-radius: 8px !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.btn-maroon {
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-mid) 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(122, 24, 24, 0.15) !important;
+}
+.btn-maroon:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(122, 24, 24, 0.25) !important;
+}
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%) !important;
+  color: var(--maroon-deep) !important;
+  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.15) !important;
+}
+.btn-gold:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(201, 168, 76, 0.25) !important;
+}
+
+.fg input, .fg select, .fg textarea {
+  padding: 12px 16px !important;
+  border: 1.5px solid rgba(92, 10, 10, 0.08) !important;
+  border-radius: 10px !important;
+  font-size: 0.95rem !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+.fg input:focus, .fg select:focus, .fg textarea:focus {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.12) !important;
+  transform: none !important;
+}
+
+/* Clean Tables */
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+th {
+  background: #faf8f5 !important;
+  color: var(--muted) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.08em;
+  border-bottom: 1.5px solid var(--rule) !important;
+  padding: 12px 16px !important;
+}
+td {
+  border-bottom: 1px solid rgba(122, 24, 24, 0.04) !important;
+  color: var(--ink) !important;
+  padding: 12px 16px !important;
+}
+tbody tr:hover td {
+  background: rgba(201, 168, 76, 0.03) !important;
+}
+
 </style>
 <link rel="stylesheet" href="/emojis.css"/>
-  <link rel="icon" type="image/x-icon" href="../favicon-rounded.ico">
-  <script src="../mock_backend.js?v=2"></script>
+  <link rel="icon" type="image/x-icon" href="/favicon-rounded.ico">
+  <script src="/mock_backend.js?v=2"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <link rel="stylesheet" href="/loader.css?v=9">
 </head>
 <body>
+  <!-- Page Loader Overlay -->
+  <div id="sjc-page-loader">
+    <div class="sjc-loader-content">
+      <img class="sjc-loader-logo" src="/logo.jpg" alt="SJC Logo">
+      <h1 class="sjc-loader-title">St. Joseph's College</h1>
+      <p class="sjc-loader-sub">Career Guidance Unit</p>
+      <div class="sjc-loader-bar">
+        <div class="sjc-loader-progress"></div>
+      </div>
+    </div>
+  </div>
 
 <!-- LOGIN -->
 <div id="login">
@@ -1286,7 +1524,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
     <div class="login-brand-block">
       <div class="login-brand-logo"><img src="../logo.jpg" alt="SJC Logo"/></div>
       <div class="login-brand-title">SJC <span>Counselling</span><br>Unit</div>
-      <div class="login-brand-sub">St. Joseph's College · Anuradhapura</div>
+      <div class="login-brand-sub">St. Joseph's College . Anuradhapura</div>
       <div class="login-access-list">
         <div class="login-access-item">
           <span class="login-access-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
@@ -1311,7 +1549,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
       <div class="login-head">
         <div class="login-logo"><img src="../logo.jpg" alt="SJC"/></div>
         <div id="lLoginTitle" style="font-weight:700;font-size:1.4rem;color:#faf6ee;margin-bottom:5px;letter-spacing:-.01em">Teacher Portal</div>
-        <div id="lLoginSub" style="font-size:0.76rem;color:rgba(250,246,238,0.45)">St. Joseph's College · Anuradhapura</div>
+        <div id="lLoginSub" style="font-size:0.76rem;color:rgba(250,246,238,0.45)">St. Joseph's College . Anuradhapura</div>
       </div>
 
       <!-- Body -->
@@ -1320,7 +1558,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
         <!-- Email input -->
         <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#5a1010;margin-bottom:8px">Email Address</div>
         <input
-          type="email"
+          type="email" autocomplete="off"
           id="emailIn"
           placeholder="Enter your registered email"
           value="teacher@sjc.lk"
@@ -1409,6 +1647,10 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
             style="flex:1;padding:9px 0;font-size:0.84rem;font-weight:600;border:none;background:#fff;color:#aaa;cursor:pointer;font-family:'Noto Sans Sinhala','Inter',sans-serif;transition:all .2s">
             සිංහල
           </button>
+          <button id="lTa" onclick="setLang('ta')"
+            style="flex:1;padding:9px 0;font-size:0.84rem;font-weight:600;border:none;background:#fff;color:#aaa;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s">
+            தமிழ்
+          </button>
         </div>
 
       </div>
@@ -1425,14 +1667,20 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
     <div class="tb-crest"><img src="../logo.jpg" alt="SJC Logo"/></div>
     <div>
       <div class="tb-title">SJC Counselling Unit</div>
-      <div class="tb-sub">St. Joseph's College · Anuradhapura</div>
+      <div class="tb-sub">St. Joseph's College . Anuradhapura</div>
     </div>
     <span class="tb-role">Teacher Portal</span>
     <div class="tb-actions">
       <button class="btn-icon" onclick="openGlobalReport()" title="Reports" data-tip="Reports" style="color:var(--gold);width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
       </button>
-      <button class="lang-pill" onclick="toggleLang()" title="Language" data-tip="Language">EN/සි</button>
+      <div class="lang-switcher" style="display:flex; gap:8px; align-items:center; margin-right:10px; font-size:0.82rem;">
+          <span id="lang-en" style="cursor:pointer; font-weight:bold; color:var(--cream); opacity:0.65; transition:opacity 0.2s;" onclick="setLang('en')">English</span>
+          <span style="opacity:0.3;">|</span>
+          <span id="lang-si" style="cursor:pointer; font-weight:bold; color:var(--cream); opacity:0.65; transition:opacity 0.2s;" onclick="setLang('si')">Sinhala</span>
+          <span style="opacity:0.3;">|</span>
+          <span id="lang-ta" style="cursor:pointer; font-weight:bold; color:var(--cream); opacity:0.65; transition:opacity 0.2s;" onclick="setLang('ta')">Tamil</span>
+      </div>
       <a href="/" class="tb-home" title="Back to website">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
         Website
@@ -1443,7 +1691,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
   <div class="body">
     <aside class="sidebar" id="sidebar">
       <div class="sb-search">
-        <input type="text" id="searchIn" placeholder="Search..." oninput="loadStudents(this.value)"/>
+        <input autocomplete="off" type="text" id="searchIn" placeholder="Search..." oninput="loadStudents(this.value)"/>
       </div>
       <div class="sb-list" id="studentList"></div>
       <div class="sb-add" style="display:flex;flex-direction:column;gap:8px">
@@ -1461,7 +1709,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
           Manage Categories
         </button>
-        <div class="sb-credit" id="lCredit">Developed by Jake<br/>SJC Counseling Team</div>
+        <div class="sb-credit" id="lCredit">Developed by Lusanda Yehen<br/>SJC Counseling Team</div>
       </div>
     </aside>
     <div class="backdrop" id="backdrop" onclick="closeSidebar()"></div>
@@ -1497,10 +1745,6 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
           </div>
           <div class="sv-badges" id="svBadges"></div>
           <div class="sv-buttons">
-            <button class="btn btn-sm btn-line" onclick="openEditStudent()">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-              <span id="lEdit">Edit</span>
-            </button>
             <button class="btn btn-sm btn-gold" id="aiSummaryBtn" onclick="openSummaryModal()" style="display:none">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.3 7.2 17l.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg>
               <span id="lAiBtn">Summarize</span>
@@ -1513,10 +1757,6 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
               <span>Counseling Report</span>
             </button>
-            <button class="btn btn-sm btn-danger" onclick="deleteStudent()">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
-              <span id="lDelete">Delete</span>
-            </button>
           </div>
         </div>
 
@@ -1526,7 +1766,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--maroon)" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             <span id="lAddNote">Add Note</span>
           </div>
-          <textarea id="noteIn" placeholder="Write notes here..." rows="4"></textarea>
+          <textarea autocomplete="off" id="noteIn" placeholder="Write notes here..." rows="4"></textarea>
 
           <!-- Voice Memo feature restored -->
           <div class="voice-row">
@@ -1548,7 +1788,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
           <div class="moods" id="moodRow"></div>
           <div class="comp-bottom">
             <div class="cdd" id="ddCategory" style="flex:1;min-width:130px"></div>
-            <input type="hidden" id="catIn" value="general"/>
+            <input autocomplete="off" type="hidden" id="catIn" value="general"/>
             <button type="button" title="Manage categories" onclick="openCatsModal()" style="width:36px;height:36px;border-radius:10px;border:1px dashed var(--cream-3);background:transparent;color:var(--muted);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .15s,color .15s" onmouseover="this.style.borderColor='var(--maroon)';this.style.color='var(--maroon)'" onmouseout="this.style.borderColor='var(--cream-3)';this.style.color='var(--muted)'">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
@@ -1572,15 +1812,15 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
 
 <!-- Modal -->
 <div class="modal-bg hidden" id="studentModal">
-  <div class="modal">
+  <div class="modal" style="max-width: 800px;">
     <div class="modal-grip"></div>
     <div class="modal-head">
       <h2 id="modalTitle">Add Student</h2>
-      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <button class="modal-close" onclick="closeModal()" style="display:flex; align-items:center; justify-content:center; padding:0; width:36px; height:36px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     </div>
     <div class="modal-body">
-      <input type="hidden" id="editId"/>
-      <input type="hidden" id="sType" value="student"/>
+      <input autocomplete="off" type="hidden" id="editId"/>
+      <input autocomplete="off" type="hidden" id="sType" value="student"/>
 
       <div class="type-toggle" id="typeToggle">
         <button type="button" class="type-opt on" data-type="student" onclick="setPersonType('student')">
@@ -1593,34 +1833,87 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
         </button>
       </div>
 
-      <div class="fg"><label id="lName">Full Name</label><input type="text" id="sName" placeholder="Name"/></div>
-      <div class="modal-grid">
-        <div class="fg only-student"><label id="lGrade">Grade</label><input type="text" id="sGrade" placeholder="10A"/></div>
-        <div class="fg only-teacher" style="display:none"><label id="lSubject">Subject / Department</label><input type="text" id="sSubject" placeholder="e.g. Mathematics"/></div>
-        <div class="fg"><label id="lAge">Age</label><input type="number" id="sAge" placeholder="—" min="5" max="100"/></div>
-        <div class="fg"><label id="lGender">Gender</label>
-          <div class="cdd" id="ddGender"></div>
-          <input type="hidden" id="sGender" value=""/>
+      <!-- Alert Banner -->
+      <div id="promotionAlertBanner" class="only-student" style="display:none; align-items:center; gap:8px; background:#fff2f2; border-left:4px solid var(--maroon); padding:10px 14px; border-radius:8px; margin-bottom:15px; font-size:0.82rem; color:#c0392b; font-weight:600;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span>Student promoted to new grade. Class section (and teacher mapping) needs manual verification.</span>
+      </div>
+
+      <!-- Draft Restore Notice Banner -->
+      <div id="teacherDraftNotice" style="display:none; align-items:center; background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; border-radius:8px; margin-bottom:15px; font-size:0.82rem; color:#15803d; font-weight:600; justify-content:space-between;">
+        <span>Restored unsaved draft from your browser.</span>
+        <a href="#" onclick="const editId = document.getElementById('editId').value; clearStudentFormDraft(editId); closeModal(); if(editId) { openEditStudent(); } else { openAddStudent(); } return false;" style="color:#16a34a; text-decoration:underline; font-weight:700;">Discard Draft</a>
+      </div>
+
+      <div class="fg"><label id="lName">Full Name</label><input autocomplete="off" type="text" id="sName" placeholder="Name"/></div>
+      
+      <!-- General Info Section -->
+      <div class="only-student" style="background:#fcfaf7; padding:15px; border-radius:12px; margin:15px 0; border:1px solid rgba(201,168,76,0.15); border-left:4px solid var(--gold);">
+        <div style="font-size:0.8rem; color:var(--maroon); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:12px;">General Information</div>
+        <div class="modal-grid">
+          <div class="fg"><label>Date of Registration</label><input autocomplete="off" type="text" class="flatpickr-date" placeholder="YYYY-MM-DD" id="sDate"/></div>
+          <div class="fg"><label>Index Number</label><input autocomplete="off" type="text" id="sIndexNo" placeholder="Index Number"/></div>
+          <div class="fg"><label>Student Register ID</label><input autocomplete="off" type="text" id="sRegisterId" placeholder="e.g. REG-1234"/></div>
+          <div class="fg"><label>Counsellor</label><input autocomplete="off" type="text" id="sCounsellorReg" placeholder="Counsellor name"/></div>
+          <div class="fg"><label>Grade (number)</label><input autocomplete="off" type="number" id="sGrade" placeholder="1-13" min="1" max="13"/></div>
+          <div class="fg"><label>Class / Section</label><input autocomplete="off" type="text" id="sClass" placeholder="e.g. C"/></div>
         </div>
       </div>
-      <div class="fg only-student"><label id="lContact">Parent Contact</label><input type="text" id="sContact" placeholder="Phone number"/></div>
-      <div class="fg only-teacher" style="display:none"><label id="lContactT">Phone (optional)</label><input type="text" id="sContactT" placeholder="Phone number"/></div>
-      <div class="fg only-student"><label>Date of Birth</label><input type="date" id="sDob" placeholder="—"/></div>
-      <div class="modal-grid" style="margin-top:4px">
-        <div class="fg only-student"><label>Student Register ID</label><input type="text" id="sRegisterId" placeholder="e.g. REG-2024-001"/></div>
-        <div class="fg only-student"><label>House / Stream</label><input type="text" id="sHouse" placeholder="e.g. Blue House"/></div>
+
+      <!-- Personal & Contact Section -->
+      <div style="background:#fcfaf7; padding:15px; border-radius:12px; margin:15px 0; border:1px solid rgba(122,24,24,0.1); border-left:4px solid var(--maroon);">
+        <div style="font-size:0.8rem; color:var(--maroon); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:12px;">Contact &amp; Demographics</div>
+        <div class="modal-grid">
+          <div class="fg only-student"><label id="lContact">Parent Contact</label><input autocomplete="off" type="text" id="sContact" placeholder="Phone number"/></div>
+          <div class="fg only-teacher" style="display:none"><label id="lSubject">Subject / Department</label><input autocomplete="off" type="text" id="sSubject" placeholder="e.g. Mathematics"/></div>
+          <div class="fg only-teacher" style="display:none"><label id="lContactT">Phone (optional)</label><input autocomplete="off" type="text" id="sContactT" placeholder="Phone number"/></div>
+          
+          <div class="fg"><label id="lAge">Age</label><input autocomplete="off" type="number" id="sAge" placeholder="—" min="5" max="100"/></div>
+          <div class="fg"><label id="lGender">Gender</label>
+            <div class="cdd" id="ddGender"></div>
+            <input autocomplete="off" type="hidden" id="sGender" value=""/>
+          </div>
+          <div class="fg only-student"><label>Date of Birth</label><input autocomplete="off" type="text" class="flatpickr-date" placeholder="YYYY-MM-DD" id="sDob"/></div>
+          <div class="fg only-student"><label>House / Stream</label><input autocomplete="off" type="text" id="sHouse" placeholder="e.g. Blue House"/></div>
+          <div class="fg only-student"><label>Religion</label><input autocomplete="off" type="text" id="sReligion" placeholder="—"/></div>
+          <div class="fg only-student"><label>Nationality</label><input autocomplete="off" type="text" id="sNationality" placeholder="—"/></div>
+          <div class="fg only-student"><label>Medium</label><input autocomplete="off" type="text" id="sMedium" placeholder="Sinhala / English / Tamil"/></div>
+        </div>
       </div>
-      <div style="margin:14px 0 8px;font-size:0.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em">Family &amp; Address <span style="font-weight:400;opacity:0.6">(optional)</span></div>
-      <div class="modal-grid">
-        <div class="fg"><label id="lFatherName">Father's Name</label><input type="text" id="sFatherName" placeholder="—"/></div>
-        <div class="fg"><label id="lMotherName">Mother's Name</label><input type="text" id="sMotherName" placeholder="—"/></div>
-        <div class="fg"><label id="lPhone2">Secondary Phone</label><input type="text" id="sPhone2" placeholder="—"/></div>
-        <div class="fg"><label>Religion</label><input type="text" id="sReligion" placeholder="—"/></div>
-        <div class="fg"><label>Nationality</label><input type="text" id="sNationality" placeholder="—"/></div>
-        <div class="fg"><label>Medium</label><input type="text" id="sMedium" placeholder="Sinhala / English / Tamil"/></div>
+
+      <!-- Family Section -->
+      <div class="only-student" style="background:#fcfaf7; padding:15px; border-radius:12px; margin:15px 0; border:1px solid rgba(201,168,76,0.15); border-left:4px solid var(--gold);">
+        <div style="font-size:0.8rem; color:var(--maroon); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:12px;">Family &amp; Guardian Info</div>
+        <div class="modal-grid">
+          <div class="fg"><label>Father / Mother / Guardian's Name</label><input autocomplete="off" type="text" id="sGuardianName" placeholder="Guardian name"/></div>
+          <div class="fg"><label>Emergency Number</label><input autocomplete="off" type="text" id="sEmergencyPhone" placeholder="Emergency phone"/></div>
+          <div class="fg"><label id="lFatherName">Father's Name</label><input autocomplete="off" type="text" id="sFatherName" placeholder="—"/></div>
+          <div class="fg"><label>Father's Phone Number</label><input autocomplete="off" type="text" id="sFatherPhone" placeholder="—"/></div>
+          <div class="fg" id="lMotherName"><label id="lMotherName">Mother's Name</label><input autocomplete="off" type="text" id="sMotherName" placeholder="—"/></div>
+          <div class="fg"><label>Mother's Phone Number</label><input autocomplete="off" type="text" id="sMotherPhone" placeholder="—"/></div>
+          <div class="fg" style="display:none"><label id="lPhone2">Secondary Phone</label><input autocomplete="off" type="hidden" id="sPhone2"/></div>
+        </div>
       </div>
-      <div class="fg"><label id="lAddress">Address</label><textarea id="sAddress" rows="2" placeholder="Home address..." style="resize:vertical;min-height:56px"></textarea></div>
-      <div class="fg"><label>General Remarks</label><textarea id="sRemarks" rows="2" placeholder="Any other info..." style="resize:vertical;min-height:56px"></textarea></div>
+
+      <!-- School Details & Address -->
+      <div class="only-student" style="background:#fcfaf7; padding:15px; border-radius:12px; margin:15px 0; border:1px solid rgba(16,185,129,0.1); border-left:4px solid #10b981;">
+        <div style="font-size:0.8rem; color:var(--maroon); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:12px;">Schooling &amp; Address Details</div>
+        <div class="modal-grid">
+          <div class="fg"><label>Transport Method</label><input autocomplete="off" type="text" id="sTransportMethod" placeholder="e.g. School Bus, Bicycle"/></div>
+          <div class="fg"><label>Siblings details</label><input autocomplete="off" type="text" id="sSiblings" placeholder="Details of siblings in school"/></div>
+        </div>
+      </div>
+
+      <div class="only-student" style="background:#fcfaf7; padding:15px; border-radius:12px; margin:15px 0; border:1px solid rgba(122,24,24,0.1); border-left:4px solid var(--maroon);">
+        <div style="font-size:0.8rem; color:var(--maroon); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:12px;">Remarks &amp; Problem Details</div>
+        <div class="modal-grid">
+          <div class="fg"><label>Nature of the Problem / Issues</label><input autocomplete="off" type="text" id="sIssues" placeholder="Problem details"/></div>
+          <div class="fg"><label>Action Taken</label><input autocomplete="off" type="text" id="sAction" placeholder="Action taken"/></div>
+        </div>
+      </div>
+
+      <div class="fg"><label id="lAddress">Address</label><textarea autocomplete="off" id="sAddress" rows="2" placeholder="Home address..." style="resize:vertical;min-height:56px"></textarea></div>
+      <div class="fg"><label>General Remarks</label><textarea autocomplete="off" id="sRemarks" rows="2" placeholder="Any other info..." style="resize:vertical;min-height:56px"></textarea></div>
     </div>
     <div class="modal-foot">
       <button class="btn btn-sm btn-ghost" onclick="closeModal()"><span id="lCancel">Cancel</span></button>
@@ -1726,59 +2019,59 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
       <!-- S2: Referral -->
       <div class="cr-section hidden" id="crs2">
         <div class="cr-section-title">Reason for Referral / Presenting Problem</div>
-        <div class="fg"><label>Referral Source</label><input type="text" id="crReferralSource" placeholder="e.g. Self-referred, School counselor, Medical doctor, Court-ordered"/></div>
-        <div class="fg"><label>Presenting Issues</label><textarea id="crPresentingIssues" rows="5" placeholder="Describe the primary concerns, symptoms, or challenges the client reported during initial intake..."></textarea></div>
+        <div class="fg"><label>Referral Source</label><input autocomplete="off" type="text" id="crReferralSource" placeholder="e.g. Self-referred, School counselor, Medical doctor, Court-ordered"/></div>
+        <div class="fg"><label>Presenting Issues</label><textarea autocomplete="off" id="crPresentingIssues" rows="5" placeholder="Describe the primary concerns, symptoms, or challenges the client reported during initial intake..."></textarea></div>
       </div>
 
       <!-- S3: Background -->
       <div class="cr-section hidden" id="crs3">
         <div class="cr-section-title">Background &amp; History</div>
-        <div class="fg"><label>Psychological / Medical History</label><textarea id="crPsychHistory" rows="4" placeholder="Previous diagnoses, therapy, hospitalizations, medications..."></textarea></div>
-        <div class="fg"><label>Family &amp; Social Context</label><textarea id="crFamilyContext" rows="4" placeholder="Relevant family dynamics, support systems, relationship history..."></textarea></div>
-        <div class="fg"><label>Substance Use</label><textarea id="crSubstanceUse" rows="3" placeholder="Current or historical alcohol, prescription, or recreational drug use. Write 'None reported' if not applicable."></textarea></div>
+        <div class="fg"><label>Psychological / Medical History</label><textarea autocomplete="off" id="crPsychHistory" rows="4" placeholder="Previous diagnoses, therapy, hospitalizations, medications..."></textarea></div>
+        <div class="fg"><label>Family &amp; Social Context</label><textarea autocomplete="off" id="crFamilyContext" rows="4" placeholder="Relevant family dynamics, support systems, relationship history..."></textarea></div>
+        <div class="fg"><label>Substance Use</label><textarea autocomplete="off" id="crSubstanceUse" rows="3" placeholder="Current or historical alcohol, prescription, or recreational drug use. Write 'None reported' if not applicable."></textarea></div>
       </div>
 
       <!-- S4: MSE -->
       <div class="cr-section hidden" id="crs4">
         <div class="cr-section-title">Clinical Assessment &amp; Mental Status Examination (MSE)</div>
-        <div class="fg"><label>Appearance &amp; Behavior</label><textarea id="crAppearance" rows="3" placeholder="Grooming, posture, eye contact, cooperativeness..."></textarea></div>
-        <div class="fg"><label>Mood &amp; Affect</label><textarea id="crMoodAffect" rows="3" placeholder="Client's stated emotional state (mood) and observed emotional expression (affect)..."></textarea></div>
-        <div class="fg"><label>Cognition &amp; Thought Processes</label><textarea id="crCognition" rows="3" placeholder="Orientation to time/place, thought flow, memory, insight into condition..."></textarea></div>
-        <div class="fg"><label>Risk Assessment</label><textarea id="crRiskAssessment" rows="3" placeholder="Presence or absence of suicidal/homicidal ideation, self-harm risks. Be explicit."></textarea></div>
+        <div class="fg"><label>Appearance &amp; Behavior</label><textarea autocomplete="off" id="crAppearance" rows="3" placeholder="Grooming, posture, eye contact, cooperativeness..."></textarea></div>
+        <div class="fg"><label>Mood &amp; Affect</label><textarea autocomplete="off" id="crMoodAffect" rows="3" placeholder="Client's stated emotional state (mood) and observed emotional expression (affect)..."></textarea></div>
+        <div class="fg"><label>Cognition &amp; Thought Processes</label><textarea autocomplete="off" id="crCognition" rows="3" placeholder="Orientation to time/place, thought flow, memory, insight into condition..."></textarea></div>
+        <div class="fg"><label>Risk Assessment</label><textarea autocomplete="off" id="crRiskAssessment" rows="3" placeholder="Presence or absence of suicidal/homicidal ideation, self-harm risks. Be explicit."></textarea></div>
       </div>
 
       <!-- S5: Progress -->
       <div class="cr-section hidden" id="crs5">
         <div class="cr-section-title">Summary of Interventions &amp; Progress</div>
-        <div class="fg"><label>Therapeutic Modalities Used</label><textarea id="crModalities" rows="3" placeholder="e.g. Cognitive Behavioral Therapy (CBT), DBT, Mindfulness-based strategies, Person-Centered Therapy..."></textarea></div>
-        <div class="fg"><label>Client Engagement</label><textarea id="crEngagement" rows="3" placeholder="How actively the client participated in sessions and completed out-of-session tasks..."></textarea></div>
-        <div class="fg"><label>Key Themes &amp; Milestones</label><textarea id="crMilestones" rows="4" placeholder="Key topics discussed, major breakthroughs or shifts in mindset/behavior..."></textarea></div>
+        <div class="fg"><label>Therapeutic Modalities Used</label><textarea autocomplete="off" id="crModalities" rows="3" placeholder="e.g. Cognitive Behavioral Therapy (CBT), DBT, Mindfulness-based strategies, Person-Centered Therapy..."></textarea></div>
+        <div class="fg"><label>Client Engagement</label><textarea autocomplete="off" id="crEngagement" rows="3" placeholder="How actively the client participated in sessions and completed out-of-session tasks..."></textarea></div>
+        <div class="fg"><label>Key Themes &amp; Milestones</label><textarea autocomplete="off" id="crMilestones" rows="4" placeholder="Key topics discussed, major breakthroughs or shifts in mindset/behavior..."></textarea></div>
       </div>
 
       <!-- S6: Diagnosis -->
       <div class="cr-section hidden" id="crs6">
         <div class="cr-section-title">Current Diagnostic Impression</div>
-        <div class="fg"><label>Diagnostic Codes (DSM-5 / ICD-11)</label><input type="text" id="crDiagCodes" placeholder="e.g. F41.1 – Generalized Anxiety Disorder (ICD-11) / 300.02 (DSM-5)"/></div>
-        <div class="fg"><label>Clinical Formulation</label><textarea id="crFormulation" rows="5" placeholder="If formal diagnosis isn't appropriate, summarize how the client's history and symptoms intersect. Note 'No formal diagnosis at this time' if applicable."></textarea></div>
+        <div class="fg"><label>Diagnostic Codes (DSM-5 / ICD-11)</label><input autocomplete="off" type="text" id="crDiagCodes" placeholder="e.g. F41.1 – Generalized Anxiety Disorder (ICD-11) / 300.02 (DSM-5)"/></div>
+        <div class="fg"><label>Clinical Formulation</label><textarea autocomplete="off" id="crFormulation" rows="5" placeholder="If formal diagnosis isn't appropriate, summarize how the client's history and symptoms intersect. Note 'No formal diagnosis at this time' if applicable."></textarea></div>
       </div>
 
       <!-- S7: Recommendations -->
       <div class="cr-section hidden" id="crs7">
         <div class="cr-section-title">Recommendations &amp; Future Plan</div>
-        <div class="fg"><label>Continued Therapy</label><textarea id="crContinuedTherapy" rows="3" placeholder="Whether sessions should continue, change in frequency, or if client is ready for termination..."></textarea></div>
-        <div class="fg"><label>Referrals</label><textarea id="crReferrals" rows="3" placeholder="Recommendations for specialized care: psychiatry, support groups, occupational therapy..."></textarea></div>
-        <div class="fg"><label>Coping Strategies</label><textarea id="crCoping" rows="3" placeholder="Specific tools or lifestyle changes the client should continue to implement..."></textarea></div>
+        <div class="fg"><label>Continued Therapy</label><textarea autocomplete="off" id="crContinuedTherapy" rows="3" placeholder="Whether sessions should continue, change in frequency, or if client is ready for termination..."></textarea></div>
+        <div class="fg"><label>Referrals</label><textarea autocomplete="off" id="crReferrals" rows="3" placeholder="Recommendations for specialized care: psychiatry, support groups, occupational therapy..."></textarea></div>
+        <div class="fg"><label>Coping Strategies</label><textarea autocomplete="off" id="crCoping" rows="3" placeholder="Specific tools or lifestyle changes the client should continue to implement..."></textarea></div>
       </div>
 
       <!-- S8: Sign-off -->
       <div class="cr-section hidden" id="crs8">
         <div class="cr-section-title">Counselor's Signature &amp; Credentials</div>
         <p class="cr-note">This information will appear at the bottom of the generated PDF report.</p>
-        <div class="fg"><label>Counselor Full Name</label><input type="text" id="crCounselorName" placeholder="Full legal/professional name"/></div>
-        <div class="fg"><label>Job Title &amp; License Type</label><input type="text" id="crCounselorTitle" placeholder="e.g. School Counselor, Licensed Clinical Social Worker (LCSW)"/></div>
-        <div class="fg"><label>Credential / Registration Number</label><input type="text" id="crCounselorCredentials" placeholder="e.g. SLSCA-2024-0123"/></div>
-        <div class="fg"><label>Date Signed</label><input type="date" id="crSignedDate"/></div>
-        <div class="fg"><label>Additional Notes / Confidentiality Statement</label><textarea id="crConfidentiality" rows="3" placeholder="e.g. This report is confidential and intended solely for the named recipient. A signed Release of Information (ROI) has been obtained."></textarea></div>
+        <div class="fg"><label>Counselor Full Name</label><input autocomplete="off" type="text" id="crCounselorName" placeholder="Full legal/professional name"/></div>
+        <div class="fg"><label>Job Title &amp; License Type</label><input autocomplete="off" type="text" id="crCounselorTitle" placeholder="e.g. School Counselor, Licensed Clinical Social Worker (LCSW)"/></div>
+        <div class="fg"><label>Credential / Registration Number</label><input autocomplete="off" type="text" id="crCounselorCredentials" placeholder="e.g. SLSCA-2024-0123"/></div>
+        <div class="fg"><label>Date Signed</label><input autocomplete="off" type="text" class="flatpickr-date" placeholder="YYYY-MM-DD" id="crSignedDate"/></div>
+        <div class="fg"><label>Additional Notes / Confidentiality Statement</label><textarea autocomplete="off" id="crConfidentiality" rows="3" placeholder="e.g. This report is confidential and intended solely for the named recipient. A signed Release of Information (ROI) has been obtained."></textarea></div>
       </div>
 
     </div>
@@ -1806,7 +2099,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
     <div class="modal-body">
       <div id="catsList" style="margin-bottom:16px"></div>
       <div style="display:flex;gap:8px">
-        <input type="text" id="newCatInput" placeholder="New category name..." style="flex:1;padding:10px 12px;border:1px solid var(--cream-3);border-radius:10px;font-size:0.95rem"/>
+        <input autocomplete="off" type="text" id="newCatInput" placeholder="New category name..." style="flex:1;padding:10px 12px;border:1px solid var(--cream-3);border-radius:10px;font-size:0.95rem"/>
         <button class="btn btn-sm btn-maroon" onclick="addCustomCategory()">Add</button>
       </div>
     </div>
@@ -1853,6 +2146,99 @@ const PIN = '1234'; // Change this PIN
 let lang = localStorage.getItem('sjc_lang') || 'en';
 let students = [];
 let currentStudent = null;
+
+let currentDraftId = '';
+
+function calculateAgeFromDob(dobString) {
+  if(!dobString) return '';
+  const birthDate = new Date(dobString);
+  if(isNaN(birthDate.getTime())) return '';
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age >= 0 ? age : '';
+}
+
+function saveStudentFormDraft() {
+  const fields = ['sName','sDate','sIndexNo','sRegisterId','sCounsellorReg','sGrade','sClass','sSubject','sAge','sContact','sContactT','sDob','sHouse','sReligion','sNationality','sMedium','sGuardianName','sEmergencyPhone','sFatherName','sFatherPhone','sMotherName','sMotherPhone','sPhone2','sTransportMethod','sSiblings','sIssues','sAction','sAddress','sRemarks'];
+  const draft = {};
+  fields.forEach(f => {
+    const el = document.getElementById(f);
+    if (el) draft[f] = el.value;
+  });
+  const genderEl = document.getElementById('sGender');
+  if (genderEl) draft['sGender'] = genderEl.value;
+  
+  const key = currentDraftId ? `sjc_teacher_student_draft_${currentDraftId}` : `sjc_teacher_student_draft_new`;
+  localStorage.setItem(key, JSON.stringify(draft));
+}
+
+function clearStudentFormDraft(id) {
+  const key = id ? `sjc_teacher_student_draft_${id}` : `sjc_teacher_student_draft_new`;
+  localStorage.removeItem(key);
+}
+
+function restoreStudentFormDraft(id) {
+  const key = id ? `sjc_teacher_student_draft_${id}` : `sjc_teacher_student_draft_new`;
+  const savedDraft = localStorage.getItem(key);
+  if (!savedDraft) return false;
+  try {
+    const draft = JSON.parse(savedDraft);
+    Object.keys(draft).forEach(f => {
+      const el = document.getElementById(f);
+      if (el) el.value = draft[f];
+    });
+    if (draft.sGender) {
+      const g = document.getElementById('sGender');
+      if (g) g.value = draft.sGender;
+      setDropdownValue('ddGender', draft.sGender);
+    }
+    return true;
+  } catch(e) {
+    return false;
+  }
+}
+
+function setupStudentFormDraftListeners() {
+  const fields = ['sName','sDate','sIndexNo','sRegisterId','sCounsellorReg','sGrade','sClass','sSubject','sAge','sContact','sContactT','sDob','sHouse','sReligion','sNationality','sMedium','sGuardianName','sEmergencyPhone','sFatherName','sFatherPhone','sMotherName','sMotherPhone','sPhone2','sTransportMethod','sSiblings','sIssues','sAction','sAddress','sRemarks'];
+  fields.forEach(f => {
+    const el = document.getElementById(f);
+    if (el) {
+      el.addEventListener('input', saveStudentFormDraft);
+      el.addEventListener('change', saveStudentFormDraft);
+    }
+  });
+
+  const genderEl = document.getElementById('sGender');
+  if (genderEl) {
+    genderEl.addEventListener('change', saveStudentFormDraft);
+  }
+
+  // DOB auto-age calculation listener
+  const dobEl = document.getElementById('sDob');
+  if (dobEl) {
+    dobEl.addEventListener('change', (e) => {
+      const age = calculateAgeFromDob(e.target.value);
+      const ageEl = document.getElementById('sAge');
+      if (ageEl) {
+        ageEl.value = age;
+        saveStudentFormDraft();
+      }
+    });
+    dobEl.addEventListener('input', (e) => {
+      const age = calculateAgeFromDob(e.target.value);
+      const ageEl = document.getElementById('sAge');
+      if (ageEl) {
+        ageEl.value = age;
+        saveStudentFormDraft();
+      }
+    });
+  }
+}
+
 const ALL_BUILTIN_CATS = ['general','academic','behavioral','family','social','emotional','referral'];
 let hiddenBuiltins = new Set(JSON.parse(localStorage.getItem('sjc_hidden_cats')||'[]'));
 let BUILTIN_CATS = ALL_BUILTIN_CATS.filter(s => !hiddenBuiltins.has(s));
@@ -1874,8 +2260,8 @@ let vuRafId = null;
 
 const T = {
   en:{
-    lLoginTitle:'Teacher Portal',lLoginSub:"St. Joseph's College · Anuradhapura",lPin:'Password',lSignIn:'Sign In',
-    tbTitle:'Counseling',lAddStudent:'Add Student',lCredit:'Developed by Jake<br/>SJC Counseling Team',
+    lLoginTitle:'Teacher Portal',lLoginSub:"St. Joseph's College . Anuradhapura",lPin:'Password',lSignIn:'Sign In',
+    tbTitle:'Counseling',lAddStudent:'Add Student',lCredit:'Developed by Lusanda Yehen<br/>SJC Counseling Team',
     lWelcomeTitle:'Welcome',lWelcomeDesc:'Tap the menu to select a student, or add a new one.',lOpenList:'Open Students',
     lAddNote:'Add Note',lSaveNote:'Save Note',lNotesTitle:'Notes',
     lEdit:'Edit',lDelete:'Delete',
@@ -1902,7 +2288,7 @@ const T = {
   },
   si:{
     lLoginTitle:'ගුරු ද්වාරය',lLoginSub:'ශාන්ත ජෝශප් විද්‍යාලය · අනුරාධපුරය',lPin:'මුරපදය ඇතුළත් කරන්න',lSignIn:'ඇතුළු වන්න',
-    tbTitle:'උපදේශනය',lAddStudent:'සිසුවා එක් කරන්න',lCredit:'Jake විසින් නිර්මාණය<br/>SJC උපදේශන කණ්ඩායම',
+    tbTitle:'උපදේශනය',lAddStudent:'සිසුවා එක් කරන්න',lCredit:'Lusanda Yehen විසින් නිර්මාණය<br/>SJC උපදේශන කණ්ඩායම',
     lWelcomeTitle:'ආයුබෝවන්',lWelcomeDesc:'සිසුවෙකු තෝරන්න, නැතහොත් නව සිසුවෙකු එක් කරන්න.',lOpenList:'සිසු ලැයිස්තුව',
     lAddNote:'සටහනක් එක් කරන්න',lSaveNote:'සුරකින්න',lNotesTitle:'සටහන්',
     lEdit:'සංස්කරණය',lDelete:'මකන්න',
@@ -1926,12 +2312,39 @@ const T = {
     searchPh:'සිසුන් සොයන්න...',notePh:'සටහන් මෙහි ලියන්න...',
     micError:'මයික්‍රෝෆෝන් ප්‍රවේශය ප්‍රතික්ෂේප විය',transcribeError:'ශ්‍රව්‍යය පරිවර්තනය කළ නොහැක',
     voiceTag:'හඬ',
+  },
+  ta:{
+    lLoginTitle:'ஆசிரியர் போர்டல்',lLoginSub:"புனித ஜோசப் கல்லூரி · அனுராதபுரம்",lPin:'கடவுச்சொல்',lSignIn:'உள்நுழைக',
+    tbTitle:'உபதேசம்',lAddStudent:'மாணவரைச் சேர்',lCredit:'Lusanda Yehen ஆல் உருவாக்கப்பட்டது<br/>SJC உபதேசக் குழு',
+    lWelcomeTitle:'வரவேற்பு',lWelcomeDesc:'மாணவரைத் தேர்ந்தெடுக்க மெனுவைத் தட்டவும் அல்லது புதியவரைச் சேர்க்கவும்.',lOpenList:'மாணவர் பட்டியல்',
+    lAddNote:'குறிப்பைச் சேர்',lSaveNote:'சேமி',lNotesTitle:'குறிப்புகள்',
+    lEdit:'தொகு',lDelete:'அழி',
+    lName:'முழுப் பெயர்',lStudentId:'மாணவர் ஐடி',lGrade:'வகுப்பு',lAge:'வயது',lGender:'பாலினம்',lContact:'பெற்றோர் தொடர்பு',
+    lFatherName:"தந்தையின் பெயர்",lMotherName:"தாயின் பெயர்",lPhone2:'இரண்டாம் நிலை தொலைபேசி',lAddress:'முகவரி',
+    lCancel:'ரத்து',lSave:'சேமி',
+    voiceMemoBtn:'குரல் குறிப்பு',voiceStop:'நிறுத்து',
+    voiceListen:'பதிவு செய்யப்படுகிறது',voiceSaving:'குரல் குறிப்பு சேமிக்கப்படுகிறது...',voiceMemoSaved:'குரல் குறிப்பு சேமிக்கப்பட்டது',
+    moods:{calm:'அமைதி',sad:'சோகம்',anxious:'கவலை',angry:'கோபம்',neutral:'சாதாரண',happy:'மகிழ்ச்சி',withdrawn:'விலகிய'},
+    cats:{general:'பொது',academic:'கல்வி',behavioral:'நடத்தை',family:'குடும்பம்',social:'சமூக',emotional:'உணர்ச்சி',referral:'பரிந்துரை'},
+    addStudent:'மாணவரைச் சேர்',editStudent:'மாணவர் திருத்து',addTeacher:'ஆசிரியரைச் சேர்',editTeacher:'ஆசிரியரைத் திருத்து',
+    studentShort:'மாணவர்',teacherShort:'ஆசிரியர்',
+    lTypeStudent:'மாணவர்',lTypeTeacher:'ஆசிரியர்',lSubject:'பாடம் / துறை',lContactT:'தொலைபேசி (விரும்பினால்)',
+    grade:'வகுப்பு',gender:'பாலினம்',age:'வயது',contact:'பெற்றோர் தொடர்பு',phone:'தொலைபேசி',
+    confirmDel:'இந்த மாணவரையும் அனைத்து குறிப்புகளையும் அழிக்கவா?',confirmDelNote:'இந்தக் குறிப்பை அழிக்கவா?',
+    saved:'குறிப்பு சேமிக்கப்பட்டது',added:'மாணவர் சேர்க்கப்பட்டார்',updated:'மாணவர் புதுப்பிக்கப்பட்டார்',deleted:'அழிக்கப்பட்டது',
+    noteDeleted:'குறிப்பு அழிக்கப்பட்டது',generating:'சுருக்கம் உருவாக்கப்படுகிறது...',
+    lAiTitle:'AI சுருக்கம்',lAiSub:'Gemini ஆல் உருவாக்கப்பட்டது',lAiBtn:'உருவாக்கு',lAiEmpty:'இந்த மாணவரின் குறிப்புகளைச் சுருக்க உருவாக்கு என்பதைத் தட்டவும்.',
+    wrongPin:'தவறான PIN',nameReq:'பெயர் தேவை',noteReq:'குறிப்பு காலியாக இருக்க முடியாது',
+    noStudents:'மாணவர்கள் இன்னும் இல்லை',noNotes:'குறிப்புகள் இன்னும் இல்லை',
+    searchPh:'மாணவர்களைத் தேடுங்கள்...',notePh:'இங்கே குறிப்புகளை எழுதுங்கள்...',
+    micError:'மைக்ரோஃபோன் அணுகல் மறுக்கப்பட்டது',transcribeError:'ஆடியோவை எழுத முடியவில்லை',
+    voiceTag:'குரல்',
   }
 };
 const tr = (k) => T[lang][k] !== undefined ? T[lang][k] : (T.en[k] !== undefined ? T.en[k] : k);
 
 function setLang(l){ lang = l; localStorage.setItem('sjc_lang',l); applyLang(); }
-function toggleLang(){ setLang(lang==='en'?'si':'en'); }
+function toggleLang(){ setLang(lang==='en'?'si':(lang==='si'?'ta':'en')); }
 
 function applyLang(){
   const map = ['lLoginTitle','lLoginSub','lPin','lSignIn','tbTitle','lAddStudent','lCredit',
@@ -1947,18 +2360,29 @@ function applyLang(){
   });
   document.getElementById('searchIn').placeholder = tr('searchPh');
   document.getElementById('noteIn').placeholder = tr('notePh');
-  // Update language toggle active state
+  
+  // Update login language toggle active state
   const lEn = document.getElementById('lEn');
   const lSi = document.getElementById('lSi');
-  if(lEn && lSi){
-    lEn.style.background = lang==='en' ? 'var(--maroon-deep)' : '#fff';
-    lEn.style.color      = lang==='en' ? 'var(--cream)'       : '#aaa';
-    lEn.style.borderColor= lang==='en' ? 'var(--maroon-deep)' : '#e0d4c8';
-    
-    lSi.style.background = lang==='si' ? 'var(--maroon-deep)' : '#fff';
-    lSi.style.color      = lang==='si' ? 'var(--cream)'       : '#aaa';
-    lSi.style.borderColor= lang==='si' ? 'var(--maroon-deep)' : '#e0d4c8';
+  const lTa = document.getElementById('lTa');
+  if(lEn && lSi && lTa){
+    [lEn, lSi, lTa].forEach(el => {
+      const isCur = (el.id === 'lEn' && lang === 'en') || (el.id === 'lSi' && lang === 'si') || (el.id === 'lTa' && lang === 'ta');
+      el.style.background = isCur ? 'var(--maroon-deep)' : '#fff';
+      el.style.color      = isCur ? 'var(--cream)'       : '#aaa';
+      el.style.borderColor= isCur ? 'var(--maroon-deep)' : '#e0d4c8';
+    });
   }
+
+  // Update topbar language switcher active state
+  ['en', 'si', 'ta'].forEach(l => {
+    const el = document.getElementById('lang-' + l);
+    if (el) {
+      el.style.opacity = (l === lang) ? '1' : '0.5';
+      el.style.color = (l === lang) ? 'var(--gold)' : 'var(--cream)';
+    }
+  });
+
   // Topbar and sidebar actions removed
   // Sidebar buttons removed
   if(typeof isRecording !== 'undefined' && !isRecording){
@@ -1967,6 +2391,7 @@ function applyLang(){
   }
 
   document.body.classList.toggle('si', lang==='si');
+  document.body.classList.toggle('ta', lang==='ta');
 
   // Categories dropdown — rebuild so custom cats + correct language labels both apply
   rebuildCategoryDropdown();
@@ -2023,7 +2448,7 @@ function saveResetPIN() {
 // ===== LOGIN =====
 
 function getDb() {
-  const db = JSON.parse(localStorage.getItem('sjc_auth')) || { adminEmail: 'admin@sjc.lk', adminPin: '4321' };
+  const db = JSON.parse(localStorage.getItem('sjc_auth')) || { adminEmail: 'asangabandara8@gmail.com', adminPin: '4321' };
   const teachers = JSON.parse(localStorage.getItem('sjc_teachers')) || [
     { id: 't1', email: 'teacher@sjc.lk', pin: '1234', name: 'Default Teacher', perms: {canAdd:true, canDelete:true, canEditNote:true} }
   ];
@@ -2126,10 +2551,11 @@ function renderStudentList(){
     const chipLabel = tr(isTeacher ? 'teacherShort' : 'studentShort');
     const subtitle = isTeacher ? (s.subject || '—') : (s.grade || '—');
     const tip = `${s.name} - ${isTeacher ? 'Teacher' : 'Student'}${subtitle && subtitle !== 'â€”' ? ` - ${subtitle}` : ''}`;
+    const alertLabel = s.promotionAlert ? `<span style="background:#fff5f5; color:#c53030; font-size:0.65rem; border:1px solid #feb2b2; border-radius:4px; padding:1px 5px; margin-left:6px; font-weight:700; display:inline-flex; align-items:center; gap:2px;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Update Class</span>` : '';
     return `<div class="s-item ${active} reveal-left" role="button" tabindex="0" data-student-id="${escAttr(s.id)}" data-tip="${escAttr(tip)}" title="${escAttr(tip)}" style="animation-delay:${Math.min(i*40,320)}ms" onclick="handleStudentClick(event,'${s.id}')" onkeydown="handleStudentKey(event,'${s.id}')">
       <div class="s-avatar">${initials}</div>
       <div class="s-info">
-        <div class="s-name">${escHTML(s.name)} <span class="type-chip ${isTeacher?'teacher':''}">${chipLabel}</span></div>
+        <div class="s-name">${escHTML(s.name)} ${alertLabel} <span class="type-chip ${isTeacher?'teacher':''}">${chipLabel}</span></div>
         <div class="s-meta">${escHTML(subtitle)}</div>
       </div>
     </div>`;
@@ -2373,23 +2799,114 @@ function renderStudentHeader(){
   document.getElementById('svName').innerHTML = `${escHTML(s.name)} <span class="type-chip ${isTeacher?'teacher':''}" style="font-size:0.6em;vertical-align:middle;margin-left:8px">${tr(isTeacher?'teacherShort':'studentShort')}</span>`;
   const metaParts = [];
   if(isTeacher && s.subject) metaParts.push(s.subject);
-  if(!isTeacher && s.grade) metaParts.push(`${tr('grade')} ${s.grade}`);
+  if(!isTeacher && s.grade) metaParts.push(`${tr('grade')} ${s.grade}${s.studentClass ? ' - ' + s.studentClass : ''}`);
   document.getElementById('svMeta').textContent = metaParts.join(' · ');
-  const badges = [];
-  if(s.age) badges.push(`<span class="badge"><strong>${tr('age')}:</strong> ${s.age}</span>`);
-  if(s.gender) badges.push(`<span class="badge"><strong>${tr('gender')}:</strong> ${escHTML(s.gender)}</span>`);
-  if(s.contact) badges.push(`<span class="badge"><strong>${tr(isTeacher?'phone':'contact')}:</strong> ${escHTML(s.contact)}</span>`);
-  if(s.registerId) badges.push(`<span class="badge" style="background:rgba(122,24,24,0.1);color:var(--maroon);font-weight:700"><strong>Reg:</strong> ${escHTML(s.registerId)}</span>`);
-  if(s.house) badges.push(`<span class="badge"><strong>House:</strong> ${escHTML(s.house)}</span>`);
-  if(s.religion) badges.push(`<span class="badge"><strong>Religion:</strong> ${escHTML(s.religion)}</span>`);
-  if(s.nationality) badges.push(`<span class="badge"><strong>Nationality:</strong> ${escHTML(s.nationality)}</span>`);
-  if(s.medium) badges.push(`<span class="badge"><strong>Medium:</strong> ${escHTML(s.medium)}</span>`);
-  if(s.phone2) badges.push(`<span class="badge"><strong>${tr('lPhone2')}:</strong> ${escHTML(s.phone2)}</span>`);
-  if(s.fatherName) badges.push(`<span class="badge"><strong>${tr('lFatherName')}:</strong> ${escHTML(s.fatherName)}</span>`);
-  if(s.motherName) badges.push(`<span class="badge"><strong>${tr('lMotherName')}:</strong> ${escHTML(s.motherName)}</span>`);
-  if(s.address) badges.push(`<span class="badge badge-wide"><strong>${tr('lAddress')}:</strong> ${escHTML(s.address)}</span>`);
-  if(s.remarks) badges.push(`<span class="badge badge-wide"><strong>Remarks:</strong> ${escHTML(s.remarks)}</span>`);
-  document.getElementById('svBadges').innerHTML = badges.join('');
+  
+  if (isTeacher) {
+    const badges = [];
+    if(s.age) badges.push(`<span class="badge"><strong>${tr('age')}:</strong> ${s.age}</span>`);
+    if(s.gender) badges.push(`<span class="badge"><strong>${tr('gender')}:</strong> ${escHTML(s.gender)}</span>`);
+    if(s.contact) badges.push(`<span class="badge"><strong>${tr('phone')}:</strong> ${escHTML(s.contact)}</span>`);
+    if(s.subject) badges.push(`<span class="badge"><strong>Subject/Dept:</strong> ${escHTML(s.subject)}</span>`);
+    document.getElementById('svBadges').innerHTML = badges.join('');
+  } else {
+    // Look up mapped class teacher if not already explicitly set
+    let mappedTeacher = s.classTeacher || '';
+    if(!mappedTeacher && s.grade && s.studentClass) {
+      try {
+        const mappings = JSON.parse(localStorage.getItem('sjc_class_mappings') || '[]');
+        const key = `${s.grade}-${s.studentClass}`.toLowerCase().replace(/\s+/g, '');
+        const found = mappings.find(m => {
+          const mk = m.gradeClass.toLowerCase().replace(/\s+/g, '');
+          return mk === key || mk === `${s.grade}${s.studentClass}`.toLowerCase();
+        });
+        if(found) {
+          mappedTeacher = found.teacherName;
+        }
+      } catch(e) {}
+    }
+
+    const alertBanner = s.promotionAlert ? `
+      <div style="grid-column: 1 / -1; background:#fff5f5; border:1px solid #feb2b2; border-left:4px solid var(--maroon); padding:12px 16px; border-radius:10px; font-size:0.85rem; color:#c53030; font-weight:600; margin-bottom: 8px; display:flex; align-items:center; gap:8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span>Student promoted to Grade ${escHTML(s.grade || '—')}. Class section and teacher mapping need manual verification.</span>
+      </div>
+    ` : '';
+
+    const profileHTML = `
+      <div style="width:100%; display:flex; flex-direction:column; gap:16px; margin-top: 10px;">
+        ${alertBanner}
+        
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:16px;">
+          
+          <!-- Registration & Academic Info -->
+          <div style="background:#fff; border:1.5px solid rgba(122,24,24,0.08); border-radius:14px; padding:16px; box-shadow:0 4px 12px rgba(0,0,0,0.015); border-top:3.5px solid var(--gold);">
+            <div style="font-weight:700; color:var(--maroon); font-size:0.8rem; text-transform:uppercase; margin-bottom:12px; border-bottom:1px solid var(--rule); padding-bottom:6px; display:flex; align-items:center; gap:8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              Registration & Academic
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px; font-size:0.88rem; color:var(--maroon-mid);">
+              <div><strong style="color:var(--maroon-deep);">Date of Registration:</strong> ${escHTML(s.date || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Register ID:</strong> ${escHTML(s.registerId || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Index Number:</strong> ${escHTML(s.indexNo || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Grade &amp; Class:</strong> Grade ${escHTML(s.grade || '—')} - ${escHTML(s.studentClass || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Counsellor Reg No:</strong> ${escHTML(s.counsellorReg || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Class Teacher:</strong> ${escHTML(mappedTeacher || '—')}</div>
+            </div>
+          </div>
+
+          <!-- Personal & Demographics -->
+          <div style="background:#fff; border:1.5px solid rgba(122,24,24,0.08); border-radius:14px; padding:16px; box-shadow:0 4px 12px rgba(0,0,0,0.015); border-top:3.5px solid var(--maroon);">
+            <div style="font-weight:700; color:var(--maroon); font-size:0.8rem; text-transform:uppercase; margin-bottom:12px; border-bottom:1px solid var(--rule); padding-bottom:6px; display:flex; align-items:center; gap:8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/></svg>
+              Personal Details
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px; font-size:0.88rem; color:var(--maroon-mid);">
+              <div><strong style="color:var(--maroon-deep);">Age / Gender:</strong> ${escHTML(s.age || '—')} / ${escHTML(s.gender || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Date of Birth:</strong> ${escHTML(s.dob || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Religion:</strong> ${escHTML(s.religion || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Nationality:</strong> ${escHTML(s.nationality || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Medium:</strong> ${escHTML(s.medium || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Transport Method:</strong> ${escHTML(s.transportMethod || '—')}</div>
+            </div>
+          </div>
+
+          <!-- Family & Guardian -->
+          <div style="background:#fff; border:1.5px solid rgba(122,24,24,0.08); border-radius:14px; padding:16px; box-shadow:0 4px 12px rgba(0,0,0,0.015); border-top:3.5px solid var(--maroon);">
+            <div style="font-weight:700; color:var(--maroon); font-size:0.8rem; text-transform:uppercase; margin-bottom:12px; border-bottom:1px solid var(--rule); padding-bottom:6px; display:flex; align-items:center; gap:8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              Family &amp; Guardian Info
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px; font-size:0.88rem; color:var(--maroon-mid);">
+              <div><strong style="color:var(--maroon-deep);">Guardian Name:</strong> ${escHTML(s.guardianName || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Father Name:</strong> ${escHTML(s.fatherName || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Father Phone:</strong> ${escHTML(s.fatherPhone || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Mother Name:</strong> ${escHTML(s.motherName || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Mother Phone:</strong> ${escHTML(s.motherPhone || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Emergency Phone:</strong> ${escHTML(s.emergencyPhone || s.contact || '—')}</div>
+            </div>
+          </div>
+
+          <!-- Case & Problem details -->
+          <div style="background:#fff; border:1.5px solid rgba(122,24,24,0.08); border-radius:14px; padding:16px; box-shadow:0 4px 12px rgba(0,0,0,0.015); border-top:3.5px solid #10b981;">
+            <div style="font-weight:700; color:var(--maroon); font-size:0.8rem; text-transform:uppercase; margin-bottom:12px; border-bottom:1px solid var(--rule); padding-bottom:6px; display:flex; align-items:center; gap:8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 3a8 8 0 0 1 8 7.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+              Address &amp; Problem Details
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px; font-size:0.88rem; color:var(--maroon-mid);">
+              <div><strong style="color:var(--maroon-deep);">Home Address:</strong> ${escHTML(s.address || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Nature of Problem:</strong> ${escHTML(s.issues || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Action Taken:</strong> ${escHTML(s.action || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">Siblings details:</strong> ${escHTML(s.siblings || '—')}</div>
+              <div><strong style="color:var(--maroon-deep);">General Remarks:</strong> ${escHTML(s.remarks || s.specialNote || '—')}</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    `;
+    document.getElementById('svBadges').innerHTML = profileHTML;
+  }
 }
 
 function setPersonType(type){
@@ -2404,10 +2921,36 @@ function setPersonType(type){
   document.getElementById('modalTitle').textContent = tr(isEdit ? (type==='teacher'?'editTeacher':'editStudent') : (type==='teacher'?'addTeacher':'addStudent'));
 }
 
+
 function openAddStudent(){
-  ['editId','sName','sGrade','sSubject','sAge','sContact','sContactT','sFatherName','sMotherName','sPhone2','sAddress','sRemarks','sRegisterId','sHouse','sReligion','sNationality','sMedium','sDob'].forEach(id => document.getElementById(id).value = '');
-  document.getElementById('sGender').value = '';
-  setDropdownValue('ddGender', '');
+  currentDraftId = '';
+  const banner = document.getElementById('promotionAlertBanner');
+  if(banner) banner.style.display = 'none';
+
+  // Check if draft exists
+  const hasDraft = restoreStudentFormDraft('');
+  const draftNotice = document.getElementById('teacherDraftNotice');
+  
+  if (hasDraft) {
+    if(draftNotice) draftNotice.style.display = 'flex';
+  } else {
+    if(draftNotice) draftNotice.style.display = 'none';
+    
+    // Clear and initialize
+    ['editId','sName','sDate','sIndexNo','sRegisterId','sCounsellorReg','sGrade','sClass','sSubject','sAge','sContact','sContactT','sDob','sHouse','sReligion','sNationality','sMedium','sGuardianName','sEmergencyPhone','sFatherName','sFatherPhone','sMotherName','sMotherPhone','sPhone2','sTransportMethod','sSiblings','sIssues','sAction','sAddress','sRemarks'].forEach(id => {
+      const el = document.getElementById(id);
+      if(el) el.value = '';
+    });
+    document.getElementById('sGender').value = '';
+    setDropdownValue('ddGender', '');
+    
+    const sDate = document.getElementById('sDate');
+    if(sDate) sDate.value = new Date().toISOString().slice(0, 10);
+    
+    const cReg = document.getElementById('sCounsellorReg');
+    if(cReg) cReg.value = 'Asanga Bandara';
+  }
+
   setPersonType('student');
   document.getElementById('studentModal').classList.remove('hidden');
   setTimeout(()=>document.getElementById('sName').focus(), 100);
@@ -2416,26 +2959,56 @@ function openAddStudent(){
 function openEditStudent(){
   if(!currentStudent) return;
   const s = currentStudent;
-  document.getElementById('editId').value = s.id;
-  document.getElementById('sName').value = s.name||'';
-  document.getElementById('sGrade').value = s.grade||'';
-  document.getElementById('sSubject').value = s.subject||'';
-  document.getElementById('sAge').value = s.age||'';
-  document.getElementById('sGender').value = s.gender||'';
-  setDropdownValue('ddGender', s.gender||'');
-  document.getElementById('sContact').value = s.contact||'';
-  document.getElementById('sContactT').value = s.contact||'';
-  document.getElementById('sFatherName').value = s.fatherName||'';
-  document.getElementById('sMotherName').value = s.motherName||'';
-  document.getElementById('sPhone2').value = s.phone2||'';
-  document.getElementById('sAddress').value = s.address||'';
-  document.getElementById('sRemarks').value = s.remarks||'';
-  document.getElementById('sDob').value = s.dob||'';
-  document.getElementById('sRegisterId').value = s.registerId||'';
-  document.getElementById('sHouse').value = s.house||'';
-  document.getElementById('sReligion').value = s.religion||'';
-  document.getElementById('sNationality').value = s.nationality||'';
-  document.getElementById('sMedium').value = s.medium||'';
+  currentDraftId = s.id;
+  
+  const banner = document.getElementById('promotionAlertBanner');
+  if(banner) banner.style.display = s.promotionAlert ? 'block' : 'none';
+
+  // Check if draft exists
+  const hasDraft = restoreStudentFormDraft(s.id);
+  const draftNotice = document.getElementById('teacherDraftNotice');
+  
+  if (hasDraft) {
+    if(draftNotice) draftNotice.style.display = 'flex';
+    document.getElementById('editId').value = s.id;
+  } else {
+    if(draftNotice) draftNotice.style.display = 'none';
+    
+    document.getElementById('editId').value = s.id;
+    document.getElementById('sName').value = s.name||'';
+    document.getElementById('sGrade').value = s.grade||'';
+    if(document.getElementById('sClass')) document.getElementById('sClass').value = s.studentClass||'';
+    document.getElementById('sSubject').value = s.subject||'';
+    document.getElementById('sAge').value = s.age||'';
+    document.getElementById('sGender').value = s.gender||'';
+    setDropdownValue('ddGender', s.gender||'');
+    document.getElementById('sContact').value = s.contact||'';
+    document.getElementById('sContactT').value = s.contact||'';
+    document.getElementById('sFatherName').value = s.fatherName||'';
+    document.getElementById('sMotherName').value = s.motherName||'';
+    document.getElementById('sPhone2').value = s.phone2||'';
+    document.getElementById('sAddress').value = s.address||'';
+    document.getElementById('sRemarks').value = s.remarks || s.specialNote || '';
+    document.getElementById('sDob').value = s.dob||'';
+    document.getElementById('sRegisterId').value = s.registerId||'';
+    document.getElementById('sHouse').value = s.house||'';
+    document.getElementById('sReligion').value = s.religion||'';
+    document.getElementById('sNationality').value = s.nationality||'';
+    document.getElementById('sMedium').value = s.medium||'';
+    
+    if(document.getElementById('sDate')) document.getElementById('sDate').value = s.date||'';
+    if(document.getElementById('sIndexNo')) document.getElementById('sIndexNo').value = s.indexNo||'';
+    if(document.getElementById('sCounsellorReg')) document.getElementById('sCounsellorReg').value = s.counsellorReg||'';
+    if(document.getElementById('sGuardianName')) document.getElementById('sGuardianName').value = s.guardianName||'';
+    if(document.getElementById('sFatherPhone')) document.getElementById('sFatherPhone').value = s.fatherPhone||'';
+    if(document.getElementById('sMotherPhone')) document.getElementById('sMotherPhone').value = s.motherPhone||'';
+    if(document.getElementById('sEmergencyPhone')) document.getElementById('sEmergencyPhone').value = s.emergencyPhone||'';
+    if(document.getElementById('sTransportMethod')) document.getElementById('sTransportMethod').value = s.transportMethod||'';
+    if(document.getElementById('sSiblings')) document.getElementById('sSiblings').value = s.siblings||'';
+    if(document.getElementById('sIssues')) document.getElementById('sIssues').value = s.issues||'';
+    if(document.getElementById('sAction')) document.getElementById('sAction').value = s.action||'';
+  }
+
   setPersonType(s.type === 'teacher' ? 'teacher' : 'student');
   document.getElementById('studentModal').classList.remove('hidden');
 }
@@ -2453,23 +3026,42 @@ async function saveStudent(){
     phone2: document.getElementById('sPhone2').value.trim(),
     address: document.getElementById('sAddress').value.trim(),
     remarks: document.getElementById('sRemarks').value.trim(),
+    specialNote: document.getElementById('sRemarks').value.trim(),
     dob: document.getElementById('sDob').value,
     registerId: document.getElementById('sRegisterId').value.trim(),
     house: document.getElementById('sHouse').value.trim(),
     religion: document.getElementById('sReligion').value.trim(),
     nationality: document.getElementById('sNationality').value.trim(),
     medium: document.getElementById('sMedium').value.trim(),
+    
+    // Student specific:
+    date: document.getElementById('sDate') ? document.getElementById('sDate').value : '',
+    indexNo: document.getElementById('sIndexNo') ? document.getElementById('sIndexNo').value.trim() : '',
+    counsellorReg: document.getElementById('sCounsellorReg') ? document.getElementById('sCounsellorReg').value.trim() : '',
+    guardianName: document.getElementById('sGuardianName') ? document.getElementById('sGuardianName').value.trim() : '',
+    fatherPhone: document.getElementById('sFatherPhone') ? document.getElementById('sFatherPhone').value.trim() : '',
+    motherPhone: document.getElementById('sMotherPhone') ? document.getElementById('sMotherPhone').value.trim() : '',
+    emergencyPhone: document.getElementById('sEmergencyPhone') ? document.getElementById('sEmergencyPhone').value.trim() : '',
+    transportMethod: document.getElementById('sTransportMethod') ? document.getElementById('sTransportMethod').value.trim() : '',
+    siblings: document.getElementById('sSiblings') ? document.getElementById('sSiblings').value.trim() : '',
+    issues: document.getElementById('sIssues') ? document.getElementById('sIssues').value.trim() : '',
+    action: document.getElementById('sAction') ? document.getElementById('sAction').value.trim() : '',
+    promotionAlert: false
   };
+  
   if(type === 'student'){
     body.grade = document.getElementById('sGrade').value.trim();
+    body.studentClass = document.getElementById('sClass') ? document.getElementById('sClass').value.trim() : '';
     body.contact = document.getElementById('sContact').value.trim();
     body.subject = '';
   } else {
     body.subject = document.getElementById('sSubject').value.trim();
     body.contact = document.getElementById('sContactT').value.trim();
     body.grade = '';
+    body.studentClass = '';
   }
   if(!body.name){ toast(tr('nameReq'),'err'); return; }
+  
   if(id){
     const res = await fetch(`/api/students/${id}`,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
     currentStudent = await res.json();
@@ -2484,6 +3076,7 @@ async function saveStudent(){
     await loadStudents();
     selectStudent(stu.id);
   }
+  clearStudentFormDraft(id);
   closeModal();
 }
 
@@ -3793,6 +4386,17 @@ window.addEventListener('popstate', async (e) => {
 
 // On load, restore from URL ?s=<id>
 (async () => {
+  // Initialize flatpickr on date inputs
+  if (window.flatpickr) {
+    flatpickr('.flatpickr-date', {
+      dateFormat: "Y-m-d",
+      allowInput: true
+    });
+  }
+
+  // Setup draft saving listeners
+  setupStudentFormDraftListeners();
+
   const params = new URLSearchParams(location.search);
   const id = params.get('s');
   if(id){
@@ -3826,7 +4430,7 @@ window.addEventListener('popstate', async (e) => {
           <div style="font-weight:700;color:var(--maroon-deep);margin-bottom:4px">Drop images here or click to browse</div>
           <div style="font-size:0.8rem;color:var(--muted)">JPG, PNG, WEBP — multiple files allowed</div>
         </div>
-        <input type="file" id="impFileInput" accept="image/*" multiple style="display:none" onchange="impFilesSelected(this.files)">
+        <input autocomplete="off" type="file" id="impFileInput" accept="image/*" multiple style="display:none" onchange="impFilesSelected(this.files)">
         <div id="impThumbs" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:14px"></div>
       </div>
 
@@ -3856,21 +4460,7 @@ window.addEventListener('popstate', async (e) => {
   </div>
 </div>
 
-<style>
-#impDropZone:hover,.imp-drop-active { border-color:var(--maroon) !important; background:var(--cream-2) !important; }
-.imp-thumb { position:relative;width:90px;height:90px;border-radius:10px;overflow:hidden;border:2px solid var(--cream-3);flex-shrink:0; }
-.imp-thumb img { width:100%;height:100%;object-fit:cover; }
-.imp-thumb .imp-rm { position:absolute;top:3px;right:3px;width:20px;height:20px;background:rgba(0,0,0,.55);color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center;line-height:1; }
-.imp-thumb .imp-status { position:absolute;bottom:0;left:0;right:0;font-size:8pt;text-align:center;padding:3px;background:rgba(0,0,0,.6);color:#fff; }
-.imp-card { border:1.5px solid var(--cream-3);border-radius:12px;overflow:hidden;margin-bottom:14px; }
-.imp-card-head { display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--cream);border-bottom:1px solid var(--cream-3); }
-.imp-card-thumb { width:50px;height:50px;object-fit:cover;border-radius:8px;flex-shrink:0; }
-.imp-card-body { padding:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px; }
-.imp-field label { display:block;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:3px; }
-.imp-field input,.imp-field textarea,.imp-field select { width:100%;padding:8px 10px;border:1.5px solid var(--cream-3);border-radius:8px;font-size:0.88rem;font-family:inherit;background:#fff; }
-.imp-card.imp-error { border-color:var(--danger); }
-.imp-card.imp-skip { opacity:0.5; }
-</style>
+
 
 <script>
 // ===== IMAGE IMPORTER =====
@@ -3953,7 +4543,7 @@ async function impProcess(){
       impFiles[i].result = r;
       const th = document.getElementById(`impThumb${i}`);
       const s = th && th.querySelector('.imp-status');
-      if(s) s.textContent = r.ok ? '' : '❌';
+      if(s) s.innerHTML = r.ok ? '' : '<span style="color:#f87171;font-weight:bold;">&#x2715;</span>';
     });
 
     // Switch to step 2
@@ -4008,7 +4598,7 @@ function renderImpCards(){
           <div style="font-size:0.75rem;color:var(--muted)">${r && r.ok ? 'AI extracted — review before saving' : 'Scan failed — fill in manually'}</div>
         </div>
         <label style="display:flex;align-items:center;gap:6px;font-size:0.8rem;cursor:pointer;color:var(--muted)">
-          <input type="checkbox" id="impSkip${i}" onchange="impToggleSkip(${i})"> Skip
+          <input autocomplete="off" type="checkbox" id="impSkip${i}" onchange="impToggleSkip(${i})"> Skip
         </label>
       </div>
       <div class="imp-card-body" id="impCardBody${i}">
@@ -4021,9 +4611,9 @@ function renderImpCards(){
             const opts=['','Male','Female','Other'];
             input=`<select id="${id}">${opts.map(o=>`<option${o===val?' selected':''}>${o}</option>`).join('')}</select>`;
           } else if(type==='textarea'){
-            input=`<textarea id="${id}" rows="2" style="resize:vertical">${escHTML(val)}</textarea>`;
+            input=`<textarea autocomplete="off" id="${id}" rows="2" style="resize:vertical">${escHTML(val)}</textarea>`;
           } else {
-            input=`<input type="${type}" id="${id}" value="${escHTML(val)}">`;
+            input=`<input autocomplete="off" type="${type}" id="${id}" value="${escHTML(val)}">`;
           }
           return `<div class="imp-field"><label>${lbl}</label>${input}</div>`;
         }).join('')}
@@ -4070,5 +4660,30 @@ async function impCreateAll(){
   if(created) closeImporter();
 }
 </script>
+
+  <!-- Smooth Scroll (Lenis) -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script>
+    if (typeof Lenis !== 'undefined') {
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+      });
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    }
+  </script>
+  <script src="/loader.js?v=9" defer></script>
 </body>
+
 </html>

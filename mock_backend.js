@@ -221,6 +221,11 @@
         return jsonRes({ enabled: true });
       }
 
+      // /api/admin/send-email
+      if (parts[1] === 'admin' && parts[2] === 'send-email') {
+        return jsonRes({ success: true });
+      }
+
       console.warn('[Mock API] Unhandled route:', method, url);
       return jsonRes({error: 'Not implemented'}, 501);
 

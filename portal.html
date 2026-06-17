@@ -1,1338 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Student Portal — SJC Counselling</title>
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<style>
-@font-face {
-  font-family: 'Canterbury';
-  src: url('/Canterbury.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --maroon:#7a1818;--maroon-deep:#2a0808;--maroon-mid:#5a1010;
-  --gold:#c9a84c;--gold-bright:#e8c96a;--gold-dark:#a07830;
-  --cream:#faf6ee;--cream-2:#f1e9d8;--cream-3:#e6dcc6;
-  --white:#ffffff;--ink:#1a0e0e;--ink-soft:#3a2828;--muted:#7a6868;
-  --sidebar-w:240px;--topbar-h:62px;
-  --sb-bg:#1e0606;--sb-text:rgba(250,246,238,0.72);
-  --rule:rgba(122,24,24,0.1);
-  --shadow:0 4px 20px rgba(42,8,8,0.08);--shadow-lg:0 16px 50px rgba(42,8,8,0.18);
-}
-html,body{height:100%;font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);overflow:hidden;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-button{font-family:'Inter',sans-serif;cursor:pointer}
-input,select,textarea{font-family:'Inter',sans-serif}
-::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:var(--maroon);border-radius:4px}
-
-/* AUTH */
-#authScreen{position:fixed;inset:0;z-index:500;display:flex;align-items:stretch;background:var(--white)}
-.auth-left{width:42%;background:linear-gradient(160deg,var(--maroon-deep) 0%,var(--maroon-mid) 60%,#3a0808 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 48px;position:relative;overflow:hidden}
-.auth-left-orb{position:absolute;width:420px;height:420px;background:radial-gradient(circle,rgba(201,168,76,0.13) 0%,transparent 70%);top:-80px;right:-120px;border-radius:50%}
-.auth-left-orb2{position:absolute;width:280px;height:280px;background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 70%);bottom:-60px;left:-60px;border-radius:50%}
-.auth-logo{width:72px;height:72px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:28px;overflow:hidden;flex-shrink:0}
-.auth-logo img{width:100%;height:100%;object-fit:contain;padding:4px}
-.auth-left h1{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--cream);line-height:1.15;margin-bottom:14px;text-align:center}
-.auth-left h1 em{font-style:italic;color:var(--gold-bright)}
-.auth-left p{color:rgba(250,246,238,0.65);font-size:0.9rem;line-height:1.75;text-align:center;max-width:280px}
-.auth-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px;justify-content:center}
-.auth-badge{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:0.72rem;font-weight:600;padding:5px 12px;border-radius:20px;letter-spacing:.04em}
-.auth-right{flex:1;display:flex;align-items:center;justify-content:center;padding:40px;overflow-y:auto}
-.auth-box{width:100%;max-width:440px}
-.auth-box-title{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--maroon-deep);margin-bottom:6px}
-.auth-box-sub{color:var(--muted);font-size:0.88rem;margin-bottom:28px}
-.auth-tabs{display:flex;background:var(--cream);border-radius:10px;padding:4px;margin-bottom:28px;gap:4px}
-.auth-tab{flex:1;padding:9px;border:none;background:none;border-radius:7px;font-size:0.83rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all .18s}
-.auth-tab.active{background:var(--white);color:var(--maroon-deep);box-shadow:0 2px 8px rgba(42,8,8,0.1)}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.form-group{margin-bottom:16px}
-.form-group label{display:block;font-size:0.78rem;font-weight:600;color:var(--ink-soft);margin-bottom:6px}
-.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;border:1.5px solid var(--cream-3);border-radius:9px;font-size:0.88rem;color:var(--ink);background:var(--white);outline:none;transition:border .18s}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--maroon);box-shadow:0 0 0 3px rgba(122,24,24,0.08)}
-.form-group textarea{resize:vertical;min-height:80px}
-.form-group select{background-repeat:no-repeat;background-position:right 12px center}
-.form-err{color:#c0392b;font-size:0.78rem;margin-top:5px}
-.btn-auth{width:100%;padding:13px;border:none;border-radius:9px;font-size:0.88rem;font-weight:700;cursor:pointer;transition:all .18s;letter-spacing:.03em}
-.btn-auth-primary{background:linear-gradient(135deg,var(--maroon),var(--maroon-deep));color:#fff}
-.btn-auth-primary:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(42,8,8,0.25)}
-.btn-auth-secondary{background:var(--cream);color:var(--maroon);border:1.5px solid var(--cream-3);margin-top:10px}
-.btn-auth-secondary:hover{background:var(--cream-2)}
-/* STEPS */
-.step-bar{display:flex;align-items:center;margin-bottom:28px}
-.step-wrap{display:flex;flex-direction:column;align-items:center;flex:1}
-.step-wrap:first-child{align-items:flex-start}.step-wrap:last-child{align-items:flex-end}
-.step-dot{width:28px;height:28px;border-radius:50%;border:2px solid var(--cream-3);background:var(--white);display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;color:var(--muted);flex-shrink:0;transition:all .25s}
-.step-dot.active{border-color:var(--maroon);background:var(--maroon);color:#fff}
-.step-dot.done{border-color:var(--gold-dark);background:var(--gold-dark);color:#fff}
-.step-line{flex:1;height:2px;background:var(--cream-3);margin:0 4px;transition:background .25s;align-self:flex-start;margin-top:14px}
-.step-line.done{background:var(--gold-dark)}
-.step-label{font-size:0.68rem;color:var(--muted);margin-top:4px;text-align:center;white-space:nowrap}
-/* PHOTO */
-.photo-upload{border:2px dashed var(--cream-3);border-radius:14px;padding:28px;text-align:center;cursor:pointer;transition:all .2s;background:var(--cream);position:relative}
-.photo-upload:hover{border-color:var(--maroon);background:rgba(122,24,24,0.03)}
-.photo-upload input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
-.photo-preview-img{width:90px;height:90px;border-radius:50%;object-fit:cover;margin:0 auto 10px;display:none;border:3px solid var(--gold)}
-.photo-upload p{font-size:0.82rem;color:var(--muted)}
-.photo-upload span{font-size:0.75rem;color:var(--maroon);font-weight:600}
-/* TAGS */
-.tag-picker{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-.tag-opt{padding:6px 14px;border-radius:20px;border:1.5px solid var(--cream-3);font-size:0.78rem;font-weight:500;color:var(--ink-soft);cursor:pointer;transition:all .15s;user-select:none;background:var(--white)}
-.tag-opt.sel{border-color:var(--maroon);background:rgba(122,24,24,0.07);color:var(--maroon);font-weight:600}
-/* CV UPLOAD */
-.cv-upload{border:2px dashed var(--cream-3);border-radius:10px;padding:20px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all .18s;background:var(--cream);position:relative}
-.cv-upload:hover{border-color:var(--maroon)}
-.cv-upload input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
-.cv-upload-icon{width:40px;height:40px;border-radius:9px;background:rgba(122,24,24,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-
-/* APP */
-#app{position:fixed;inset:0;display:none;flex-direction:column}
-.tb{height:var(--topbar-h);background:linear-gradient(135deg,var(--maroon-deep),var(--maroon-mid));display:flex;align-items:center;padding:0 20px;gap:16px;flex-shrink:0;z-index:100}
-.tb-burger{background:none;border:none;padding:6px;cursor:pointer;color:rgba(250,246,238,0.7);display:flex;flex-direction:column;gap:4px}
-.tb-burger span{display:block;width:18px;height:2px;background:currentColor;border-radius:1px}
-.tb-brand{display:flex;align-items:center;gap:10px}
-.tb-logo{width:34px;height:34px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
-.tb-logo img{width:100%;height:100%;object-fit:contain;padding:2px}
-.tb-name{font-family:'Canterbury', serif;font-size:1.15rem;font-weight:400;color:var(--cream);line-height:1}
-.tb-role{font-size:0.6rem;color:rgba(250,246,238,0.55);letter-spacing:.14em;text-transform:uppercase;margin-top:1px}
-.tb-mid{flex:1}
-.tb-right{display:flex;align-items:center;gap:12px}
-.tb-home{display:inline-flex;align-items:center;gap:6px;color:rgba(250,246,238,0.65);font-size:0.78rem;font-weight:500;padding:6px 12px;border-radius:7px;border:1px solid rgba(250,246,238,0.15);transition:all .18s;text-decoration:none}
-.tb-home:hover{background:rgba(255,255,255,0.1);color:var(--cream)}
-.tb-user{display:flex;align-items:center;gap:9px}
-.tb-avatar{width:34px;height:34px;border-radius:50%;background:var(--gold-dark);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.82rem;color:var(--maroon-deep);flex-shrink:0;overflow:hidden;border:2px solid rgba(201,168,76,0.4)}
-.tb-avatar img{width:100%;height:100%;object-fit:cover;display:none}
-.tb-username{font-size:0.82rem;font-weight:600;color:rgba(250,246,238,0.9)}
-.app-body{flex:1;display:flex;overflow:hidden}
-/* SIDEBAR */
-.sb{width:var(--sidebar-w);background:var(--sb-bg);display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto;transition:width .25s}
-.sb.collapsed{width:0;overflow:hidden}
-.sb-section{padding:18px 12px 8px;font-size:0.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,246,238,0.28)}
-.sb-item{display:flex;align-items:center;gap:11px;padding:10px 14px;border-radius:9px;margin:1px 8px;cursor:pointer;color:var(--sb-text);font-size:0.83rem;font-weight:500;transition:all .18s;border:none;background:none;width:calc(100% - 16px);text-align:left}
-.sb-item:hover{background:rgba(255,255,255,0.07);color:rgba(250,246,238,0.95)}
-.sb-item.active{background:rgba(201,168,76,0.12);color:var(--gold);font-weight:600}
-.sb-item svg{flex-shrink:0;opacity:.7}
-.sb-item.active svg{opacity:1}
-.sb-divider{height:1px;background:rgba(255,255,255,0.07);margin:10px 12px}
-.sb-logout{margin-top:auto;padding:12px}
-.sb-logout button{width:100%;padding:10px;border-radius:9px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:rgba(250,246,238,0.55);font-size:0.8rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .18s}
-.sb-logout button:hover{background:rgba(192,57,43,0.25);color:#e74c3c;border-color:rgba(192,57,43,0.3)}
-/* MAIN */
-.main{flex:1;overflow-y:auto;background:#f5f0e8}
-.page{display:none;padding:32px}
-.page.active{display:block}
-.pg-head{margin-bottom:28px}
-.pg-title{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--maroon-deep);line-height:1.1}
-.pg-sub{color:var(--muted);font-size:0.88rem;margin-top:6px}
-/* STAT CARDS */
-.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:28px}
-.stat-card{background:var(--white);border-radius:16px;padding:22px 24px;border:1px solid var(--rule);display:flex;align-items:center;gap:16px}
-.stat-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.stat-val{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:var(--maroon-deep);line-height:1}
-.stat-lbl{font-size:0.75rem;color:var(--muted);font-weight:500;margin-top:3px}
-/* COMPLETION RING */
-.completion-card{background:var(--white);border-radius:18px;padding:28px;border:1px solid var(--rule);margin-bottom:18px}
-.completion-inner{display:flex;align-items:center;gap:28px}
-.ring-wrap{position:relative;width:110px;height:110px;flex-shrink:0}
-.ring-wrap svg{transform:rotate(-90deg)}
-.ring-bg{fill:none;stroke:var(--cream-3);stroke-width:9}
-.ring-fg{fill:none;stroke:var(--gold);stroke-width:9;stroke-linecap:round;transition:stroke-dashoffset .8s ease}
-.ring-pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--maroon-deep)}
-.completion-items{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.comp-item{display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--ink-soft)}
-.comp-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;background:var(--cream-3)}
-.comp-dot.done{background:var(--gold-dark)}
-/* SECTION CARD */
-.sec-card{background:var(--white);border-radius:18px;padding:28px;border:1px solid var(--rule);margin-bottom:20px}
-.sec-card-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:var(--maroon-deep);margin-bottom:20px;display:flex;align-items:center;gap:10px}
-/* CAREER CARDS */
-.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
-.career-card{background:var(--cream);border-radius:14px;padding:20px;border:1px solid var(--cream-3);transition:all .2s;cursor:pointer}
-.career-card:hover{border-color:var(--gold);box-shadow:var(--shadow);transform:translateY(-2px)}
-.career-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.career-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--maroon-deep);margin-bottom:4px}
-.career-match{font-size:0.7rem;font-weight:700;color:var(--gold-dark);letter-spacing:.04em;text-transform:uppercase}
-.career-desc{font-size:0.78rem;color:var(--muted);line-height:1.6;margin-top:6px}
-/* APPOINTMENTS */
-.appt-list{display:flex;flex-direction:column;gap:12px}
-.appt-card{background:var(--white);border-radius:13px;padding:18px 20px;border:1px solid var(--rule);display:flex;align-items:center;gap:16px}
-.appt-date{text-align:center;min-width:46px;flex-shrink:0}
-.appt-day{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--maroon-deep);line-height:1}
-.appt-mon{font-size:0.7rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-.appt-divider{width:1px;height:40px;background:var(--rule);flex-shrink:0}
-.appt-info{flex:1}
-.appt-title{font-weight:600;font-size:0.88rem;color:var(--ink);margin-bottom:3px}
-.appt-meta{font-size:0.76rem;color:var(--muted)}
-.appt-badge{padding:4px 10px;border-radius:20px;font-size:0.7rem;font-weight:600;white-space:nowrap}
-.appt-badge.upcoming{background:rgba(201,168,76,0.15);color:var(--gold-dark)}
-.appt-badge.done{background:rgba(39,174,96,0.1);color:#27ae60}
-/* PROFILE */
-.profile-photo-area{display:flex;align-items:center;gap:24px;margin-bottom:24px;padding:24px;background:var(--cream);border-radius:14px}
-.profile-avatar-big{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--maroon-mid),var(--maroon-deep));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:var(--gold);flex-shrink:0;overflow:hidden;border:3px solid rgba(201,168,76,0.4)}
-.profile-avatar-big img{width:100%;height:100%;object-fit:cover;display:none}
-.btn-change-photo{padding:9px 18px;border-radius:8px;border:1.5px solid var(--cream-3);background:var(--white);font-size:0.82rem;font-weight:600;color:var(--maroon);cursor:pointer;position:relative;overflow:hidden;transition:all .18s}
-.btn-change-photo:hover{background:var(--cream-2)}
-.btn-change-photo input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
-.btn-save{padding:10px 22px;border:none;border-radius:8px;background:var(--maroon-deep);color:#fff;font-size:0.83rem;font-weight:600;cursor:pointer;transition:all .18s}
-.btn-save:hover{background:var(--maroon)}
-.skills-display{display:flex;flex-wrap:wrap;gap:8px;min-height:28px}
-.skill-tag{padding:5px 13px;background:rgba(122,24,24,0.07);border:1px solid rgba(122,24,24,0.12);border-radius:20px;font-size:0.78rem;font-weight:600;color:var(--maroon)}
-.achievement-list{display:flex;flex-direction:column;gap:10px}
-.achievement-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:var(--cream);border-radius:10px;border:1px solid var(--cream-3)}
-.achievement-icon{width:34px;height:34px;border-radius:8px;background:rgba(201,168,76,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gold-dark)}
-.achievement-text{flex:1;font-size:0.85rem;color:var(--ink-soft);line-height:1.5}
-.achievement-item button{background:none;border:none;cursor:pointer;color:var(--muted);padding:2px;transition:color .15s}
-.achievement-item button:hover{color:#c0392b}
-.add-form{display:flex;gap:10px;margin-top:10px}
-.add-form input{flex:1;padding:9px 12px;border:1.5px solid var(--cream-3);border-radius:8px;font-size:0.83rem;outline:none;transition:border .18s}
-.add-form input:focus{border-color:var(--maroon)}
-.add-form button{padding:9px 16px;border:none;border-radius:8px;background:var(--maroon-deep);color:#fff;font-size:0.83rem;font-weight:600;cursor:pointer;white-space:nowrap}
-/* CV */
-.cv-display{display:flex;align-items:center;gap:14px;padding:16px;background:var(--cream);border-radius:10px;border:1px solid var(--cream-3)}
-.cv-display-icon{width:42px;height:42px;border-radius:9px;background:rgba(122,24,24,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.cv-replace-btn{margin-left:auto;padding:7px 14px;border-radius:7px;border:1.5px solid var(--cream-3);background:var(--white);font-size:0.78rem;font-weight:600;color:var(--maroon);cursor:pointer;position:relative;overflow:hidden;white-space:nowrap}
-.cv-replace-btn input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
-/* CAREER EXPLORER */
-.interest-section{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
-.interest-pill{padding:8px 18px;border-radius:24px;border:1.5px solid var(--cream-3);font-size:0.82rem;font-weight:600;color:var(--ink-soft);cursor:pointer;transition:all .18s;background:var(--white)}
-.interest-pill.active{border-color:var(--maroon);background:rgba(122,24,24,0.07);color:var(--maroon)}
-.career-explorer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-.career-exp-card{background:var(--white);border-radius:14px;padding:24px;border:1px solid var(--rule);transition:all .2s}
-.career-exp-card:hover{border-color:var(--gold);box-shadow:var(--shadow);transform:translateY(-3px)}
-.career-exp-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.career-exp-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--maroon-deep);margin-bottom:4px}
-.career-exp-field{font-size:0.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:10px}
-.career-exp-desc{font-size:0.82rem;color:var(--muted);line-height:1.65}
-.career-exp-skills{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.career-exp-skill{padding:3px 9px;background:var(--cream);border-radius:12px;font-size:0.72rem;color:var(--ink-soft);font-weight:500}
-/* BOOK BTN */
-.btn-book{padding:10px 20px;border:none;border-radius:9px;background:var(--maroon-deep);color:#fff;font-size:0.83rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:all .18s}
-.btn-book:hover{background:var(--maroon);transform:translateY(-1px)}
-.appt-empty{text-align:center;padding:48px 20px;color:var(--muted)}
-.appt-empty svg{opacity:.3;margin:0 auto 14px;display:block}
-/* MODAL */
-.modal-overlay{position:fixed;inset:0;background:rgba(42,8,8,0.5);z-index:600;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:all .25s}
-.modal-overlay.open{opacity:1;visibility:visible}
-.modal-box{background:var(--white);border-radius:18px;padding:32px;max-width:480px;width:100%;transform:translateY(20px);transition:transform .25s}
-.modal-overlay.open .modal-box{transform:translateY(0)}
-.modal-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--maroon-deep);margin-bottom:6px}
-.modal-sub{font-size:0.85rem;color:var(--muted);margin-bottom:22px}
-/* TOAST */
-#toast{position:fixed;bottom:24px;right:24px;background:var(--maroon-deep);color:var(--cream);padding:13px 20px;border-radius:10px;font-size:0.85rem;font-weight:500;z-index:999;transform:translateY(20px);opacity:0;transition:all .3s;pointer-events:none;box-shadow:0 8px 28px rgba(42,8,8,0.3);display:flex;align-items:center;gap:10px;max-width:320px}
-#toast.show{transform:translateY(0);opacity:1}
-#toast.success{border-left:4px solid var(--gold)}
-#toast.error{border-left:4px solid #e74c3c}
-@media(max-width:900px){
-  .auth-left{display:none}.auth-right{padding:28px 20px}
-  .stat-row{grid-template-columns:1fr 1fr}.form-row{grid-template-columns:1fr}
-  .sb{position:absolute;top:0;bottom:0;left:0;z-index:50;box-shadow:4px 0 20px rgba(0,0,0,0.3)}
-}
-@media(max-width:600px){.stat-row{grid-template-columns:1fr}.page{padding:20px 16px}}
-
-/* Logo Subtitle Canterbury Override */
-.brand-sub, .footer-brand-sub {
-    font-family: 'Canterbury', serif !important;
-    font-size: 1.1rem !important;
-    letter-spacing: 0.05em !important;
-    text-transform: none !important;
-}
-
-</style>
-
-<style id="global-loader-css">
-#global-loader {
-  position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  background: #1a0404;
-  z-index: 999999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.5s ease-out, visibility 0.5s;
-}
-.loader-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: loaderFadeUp 0.8s ease-out;
-}
-.loader-logo {
-  width: 75px;
-  height: 75px;
-  border-radius: 16px;
-  object-fit: cover;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  margin-bottom: 24px;
-  animation: loaderSubtlePulse 2s infinite ease-in-out;
-}
-.loader-text {
-  font-family: 'Canterbury', 'DM Serif Display', serif;
-  font-size: 1.25rem;
-  letter-spacing: 0.05em;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #c9a84c 0%, #fff6e0 50%, #c9a84c 100%);
-  background-size: 200% auto;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: loaderShimmer 2.5s linear infinite;
-}
-.loader-bar {
-  width: 150px;
-  height: 2px;
-  background: rgba(201, 168, 76, 0.15);
-  border-radius: 2px;
-  overflow: hidden;
-  position: relative;
-}
-.loader-bar-fill {
-  position: absolute;
-  top: 0; left: 0; height: 100%;
-  width: 0%;
-  background: #c9a84c;
-  border-radius: 2px;
-  animation: loaderFillBar 1.5s cubic-bezier(0.77, 0, 0.17, 1) infinite;
-}
-@keyframes loaderFadeUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes loaderSubtlePulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); box-shadow: 0 15px 40px rgba(201,168,76,0.2); }
-}
-@keyframes loaderShimmer {
-  to { background-position: 200% center; }
-}
-@keyframes loaderFillBar {
-  0% { width: 0%; left: 0; }
-  50% { width: 100%; left: 0; }
-  100% { width: 100%; left: 100%; }
-}
-</style>
-
-  <link rel="stylesheet" href="/custom_select.css" />
-  <link rel="icon" type="image/x-icon" href="./favicon-rounded.ico">
-  <script src="/mock_backend.js?v=2"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#2a0808"/>
+  <title>Student Portal Maintenance — SJC Counselling</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --maroon: #7a1818;
+      --maroon-deep: #2a0808;
+      --gold: #c9a84c;
+      --gold-dark: #a07830;
+      --cream: #faf6ee;
+      --white: #ffffff;
+      --ink: #1a0e0e;
+      --muted: #7a6868;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+      overflow: hidden;
+    }
+    
+    .maintenance-container {
+      max-width: 480px;
+      width: 100%;
+      background: var(--white);
+      border: 1px solid rgba(122, 24, 24, 0.08);
+      border-radius: 20px;
+      padding: 48px 32px;
+      text-align: center;
+      box-shadow: 0 12px 40px rgba(42, 8, 8, 0.06);
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    
+    .logo-badge {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--maroon-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      box-shadow: 0 6px 16px rgba(122, 24, 24, 0.15);
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .logo-badge svg {
+      color: var(--gold);
+    }
+    
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--maroon-deep);
+      margin-bottom: 12px;
+    }
+    
+    p {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+    
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      background: var(--maroon-deep);
+      color: var(--cream);
+      font-weight: 600;
+      font-size: 0.85rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(42, 8, 8, 0.15);
+    }
+    
+    .btn-home:hover {
+      background: var(--maroon);
+      transform: translateY(-1px);
+    }
+    
+    .progress-bar-container {
+      width: 100%;
+      height: 4px;
+      background: rgba(122, 24, 24, 0.05);
+      border-radius: 2px;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+    
+    .progress-bar-fill {
+      height: 100%;
+      width: 35%;
+      background: linear-gradient(90deg, var(--gold), var(--gold-bright, #e8c96a));
+      border-radius: 2px;
+      animation: pulseProgress 2.5s infinite ease-in-out;
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    
+    @keyframes pulseProgress {
+      0% { transform: translateX(-100%); }
+      50% { transform: translateX(200%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+  <link rel="stylesheet" href="/loader.css?v=9">
 </head>
 <body>
-
-<!-- Global Loader HTML -->
-<div id="global-loader">
-  <div class="loader-content">
-    <img src="/St.-Josephs-College-Anuradhapura-Logo (1).jpg" alt="SJC Logo" class="loader-logo">
-    <div class="loader-text">Student Portal</div>
-    <div class="loader-bar">
-      <div class="loader-bar-fill"></div>
-    </div>
-  </div>
-</div>
-  <div class="loader-spinner"></div>
-</div>
-
-<div id="toast"></div>
-
-<!-- BOOK MODAL -->
-<div class="modal-overlay" id="bookModal">
-  <div class="modal-box">
-    <div class="modal-title">Book an Appointment</div>
-    <div class="modal-sub">Request a counselling session with the SJC career guidance unit.</div>
-    <div class="form-group"><label>Session Type</label>
-      <select id="bk-type"><option>Personal Counselling</option><option>Career Guidance</option><option>Academic Support</option><option>Mental Wellness</option></select></div>
-    <div class="form-row">
-      <div class="form-group"><label>Preferred Date</label><input type="date" id="bk-date"/></div>
-      <div class="form-group"><label>Preferred Time</label>
-        <select id="bk-time"><option>08:00 AM</option><option>09:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>01:00 PM</option><option>02:00 PM</option><option>03:00 PM</option></select></div>
-    </div>
-    <div class="form-group"><label>Brief Note (optional)</label><textarea id="bk-note" placeholder="What would you like to discuss?"></textarea></div>
-    <div style="display:flex;gap:10px">
-      <button class="btn-auth btn-auth-primary" style="flex:1" onclick="submitBooking()">Confirm Request</button>
-      <button class="btn-auth btn-auth-secondary" style="flex:0 0 auto;width:auto;padding:13px 20px" onclick="closeModal('bookModal')">Cancel</button>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════
-     AUTH SCREEN
-════════════════════════════════════ -->
-<div id="authScreen">
-  <div class="auth-left">
-    <div class="auth-left-orb"></div><div class="auth-left-orb2"></div>
-    <div class="auth-logo"><img src="St.-Josephs-College-Anuradhapura-Logo (1).jpg" alt="SJC" onerror="this.parentElement.innerHTML='<span style=\'font-family:Cormorant Garamond,serif;font-weight:800;font-size:1.6rem;color:#c9a84c\'>S</span>'"/></div>
-    <h1>SJC <em>Student</em><br/>Portal</h1>
-    <p>Your personalised gateway to counselling, career guidance, and academic resources at St. Joseph's College.</p>
-    <div class="auth-badges">
-      <span class="auth-badge">Career Guidance</span><span class="auth-badge">Mental Wellness</span>
-      <span class="auth-badge">Appointments</span><span class="auth-badge">Resources</span>
-    </div>
-  </div>
-
-  <div class="auth-right">
-    <div class="auth-box">
-      <div class="auth-box-title">Welcome, Josephian</div>
-      <div class="auth-box-sub">Sign in or create your student account below.</div>
-      
-
-      <div class="auth-tabs">
-        <button type="button" class="auth-tab active" id="tabLogin" style="position:relative;z-index:10" onclick="switchAuthTab('login')">Sign In</button>
-        <button type="button" class="auth-tab" id="tabRegister" style="position:relative;z-index:10" onclick="switchAuthTab('register')">Create Account</button>
+  <!-- Page Loader Overlay -->
+  <div id="sjc-page-loader">
+    <div class="sjc-loader-content">
+      <img class="sjc-loader-logo" src="/logo.jpg" alt="SJC Logo">
+      <h1 class="sjc-loader-title">St. Joseph's College</h1>
+      <p class="sjc-loader-sub">Career Guidance Unit</p>
+      <div class="sjc-loader-bar">
+        <div class="sjc-loader-progress"></div>
       </div>
-      <!-- LOGIN -->
-      <div id="loginForm">
-        <div class="form-group"><label>Email Address</label><input type="email" id="loginEmail" placeholder="your@email.com"/></div>
-        <div class="form-group"><label>Password</label><input type="password" id="loginPass" placeholder="••••••••"/></div>
-        <div id="loginErr" class="form-err" style="margin-bottom:12px"></div>
-        <button class="btn-auth btn-auth-primary" onclick="doLogin()">Sign In to Portal</button>
-      </div>
-
-      <!-- REGISTER (multi-step) -->
-      <div id="registerForm" style="display:none">
-        <div class="step-bar" id="stepBar">
-          <div class="step-wrap"><div class="step-dot active" id="sdot1">1</div><div class="step-label">Account</div></div>
-          <div class="step-line" id="sline1"></div>
-          <div class="step-wrap"><div class="step-dot" id="sdot2">2</div><div class="step-label">Academic</div></div>
-          <div class="step-line" id="sline2"></div>
-          <div class="step-wrap"><div class="step-dot" id="sdot3">3</div><div class="step-label">Profile</div></div>
-          <div class="step-line" id="sline3"></div>
-          <div class="step-wrap"><div class="step-dot" id="sdot4">4</div><div class="step-label">Interests</div></div>
-        </div>
-
-        <!-- STEP 1 -->
-        <div id="regStep1">
-          <div class="form-row">
-            <div class="form-group"><label>First Name</label><input type="text" id="r1-first" placeholder="Kamal"/></div>
-            <div class="form-group"><label>Last Name</label><input type="text" id="r1-last" placeholder="Perera"/></div>
-          </div>
-          <div class="form-group"><label>Email Address</label><input type="email" id="r1-email" placeholder="kamal@email.com"/></div>
-          <div class="form-group"><label>Password</label><input type="password" id="r1-pass" placeholder="Min. 6 characters"/></div>
-          <div id="regErr1" class="form-err" style="margin-bottom:10px"></div>
-          <button class="btn-auth btn-auth-primary" onclick="regNext(1)">Continue →</button>
-        </div>
-
-        <!-- STEP 2 -->
-        <div id="regStep2" style="display:none">
-          <div class="form-row">
-            <div class="form-group"><label>Grade / Year</label>
-              <select id="r2-grade"><option value="">Select grade</option><option>Grade 6</option><option>Grade 7</option><option>Grade 8</option><option>Grade 9</option><option>Grade 10</option><option>Grade 11 (O/L)</option><option>Grade 12 (A/L Year 1)</option><option>Grade 13 (A/L Year 2)</option></select></div>
-            <div class="form-group"><label>Class / Section</label><input type="text" id="r2-class" placeholder="e.g. 10A"/></div>
-          </div>
-          <div class="form-group"><label>Academic Stream</label>
-            <select id="r2-stream"><option value="">Select stream</option><option>Science Stream</option><option>Arts Stream</option><option>Commerce Stream</option><option>Technology Stream</option><option>Not yet selected</option></select></div>
-          <div class="form-group"><label>Index Number</label><input type="text" id="r2-index" placeholder="20 001"/></div>
-          <div id="regErr2" class="form-err" style="margin-bottom:10px"></div>
-          <div style="display:flex;gap:10px">
-            <button class="btn-auth btn-auth-secondary" style="flex:1" onclick="regBack(2)">← Back</button>
-            <button class="btn-auth btn-auth-primary" style="flex:2" onclick="regNext(2)">Continue →</button>
-          </div>
-        </div>
-
-        <!-- STEP 3 -->
-        <div id="regStep3" style="display:none">
-          <div class="form-group"><label>Profile Photo</label>
-            <div class="photo-upload" id="photoUploadZone">
-              <input type="file" id="r3-photo" accept="image/*" onchange="previewPhoto(this)"/>
-              <img id="photoPreviewImg" class="photo-preview-img" alt="Preview"/>
-              <div id="photoUploadIcon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7a6868" stroke-width="1.5" style="display:block;margin:0 auto 8px"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                <p>Click to upload photo</p><span>JPG, PNG up to 5MB</span>
-              </div>
-            </div>
-          </div>
-          <div class="form-group"><label>Short Bio (optional)</label><textarea id="r3-bio" placeholder="Tell us a bit about yourself — your hobbies, goals, or what you enjoy at school."></textarea></div>
-          <div class="form-group"><label>Upload CV / Resume (optional)</label>
-            <div class="cv-upload">
-              <input type="file" id="r3-cv" accept=".pdf,.doc,.docx" onchange="previewCV(this)"/>
-              <div class="cv-upload-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7a1818" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-              <div><div style="font-size:0.82rem;font-weight:600;color:var(--maroon-deep)" id="cvFileName">No file selected</div><div style="font-size:0.74rem;color:var(--muted)">PDF, DOC or DOCX</div></div>
-            </div>
-          </div>
-          <div style="display:flex;gap:10px">
-            <button class="btn-auth btn-auth-secondary" style="flex:1" onclick="regBack(3)">← Back</button>
-            <button class="btn-auth btn-auth-primary" style="flex:2" onclick="regNext(3)">Continue →</button>
-          </div>
-        </div>
-
-        <!-- STEP 4 -->
-        <div id="regStep4" style="display:none">
-          <div class="form-group"><label>Skills (select all that apply)</label>
-            <div class="tag-picker" id="skillPicker">
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Leadership</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Public Speaking</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Mathematics</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Science</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Art & Design</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Writing</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">ICT / Coding</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Music</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Sports</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Research</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Languages</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Problem Solving</div>
-            </div>
-          </div>
-          <div class="form-group"><label>Career Interests (pick up to 4)</label>
-            <div class="tag-picker" id="careerPicker">
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Medicine</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Engineering</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Law</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Education</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Business</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Technology / IT</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Arts & Design</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Science Research</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Journalism</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Architecture</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Finance</div>
-              <div class="tag-opt" onclick="this.classList.toggle('sel')">Public Service</div>
-            </div>
-          </div>
-          <div id="regErr4" class="form-err" style="margin-bottom:10px"></div>
-          <div style="display:flex;gap:10px">
-            <button class="btn-auth btn-auth-secondary" style="flex:1" onclick="regBack(4)">← Back</button>
-            <button class="btn-auth btn-auth-primary" style="flex:2" onclick="finishRegister()">Create My Account</button>
-          </div>
-        </div>
-      </div><!-- end registerForm -->
     </div>
   </div>
-</div>
-
-<!-- ═══════════════════════════════════
-     APP (after login)
-════════════════════════════════════ -->
-<div id="app">
-  <!-- TOPBAR -->
-  <div class="tb">
-    <button class="tb-burger" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
-    <a href="/" class="tb-brand">
-      <div class="tb-logo"><img src="St.-Josephs-College-Anuradhapura-Logo (1).jpg" alt="SJC" onerror="this.style.display='none'"/></div>
-      <div><div class="tb-name">SJC Counselling</div><div class="tb-role">Student Portal</div></div>
+  <div class="maintenance-container">
+    <div class="logo-badge">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+      </svg>
+    </div>
+    <h1>Portal Under Maintenance</h1>
+    <p>We are currently upgrading the SJC Student Portal to bring you an improved experience. Please check back later. If you need urgent assistance, you can still book appointments or contact us directly.</p>
+    <div class="progress-bar-container">
+      <div class="progress-bar-fill"></div>
+    </div>
+    <a href="/" class="btn-home">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Return to Home
     </a>
-    <div class="tb-mid"></div>
-    <div class="tb-right">
-      <a href="/" class="tb-home"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Website</a>
-      <div class="tb-user">
-        <div class="tb-avatar" id="tbAvatar"><span id="tbInitials">?</span><img id="tbAvatarImg" alt=""/></div>
-        <span class="tb-username" id="tbUsername">Student</span>
-      </div>
-    </div>
   </div>
-  <!-- BODY -->
-  <div class="app-body">
-    <!-- SIDEBAR -->
-    <div class="sb" id="sidebar">
-      <div class="sb-section">Student</div>
-      <button class="sb-item active" id="sbi-dashboard" onclick="showPage('dashboard')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</button>
-      <button class="sb-item" id="sbi-profile" onclick="showPage('profile')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>My Profile</button>
-      <button class="sb-item" id="sbi-careers" onclick="showPage('careers')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 8.5 12 15 2 8.5"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg>Career Explorer</button>
-      <button class="sb-item" id="sbi-university" onclick="showPage(\'university\')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5zM6 12v5c3 3 9 3 12 0v-5"/></svg>University Guidance</button>
-      <button class="sb-item" id="sbi-appointments" onclick="showPage('appointments')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Appointments</button>
-      <div class="sb-divider"></div>
-      <div class="sb-section">Resources</div>
-      <button class="sb-item" onclick="window.open('/resources','_blank')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Wellness Library</button>
-      <button class="sb-item" onclick="window.open('/events','_blank')">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>Events</button>
-      <div class="sb-logout"><button onclick="doLogout()">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Sign Out</button></div>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div class="main" id="mainContent">
-
-      <!-- DASHBOARD -->
-      <div class="page active" id="page-dashboard">
-        <div class="pg-head">
-          <div class="pg-title" id="dashGreeting">Good morning!</div>
-          <div class="pg-sub">Here's your student overview for today.</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-card">
-            <div class="stat-icon" style="background:rgba(201,168,76,0.12)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a07830" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-            <div><div class="stat-val" id="stat-completion">0%</div><div class="stat-lbl">Profile Complete</div></div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon" style="background:rgba(122,24,24,0.08)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7a1818" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-            <div><div class="stat-val" id="stat-appts">0</div><div class="stat-lbl">Appointments</div></div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-icon" style="background:rgba(39,174,96,0.1)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2"><polygon points="12 2 22 8.5 12 15 2 8.5"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg></div>
-            <div><div class="stat-val" id="stat-careers">0</div><div class="stat-lbl">Career Interests</div></div>
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:18px;margin-bottom:20px">
-          <!-- COMPLETION RING -->
-          <div class="completion-card">
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--maroon-deep);margin-bottom:16px;display:flex;align-items:center;gap:8px">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Profile Completion</div>
-            <div class="completion-inner">
-              <div class="ring-wrap">
-                <svg width="110" height="110"><circle class="ring-bg" cx="55" cy="55" r="46"/><circle class="ring-fg" id="completionRing" cx="55" cy="55" r="46" stroke-dasharray="289" stroke-dashoffset="289"/></svg>
-                <div class="ring-pct" id="completionPct">0%</div>
-              </div>
-              <div class="completion-items">
-                <div class="comp-item"><span class="comp-dot done"></span>Account Created</div>
-                <div class="comp-item"><span class="comp-dot" id="ci-photo"></span>Profile Photo</div>
-                <div class="comp-item"><span class="comp-dot" id="ci-academic"></span>Academic Details</div>
-                <div class="comp-item"><span class="comp-dot" id="ci-bio"></span>Bio Added</div>
-                <div class="comp-item"><span class="comp-dot" id="ci-skills"></span>Skills Added</div>
-                <div class="comp-item"><span class="comp-dot" id="ci-interests"></span>Career Interests</div>
-                <div class="comp-item"><span class="comp-dot" id="ci-cv"></span>CV Uploaded</div>
-                <div class="comp-item"><span class="comp-dot" id="ci-achievement"></span>Achievements</div>
-              </div>
-            </div>
-            <button onclick="showPage('profile')" style="margin-top:16px;width:100%;padding:9px;border:1.5px solid var(--cream-3);border-radius:8px;background:var(--cream);font-size:0.8rem;font-weight:600;color:var(--maroon);cursor:pointer">Complete Profile →</button>
-          </div>
-          <!-- UPCOMING APPOINTMENTS -->
-          <div class="sec-card" style="margin-bottom:0">
-            <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Upcoming Appointments</div>
-            <div id="dashAppts"></div>
-            <button class="btn-book" style="margin-top:16px;width:100%;justify-content:center" onclick="openModal('bookModal')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Book New Appointment</button>
-          </div>
-        </div>
-        <!-- RECOMMENDED CAREERS -->
-        <div class="sec-card">
-          <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>Recommended Careers</div>
-          <div class="cards-grid" id="dashCareers">
-            <div style="grid-column:1/-1;text-align:center;padding:24px;color:var(--muted);font-size:0.88rem">Add career interests in your profile to see personalised recommendations.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PROFILE -->
-      <div class="page" id="page-profile">
-        <div class="pg-head"><div class="pg-title">My Profile</div><div class="pg-sub">Keep your information up to date for better career recommendations.</div></div>
-        <!-- Photo & Name -->
-        <div class="sec-card">
-          <div class="profile-photo-area">
-            <div class="profile-avatar-big" id="profAvatarBig">
-              <span id="profInitials">?</span><img id="profAvatarImg" alt=""/>
-            </div>
-            <div>
-              <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--maroon-deep)" id="profName">Student Name</div>
-              <div style="font-size:0.82rem;color:var(--muted);margin-top:3px" id="profEmail"></div>
-              <div style="margin-top:12px">
-                <button class="btn-change-photo"><input type="file" accept="image/*" onchange="changeProfilePhoto(this)"/>Change Photo</button>
-              </div>
-            </div>
-          </div>
-          <div class="form-group"><label>About Me</label><textarea id="profBio" placeholder="Tell us about yourself, your goals, and what you enjoy..." rows="3"></textarea></div>
-        </div>
-        <!-- Academic -->
-        <div class="sec-card">
-          <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 8.5 12 15 2 8.5"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg>Academic Details</div>
-          <div class="form-row">
-            <div class="form-group"><label>Grade / Year</label><select id="profGrade"><option value="">Select grade</option><option>Grade 6</option><option>Grade 7</option><option>Grade 8</option><option>Grade 9</option><option>Grade 10</option><option>Grade 11 (O/L)</option><option>Grade 12 (A/L Year 1)</option><option>Grade 13 (A/L Year 2)</option></select></div>
-            <div class="form-group"><label>Class / Section</label><input type="text" id="profClass" placeholder="e.g. 10A"/></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label>Academic Stream</label><select id="profStream"><option value="">Select stream</option><option>Science Stream</option><option>Arts Stream</option><option>Commerce Stream</option><option>Technology Stream</option><option>Not yet selected</option></select></div>
-            <div class="form-group"><label>Index Number</label><input type="text" id="profIndex" placeholder="20 001"/></div>
-          </div>
-          <button class="btn-save" onclick="saveAcademic()">Save Academic Details</button>
-        </div>
-        <!-- Skills -->
-        <div class="sec-card">
-          <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>My Skills</div>
-          <div class="skills-display" id="profSkillsDisplay"><span style="color:var(--muted);font-size:0.82rem">No skills added yet.</span></div>
-          <div class="tag-picker" id="profSkillPicker" style="margin-top:14px">
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Leadership</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Public Speaking</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Mathematics</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Science</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Art & Design</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Writing</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">ICT / Coding</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Music</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Sports</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Research</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Languages</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Problem Solving</div>
-          </div>
-          <button class="btn-save" style="margin-top:14px" onclick="saveSkills()">Save Skills</button>
-        </div>
-        <!-- Career Interests -->
-        <div class="sec-card">
-          <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 8.5 12 15 2 8.5"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg>Career Interests</div>
-          <div class="tag-picker" id="profCareerPicker">
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Medicine</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Engineering</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Law</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Education</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Business</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Technology / IT</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Arts & Design</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Science Research</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Journalism</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Architecture</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Finance</div>
-            <div class="tag-opt" onclick="this.classList.toggle('sel')">Public Service</div>
-          </div>
-          <button class="btn-save" style="margin-top:14px" onclick="saveCareerInterests()">Save Interests</button>
-        </div>
-        <!-- CV -->
-        <div class="sec-card">
-          <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>CV / Resume</div>
-          <div class="cv-display" id="cvDisplay" style="display:none">
-            <div class="cv-display-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7a1818" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-            <div><div style="font-size:0.88rem;font-weight:600;color:var(--maroon-deep)" id="cvDisplayName">resume.pdf</div><div style="font-size:0.75rem;color:var(--muted)">Uploaded successfully</div></div>
-            <button class="cv-replace-btn"><input type="file" accept=".pdf,.doc,.docx" onchange="uploadCV(this)"/>Replace</button>
-          </div>
-          <div class="cv-upload" id="cvUploadArea">
-            <input type="file" accept=".pdf,.doc,.docx" onchange="uploadCV(this)"/>
-            <div class="cv-upload-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7a1818" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
-            <div><div style="font-size:0.82rem;font-weight:600;color:var(--maroon-deep)">Upload your CV</div><div style="font-size:0.74rem;color:var(--muted)">PDF, DOC or DOCX — max 5MB</div></div>
-          </div>
-        </div>
-        <!-- Achievements -->
-        <div class="sec-card">
-          <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>Extracurricular Achievements</div>
-          <div class="achievement-list" id="achievementList"><p style="color:var(--muted);font-size:0.85rem">No achievements added yet.</p></div>
-          <div class="add-form">
-            <input type="text" id="newAchievement" placeholder="e.g. 1st Place – Inter-school Debate 2024" onkeydown="if(event.key==='Enter')addAchievement()"/>
-            <button onclick="addAchievement()">Add</button>
-          </div>
-        </div>
-        <button class="btn-save" style="width:100%;padding:14px;font-size:0.9rem" onclick="saveFullProfile()">Save All Changes</button>
-      </div>
-
-      <!-- CAREER EXPLORER -->
-      <div class="page" id="page-careers">
-        <div class="pg-head"><div class="pg-title">Career Explorer</div><div class="pg-sub">Discover careers that match your interests and stream.</div></div>
-        <div class="sec-card" style="padding:20px 24px">
-          <div style="font-size:0.82rem;font-weight:600;color:var(--ink-soft);margin-bottom:10px">Filter by interest</div>
-                    <div class="interest-section">
-            <div class="interest-pill active" onclick="filterCareers('All',this)">All</div>
-            <div class="interest-pill" onclick="filterCareers('Medicine',this)">Medicine</div>
-            <div class="interest-pill" onclick="filterCareers('Engineering',this)">Engineering</div>
-            <div class="interest-pill" onclick="filterCareers('IT',this)">IT</div>
-            <div class="interest-pill" onclick="filterCareers('Law',this)">Law</div>
-            <div class="interest-pill" onclick="filterCareers('Business',this)">Business</div>
-            <div class="interest-pill" onclick="filterCareers('Media',this)">Media</div>
-            <div class="interest-pill" onclick="filterCareers('Design',this)">Design</div>
-            <div class="interest-pill" onclick="filterCareers('Aviation',this)">Aviation</div>
-            <div class="interest-pill" onclick="filterCareers('Government',this)">Government services</div>
-            <div class="interest-pill" onclick="filterCareers('Entrepreneurship',this)">Entrepreneurship</div>
-          </div>
-            <div class="interest-pill" onclick="filterCareers('Medicine',this)">Medicine</div>
-            <div class="interest-pill" onclick="filterCareers('Engineering',this)">Engineering</div>
-            <div class="interest-pill" onclick="filterCareers('Technology',this)">Technology / IT</div>
-            <div class="interest-pill" onclick="filterCareers('Law',this)">Law</div>
-            <div class="interest-pill" onclick="filterCareers('Business',this)">Business</div>
-            <div class="interest-pill" onclick="filterCareers('Arts',this)">Arts & Design</div>
-            <div class="interest-pill" onclick="filterCareers('Science',this)">Science Research</div>
-            <div class="interest-pill" onclick="filterCareers('Education',this)">Education</div>
-          </div>
-        </div>
-        <div class="career-explorer-grid" id="careerExplorerGrid"></div>
-      </div>
-
-      
-      <!-- UNIVERSITY GUIDANCE -->
-      <div class="page" id="page-university">
-        <div class="pg-head"><div class="pg-title">University Guidance Portal</div><div class="pg-sub">Explore higher education opportunities locally and internationally.</div></div>
-        
-        <div class="cards-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
-          <div class="sec-card" style="margin-bottom:0">
-            <div class="sec-card-title"><i class="ejo ejo-medal" style="font-size:1.2rem; color:#b45309"></i>Sri Lankan Universities</div>
-            <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">Information on state universities (UGC), Z-score cutoffs, and local private degree awarding institutes.</p>
-            <button class="btn-book" style="width:100%;justify-content:center;background:var(--cream);color:var(--maroon);border:1px solid var(--cream-3)">View Local Options →</button>
-          </div>
-          
-          <div class="sec-card" style="margin-bottom:0">
-            <div class="sec-card-title"><i class="ejo ejo-rocket" style="font-size:1.2rem; color:#1d4ed8"></i>Foreign Universities</div>
-            <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">Explore studying abroad in UK, Australia, USA, Canada, and Europe. Find scholarships and agents.</p>
-            <button class="btn-book" style="width:100%;justify-content:center;background:var(--cream);color:var(--maroon);border:1px solid var(--cream-3)">Explore Abroad →</button>
-          </div>
-
-          <div class="sec-card" style="margin-bottom:0">
-            <div class="sec-card-title"><i class="ejo ejo-career" style="font-size:1.2rem; color:#047857"></i>Degree Pathways</div>
-            <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">Step-by-step guides from A/L to Bachelors, Masters, and Professional Qualifications (CIMA, CIM, ACCA).</p>
-            <button class="btn-book" style="width:100%;justify-content:center;background:var(--cream);color:var(--maroon);border:1px solid var(--cream-3)">View Pathways →</button>
-          </div>
-
-          <div class="sec-card" style="margin-bottom:0">
-            <div class="sec-card-title"><i class="ejo ejo-sun" style="font-size:1.2rem; color:#6d28d9"></i>Foundation Programs</div>
-            <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">Fast-track options after O/L exams. Enter university earlier without completing traditional A/Levels.</p>
-            <button class="btn-book" style="width:100%;justify-content:center;background:var(--cream);color:var(--maroon);border:1px solid var(--cream-3)">View Foundations →</button>
-          </div>
-
-          <div class="sec-card" style="margin-bottom:0">
-            <div class="sec-card-title"><i class="ejo ejo-clock" style="font-size:1.2rem; color:#be123c"></i>Application Deadlines</div>
-            <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">Stay updated on UGC intake deadlines, SAT/IELTS exam dates, and foreign university intakes (Feb/Sep).</p>
-            <button class="btn-book" style="width:100%;justify-content:center;background:var(--cream);color:var(--maroon);border:1px solid var(--cream-3)">View Calendar →</button>
-          </div>
-
-          <div class="sec-card" style="margin-bottom:0">
-            <div class="sec-card-title"><i class="ejo ejo-target" style="font-size:1.2rem; color:#0f766e"></i>Required Qualifications</div>
-            <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">Check prerequisites, minimum Z-scores, English proficiency (IELTS/PTE) and entry exams for your dream degree.</p>
-            <button class="btn-book" style="width:100%;justify-content:center;background:var(--cream);color:var(--maroon);border:1px solid var(--cream-3)">Check Requirements →</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- APPOINTMENTS -->
-      <div class="page" id="page-appointments">
-        <div class="pg-head"><div class="pg-title">My Appointments</div><div class="pg-sub">View and manage your counselling sessions.</div></div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
-          <div style="font-size:0.88rem;color:var(--muted)" id="apptCount">0 appointments</div>
-          <button class="btn-book" onclick="openModal('bookModal')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Book Appointment</button>
-        </div>
-        <div id="apptListFull"></div>
-      </div>
-
-    </div><!-- /main -->
-  </div><!-- /app-body -->
-</div><!-- /app -->
-
-<script>
-// ── DATA ──
-const DB={
-  get(k){try{return JSON.parse(localStorage.getItem('sjc_'+k)||'null')}catch(e){return null}},
-  set(k,v){localStorage.setItem('sjc_'+k,JSON.stringify(v))},
-  del(k){localStorage.removeItem('sjc_'+k)}
-};
-
-const CAREERS=[
-  {
-    title:'Medical Doctor', field:'Medicine', tags:['Medicine'], bg:'#fee2e2', stroke:'#991b1b',
-    desc:'Diagnose and treat illnesses, perform surgeries, and improve patient health.',
-    salary:'LKR 150,000 - 800,000+ per month',
-    quals:'MBBS, MD or equivalent medical degree.',
-    uni:'Colombo, Peradeniya, Kelaniya, KDU, Foreign Med Schools',
-    subjects:'Biology, Chemistry, Physics (A/L Science)',
-    local:'Government Hospitals, Private Hospitals, Clinics',
-    intl:'High demand globally (Requires PLAB for UK, USMLE for USA)'
-  },
-  {
-    title:'Software Engineer', field:'IT', tags:['IT'], bg:'#dbeafe', stroke:'#1d4ed8',
-    desc:'Design and build software systems, apps, and digital infrastructure.',
-    salary:'LKR 100,000 - 1,500,000+ per month',
-    quals:'BSc in Computer Science, Software Engineering, or IT.',
-    uni:'Moratuwa, UCSC, SLIIT, IIT, NSBM',
-    subjects:'Mathematics, ICT, Physics',
-    local:'Tech startups, WSO2, Sysco LABS, Virtusa',
-    intl:'Massive global demand (Remote work highly accessible)'
-  },
-  {
-    title:'Civil Engineer', field:'Engineering', tags:['Engineering'], bg:'#fef3c7', stroke:'#b45309',
-    desc:'Plan and oversee construction of infrastructure like bridges, roads, and buildings.',
-    salary:'LKR 80,000 - 500,000+ per month',
-    quals:'BSc Engineering (Civil).',
-    uni:'Moratuwa, Peradeniya, Ruhuna, SLIIT',
-    subjects:'Combined Mathematics, Physics, Chemistry',
-    local:'Construction firms, Government infrastructure projects',
-    intl:'Strong demand in Middle East and Australia'
-  },
-  {
-    title:'Attorney-at-Law', field:'Law', tags:['Law'], bg:'#ede9fe', stroke:'#6d28d9',
-    desc:'Represent clients in legal proceedings, draft documents, and offer legal advice.',
-    salary:'LKR 50,000 - 1,000,000+ per month (highly variable)',
-    quals:'LLB and passing Sri Lanka Law College exams.',
-    uni:'Colombo Law Faculty, Open University, APIIT, Royal Institute',
-    subjects:'Logic, Political Science, Languages, History',
-    local:'Private practice, Corporate Legal Counsel, Judiciary',
-    intl:'Jurisdiction-specific; requires local bar exams'
-  },
-  {
-    title:'Corporate Manager', field:'Business', tags:['Business'], bg:'#dcfce7', stroke:'#15803d',
-    desc:'Oversee business operations, marketing, HR, or finance to drive company growth.',
-    salary:'LKR 100,000 - 1,000,000+ per month',
-    quals:'BBA, BCom, MBA, CIMA, or CIM.',
-    uni:'Sri Jayewardenepura, Colombo, NSBM, NIBM',
-    subjects:'Business Studies, Accounting, Economics',
-    local:'Banks, Multinationals, Conglomerates (MAS, Brandix, JKH)',
-    intl:'Global opportunities with multinational transfers'
-  },
-  {
-    title:'Journalist / Broadcaster', field:'Media', tags:['Media'], bg:'#f3e8ff', stroke:'#7e22ce',
-    desc:'Investigate, report, and present news and stories across print, TV, and digital platforms.',
-    salary:'LKR 40,000 - 300,000+ per month',
-    quals:'Degree or Diploma in Mass Communication or Journalism.',
-    uni:'Colombo, Kelaniya, SLPI',
-    subjects:'Media Studies, Languages, Logic, Political Science',
-    local:'Derana, Hiru, Wijeya Newspapers, Digital Media',
-    intl:'International news agencies, freelance correspondence'
-  },
-  {
-    title:'Graphic / UI Designer', field:'Design', tags:['Design'], bg:'#fce7f3', stroke:'#9d174d',
-    desc:'Create visual concepts, UI/UX for apps, branding, and advertising.',
-    salary:'LKR 60,000 - 400,000+ per month',
-    quals:'Degree/Diploma in Graphic Design or UI/UX. Strong Portfolio is key.',
-    uni:'Moratuwa (Design), AMDT, AOD',
-    subjects:'Art, Design, ICT',
-    local:'Ad agencies, Tech companies, Freelance',
-    intl:'Excellent remote working and international freelance potential'
-  },
-  {
-    title:'Commercial Pilot', field:'Aviation', tags:['Aviation'], bg:'#e0f2fe', stroke:'#0369a1',
-    desc:'Navigate and fly commercial airlines for passenger and cargo transport.',
-    salary:'LKR 500,000 - 2,500,000+ per month',
-    quals:'Commercial Pilot License (CPL) and ATPL.',
-    uni:'SriLankan Aviation College, Skyline, Asian Aviation Centre',
-    subjects:'Mathematics, Physics, English',
-    local:'SriLankan Airlines, FitsAir, Cinnamon Air',
-    intl:'Emirates, Qatar Airways, Singapore Airlines'
-  },
-  {
-    title:'Government Administrative Officer', field:'Government', tags:['Government'], bg:'#f5f3ff', stroke:'#4c1d95',
-    desc:'Manage public resources and formulate policies within government ministries.',
-    salary:'LKR 50,000 - 150,000+ per month (plus pensions & perks)',
-    quals:'Any Bachelor\'s Degree and passing SLAS (Sri Lanka Administrative Service) exam.',
-    uni:'Any recognized state university',
-    subjects:'Any stream (Arts, Science, Commerce)',
-    local:'Ministries, District Secretariats, Departments',
-    intl:'Diplomatic missions, UN agencies'
-  },
-  {
-    title:'Startup Founder', field:'Entrepreneurship', tags:['Entrepreneurship'], bg:'#fffbeb', stroke:'#b45309',
-    desc:'Create, launch, and scale innovative new business ventures.',
-    salary:'Variable (High risk, very high reward)',
-    quals:'No strict requirements, though Business/Tech degrees help.',
-    uni:'Any (Many founders are self-taught or hold diverse degrees)',
-    subjects:'Business Studies, Economics, ICT',
-    local:'Hatch, Spiralation, local startup ecosystem',
-    intl:'Global venture capital funding, Silicon Valley accelerators'
-  }
-];
-
-let currentUser=null;
-let regData={};
-
-window.addEventListener('DOMContentLoaded',()=>{
-  const saved=DB.get('currentUser');
-  if(saved){currentUser=saved;bootApp();}
-  renderCareerExplorer('All');
-});
-
-// ── AUTH TABS ──
-function switchAuthTab(tab){
-  const isLogin=tab==='login';
-  document.getElementById('tabLogin').classList.toggle('active',isLogin);
-  document.getElementById('tabRegister').classList.toggle('active',!isLogin);
-  document.getElementById('loginForm').style.display=isLogin?'block':'none';
-  document.getElementById('registerForm').style.display=isLogin?'none':'block';
-  if(!isLogin)showRegStep(1);
-}
-
-// ── LOGIN ──
-function doLogin(){
-  const email=document.getElementById('loginEmail').value.trim();
-  const pass=document.getElementById('loginPass').value;
-  const errEl=document.getElementById('loginErr');
-  errEl.textContent='';
-  if(!email||!pass){errEl.textContent='Please enter your email and password.';return;}
-  const users=DB.get('users')||{};
-  const user=users[email.toLowerCase()];
-  if(!user||user.password!==pass){errEl.textContent='Invalid email or password.';return;}
-  currentUser=user;DB.set('currentUser',user);bootApp();
-}
-
-// ── REGISTER STEPS ──
-function showRegStep(n){
-  for(let i=1;i<=4;i++){
-    const el=document.getElementById('regStep'+i);
-    if(el)el.style.display=i===n?'block':'none';
-    const dot=document.getElementById('sdot'+i);
-    if(dot){dot.classList.remove('active','done');if(i<n)dot.classList.add('done');else if(i===n)dot.classList.add('active');}
-    if(i<4){const line=document.getElementById('sline'+i);if(line)line.classList.toggle('done',i<n);}
-  }
-}
-function regNext(step){
-  if(step===1){
-    const first=document.getElementById('r1-first').value.trim();
-    const last=document.getElementById('r1-last').value.trim();
-    const email=document.getElementById('r1-email').value.trim();
-    const pass=document.getElementById('r1-pass').value;
-    const err=document.getElementById('regErr1');
-    if(!first||!last){err.textContent='Please enter your full name.';return;}
-    if(!email||!email.includes('@')){err.textContent='Please enter a valid email.';return;}
-    if(pass.length<6){err.textContent='Password must be at least 6 characters.';return;}
-    const users=DB.get('users')||{};
-    if(users[email.toLowerCase()]){err.textContent='An account with this email already exists.';return;}
-    err.textContent='';
-    regData={firstName:first,lastName:last,email:email.toLowerCase(),password:pass};
-    showRegStep(2);
-  } else if(step===2){
-    const grade=document.getElementById('r2-grade').value;
-    const err=document.getElementById('regErr2');
-    if(!grade){err.textContent='Please select your grade.';return;}
-    err.textContent='';
-    regData.grade=grade;
-    regData.class=document.getElementById('r2-class').value.trim();
-    regData.stream=document.getElementById('r2-stream').value;
-    regData.indexNo=document.getElementById('r2-index').value.trim();
-    showRegStep(3);
-  } else if(step===3){
-    regData.bio=document.getElementById('r3-bio').value.trim();
-    showRegStep(4);
-  }
-}
-function regBack(step){showRegStep(step-1);}
-
-function previewPhoto(input){
-  const file=input.files[0];if(!file)return;
-  const reader=new FileReader();
-  reader.onload=e=>{
-    regData.photoData=e.target.result;
-    const img=document.getElementById('photoPreviewImg');
-    img.src=e.target.result;img.style.display='block';
-    document.getElementById('photoUploadIcon').style.display='none';
-  };
-  reader.readAsDataURL(file);
-}
-function previewCV(input){
-  const file=input.files[0];if(!file)return;
-  regData.cvName=file.name;
-  document.getElementById('cvFileName').textContent=file.name;
-  const reader=new FileReader();
-  reader.onload=e=>{regData.cvData=e.target.result;};
-  reader.readAsDataURL(file);
-}
-function finishRegister(){
-  regData.skills=[...document.querySelectorAll('#skillPicker .tag-opt.sel')].map(t=>t.textContent);
-  regData.careerInterests=[...document.querySelectorAll('#careerPicker .tag-opt.sel')].map(t=>t.textContent);
-  regData.achievements=[];
-  regData.appointments=[];
-  regData.createdAt=new Date().toISOString();
-  const users=DB.get('users')||{};
-  users[regData.email]=regData;
-  DB.set('users',users);
-  currentUser=regData;DB.set('currentUser',regData);
-  toast('Account created! Welcome, '+regData.firstName+'!','success');
-  bootApp();
-}
-
-// ── BOOT ──
-function bootApp(){
-  document.getElementById('authScreen').style.display='none';
-  document.getElementById('app').style.display='flex';
-  refreshTopbar();refreshDashboard();renderProfilePage();showPage('dashboard');
-}
-function doLogout(){
-  DB.del('currentUser');currentUser=null;
-  document.getElementById('app').style.display='none';
-  document.getElementById('authScreen').style.display='flex';
-  switchAuthTab('login');
-  toast('Signed out successfully.','success');
-}
-
-// ── SIDEBAR ──
-let sidebarOpen=true;
-function toggleSidebar(){
-  sidebarOpen=!sidebarOpen;
-  document.getElementById('sidebar').classList.toggle('collapsed',!sidebarOpen);
-}
-function showPage(id){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.sb-item').forEach(b=>b.classList.remove('active'));
-  document.getElementById('page-'+id).classList.add('active');
-  const btn=document.getElementById('sbi-'+id);if(btn)btn.classList.add('active');
-  if(id==='dashboard')refreshDashboard();
-  if(id==='profile')renderProfilePage();
-  if(id==='appointments')renderApptsFull();
-}
-
-// ── TOPBAR ──
-function refreshTopbar(){
-  if(!currentUser)return;
-  const initials=(currentUser.firstName[0]||'')+(currentUser.lastName[0]||'');
-  document.getElementById('tbUsername').textContent=currentUser.firstName;
-  document.getElementById('tbInitials').textContent=initials;
-  if(currentUser.photoData){
-    const img=document.getElementById('tbAvatarImg');
-    img.src=currentUser.photoData;img.style.display='block';
-    document.getElementById('tbInitials').style.display='none';
-  }
-}
-
-// ── DASHBOARD ──
-function refreshDashboard(){
-  if(!currentUser)return;
-  const h=new Date().getHours();
-  const g=h<12?'Good morning':h<17?'Good afternoon':'Good evening';
-  document.getElementById('dashGreeting').textContent=g+', '+currentUser.firstName+'!';
-  const pct=calcCompletion();
-  document.getElementById('stat-completion').textContent=pct+'%';
-  document.getElementById('stat-appts').textContent=(currentUser.appointments||[]).length;
-  document.getElementById('stat-careers').textContent=(currentUser.careerInterests||[]).length;
-  updateRing(pct);
-  renderDashAppts();
-  renderDashCareers();
-}
-function calcCompletion(){
-  if(!currentUser)return 0;
-  const checks=[
-    true,
-    !!currentUser.photoData,
-    !!(currentUser.grade&&currentUser.grade!==''),
-    !!(currentUser.bio&&currentUser.bio.trim()),
-    !!(currentUser.skills&&currentUser.skills.length>0),
-    !!(currentUser.careerInterests&&currentUser.careerInterests.length>0),
-    !!currentUser.cvName,
-    !!(currentUser.achievements&&currentUser.achievements.length>0),
-  ];
-  const ids=['ci-photo','ci-academic','ci-bio','ci-skills','ci-interests','ci-cv','ci-achievement'];
-  checks.slice(1).forEach((done,i)=>{
-    const el=document.getElementById(ids[i]);
-    if(el){el.classList.toggle('done',done);}
-  });
-  return Math.round(checks.filter(Boolean).length/checks.length*100);
-}
-function updateRing(pct){
-  const circ=2*Math.PI*46;
-  const offset=circ-(circ*pct/100);
-  const ring=document.getElementById('completionRing');
-  if(ring){ring.style.strokeDasharray=circ;ring.style.strokeDashoffset=offset;}
-  const el=document.getElementById('completionPct');
-  if(el)el.textContent=pct+'%';
-}
-function renderDashAppts(){
-  const allApts = DB.get('appointments') || [];
-  const apts = allApts.filter(a => a.email === currentUser.email && !a.done && a.status !== 'cancelled').sort((a,b)=>a.date>b.date?1:-1).slice(0,3);
-  const el=document.getElementById('dashAppts');if(!el)return;
-  if(!apts.length){el.innerHTML='<div class="appt-empty"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><p>No upcoming appointments.</p></div>';return;}
-  el.innerHTML='<div class="appt-list">'+apts.map(a=>apptHTML(a)).join('')+'</div>';
-}
-function apptHTML(a){
-  const d=new Date(a.date);
-  const day=isNaN(d.getDate())?'–':d.getDate();
-  const mon=isNaN(d.getMonth())?'':d.toLocaleString('default',{month:'short'});
-  const statusStr = a.status ? a.status[0].toUpperCase() + a.status.slice(1) : (a.done ? 'Completed' : 'Upcoming');
-  return `<div class="appt-card"><div class="appt-date"><div class="appt-day">${day}</div><div class="appt-mon">${mon}</div></div><div class="appt-divider"></div><div class="appt-info"><div class="appt-title">${a.type}</div><div class="appt-meta">${a.time} · Counselling Unit</div></div><span class="appt-badge ${a.status==='confirmed'?'confirmed':(a.status==='completed'?'done':(a.status==='cancelled'?'cancelled':'upcoming'))}">${statusStr}</span></div>`;
-}
-function renderDashCareers(){
-  const interests=currentUser.careerInterests||[];
-  const el=document.getElementById('dashCareers');if(!el)return;
-  if(!interests.length){el.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:24px;color:var(--muted);font-size:0.88rem">Add career interests in your profile to see personalised recommendations.</div>';return;}
-  const matched=CAREERS.filter(c=>interests.some(i=>c.field===i||c.tags.includes(i))).slice(0,4);
-  if(!matched.length){el.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:24px;color:var(--muted);font-size:0.88rem">No exact matches. Try adding more interests in your profile.</div>';return;}
-  el.innerHTML=matched.map(c=>`<div class="career-card"><div class="career-icon" style="background:${c.bg}"><i class="ejo ejo-career" style="font-size:1.4rem; color:${c.stroke}"></i></div><div class="career-title">${c.title}</div><div class="career-match">Matches your interests</div><div class="career-desc">${c.desc}</div></div>`).join('');
-}
-
-// ── PROFILE ──
-function renderProfilePage(){
-  if(!currentUser)return;
-  const initials=(currentUser.firstName||'?')[0]+(currentUser.lastName||'?')[0];
-  document.getElementById('profName').textContent=currentUser.firstName+' '+currentUser.lastName;
-  document.getElementById('profEmail').textContent=currentUser.email;
-  document.getElementById('profInitials').textContent=initials;
-  if(currentUser.photoData){
-    const img=document.getElementById('profAvatarImg');
-    img.src=currentUser.photoData;img.style.display='block';
-    document.getElementById('profInitials').style.display='none';
-  }
-  document.getElementById('profBio').value=currentUser.bio||'';
-  const gEl=document.getElementById('profGrade');if(gEl&&currentUser.grade)gEl.value=currentUser.grade;
-  const sEl=document.getElementById('profStream');if(sEl&&currentUser.stream)sEl.value=currentUser.stream;
-  document.getElementById('profClass').value=currentUser.class||'';
-  document.getElementById('profIndex').value=currentUser.indexNo||'';
-  // skills
-  document.querySelectorAll('#profSkillPicker .tag-opt').forEach(el=>{
-    el.classList.toggle('sel',(currentUser.skills||[]).includes(el.textContent));
-  });
-  renderSkillsDisplay();
-  // career
-  document.querySelectorAll('#profCareerPicker .tag-opt').forEach(el=>{
-    el.classList.toggle('sel',(currentUser.careerInterests||[]).includes(el.textContent));
-  });
-  // cv
-  const cvD=document.getElementById('cvDisplay');
-  const cvA=document.getElementById('cvUploadArea');
-  if(currentUser.cvName){cvD.style.display='flex';cvA.style.display='none';document.getElementById('cvDisplayName').textContent=currentUser.cvName;}
-  else{cvD.style.display='none';cvA.style.display='flex';}
-  renderAchievements();
-}
-function renderSkillsDisplay(){
-  const skills=currentUser.skills||[];
-  const el=document.getElementById('profSkillsDisplay');if(!el)return;
-  el.innerHTML=skills.length?skills.map(s=>`<span class="skill-tag">${s}</span>`).join(''):'<span style="color:var(--muted);font-size:0.82rem">No skills added yet — select below.</span>';
-}
-function renderAchievements(){
-  const list=currentUser.achievements||[];
-  const el=document.getElementById('achievementList');if(!el)return;
-  el.innerHTML=list.length?list.map((a,i)=>`<div class="achievement-item"><div class="achievement-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div><div class="achievement-text">${a}</div><button onclick="removeAchievement(${i})" title="Remove"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>`).join(''):'<p style="color:var(--muted);font-size:0.85rem">No achievements added yet.</p>';
-}
-function saveAcademic(){
-  currentUser.grade=document.getElementById('profGrade').value;
-  currentUser.class=document.getElementById('profClass').value.trim();
-  currentUser.stream=document.getElementById('profStream').value;
-  currentUser.indexNo=document.getElementById('profIndex').value.trim();
-  persist();toast('Academic details saved!','success');
-}
-function saveSkills(){
-  currentUser.skills=[...document.querySelectorAll('#profSkillPicker .tag-opt.sel')].map(t=>t.textContent);
-  renderSkillsDisplay();persist();toast('Skills saved!','success');
-}
-function saveCareerInterests(){
-  currentUser.careerInterests=[...document.querySelectorAll('#profCareerPicker .tag-opt.sel')].map(t=>t.textContent);
-  persist();toast('Career interests saved!','success');
-}
-function saveFullProfile(){
-  currentUser.bio=document.getElementById('profBio').value.trim();
-  currentUser.grade=document.getElementById('profGrade').value;
-  currentUser.class=document.getElementById('profClass').value.trim();
-  currentUser.stream=document.getElementById('profStream').value;
-  currentUser.indexNo=document.getElementById('profIndex').value.trim();
-  currentUser.skills=[...document.querySelectorAll('#profSkillPicker .tag-opt.sel')].map(t=>t.textContent);
-  currentUser.careerInterests=[...document.querySelectorAll('#profCareerPicker .tag-opt.sel')].map(t=>t.textContent);
-  renderSkillsDisplay();persist();toast('Profile saved!','success');
-}
-function addAchievement(){
-  const input=document.getElementById('newAchievement');
-  const val=input.value.trim();if(!val)return;
-  if(!currentUser.achievements)currentUser.achievements=[];
-  currentUser.achievements.push(val);input.value='';
-  renderAchievements();persist();
-}
-function removeAchievement(i){
-  currentUser.achievements.splice(i,1);renderAchievements();persist();
-}
-function uploadCV(input){
-  const file=input.files[0];if(!file)return;
-  currentUser.cvName=file.name;
-  const reader=new FileReader();
-  reader.onload=e=>{
-    currentUser.cvData=e.target.result;persist();
-    document.getElementById('cvDisplay').style.display='flex';
-    document.getElementById('cvUploadArea').style.display='none';
-    document.getElementById('cvDisplayName').textContent=file.name;
-    toast('CV uploaded!','success');
-  };
-  reader.readAsDataURL(file);
-}
-function changeProfilePhoto(input){
-  const file=input.files[0];if(!file)return;
-  const reader=new FileReader();
-  reader.onload=e=>{
-    currentUser.photoData=e.target.result;persist();refreshTopbar();
-    const big=document.getElementById('profAvatarImg');
-    big.src=e.target.result;big.style.display='block';
-    document.getElementById('profInitials').style.display='none';
-    toast('Profile photo updated!','success');
-  };
-  reader.readAsDataURL(file);
-}
-function persist(){
-  DB.set('currentUser',currentUser);
-  const users=DB.get('users')||{};
-  users[currentUser.email]=currentUser;
-  DB.set('users',users);
-  updateRing(calcCompletion());
-  document.getElementById('stat-completion').textContent=calcCompletion()+'%';
-  document.getElementById('stat-careers').textContent=(currentUser.careerInterests||[]).length;
-}
-
-// ── CAREER EXPLORER ──
-function renderCareerExplorer(filter){
-  const grid=document.getElementById('careerExplorerGrid');if(!grid)return;
-  const list=filter==='All'?CAREERS:CAREERS.filter(c=>c.field.includes(filter)||c.tags.some(t=>t.includes(filter)));
-  grid.innerHTML=list.map(c=>`
-    <div class="career-exp-card" style="padding:20px;border-radius:12px;border:1px solid var(--cream-3);background:var(--white);">
-      <div style="display:flex;gap:15px;align-items:flex-start;margin-bottom:15px">
-        <div class="career-exp-icon" style="background:${c.bg};padding:12px;border-radius:10px;"><i class="ejo ejo-career" style="font-size:1.5rem; color:${c.stroke}"></i></div>
-        <div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--maroon-deep);line-height:1.1">${c.title}</div>
-          <div style="font-size:0.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-top:4px">${c.field}</div>
-        </div>
-      </div>
-      <p style="font-size:0.9rem;line-height:1.5;color:var(--ink-soft);margin-bottom:16px">${c.desc}</p>
-      
-      <div style="display:grid;grid-template-columns:1fr;gap:8px;font-size:0.85rem;color:var(--ink);">
-        <div style="background:var(--cream-1);padding:8px 12px;border-radius:6px"><strong>Salary:</strong> ${c.salary}</div>
-        <div style="background:var(--cream-1);padding:8px 12px;border-radius:6px"><strong>Qualifications:</strong> ${c.quals}</div>
-        <div style="background:var(--cream-1);padding:8px 12px;border-radius:6px"><strong>University Pathways:</strong> ${c.uni}</div>
-        <div style="background:var(--cream-1);padding:8px 12px;border-radius:6px"><strong>Recommended Subjects:</strong> ${c.subjects}</div>
-        <div style="background:var(--cream-1);padding:8px 12px;border-radius:6px"><strong>Sri Lanka Ops:</strong> ${c.local}</div>
-        <div style="background:var(--cream-1);padding:8px 12px;border-radius:6px"><strong>International Ops:</strong> ${c.intl}</div>
-      </div>
-    </div>
-  `).join('');
-}
-function filterCareers(filter,el){
-  document.querySelectorAll('.interest-pill').forEach(p=>p.classList.remove('active'));
-  el.classList.add('active');renderCareerExplorer(filter);
-}
-
-// ── APPOINTMENTS ──
-function renderApptsFull(){
-  const allApts = DB.get('appointments') || [];
-  const apts = allApts.filter(a => a.email === currentUser.email).sort((a,b)=>a.date>b.date?-1:1);
-  const countEl=document.getElementById('apptCount');
-  if(countEl)countEl.textContent=apts.length+' appointment'+(apts.length!==1?'s':'');
-  const el=document.getElementById('apptListFull');if(!el)return;
-  if(!apts.length){el.innerHTML='<div class="appt-empty" style="background:var(--white);border-radius:14px;border:1px solid var(--rule)"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><p>No appointments yet. Book your first session above!</p></div>';return;}
-  el.innerHTML='<div class="appt-list">'+apts.map(a=>apptHTML(a)).join('')+'</div>';
-}
-function submitBooking(){
-  const type=document.getElementById('bk-type').value;
-  const date=document.getElementById('bk-date').value;
-  const time=document.getElementById('bk-time').value;
-  const note=document.getElementById('bk-note').value.trim();
-  if(!date){toast('Please select a date.','error');return;}
-  
-  const allApts = DB.get('appointments') || [];
-  const apt = {
-    id: Date.now().toString(), type, date, time, note, done: false, status: 'pending', createdAt: new Date().toISOString(),
-    name: currentUser.firstName + ' ' + currentUser.lastName,
-    email: currentUser.email, grade: currentUser.grade, phone: currentUser.contact || ''
-  };
-  allApts.push(apt);
-  DB.set('appointments', allApts);
-  
-  closeModal('bookModal');
-  toast('Appointment request sent!','success');
-  renderDashAppts();renderApptsFull();
-  
-  const myApts = allApts.filter(a => a.email === currentUser.email);
-  document.getElementById('stat-appts').textContent=myApts.length;
-}
-
-// ── MODALS & TOAST ──
-function openModal(id){document.getElementById(id).classList.add('open');}
-function closeModal(id){document.getElementById(id).classList.remove('open');}
-document.querySelectorAll('.modal-overlay').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');}));
-let toastT;
-function toast(msg,type='success'){
-  const el=document.getElementById('toast');
-  const icon=type==='success'?'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>':'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e74c3c" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>';
-  el.innerHTML=icon+msg;el.className='show '+type;
-  clearTimeout(toastT);toastT=setTimeout(()=>el.className='',3000);
-}
-</script>
-
-<script id="global-loader-js">
-  (function(){
-    let loaderHidden = false;
-    const hideLoader = () => {
-      if(loaderHidden) return;
-      loaderHidden = true;
-      const loader = document.getElementById('global-loader');
-      if(loader) {
-        loader.style.opacity = '0';
-        setTimeout(() => loader.style.display = 'none', 500);
-      }
-    };
-    window.addEventListener('load', () => setTimeout(hideLoader, 300));
-    // Fail-safe
-    setTimeout(hideLoader, 2500);
-  })();
-</script>
-
-  <script src="/custom_select.js"></script>
+  <script src="/loader.js?v=9" defer></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+{
+  "name": "sjc-cgu",
+  "version": "1.0.0",
+  "description": "SJC Counselling & Guidance Unit",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.10.1",
+    "ssh2-sftp-client": "^12.1.1"
+  }
+}

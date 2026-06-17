@@ -29,6 +29,11 @@ function initCustomSelects() {
         // Build options list
         const optionsList = document.createElement('div');
         optionsList.className = 'custom-select-options';
+        optionsList.setAttribute('data-lenis-prevent', '');
+        
+        // Stop scroll propagation to prevent Lenis from stealing it
+        optionsList.addEventListener('wheel', (e) => e.stopPropagation());
+        optionsList.addEventListener('touchmove', (e) => e.stopPropagation());
         
         Array.from(select.options).forEach((option, index) => {
             const customOption = document.createElement('div');
