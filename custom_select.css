@@ -11,54 +11,73 @@
 
 .custom-select-trigger {
   width: 100%;
-  padding: 11px 14px;
-  border: 1.5px solid var(--cream-3, #e8dfc8);
-  border-radius: 9px;
+  padding: 13px 16px;
+  border: 1.5px solid var(--cream-3, #e6dcc6);
+  border-radius: 10px;
   font-size: 0.88rem;
-  color: var(--ink, #2a0808);
+  color: var(--ink, #1a0e0e);
   background: var(--white, #fff);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: all 0.2s ease;
+  gap: 10px;
+  transition: border-color .18s, box-shadow .18s;
   font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+}
+
+.custom-select-trigger:hover {
+  border-color: var(--maroon, #7a1818);
 }
 
 .custom-select-wrapper.open .custom-select-trigger {
   border-color: var(--maroon, #7a1818);
-  box-shadow: 0 0 0 3px rgba(122,24,24,0.08);
+  box-shadow: 0 0 0 4px rgba(122,24,24,0.08);
+}
+
+.custom-select-trigger span {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--ink, #1a0e0e);
+}
+
+.custom-select-trigger span.placeholder {
+  color: var(--muted, #7a6868);
 }
 
 .custom-select-trigger svg {
-  width: 14px;
-  height: 14px;
-  stroke: var(--muted, #7a6868);
-  transition: transform 0.25s ease;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  color: var(--muted, #7a6868);
+  transition: transform .22s cubic-bezier(.34,1.56,.64,1), color .18s;
 }
 
 .custom-select-wrapper.open .custom-select-trigger svg {
   transform: rotate(180deg);
-  stroke: var(--maroon, #7a1818);
+  color: var(--maroon, #7a1818);
 }
 
 .custom-select-options {
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 5px);
   left: 0;
   right: 0;
   background: #fff;
-  border: 1.5px solid var(--cream-3, #e8dfc8);
-  border-radius: 9px;
-  box-shadow: 0 10px 25px rgba(42,8,8,0.1);
+  border: 1.5px solid var(--cream-3, #e6dcc6);
+  border-radius: 10px;
+  box-shadow: 0 12px 36px rgba(42,8,8,0.13);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-8px);
-  transition: all 0.2s ease;
+  transform: translateY(-6px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
   z-index: 1000;
-  max-height: 220px;
+  max-height: 240px;
   overflow-y: auto;
-  padding: 6px;
+  padding: 5px;
 }
 
 .custom-select-wrapper.open .custom-select-options {
@@ -68,32 +87,53 @@
 }
 
 .custom-option {
-  padding: 10px 12px;
+  padding: 10px 13px;
   font-size: 0.86rem;
-  color: var(--ink, #2a0808);
-  border-radius: 6px;
+  color: var(--ink-soft, #3a2828);
+  border-radius: 7px;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  transition: background .13s, color .13s;
   font-family: 'Inter', sans-serif;
+  line-height: 1.4;
 }
 
-.custom-option:hover, .custom-option.selected {
-  background: rgba(122,24,24,0.05);
+.custom-option:hover {
+  background: rgba(122,24,24,0.06);
   color: var(--maroon, #7a1818);
-  font-weight: 500;
 }
 
-/* Custom Scrollbar for Dropdowns */
-.custom-select-options::-webkit-scrollbar {
-  width: 6px;
+.custom-option.selected {
+  background: rgba(122,24,24,0.07);
+  color: var(--maroon, #7a1818);
+  font-weight: 600;
 }
-.custom-select-options::-webkit-scrollbar-track {
-  background: transparent;
-}
+
+/* Scrollbar */
+.custom-select-options::-webkit-scrollbar { width: 5px; }
+.custom-select-options::-webkit-scrollbar-track { background: transparent; }
 .custom-select-options::-webkit-scrollbar-thumb {
-  background: var(--cream-3, #e8dfc8);
-  border-radius: 10px;
+  background: var(--cream-3, #e6dcc6);
+  border-radius: 4px;
 }
 .custom-select-options::-webkit-scrollbar-thumb:hover {
   background: var(--gold, #c9a84c);
 }
+
+/* ── Global top-nav fit ──────────────────────────────────────────────────────
+   The ornate brand block is wide; with 8 links + Portals + the Book Appointment
+   CTA, the full desktop nav only fits on wider screens. Shrink the brand a touch
+   and tighten link spacing so everything fits down to ~1210px, then collapse to
+   the burger menu at/below 1200px. Loaded on every public page (nav.main), so
+   all pages share one consistent breakpoint and never clip the CTA. */
+nav.main .brand-name { font-size: 1.06rem !important; line-height: 1.15 !important; }
+nav.main .brand-sub { font-size: 0.78rem !important; }
+nav.main .nav-links { gap: 0; }
+nav.main .nav-links a:not(.nav-cta) { padding: 7px 9px; }
+@media (max-width: 1200px) {
+  nav.main .nav-links { display: none !important; }
+  nav.main .burger { display: flex !important; }
+}
+
+/* Prevent decorative orbs / off-canvas elements from causing horizontal scroll
+   on mobile. `clip` (not `hidden`) so it never breaks the sticky nav. */
+html { overflow-x: clip; scroll-behavior: smooth; }

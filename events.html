@@ -643,17 +643,7 @@ loadEvents();
   <script src="/custom_select.js?v=7"></script>
 
   <!-- Smooth Scroll (Lenis) -->
-  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script>
-    if (typeof Lenis !== 'undefined') {
-      const lenis = 
-            param($m)
-            "new Lenis({`n      lerp: 0.1,`n      smoothWheel: true,`n      smoothTouch: false,`n    });`
-      function raf"
-        (time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
       requestAnimationFrame(raf);
     }
   </script>
