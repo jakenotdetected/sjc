@@ -426,16 +426,22 @@ footer{background:var(--maroon-deep);color:rgba(250,246,238,0.6);padding:72px 0 
   .cta-btns{flex-direction:column}
 }
 
-/* Logo Subtitle Canterbury Override */
-.brand-name, .footer-brand-name, .brand-sub, .footer-brand-sub, .tb-sub, .tb-role, #lLoginSub {
-    font-family: 'Cormorant Garamond', serif !important;
+/* Brand typography — Canterbury for both name and sub */
+.brand-name, .footer-brand-name {
+    font-family: 'Canterbury', serif !important;
     font-weight: 400 !important;
-    letter-spacing: 0.03em !important;
+    font-size: 1.06rem !important;
+    letter-spacing: 0.01em !important;
     text-transform: none !important;
 }
-.brand-name, .footer-brand-name { font-size: 1.6rem !important; }
-.brand-sub, .footer-brand-sub, .tb-sub, .tb-role, #lLoginSub { font-size: 1.25rem !important; }
-.brand-sub { color: var(--maroon-deep) !important; }
+.brand-sub, .footer-brand-sub {
+    font-family: 'Canterbury', serif !important;
+    font-weight: 400 !important;
+    font-size: 0.78rem !important;
+    letter-spacing: 0.04em !important;
+    text-transform: none !important;
+    color: var(--muted) !important;
+}
 
 
 /* Mobile Responsiveness Overrides */
