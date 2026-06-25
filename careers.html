@@ -27,7 +27,6 @@
   --rule:rgba(122,24,24,0.1);
   --shadow:0 4px 20px rgba(42,8,8,0.08);--shadow-lg:0 16px 50px rgba(42,8,8,0.18);
 }
-html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 ::selection{background:rgba(201,168,76,0.3);color:var(--maroon-deep)}
 ::-webkit-scrollbar{width:7px}::-webkit-scrollbar-thumb{background:var(--maroon);border-radius:4px}
@@ -48,13 +47,13 @@ a{color:inherit;text-decoration:none}
 
 nav.main{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(16px) saturate(130%);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--rule);transition:box-shadow .3s}
 nav.main.scrolled{box-shadow:0 4px 24px rgba(42,8,8,0.08)}
-.nav-inner{display:flex;align-items:center;height:76px;gap:16px}
+.nav-inner{display:flex;align-items:center;height:72px;gap:16px}
 .brand{display:flex;align-items:center;gap:14px;flex-shrink:0}
 .brand-logo{width:48px;height:48px;border-radius:10px;overflow:hidden;flex-shrink:0;background:#fff;display:flex;align-items:center;justify-content:center}
 .brand-logo img{width:100%;height:100%;object-fit:contain;padding:2px}
 .brand-logo-placeholder{font-weight:800;font-size:1.3rem;color:var(--gold)}
 .brand-name{font-family:'Canterbury', serif;font-weight:400;font-size:1.18rem;color:var(--maroon-deep);line-height:1.15}
-.brand-sub{font-size:0.9rem;color:var(--muted);letter-spacing:.16em;font-weight:500font-family:\'DM Sans\', sans-serif;text-transform:none;}
+.brand-sub{font-size:0.9rem;color:var(--muted);letter-spacing:.16em;font-weight:500;font-family:'DM Sans', sans-serif;text-transform:none;}
 .nav-links{display:flex;align-items:center;gap:2px;list-style:none;margin-left:auto}
 .nav-links a{color:var(--ink-soft);font-size:0.82rem;font-weight:500;padding:8px 12px;border-radius:6px;transition:all .18s;white-space:nowrap;position:relative}
 .nav-links a:hover{color:var(--maroon);background:rgba(122,24,24,0.05)}
@@ -206,7 +205,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
   .streams-grid{grid-template-columns:1fr 1fr}
   .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
 }
-@media(max-width:768px){
+@media(max-width:1100px){
   section{padding:60px 0}
   .careers-grid{grid-template-columns:1fr 1fr}
   .streams-grid{grid-template-columns:1fr}
@@ -249,7 +248,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 
 
 
-  <link rel="stylesheet" href="/custom_select.css" />
+  <link rel="stylesheet" href="/custom_select.css?v=3" />
   <link rel="icon" type="image/x-icon" href="./favicon-rounded.ico">
   <link rel="stylesheet" href="/loader.css?v=9">
 </head>
@@ -302,11 +301,9 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
         <li><a href="/school">School</a></li>
         <li><a href="/services">Services</a></li>
         <li><a href="/careers" class="active">Careers</a></li>
-        <li><a href="/university">University Guidance</a></li>
+        <li><a href="/university">University</a></li>
         <li><a href="/resources">Wellness</a></li>
         <li><a href="/events">Events</a></li>
-        <li></li>
-        <li></li>
         <li class="nav-dropdown">
           <button class="nav-dropdown-toggle" style="color:var(--ink-soft);font-size:0.82rem;font-weight:500;padding:8px 12px;border-radius:6px;background:none;border:none;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:all .18s">Portals<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
           <div class="nav-dropdown-menu" style="position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid rgba(122,24,24,0.1);border-radius:14px;box-shadow:0 12px 40px rgba(42,8,8,0.14);padding:8px;min-width:200px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .22s;z-index:200">
@@ -334,7 +331,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
     <a href="/">Home</a><a href="/about">About Unit</a>
     <a href="/school">School</a>
     <a href="/services">Services</a><a href="/careers" class="active">Career Guidance</a>
-    <a href="/university">University Guidance</a>
+    <a href="/university">University</a>
     <a href="/resources">Mental Wellness</a><a href="/events">Events</a>
     <a href="/portal">Student Portal</a>
             <a href="/teacher/">Teacher Portal</a>
@@ -713,7 +710,7 @@ window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scro
 const burger=document.getElementById('burger');const mobNav=document.getElementById('mobNav');
 document.getElementById('mobNavClose').addEventListener('click',()=>mobNav.classList.remove('open'));
 burger.addEventListener('click',()=>mobNav.classList.add('open'));
-const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -32px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 document.getElementById('streamTabs').addEventListener('click',function(e){
@@ -737,21 +734,14 @@ document.getElementById('streamTabs').addEventListener('click',function(e){
   <script src="/custom_select.js?v=7"></script>
 
   <!-- Smooth Scroll (Lenis) -->
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script>
     if (typeof Lenis !== 'undefined') {
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: 'vertical',
-        gestureDirection: 'vertical',
-        smooth: true,
-        mouseMultiplier: 1,
-        smoothTouch: false,
-        touchMultiplier: 2,
-        infinite: false,
-      });
-      function raf(time) {
+      const lenis = 
+            param($m)
+            "new Lenis({`n      lerp: 0.1,`n      smoothWheel: true,`n      smoothTouch: false,`n    });`
+      function raf"
+        (time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
       }

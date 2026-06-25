@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="theme-color" content="#2a0808"/>
-<title>Book Appointment — SJC Counselling</title>
+<title>Request Appointment â€” SJC Counselling</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
@@ -17,13 +17,13 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--maroon:#7a1818;--maroon-deep:#2a0808;--maroon-mid:#5a1010;--gold:#c9a84c;--gold-bright:#e8c96a;--cream:#faf6ee;--cream-2:#f1e9d8;--cream-3:#e6dcc6;--white:#ffffff;--ink:#1a0e0e;--ink-soft:#3a2828;--muted:#7a6868;--rule:rgba(122,24,24,0.1);--danger:#c0392b;--ok:#2d7a2d;--shadow:0 4px 20px rgba(42,8,8,0.08);--shadow-lg:0 16px 50px rgba(42,8,8,0.16)}
-html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
 ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-thumb{background:var(--maroon);border-radius:3px}
 a{text-decoration:none;color:inherit}
 
 /* NAV */
 nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--rule)}
-.nav-inner{display:flex;align-items:center;height:70px;padding:0 28px;gap:16px}
+.nav-inner{display:flex;align-items:center;height:72px;padding:0 28px;gap:16px}
 .brand{display:flex;align-items:center;gap:12px}
 .brand-logo{width:42px;height:42px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
 .brand-logo img{width:100%;height:100%;object-fit:contain;padding:2px}
@@ -102,7 +102,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 
 /* SUCCESS */
 #successView{display:none;text-align:center;padding:60px 0}
-.success-icon{width:90px;height:90px;background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto 24px;box-shadow:0 8px 24px rgba(45,122,45,0.2)}
+.success-icon{width:88px;height:88px;background:radial-gradient(circle at 50% 38%,#fbf4e2,#f1e3c4);border:1.5px solid #e7d3a0;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 10px 30px rgba(122,24,24,0.12)}
+.success-icon svg{width:42px;height:42px;color:var(--maroon-deep)}
 .success-title{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--maroon-deep);margin-bottom:14px}
 .success-sub{font-size:1rem;color:var(--muted);line-height:1.7;max-width:440px;margin:0 auto 32px}
 
@@ -116,10 +117,21 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 .mini-footer{background:var(--maroon-deep);color:rgba(250,246,238,0.5);text-align:center;padding:22px;font-size:0.8rem;border-top:1px solid rgba(201,168,76,0.15)}
 .mini-footer a{color:var(--gold)}
 
+/* MOBILE NAV */
+.mobile-nav{display:none;position:fixed;top:70px;left:0;right:0;background:#fff;border-bottom:1px solid var(--rule);z-index:99;box-shadow:0 8px 24px rgba(42,8,8,0.1);padding:12px 0}
+.mobile-nav.open{display:block}
+.mobile-nav a{display:block;padding:13px 24px;font-size:0.9rem;font-weight:500;color:var(--ink-soft);border-bottom:1px solid rgba(122,24,24,0.06);transition:all .15s}
+.mobile-nav a:hover{background:rgba(122,24,24,0.04);color:var(--maroon)}
+.mobile-nav a.nav-cta{margin:12px 16px;border-radius:8px;border-bottom:none;background:var(--maroon-deep);color:var(--cream);text-align:center;font-weight:700}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.burger span{transition:all .2s}
+
 /* RESPONSIVE */
 @media(max-width:900px){.booking-layout{grid-template-columns:1fr}.booking-sidebar{order:-1}}
-@media(max-width:768px){.nav-links{display:none}.burger{display:flex}.wrap{padding:0 16px}.booking-layout{padding:32px 0}.session-types{grid-template-columns:1fr}}
-@media(max-width:480px){.form-row{grid-template-columns:1fr}}
+@media(max-width:1100px){.nav-links{display:none}.burger{display:flex}.wrap{padding:0 16px}.booking-layout{padding:32px 0}.session-types{grid-template-columns:1fr}.page-hero{padding:40px 0 56px}}
+@media(max-width:480px){.form-row{grid-template-columns:1fr}.form-card{padding:20px 16px}.summary-card{padding:20px 16px}}
 
 /* Logo Subtitle Canterbury Override */
 .brand-sub, .footer-brand-sub {
@@ -146,9 +158,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 
 
 
-  <link rel="stylesheet" href="/custom_select.css" />
+  <link rel="stylesheet" href="/custom_select.css?v=3" />
   <link rel="icon" type="image/x-icon" href="./favicon-rounded.ico">
-  <script src="/mock_backend.js?v=2"></script>
+  <script src="/mock_backend.js?v=6"></script>
   <link rel="stylesheet" href="/loader.css?v=9">
 </head>
 <body>
@@ -178,7 +190,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
       <div class="brand-logo"><img src="logo.jpg" alt="SJC Logo"/></div>
       <div>
         <div class="brand-name" style="font-size: 1.15rem; line-height: 1.2;">SJC Counselling &amp; Career Guidance Unit</div>
-        <div class="brand-sub">Appointments</div>
+        <div class="brand-sub">St. Joseph's College &middot; Anuradhapura</div>
       </div>
     </a>
     <ul class="nav-links">
@@ -190,16 +202,23 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
             </li>
       <li><a href="/appointments" class="nav-cta">Book Now</a></li>
     </ul>
-    <button class="burger" onclick="alert('Menu coming soon')" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="burger" id="navBurger" onclick="toggleMobileNav()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/school">School</a>
+  <a href="/services">Services</a>
+  <a href="/appointments" class="nav-cta">Request Appointment</a>
+</div>
 
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="wrap" style="position:relative;z-index:1">
     <div class="page-hero-eyebrow"><span class="page-hero-line"></span>SJC Counselling<span class="page-hero-line"></span></div>
-    <h1>Book a Counselling Session</h1>
-    <p>Schedule a confidential one-to-one session with our qualified counsellors. Choose a date and time that works for you.</p>
+    <h1>Request a Counselling Session</h1>
+    <p>Submit a request for a confidential one-to-one session with our qualified counsellors. We will contact you to confirm the date and time.</p>
   </div>
 </div>
 
@@ -293,7 +312,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 
       <button class="btn btn-maroon" id="bookBtn" onclick="submitBooking()">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Confirm Appointment Booking
+        Request Appointment
       </button>
       <div class="auth-err" id="bookErr" style="color:var(--danger);font-size:0.85rem;font-weight:600;text-align:center;min-height:20px;margin-top:8px"></div>
     </div>
@@ -306,21 +325,21 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
           <div class="summary-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 12 15 2 8.5"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg></div>
           <div>
             <div class="summary-item-label">Student</div>
-            <div class="summary-item-value" id="sumName">—</div>
+            <div class="summary-item-value" id="sumName">â€”</div>
           </div>
         </div>
         <div class="summary-item">
           <div class="summary-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
           <div>
             <div class="summary-item-label">Grade &amp; Class</div>
-            <div class="summary-item-value" id="sumGradeClass">—</div>
+            <div class="summary-item-value" id="sumGradeClass">â€”</div>
           </div>
         </div>
         <div class="summary-item" id="sumStreamWrap" style="display:none;">
           <div class="summary-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg></div>
           <div>
             <div class="summary-item-label">Academic Stream</div>
-            <div class="summary-item-value" id="sumStream">—</div>
+            <div class="summary-item-value" id="sumStream">â€”</div>
           </div>
         </div>
         <div class="summary-item">
@@ -357,7 +376,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
           </div>
           <div class="info-box-item">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            Monday – Friday, 7:50 AM – 1:30 PM
+            Monday â€“ Friday, 7:50 AM â€“ 1:30 PM
           </div>
         </div>
         <div style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:12px;padding:14px;margin-top:16px;font-size:0.82rem;color:var(--muted)">
@@ -371,24 +390,43 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 
   <!-- SUCCESS VIEW -->
   <div id="successView">
-    <div class="success-icon">✅</div>
+    <div class="success-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    </div>
     <h2 class="success-title">Booking Request Submitted!</h2>
     <p class="success-sub">Your request has been sent successfully. Our Guidance Unit will review your issue and contact you via your preferred contact method to confirm the date and time.</p>
     <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
-      <a href="/portal" class="btn btn-maroon" style="width:auto;padding:14px 28px">View in My Portal</a>
-      <a href="/" class="btn" style="width:auto;padding:14px 28px;background:var(--cream-2);color:var(--ink);border-radius:10px">← Back to Home</a>
+      <a href="/" class="btn btn-maroon" style="width:auto;padding:14px 28px;display:inline-flex;align-items:center;gap:8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Home
+      </a>
     </div>
   </div>
 </div>
 
 <div class="mini-footer">
-  &copy; 2026 SJC Counselling — <a href="/">Back to Home</a> · <a href="/portal">Student Portal</a>
-            &nbsp;·&nbsp; Developed by <span style="color:var(--gold);font-weight:700">JAKE</span>
+  &copy; 2026 SJC Counselling â€” <a href="/">Back to Home</a>
+            &nbsp;Â·&nbsp; Developed by <span style="color:var(--gold);font-weight:700">JAKE</span>
 </div>
 
 <div id="toast"></div>
 
 <script>
+function toggleMobileNav() {
+  const nav = document.getElementById('mobileNav');
+  const btn = document.getElementById('navBurger');
+  const open = nav.classList.toggle('open');
+  btn.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+document.addEventListener('click', e => {
+  const nav = document.getElementById('mobileNav');
+  const btn = document.getElementById('navBurger');
+  if (nav && nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
+    nav.classList.remove('open'); btn.classList.remove('open'); document.body.style.overflow = '';
+  }
+});
+
 function handleGradeChange() {
   const grade = document.getElementById('bGrade').value;
   const streamWrap = document.getElementById('academicStreamWrap');
@@ -425,11 +463,11 @@ function handleContactMethodChange() {
 
 function updateSummary() {
   const n = document.getElementById('bName').value.trim();
-  document.getElementById('sumName').textContent = n || '—';
+  document.getElementById('sumName').textContent = n || 'â€”';
   
   const g = document.getElementById('bGrade').value;
   const c = document.getElementById('bClass').value;
-  let gradeClassVal = '—';
+  let gradeClassVal = 'â€”';
   if (g && c) {
     gradeClassVal = `${g} - Class ${c}`;
   } else if (g) {
@@ -450,6 +488,42 @@ function updateSummary() {
 
   const contact = document.getElementById('bContactMethod').value;
   document.getElementById('sumContact').textContent = contact;
+}
+
+// Stable per-device fingerprint (persisted; survives cache clear via localStorage,
+// and is rebuilt from device traits if localStorage is wiped). No MAC â€” browsers
+// cannot read it â€” so we hash hardware/screen/timezone/canvas traits instead.
+function getDeviceFingerprint() {
+  let fp = localStorage.getItem('sjc_device_id');
+  if (fp) return fp;
+  const parts = [
+    navigator.userAgent || '',
+    navigator.language || '',
+    (navigator.languages || []).join(','),
+    screen.width + 'x' + screen.height + 'x' + screen.colorDepth,
+    new Date().getTimezoneOffset(),
+    (Intl.DateTimeFormat().resolvedOptions().timeZone) || '',
+    navigator.hardwareConcurrency || '',
+    navigator.deviceMemory || '',
+    navigator.platform || ''
+  ];
+  try {
+    const c = document.createElement('canvas');
+    const ctx = c.getContext('2d');
+    ctx.textBaseline = 'top';
+    ctx.font = "14px 'Arial'";
+    ctx.fillStyle = '#f60'; ctx.fillRect(125, 1, 62, 20);
+    ctx.fillStyle = '#069'; ctx.fillText('SJC-CGU-fingerprint', 2, 15);
+    ctx.fillStyle = 'rgba(102,204,0,0.7)'; ctx.fillText('SJC-CGU-fingerprint', 4, 17);
+    parts.push(c.toDataURL());
+  } catch (e) {}
+  // FNV-1a hash of the joined traits
+  const str = parts.join('|||');
+  let h = 0x811c9dc5;
+  for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+  fp = (h >>> 0).toString(16).padStart(8, '0') + str.length.toString(16);
+  localStorage.setItem('sjc_device_id', fp);
+  return fp;
 }
 
 async function submitBooking() {
@@ -499,7 +573,8 @@ async function submitBooking() {
     date: 'TBD',
     time: 'TBD',
     contactMethod,
-    notes
+    notes,
+    fingerprint: getDeviceFingerprint()
   };
   
   try {
@@ -533,24 +608,17 @@ updateSummary();
 
 
 
-  <script src="/custom_select.js?v=7"></script>
+  <script src="/custom_select.js?v=8"></script>
 
   <!-- Smooth Scroll (Lenis) -->
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script>
     if (typeof Lenis !== 'undefined') {
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: 'vertical',
-        gestureDirection: 'vertical',
-        smooth: true,
-        mouseMultiplier: 1,
-        smoothTouch: false,
-        touchMultiplier: 2,
-        infinite: false,
-      });
-      function raf(time) {
+      const lenis = 
+            param($m)
+            "new Lenis({`n      lerp: 0.1,`n      smoothWheel: true,`n      smoothTouch: false,`n    });`
+      function raf"
+        (time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
       }

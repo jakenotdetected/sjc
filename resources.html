@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="theme-color" content="#2a0808"/>
-<title>Mental Wellness Resources — SJC Counselling</title>
+<title>Mental Wellness Resources â€” SJC Counselling</title>
 <meta name="description" content="Access mental wellness resources, stress management tips, mindfulness exercises, and support tools from the SJC Counselling."/>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -28,7 +28,6 @@
   --shadow:0 4px 20px rgba(42,8,8,0.08);--shadow-lg:0 16px 50px rgba(42,8,8,0.18);
   --green:#16a34a;--green-light:#dcfce7;
 }
-html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 ::selection{background:rgba(201,168,76,0.3);color:var(--maroon-deep)}
 ::-webkit-scrollbar{width:7px}::-webkit-scrollbar-thumb{background:var(--maroon);border-radius:4px}
@@ -49,13 +48,13 @@ a{color:inherit;text-decoration:none}
 
 nav.main{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(16px) saturate(130%);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--rule);transition:box-shadow .3s}
 nav.main.scrolled{box-shadow:0 4px 24px rgba(42,8,8,0.08)}
-.nav-inner{display:flex;align-items:center;height:76px;gap:16px}
+.nav-inner{display:flex;align-items:center;height:72px;gap:16px}
 .brand{display:flex;align-items:center;gap:14px;flex-shrink:0}
 .brand-logo{width:48px;height:48px;border-radius:10px;overflow:hidden;flex-shrink:0;background:#fff;display:flex;align-items:center;justify-content:center}
 .brand-logo img{width:100%;height:100%;object-fit:contain;padding:2px}
 .brand-logo-placeholder{font-weight:800;font-size:1.3rem;color:var(--gold)}
 .brand-name{font-family:'Canterbury', serif;font-weight:400;font-size:1.18rem;color:var(--maroon-deep);line-height:1.15}
-.brand-sub{font-size:0.9rem;color:var(--muted);letter-spacing:.16em;font-weight:500font-family:\'DM Sans\', sans-serif;text-transform:none;}
+.brand-sub{font-size:0.9rem;color:var(--muted);letter-spacing:.16em;font-weight:500;font-family:'DM Sans', sans-serif;text-transform:none;}
 .nav-links{display:flex;align-items:center;gap:2px;list-style:none;margin-left:auto}
 .nav-links a{color:var(--ink-soft);font-size:0.82rem;font-weight:500;padding:8px 12px;border-radius:6px;transition:all .18s;white-space:nowrap;position:relative}
 .nav-links a:hover{color:var(--maroon);background:rgba(122,24,24,0.05)}
@@ -162,6 +161,7 @@ section{padding:88px 0}
 
 /* AFFIRMATIONS */
 .affirmations-wrap{background:linear-gradient(135deg,var(--cream),var(--cream-2));border-radius:20px;padding:48px;text-align:center;border:1px solid var(--cream-3)}
+.mood-aff-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .affirmation-text{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:500;color:var(--maroon-deep);line-height:1.45;margin:20px 0;font-style:italic;min-height:80px;transition:opacity .5s}
 .affirmation-author{font-size:0.82rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
 .affirmation-btn{margin-top:24px;padding:12px 28px;background:var(--maroon-deep);color:var(--cream);border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:0.83rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:all .18s}
@@ -215,11 +215,12 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
   .breathing-card{flex-direction:column;text-align:center;padding:40px 32px}
   .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
 }
-@media(max-width:768px){
+@media(max-width:1100px){
   section{padding:60px 0}
   .wellness-grid{grid-template-columns:1fr 1fr}
   .tips-cols{grid-template-columns:1fr}
   .crisis-grid{grid-template-columns:1fr}
+  .mood-aff-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .nav-links{display:none}
   .burger{display:flex}
@@ -251,7 +252,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 
 
 
-  <link rel="stylesheet" href="/custom_select.css" />
+  <link rel="stylesheet" href="/custom_select.css?v=3" />
   <link rel="icon" type="image/x-icon" href="./favicon-rounded.ico">
   <link rel="stylesheet" href="/loader.css?v=9">
 </head>
@@ -304,11 +305,9 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
         <li><a href="/school">School</a></li>
         <li><a href="/services">Services</a></li>
         <li><a href="/careers">Careers</a></li>
-        <li><a href="/university">University Guidance</a></li>
+        <li><a href="/university">University</a></li>
         <li><a href="/resources" class="active">Wellness</a></li>
         <li><a href="/events">Events</a></li>
-        <li></li>
-        <li></li>
         <li class="nav-dropdown">
           <button class="nav-dropdown-toggle" style="color:var(--ink-soft);font-size:0.82rem;font-weight:500;padding:8px 12px;border-radius:6px;background:none;border:none;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:all .18s">Portals<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
           <div class="nav-dropdown-menu" style="position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid rgba(122,24,24,0.1);border-radius:14px;box-shadow:0 12px 40px rgba(42,8,8,0.14);padding:8px;min-width:200px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .22s;z-index:200">
@@ -336,7 +335,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
     <a href="/">Home</a><a href="/about">About Unit</a>
     <a href="/school">School</a>
     <a href="/services">Services</a><a href="/careers">Career Guidance</a>
-    <a href="/university">University Guidance</a>
+    <a href="/university">University</a>
     <a href="/resources" class="active">Mental Wellness</a><a href="/events">Events</a>
     <a href="/portal">Student Portal</a>
             <a href="/teacher/">Teacher Portal</a>
@@ -349,7 +348,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
   <div class="page-hero-orb"></div>
   <div class="page-hero-pattern"></div>
   <div class="wrap page-hero-inner">
-    <div class="page-breadcrumb"><a href="/">Home</a><span class="page-breadcrumb-sep">›</span><span>Mental Wellness</span></div>
+    <div class="page-breadcrumb"><a href="/">Home</a><span class="page-breadcrumb-sep">â€º</span><span>Mental Wellness</span></div>
     <div class="page-eyebrow"><span class="page-eyebrow-line"></span>Your Wellbeing Matters</div>
     <h1>Mental <em>Wellness<br/>Resources</em></h1>
     <p class="page-hero-lead">Tools, exercises, and guidance to help you manage stress, build resilience, and maintain positive mental health through every stage of school life.</p>
@@ -442,36 +441,36 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
         <div class="tip-section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
         <div class="tip-section-title">During Exam Season</div>
         <div class="tip-list">
-          <div class="tip-item"><span class="tip-check">✓</span>Create a realistic study timetable and stick to it</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Take a 10-minute break every 50 minutes of study</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Get 7–8 hours of sleep — your brain consolidates memory overnight</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Eat proper meals and stay hydrated — avoid all-nighters</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Talk to someone if exam worry feels too big to handle alone</div>
-          <div class="tip-item"><span class="tip-check">✓</span>On exam day: breathe deeply, read questions twice, start with what you know</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Create a realistic study timetable and stick to it</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Take a 10-minute break every 50 minutes of study</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Get 7â€“8 hours of sleep â€” your brain consolidates memory overnight</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Eat proper meals and stay hydrated â€” avoid all-nighters</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Talk to someone if exam worry feels too big to handle alone</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>On exam day: breathe deeply, read questions twice, start with what you know</div>
         </div>
       </div>
       <div class="tip-section tip-section-2 reveal reveal-delay-1">
         <div class="tip-section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
         <div class="tip-section-title">Daily Mental Health Habits</div>
         <div class="tip-list">
-          <div class="tip-item"><span class="tip-check">✓</span>Spend at least 30 minutes outdoors or doing physical activity each day</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Limit social media use to less than 1 hour per day during term</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Practise gratitude — write down 3 good things each day before bed</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Maintain a consistent bedtime and wake-up time</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Connect with at least one friend or family member each day</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Do one thing you enjoy every day — music, art, sport, or cooking</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Spend at least 30 minutes outdoors or doing physical activity each day</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Limit social media use to less than 1 hour per day during term</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Practise gratitude â€” write down 3 good things each day before bed</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Maintain a consistent bedtime and wake-up time</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Connect with at least one friend or family member each day</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Do one thing you enjoy every day â€” music, art, sport, or cooking</div>
         </div>
       </div>
       <div class="tip-section tip-section-3 reveal reveal-delay-2">
         <div class="tip-section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></div>
         <div class="tip-section-title">When You Feel Overwhelmed</div>
         <div class="tip-list">
-          <div class="tip-item"><span class="tip-check">✓</span>Stop and take 5 slow, deep breaths before doing anything</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Write down what is worrying you — getting it out of your head helps</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Break the problem into the smallest possible next step</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Talk to a trusted friend, teacher, or family member</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Go for a walk — physical movement shifts mental state</div>
-          <div class="tip-item"><span class="tip-check">✓</span>Visit the counselling unit — you don't need to go through it alone</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Stop and take 5 slow, deep breaths before doing anything</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Write down what is worrying you â€” getting it out of your head helps</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Break the problem into the smallest possible next step</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Talk to a trusted friend, teacher, or family member</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Go for a walk â€” physical movement shifts mental state</div>
+          <div class="tip-item"><span class="tip-check">âœ“</span>Visit the counselling unit â€” you don't need to go through it alone</div>
         </div>
       </div>
     </div>
@@ -481,7 +480,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 <!-- MOOD CHECK & AFFIRMATIONS -->
 <section style="background:var(--cream)">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+    <div class="mood-aff-grid">
       <div class="mood-tracker reveal">
         <div class="mood-title">Daily Mood Check</div>
         <div class="mood-subtitle">How are you feeling today? Tracking your mood helps you notice patterns and seek support when needed.</div>
@@ -495,12 +494,12 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
         </div>
         <textarea autocomplete="off" class="mood-note" rows="3" placeholder="Any notes about how you're feeling today? (optional)"></textarea>
         <button class="mood-save" onclick="saveMood()">Save Entry</button>
-        <div class="mood-saved" id="moodSaved">✓ Mood saved — thanks for checking in with yourself!</div>
+        <div class="mood-saved" id="moodSaved">âœ“ Mood saved â€” thanks for checking in with yourself!</div>
       </div>
       <div class="affirmations-wrap reveal reveal-delay-1">
         <div class="sec-eyebrow" style="justify-content:center"><span class="sec-eyebrow-line"></span>Daily Affirmation</div>
         <div class="affirmation-text" id="affirmationText">"You are stronger than you think, braver than you feel, and smarter than you know."</div>
-        <div class="affirmation-author" id="affirmationAuthor">— A.A. Milne</div>
+        <div class="affirmation-author" id="affirmationAuthor">â€” A.A. Milne</div>
         <button class="affirmation-btn" onclick="nextAffirmation()">Next Affirmation</button>
       </div>
     </div>
@@ -519,19 +518,19 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
       <div class="crisis-card crisis-card-urgent">
         <div class="crisis-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
         <div>
-          <div class="crisis-title">Emergency — Immediate Danger</div>
+          <div class="crisis-title">Emergency â€” Immediate Danger</div>
           <p class="crisis-text">If you or someone is in immediate danger of harm, call emergency services right away.</p>
-          <div class="crisis-contact">119 — Police &amp; Emergency Services</div>
-          <div class="crisis-contact" style="margin-top:6px">110 — Ambulance</div>
+          <div class="crisis-contact">119 â€” Police &amp; Emergency Services</div>
+          <div class="crisis-contact" style="margin-top:6px">110 â€” Ambulance</div>
         </div>
       </div>
       <div class="crisis-card crisis-card-support">
         <div class="crisis-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
         <div>
-          <div class="crisis-title">Mental Health Helpline — Sri Lanka</div>
+          <div class="crisis-title">Mental Health Helpline â€” Sri Lanka</div>
           <p class="crisis-text">Free, confidential counselling helpline available to anyone in Sri Lanka facing emotional difficulties.</p>
-          <div class="crisis-contact">1926 — Sumithrayo Sri Lanka</div>
-          <div class="crisis-contact" style="margin-top:6px">0800 222 200 — Mental Health Helpline</div>
+          <div class="crisis-contact">1926 â€” Sumithrayo Sri Lanka</div>
+          <div class="crisis-contact" style="margin-top:6px">0800 222 200 â€” Mental Health Helpline</div>
         </div>
       </div>
       <div class="crisis-card crisis-card-talk">
@@ -561,7 +560,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
     <div class="cta-band-inner">
       <div>
         <h2>Struggling? Our counsellors are <em>here for you.</em></h2>
-        <p>Book a confidential wellness session — free for all Josephians, no referral needed.</p>
+        <p>Book a confidential wellness session â€” free for all Josephians, no referral needed.</p>
       </div>
       <div class="cta-band-btns">
         <a href="/appointments" class="btn btn-gold btn-lg">Book Wellness Session</a>
@@ -604,7 +603,7 @@ window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scro
 const burger=document.getElementById('burger');const mobNav=document.getElementById('mobNav');
 document.getElementById('mobNavClose').addEventListener('click',()=>mobNav.classList.remove('open'));
 burger.addEventListener('click',()=>mobNav.classList.add('open'));
-const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -32px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 // Mood tracker
@@ -621,14 +620,14 @@ function saveMood(){
 
 // Affirmations
 const affirmations=[
-  {t:'"You are stronger than you think, braver than you feel, and smarter than you know."',a:'— A.A. Milne'},
-  {t:'"It does not matter how slowly you go as long as you do not stop."',a:'— Confucius'},
-  {t:'"Believe you can and you\'re halfway there."',a:'— Theodore Roosevelt'},
-  {t:'"In the middle of every difficulty lies opportunity."',a:'— Albert Einstein'},
-  {t:'"The secret of getting ahead is getting started."',a:'— Mark Twain'},
-  {t:'"You don\'t have to be perfect to be amazing."',a:'— Unknown'},
-  {t:'"Hard times may have held you down, but they will not last forever."',a:'— Unknown'},
-  {t:'"Every expert was once a beginner. Every pro was once an amateur."',a:'— Robin Sharma'},
+  {t:'"You are stronger than you think, braver than you feel, and smarter than you know."',a:'â€” A.A. Milne'},
+  {t:'"It does not matter how slowly you go as long as you do not stop."',a:'â€” Confucius'},
+  {t:'"Believe you can and you\'re halfway there."',a:'â€” Theodore Roosevelt'},
+  {t:'"In the middle of every difficulty lies opportunity."',a:'â€” Albert Einstein'},
+  {t:'"The secret of getting ahead is getting started."',a:'â€” Mark Twain'},
+  {t:'"You don\'t have to be perfect to be amazing."',a:'â€” Unknown'},
+  {t:'"Hard times may have held you down, but they will not last forever."',a:'â€” Unknown'},
+  {t:'"Every expert was once a beginner. Every pro was once an amateur."',a:'â€” Robin Sharma'},
 ];
 let affIdx=0;
 function nextAffirmation(){
@@ -671,21 +670,14 @@ function runBreathPhase(){
   <script src="/custom_select.js?v=7"></script>
 
   <!-- Smooth Scroll (Lenis) -->
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script>
     if (typeof Lenis !== 'undefined') {
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: 'vertical',
-        gestureDirection: 'vertical',
-        smooth: true,
-        mouseMultiplier: 1,
-        smoothTouch: false,
-        touchMultiplier: 2,
-        infinite: false,
-      });
-      function raf(time) {
+      const lenis = 
+            param($m)
+            "new Lenis({`n      lerp: 0.1,`n      smoothWheel: true,`n      smoothTouch: false,`n    });`
+      function raf"
+        (time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
       }

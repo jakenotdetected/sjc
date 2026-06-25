@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emoji Demo – Updated Stroke‑Only Icons</title>
+  <title>Emoji Demo â€“ Updated Strokeâ€‘Only Icons</title>
   <link rel="stylesheet" href="/emojis.css" />
   <style>
 @font-face {
@@ -32,90 +32,27 @@
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet"/>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-<style id="global-loader-css">
-#global-loader {
-  position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  background: #1a0404;
-  z-index: 999999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.5s ease-out, visibility 0.5s;
-}
-.loader-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: loaderFadeUp 0.8s ease-out;
-}
-.loader-logo {
-  width: 75px;
-  height: 75px;
-  border-radius: 16px;
-  object-fit: cover;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  margin-bottom: 24px;
-  animation: loaderSubtlePulse 2s infinite ease-in-out;
-}
-.loader-text {
-  font-family: 'Canterbury', 'DM Serif Display', serif;
-  font-size: 1.25rem;
-  letter-spacing: 0.05em;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #c9a84c 0%, #fff6e0 50%, #c9a84c 100%);
-  background-size: 200% auto;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: loaderShimmer 2.5s linear infinite;
-}
-.loader-bar {
-  width: 150px;
-  height: 2px;
-  background: rgba(201, 168, 76, 0.15);
-  border-radius: 2px;
-  overflow: hidden;
-  position: relative;
-}
-.loader-bar-fill {
-  position: absolute;
-  top: 0; left: 0; height: 100%;
-  width: 0%;
-  background: #c9a84c;
-  border-radius: 2px;
-  animation: loaderFillBar 1.5s cubic-bezier(0.77, 0, 0.17, 1) infinite;
-}
-@keyframes loaderFadeUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes loaderSubtlePulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); box-shadow: 0 15px 40px rgba(201,168,76,0.2); }
-}
-@keyframes loaderShimmer {
-  to { background-position: 200% center; }
-}
-@keyframes loaderFillBar {
-  0% { width: 0%; left: 0; }
-  50% { width: 100%; left: 0; }
-  100% { width: 100%; left: 100%; }
-}
-</style>
 
-  <link rel="stylesheet" href="/custom_select.css" />
+
+  <link rel="stylesheet" href="/custom_select.css?v=3" />
   <link rel="icon" type="image/x-icon" href="./favicon-rounded.ico">
+  <link rel="stylesheet" href="/loader.css?v=9">
 </head>
 <body>
+  <!-- Page Loader Overlay -->
+  <div id="sjc-page-loader">
+    <div class="sjc-loader-content">
+      <img class="sjc-loader-logo" src="/logo.jpg" alt="SJC Logo">
+      <h1 class="sjc-loader-title">St. Joseph's College</h1>
+      <p class="sjc-loader-sub">Career Guidance Unit</p>
+      <div class="sjc-loader-bar">
+        <div class="sjc-loader-progress"></div>
+      </div>
+    </div>
+  </div>
 
 <!-- Global Loader HTML -->
-<div id="global-loader">
-  <div class="loader-content">
-    <img src="/St.-Josephs-College-Anuradhapura-Logo (1).jpg" alt="SJC Logo" class="loader-logo">
-    <div class="loader-text" style="font-size:1rem;">SJC Counselling &amp; Career Guidance Unit</div>
+
     <div class="loader-bar">
       <div class="loader-bar-fill"></div>
     </div>
@@ -124,7 +61,7 @@
   <div class="loader-spinner"></div>
 </div>
 
-  <h1>Updated Emoji Set – Stroke‑Only Line‑Art</h1>
+  <h1>Updated Emoji Set â€“ Strokeâ€‘Only Lineâ€‘Art</h1>
   <p>This page demonstrates the 18 custom emojis that were modified to use <code>fill="none"</code> and <code>stroke="currentColor"</code>. They inherit the surrounding text color, making them easy to theme.</p>
   <div class="grid">
     <div class="card"><i class="ejo ejo-anxious icon" aria-hidden="true"></i><div class="label">Anxious</div></div>
@@ -147,24 +84,26 @@
     <div class="card"><i class="ejo ejo-cloud icon" aria-hidden="true"></i><div class="label">Cloud</div></div>
   </div>
 
-<script id="global-loader-js">
-  (function(){
-    let loaderHidden = false;
-    const hideLoader = () => {
-      if(loaderHidden) return;
-      loaderHidden = true;
-      const loader = document.getElementById('global-loader');
-      if(loader) {
-        loader.style.opacity = '0';
-        setTimeout(() => loader.style.display = 'none', 500);
-      }
-    };
-    window.addEventListener('load', () => setTimeout(hideLoader, 300));
-    // Fail-safe
-    setTimeout(hideLoader, 2500);
-  })();
-</script>
 
-  <script src="/custom_select.js"></script>
+
+  <script src="/custom_select.js?v=7"></script>
+
+  <!-- Smooth Scroll (Lenis) -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script>
+    if (typeof Lenis !== 'undefined') {
+      const lenis = 
+            param($m)
+            "new Lenis({`n      lerp: 0.1,`n      smoothWheel: true,`n      smoothTouch: false,`n    });`
+      function raf"
+        (time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    }
+  </script>
+  <script src="/loader.js?v=9" defer></script>
 </body>
+
 </html>
