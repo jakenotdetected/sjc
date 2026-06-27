@@ -1,85 +1,182 @@
-#sjc-page-loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(135deg, #2a0808 0%, #170303 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 999999;
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.45s;
-}
-#sjc-page-loader.fade-out {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-.sjc-loader-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-}
-.sjc-loader-logo {
-  width: 90px;
-  height: 90px;
-  border-radius: 16px !important;
-  border: none !important;
-  outline: none !important;
-  clip-path: inset(4% round 16px) !important;
-  box-shadow: 0 0 20px rgba(201, 168, 76, 0.25);
-  animation: sjc-logo-pulse 2.2s ease-in-out infinite;
-  object-fit: cover;
-  overflow: hidden !important;
-}
-.sjc-loader-title {
-  font-family: 'Canterbury', 'DM Serif Display', serif;
-  font-size: 1.25rem;
-  color: #c9a84c;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
-}
-.sjc-loader-sub {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
-  color: rgba(250, 246, 238, 0.75);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-top: -8px;
-  text-align: center;
-}
-.sjc-loader-bar {
-  width: 120px;
-  height: 2px;
-  background: rgba(250, 246, 238, 0.1);
-  border-radius: 2px;
-  overflow: hidden;
-  position: relative;
-  margin-top: 10px;
-}
-.sjc-loader-progress {
-  width: 40%;
-  height: 100%;
-  background: #c9a84c;
-  border-radius: 2px;
-  position: absolute;
-  left: 0;
-  animation: sjc-progress-loop 1.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+/* Red cartoon ocean-wave page transition. Old loading-screen markup stays hidden. */
+#sjc-page-loader,
+.loader-bar,
+.loader-spinner {
+  display: none !important;
 }
 
-@keyframes sjc-logo-pulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(201, 168, 76, 0.25); }
-  50% { transform: scale(1.05); box-shadow: 0 0 35px rgba(201, 168, 76, 0.45); }
+.sjc-wave-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 120ms ease, visibility 120ms ease;
 }
-@keyframes sjc-progress-loop {
-  0% { left: -40%; width: 30%; }
-  50% { width: 40%; }
-  100% { left: 110%; width: 20%; }
+
+.sjc-wave-transition.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sjc-ocean-panel {
+  position: absolute;
+  top: 0;
+  width: 56vw;
+  height: 100%;
+  transition: transform 760ms cubic-bezier(0.15, 0.92, 0.17, 1);
+  will-change: transform;
+}
+
+.sjc-ocean-left {
+  left: 0;
+  transform: translateX(-122%);
+}
+
+.sjc-ocean-right {
+  right: 0;
+  transform: translateX(122%);
+}
+
+.sjc-wave-transition.is-active .sjc-ocean-left,
+.sjc-wave-transition.is-active .sjc-ocean-right {
+  transform: translateX(0);
+}
+
+.sjc-ocean-water {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 26% 20%, rgba(255, 255, 255, 0.25) 0 4.7rem, transparent 4.95rem),
+    radial-gradient(ellipse at 72% 76%, rgba(255, 255, 255, 0.16) 0 2.8rem, transparent 3.05rem),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 2.1rem,
+      rgba(255, 255, 255, 0.16) 2.1rem 2.55rem,
+      transparent 2.55rem 4.8rem
+    ),
+    linear-gradient(135deg, #ff3b3f 0%, #df1024 45%, #9a0618 100%);
+  box-shadow: inset 0 0 3rem rgba(82, 0, 11, 0.32);
+  animation: sjc-water-shimmer 520ms ease-in-out infinite alternate;
+}
+
+.sjc-ocean-crest {
+  position: absolute;
+  top: -14%;
+  width: min(34vw, 24rem);
+  height: 128%;
+  overflow: visible;
+  filter: drop-shadow(0 0 0.7rem rgba(82, 0, 12, 0.48));
+  animation: sjc-wave-roll 640ms ease-in-out infinite alternate;
+}
+
+.sjc-ocean-left .sjc-ocean-crest {
+  right: calc(min(34vw, 24rem) * -0.82);
+}
+
+.sjc-ocean-right .sjc-ocean-crest {
+  left: calc(min(34vw, 24rem) * -0.82);
+  transform: scaleX(-1);
+}
+
+.sjc-ocean-fill {
+  fill: url(#sjc-red-wave-fill);
+}
+
+.sjc-ocean-foam {
+  fill: none;
+  stroke: rgba(255, 245, 230, 0.9);
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 130 34;
+  animation: sjc-foam-race 720ms linear infinite;
+}
+
+.sjc-ocean-highlight {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.34);
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-dasharray: 80 70;
+  animation: sjc-foam-race 540ms linear infinite reverse;
+}
+
+.sjc-wave-splash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(38vw, 20rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(255, 245, 230, 0.9) 0 10%, transparent 11%),
+    repeating-conic-gradient(
+      from 4deg,
+      rgba(255, 245, 230, 0.78) 0 6deg,
+      transparent 6deg 15deg
+    );
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.3) rotate(0deg);
+}
+
+.sjc-wave-transition.is-active .sjc-wave-splash {
+  animation: sjc-splash-pop 480ms cubic-bezier(0.2, 0.9, 0.22, 1) 310ms both;
+}
+
+body.sjc-transitioning {
+  cursor: progress;
+}
+
+@keyframes sjc-wave-roll {
+  0% {
+    translate: 0 -2.4rem;
+  }
+  100% {
+    translate: 0 2.4rem;
+  }
+}
+
+@keyframes sjc-foam-race {
+  to {
+    stroke-dashoffset: -90;
+  }
+}
+
+@keyframes sjc-water-shimmer {
+  from {
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  to {
+    background-position: 0 0, 0 0, 1.8rem 0.6rem, 0 0;
+  }
+}
+
+@keyframes sjc-splash-pop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3) rotate(0deg);
+  }
+  44% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1) rotate(10deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.35) rotate(20deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sjc-ocean-panel,
+  .sjc-ocean-water,
+  .sjc-ocean-crest,
+  .sjc-ocean-foam,
+  .sjc-ocean-highlight,
+  .sjc-wave-splash {
+    animation: none !important;
+    transition: none !important;
+  }
 }
