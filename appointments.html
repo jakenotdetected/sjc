@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="theme-color" content="#2a0808"/>
-<title>Request Appointment â€” SJC Counselling</title>
+<title>Request Appointment – SJC Counselling</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
@@ -325,21 +325,21 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
           <div class="summary-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 12 15 2 8.5"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg></div>
           <div>
             <div class="summary-item-label">Student</div>
-            <div class="summary-item-value" id="sumName">â€”</div>
+            <div class="summary-item-value" id="sumName">–</div>
           </div>
         </div>
         <div class="summary-item">
           <div class="summary-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
           <div>
             <div class="summary-item-label">Grade &amp; Class</div>
-            <div class="summary-item-value" id="sumGradeClass">â€”</div>
+            <div class="summary-item-value" id="sumGradeClass">–</div>
           </div>
         </div>
         <div class="summary-item" id="sumStreamWrap" style="display:none;">
           <div class="summary-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg></div>
           <div>
             <div class="summary-item-label">Academic Stream</div>
-            <div class="summary-item-value" id="sumStream">â€”</div>
+            <div class="summary-item-value" id="sumStream">–</div>
           </div>
         </div>
         <div class="summary-item">
@@ -376,7 +376,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
           </div>
           <div class="info-box-item">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            Monday â€“ Friday, 7:50 AM â€“ 1:30 PM
+            Monday — Friday, 7:50 AM — 1:30 PM
           </div>
         </div>
         <div style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:12px;padding:14px;margin-top:16px;font-size:0.82rem;color:var(--muted)">
@@ -405,8 +405,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 </div>
 
 <div class="mini-footer">
-  &copy; 2026 SJC Counselling â€” <a href="/">Back to Home</a>
-            &nbsp;Â·&nbsp; Developed by <span style="color:var(--gold);font-weight:700">JAKE</span>
+  &copy; 2026 SJC Counselling – <a href="/">Back to Home</a>
+            &nbsp;·&nbsp; Developed by <span style="color:var(--gold);font-weight:700">JAKE</span>
 </div>
 
 <div id="toast"></div>
@@ -463,11 +463,11 @@ function handleContactMethodChange() {
 
 function updateSummary() {
   const n = document.getElementById('bName').value.trim();
-  document.getElementById('sumName').textContent = n || 'â€”';
+  document.getElementById('sumName').textContent = n || '–';
   
   const g = document.getElementById('bGrade').value;
   const c = document.getElementById('bClass').value;
-  let gradeClassVal = 'â€”';
+  let gradeClassVal = '–';
   if (g && c) {
     gradeClassVal = `${g} - Class ${c}`;
   } else if (g) {
@@ -491,8 +491,8 @@ function updateSummary() {
 }
 
 // Stable per-device fingerprint (persisted; survives cache clear via localStorage,
-// and is rebuilt from device traits if localStorage is wiped). No MAC â€” browsers
-// cannot read it â€” so we hash hardware/screen/timezone/canvas traits instead.
+// and is rebuilt from device traits if localStorage is wiped). No MAC – browsers
+// cannot read it – so we hash hardware/screen/timezone/canvas traits instead.
 function getDeviceFingerprint() {
   let fp = localStorage.getItem('sjc_device_id');
   if (fp) return fp;

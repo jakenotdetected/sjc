@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="theme-color" content="#2a0808"/>
 <title>University Guidance Portal - SJC Counselling</title>
-<meta name="description" content="Explore the full range of counselling and guidance services offered at SJC â€” personal counselling, career guidance, academic support, mental wellness, and more."/>
+<meta name="description" content="Explore the full range of counselling and guidance services offered at SJC – personal counselling, career guidance, academic support, mental wellness, and more."/>
 <link rel="icon" type="image/x-icon" href="./favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -564,7 +564,7 @@ html, body { overflow-x: clip !important; }
         </div>
 
         <a id="uni-link" href="#" target="_blank" class="ud-visit-btn">
-          Visit Official Website â†’
+          Visit Official Website →
         </a>
       </div>
     </div>
@@ -586,7 +586,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const short = uni.short || uni.name.split(' ').map(w => w[0]).join('').slice(0, 4);
 
   // Page title & breadcrumb
-  document.title = uni.name + ' â€” SJC University Guidance';
+  document.title = uni.name + ' – SJC University Guidance';
   document.getElementById('bc-name').textContent = uni.name;
   document.getElementById('hero-location').textContent = uni.location;
 
@@ -653,9 +653,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const infoData = [
     { lbl: 'Type', val: uni.tag || (uni.type === 'local' ? 'State University' : 'International') },
     { lbl: 'Country', val: uni.country || '' },
-    { lbl: 'Founded', val: uni.founded || 'â€”' },
-    { lbl: 'Students', val: uni.students || 'â€”' },
-    { lbl: 'Global Rank', val: uni.ranking || 'â€”' },
+    { lbl: 'Founded', val: uni.founded || '–' },
+    { lbl: 'Students', val: uni.students || '–' },
+    { lbl: 'Global Rank', val: uni.ranking || '–' },
   ].filter(r => r.val);
   document.getElementById('info-rows').innerHTML = infoData.map(r =>
     `<div class="ud-info-row"><span class="ud-info-lbl">${r.lbl}</span><span class="ud-info-val">${r.val}</span></div>`

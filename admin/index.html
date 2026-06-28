@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SJC â€” Admin Panel</title>
+<title>SJC – Admin Panel</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
   --brand-secondary: #8a1313;
   --brand-light: #a82428;
   --brand-deep: #3d0709;
-  /* Gold â€” slightly desaturated so it reads premium, not loud */
+  /* Gold – slightly desaturated so it reads premium, not loud */
   --gold: #c6a04e;
   --gold-bright: #e0bf78;
   --gold-hover: #ab8638;
@@ -51,7 +51,7 @@
   --shadow-hover: 0 2px 6px rgba(61,7,9,0.05), 0 18px 40px rgba(61,7,9,0.10);
   --shadow-dark: 0 18px 50px rgba(0, 0, 0, 0.40);
   --shadow-gold: 0 6px 20px rgba(198,160,78,0.22);
-  /* Radius scale â€” tighter inner, softer outer */
+  /* Radius scale – tighter inner, softer outer */
   --r-xs: 7px;
   --r-sm: 10px;
   --r-md: 14px;
@@ -846,7 +846,7 @@ tbody tr:last-child td {
   border-bottom: none;
 }
 
-/* Badges â€” squared, quieter than pills */
+/* Badges – squared, quieter than pills */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -859,7 +859,7 @@ tbody tr:last-child td {
   text-transform: uppercase;
   border: 1px solid transparent;
 }
-/* status dot â€” inherits the badge's text color */
+/* status dot – inherits the badge's text color */
 .badge::before {
   content: '';
   width: 6px; height: 6px;
@@ -1053,7 +1053,7 @@ body:has(.modal-overlay.open) { overflow: hidden; }
 }
 
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   RESPONSIVE  â€” off-canvas drawer + fluid layout
+   RESPONSIVE  – off-canvas drawer + fluid layout
    â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 /* Tablet & below: sidebar becomes a slide-in drawer */
@@ -1183,7 +1183,7 @@ body:has(.modal-overlay.open) { overflow: hidden; }
   object-fit: cover;
 }
 
-/* Student register â€” shared admin/teacher */
+/* Student register – shared admin/teacher */
 .reg-chip {
   display: inline-flex; align-items: center;
   padding: 3px 11px; border-radius: 999px;
@@ -1824,7 +1824,7 @@ function rSAApts(){
     <p>${all.length} total &middot; ${all.filter(a=>a.status==='pending').length} pending</p>
   </div>
   <div class="card">
-    <div class="search-bar">${I.srch}<input autocomplete="off" type="text" placeholder="Search by student nameâ€¦" oninput="filt(this,'sa-apt-tb')"></div>
+    <div class="search-bar">${I.srch}<input autocomplete="off" type="text" placeholder="Search by student name…" oninput="filt(this,'sa-apt-tb')"></div>
     <div class="tbl-wrap">
     <table><thead><tr><th>Student</th><th>Grade</th><th>Scheduled Date &amp; Time</th><th>Contact Method</th><th>Service Type</th><th>Status</th><th style="text-align:right;">Actions</th></tr></thead>
     <tbody id="sa-apt-tb">
@@ -1839,10 +1839,10 @@ function rSAApts(){
       }
       return `
       <tr data-s="${esc((a.studentName+' '+(a.type||'')).toLowerCase())}">
-        <td style="font-weight:500">${esc(a.studentName||'â€”')}</td>
-        <td style="font-size:.76rem;color:#aaa">${esc(a.studentGrade||'â€”')}</td>
+        <td style="font-weight:500">${esc(a.studentName||'–')}</td>
+        <td style="font-size:.76rem;color:#aaa">${esc(a.studentGrade||'–')}</td>
         <td style="font-size:.76rem;font-weight:600;color:var(--brand-primary);">${(a.date && a.date !== 'TBD') ? `${esc(a.date)} &middot; ${esc(a.time)}` : `<span style="color:var(--text-muted); font-weight:normal;">TBD</span>`}</td>
-        <td style="font-size:.76rem;">${(()=>{const isPhone=(a.contactMethod||'').toLowerCase().includes('phone')||(!a.contactMethod&&a.phone);if(isPhone&&a.phone)return`<span style="display:inline-flex;align-items:center;gap:5px;font-weight:700;color:#c0392b;font-size:.78rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.34 2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6.29 6.29l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</span><br><a href="tel:${esc(a.phone)}" style="font-size:.8rem;font-weight:700;color:#c0392b;letter-spacing:.02em;">${esc(a.phone)}</a>`;if(a.email)return`<span style="display:inline-flex;align-items:center;gap:5px;font-weight:600;color:var(--brand-primary);font-size:.78rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</span><br><a href="mailto:${esc(a.email)}" style="font-size:.73rem;color:var(--text-muted);">${esc(a.email)}</a>`;return`<span style="color:var(--text-muted);">${esc(a.contactMethod||'â€”')}</span>`;})()}</td>
+        <td style="font-size:.76rem;">${(()=>{const isPhone=(a.contactMethod||'').toLowerCase().includes('phone')||(!a.contactMethod&&a.phone);if(isPhone&&a.phone)return`<span style="display:inline-flex;align-items:center;gap:5px;font-weight:700;color:#c0392b;font-size:.78rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.34 2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6.29 6.29l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</span><br><a href="tel:${esc(a.phone)}" style="font-size:.8rem;font-weight:700;color:#c0392b;letter-spacing:.02em;">${esc(a.phone)}</a>`;if(a.email)return`<span style="display:inline-flex;align-items:center;gap:5px;font-weight:600;color:var(--brand-primary);font-size:.78rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</span><br><a href="mailto:${esc(a.email)}" style="font-size:.73rem;color:var(--text-muted);">${esc(a.email)}</a>`;return`<span style="color:var(--text-muted);">${esc(a.contactMethod||'–')}</span>`;})()}</td>
         <td style="font-size:.76rem">${esc(a.type||'?')}</td>
         <td><span class="badge badge-${a.status||'pending'}" id="b-${esc(a.id)}">${a.status||'pending'}</span></td>
         <td style="text-align:right;">${actions}</td>
@@ -1943,7 +1943,7 @@ function showStudentReport(id) {
   if (!s) { toast('Student not found', 'err'); return; }
   const pane = document.getElementById('sa-students');
   if (!pane) return;
-  const v = x => (x && x !== '') ? esc(x) : 'â€”';
+  const v = x => (x && x !== '') ? esc(x) : '–';
   const row = (label, val) => `<div class="rpt-row"><span class="rpt-lbl">${label}</span><span class="rpt-val">${val}</span></div>`;
   pane.innerHTML = `
     <style>
@@ -1974,8 +1974,8 @@ function showStudentReport(id) {
       <div class="rpt-avatar">${s.photoData ? `<img src="${s.photoData}">` : initials(s.name)}</div>
       <div>
         <div class="rpt-name">${esc(s.name)}</div>
-        <div class="rpt-sub">Grade ${v(s.grade)} ${v(s.studentClass||s.class)} &nbsp;Â·&nbsp; Reg: ${v(s.regNo)} &nbsp;Â·&nbsp; #${v(s.studentNo)}</div>
-        <div class="rpt-sub" style="margin-top:4px;">Counsellor: ${v(s.counsellorReg)} &nbsp;Â·&nbsp; Date: ${v(s.date)}</div>
+        <div class="rpt-sub">Grade ${v(s.grade)} ${v(s.studentClass||s.class)} &nbsp;·&nbsp; Reg: ${v(s.regNo)} &nbsp;·&nbsp; #${v(s.studentNo)}</div>
+        <div class="rpt-sub" style="margin-top:4px;">Counsellor: ${v(s.counsellorReg)} &nbsp;·&nbsp; Date: ${v(s.date)}</div>
       </div>
     </div>
     <div class="rpt-card">
@@ -2024,9 +2024,9 @@ function printStudentReport(id) {
 }
 
 function _buildPrintReport(students) {
-  const v = x => (x && x !== '') ? x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') : 'â€”';
+  const v = x => (x && x !== '') ? x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') : '–';
   const rows = (pairs) => pairs.map(([l,val]) => `<tr><td style="padding:8px 12px;font-weight:600;color:#555;width:200px;border-bottom:1px solid #f0e8e0;">${l}</td><td style="padding:8px 12px;border-bottom:1px solid #f0e8e0;">${val}</td></tr>`).join('');
-  return `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Student Report â€” SJC</title>
+  return `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Student Report – SJC</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0;}
     body{font-family:'Segoe UI',Arial,sans-serif;color:#1a0e0e;background:#fff;font-size:13px;}
@@ -2049,15 +2049,15 @@ function _buildPrintReport(students) {
   ${students.map((s, idx) => `
   <div class="page">
     <div class="school-hdr">
-      <h1>St. Joseph's College â€” Counselling & Guidance Unit</h1>
-      <p>Student Record Report &nbsp;Â·&nbsp; Generated: ${new Date().toLocaleString('en-GB')}</p>
+      <h1>St. Joseph's College – Counselling & Guidance Unit</h1>
+      <p>Student Record Report &nbsp;·&nbsp; Generated: ${new Date().toLocaleString('en-GB')}</p>
     </div>
     <div class="stu-block">
       <div class="stu-photo">${s.photoData ? `<img src="${s.photoData}">` : (s.name||'?').split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2)}</div>
       <div class="stu-info">
         <h2>${v(s.name)}</h2>
-        <p>Grade ${v(s.grade)} ${v(s.studentClass||s.class)} &nbsp;Â·&nbsp; Register No: ${v(s.regNo)} &nbsp;Â·&nbsp; Student #${v(s.studentNo)}</p>
-        <p>Date: ${v(s.date)} &nbsp;Â·&nbsp; Counsellor: ${v(s.counsellorReg)}</p>
+        <p>Grade ${v(s.grade)} ${v(s.studentClass||s.class)} &nbsp;·&nbsp; Register No: ${v(s.regNo)} &nbsp;·&nbsp; Student #${v(s.studentNo)}</p>
+        <p>Date: ${v(s.date)} &nbsp;·&nbsp; Counsellor: ${v(s.counsellorReg)}</p>
       </div>
     </div>
     <div class="section">
@@ -2287,7 +2287,7 @@ function toggleDatePicker(e) {
     }
     renderDatePicker();
     popup.style.display = 'block';
-    /* Smart positioning â€” flip upward if not enough space below */
+    /* Smart positioning – flip upward if not enough space below */
     const inputRect = e.target.getBoundingClientRect();
     const popupH = 340;
     const spaceBelow = window.innerHeight - inputRect.bottom;
@@ -2536,8 +2536,8 @@ function deleteStudent(id) {
     <div style="margin-top:36px;padding:16px;border:1px solid rgba(201,168,76,.15);border-radius:10px;width:100%">
       <div style="font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:10px">Access Levels</div>
       <div style="font-size:.78rem;color:rgba(255,255,255,.45);line-height:2">
-        <div>Admin â€” Full system access</div>
-        <div>Teacher â€” Appointment management</div>
+        <div>Admin – Full system access</div>
+        <div>Teacher – Appointment management</div>
       </div>
     </div>
   </div>
@@ -2764,7 +2764,7 @@ document.addEventListener('click', function(e){
 function catLabel(cat){
   const clean = (cat || '').replace(/^[^\w]+/, '').trim();
   const ic = CAT_ICONS[clean] || '';
-  return `<span style="display:inline-flex;align-items:center;gap:7px;">${ic?`<span style="color:var(--brand-primary);display:inline-flex;">${ic}</span>`:''}<span>${esc(clean || cat || 'â€”')}</span></span>`;
+  return `<span style="display:inline-flex;align-items:center;gap:7px;">${ic?`<span style="color:var(--brand-primary);display:inline-flex;">${ic}</span>`:''}<span>${esc(clean || cat || '–')}</span></span>`;
 }
 
 function getAllComplaints(){ return DB.get('complaints')||[]; }
@@ -2892,7 +2892,7 @@ function getAllAppointments(){
     ...a,
     studentName: a.name || a.studentName || 'Unknown',
     studentEmail: a.email || '-',
-    studentGrade: a.grade || a.studentGrade || 'â€”'
+    studentGrade: a.grade || a.studentGrade || '–'
   })).sort((a,b)=>(b.createdAt||'')>(a.createdAt||'')?1:-1);
 }
 
@@ -2928,24 +2928,24 @@ function calcCompletion(s){
 function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,6) }
 function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') }
 function initials(n){ const p=(n||'').trim().split(/\s+/).filter(Boolean); if(!p.length) return 'S'; return p.map(w=>w[0]).join('').toUpperCase().slice(0,2); }
-// Never show a blank/"?" student â€” derive a readable name from the email when missing.
+// Never show a blank/"?" student – derive a readable name from the email when missing.
 function studentDisplayName(s){
   if(s.name && s.name.trim()) return s.name.trim();
   if(s.email){ return s.email.split('@')[0].replace(/[._-]+/g,' ').replace(/\b\w/g,c=>c.toUpperCase()).trim(); }
   return 'Unnamed Student';
 }
-// Shared student-register table â€” admin (editable) and teacher (read-only) render identically.
+// Shared student-register table – admin (editable) and teacher (read-only) render identically.
 function renderStudentRegister(students, opts){
   opts = opts || {};
   const ro = !!opts.readOnly;
   const tbId = ro ? 't-stu-tb' : 'stu-tb';
   const body = students.length ? students.map(s=>{
     const name = studentDisplayName(s);
-    const reg  = s.counsellorReg || 'â€”';
-    const idx  = s.indexNo || 'â€”';
+    const reg  = s.counsellorReg || '–';
+    const idx  = s.indexNo || '–';
     const cls  = s.studentClass || s.class || '';
-    const gradeClass = `${esc(s.grade||'â€”')}${cls?' &middot; '+esc(cls):''}`;
-    const sub  = esc(s.counsellorReg || s.indexNo || s.email || 'â€”');
+    const gradeClass = `${esc(s.grade||'–')}${cls?' &middot; '+esc(cls):''}`;
+    const sub  = esc(s.counsellorReg || s.indexNo || s.email || '–');
     const sessions = s.sessions || 0;
     const rowClick = ro ? '' : ` style="cursor:pointer;" onclick="openStudentEditModal('${esc(s.id||s.email||'')}')"`;
     const sessCell = ro
@@ -2963,10 +2963,10 @@ function renderStudentRegister(students, opts){
             <div style="font-size:.7rem;color:var(--text-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:200px;">${sub}</div>
           </div>
         </div></td>
-        <td>${(s.grade||cls)?`<span class="reg-chip">${gradeClass}</span>`:'<span style="color:#ccc">â€”</span>'}</td>
+        <td>${(s.grade||cls)?`<span class="reg-chip">${gradeClass}</span>`:'<span style="color:#ccc">–</span>'}</td>
         <td class="reg-mono" style="color:var(--brand-primary);font-weight:600;">${esc(reg)}</td>
         <td class="reg-mono" style="color:var(--text-muted);">${esc(idx)}</td>
-        <td style="font-size:.78rem;color:var(--text-muted);">${esc(s.phone||s.contact||'â€”')}</td>
+        <td style="font-size:.78rem;color:var(--text-muted);">${esc(s.phone||s.contact||'–')}</td>
         <td style="text-align:center;">${sessCell}</td>
         <td style="text-align:right;">${actionCell}</td>
       </tr>`;
@@ -2979,7 +2979,7 @@ function renderStudentRegister(students, opts){
     </tr></thead>
     <tbody id="${tbId}">${body}</tbody></table></div>`;
 }
-function fmtDate(d){ if(!d) return 'â€”'; return new Date(d+'T00:00').toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}) }
+function fmtDate(d){ if(!d) return '–'; return new Date(d+'T00:00').toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}) }
 function today(){ return new Date().toISOString().slice(0,10) }
 function greet(){ const h=new Date().getHours(); return h<12?'Good morning':h<17?'Good afternoon':'Good evening' }
 
@@ -3005,7 +3005,7 @@ function greet(){ const h=new Date().getHours(); return h<12?'Good morning':h<17
   }
 
 function initData(){
-  // Migrate admin email â€” correct any wrong versions stored in browser
+  // Migrate admin email – correct any wrong versions stored in browser
   try {
     const auth = localStorage.getItem('sjc_auth');
     if (auth) {
@@ -3086,7 +3086,7 @@ function getDb() {
     pin   = document.getElementById('t-pin').value;
   }
 
-  if (btn) { btn.disabled = true; btn.textContent = 'Signing inâ€¦'; }
+  if (btn) { btn.disabled = true; btn.textContent = 'Signing in…'; }
   errEl && errEl.classList.remove('show');
 
   try {
@@ -3108,7 +3108,7 @@ function getDb() {
       if (errEl) { errEl.textContent = d.error || 'Invalid email or password'; errEl.classList.add('show'); }
     }
   } catch(e) {
-    if (errEl) { errEl.textContent = 'Server error â€” please try again'; errEl.classList.add('show'); }
+    if (errEl) { errEl.textContent = 'Server error – please try again'; errEl.classList.add('show'); }
   } finally {
     if (btn) { btn.disabled = false; btn.textContent = 'Sign In'; }
   }
@@ -3500,7 +3500,7 @@ function rSAOverview(){
   return `
   <div class="page-hdr">
     <h2>${greet()}, Administrator</h2>
-    <p>Counselling &amp; Guidance Unit â€” System Overview</p>
+    <p>Counselling &amp; Guidance Unit – System Overview</p>
   </div>
   <div class="stats-grid">
     <div class="stat-card">
@@ -3541,11 +3541,11 @@ function rSAOverview(){
           <td><div style="display:flex;align-items:center;gap:8px">
             <div class="stu-avatar">${s.photoData?`<img src="${s.photoData}">`:`${initials(s.name)}`}</div>
             <div><div style="font-weight:600;font-size:.82rem">${esc(s.name)}</div>
-            <div style="font-size:.7rem;color:#bbb">${esc(s.indexNo||s.counsellorReg||'â€”')}</div></div>
+            <div style="font-size:.7rem;color:#bbb">${esc(s.indexNo||s.counsellorReg||'–')}</div></div>
           </div></td>
-          <td style="font-size:.78rem;color:#888">${esc(s.grade||'â€”')} ${esc(s.studentClass||s.class||'')}</td>
-          <td style="font-size:.74rem;color:var(--brand-primary);font-weight:600">${esc(s.counsellorReg||'â€”')}</td>
-          <td style="font-size:.76rem;color:#aaa">${esc(s.indexNo||'â€”')}</td>
+          <td style="font-size:.78rem;color:#888">${esc(s.grade||'–')} ${esc(s.studentClass||s.class||'')}</td>
+          <td style="font-size:.74rem;color:var(--brand-primary);font-weight:600">${esc(s.counsellorReg||'–')}</td>
+          <td style="font-size:.76rem;color:#aaa">${esc(s.indexNo||'–')}</td>
           <td style="text-align:center;font-weight:700;">${s.sessions||0}</td>
         </tr>`).join('')}
         </tbody></table>
@@ -3560,7 +3560,7 @@ function rSAOverview(){
         <div class="search-bar" style="margin-bottom:15px; display:flex; gap:10px; align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input autocomplete="off" type="text" placeholder="Search records..." oninput="if(typeof filt === 'function') filt(this, 'tb_c200c750')" style="flex:1; border:none; outline:none; background:transparent; padding:8px;"></div>
 <table><thead><tr><th>Student</th><th>Date</th><th>Status</th></tr></thead><tbody id="tb_c200c750">
         ${recent5apt.map(a=>`<tr>
-          <td style="font-weight:500;font-size:.83rem">${esc(a.studentName||'â€”')}</td>
+          <td style="font-weight:500;font-size:.83rem">${esc(a.studentName||'–')}</td>
           <td style="font-size:.76rem;color:#aaa">${fmtDate(a.date)}</td>
           <td><span class="badge badge-${a.status||'pending'}" id="b-${esc(a.id)}">${a.status||'pending'}</span></td>
       </tr>
@@ -3582,7 +3582,7 @@ function rSAStudents(){
     <button class="btn btn-primary" onclick="openStudentModal()">${I.plus} Add Student</button>
   </div>
   <div class="card">
-    <div class="search-bar">${I.srch}<input autocomplete="off" type="text" placeholder="Search by name, reg or indexâ€¦" oninput="filt(this,'stu-tb')"></div>
+    <div class="search-bar">${I.srch}<input autocomplete="off" type="text" placeholder="Search by name, reg or index…" oninput="filt(this,'stu-tb')"></div>
     ${renderStudentRegister(students,{readOnly:false})}
   </div>`;
 }
@@ -3621,9 +3621,9 @@ function rSATeachers(){
           <div class="stu-avatar" style="background:var(--brand-secondary)">${initials(t.name)}</div>
           <span style="font-weight:600;font-size:.83rem">${esc(t.name)}</span>
         </div></td>
-        <td style="font-size:.8rem;color:var(--brand-primary);font-weight:600">${esc(t.assignedClass||'â€”')}</td>
-        <td style="font-size:.8rem;color:#666">${esc(t.subject||'â€”')}</td>
-        <td style="font-size:.76rem;color:#aaa">${esc(t.phone||'â€”')}</td>
+        <td style="font-size:.8rem;color:var(--brand-primary);font-weight:600">${esc(t.assignedClass||'–')}</td>
+        <td style="font-size:.8rem;color:#666">${esc(t.subject||'–')}</td>
+        <td style="font-size:.76rem;color:#aaa">${esc(t.phone||'–')}</td>
         <td><div style="display:flex;gap:6px">
           <button class="btn btn-ghost btn-sm" onclick="editTeacherModal('${esc(t.id)}')">${I.pen} Edit</button>
           <button class="btn btn-danger btn-sm" onclick="removeTeacher('${esc(t.id)}')">${I.bin} Remove</button>
@@ -3652,8 +3652,8 @@ function rSAEvents(){
       <tr>
         <td style="font-weight:600;font-size:.83rem">${esc(e.title)}</td>
         <td style="font-size:.76rem">${fmtDate(e.date)}</td>
-        <td style="font-size:.76rem;color:#aaa">${esc(e.time||'â€”')}</td>
-        <td style="font-size:.76rem;color:#aaa">${esc(e.location||'â€”')}</td>
+        <td style="font-size:.76rem;color:#aaa">${esc(e.time||'–')}</td>
+        <td style="font-size:.76rem;color:#aaa">${esc(e.location||'–')}</td>
         <td><span class="badge" style="background:#f0fdf4;color:#166534">${esc(e.type||'General')}</span></td>
         <td><div style="display:flex;gap:6px">
           <button class="btn btn-ghost btn-sm" onclick="editEventModal('${esc(e.id)}')">${I.pen} Edit</button>
@@ -3787,7 +3787,7 @@ function rSADatabase(){
         <div style="width:42px;height:42px;border-radius:50%;background:var(--brand-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0;">${(p.firstName||'?')[0]}${(p.lastName||'?')[0]}</div>
         <div style="flex:1;min-width:0;">
           <div style="font-weight:700;font-size:.9rem;color:var(--brand-primary);">${esc(p.firstName+' '+p.lastName)}</div>
-          <div style="font-size:.78rem;color:var(--text-muted);">${esc(p.email)} &middot; ${esc(p.grade||'â€”')} ${esc(p.class||'')} &middot; ${esc(p.stream||'â€”')}</div>
+          <div style="font-size:.78rem;color:var(--text-muted);">${esc(p.email)} &middot; ${esc(p.grade||'–')} ${esc(p.class||'')} &middot; ${esc(p.stream||'–')}</div>
           <div style="font-size:.74rem;color:var(--text-muted);margin-top:2px;">Registered: ${new Date(p.createdAt||Date.now()).toLocaleDateString()}</div>
         </div>
         <div style="display:flex;gap:8px;flex-shrink:0;">
@@ -3864,9 +3864,9 @@ function _renderDbTeachers(teachers) {
     <tbody>${teachers.map((t,i)=>`
       <tr style="border-bottom:1px solid #f5f0eb;">
         <td style="padding:11px 12px;color:var(--text-muted);font-weight:700;">${i+1}</td>
-        <td style="padding:11px 12px;font-weight:600;">${esc(t.name||'â€”')}</td>
-        <td style="padding:11px 12px;"><span style="background:#fef3c7;color:#92400e;padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:700;">${esc(t.assignedClass||t.class||'â€”')}</span></td>
-        <td style="padding:11px 12px;color:var(--text-muted);font-size:.82rem;">${esc(t.phone||'â€”')}</td>
+        <td style="padding:11px 12px;font-weight:600;">${esc(t.name||'–')}</td>
+        <td style="padding:11px 12px;"><span style="background:#fef3c7;color:#92400e;padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:700;">${esc(t.assignedClass||t.class||'–')}</span></td>
+        <td style="padding:11px 12px;color:var(--text-muted);font-size:.82rem;">${esc(t.phone||'–')}</td>
         <td style="padding:11px 12px;text-align:right;">
           <button class="btn btn-icon" onclick="dbDeleteTeacher('${esc(t.id||t.email||String(i))}')" style="color:var(--danger);" title="Delete">${I.bin}</button>
         </td>
@@ -4022,7 +4022,7 @@ async function emlLoadFolder(folder, forceRefresh) {
     if (cntEl && folder === 'inbox') cntEl.textContent = _emlMsgs.length || '';
     listBody.innerHTML = _emlMsgs.length ? _emlMsgs.map((m, i) => `
       <div class="eml-item" id="eml-item-${i}" onclick="emlOpenMsg(${i})">
-        <div class="eml-item-from">${esc(folder === 'sent' ? (m.to || 'â€”') : (m.from || 'â€”'))}</div>
+        <div class="eml-item-from">${esc(folder === 'sent' ? (m.to || '–') : (m.from || '–'))}</div>
         <div class="eml-item-subj">${esc(m.subject)}</div>
         <div class="eml-item-snip">${esc(m.snippet || '')}</div>
         <div class="eml-item-date">${new Date(m.date).toLocaleString('en-GB', {day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'})}</div>
@@ -4046,8 +4046,8 @@ function emlOpenMsg(idx) {
     <div class="eml-detail-hdr">
       <div class="eml-detail-subj">${esc(m.subject)}</div>
       <div class="eml-detail-meta">
-        <strong>From:</strong> ${esc(m.from || 'â€”')}<br>
-        <strong>To:</strong> ${esc(m.to || 'â€”')}<br>
+        <strong>From:</strong> ${esc(m.from || '–')}<br>
+        <strong>To:</strong> ${esc(m.to || '–')}<br>
         <strong>Date:</strong> ${dateStr}
       </div>
       <div class="eml-detail-actions">
@@ -4196,7 +4196,7 @@ function rTOverview(){
   return `
   <div class="page-hdr">
     <h2>${greet()}</h2>
-    <p>Counselling &amp; Guidance Unit â€” Teacher Panel</p>
+    <p>Counselling &amp; Guidance Unit – Teacher Panel</p>
   </div>
   <div class="stats-grid">
     <div class="stat-card">
@@ -4234,7 +4234,7 @@ function rTOverview(){
         <div class="sched-time">${esc(a.time||'TBA')}<br><span style="font-size:.6rem;opacity:.65">${fmtDate(a.date)}</span></div>
         <div class="sched-detail" style="flex:1">
           <div class="sn">${esc(a.studentName||'Unknown')}</div>
-          <div class="sg">${esc(a.type||'General')} &middot; Grade ${esc(a.studentGrade||'â€”')}</div>
+          <div class="sg">${esc(a.type||'General')} &middot; Grade ${esc(a.studentGrade||'–')}</div>
         </div>
         <span class="badge badge-${a.status||'pending'}">${a.status||'pending'}</span>
       </div>
@@ -4251,15 +4251,15 @@ function rTApts(){
     <p>${all.length} total &middot; ${all.filter(a=>a.status==='pending').length} pending</p>
   </div>
   <div class="card">
-    <div class="search-bar">${I.srch}<input autocomplete="off" type="text" placeholder="Search by student nameâ€¦" oninput="filt(this,'t-apt-tb')"></div>
+    <div class="search-bar">${I.srch}<input autocomplete="off" type="text" placeholder="Search by student name…" oninput="filt(this,'t-apt-tb')"></div>
     <div class="tbl-wrap">
     <table><thead><tr><th>Student</th><th>Grade</th><th>Contact Method</th><th>Service Type</th><th>Status</th></tr></thead>
     <tbody id="t-apt-tb">
     ${all.length?all.map(a=>`
       <tr data-s="${esc((a.studentName+' '+(a.type||'')).toLowerCase())}">
-        <td style="font-weight:500">${esc(a.studentName||'â€”')}</td>
-        <td style="font-size:.76rem;color:#aaa">${esc(a.studentGrade||'â€”')}</td>
-        <td style="font-size:.76rem;">${(()=>{const isPhone=(a.contactMethod||'').toLowerCase().includes('phone')||(!a.contactMethod&&a.phone);if(isPhone&&a.phone)return`<span style="display:inline-flex;align-items:center;gap:5px;font-weight:700;color:#c0392b;font-size:.78rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.34 2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6.29 6.29l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</span><br><a href="tel:${esc(a.phone)}" style="font-size:.8rem;font-weight:700;color:#c0392b;letter-spacing:.02em;">${esc(a.phone)}</a>`;if(a.email)return`<span style="display:inline-flex;align-items:center;gap:5px;font-weight:600;color:var(--brand-primary);font-size:.78rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</span><br><a href="mailto:${esc(a.email)}" style="font-size:.73rem;color:var(--text-muted);">${esc(a.email)}</a>`;return`<span style="color:var(--text-muted);">${esc(a.contactMethod||'â€”')}</span>`;})()}</td>
+        <td style="font-weight:500">${esc(a.studentName||'–')}</td>
+        <td style="font-size:.76rem;color:#aaa">${esc(a.studentGrade||'–')}</td>
+        <td style="font-size:.76rem;">${(()=>{const isPhone=(a.contactMethod||'').toLowerCase().includes('phone')||(!a.contactMethod&&a.phone);if(isPhone&&a.phone)return`<span style="display:inline-flex;align-items:center;gap:5px;font-weight:700;color:#c0392b;font-size:.78rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.34 2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6.29 6.29l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</span><br><a href="tel:${esc(a.phone)}" style="font-size:.8rem;font-weight:700;color:#c0392b;letter-spacing:.02em;">${esc(a.phone)}</a>`;if(a.email)return`<span style="display:inline-flex;align-items:center;gap:5px;font-weight:600;color:var(--brand-primary);font-size:.78rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</span><br><a href="mailto:${esc(a.email)}" style="font-size:.73rem;color:var(--text-muted);">${esc(a.email)}</a>`;return`<span style="color:var(--text-muted);">${esc(a.contactMethod||'–')}</span>`;})()}</td>
           <td style="font-size:.76rem">${esc(a.type||'?')}</td>
         <td><span class="badge badge-${a.status||'pending'}" id="b-${esc(a.id)}">${a.status||'pending'}</span></td>
       </tr>
@@ -4277,7 +4277,7 @@ function rTStudents(){
     <p>${students.length} registered &middot; read-only view</p>
   </div>
   <div class="card">
-    <div class="search-bar">${I.srch}<input autocomplete="off" type="text" placeholder="Search by name, reg or indexâ€¦" oninput="filt(this,'t-stu-tb')"></div>
+    <div class="search-bar">${I.srch}<input autocomplete="off" type="text" placeholder="Search by name, reg or index…" oninput="filt(this,'t-stu-tb')"></div>
     ${renderStudentRegister(students,{readOnly:true})}
   </div>`;
 }
@@ -4303,10 +4303,10 @@ function rTSchedule(){
       </div>
       ${da.length?da.map(a=>`
         <div class="sched-item">
-          <div class="sched-time">${esc(a.time||'â€”')}</div>
+          <div class="sched-time">${esc(a.time||'–')}</div>
           <div class="sched-detail" style="flex:1">
             <div class="sn">${esc(a.studentName||'Unknown')}</div>
-            <div class="sg">${esc(a.type||'General')} &middot; Grade ${esc(a.studentGrade||'â€”')}</div>
+            <div class="sg">${esc(a.type||'General')} &middot; Grade ${esc(a.studentGrade||'–')}</div>
           </div>
           <span class="badge badge-${a.status||'pending'}">${a.status||'pending'}</span>
         </div>
@@ -4376,7 +4376,7 @@ function _teacherModalHtml(title, subtitle, vals, saveCall) {
           </div>
           <div class="premium-field">
             <label><span class="dot"></span>Subject / Role</label>
-            <input autocomplete="off" type="text" id="m-sub" placeholder="Mathematics, Counsellorâ€¦" value="${esc(v.subject||'')}">
+            <input autocomplete="off" type="text" id="m-sub" placeholder="Mathematics, Counsellor…" value="${esc(v.subject||'')}">
           </div>
         </div>
         <div class="premium-row2">
@@ -4452,11 +4452,11 @@ function addEventModal(){
       <div class="form-group"><label>Date</label><input autocomplete="off" type="text" class="flatpickr-date" id="m-date" value="${today()}" placeholder="2026-06-16" inputmode="numeric" pattern="\d{4}-\d{2}-\d{2}"></div>
       <div class="form-group"><label>Time</label><input autocomplete="off" type="time" id="m-time" value="09:00"></div>
     </div>
-    <div class="form-group"><label>Location</label><input autocomplete="off" type="text" id="m-loc" placeholder="Main Hall, School Groundsâ€¦"></div>
+    <div class="form-group"><label>Location</label><input autocomplete="off" type="text" id="m-loc" placeholder="Main Hall, School Grounds…"></div>
     <div class="form-group"><label>Type</label>
       ${csHTML('m-type', ['Academic','Career','Personal Development','Social','General'], 'Academic')}
     </div>
-    <div class="form-group"><label>Description</label><textarea autocomplete="off" id="m-desc" rows="3" placeholder="Brief descriptionâ€¦"></textarea></div>
+    <div class="form-group"><label>Description</label><textarea autocomplete="off" id="m-desc" rows="3" placeholder="Brief description…"></textarea></div>
     <div class="modal-footer">
       <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
       <button class="btn btn-primary" onclick="saveEvent(null)">Add Event</button>
@@ -4789,7 +4789,7 @@ function viewProfile(idOrEmail) {
   if (!s) { toast('Student not found', 'err'); return; }
   const id = s.id || '';
 
-  const v = (x, fb='â€”') => x && x !== '' ? esc(x) : fb;
+  const v = (x, fb='–') => x && x !== '' ? esc(x) : fb;
   const f = (label, value, cls='') => `<div class="pf-field ${cls}"><div class="pf-label">${label}</div><div class="pf-value">${value}</div></div>`;
   const sec = (cls, icon, title, content) => `<div class="pv-section" style="border-left-color:${cls}"><div class="pv-section-title"><span style="display:inline-flex;color:${cls};">${icon}</span><span>${title}</span></div>${content}</div>`;
   const g2 = (content) => `<div class="pv-grid-2">${content}</div>`;
@@ -5041,7 +5041,7 @@ function removeEvent(id) {
 
 
   <script>
-    // Duplicate Lenis block removed â€” using the single initLenis() call above
+    // Duplicate Lenis block removed – using the single initLenis() call above
 
   async function sendAdminEmail(to, aptId) {
     const customTo = document.getElementById("m-email-to") ? document.getElementById("m-email-to").value.trim() : to;
@@ -5112,7 +5112,7 @@ function removeEvent(id) {
         </div>
         <div class="form-group" style="margin-bottom:0;">
           <label>Period</label>
-          ${csHTML('confirm-apt-period',[['1','Period 1 â€” 7:50 AM'],['2','Period 2 â€” 8:30 AM'],['3','Period 3 â€” 9:10 AM'],['4','Period 4 â€” 9:50 AM'],['5','Period 5 â€” 10:50 AM'],['6','Period 6 â€” 11:30 AM'],['7','Period 7 â€” 12:10 PM'],['8','Period 8 â€” 12:50 PM']],'1',{style:'width:100%'})}
+          ${csHTML('confirm-apt-period',[['1','Period 1 – 7:50 AM'],['2','Period 2 – 8:30 AM'],['3','Period 3 – 9:10 AM'],['4','Period 4 – 9:50 AM'],['5','Period 5 – 10:50 AM'],['6','Period 6 – 11:30 AM'],['7','Period 7 – 12:10 PM'],['8','Period 8 – 12:50 PM']],'1',{style:'width:100%'})}
         </div>
       </div>
 
@@ -5123,7 +5123,7 @@ function removeEvent(id) {
         </div>
         <div class="form-group">
           <label>Note to student <span style="color:var(--text-muted);font-weight:400;">(optional)</span></label>
-          <textarea id="confirm-apt-note" rows="3" placeholder="Add an optional note that appears in the confirmation emailâ€¦"></textarea>
+          <textarea id="confirm-apt-note" rows="3" placeholder="Add an optional note that appears in the confirmation email…"></textarea>
         </div>
         <div style="background:#faf6ee; border:1px solid #ece0cf; border-radius:8px; padding:11px 13px; font-size:0.8rem; color:var(--text-muted); margin-bottom:14px; line-height:1.55;">
           A branded confirmation email with the date, time and full session details will be sent to the student automatically.
@@ -5148,7 +5148,7 @@ function removeEvent(id) {
   async function processAptConfirmation(email, aptId) {
     const date   = document.getElementById('confirm-apt-date').value;
     const period = (document.getElementById('confirm-apt-period') || {}).value || '1';
-    const time   = `Period ${period} â€” ${PERIOD_TIMES[period]}`;
+    const time   = `Period ${period} – ${PERIOD_TIMES[period]}`;
     if (!date) return alert('Date is required');
 
     const btn = document.getElementById('btn-confirm-apt');
@@ -5171,7 +5171,7 @@ function removeEvent(id) {
 
         // Save to sent log
         const sent = JSON.parse(localStorage.getItem('sjc_sent_emails') || '[]');
-        sent.push({ to: email, subject: 'Your Appointment is Confirmed â€” SJC Counselling', body: `Appointment confirmed for ${date} at ${time}.`, timestamp: Date.now() });
+        sent.push({ to: email, subject: 'Your Appointment is Confirmed – SJC Counselling', body: `Appointment confirmed for ${date} at ${time}.`, timestamp: Date.now() });
         localStorage.setItem('sjc_sent_emails', JSON.stringify(sent));
       }
 

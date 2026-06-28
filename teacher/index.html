@@ -169,7 +169,7 @@ button{border:none;background:none;cursor:pointer;color:inherit}
   justify-content: center; color: var(--danger); transition: background .15s; }
 .cat-del:hover { background: rgba(192,57,43,0.1); }
 
-/* ===== LOGIN â€” unified split-panel ===== */
+/* ===== LOGIN – unified split-panel ===== */
 #login{position:fixed;inset:0;background:#070202;display:flex;align-items:stretch;z-index:999}
 #login.hidden{opacity:0;pointer-events:none;transition:opacity .4s ease}
 #login::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.04) 1px,transparent 1px);background-size:60px 60px;animation:gridShift 30s linear infinite;pointer-events:none}
@@ -503,7 +503,7 @@ body.si .modal-head h2{font-size:1.3rem}
   .modal { border-radius: 20px 20px 0 0; }
 }
 
-/* Hamburger menu â€” only relevant on mobile; sidebar is permanent on desktop */
+/* Hamburger menu – only relevant on mobile; sidebar is permanent on desktop */
 .tb-menu { display: none; }
 @media(max-width:768px){
   .tb-menu { display: flex; }
@@ -518,7 +518,7 @@ body.si .modal-head h2{font-size:1.3rem}
 
 /* ===== POLISH & EFFECTS ===== */
 
-/* Animated login background â€” floating gold orbs over maroon */
+/* Animated login background – floating gold orbs over maroon */
 #login::before, #login::after{
   content:"";position:absolute;border-radius:50%;filter:blur(60px);opacity:0.45;z-index:0;
   background:radial-gradient(circle,var(--gold),transparent 70%);
@@ -540,7 +540,7 @@ body.si .modal-head h2{font-size:1.3rem}
   -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:0.6;
 }
 
-/* Topbar â€” gradient + gold underline */
+/* Topbar – gradient + gold underline */
 .topbar{background:linear-gradient(135deg,var(--maroon-deep) 0%,var(--maroon) 50%,var(--maroon-deep) 100%);
   background-size:200% 200%;animation:gradShift 18s ease infinite;
   border-bottom:1px solid rgba(201,168,76,0.25)}
@@ -550,7 +550,7 @@ body.si .modal-head h2{font-size:1.3rem}
 .tb-crest{box-shadow:0 0 0 1px rgba(201,168,76,0.3),0 2px 8px rgba(0,0,0,0.2);transition:transform .2s}
 .tb-crest:hover{transform:scale(1.05) rotate(-3deg)}
 
-/* Sidebar items â€” left accent slide-in */
+/* Sidebar items – left accent slide-in */
 .s-item{position:relative;overflow:hidden}
 .s-item::before{content:"";position:absolute;left:0;top:10%;bottom:10%;width:3px;border-radius:0 2px 2px 0;
   background:var(--gold);transform:translateX(-100%);transition:transform .2s ease}
@@ -561,7 +561,7 @@ body.si .modal-head h2{font-size:1.3rem}
 .s-avatar{transition:transform .2s,box-shadow .2s;box-shadow:0 2px 6px rgba(42,8,8,0.15)}
 .s-item.active .s-avatar{box-shadow:0 4px 14px rgba(201,168,76,0.4)}
 
-/* Buttons â€” ripple-style press + subtle shadow */
+/* Buttons – ripple-style press + subtle shadow */
 .btn{position:relative;overflow:hidden;transition:transform .12s ease,box-shadow .15s ease,background .12s,filter .12s}
 .btn:not(:disabled):hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(42,8,8,0.12)}
 .btn:not(:disabled):active{transform:translateY(0);box-shadow:0 2px 6px rgba(42,8,8,0.18)}
@@ -571,14 +571,14 @@ body.si .modal-head h2{font-size:1.3rem}
 .btn-gold:hover{box-shadow:0 6px 18px rgba(201,168,76,0.45)}
 .btn-danger{background:linear-gradient(135deg,var(--danger),#992419)}
 
-/* Welcome icon â€” floating */
+/* Welcome icon – floating */
 .welcome-icon{animation:floatY 4s ease-in-out infinite;box-shadow:0 8px 24px rgba(122,24,24,0.12);
   background:radial-gradient(circle at 30% 30%,#fff,var(--cream-2))}
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .welcome h2{background:linear-gradient(135deg,var(--maroon-deep),var(--maroon));
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 
-/* Student card â€” entrance + accent. NB: overflow MUST be visible so the
+/* Student card – entrance + accent. NB: overflow MUST be visible so the
    category dropdown panel inside the composer card isn't clipped. */
 .sv-card{position:relative;overflow:visible;transition:box-shadow .2s,transform .2s}
 .sv-card:hover{box-shadow:0 8px 30px rgba(42,8,8,0.10)}
@@ -591,7 +591,7 @@ body.si .modal-head h2{font-size:1.3rem}
 .badge{transition:transform .15s,background .15s}
 .badge:hover{transform:translateY(-1px);background:var(--cream-3)}
 
-/* AI card â€” shimmer + gold border glow */
+/* AI card – shimmer + gold border glow */
 .ai{position:relative;overflow:hidden;border:1px solid rgba(201,168,76,0.25);
   background:linear-gradient(135deg,var(--maroon-deep) 0%,#3a0e0e 50%,var(--maroon-mid) 100%);
   background-size:200% 200%;animation:gradShift 14s ease infinite,cardIn .4s cubic-bezier(0.16,1,0.3,1)}
@@ -612,18 +612,18 @@ body.si .modal-head h2{font-size:1.3rem}
 .comp textarea:focus{box-shadow:0 0 0 4px rgba(122,24,24,0.08);transform:translateY(-1px)}
 .cdd-btn:focus,.cdd-btn.open{box-shadow:0 0 0 4px rgba(122,24,24,0.08)}
 
-/* Mood pills â€” bouncy select */
+/* Mood pills – bouncy select */
 .mood{transition:all .18s cubic-bezier(0.34,1.56,0.64,1)}
 .mood:hover{transform:translateY(-1px)}
 .mood.on{transform:scale(1.04);box-shadow:0 4px 12px rgba(0,0,0,0.08)}
 
-/* Voice button â€” stronger pulse + glow when recording */
+/* Voice button – stronger pulse + glow when recording */
 .voice-btn{transition:all .15s ease}
 .voice-btn:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(122,24,24,0.12)}
 .voice-btn.recording{box-shadow:0 0 0 0 rgba(220,38,38,0.6),0 6px 20px rgba(220,38,38,0.35)}
 .vu-bar{background:linear-gradient(180deg,var(--gold),var(--rec))}
 
-/* Notes â€” staggered entrance */
+/* Notes – staggered entrance */
 .note{animation:noteIn .35s cubic-bezier(0.16,1,0.3,1);transition:transform .15s,box-shadow .15s,border-color .15s;position:relative}
 .note:hover{transform:translateX(2px);box-shadow:0 4px 16px rgba(42,8,8,0.07);border-color:rgba(122,24,24,0.18)}
 .note::before{content:"";position:absolute;left:-1px;top:14px;bottom:14px;width:3px;border-radius:2px;
@@ -639,26 +639,26 @@ body.si .modal-head h2{font-size:1.3rem}
 .note-del{transition:all .15s}
 .note-del:hover{background:#fee;color:var(--danger);transform:scale(1.08)}
 
-/* Toast â€” slide-in from bottom with gold flash */
+/* Toast – slide-in from bottom with gold flash */
 .toast{position:relative;overflow:hidden}
 .toast::after{content:"";position:absolute;top:0;left:0;right:0;height:100%;
   background:linear-gradient(90deg,transparent,rgba(201,168,76,0.25),transparent);
   animation:toastSheen 1.2s ease-out}
 @keyframes toastSheen{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
 
-/* Modal â€” soft glow */
+/* Modal – soft glow */
 .modal{box-shadow:0 -20px 60px rgba(0,0,0,0.3),0 0 0 1px rgba(201,168,76,0.1)}
 @media(min-width:640px){.modal{box-shadow:0 30px 80px rgba(0,0,0,0.35),0 0 0 1px rgba(201,168,76,0.15)}}
 .modal-head{background:linear-gradient(180deg,var(--cream),var(--cream-2))}
 .modal-head h2{background:linear-gradient(135deg,var(--maroon-deep),var(--maroon));
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 
-/* Custom dropdown â€” subtle option hover slide */
+/* Custom dropdown – subtle option hover slide */
 .cdd-opt{transition:all .12s ease}
 .cdd-opt:hover{padding-left:20px}
 .cdd-opt.selected:hover{padding-left:16px}
 
-/* Backdrop â€” improved blur */
+/* Backdrop – improved blur */
 .backdrop{backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
 
 /* ===== ADVANCED ANIMATIONS ===== */
@@ -676,7 +676,7 @@ body.sb-open .tb-menu svg line:nth-child(3){transform:translateY(-6px) rotate(-4
 .tb-menu:hover{transform:scale(1.06)}
 .tb-menu:active{transform:scale(0.92)}
 
-/* Welcome â€” animated rings around icon */
+/* Welcome – animated rings around icon */
 .welcome-icon{position:relative}
 .welcome-icon::before,.welcome-icon::after{
   content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid var(--maroon);
@@ -690,7 +690,7 @@ body.sb-open .tb-menu svg line:nth-child(3){transform:translateY(-6px) rotate(-4
 .welcome p{animation:cardIn .5s cubic-bezier(0.16,1,0.3,1) .2s both}
 .welcome > .btn,.welcome > button{animation:cardIn .5s cubic-bezier(0.16,1,0.3,1) .3s both}
 
-/* Sidebar items â€” stagger entrance */
+/* Sidebar items – stagger entrance */
 .sb-list .s-item{animation:slideInLeft .3s cubic-bezier(0.16,1,0.3,1) both}
 .sb-list .s-item:nth-child(1){animation-delay:.02s}
 .sb-list .s-item:nth-child(2){animation-delay:.05s}
@@ -702,7 +702,7 @@ body.sb-open .tb-menu svg line:nth-child(3){transform:translateY(-6px) rotate(-4
 .sb-list .s-item:nth-child(8){animation-delay:.23s}
 @keyframes slideInLeft{from{opacity:0;transform:translateX(-16px)}to{opacity:1;transform:translateX(0)}}
 
-/* Sidebar â€” gradient body */
+/* Sidebar – gradient body */
 .sidebar{background:linear-gradient(180deg,var(--cream-2),var(--cream))}
 
 /* Button ripple */
@@ -710,11 +710,11 @@ body.sb-open .tb-menu svg line:nth-child(3){transform:translateY(-6px) rotate(-4
   background:rgba(255,255,255,0.35);transform:translate(-50%,-50%);transition:width .5s ease,height .5s ease,opacity .6s ease;opacity:0;pointer-events:none}
 .btn:active::after{width:300px;height:300px;opacity:1;transition:width 0s,height 0s,opacity 0s}
 
-/* Search input â€” focus glow + animated icon */
+/* Search input – focus glow + animated icon */
 .sb-search input{transition:all .2s}
 .sb-search input:focus{box-shadow:0 0 0 4px rgba(122,24,24,0.08);transform:translateY(-1px)}
 
-/* AI card â€” pulsing border glow */
+/* AI card – pulsing border glow */
 .ai{box-shadow:0 4px 20px rgba(42,8,8,0.15),0 0 0 1px rgba(201,168,76,0.2)}
 @keyframes aiPulse{
   0%,100%{box-shadow:0 4px 20px rgba(42,8,8,0.15),0 0 0 1px rgba(201,168,76,0.2),0 0 24px rgba(201,168,76,0.08)}
@@ -722,18 +722,18 @@ body.sb-open .tb-menu svg line:nth-child(3){transform:translateY(-6px) rotate(-4
 }
 .ai{animation:gradShift 14s ease infinite,cardIn .4s cubic-bezier(0.16,1,0.3,1),aiPulse 4s ease-in-out infinite}
 
-/* Avatar initials â€” entrance pop */
+/* Avatar initials – entrance pop */
 .sv-avatar{animation:pop .45s cubic-bezier(0.34,1.56,0.64,1) both}
 @keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
 
-/* Badges â€” staggered fade up */
+/* Badges – staggered fade up */
 .sv-badges .badge{animation:cardIn .4s cubic-bezier(0.16,1,0.3,1) both}
 .sv-badges .badge:nth-child(1){animation-delay:.05s}
 .sv-badges .badge:nth-child(2){animation-delay:.10s}
 .sv-badges .badge:nth-child(3){animation-delay:.15s}
 .sv-badges .badge:nth-child(4){animation-delay:.20s}
 
-/* Recording â€” radiating rings around mic button */
+/* Recording – radiating rings around mic button */
 .voice-btn.recording{position:relative}
 .voice-btn.recording::before,.voice-btn.recording::after{
   content:"";position:absolute;inset:0;border-radius:10px;border:2px solid var(--rec);
@@ -744,11 +744,11 @@ body.sb-open .tb-menu svg line:nth-child(3){transform:translateY(-6px) rotate(-4
   100%{opacity:0;transform:scale(1.4)}
 }
 
-/* Toasts â€” type-specific accents */
+/* Toasts – type-specific accents */
 .toast.ok{box-shadow:0 8px 24px rgba(45,122,45,0.3)}
 .toast.err{box-shadow:0 8px 24px rgba(192,57,43,0.3)}
 
-/* Mood selection â€” burst animation */
+/* Mood selection – burst animation */
 .mood.on::before{content:"";position:absolute;inset:0;border-radius:22px;
   background:currentColor;opacity:0;animation:moodBurst .5s ease-out;pointer-events:none}
 .mood{position:relative;overflow:hidden}
@@ -772,7 +772,7 @@ body.sb-open .tb-menu svg line:nth-child(3){transform:translateY(-6px) rotate(-4
 
 /* ===== REFINED LIST / PROFILE / POPUP COLORS (overrides) ===== */
 
-/* Student list items â€” refined card-style with stronger hierarchy */
+/* Student list items – refined card-style with stronger hierarchy */
 .s-item{
   background:#fff;
   padding:12px 14px;
@@ -799,7 +799,7 @@ body.sb-open .tb-menu svg line:nth-child(3){transform:translateY(-6px) rotate(-4
 .s-item.active .s-name{color:#fff}
 .s-item.active .s-meta{color:rgba(250,246,238,0.7)}
 
-/* Avatar â€” non-active uses cream/gold; active uses gold pop */
+/* Avatar – non-active uses cream/gold; active uses gold pop */
 .s-avatar{
   background:linear-gradient(135deg,var(--cream-2),var(--cream-3));
   color:var(--maroon-deep);
@@ -815,7 +815,7 @@ body.sb-open .tb-menu svg line:nth-child(3){transform:translateY(-6px) rotate(-4
   box-shadow:0 4px 14px rgba(201,168,76,0.5);
 }
 
-/* Type chips â€” refined pill */
+/* Type chips – refined pill */
 .type-chip{
   padding:3px 9px;
   border-radius:999px;
@@ -836,7 +836,7 @@ body.sb-open .tb-menu svg line:nth-child(3){transform:translateY(-6px) rotate(-4
   border-color:rgba(201,168,76,0.5);
 }
 
-/* Student name â€” clearer */
+/* Student name – clearer */
 /* Default app affordances: tooltips, keyboard focus, and movable sidebar rows */
 [data-tip]{position:relative}
 [data-tip]::after{
@@ -908,7 +908,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
 .s-name{color:var(--ink);font-weight:700}
 .s-meta{color:var(--ink-soft);opacity:.7;font-weight:500}
 
-/* Search input â€” refined */
+/* Search input – refined */
 .sb-search input{
   background:#fff;
   border:1.5px solid rgba(122,24,24,0.1);
@@ -920,11 +920,11 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
   box-shadow:0 0 0 4px rgba(122,24,24,0.08);
 }
 
-/* Sidebar â€” cleaner section dividers */
+/* Sidebar – cleaner section dividers */
 .sb-add{padding:12px 14px}
 .sb-footer{background:rgba(255,255,255,0.4);backdrop-filter:blur(6px)}
 
-/* ===== PROFILE / STUDENT VIEW HEADER â€” CLASSIC ===== */
+/* ===== PROFILE / STUDENT VIEW HEADER – CLASSIC ===== */
 .sv-card:first-child{
   padding:0;
   overflow:hidden;
@@ -986,7 +986,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
 
 /* gold divider already set on .sv-head above */
 
-/* Badges row â€” clean tinted band */
+/* Badges row – clean tinted band */
 .sv-card:first-child .sv-badges{
   margin:0;
   padding:16px 22px;
@@ -1046,12 +1046,12 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
 .modal-body{padding:24px}
 .modal-foot{background:#fff;padding:16px 24px 18px;border-top:1px solid var(--rule)}
 
-/* Confirm modal â€” danger color theme */
+/* Confirm modal – danger color theme */
 #confirmModal .modal{max-width:380px}
 #confirmModal .modal-head{background:linear-gradient(180deg,#fff5f4,#fff)}
 #confirmModal .modal-head h2{color:var(--danger)}
 
-/* AI Summary modal â€” gold accent */
+/* AI Summary modal – gold accent */
 #summaryModal .modal-head{background:linear-gradient(180deg,#fffaf0,#fff)}
 #summaryModal .modal-head h2{color:var(--maroon-deep)}
 .summary-body{
@@ -1074,7 +1074,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
   display:inline-flex;align-items:center;gap:6px;font-size:0.78rem;color:var(--muted);font-weight:500}
 .summary-stamp svg{color:var(--gold)}
 
-/* Type toggle inside modal â€” segmented control look */
+/* Type toggle inside modal – segmented control look */
 .type-toggle{
   background:var(--cream);
   border:1px solid rgba(122,24,24,0.08);
@@ -1092,7 +1092,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
 }
 .type-opt.on svg{color:var(--gold)}
 
-/* Inputs inside modal â€” refined */
+/* Inputs inside modal – refined */
 .modal .fg input,.modal .fg textarea,.modal .cdd-btn{
   background:#fff;
   border:1.5px solid rgba(122,24,24,0.12);
@@ -1117,7 +1117,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
 
 /* ===== COMPREHENSIVE MOBILE / PHONE RESPONSIVE LAYER ===== */
 
-/* Tablet & phone (â‰¤768px) â€” full mobile UX */
+/* Tablet & phone (â‰¤768px) – full mobile UX */
 @media(max-width:768px){
   html,body{font-size:16px}
 
@@ -1133,7 +1133,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
   .login-crest{width:76px;height:76px}
   .fg input,.fg select,.fg textarea{font-size:16px;padding:14px 16px}
 
-  /* Sidebar â€” slide-over */
+  /* Sidebar – slide-over */
   .sidebar{width:88%;max-width:340px;background:var(--cream)}
   .body{position:relative}
   .content{padding-bottom:env(safe-area-inset-bottom,0)}
@@ -1150,7 +1150,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
   /* Cards more compact */
   .sv-card{border-radius:18px;margin-bottom:14px}
 
-  /* Profile header â€” restack neatly */
+  /* Profile header – restack neatly */
   .sv-card:first-child{border-radius:18px}
   .sv-head{padding:22px 18px 24px;gap:14px}
   .sv-avatar{width:64px;height:64px;font-size:1.45rem;box-shadow:0 0 0 2px rgba(255,255,255,0.12),0 0 0 4px rgba(201,168,76,0.35),0 8px 22px rgba(0,0,0,0.32)}
@@ -1191,7 +1191,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
   .note-del{padding:8px;min-width:36px;min-height:36px;display:flex;align-items:center;justify-content:center}
   .note-body{font-size:0.95rem}
 
-  /* Modals â€” slide-up bottom-sheet */
+  /* Modals – slide-up bottom-sheet */
   .modal-bg{align-items:flex-end;padding:0;backdrop-filter:blur(4px)}
   .modal{border-radius:22px 22px 0 0;max-height:92dvh;max-width:100%;width:100%;
     box-shadow:0 -20px 60px rgba(0,0,0,0.4),0 0 0 1px rgba(201,168,76,0.15)}
@@ -1203,7 +1203,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
   .modal-foot .btn{flex:1;min-height:48px}
   .modal-grid{grid-template-columns:1fr;gap:10px}
 
-  /* Confirm modal â€” stack action buttons full-width with danger on top */
+  /* Confirm modal – stack action buttons full-width with danger on top */
   #confirmModal .modal{max-width:100%}
   #confirmModal .modal-foot{flex-direction:column-reverse}
   #confirmModal .modal-foot .btn{width:100%;flex:none}
@@ -1217,7 +1217,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
   .type-toggle{padding:4px}
   .type-opt{padding:10px 8px;font-size:0.9rem;min-height:42px}
 
-  /* Toast â€” bottom safe inset */
+  /* Toast – bottom safe inset */
   #toast{bottom:calc(20px + env(safe-area-inset-bottom,0));max-width:calc(100% - 24px)}
   .toast{font-size:0.9rem;padding:12px 16px}
 
@@ -1232,7 +1232,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
   .s-meta{font-size:0.8rem}
 }
 
-/* Small phones (â‰¤400px) â€” extra tightening */
+/* Small phones (â‰¤400px) – extra tightening */
 @media(max-width:400px){
   .sv{padding:12px 10px}
   .sv-head{padding:20px 16px 22px;gap:12px}
@@ -1251,7 +1251,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
   .mood{padding:7px 11px;font-size:0.82rem;min-height:36px}
 }
 
-/* Landscape phone â€” keep header tight, scroll body */
+/* Landscape phone – keep header tight, scroll body */
 @media(max-width:900px) and (orientation:landscape) and (max-height:500px){
   .sv-head{padding:16px 18px 18px}
   .sv-avatar{width:52px;height:52px;font-size:1.15rem}
@@ -1269,7 +1269,7 @@ body.sb-open .sidebar-edge{opacity:0;pointer-events:none}
   .modal-foot{padding-bottom:calc(18px + env(safe-area-inset-bottom,0))}
 }
 
-/* Touch tweaks â€” disable hover-lift on touch devices to avoid stuck hover state */
+/* Touch tweaks – disable hover-lift on touch devices to avoid stuck hover state */
 @media(hover:none){
   .btn:hover,.s-item:hover,.note:hover,.badge:hover,.sv-card:hover{transform:none;box-shadow:var(--shadow)}
   .s-item:hover{background:#fff}
@@ -1737,9 +1737,9 @@ tbody tr:hover td {
       <div class="sv" id="sv" style="display:none">
         <div class="sv-card">
           <div class="sv-head">
-            <div class="sv-avatar" id="svAvatar">â€”</div>
+            <div class="sv-avatar" id="svAvatar">–</div>
             <div style="flex:1;min-width:0">
-              <div class="sv-name" id="svName">â€”</div>
+              <div class="sv-name" id="svName">–</div>
               <div class="sv-meta" id="svMeta"></div>
             </div>
           </div>
@@ -1868,15 +1868,15 @@ tbody tr:hover td {
           <div class="fg only-teacher" style="display:none"><label id="lSubject">Subject / Department</label><input autocomplete="off" type="text" id="sSubject" placeholder="e.g. Mathematics"/></div>
           <div class="fg only-teacher" style="display:none"><label id="lContactT">Phone (optional)</label><input autocomplete="off" type="text" id="sContactT" placeholder="Phone number"/></div>
           
-          <div class="fg"><label id="lAge">Age</label><input autocomplete="off" type="number" id="sAge" placeholder="â€”" min="5" max="100"/></div>
+          <div class="fg"><label id="lAge">Age</label><input autocomplete="off" type="number" id="sAge" placeholder="–" min="5" max="100"/></div>
           <div class="fg"><label id="lGender">Gender</label>
             <div class="cdd" id="ddGender"></div>
             <input autocomplete="off" type="hidden" id="sGender" value=""/>
           </div>
           <div class="fg only-student"><label>Date of Birth</label><input autocomplete="off" type="text" class="flatpickr-date" placeholder="YYYY-MM-DD" id="sDob"/></div>
           <div class="fg only-student"><label>House / Stream</label><input autocomplete="off" type="text" id="sHouse" placeholder="e.g. Blue House"/></div>
-          <div class="fg only-student"><label>Religion</label><input autocomplete="off" type="text" id="sReligion" placeholder="â€”"/></div>
-          <div class="fg only-student"><label>Nationality</label><input autocomplete="off" type="text" id="sNationality" placeholder="â€”"/></div>
+          <div class="fg only-student"><label>Religion</label><input autocomplete="off" type="text" id="sReligion" placeholder="–"/></div>
+          <div class="fg only-student"><label>Nationality</label><input autocomplete="off" type="text" id="sNationality" placeholder="–"/></div>
           <div class="fg only-student"><label>Medium</label><input autocomplete="off" type="text" id="sMedium" placeholder="Sinhala / English / Tamil"/></div>
         </div>
       </div>
@@ -1887,10 +1887,10 @@ tbody tr:hover td {
         <div class="modal-grid">
           <div class="fg"><label>Father / Mother / Guardian's Name</label><input autocomplete="off" type="text" id="sGuardianName" placeholder="Guardian name"/></div>
           <div class="fg"><label>Emergency Number</label><input autocomplete="off" type="text" id="sEmergencyPhone" placeholder="Emergency phone"/></div>
-          <div class="fg"><label id="lFatherName">Father's Name</label><input autocomplete="off" type="text" id="sFatherName" placeholder="â€”"/></div>
-          <div class="fg"><label>Father's Phone Number</label><input autocomplete="off" type="text" id="sFatherPhone" placeholder="â€”"/></div>
-          <div class="fg" id="lMotherName"><label id="lMotherName">Mother's Name</label><input autocomplete="off" type="text" id="sMotherName" placeholder="â€”"/></div>
-          <div class="fg"><label>Mother's Phone Number</label><input autocomplete="off" type="text" id="sMotherPhone" placeholder="â€”"/></div>
+          <div class="fg"><label id="lFatherName">Father's Name</label><input autocomplete="off" type="text" id="sFatherName" placeholder="–"/></div>
+          <div class="fg"><label>Father's Phone Number</label><input autocomplete="off" type="text" id="sFatherPhone" placeholder="–"/></div>
+          <div class="fg" id="lMotherName"><label id="lMotherName">Mother's Name</label><input autocomplete="off" type="text" id="sMotherName" placeholder="–"/></div>
+          <div class="fg"><label>Mother's Phone Number</label><input autocomplete="off" type="text" id="sMotherPhone" placeholder="–"/></div>
           <div class="fg" style="display:none"><label id="lPhone2">Secondary Phone</label><input autocomplete="off" type="hidden" id="sPhone2"/></div>
         </div>
       </div>
@@ -2051,7 +2051,7 @@ tbody tr:hover td {
       <!-- S6: Diagnosis -->
       <div class="cr-section hidden" id="crs6">
         <div class="cr-section-title">Current Diagnostic Impression</div>
-        <div class="fg"><label>Diagnostic Codes (DSM-5 / ICD-11)</label><input autocomplete="off" type="text" id="crDiagCodes" placeholder="e.g. F41.1 â€“ Generalized Anxiety Disorder (ICD-11) / 300.02 (DSM-5)"/></div>
+        <div class="fg"><label>Diagnostic Codes (DSM-5 / ICD-11)</label><input autocomplete="off" type="text" id="crDiagCodes" placeholder="e.g. F41.1 — Generalized Anxiety Disorder (ICD-11) / 300.02 (DSM-5)"/></div>
         <div class="fg"><label>Clinical Formulation</label><textarea autocomplete="off" id="crFormulation" rows="5" placeholder="If formal diagnosis isn't appropriate, summarize how the client's history and symptoms intersect. Note 'No formal diagnosis at this time' if applicable."></textarea></div>
       </div>
 
@@ -2287,7 +2287,7 @@ const T = {
     voiceTag:'Voice',
   },
   si:{
-    lLoginTitle:'à¶œà·”à¶»à·” à¶¯à·Šà·€à·à¶»à¶º',lLoginSub:'à·à·à¶±à·Šà¶­ à¶¢à·à·à¶´à·Š à·€à·’à¶¯à·Šâ€à¶ºà·à¶½à¶º Â· à¶…à¶±à·”à¶»à·à¶°à¶´à·”à¶»à¶º',lPin:'à¶¸à·”à¶»à¶´à¶¯à¶º à¶‡à¶­à·”à·…à¶­à·Š à¶šà¶»à¶±à·Šà¶±',lSignIn:'à¶‡à¶­à·”à·…à·” à·€à¶±à·Šà¶±',
+    lLoginTitle:'à¶œà·”à¶»à·” à¶¯à·Šà·€à·à¶»à¶º',lLoginSub:'à·à·à¶±à·Šà¶­ à¶¢à·à·à¶´à·Š à·€à·’à¶¯à·Šâ€à¶ºà·à¶½à¶º · à¶…à¶±à·”à¶»à·à¶°à¶´à·”à¶»à¶º',lPin:'à¶¸à·”à¶»à¶´à¶¯à¶º à¶‡à¶­à·”à·…à¶­à·Š à¶šà¶»à¶±à·Šà¶±',lSignIn:'à¶‡à¶­à·”à·…à·” à·€à¶±à·Šà¶±',
     tbTitle:'à¶‹à¶´à¶¯à·šà·à¶±à¶º',lAddStudent:'à·ƒà·’à·ƒà·”à·€à· à¶‘à¶šà·Š à¶šà¶»à¶±à·Šà¶±',lCredit:'Lusanda Yehen à·€à·’à·ƒà·’à¶±à·Š à¶±à·’à¶»à·Šà¶¸à·à¶«à¶º<br/>SJC à¶‹à¶´à¶¯à·šà·à¶± à¶šà¶«à·Šà¶©à·à¶ºà¶¸',
     lWelcomeTitle:'à¶†à¶ºà·”à¶¶à·à·€à¶±à·Š',lWelcomeDesc:'à·ƒà·’à·ƒà·”à·€à·™à¶šà·” à¶­à·à¶»à¶±à·Šà¶±, à¶±à·à¶­à·„à·œà¶­à·Š à¶±à·€ à·ƒà·’à·ƒà·”à·€à·™à¶šà·” à¶‘à¶šà·Š à¶šà¶»à¶±à·Šà¶±.',lOpenList:'à·ƒà·’à·ƒà·” à¶½à·à¶ºà·’à·ƒà·Šà¶­à·”à·€',
     lAddNote:'à·ƒà¶§à·„à¶±à¶šà·Š à¶‘à¶šà·Š à¶šà¶»à¶±à·Šà¶±',lSaveNote:'à·ƒà·”à¶»à¶šà·’à¶±à·Šà¶±',lNotesTitle:'à·ƒà¶§à·„à¶±à·Š',
@@ -2314,7 +2314,7 @@ const T = {
     voiceTag:'à·„à¶¬',
   },
   ta:{
-    lLoginTitle:'à®†à®šà®¿à®°à®¿à®¯à®°à¯ à®ªà¯‹à®°à¯à®Ÿà®²à¯',lLoginSub:"à®ªà¯à®©à®¿à®¤ à®œà¯‹à®šà®ªà¯ à®•à®²à¯à®²à¯‚à®°à®¿ Â· à®…à®©à¯à®°à®¾à®¤à®ªà¯à®°à®®à¯",lPin:'à®•à®Ÿà®µà¯à®šà¯à®šà¯Šà®²à¯',lSignIn:'à®‰à®³à¯à®¨à¯à®´à¯ˆà®•',
+    lLoginTitle:'à®†à®šà®¿à®°à®¿à®¯à®°à¯ à®ªà¯‹à®°à¯à®Ÿà®²à¯',lLoginSub:"à®ªà¯à®©à®¿à®¤ à®œà¯‹à®šà®ªà¯ à®•à®²à¯à®²à¯‚à®°à®¿ · à®…à®©à¯à®°à®¾à®¤à®ªà¯à®°à®®à¯",lPin:'à®•à®Ÿà®µà¯à®šà¯à®šà¯Šà®²à¯',lSignIn:'à®‰à®³à¯à®¨à¯à®´à¯ˆà®•',
     tbTitle:'à®‰à®ªà®¤à¯‡à®šà®®à¯',lAddStudent:'à®®à®¾à®£à®µà®°à¯ˆà®šà¯ à®šà¯‡à®°à¯',lCredit:'Lusanda Yehen à®†à®²à¯ à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿà®¤à¯<br/>SJC à®‰à®ªà®¤à¯‡à®šà®•à¯ à®•à¯à®´à¯',
     lWelcomeTitle:'à®µà®°à®µà¯‡à®±à¯à®ªà¯',lWelcomeDesc:'à®®à®¾à®£à®µà®°à¯ˆà®¤à¯ à®¤à¯‡à®°à¯à®¨à¯à®¤à¯†à®Ÿà¯à®•à¯à®• à®®à¯†à®©à¯à®µà¯ˆà®¤à¯ à®¤à®Ÿà¯à®Ÿà®µà¯à®®à¯ à®…à®²à¯à®²à®¤à¯ à®ªà¯à®¤à®¿à®¯à®µà®°à¯ˆà®šà¯ à®šà¯‡à®°à¯à®•à¯à®•à®µà¯à®®à¯.',lOpenList:'à®®à®¾à®£à®µà®°à¯ à®ªà®Ÿà¯à®Ÿà®¿à®¯à®²à¯',
     lAddNote:'à®•à¯à®±à®¿à®ªà¯à®ªà¯ˆà®šà¯ à®šà¯‡à®°à¯',lSaveNote:'à®šà¯‡à®®à®¿',lNotesTitle:'à®•à¯à®±à®¿à®ªà¯à®ªà¯à®•à®³à¯',
@@ -2393,7 +2393,7 @@ function applyLang(){
   document.body.classList.toggle('si', lang==='si');
   document.body.classList.toggle('ta', lang==='ta');
 
-  // Categories dropdown â€” rebuild so custom cats + correct language labels both apply
+  // Categories dropdown – rebuild so custom cats + correct language labels both apply
   rebuildCategoryDropdown();
 
   // Gender dropdown (translate Male/Female labels by language)
@@ -2401,12 +2401,12 @@ function applyLang(){
   const genderCurr = (dropdowns.ddGender && dropdowns.ddGender.value) || document.getElementById('sGender').value || '';
   initDropdown('ddGender', {
     options: [
-      { value: '', label: 'â€”' },
+      { value: '', label: '–' },
       { value: 'Male', label: genderLabels.Male },
       { value: 'Female', label: genderLabels.Female },
     ],
     value: genderCurr,
-    placeholder: 'â€”',
+    placeholder: '–',
     hiddenInput: 'sGender'
   });
 
@@ -2417,7 +2417,7 @@ function applyLang(){
 
 // ===== SCROLL REVEAL =====
 function observeReveal(container){
-  // Just ensure animations run â€” IntersectionObserver is unreliable inside
+  // Just ensure animations run – IntersectionObserver is unreliable inside
   // a scrolling container, so we simply let the CSS delay stagger do the work.
   container.querySelectorAll('.reveal,.reveal-left').forEach(el => {
     el.style.animationPlayState = 'running';
@@ -2549,8 +2549,8 @@ function renderStudentList(){
     const active = currentStudent && currentStudent.id === s.id ? 'active' : '';
     const isTeacher = s.type === 'teacher';
     const chipLabel = tr(isTeacher ? 'teacherShort' : 'studentShort');
-    const subtitle = isTeacher ? (s.subject || 'â€”') : (s.grade || 'â€”');
-    const tip = `${s.name} - ${isTeacher ? 'Teacher' : 'Student'}${subtitle && subtitle !== 'Ã¢â‚¬â€' ? ` - ${subtitle}` : ''}`;
+    const subtitle = isTeacher ? (s.subject || '–') : (s.grade || '–');
+    const tip = `${s.name} - ${isTeacher ? 'Teacher' : 'Student'}${subtitle && subtitle !== 'Ã¢â‚¬”' ? ` - ${subtitle}` : ''}`;
     const alertLabel = s.promotionAlert ? `<span style="background:#fff5f5; color:#c53030; font-size:0.65rem; border:1px solid #feb2b2; border-radius:4px; padding:1px 5px; margin-left:6px; font-weight:700; display:inline-flex; align-items:center; gap:2px;"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Update Class</span>` : '';
     return `<div class="s-item ${active} reveal-left" role="button" tabindex="0" data-student-id="${escAttr(s.id)}" data-tip="${escAttr(tip)}" title="${escAttr(tip)}" style="animation-delay:${Math.min(i*40,320)}ms" onclick="handleStudentClick(event,'${s.id}')" onkeydown="handleStudentKey(event,'${s.id}')">
       <div class="s-avatar">${initials}</div>
@@ -2716,7 +2716,7 @@ function renderSummary(text, at){
   const ts = at ? new Date(at) : null;
   const stamp = ts ? `<div class="summary-stamp">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      <span>${ts.toLocaleDateString(lang==='si'?'si-LK':'en-GB',{day:'numeric',month:'short',year:'numeric'})} Â· ${ts.toLocaleTimeString(lang==='si'?'si-LK':'en-GB',{hour:'2-digit',minute:'2-digit'})}</span>
+      <span>${ts.toLocaleDateString(lang==='si'?'si-LK':'en-GB',{day:'numeric',month:'short',year:'numeric'})} · ${ts.toLocaleTimeString(lang==='si'?'si-LK':'en-GB',{hour:'2-digit',minute:'2-digit'})}</span>
     </div>` : '';
   body.innerHTML = `<div class="summary-text"></div>${stamp}`;
   body.querySelector('.summary-text').textContent = text;
@@ -2800,7 +2800,7 @@ function renderStudentHeader(){
   const metaParts = [];
   if(isTeacher && s.subject) metaParts.push(s.subject);
   if(!isTeacher && s.grade) metaParts.push(`${tr('grade')} ${s.grade}${s.studentClass ? ' - ' + s.studentClass : ''}`);
-  document.getElementById('svMeta').textContent = metaParts.join(' Â· ');
+  document.getElementById('svMeta').textContent = metaParts.join(' · ');
   
   if (isTeacher) {
     const badges = [];
@@ -2829,7 +2829,7 @@ function renderStudentHeader(){
     const alertBanner = s.promotionAlert ? `
       <div style="grid-column: 1 / -1; background:#fff5f5; border:1px solid #feb2b2; border-left:4px solid var(--maroon); padding:12px 16px; border-radius:10px; font-size:0.85rem; color:#c53030; font-weight:600; margin-bottom: 8px; display:flex; align-items:center; gap:8px;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        <span>Student promoted to Grade ${escHTML(s.grade || 'â€”')}. Class section and teacher mapping need manual verification.</span>
+        <span>Student promoted to Grade ${escHTML(s.grade || '–')}. Class section and teacher mapping need manual verification.</span>
       </div>
     ` : '';
 
@@ -2846,12 +2846,12 @@ function renderStudentHeader(){
               Registration & Academic
             </div>
             <div style="display:flex; flex-direction:column; gap:10px; font-size:0.88rem; color:var(--maroon-mid);">
-              <div><strong style="color:var(--maroon-deep);">Date of Registration:</strong> ${escHTML(s.date || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Register ID:</strong> ${escHTML(s.registerId || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Index Number:</strong> ${escHTML(s.indexNo || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Grade &amp; Class:</strong> Grade ${escHTML(s.grade || 'â€”')} - ${escHTML(s.studentClass || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Counsellor Reg No:</strong> ${escHTML(s.counsellorReg || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Class Teacher:</strong> ${escHTML(mappedTeacher || 'â€”')}</div>
+              <div><strong style="color:var(--maroon-deep);">Date of Registration:</strong> ${escHTML(s.date || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Register ID:</strong> ${escHTML(s.registerId || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Index Number:</strong> ${escHTML(s.indexNo || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Grade &amp; Class:</strong> Grade ${escHTML(s.grade || '–')} - ${escHTML(s.studentClass || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Counsellor Reg No:</strong> ${escHTML(s.counsellorReg || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Class Teacher:</strong> ${escHTML(mappedTeacher || '–')}</div>
             </div>
           </div>
 
@@ -2862,12 +2862,12 @@ function renderStudentHeader(){
               Personal Details
             </div>
             <div style="display:flex; flex-direction:column; gap:10px; font-size:0.88rem; color:var(--maroon-mid);">
-              <div><strong style="color:var(--maroon-deep);">Age / Gender:</strong> ${escHTML(s.age || 'â€”')} / ${escHTML(s.gender || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Date of Birth:</strong> ${escHTML(s.dob || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Religion:</strong> ${escHTML(s.religion || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Nationality:</strong> ${escHTML(s.nationality || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Medium:</strong> ${escHTML(s.medium || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Transport Method:</strong> ${escHTML(s.transportMethod || 'â€”')}</div>
+              <div><strong style="color:var(--maroon-deep);">Age / Gender:</strong> ${escHTML(s.age || '–')} / ${escHTML(s.gender || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Date of Birth:</strong> ${escHTML(s.dob || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Religion:</strong> ${escHTML(s.religion || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Nationality:</strong> ${escHTML(s.nationality || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Medium:</strong> ${escHTML(s.medium || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Transport Method:</strong> ${escHTML(s.transportMethod || '–')}</div>
             </div>
           </div>
 
@@ -2878,12 +2878,12 @@ function renderStudentHeader(){
               Family &amp; Guardian Info
             </div>
             <div style="display:flex; flex-direction:column; gap:10px; font-size:0.88rem; color:var(--maroon-mid);">
-              <div><strong style="color:var(--maroon-deep);">Guardian Name:</strong> ${escHTML(s.guardianName || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Father Name:</strong> ${escHTML(s.fatherName || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Father Phone:</strong> ${escHTML(s.fatherPhone || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Mother Name:</strong> ${escHTML(s.motherName || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Mother Phone:</strong> ${escHTML(s.motherPhone || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Emergency Phone:</strong> ${escHTML(s.emergencyPhone || s.contact || 'â€”')}</div>
+              <div><strong style="color:var(--maroon-deep);">Guardian Name:</strong> ${escHTML(s.guardianName || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Father Name:</strong> ${escHTML(s.fatherName || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Father Phone:</strong> ${escHTML(s.fatherPhone || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Mother Name:</strong> ${escHTML(s.motherName || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Mother Phone:</strong> ${escHTML(s.motherPhone || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Emergency Phone:</strong> ${escHTML(s.emergencyPhone || s.contact || '–')}</div>
             </div>
           </div>
 
@@ -2894,11 +2894,11 @@ function renderStudentHeader(){
               Address &amp; Problem Details
             </div>
             <div style="display:flex; flex-direction:column; gap:10px; font-size:0.88rem; color:var(--maroon-mid);">
-              <div><strong style="color:var(--maroon-deep);">Home Address:</strong> ${escHTML(s.address || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Nature of Problem:</strong> ${escHTML(s.issues || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Action Taken:</strong> ${escHTML(s.action || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">Siblings details:</strong> ${escHTML(s.siblings || 'â€”')}</div>
-              <div><strong style="color:var(--maroon-deep);">General Remarks:</strong> ${escHTML(s.remarks || s.specialNote || 'â€”')}</div>
+              <div><strong style="color:var(--maroon-deep);">Home Address:</strong> ${escHTML(s.address || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Nature of Problem:</strong> ${escHTML(s.issues || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Action Taken:</strong> ${escHTML(s.action || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">Siblings details:</strong> ${escHTML(s.siblings || '–')}</div>
+              <div><strong style="color:var(--maroon-deep);">General Remarks:</strong> ${escHTML(s.remarks || s.specialNote || '–')}</div>
             </div>
           </div>
 
@@ -3298,7 +3298,7 @@ async function renderNotes(){
   const moodCol = {calm:'#2d7a2d',sad:'#1565c0',anxious:'#e65100',angry:'#c62828',neutral:'#666',happy:'#f57f17',withdrawn:'#4a148c'};
   list.innerHTML = notes.map((n, i) => {
     const d = new Date(n.createdAt);
-    const dt = d.toLocaleDateString(lang==='si'?'si-LK':'en-GB',{day:'numeric',month:'short',year:'numeric'}) + ' Â· ' +
+    const dt = d.toLocaleDateString(lang==='si'?'si-LK':'en-GB',{day:'numeric',month:'short',year:'numeric'}) + ' · ' +
                d.toLocaleTimeString(lang==='si'?'si-LK':'en-GB',{hour:'2-digit',minute:'2-digit'});
     const hasAudio = !!n.audioBase64;
     const audioPlayer = hasAudio
@@ -3357,7 +3357,7 @@ async function deleteNote(noteId){
   }
 }
 
-// ===== CUSTOM CONFIRM MODAL (replaces window.confirm â€” reliable on mobile/PWA) =====
+// ===== CUSTOM CONFIRM MODAL (replaces window.confirm – reliable on mobile/PWA) =====
 function confirmModal(message){
   return new Promise(resolve => {
     const bg = document.getElementById('confirmModal');
@@ -3399,7 +3399,7 @@ function renderDropdown(id){
   const selected = dd.options.find(o => o.value === dd.value);
   container.innerHTML = `
     <button type="button" class="cdd-btn" data-cdd-toggle="${id}">
-      <span class="cdd-val${selected && selected.value!==''?'':' empty'}">${selected ? escHTML(selected.label) : escHTML(dd.placeholder || 'â€”')}</span>
+      <span class="cdd-val${selected && selected.value!==''?'':' empty'}">${selected ? escHTML(selected.label) : escHTML(dd.placeholder || '–')}</span>
       <svg class="cdd-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
     </button>
     <div class="cdd-panel">
@@ -3463,7 +3463,7 @@ function setDropdownValue(id, value){
   renderDropdown(id);
 }
 
-// Delegated event handling â€” survives DOM re-renders
+// Delegated event handling – survives DOM re-renders
 document.addEventListener('click', e => {
   const toggleBtn = e.target.closest('[data-cdd-toggle]');
   if(toggleBtn){
@@ -3477,7 +3477,7 @@ document.addEventListener('click', e => {
     selectDropdown(optEl.getAttribute('data-cdd-select'), optEl.getAttribute('data-cdd-value'));
     return;
   }
-  // Click outside any dropdown â€” close all
+  // Click outside any dropdown – close all
   Object.keys(dropdowns).forEach(id => {
     const el = document.getElementById(id);
     if(el && el.classList.contains('is-open')){
@@ -3623,7 +3623,7 @@ async function openReportModal(){
   document.getElementById('reportModal').classList.remove('hidden');
   const body = document.getElementById('reportBody');
   body.innerHTML = `<div class="ai-loading"><span class="spin"></span>Loading...</div>`;
-  document.getElementById('reportTitle').textContent = `Report â€” ${currentStudent.name}`;
+  document.getElementById('reportTitle').textContent = `Report – ${currentStudent.name}`;
   try {
     const res = await fetch(`/api/students/${currentStudent.id}/notes`);
     const notes = await res.json();
@@ -3644,20 +3644,20 @@ async function openReportModal(){
       s.motherName ? `Mother: ${s.motherName}` : null,
       s.contact ? `Contact: ${s.contact}` : null,
       s.address ? `Address: ${s.address}` : null,
-    ].filter(Boolean).join(' Â· ');
+    ].filter(Boolean).join(' · ');
     const regLine = [
       s.registerId ? `Register ID: ${s.registerId}` : null,
       s.house ? `House: ${s.house}` : null,
       s.religion ? `Religion: ${s.religion}` : null,
       s.nationality ? `Nationality: ${s.nationality}` : null,
       s.medium ? `Medium: ${s.medium}` : null,
-    ].filter(Boolean).join(' Â· ');
+    ].filter(Boolean).join(' · ');
     let html = `<div class="report-header">
       <h3>${escHTML(s.name)} <span style="font-size:0.7em;font-weight:500;color:var(--muted)">${s.type==='teacher'?'Teacher':'Student'}</span></h3>
       ${s.registerId ? `<p style="font-size:0.85rem;font-weight:700;color:var(--maroon);margin-bottom:3px">Register ID: ${escHTML(s.registerId)}</p>` : ''}
       <p>${escHTML(infoLines)}</p>
       ${regLine ? `<p style="margin-top:2px;font-size:0.78rem;color:var(--muted)">${escHTML(regLine)}</p>` : ''}
-      <p style="margin-top:4px;font-size:0.8rem;color:var(--muted)">Generated ${new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})} Â· ${notes.length} note${notes.length!==1?'s':''}</p>
+      <p style="margin-top:4px;font-size:0.8rem;color:var(--muted)">Generated ${new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})} · ${notes.length} note${notes.length!==1?'s':''}</p>
     </div>`;
     const catOrder = [...BUILTIN_CATS, ...customCategories.map(c=>c.slug)];
     const sortedCats = Object.keys(groups).sort((a,b)=>{
@@ -3678,7 +3678,7 @@ async function openReportModal(){
         html += `<div class="report-note">
           <div class="report-note-meta">
             <span>${d} ${t}</span>
-            <span>Mood: ${n.mood||'â€”'}</span>
+            <span>Mood: ${n.mood||'–'}</span>
             ${n.audioBase64?'<span> Voice memo</span>':''}
           </div>
           <div class="report-note-body"></div>
@@ -3707,13 +3707,13 @@ function _loadScript(src){
 async function printReport(){
   const isGlobal = !document.getElementById('globalReportModal').classList.contains('hidden');
   const bodyEl  = isGlobal ? document.getElementById('grBody') : document.getElementById('reportBody');
-  const title   = isGlobal ? 'Global Report â€” SJC Counseling' : (document.getElementById('reportTitle').textContent || 'Report');
+  const title   = isGlobal ? 'Global Report – SJC Counseling' : (document.getElementById('reportTitle').textContent || 'Report');
   const date    = new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
   const filename = title.replace(/[^a-z0-9]/gi,'_').replace(/_+/g,'_').toLowerCase() + '.pdf';
 
   const btns = [...document.querySelectorAll('[onclick="printReport()"]')];
   const origHTML = btns.map(b=>b.innerHTML);
-  btns.forEach(b=>{ b.disabled=true; b.textContent='Generatingâ€¦'; });
+  btns.forEach(b=>{ b.disabled=true; b.textContent='Generating…'; });
 
   try {
     await _loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
@@ -3727,7 +3727,7 @@ async function printReport(){
     wrap.innerHTML = `
       <div style="border-bottom:2.5px solid #7a1818;padding-bottom:10px;margin-bottom:20px">
         <h1 style="color:#7a1818;font-size:16pt;font-weight:800;margin-bottom:3px">${title}</h1>
-        <div style="font-size:9pt;color:#777">Generated ${date} &nbsp;Â·&nbsp; SJC Counseling Portal</div>
+        <div style="font-size:9pt;color:#777">Generated ${date} &nbsp;·&nbsp; SJC Counseling Portal</div>
       </div>`;
 
     // Clone content (remove scroll constraints)
@@ -3771,11 +3771,11 @@ function openCounselingReport(){
   crTab(1);
   // Populate section 1 from student data
   const s = currentStudent;
-  const dobStr = s.dob ? new Date(s.dob).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}) : 'â€”';
+  const dobStr = s.dob ? new Date(s.dob).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}) : '–';
   const noteDates = [];
-  // Compute session date range from notes (async â€” just show loading)
+  // Compute session date range from notes (async – just show loading)
   fetch(`/api/students/${s.id}/notes`).then(r=>r.json()).then(notes=>{
-    let earliest='â€”', latest='â€”';
+    let earliest='–', latest='–';
     if(notes.length){
       const sorted = notes.slice().sort((a,b)=>new Date(a.createdAt)-new Date(b.createdAt));
       const fmt = d => new Date(d).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
@@ -3785,17 +3785,17 @@ function openCounselingReport(){
     const today = new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
     const infoItems = [
       ['Full Name', s.name],
-      ['Register ID', s.registerId||'â€”'],
+      ['Register ID', s.registerId||'–'],
       ['Date of Birth', dobStr],
-      ['Age', s.age||'â€”'],
-      ['Gender', s.gender||'â€”'],
-      ['Grade / Class', s.grade||'â€”'],
-      ['Contact', s.contact||'â€”'],
-      ['Father', s.fatherName||'â€”'],
-      ['Mother', s.motherName||'â€”'],
-      ['Address', s.address||'â€”'],
+      ['Age', s.age||'–'],
+      ['Gender', s.gender||'–'],
+      ['Grade / Class', s.grade||'–'],
+      ['Contact', s.contact||'–'],
+      ['Father', s.fatherName||'–'],
+      ['Mother', s.motherName||'–'],
+      ['Address', s.address||'–'],
       ['Report Date', today],
-      ['Session Range', notes.length ? `${earliest} â€“ ${latest}` : 'â€”'],
+      ['Session Range', notes.length ? `${earliest} — ${latest}` : '–'],
       ['Total Sessions (Notes)', notes.length],
     ];
     document.getElementById('crClientInfo').innerHTML = infoItems.map(([lbl,val])=>
@@ -3896,15 +3896,15 @@ async function _generateCounselingPDF(cr){
   const s = currentStudent;
   const btn = document.querySelector('#crModal [onclick="saveCounselingReport(true)"]');
   const origHTML = btn ? btn.innerHTML : '';
-  if(btn){ btn.disabled=true; btn.textContent='Generating PDFâ€¦'; }
+  if(btn){ btn.disabled=true; btn.textContent='Generating PDF…'; }
 
   try {
     await _loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
     await _loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
 
     const today = new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
-    const dobStr = s.dob ? new Date(s.dob).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}) : 'â€”';
-    let notesInfo = { count:0, earliest:'â€”', latest:'â€”' };
+    const dobStr = s.dob ? new Date(s.dob).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}) : '–';
+    let notesInfo = { count:0, earliest:'–', latest:'–' };
     try {
       const notes = await fetch(`/api/students/${s.id}/notes`).then(r=>r.json());
       if(notes.length){
@@ -3934,11 +3934,11 @@ async function _generateCounselingPDF(cr){
     }
 
     const clientItems = [
-      ['Register ID', s.registerId||'â€”'], ['Date of Birth', dobStr],
-      ['Age', s.age||'â€”'], ['Gender', s.gender||'â€”'],
-      ['Grade / Class', s.grade||'â€”'], ['Contact', s.contact||'â€”'],
-      ['Father', s.fatherName||'â€”'], ['Mother', s.motherName||'â€”'],
-      ['Address', s.address||'â€”'],
+      ['Register ID', s.registerId||'–'], ['Date of Birth', dobStr],
+      ['Age', s.age||'–'], ['Gender', s.gender||'–'],
+      ['Grade / Class', s.grade||'–'], ['Contact', s.contact||'–'],
+      ['Father', s.fatherName||'–'], ['Mother', s.motherName||'–'],
+      ['Address', s.address||'–'],
     ];
 
     const wrap = document.createElement('div');
@@ -3946,10 +3946,10 @@ async function _generateCounselingPDF(cr){
     wrap.innerHTML = `
       <!-- Cover -->
       <div style="border-bottom:3px solid #7a1818;padding-bottom:14px;margin-bottom:18px">
-        <div style="font-size:8.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#7a1818;margin-bottom:5px">Clinical Counseling Report â€” SJC</div>
+        <div style="font-size:8.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#7a1818;margin-bottom:5px">Clinical Counseling Report – SJC</div>
         <div style="font-size:20pt;font-weight:900;color:#1a0404;margin-bottom:2px">${escHTML(s.name)}</div>
-        <div style="font-size:11pt;font-weight:600;color:#7a1818;margin-bottom:8px">${s.type==='teacher'?'Staff Member':'Student'}${s.grade?' Â· '+escHTML(s.grade):''}</div>
-        <div style="font-size:8.5pt;color:#777">Report Date: ${today} &nbsp;Â·&nbsp; Session Range: ${notesInfo.earliest} â€“ ${notesInfo.latest} &nbsp;Â·&nbsp; Total Notes: ${notesInfo.count}</div>
+        <div style="font-size:11pt;font-weight:600;color:#7a1818;margin-bottom:8px">${s.type==='teacher'?'Staff Member':'Student'}${s.grade?' · '+escHTML(s.grade):''}</div>
+        <div style="font-size:8.5pt;color:#777">Report Date: ${today} &nbsp;·&nbsp; Session Range: ${notesInfo.earliest} — ${notesInfo.latest} &nbsp;·&nbsp; Total Notes: ${notesInfo.count}</div>
       </div>
       <!-- Section 1: Client Info -->
       <div style="margin-bottom:22px">
@@ -3974,7 +3974,7 @@ async function _generateCounselingPDF(cr){
           Counselor's Signature &amp; Credentials
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin-bottom:24px">
-          ${[['Counselor Name',cr.counselorName||'â€”'],['Title / License',cr.counselorTitle||'â€”'],['Credential / Reg. No.',cr.counselorCredentials||'â€”'],['Date Signed',cr.signedDate?new Date(cr.signedDate).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}):'â€”']].map(([l,v])=>`<div><div style="font-size:8pt;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#999;margin-bottom:3px">${l}</div><div style="font-size:10pt;color:#111;background:#fafafa;border-left:3px solid #c9a84c;padding:6px 10px;border-radius:0 6px 6px 0">${escHTML(String(v))}</div></div>`).join('')}
+          ${[['Counselor Name',cr.counselorName||'–'],['Title / License',cr.counselorTitle||'–'],['Credential / Reg. No.',cr.counselorCredentials||'–'],['Date Signed',cr.signedDate?new Date(cr.signedDate).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}):'–']].map(([l,v])=>`<div><div style="font-size:8pt;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#999;margin-bottom:3px">${l}</div><div style="font-size:10pt;color:#111;background:#fafafa;border-left:3px solid #c9a84c;padding:6px 10px;border-radius:0 6px 6px 0">${escHTML(String(v))}</div></div>`).join('')}
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:16px">
           <div><div style="border-bottom:1px solid #bbb;padding-bottom:4px;margin-bottom:4px">&nbsp;</div><div style="font-size:8pt;color:#999">Counselor's Signature</div></div>
@@ -3982,7 +3982,7 @@ async function _generateCounselingPDF(cr){
         </div>
         <div style="margin-top:18px;font-size:8pt;color:#777;font-style:italic;border:1px dashed #ccc;padding:8px 12px;border-radius:6px">${escHTML(cr.confidentiality||'This report is confidential. Ensure a signed Release of Information (ROI) is obtained before sharing with any third party.')}</div>
       </div>
-      <div style="margin-top:18px;font-size:7.5pt;color:#bbb;text-align:right">SJC Counseling Portal Â· Generated ${today}</div>
+      <div style="margin-top:18px;font-size:7.5pt;color:#bbb;text-align:right">SJC Counseling Portal · Generated ${today}</div>
     `;
     document.body.appendChild(wrap);
 
@@ -4064,7 +4064,7 @@ function grPersonInfo(s){
   if(s.motherName) parts.push(`Mother: ${s.motherName}`);
   if(s.address) parts.push(s.address);
   if(s.subject) parts.push(s.subject);
-  return parts.join(' Â· ');
+  return parts.join(' · ');
 }
 
 function grRenderPeopleList(body, filter){
@@ -4078,7 +4078,7 @@ function grRenderPeopleList(body, filter){
 
   let html = `<div class="report-header">
     <h3>${filter==='all'?'All People':filter==='teachers'?'Teachers':'Students'}</h3>
-    <p>${list.length} record${list.length!==1?'s':''} Â· Generated ${new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})}</p>
+    <p>${list.length} record${list.length!==1?'s':''} · Generated ${new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})}</p>
   </div>`;
 
   const renderGroup = (group, label) => {
@@ -4094,11 +4094,11 @@ function grRenderPeopleList(body, filter){
       </tr></thead><tbody>`;
     group.forEach(p => {
       const personNotes = grAllNotes.filter(n => n.studentId === p.id).sort((a,b) => new Date(b.createdAt) - new Date(a.createdAt));
-      const lastDate = personNotes.length ? new Date(personNotes[0].createdAt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}) : 'â€”';
+      const lastDate = personNotes.length ? new Date(personNotes[0].createdAt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}) : '–';
       s += `<tr style="border-bottom:1px solid var(--cream-2)" id="grRow_${p.id}">
         <td style="padding:8px 8px 8px 0;font-weight:600;color:var(--maroon-deep)">${escHTML(p.name)}</td>
         <td style="padding:8px;color:var(--muted);font-size:0.8rem">${escHTML(grPersonInfo(p))}</td>
-        <td style="padding:8px;font-size:0.8rem;color:var(--ink)">${escHTML(p.registerId||'â€”')}</td>
+        <td style="padding:8px;font-size:0.8rem;color:var(--ink)">${escHTML(p.registerId||'–')}</td>
         <td style="padding:8px 0 8px 8px;text-align:right;font-size:0.8rem;color:var(--muted);white-space:nowrap">${lastDate}</td>
         <td style="padding:8px 0 8px 8px;text-align:right">
           <button onclick="grDeletePerson('${p.id}','${escHTML(p.name)}')" style="background:none;border:none;cursor:pointer;color:var(--danger);opacity:0.6;padding:2px 4px;border-radius:4px;font-size:1rem;line-height:1" title="Delete">Ã—</button>
@@ -4139,7 +4139,7 @@ async function grDeletePerson(id, name){
 function grRenderByCategory(body){
   if(!grAllStudents.length){ body.innerHTML=`<div class="report-empty">No records found.</div>`; return; }
 
-  // Build category â†’ notes + unique people
+  // Build category → notes + unique people
   const groups = {};
   grAllNotes.forEach(n => {
     const cat = n.category || 'general';
@@ -4171,7 +4171,7 @@ function grRenderByCategory(body){
     const catObj = customCategories.find(c=>c.slug===cat);
     html += `<div class="gr-cat-card" onclick="grViewCategory('${cat}')" style="cursor:pointer;border:1.5px solid var(--cream-3);border-radius:12px;padding:12px 14px;background:var(--cream);transition:border-color .15s,box-shadow .15s">
       <div style="font-weight:700;font-size:0.95rem;color:var(--maroon-deep);margin-bottom:4px">${escHTML(label)}</div>
-      <div style="font-size:0.78rem;color:var(--muted)">${g.people.size} person${g.people.size!==1?'s':''} Â· ${g.notes.length} note${g.notes.length!==1?'s':''}</div>
+      <div style="font-size:0.78rem;color:var(--muted)">${g.people.size} person${g.people.size!==1?'s':''} · ${g.notes.length} note${g.notes.length!==1?'s':''}</div>
       ${isCustom && catObj ? `<button onclick="event.stopPropagation();grDeleteCategory('${catObj.id}','${cat}')" style="margin-top:8px;font-size:0.72rem;color:var(--danger);background:none;border:1px solid var(--danger);border-radius:6px;padding:2px 8px;cursor:pointer">Delete category</button>` : ''}
     </div>`;
   });
@@ -4202,7 +4202,7 @@ function grViewCategory(cat){
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px">
       <div>
         <div style="font-size:1.1rem;font-weight:800;color:var(--maroon-deep)">${escHTML(label)}</div>
-        <div style="font-size:0.8rem;color:var(--muted)">${people.length} person${people.length!==1?'s':''} Â· ${notes.length} note${notes.length!==1?'s':''} Â· ${today}</div>
+        <div style="font-size:0.8rem;color:var(--muted)">${people.length} person${people.length!==1?'s':''} · ${notes.length} note${notes.length!==1?'s':''} · ${today}</div>
       </div>
       <button class="btn btn-sm btn-maroon" onclick="grDownloadCategoryPDF('${cat}')">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
@@ -4266,7 +4266,7 @@ async function grDownloadCategoryPDF(cat){
 
   const btn = document.querySelector(`[onclick="grDownloadCategoryPDF('${cat}')"]`);
   const origHTML = btn ? btn.innerHTML : '';
-  if(btn){ btn.disabled=true; btn.textContent='Generatingâ€¦'; }
+  if(btn){ btn.disabled=true; btn.textContent='Generating…'; }
 
   try {
     await _loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
@@ -4277,15 +4277,15 @@ async function grDownloadCategoryPDF(cat){
 
     let inner = `
       <div style="border-bottom:3px solid #7a1818;padding-bottom:12px;margin-bottom:16px">
-        <div style="font-size:8.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#7a1818;margin-bottom:4px">Category Report â€” SJC Counseling</div>
+        <div style="font-size:8.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#7a1818;margin-bottom:4px">Category Report – SJC Counseling</div>
         <div style="font-size:17pt;font-weight:900;color:#1a0404;margin-bottom:2px">${escHTML(label)}</div>
-        <div style="font-size:8.5pt;color:#777">${people.length} person${people.length!==1?'s':''} Â· ${notes.length} note${notes.length!==1?'s':''} Â· Generated ${today}</div>
+        <div style="font-size:8.5pt;color:#777">${people.length} person${people.length!==1?'s':''} · ${notes.length} note${notes.length!==1?'s':''} · Generated ${today}</div>
       </div>`;
 
     people.forEach(p=>{
       inner += `<div style="margin-bottom:18px;page-break-inside:avoid">
         <div style="background:#f5f0e8;border-left:4px solid #c9a84c;padding:8px 12px;font-weight:700;font-size:10pt;color:#4a1818;margin-bottom:8px">
-          ${escHTML(p.name)} <span style="font-weight:500;font-size:8.5pt;color:#777">Â· ${p.type==='teacher'?'Teacher':'Student'} Â· ${p.notes.length} note${p.notes.length!==1?'s':''}</span>
+          ${escHTML(p.name)} <span style="font-weight:500;font-size:8.5pt;color:#777">· ${p.type==='teacher'?'Teacher':'Student'} · ${p.notes.length} note${p.notes.length!==1?'s':''}</span>
         </div>`;
       p.notes.forEach(n=>{
         const d = new Date(n.createdAt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
@@ -4296,7 +4296,7 @@ async function grDownloadCategoryPDF(cat){
       });
       inner += `</div>`;
     });
-    inner += `<div style="margin-top:16px;font-size:7.5pt;color:#bbb;text-align:right">SJC Counseling Portal Â· ${today}</div>`;
+    inner += `<div style="margin-top:16px;font-size:7.5pt;color:#bbb;text-align:right">SJC Counseling Portal · ${today}</div>`;
 
     wrap.innerHTML = inner;
     document.body.appendChild(wrap);
@@ -4372,7 +4372,7 @@ function upsertTab(student) {
   renderTabs();
 }
 
-// History API â€” back/forward button support
+// History API – back/forward button support
 window.addEventListener('popstate', async (e) => {
   const id = e.state && e.state.studentId;
   if(id){
@@ -4428,7 +4428,7 @@ window.addEventListener('popstate', async (e) => {
         <div id="impDropZone" style="border:2px dashed var(--cream-3);border-radius:14px;padding:36px 24px;text-align:center;cursor:pointer;transition:border-color .15s;background:var(--cream)" onclick="document.getElementById('impFileInput').click()" ondragover="impDragOver(event)" ondrop="impDrop(event)">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--maroon)" stroke-width="1.5" style="opacity:0.5;margin-bottom:10px"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
           <div style="font-weight:700;color:var(--maroon-deep);margin-bottom:4px">Drop images here or click to browse</div>
-          <div style="font-size:0.8rem;color:var(--muted)">JPG, PNG, WEBP â€” multiple files allowed</div>
+          <div style="font-size:0.8rem;color:var(--muted)">JPG, PNG, WEBP – multiple files allowed</div>
         </div>
         <input autocomplete="off" type="file" id="impFileInput" accept="image/*" multiple style="display:none" onchange="impFilesSelected(this.files)">
         <div id="impThumbs" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:14px"></div>
@@ -4519,12 +4519,12 @@ function impRemove(i){
 async function impProcess(){
   if(!impFiles.length) return;
   const btn = document.getElementById('impProcessBtn');
-  btn.disabled = true; btn.textContent = 'Scanningâ€¦';
+  btn.disabled = true; btn.textContent = 'Scanning…';
 
   // Show thumbs with loading state
   impFiles.forEach((f,i)=>{
     const th = document.getElementById(`impThumb${i}`);
-    if(th){ const s=document.createElement('div'); s.className='imp-status'; s.textContent='â€¦'; th.appendChild(s); }
+    if(th){ const s=document.createElement('div'); s.className='imp-status'; s.textContent='…'; th.appendChild(s); }
   });
 
   const payload = impFiles.map(f=>({
@@ -4595,7 +4595,7 @@ function renderImpCards(){
         <img class="imp-card-thumb" src="${f.dataUrl}">
         <div style="flex:1">
           <div style="font-weight:700;font-size:1rem;color:var(--maroon-deep)">${escHTML(nameVal)}</div>
-          <div style="font-size:0.75rem;color:var(--muted)">${r && r.ok ? 'AI extracted â€” review before saving' : 'Scan failed â€” fill in manually'}</div>
+          <div style="font-size:0.75rem;color:var(--muted)">${r && r.ok ? 'AI extracted – review before saving' : 'Scan failed – fill in manually'}</div>
         </div>
         <label style="display:flex;align-items:center;gap:6px;font-size:0.8rem;cursor:pointer;color:var(--muted)">
           <input autocomplete="off" type="checkbox" id="impSkip${i}" onchange="impToggleSkip(${i})"> Skip
@@ -4634,7 +4634,7 @@ async function impCreateAll(){
   const btn = document.getElementById('impCreateBtn');
   const toCreate = impFiles.filter(f=>!f.skip);
   if(!toCreate.length){ alert('Nothing to create (all skipped).'); return; }
-  btn.disabled=true; btn.textContent='Creatingâ€¦';
+  btn.disabled=true; btn.textContent='Creating…';
 
   let created=0, failed=0;
   for(let i=0;i<impFiles.length;i++){
