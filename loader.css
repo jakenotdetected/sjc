@@ -59,7 +59,7 @@
   width: 96px;
   height: 96px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 20px;
   background: #fff;
   padding: 4px;
   box-shadow: 0 0 0 1px rgba(201,168,76,0.5), 0 10px 30px rgba(0,0,0,0.45);
