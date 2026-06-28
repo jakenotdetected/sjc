@@ -1,16 +1,48 @@
-// ── Page transition ───────────────────────────────────────────────────────────
+// ── Loading screen ─────────────────────────────────────────────────────────────
 (function () {
-  var COVER_MS   = 380;   // how long until we navigate (curtain fully in)
-  var REVEAL_MS  = 480;   // how long curtain takes to leave on new page
+  var loader = document.getElementById('sjc-page-loader');
+  if (!loader) return;
 
+  var bar = loader.querySelector('.sjc-loader-progress');
+  var progress = 0;
+  var dismissed = false;
+
+  // Fake-but-natural progress climb while the page loads
+  var timer = setInterval(function () {
+    // Ease toward 90%, never quite reaching it until load fires
+    progress += (90 - progress) * 0.08 + 0.6;
+    if (progress > 90) progress = 90;
+    if (bar) bar.style.width = progress.toFixed(1) + '%';
+  }, 120);
+
+  function dismiss() {
+    if (dismissed) return;
+    dismissed = true;
+    clearInterval(timer);
+    if (bar) bar.style.width = '100%';
+    setTimeout(function () {
+      loader.classList.add('sjc-loader-done');
+      setTimeout(function () {
+        if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+      }, 650);
+    }, 200);
+  }
+
+  // Dismiss on whichever comes first: full load, or a hard cap so it NEVER hangs
+  if (document.readyState === 'complete') {
+    setTimeout(dismiss, 400);
+  } else {
+    window.addEventListener('load', function () { setTimeout(dismiss, 350); });
+  }
+  setTimeout(dismiss, 3500); // safety cap — guarantees the loader always clears
+})();
+
+// ── Page transition curtain ────────────────────────────────────────────────────
+(function () {
+  var COVER_MS = 380;
   var curtain = null;
-  var busy    = false;
+  var busy = false;
 
-  // Remove old loader if it exists
-  var old = document.getElementById('sjc-page-loader');
-  if (old && old.parentNode) old.parentNode.removeChild(old);
-
-  // Build curtain element once
   function getCurtain() {
     if (curtain) return curtain;
     curtain = document.createElement('div');
@@ -20,27 +52,19 @@
     return curtain;
   }
 
-  // Cover screen → navigate
   function navigate(url) {
     if (busy) return;
     busy = true;
-
     var c = getCurtain();
     c.classList.remove('sjc-curtain-out');
     c.classList.add('sjc-curtain-in');
-
-    setTimeout(function () {
-      window.location.href = url;
-    }, COVER_MS);
+    setTimeout(function () { window.location.href = url; }, COVER_MS);
   }
 
-  // On page load: reveal by sliding out
   function reveal() {
     var c = getCurtain();
-    // Start fully covering (no transition so it's instant)
     c.classList.add('sjc-curtain-start');
-    c.offsetHeight; // force reflow
-    // Then animate out
+    c.offsetHeight;
     requestAnimationFrame(function () {
       requestAnimationFrame(function () {
         c.classList.remove('sjc-curtain-start');
@@ -49,7 +73,6 @@
     });
   }
 
-  // Intercept internal link clicks
   document.addEventListener('click', function (e) {
     var link = e.target && e.target.closest && e.target.closest('a[href]');
     if (!link) return;
@@ -71,7 +94,7 @@
     navigate(link.href);
   });
 
-  // Reveal on load
+  // Only reveal the curtain after the loading screen has had its turn
   if (document.readyState === 'complete') {
     reveal();
   } else {
@@ -81,7 +104,7 @@
   window.SJCNav = { go: navigate };
 })();
 
-// ── Smooth scroll ─────────────────────────────────────────────────────────────
+// ── Smooth scroll ──────────────────────────────────────────────────────────────
 (function () {
   var current = window.scrollY;
   var target  = window.scrollY;
