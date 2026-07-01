@@ -1852,169 +1852,14 @@ function rSAApts(){
   </div>`;
 }
 
-function rSAStudents(){
-  const students = JSON.parse(localStorage.getItem('sjc_db_students')) || [];
-  return `
-    <div class="header">
-      <div>
-        <div class="header-title">Students</div>
-        <div class="header-subtitle">View and manage all registered students</div>
-      </div>
-      <button class="btn btn-primary" onclick="openStudentModal()">${I.plus} Add Student</button>
-    </div>
-    <div id="stuReportBar" style="display:none;background:var(--brand-primary);color:#fff;padding:12px 20px;border-radius:10px;margin-top:16px;display:none;align-items:center;gap:12px;">
-      <span id="stuReportCount" style="font-weight:600;font-size:.85rem;"></span>
-      <button onclick="generateStudentReport()" style="background:#fff;color:var(--brand-primary);border:none;border-radius:8px;padding:7px 16px;font-weight:700;cursor:pointer;font-size:.82rem;">Generate Report</button>
-      <button onclick="clearStudentSelection()" style="background:rgba(255,255,255,.2);color:#fff;border:none;border-radius:8px;padding:7px 12px;font-weight:600;cursor:pointer;font-size:.82rem;">Clear</button>
-    </div>
-    <div class="card" style="margin-top:20px; padding:0;">
-      <div class="search-bar" style="margin-bottom:15px; display:flex; gap:10px; align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input autocomplete="off" type="text" placeholder="Search records..." oninput="if(typeof filt === 'function') filt(this, 'tb_855eead8')" style="flex:1; border:none; outline:none; background:transparent; padding:8px;"></div>
-<table style="width:100%; border-collapse:collapse; text-align:left;">
-        <thead>
-          <tr style="border-bottom:1px solid var(--border); background:var(--bg-card); color:var(--text-muted); font-size:0.85rem; text-transform:uppercase;">
-            <th style="padding:15px 20px; width:40px;"><input type="checkbox" id="stuSelectAll" onchange="toggleAllStudents(this)" style="cursor:pointer;width:16px;height:16px;accent-color:var(--brand-primary);"></th>
-            <th style="padding:15px 20px; width:50px;">#</th>
-            <th style="padding:15px 20px;">Photo</th>
-            <th style="padding:15px 20px;">Name</th>
-            <th style="padding:15px 20px;">Grade</th>
-            <th style="padding:15px 20px;">Reg No.</th>
-            <th style="padding:15px 20px; text-align:right;">Actions</th>
-          </tr>
-        </thead>
-        <tbody id="tb_855eead8">
-          ${students.length ? students.map((s, i) => `
-            <tr style="border-bottom:1px solid var(--border);" id="stu-row-${s.id}">
-              <td style="padding:12px 20px;"><input type="checkbox" class="stu-chk" data-id="${s.id}" onchange="onStudentCheck()" style="cursor:pointer;width:16px;height:16px;accent-color:var(--brand-primary);"></td>
-              <td style="padding:12px 20px; color:var(--text-muted); font-weight:700;">${s.studentNo || (i + 1)}</td>
-              <td style="padding:12px 20px;">
-                ${s.photoData ? `<img src="${s.photoData}" style="width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid #ede5d8;">` : `<div style="width:36px;height:36px;border-radius:50%;background:var(--brand-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;">${initials(s.name)}</div>`}
-              </td>
-              <td style="padding:12px 20px; font-weight:500; color:var(--text); cursor:pointer;" onclick="showStudentReport('${s.id}')">${s.name}</td>
-              <td style="padding:12px 20px; color:var(--text-muted);">${s.grade || '-'}</td>
-              <td style="padding:12px 20px; color:var(--text-muted); font-size:.8rem;">${s.regNo || '-'}</td>
-              <td style="padding:12px 20px; text-align:right;">
-                <button class="btn btn-icon" onclick="showStudentReport('${s.id}')" style="color:var(--brand-primary)" title="View Report">${I.eye}</button>
-                <button class="btn btn-icon" onclick="openStudentEditModal('${s.id}')" style="color:var(--gold)" title="Edit">${I.pen}</button>
-                <button class="btn btn-icon" onclick="deleteStudent('${s.id}')" style="color:var(--danger)" title="Delete">${I.bin}</button>
-              </td>
-            </tr>
-          `).join('') : `<tr><td colspan="7" style="padding:20px; text-align:center; color:var(--text-muted);">No students found.</td></tr>`}
-        </tbody>
-      </table>
-    </div>
-  `;
-}
-
-function onStudentCheck() {
-  const checked = document.querySelectorAll('.stu-chk:checked');
-  const bar = document.getElementById('stuReportBar');
-  const cnt = document.getElementById('stuReportCount');
-  if (bar) bar.style.display = checked.length ? 'flex' : 'none';
-  if (cnt) cnt.textContent = checked.length + ' student' + (checked.length !== 1 ? 's' : '') + ' selected';
-  const all = document.getElementById('stuSelectAll');
-  if (all) all.checked = checked.length > 0 && checked.length === document.querySelectorAll('.stu-chk').length;
-}
-function toggleAllStudents(cb) {
-  document.querySelectorAll('.stu-chk').forEach(c => c.checked = cb.checked);
-  onStudentCheck();
-}
-function clearStudentSelection() {
-  document.querySelectorAll('.stu-chk').forEach(c => c.checked = false);
-  const all = document.getElementById('stuSelectAll');
-  if (all) all.checked = false;
-  onStudentCheck();
-}
-function generateStudentReport() {
-  const ids = [...document.querySelectorAll('.stu-chk:checked')].map(c => c.dataset.id);
+function downloadStudentReport(idOrEmail) {
   const students = JSON.parse(localStorage.getItem('sjc_db_students') || '[]');
-  const selected = students.filter(s => ids.includes(s.id));
-  if (!selected.length) return;
-  const win = window.open('', '_blank');
-  win.document.write(_buildPrintReport(selected));
-  win.document.close();
-  win.focus();
-  setTimeout(() => win.print(), 600);
-}
-
-function showStudentReport(id) {
-  const students = JSON.parse(localStorage.getItem('sjc_db_students') || '[]');
-  const s = students.find(x => x.id === id);
+  let s = students.find(x => x.id === idOrEmail);
+  if (!s) {
+    const users = JSON.parse(localStorage.getItem('sjc_users') || '{}');
+    s = users[String(idOrEmail).toLowerCase()];
+  }
   if (!s) { toast('Student not found', 'err'); return; }
-  const pane = document.getElementById('sa-students');
-  if (!pane) return;
-  const v = x => (x && x !== '') ? esc(x) : '–';
-  const row = (label, val) => `<div class="rpt-row"><span class="rpt-lbl">${label}</span><span class="rpt-val">${val}</span></div>`;
-  pane.innerHTML = `
-    <style>
-      .rpt-card{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.06);padding:32px;margin-bottom:20px;}
-      .rpt-hdr{background:linear-gradient(135deg,var(--brand-primary),#3d0707);border-radius:16px;padding:32px;color:#fff;display:flex;align-items:center;gap:24px;margin-bottom:20px;}
-      .rpt-avatar{width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:800;flex-shrink:0;overflow:hidden;border:3px solid rgba(255,255,255,.3);}
-      .rpt-avatar img{width:100%;height:100%;object-fit:cover;}
-      .rpt-name{font-size:1.5rem;font-weight:800;}
-      .rpt-sub{font-size:.82rem;color:rgba(255,255,255,.6);margin-top:4px;}
-      .rpt-sec-title{font-size:.72rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid #f0e8e0;padding-bottom:8px;margin-bottom:16px;}
-      .rpt-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #f8f4f0;font-size:.84rem;gap:12px;}
-      .rpt-lbl{color:var(--text-muted);font-weight:500;flex-shrink:0;}
-      .rpt-val{font-weight:600;color:var(--text);text-align:right;}
-      .rpt-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;}
-      .rpt-problem{background:#fdf8f3;border-left:3px solid var(--gold);padding:14px 16px;border-radius:0 8px 8px 0;font-size:.84rem;line-height:1.6;color:var(--text);}
-      @media(max-width:600px){.rpt-grid{grid-template-columns:1fr;}}
-    </style>
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-      <button onclick="document.getElementById('sa-students').innerHTML=rSAStudents()" style="background:none;border:1px solid var(--border);border-radius:8px;padding:8px 16px;cursor:pointer;font-size:.82rem;font-weight:600;color:var(--text-muted);display:flex;align-items:center;gap:6px;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Back
-      </button>
-      <h2 style="font-size:1.1rem;font-weight:700;color:var(--text);">Student Report</h2>
-      <button onclick="printStudentReport('${esc(id)}')" style="margin-left:auto;background:var(--brand-primary);color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font-size:.82rem;font-weight:700;display:flex;align-items:center;gap:6px;">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> Print Report
-      </button>
-    </div>
-    <div class="rpt-hdr">
-      <div class="rpt-avatar">${s.photoData ? `<img src="${s.photoData}">` : initials(s.name)}</div>
-      <div>
-        <div class="rpt-name">${esc(s.name)}</div>
-        <div class="rpt-sub">Grade ${v(s.grade)} ${v(s.studentClass||s.class)} &nbsp;·&nbsp; Reg: ${v(s.regNo)} &nbsp;·&nbsp; #${v(s.studentNo)}</div>
-        <div class="rpt-sub" style="margin-top:4px;">Counsellor: ${v(s.counsellorReg)} &nbsp;·&nbsp; Date: ${v(s.date)}</div>
-      </div>
-    </div>
-    <div class="rpt-card">
-      <div class="rpt-sec-title">Personal Information</div>
-      <div class="rpt-grid">
-        ${row('Index No.', v(s.indexNo))}
-        ${row('Phone', v(s.phone||s.contact))}
-        ${row('Grade', v(s.grade))}
-        ${row('Class', v(s.studentClass||s.class))}
-        ${row('Sessions', `<span style="color:var(--brand-primary);font-weight:700">${s.sessions||0}</span>`)}
-        ${row('Register No.', v(s.regNo))}
-      </div>
-      <div style="margin-top:16px;">
-        <div class="rpt-lbl" style="font-size:.8rem;margin-bottom:8px;">Address</div>
-        <div style="font-size:.84rem;color:var(--text);">${v(s.address)}</div>
-      </div>
-    </div>
-    <div class="rpt-card">
-      <div class="rpt-sec-title">Nature of Problem</div>
-      <div class="rpt-problem">${s.problem ? esc(s.problem) : '<span style="color:#bbb">Not specified</span>'}</div>
-    </div>
-    <div class="rpt-card">
-      <div class="rpt-sec-title">Family & Guardian</div>
-      <div class="rpt-grid">
-        ${row('Guardian / Parent', v(s.guardian))}
-        ${row('Emergency Contact', v(s.emergency))}
-        ${row("Father's Phone", v(s.fatherPhone))}
-        ${row("Mother's Phone", v(s.motherPhone))}
-        ${row('Siblings', v(s.siblings))}
-        ${row('Transport', v(s.transport))}
-        ${row('Class Teacher', v(s.classTeacher))}
-      </div>
-    </div>
-  `;
-}
-
-function printStudentReport(id) {
-  const students = JSON.parse(localStorage.getItem('sjc_db_students') || '[]');
-  const s = students.find(x => x.id === id);
-  if (!s) return;
   const win = window.open('', '_blank');
   win.document.write(_buildPrintReport([s]));
   win.document.close();
@@ -4687,6 +4532,7 @@ function openStudentEditModal(idOrEmail) {
       <div class="s-modal-ftr" style="justify-content:space-between;">
         <button class="s-btn s-btn-danger" onclick="if(confirm('Permanently delete ${esc(s.name)}?')){closeModal();deleteStudentById('${esc(id)}','${esc(s.email||'')}')}">Delete Student</button>
         <div style="display:flex;gap:10px;">
+          <button class="s-btn s-btn-ghost" onclick="downloadStudentReport('${esc(id||s.email||'')}')">Download Report</button>
           <button class="s-btn s-btn-ghost" onclick="closeModal()">Cancel</button>
           <button class="s-btn s-btn-primary" onclick="saveEditedStudent()">Save Changes</button>
         </div>
@@ -4824,6 +4670,7 @@ function viewProfile(idOrEmail) {
     </div>
     <div class="s-modal-ftr" style="justify-content:${currentRole==='superadmin'?'space-between':'flex-end'};">
       ${currentRole==='superadmin'?`<button class="s-btn s-btn-danger" onclick="if(confirm('Permanently delete ${delName}?')){closeModal();deleteStudentById('${delId}','${delEmail}')}">Delete</button>`:''}
+      <button class="s-btn s-btn-ghost" onclick="downloadStudentReport('${editId}')">Download Report</button>
       <button class="s-btn s-btn-ghost" onclick="closeModal()">Close</button>
     </div>
   `);
