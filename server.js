@@ -1295,7 +1295,11 @@ const server = http.createServer((req, res) => {
         res.end('Server Error: ' + err.code);
       }
     } else {
-      res.writeHead(200, { ...securityHeaders, 'Content-Type': MIME_TYPES[ext] || 'application/octet-stream' });
+      const headers = { ...securityHeaders, 'Content-Type': MIME_TYPES[ext] || 'application/octet-stream' };
+      // HTML pages (esp. admin/teacher panels) must never be cached — stale
+      // copies have repeatedly served outdated JS/markup after deploys.
+      if (ext === '.html') headers['Cache-Control'] = 'no-cache, no-store, must-revalidate';
+      res.writeHead(200, headers);
       res.end(content);
     }
   });
