@@ -1058,6 +1058,12 @@ const server = http.createServer((req, res) => {
 
   if (urlPath === '/') urlPath = '/index.html';
 
+  // Teacher panel was merged into /admin/ — redirect any old links/bookmarks.
+  if (urlPath === '/teacher' || urlPath === '/teacher/' || urlPath === '/teacher/index.html') {
+    res.writeHead(301, { Location: '/admin/' });
+    return res.end();
+  }
+
   if (!path.extname(urlPath)) {
     if (fs.existsSync(path.join(__dirname, urlPath + '.html'))) {
       urlPath = urlPath + '.html';
