@@ -1555,7 +1555,6 @@ body:has(.modal-overlay.open) { overflow: hidden; }
 
   <link rel="stylesheet" href="/custom_select.css" />
   <link rel="icon" type="image/x-icon" href="/favicon-rounded.ico">
-  <script src="/mock_backend.js?v=4"></script>
   <script>
 function rSATeachers(){
   const db = getDb();
@@ -2652,20 +2651,6 @@ function toast(msg, type='info') {
   }, 3000);
 }
 
-/* â”€â”€â”€ LENIS SMOOTH SCROLL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-let lenis;
-function initLenis() {
-  requestAnimationFrame(raf);
-}
-// Init after DOM is ready so .main exists
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initLenis);
-} else {
-  initLenis();
-}
-function lenisScrollTo(target, opts) {
-  if (lenis) lenis.scrollTo(target, opts);
-}
 
 
 /* â”€â”€â”€ DB â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
@@ -5041,7 +5026,6 @@ function removeEvent(id) {
 
 
   <script>
-    // Duplicate Lenis block removed – using the single initLenis() call above
 
   async function sendAdminEmail(to, aptId) {
     const customTo = document.getElementById("m-email-to") ? document.getElementById("m-email-to").value.trim() : to;

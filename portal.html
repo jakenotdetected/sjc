@@ -251,65 +251,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
 
   <link rel="stylesheet" href="/custom_select.css?v=3" />
   <link rel="icon" type="image/x-icon" href="./favicon-rounded.ico">
-  <script src="/mock_backend.js?v=4">
-  async function triggerStudentForgot(){
-    const email = document.getElementById('loginEmail').value.trim();
-    if(!email){ document.getElementById('loginErr').textContent='Enter your email first to reset password.'; return; }
-    
-    // Check if account exists
-    const users = JSON.parse(localStorage.getItem('sjc_users') || '{}');
-    if(!users[email.toLowerCase()]) { document.getElementById('loginErr').textContent='No account found with this email.'; return; }
-
-    window.forgotEmail = email.toLowerCase();
-    
-    // In a real app we would call /api/auth/request-code, here we mock it
-    try {
-      const res = await fetch('/api/auth/request-code', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({email: email.toLowerCase()})
-      });
-      const data = await res.json();
-      if(data.success || true) { // Fallback to true if API not responding for demo
-        window.currentMockCode = '123456'; // Fallback code
-        alert('Password Reset OTP sent to your email. (For demo purposes, the code is: 123456)');
-        document.getElementById('loginForm').style.display = 'none';
-        document.getElementById('otpForm').style.display = 'block';
-        document.getElementById('otpCode').value = '';
-        document.getElementById('otpErr').textContent = '';
-      } else {
-        document.getElementById('loginErr').textContent = data.error || 'Failed to send code.';
-      }
-    } catch(e) {
-      window.currentMockCode = '123456';
-      alert('Network issue. Proceeding with mock OTP sent. (For demo purposes, the code is: 123456)');
-      document.getElementById('loginForm').style.display = 'none';
-      document.getElementById('otpForm').style.display = 'block';
-    }
-  }
-
-  async function verifyStudentForgot() {
-    const code = document.getElementById('otpCode').value.trim();
-    if(code === window.currentMockCode || code === '123456') {
-      const newPass = prompt("Enter your new password:");
-      if(newPass && newPass.length >= 6) {
-        const users = JSON.parse(localStorage.getItem('sjc_users') || '{}');
-        if(users[window.forgotEmail]) {
-          users[window.forgotEmail].pass = btoa(newPass);
-          localStorage.setItem('sjc_users', JSON.stringify(users));
-          alert('Password successfully reset! You may now login.');
-          document.getElementById('otpForm').style.display = 'none';
-          document.getElementById('loginForm').style.display = 'block';
-        }
-      } else {
-        alert("Password must be at least 6 characters.");
-      }
-    } else {
-      document.getElementById('otpErr').textContent = 'Invalid OTP code.';
-    }
-  }
-
-</script>
   <link rel="stylesheet" href="/loader.css?v=12">
 </head>
 <body>
@@ -410,27 +351,10 @@ input,select,textarea{font-family:'Inter',sans-serif}
         <div class="form-group"><label>Email Address</label><input type="email" autocomplete="off" id="loginEmail" autocomplete="off" placeholder="your@email.com"/></div>
         <div class="form-group"><label>Password</label><input autocomplete="off" type="password" id="loginPass" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"/></div>
         <div id="loginErr" class="form-err" style="margin-bottom:12px"></div>
-        <div style="text-align:right; margin-bottom: 12px;">
-      <a href="#" onclick="triggerStudentForgot()" style="font-size:0.8rem;color:var(--brand-primary);text-decoration:none;">Forgot Password?</a>
-    </div>
     <button class="btn-auth btn-auth-primary" onclick="doLogin()">Sign In to Portal</button>
       </div>
 
       
-        <!-- OTP FORM -->
-        <div id="otpForm" style="display:none">
-          <div class="form-group">
-            <label>Security Verification</label>
-            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">Enter the 6-digit code sent to your email.</p>
-            <input type="text" id="otpCode" placeholder="000000" maxlength="6" style="text-align:center;font-size:1.5rem;letter-spacing:6px;" autocomplete="off"/>
-            <div id="otpErr" class="form-err" style="margin-bottom:12px"></div>
-          </div>
-          <button class="btn-auth btn-auth-primary" onclick="verifyStudentForgot()">Verify Code</button>
-          <div class="auth-switch" style="margin-top:16px;">
-            <a href="#" onclick="document.getElementById('otpForm').style.display='none'; document.getElementById('loginForm').style.display='block';">Back to Login</a>
-          </div>
-        </div>
-
         <!-- PENDING APPROVAL -->
         <div id="pendingScreen" style="display:none;text-align:center;padding:20px 0">
           <div style="width:64px;height:64px;border-radius:50%;background:rgba(201,168,76,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
