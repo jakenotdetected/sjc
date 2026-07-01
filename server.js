@@ -182,7 +182,10 @@ const securityHeaders = {
 function buildStudentReportPdf(s) {
   return new Promise((resolve, reject) => {
     try {
-      const doc = new PDFDocument({ size: 'A4', margin: 40 });
+      const PAGE_W = 595.28, PAGE_H = 841.89; // A4 in points
+      const MARGIN = 40;
+      const CONTENT_W = PAGE_W - MARGIN * 2;
+      const doc = new PDFDocument({ size: 'A4', margin: MARGIN, bufferPages: true });
       const chunks = [];
       doc.on('data', c => chunks.push(c));
       doc.on('end', () => resolve(Buffer.concat(chunks)));
@@ -190,69 +193,141 @@ function buildStudentReportPdf(s) {
 
       const v = x => (x !== undefined && x !== null && x !== '') ? String(x) : '-';
       const maroon = '#7a1818';
+      const maroonDark = '#3d0707';
       const gold = '#c9a84c';
-      const muted = '#666666';
+      const cream = '#fdf8f3';
+      const rule = '#ede5d8';
+      const ink = '#1a0e0e';
+      const muted = '#7a6868';
 
-      // Header
-      doc.fillColor(maroon).fontSize(18).font('Helvetica-Bold')
-        .text("St. Joseph's College - Counselling & Guidance Unit", { align: 'center' });
-      doc.moveDown(0.2);
-      doc.fillColor(muted).fontSize(9).font('Helvetica')
-        .text(`Student Record Report   ·   Generated: ${new Date().toLocaleString('en-GB')}`, { align: 'center' });
-      doc.moveDown(0.5);
-      doc.strokeColor(maroon).lineWidth(2).moveTo(40, doc.y).lineTo(555, doc.y).stroke();
-      doc.moveDown(1);
+      // ── Header banner ──────────────────────────────────────────────────
+      const HEADER_H = 92;
+      doc.save();
+      doc.rect(0, 0, PAGE_W, HEADER_H).fill(maroon);
+      // subtle darker gradient-like band at the very top
+      doc.rect(0, 0, PAGE_W, 4).fill(gold);
+      doc.restore();
 
-      // Photo + basic info block
-      const blockTop = doc.y;
+      doc.fillColor('#ffffff').font('Helvetica-Bold').fontSize(17)
+        .text("ST. JOSEPH'S COLLEGE", MARGIN, 26, { width: CONTENT_W, align: 'center', characterSpacing: 0.5 });
+      doc.font('Helvetica').fontSize(9.5).fillColor('#f0d9d9')
+        .text('COUNSELLING & CAREER GUIDANCE UNIT', MARGIN, 48, { width: CONTENT_W, align: 'center', characterSpacing: 1.5 });
+      doc.font('Helvetica').fontSize(8).fillColor('#e8c9c9')
+        .text(`Student Record Report  |  Generated ${new Date().toLocaleString('en-GB')}`, MARGIN, 68, { width: CONTENT_W, align: 'center' });
+
+      let y = HEADER_H + 26;
+
+      // ── Photo + identity card ──────────────────────────────────────────
+      const cardH = 110;
+      doc.roundedRect(MARGIN, y, CONTENT_W, cardH, 10).fill(cream);
+      doc.roundedRect(MARGIN, y, 6, cardH, 3).fill(maroon);
+
+      const photoSize = 78;
+      const photoX = MARGIN + 24;
+      const photoY = y + (cardH - photoSize) / 2;
       let photoDrawn = false;
       if (s.photoData && typeof s.photoData === 'string' && s.photoData.startsWith('data:image')) {
         try {
           const base64 = s.photoData.split(',')[1];
           const imgBuffer = Buffer.from(base64, 'base64');
-          doc.image(imgBuffer, 40, blockTop, { width: 100, height: 100, fit: [100, 100] });
+          doc.save();
+          doc.roundedRect(photoX, photoY, photoSize, photoSize, 10).clip();
+          doc.image(imgBuffer, photoX, photoY, { width: photoSize, height: photoSize, cover: [photoSize, photoSize] });
+          doc.restore();
+          doc.roundedRect(photoX, photoY, photoSize, photoSize, 10).lineWidth(2).stroke(gold);
           photoDrawn = true;
         } catch (e) { /* corrupt image data, skip */ }
       }
-      const textX = photoDrawn ? 155 : 40;
-      doc.fillColor(maroon).fontSize(16).font('Helvetica-Bold').text(v(s.name), textX, blockTop);
-      doc.fillColor(muted).fontSize(10).font('Helvetica')
-        .text(`Grade ${v(s.grade)} ${v(s.studentClass || s.class)}   ·   Register No: ${v(s.regNo || s.counsellorReg)}   ·   Student #${v(s.studentNo)}`, textX, doc.y + 4);
-      doc.text(`Date: ${v(s.date)}   ·   Counsellor: ${v(s.counsellorReg)}`, textX, doc.y + 4);
-      doc.y = Math.max(doc.y, blockTop + 100) + 20;
+      if (!photoDrawn) {
+        doc.roundedRect(photoX, photoY, photoSize, photoSize, 10).fill(maroon);
+        const initials = String(s.name || '?').trim().split(/\s+/).map(w => w[0]).join('').toUpperCase().slice(0, 2);
+        doc.fillColor('#ffffff').font('Helvetica-Bold').fontSize(24)
+          .text(initials, photoX, photoY + photoSize / 2 - 14, { width: photoSize, align: 'center' });
+      }
+
+      const textX = photoX + photoSize + 22;
+      const textW = CONTENT_W - (textX - MARGIN) - 24;
+      doc.fillColor(maroon).font('Helvetica-Bold').fontSize(16).text(v(s.name), textX, y + 16, { width: textW });
+      doc.fillColor(muted).font('Helvetica').fontSize(9.5)
+        .text(`Grade ${v(s.grade)} ${v(s.studentClass || s.class)}  |  Reg No: ${v(s.regNo || s.counsellorReg)}  |  Student #${v(s.studentNo)}`, textX, y + 40, { width: textW });
+      doc.fillColor(muted).fontSize(9.5)
+        .text(`Date: ${v(s.date)}  |  Counsellor: ${v(s.counsellorReg)}`, textX, y + 56, { width: textW });
+
+      // Sessions badge
+      const sessions = s.sessions || 0;
+      const badgeW = 92;
+      doc.roundedRect(MARGIN + CONTENT_W - badgeW - 20, y + 16, badgeW, 34, 8).fill('#ffffff');
+      doc.fillColor(maroon).font('Helvetica-Bold').fontSize(15).text(String(sessions), MARGIN + CONTENT_W - badgeW - 20, y + 22, { width: badgeW, align: 'center' });
+      doc.fillColor(muted).font('Helvetica').fontSize(6.5).text('SESSIONS', MARGIN + CONTENT_W - badgeW - 20, y + 38, { width: badgeW, align: 'center', characterSpacing: 0.5 });
+
+      y += cardH + 26;
 
       function sectionTitle(title) {
-        doc.fillColor(maroon).fontSize(11).font('Helvetica-Bold').text(title.toUpperCase(), { characterSpacing: 0.5 });
-        doc.strokeColor('#ede5d8').lineWidth(1).moveTo(40, doc.y + 2).lineTo(555, doc.y + 2).stroke();
-        doc.moveDown(0.6);
+        doc.roundedRect(MARGIN, y, 3, 12, 1.5).fill(gold);
+        doc.fillColor(maroon).font('Helvetica-Bold').fontSize(10.5)
+          .text(title.toUpperCase(), MARGIN + 10, y, { characterSpacing: 0.8 });
+        y += 16;
+        doc.strokeColor(rule).lineWidth(1).moveTo(MARGIN, y).lineTo(MARGIN + CONTENT_W, y).stroke();
+        y += 12;
       }
-      function fieldRow(label, value) {
-        const y = doc.y;
-        doc.fillColor('#555555').fontSize(9).font('Helvetica-Bold').text(label, 40, y, { width: 150 });
-        doc.fillColor('#1a0e0e').fontSize(9).font('Helvetica').text(v(value), 200, y, { width: 355 });
-        doc.moveDown(0.5);
+      function fieldRow(label, value, colX, colW) {
+        doc.fillColor(muted).font('Helvetica-Bold').fontSize(8.5).text(label.toUpperCase(), colX, y, { width: colW, characterSpacing: 0.3 });
+        doc.fillColor(ink).font('Helvetica').fontSize(10).text(v(value), colX, y + 12, { width: colW });
+        return doc.heightOfString(v(value), { width: colW }) + 30;
+      }
+      function fieldGrid(pairs) {
+        const colW = (CONTENT_W - 24) / 2;
+        for (let i = 0; i < pairs.length; i += 2) {
+          const leftH = fieldRow(pairs[i][0], pairs[i][1], MARGIN, colW);
+          const rightH = pairs[i + 1] ? fieldRow(pairs[i + 1][0], pairs[i + 1][1], MARGIN + colW + 24, colW) : 0;
+          y += Math.max(leftH, rightH);
+        }
       }
 
       sectionTitle('Personal Information');
-      fieldRow('Index No.', s.indexNo);
-      fieldRow('Phone', s.phone || s.contact);
-      fieldRow('Address', s.address);
-      fieldRow('Siblings', s.siblings);
-      fieldRow('Transport', s.transport || s.transportMethod);
-      fieldRow('Class Teacher', s.classTeacher);
-      fieldRow('Sessions Conducted', s.sessions || 0);
-      doc.moveDown(0.5);
+      fieldGrid([
+        ['Index No.', s.indexNo],
+        ['Phone', s.phone || s.contact],
+        ['Transport', s.transport || s.transportMethod],
+        ['Class Teacher', s.classTeacher],
+        ['Siblings', s.siblings],
+        ['Address', s.address],
+      ]);
+      y += 6;
 
       sectionTitle('Nature of Problem / Notes');
-      doc.fillColor('#1a0e0e').fontSize(9.5).font('Helvetica')
-        .text(v(s.problem || s.issues || s.specialNote), { width: 515, lineGap: 3 });
-      doc.moveDown(1);
+      const noteText = v(s.problem || s.issues || s.specialNote);
+      const noteH = doc.heightOfString(noteText, { width: CONTENT_W - 28, lineGap: 3 });
+      doc.roundedRect(MARGIN, y, CONTENT_W, noteH + 24, 6).fill(cream);
+      doc.roundedRect(MARGIN, y, 3, noteH + 24, 1.5).fill(gold);
+      doc.fillColor(ink).font('Helvetica').fontSize(9.5)
+        .text(noteText, MARGIN + 16, y + 12, { width: CONTENT_W - 32, lineGap: 3 });
+      y += noteH + 24 + 22;
 
       sectionTitle('Family & Guardian');
-      fieldRow('Guardian / Parent', s.guardian || s.guardianName);
-      fieldRow('Emergency Contact', s.emergency || s.emergencyPhone);
-      fieldRow("Father's Phone", s.fatherPhone);
-      fieldRow("Mother's Phone", s.motherPhone);
+      fieldGrid([
+        ['Guardian / Parent', s.guardian || s.guardianName],
+        ['Emergency Contact', s.emergency || s.emergencyPhone],
+        ["Father's Phone", s.fatherPhone],
+        ["Mother's Phone", s.motherPhone],
+      ]);
+
+      // ── Footer on every page ────────────────────────────────────────────
+      // Drawn inside the bottom margin, so temporarily zero it out — otherwise
+      // PDFKit's own overflow check silently spawns extra blank pages for text
+      // placed past the printable area, even with explicit x/y coordinates.
+      const pageRange = doc.bufferedPageRange();
+      for (let i = 0; i < pageRange.count; i++) {
+        doc.switchToPage(i);
+        const savedBottom = doc.page.margins.bottom;
+        doc.page.margins.bottom = 0;
+        const footerY = PAGE_H - 34;
+        doc.strokeColor(rule).lineWidth(0.75).moveTo(MARGIN, footerY).lineTo(PAGE_W - MARGIN, footerY).stroke();
+        doc.fillColor(muted).font('Helvetica').fontSize(7.5)
+          .text("St. Joseph's College, Anuradhapura - Counselling & Guidance Unit", MARGIN, footerY + 8, { width: CONTENT_W / 2, lineBreak: false });
+        doc.text(`Page ${i + 1} of ${pageRange.count}`, MARGIN + CONTENT_W / 2, footerY + 8, { width: CONTENT_W / 2, align: 'right', lineBreak: false });
+        doc.page.margins.bottom = savedBottom;
+      }
 
       doc.end();
     } catch (e) {
