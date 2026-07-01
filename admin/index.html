@@ -3163,7 +3163,7 @@ function rSAComplaints(){
   return `
   <div class="page-hdr page-hdr-row">
     <div><h2>Student Complains / Proposals</h2><p>${all.length} total &middot; ${all.filter(c=>c.status==='Pending').length} pending</p></div>
-    <button class="btn btn-primary" onclick="addComplaintModal()" style="background:var(--gold); border:none; box-shadow:0 4px 15px rgba(212,175,55,0.4);">${I.plus} Add Complain / Propose</button>
+    <button class="btn btn-primary" onclick="addComplaintModal()">${I.plus} Add Complain / Propose</button>
   </div>
   <div class="card" style="background:var(--bg-card);border:none;box-shadow:0 10px 30px rgba(0,0,0,0.03);border-radius:16px;">
     <div class="search-bar" style="margin-bottom:20px;">${I.srch}<input autocomplete="off" type="text" placeholder="Search by name or category..." oninput="filt(this,'sa-comp-tb')"></div>
@@ -3203,7 +3203,7 @@ function rTComplaints(){
   return `
   <div class="page-hdr page-hdr-row">
     <div><h2>My Complains / Proposals</h2><p>Track the progress of your submitted student issues.</p></div>
-    <button class="btn btn-primary" onclick="addComplaintModal()" style="background:var(--gold); border:none; box-shadow:0 4px 15px rgba(212,175,55,0.4);">${I.plus} Add Complain / Propose</button>
+    <button class="btn btn-primary" onclick="addComplaintModal()">${I.plus} Add Complain / Propose</button>
   </div>
   <div class="card" style="background:var(--bg-card);border:none;box-shadow:0 10px 30px rgba(0,0,0,0.03);border-radius:16px;">
     <div class="search-bar" style="margin-bottom:20px;">${I.srch}<input autocomplete="off" type="text" placeholder="Search by name or category..." oninput="filt(this,'t-comp-tb')"></div>
