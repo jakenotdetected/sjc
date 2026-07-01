@@ -3223,6 +3223,7 @@ function showPane(id){
     else p.innerHTML = renderPane(id);
     if(id === 'sa-apts') loadAppointmentsFromServer();
     if(id === 'sa-settings') loadBookingLimit();
+    if(id === 't-overview' || id === 't-apts' || id === 't-schedule') loadAppointmentsFromServer().then(()=>{ if(document.getElementById(id)?.classList.contains('active')) p.innerHTML = renderPane(id); });
   }
   if(n) n.classList.add('active');
   closeSidebar();
