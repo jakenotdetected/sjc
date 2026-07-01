@@ -46,7 +46,6 @@ split_*.py
 test*.py
 test*.js
 temp*.js
-translate*.js
 translate*.py
 script*.js
 upload_*.py
@@ -65,18 +64,13 @@ admin/test*.js
 admin/index.html.bak2
 admin/index_fromzip.html
 admin_live*.html
-admin_live*.html
 index_live.html
 index_original.html
 appointments_backup.html
 services_backup.html
 portal_actual.html
 remote_index*.html
-school.html
-wellness.html
-uni-details.html
 live_admin.html
-emoji-demo.html
 
 # Server/infra output logs
 certbot_log.txt
@@ -92,7 +86,3 @@ skills-lock.json
 # Deployment artifacts
 deploy.bat
 
-# Python utility scripts
-helper.js
-loader.css
-loader.js
