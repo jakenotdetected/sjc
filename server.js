@@ -5,6 +5,7 @@ const path = require('path');
 const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 const { ImapFlow } = require('imapflow');
+const PDFDocument = require('pdfkit');
 
 const PORT = process.env.PORT || 3000;
 
@@ -176,6 +177,89 @@ const securityHeaders = {
   'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
   'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'"
 };
+
+// ── Student report PDF (server-rendered — avoids fragile client-side html2canvas) ──
+function buildStudentReportPdf(s) {
+  return new Promise((resolve, reject) => {
+    try {
+      const doc = new PDFDocument({ size: 'A4', margin: 40 });
+      const chunks = [];
+      doc.on('data', c => chunks.push(c));
+      doc.on('end', () => resolve(Buffer.concat(chunks)));
+      doc.on('error', reject);
+
+      const v = x => (x !== undefined && x !== null && x !== '') ? String(x) : '-';
+      const maroon = '#7a1818';
+      const gold = '#c9a84c';
+      const muted = '#666666';
+
+      // Header
+      doc.fillColor(maroon).fontSize(18).font('Helvetica-Bold')
+        .text("St. Joseph's College - Counselling & Guidance Unit", { align: 'center' });
+      doc.moveDown(0.2);
+      doc.fillColor(muted).fontSize(9).font('Helvetica')
+        .text(`Student Record Report   ·   Generated: ${new Date().toLocaleString('en-GB')}`, { align: 'center' });
+      doc.moveDown(0.5);
+      doc.strokeColor(maroon).lineWidth(2).moveTo(40, doc.y).lineTo(555, doc.y).stroke();
+      doc.moveDown(1);
+
+      // Photo + basic info block
+      const blockTop = doc.y;
+      let photoDrawn = false;
+      if (s.photoData && typeof s.photoData === 'string' && s.photoData.startsWith('data:image')) {
+        try {
+          const base64 = s.photoData.split(',')[1];
+          const imgBuffer = Buffer.from(base64, 'base64');
+          doc.image(imgBuffer, 40, blockTop, { width: 100, height: 100, fit: [100, 100] });
+          photoDrawn = true;
+        } catch (e) { /* corrupt image data, skip */ }
+      }
+      const textX = photoDrawn ? 155 : 40;
+      doc.fillColor(maroon).fontSize(16).font('Helvetica-Bold').text(v(s.name), textX, blockTop);
+      doc.fillColor(muted).fontSize(10).font('Helvetica')
+        .text(`Grade ${v(s.grade)} ${v(s.studentClass || s.class)}   ·   Register No: ${v(s.regNo || s.counsellorReg)}   ·   Student #${v(s.studentNo)}`, textX, doc.y + 4);
+      doc.text(`Date: ${v(s.date)}   ·   Counsellor: ${v(s.counsellorReg)}`, textX, doc.y + 4);
+      doc.y = Math.max(doc.y, blockTop + 100) + 20;
+
+      function sectionTitle(title) {
+        doc.fillColor(maroon).fontSize(11).font('Helvetica-Bold').text(title.toUpperCase(), { characterSpacing: 0.5 });
+        doc.strokeColor('#ede5d8').lineWidth(1).moveTo(40, doc.y + 2).lineTo(555, doc.y + 2).stroke();
+        doc.moveDown(0.6);
+      }
+      function fieldRow(label, value) {
+        const y = doc.y;
+        doc.fillColor('#555555').fontSize(9).font('Helvetica-Bold').text(label, 40, y, { width: 150 });
+        doc.fillColor('#1a0e0e').fontSize(9).font('Helvetica').text(v(value), 200, y, { width: 355 });
+        doc.moveDown(0.5);
+      }
+
+      sectionTitle('Personal Information');
+      fieldRow('Index No.', s.indexNo);
+      fieldRow('Phone', s.phone || s.contact);
+      fieldRow('Address', s.address);
+      fieldRow('Siblings', s.siblings);
+      fieldRow('Transport', s.transport || s.transportMethod);
+      fieldRow('Class Teacher', s.classTeacher);
+      fieldRow('Sessions Conducted', s.sessions || 0);
+      doc.moveDown(0.5);
+
+      sectionTitle('Nature of Problem / Notes');
+      doc.fillColor('#1a0e0e').fontSize(9.5).font('Helvetica')
+        .text(v(s.problem || s.issues || s.specialNote), { width: 515, lineGap: 3 });
+      doc.moveDown(1);
+
+      sectionTitle('Family & Guardian');
+      fieldRow('Guardian / Parent', s.guardian || s.guardianName);
+      fieldRow('Emergency Contact', s.emergency || s.emergencyPhone);
+      fieldRow("Father's Phone", s.fatherPhone);
+      fieldRow("Mother's Phone", s.motherPhone);
+
+      doc.end();
+    } catch (e) {
+      reject(e);
+    }
+  });
+}
 
 const APT_FILE = path.join(__dirname, 'data', 'appointments.json');
 function readApts() {
@@ -453,11 +537,13 @@ const handleApiRequest = (req, res, urlPath) => {
 
   let body = '';
   let aborted = false;
+  // Student reports carry a base64 photo, so they need a larger cap. This route
+  // is session-gated (checked below), so the extra size isn't exposed to anons.
+  const maxBodyBytes = urlPath === '/api/admin/student-report-pdf' ? 8 * 1024 * 1024 : 100 * 1024;
   req.on('data', chunk => {
     if (aborted) return;
     body += chunk.toString();
-    // Cap request body at 100KB — block memory-exhaustion via huge payloads
-    if (body.length > 100 * 1024) {
+    if (body.length > maxBodyBytes) {
       aborted = true;
       res.writeHead(413, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ success: false, error: 'Request too large' }));
@@ -590,6 +676,25 @@ const handleApiRequest = (req, res, urlPath) => {
         if (!session) {
           res.writeHead(401);
           return res.end(JSON.stringify({ success: false, error: 'Unauthorized — please log in again' }));
+        }
+
+        if (urlPath === '/api/admin/student-report-pdf') {
+          const s = data.student || {};
+          if (!s.name) { res.writeHead(400); return res.end(JSON.stringify({ error: 'Student name required' })); }
+          try {
+            const pdfBuffer = await buildStudentReportPdf(s);
+            const safeName = String(s.name).replace(/[^a-z0-9]+/gi, '_');
+            res.writeHead(200, {
+              'Content-Type': 'application/pdf',
+              'Content-Disposition': `attachment; filename="Student_Report_${safeName}.pdf"`,
+              'Access-Control-Allow-Origin': '*'
+            });
+            return res.end(pdfBuffer);
+          } catch (e) {
+            console.error('[PDF Report Error]', e);
+            res.writeHead(500, { 'Content-Type': 'application/json' });
+            return res.end(JSON.stringify({ error: 'Failed to generate report' }));
+          }
         }
 
         if (urlPath === '/api/admin/update-pin') {
