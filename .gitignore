@@ -4,6 +4,9 @@ __pycache__/
 *.bak
 .env
 node_modules/
+data/sessions.json
+data/lockouts.json
+data/audit.log
 
 # Dev/fix scripts (one-off automation used during development)
 fix*.py

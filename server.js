@@ -119,9 +119,38 @@ function writeTeachers(t) {
 }
 
 // ── Session store ──────────────────────────────────────────────────────────────
+// Persisted to disk so a deploy (pm2 restart) doesn't silently log everyone out —
+// the in-memory-only Map used to be wiped on every restart.
+const SESSIONS_FILE = path.join(__dirname, 'data', 'sessions.json');
 const sessions = new Map(); // token -> { role, email, teacherId?, expiresAt, createdAt, lastActivity }
 const SESSION_DURATION_MS = 8 * 60 * 60 * 1000; // 8 hours
 const INACTIVITY_TIMEOUT_MS = 2 * 60 * 60 * 1000; // 2 hours
+
+function loadSessions() {
+  try {
+    const raw = JSON.parse(fs.readFileSync(SESSIONS_FILE, 'utf8'));
+    const now = Date.now();
+    for (const [tok, s] of Object.entries(raw)) {
+      if (s.expiresAt > now) sessions.set(tok, s);
+    }
+  } catch (e) { /* no file yet, fresh start */ }
+}
+function saveSessionsNow() {
+  try {
+    const dir = path.dirname(SESSIONS_FILE);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(SESSIONS_FILE, JSON.stringify(Object.fromEntries(sessions)));
+  } catch (e) { /* best-effort */ }
+}
+let _sessionsSaveTimer = null;
+function saveSessionsSoon() {
+  if (_sessionsSaveTimer) return;
+  _sessionsSaveTimer = setTimeout(() => {
+    _sessionsSaveTimer = null;
+    saveSessionsNow();
+  }, 2000);
+}
+loadSessions();
 
 function generateToken() {
   return crypto.randomBytes(32).toString('hex');
@@ -136,19 +165,22 @@ function validateAdmin(req) {
 
   const now = Date.now();
   // Check expiration
-  if (now > session.expiresAt) { sessions.delete(token); return null; }
+  if (now > session.expiresAt) { sessions.delete(token); saveSessionsSoon(); return null; }
   // Check inactivity
-  if (now - session.lastActivity > INACTIVITY_TIMEOUT_MS) { sessions.delete(token); return null; }
+  if (now - session.lastActivity > INACTIVITY_TIMEOUT_MS) { sessions.delete(token); saveSessionsSoon(); return null; }
 
   // Update activity timestamp and sliding window
   session.lastActivity = now;
   session.expiresAt = now + SESSION_DURATION_MS;
+  saveSessionsSoon();
   return session;
 }
 // Sweep expired sessions every hour
 setInterval(() => {
   const now = Date.now();
-  for (const [tok, s] of sessions) { if (now > s.expiresAt) sessions.delete(tok); }
+  let changed = false;
+  for (const [tok, s] of sessions) { if (now > s.expiresAt) { sessions.delete(tok); changed = true; } }
+  if (changed) saveSessionsSoon();
 }, 60 * 60 * 1000);
 
 const MIME_TYPES = {
@@ -690,6 +722,7 @@ const handleApiRequest = (req, res, urlPath) => {
               });
               clearAccountLock(safeEmail);
               auditLog('LOGIN_SUCCESS', safeEmail, 'teacher', 'success', '', reqIp);
+              saveSessionsNow();
               res.writeHead(200);
               return res.end(JSON.stringify({ success: true, token, role: 'teacher', teacher: { id: teacher.id, name: teacher.name } }));
             }
@@ -709,6 +742,7 @@ const handleApiRequest = (req, res, urlPath) => {
             lastActivity: now
           });
           auditLog('LOGIN_SUCCESS', safeEmail, 'superadmin', 'success', '', reqIp);
+          saveSessionsNow();
           res.writeHead(200);
           return res.end(JSON.stringify({ success: true, token, role: 'superadmin' }));
         }
@@ -733,6 +767,7 @@ const handleApiRequest = (req, res, urlPath) => {
         if (session) {
           auditLog('LOGOUT', session.email, session.role, 'success', '', reqIp);
           sessions.delete(auth);
+          saveSessionsNow();
         }
         res.writeHead(200);
         return res.end(JSON.stringify({ success: true }));
