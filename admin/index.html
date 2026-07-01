@@ -2519,6 +2519,25 @@ function adminFetch(url, opts = {}) {
   return fetch(url, opts);
 }
 
+/* ─── Restore session on refresh ─────────────────── */
+(function restoreSession() {
+  if (!authToken) return;
+  const savedRole = sessionStorage.getItem('sjc_admin_role');
+  if (!savedRole) return;
+  adminFetch('/api/admin/appointments').then(r => {
+    if (r.ok) {
+      if (savedRole === 'teacher') {
+        try { currentTeacher = JSON.parse(localStorage.getItem('sjc_current_teacher') || 'null'); } catch(e) {}
+      }
+      enterApp(savedRole);
+    } else {
+      authToken = null;
+      sessionStorage.removeItem('sjc_admin_token');
+      sessionStorage.removeItem('sjc_admin_role');
+    }
+  }).catch(() => {});
+})();
+
 /* ─── ICONS ────────────────────────────────── */
 const I = {
   grid:`<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>`,
@@ -2929,6 +2948,7 @@ function getDb() {
     if (d.success) {
       authToken = d.token;
       sessionStorage.setItem('sjc_admin_token', authToken);
+      sessionStorage.setItem('sjc_admin_role', d.role);
       if (d.role === 'teacher') {
         currentTeacher = d.teacher;
         localStorage.setItem('sjc_current_teacher', JSON.stringify(d.teacher));
@@ -3046,6 +3066,7 @@ function doLogout(){
     adminFetch('/api/admin/logout', { method:'POST' }).catch(()=>{});
     authToken = null;
     sessionStorage.removeItem('sjc_admin_token');
+    sessionStorage.removeItem('sjc_admin_role');
   }
   currentRole = null;
   currentTeacher = null;
@@ -3068,6 +3089,7 @@ function showPane(id){
     else p.innerHTML = renderPane(id);
     if(id === 'sa-apts') loadAppointmentsFromServer();
     if(id === 'sa-settings') loadBookingLimit();
+    if(id === 'sa-activity') loadActivityLog();
     if(id === 't-overview' || id === 't-apts' || id === 't-schedule') loadAppointmentsFromServer().then(()=>{ if(document.getElementById(id)?.classList.contains('active')) p.innerHTML = renderPane(id); });
   }
   if(n) n.classList.add('active');
@@ -3106,6 +3128,7 @@ function renderPane(id){
     case 'sa-cms':         return rSACms();
     case 'sa-db':          return rSADatabase();
     case 'sa-emails':      return rSAEmails();
+    case 'sa-activity':    return rSAActivity();
     case 't-overview':     return rTOverview();
     case 't-apts':         return rTApts();
     case 't-students':     return rTStudents();
@@ -3215,6 +3238,7 @@ function buildSA(){
       <a class="nav-item" id="nav-sa-db" onclick="showPane('sa-db')">${I.grid} Database</a>
       <a class="nav-item" id="nav-sa-emails" onclick="showPane('sa-emails')">${I.pen} Emails</a>
       <a class="nav-item" id="nav-sa-cms" onclick="showPane('sa-cms')">${I.pen} Page Editor</a>
+      <a class="nav-item" id="nav-sa-activity" onclick="showPane('sa-activity')">${I.grid} Activity Log</a>
       <a class="nav-item" id="nav-sa-settings" onclick="showPane('sa-settings')">${I.gear} Settings</a>
       <a class="nav-item danger" onclick="doLogout()">${I.out} Sign Out</a>
     </div>
@@ -3231,6 +3255,7 @@ function buildSA(){
     <div class="pane" id="sa-cms"></div>
     <div class="pane" id="sa-db"></div>
     <div class="pane" id="sa-emails"></div>
+    <div class="pane" id="sa-activity"></div>
     <div class="pane" id="sa-settings"></div>
   `;
 }
@@ -4712,6 +4737,45 @@ async function loadBookingLimit() {
     if (cnt) cnt.textContent = d.usedCount || 0;
     if (typeof csPick === 'function' && document.getElementById('bl-period')) csPick('bl-period', d.period || 'lifetime');
   } catch(e) {}
+}
+
+/* ─── SA: ACTIVITY LOG ───────────────────────── */
+let _activityLogCache = [];
+async function loadActivityLog() {
+  try {
+    const r = await adminFetch('/api/admin/audit-log');
+    if (!r.ok) return;
+    _activityLogCache = await r.json();
+    const pane = document.getElementById('sa-activity');
+    if (pane && pane.classList.contains('active')) pane.innerHTML = rSAActivity();
+  } catch(e) {}
+}
+function rSAActivity() {
+  const rows = _activityLogCache;
+  const statusColor = s => s === 'success' ? 'var(--gold)' : (s === 'failure' || s === 'locked') ? 'var(--danger)' : 'var(--text-muted)';
+  return `
+  <div class="page-hdr">
+    <h2>Activity Log</h2>
+    <p>${rows.length} recent events &middot; logins, PIN changes, and admin actions with IP address</p>
+  </div>
+  <div class="card">
+    <div class="search-bar">${I.srch}<input autocomplete="off" type="text" placeholder="Search by user, action, or IP…" oninput="filt(this,'sa-activity-tb')"></div>
+    <div class="tbl-wrap">
+    <table><thead><tr><th>Time</th><th>Action</th><th>User</th><th>Role</th><th>IP Address</th><th>Status</th><th>Details</th></tr></thead>
+    <tbody id="sa-activity-tb">
+    ${rows.length ? rows.map(r => `
+      <tr data-s="${esc((r.userId+' '+r.action+' '+(r.ip||'')).toLowerCase())}">
+        <td style="font-size:.76rem;color:var(--text-muted);white-space:nowrap;">${esc(new Date(r.timestamp).toLocaleString('en-GB'))}</td>
+        <td style="font-size:.78rem;font-weight:600;">${esc(r.action)}</td>
+        <td style="font-size:.78rem;">${esc(r.userId||'–')}</td>
+        <td style="font-size:.76rem;color:var(--text-muted);text-transform:capitalize;">${esc(r.role||'–')}</td>
+        <td style="font-size:.78rem;font-family:monospace;color:var(--brand-primary);">${esc(r.ip||'–')}</td>
+        <td><span style="font-size:.74rem;font-weight:700;color:${statusColor(r.status)};text-transform:uppercase;">${esc(r.status)}</span></td>
+        <td style="font-size:.74rem;color:var(--text-muted);">${esc(r.details||'–')}</td>
+      </tr>
+    `).join('') : `<tr><td colspan="7" style="text-align:center;padding:36px;color:#ccc">No activity recorded yet</td></tr>`}
+    </tbody></table></div>
+  </div>`;
 }
 
 async function saveBookingLimit() {

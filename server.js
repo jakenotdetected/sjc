@@ -46,14 +46,15 @@ setInterval(() => {
 }, 5 * 60 * 1000);
 
 // ── Audit logging ─────────────────────────────────────────────────────────────
-function auditLog(action, userId, role, status, details = '') {
+function auditLog(action, userId, role, status, details = '', ip = '') {
   const log = JSON.stringify({
     timestamp: new Date().toISOString(),
     action,
     userId,
     role,
     status,
-    details
+    details,
+    ip
   });
   fs.appendFileSync(AUDIT_LOG_FILE, log + '\n', 'utf8');
 }
@@ -78,11 +79,11 @@ function isAccountLocked(email) {
   writeLockouts(lockouts);
   return false;
 }
-function lockAccount(email, durationMs = 30 * 60 * 1000) {
+function lockAccount(email, durationMs = 30 * 60 * 1000, ip = '') {
   const lockouts = readLockouts();
   lockouts[email] = { lockedAt: new Date().toISOString(), expiresAt: Date.now() + durationMs };
   writeLockouts(lockouts);
-  auditLog('ACCOUNT_LOCKED', email, 'unknown', 'locked', `Locked for ${durationMs / 1000}s after failed attempts`);
+  auditLog('ACCOUNT_LOCKED', email, 'unknown', 'locked', `Locked for ${durationMs / 1000}s after failed attempts`, ip);
 }
 function clearAccountLock(email) {
   const lockouts = readLockouts();
@@ -527,7 +528,7 @@ const handleApiRequest = (req, res, urlPath) => {
                 lastActivity: now
               });
               clearAccountLock(safeEmail);
-              auditLog('LOGIN_SUCCESS', safeEmail, 'teacher', 'success');
+              auditLog('LOGIN_SUCCESS', safeEmail, 'teacher', 'success', '', reqIp);
               res.writeHead(200);
               return res.end(JSON.stringify({ success: true, token, role: 'teacher', teacher: { id: teacher.id, name: teacher.name } }));
             }
@@ -546,18 +547,18 @@ const handleApiRequest = (req, res, urlPath) => {
             createdAt: now,
             lastActivity: now
           });
-          auditLog('LOGIN_SUCCESS', safeEmail, 'superadmin', 'success');
+          auditLog('LOGIN_SUCCESS', safeEmail, 'superadmin', 'success', '', reqIp);
           res.writeHead(200);
           return res.end(JSON.stringify({ success: true, token, role: 'superadmin' }));
         }
 
         // Failed login
-        auditLog('LOGIN_FAILED', safeEmail, 'unknown', 'failure', `Invalid credentials from IP ${reqIp}`);
+        auditLog('LOGIN_FAILED', safeEmail, 'unknown', 'failure', 'Invalid credentials', reqIp);
 
         // After 5 failed attempts, lock the account
         const loginAttempts = rateBuckets.get('login:' + reqIp) || [];
         if (loginAttempts.length >= 5) {
-          lockAccount(safeEmail, 30 * 60 * 1000); // 30 minute lockout
+          lockAccount(safeEmail, 30 * 60 * 1000, reqIp); // 30 minute lockout
         }
 
         // Constant-time response to prevent timing attacks
@@ -569,7 +570,7 @@ const handleApiRequest = (req, res, urlPath) => {
         const auth = (req.headers['authorization'] || '').replace('Bearer ', '').trim();
         const session = sessions.get(auth);
         if (session) {
-          auditLog('LOGOUT', session.email, session.role, 'success');
+          auditLog('LOGOUT', session.email, session.role, 'success', '', reqIp);
           sessions.delete(auth);
         }
         res.writeHead(200);
@@ -614,13 +615,13 @@ const handleApiRequest = (req, res, urlPath) => {
           const cfg = readAdminCfg();
           // Verify current PIN before allowing change
           if (!verifyPin(currentPin, cfg.pinHash)) {
-            auditLog('PIN_CHANGE_FAILED', session.email, session.role, 'failure', 'Incorrect current PIN');
+            auditLog('PIN_CHANGE_FAILED', session.email, session.role, 'failure', 'Incorrect current PIN', reqIp);
             res.writeHead(401);
             return res.end(JSON.stringify({ error: 'Current PIN is incorrect' }));
           }
 
           writeAdminCfg({ ...cfg, pinHash: hashPin(newPin) });
-          auditLog('PIN_CHANGED', session.email, session.role, 'success');
+          auditLog('PIN_CHANGED', session.email, session.role, 'success', '', reqIp);
           res.writeHead(200);
           return res.end(JSON.stringify({ success: true }));
         }
@@ -656,7 +657,7 @@ const handleApiRequest = (req, res, urlPath) => {
               enabled: enabled !== false
             };
             writeAdminCfg(cfg);
-            auditLog('BOOKING_LIMIT_UPDATED', session.email, session.role, 'success', `Set to ${cfg.bookingLimit.max} per ${cfg.bookingLimit.period}`);
+            auditLog('BOOKING_LIMIT_UPDATED', session.email, session.role, 'success', `Set to ${cfg.bookingLimit.max} per ${cfg.bookingLimit.period}`, reqIp);
             res.writeHead(200);
             return res.end(JSON.stringify({ success: true, bookingLimit: cfg.bookingLimit }));
           }
@@ -674,7 +675,7 @@ const handleApiRequest = (req, res, urlPath) => {
           }
 
           writeDevices([]);
-          auditLog('DEVICES_RESET', session.email, session.role, 'success', 'Cleared all recorded devices');
+          auditLog('DEVICES_RESET', session.email, session.role, 'success', 'Cleared all recorded devices', reqIp);
           res.writeHead(200);
           return res.end(JSON.stringify({ success: true }));
         }
@@ -711,11 +712,11 @@ const handleApiRequest = (req, res, urlPath) => {
               const idx = teachers.findIndex(t => t.id === id);
               if (idx > -1) {
                 teachers[idx] = { id, email: safeEmail, name: name.slice(0, 100), pinHash: hashPin(tPin), perms: perms || {} };
-                auditLog('TEACHER_UPDATED', session.email, session.role, 'success', `Updated teacher ${safeEmail}`);
+                auditLog('TEACHER_UPDATED', session.email, session.role, 'success', `Updated teacher ${safeEmail}`, reqIp);
               }
             } else {
               teachers.push({ id: Date.now().toString(36), email: safeEmail, name: name.slice(0, 100), pinHash: hashPin(tPin), perms: perms || {} });
-              auditLog('TEACHER_CREATED', session.email, session.role, 'success', `Created teacher ${safeEmail}`);
+              auditLog('TEACHER_CREATED', session.email, session.role, 'success', `Created teacher ${safeEmail}`, reqIp);
             }
             writeTeachers(teachers);
             res.writeHead(200);
@@ -732,7 +733,7 @@ const handleApiRequest = (req, res, urlPath) => {
             }
 
             const teacher = teachers.find(t => t.id === id);
-            if (teacher) auditLog('TEACHER_DELETED', session.email, session.role, 'success', `Deleted teacher ${teacher.email}`);
+            if (teacher) auditLog('TEACHER_DELETED', session.email, session.role, 'success', `Deleted teacher ${teacher.email}`, reqIp);
 
             writeTeachers(teachers.filter(t => t.id !== id));
             res.writeHead(200);
@@ -1050,6 +1051,23 @@ const server = http.createServer((req, res) => {
       if (!session) { res.writeHead(401); return res.end(JSON.stringify({ error: 'Unauthorized' })); }
       res.writeHead(200);
       return res.end(JSON.stringify(readTeachers()));
+    }
+    if (req.method === 'GET' && urlPath === '/api/admin/audit-log') {
+      const session = validateAdmin(req);
+      res.setHeader('Content-Type', 'application/json');
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      if (!session) { res.writeHead(401); return res.end(JSON.stringify({ error: 'Unauthorized' })); }
+      if (session.role !== 'superadmin') { res.writeHead(403); return res.end(JSON.stringify({ error: 'Forbidden' })); }
+      let entries = [];
+      try {
+        const raw = fs.readFileSync(AUDIT_LOG_FILE, 'utf8');
+        entries = raw.split('\n').filter(Boolean).map(line => {
+          try { return JSON.parse(line); } catch(e) { return null; }
+        }).filter(Boolean);
+      } catch(e) {}
+      entries.reverse(); // newest first
+      res.writeHead(200);
+      return res.end(JSON.stringify(entries.slice(0, 500)));
     }
     if (req.method === 'POST' || req.method === 'OPTIONS') {
       return handleApiRequest(req, res, urlPath);
