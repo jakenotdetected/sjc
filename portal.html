@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -254,7 +254,7 @@ input,select,textarea{font-family:'Inter',sans-serif}
   <link rel="stylesheet" href="/loader.css?v=12">
 </head>
 <body>
-  <!-- â•â•â•â• STUDENT PORTAL UNDER MAINTENANCE â•â•â•â•
+  <!-- ════ STUDENT PORTAL UNDER MAINTENANCE ════
        To bring the portal back online, delete this entire block. -->
   <div id="portal-maintenance" style="position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;padding:32px;background:radial-gradient(120% 120% at 50% 0%,#4a1010 0%,#2a0808 55%,#1a0505 100%);font-family:'Inter',system-ui,sans-serif;">
     <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(212,175,55,0.06) 1px,transparent 1px);background-size:22px 22px;opacity:.5;pointer-events:none;"></div>
@@ -321,9 +321,9 @@ input,select,textarea{font-family:'Inter',sans-serif}
   </div>
 </div>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════
      AUTH SCREEN
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+════════════════════════════════════ -->
 <div id="authScreen">
   <div class="auth-left">
     <div class="auth-left-orb"></div><div class="auth-left-orb2"></div>
@@ -349,7 +349,7 @@ input,select,textarea{font-family:'Inter',sans-serif}
       <!-- LOGIN -->
       <div id="loginForm">
         <div class="form-group"><label>Email Address</label><input type="email" autocomplete="off" id="loginEmail" autocomplete="off" placeholder="your@email.com"/></div>
-        <div class="form-group"><label>Password</label><input autocomplete="off" type="password" id="loginPass" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"/></div>
+        <div class="form-group"><label>Password</label><input autocomplete="off" type="password" id="loginPass" placeholder="••••••••"/></div>
         <div id="loginErr" class="form-err" style="margin-bottom:12px"></div>
     <button class="btn-auth btn-auth-primary" onclick="doLogin()">Sign In to Portal</button>
       </div>
@@ -404,7 +404,7 @@ input,select,textarea{font-family:'Inter',sans-serif}
           <div class="form-group"><label>Index Number</label><input autocomplete="off" type="text" id="r2-index" placeholder="20 001"/></div>
           <div id="regErr2" class="form-err" style="margin-bottom:10px"></div>
           <div style="display:flex;gap:10px">
-            <button class="btn-auth btn-auth-secondary" style="flex:1" onclick="regBack(2)">â† Back</button>
+            <button class="btn-auth btn-auth-secondary" style="flex:1" onclick="regBack(2)">← Back</button>
             <button class="btn-auth btn-auth-primary" style="flex:2" onclick="regNext(2)">Continue →</button>
           </div>
         </div>
@@ -430,7 +430,7 @@ input,select,textarea{font-family:'Inter',sans-serif}
             </div>
           </div>
           <div style="display:flex;gap:10px">
-            <button class="btn-auth btn-auth-secondary" style="flex:1" onclick="regBack(3)">â† Back</button>
+            <button class="btn-auth btn-auth-secondary" style="flex:1" onclick="regBack(3)">← Back</button>
             <button class="btn-auth btn-auth-primary" style="flex:2" onclick="regNext(3)">Continue →</button>
           </div>
         </div>
@@ -471,7 +471,7 @@ input,select,textarea{font-family:'Inter',sans-serif}
           </div>
           <div id="regErr4" class="form-err" style="margin-bottom:10px"></div>
           <div style="display:flex;gap:10px">
-            <button class="btn-auth btn-auth-secondary" style="flex:1" onclick="regBack(4)">â† Back</button>
+            <button class="btn-auth btn-auth-secondary" style="flex:1" onclick="regBack(4)">← Back</button>
             <button class="btn-auth btn-auth-primary" style="flex:2" onclick="finishRegister()">Create My Account</button>
           </div>
         </div>
@@ -480,9 +480,9 @@ input,select,textarea{font-family:'Inter',sans-serif}
   </div>
 </div>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════
      APP (after login)
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+════════════════════════════════════ -->
 <div id="app">
   <!-- TOPBAR -->
   <div class="tb">
@@ -723,19 +723,19 @@ input,select,textarea{font-family:'Inter',sans-serif}
         
         <div class="cards-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
           <div class="sec-card" style="margin-bottom:0">
-            <div class="sec-card-title">ðŸ›ï¸ Sri Lankan Universities</div>
+            <div class="sec-card-title">🏛️ Sri Lankan Universities</div>
             <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">Information on state universities (UGC), Z-score cutoffs, and local private degree awarding institutes.</p>
             <a href="/university" target="_blank" class="btn-book" style="width:100%;justify-content:center;background:var(--cream);color:var(--brand-primary);border:1px solid var(--cream-3);display:flex">View Local Options →</a>
           </div>
 
           <div class="sec-card" style="margin-bottom:0">
-            <div class="sec-card-title">âœˆï¸ Foreign Universities</div>
+            <div class="sec-card-title">✈️ Foreign Universities</div>
             <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">Explore studying abroad in UK, Australia, USA, Canada, and Europe. Find scholarships and agents.</p>
             <a href="/university" target="_blank" class="btn-book" style="width:100%;justify-content:center;background:var(--cream);color:var(--brand-primary);border:1px solid var(--cream-3);display:flex">Explore Abroad →</a>
           </div>
 
           <div class="sec-card" style="margin-bottom:0">
-            <div class="sec-card-title">ðŸŽ“ Degree Pathways</div>
+            <div class="sec-card-title">🎓 Degree Pathways</div>
             <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">Step-by-step guides from A/L to Bachelors, Masters, and Professional Qualifications (CIMA, CIM, ACCA).</p>
             <a href="/university" target="_blank" class="btn-book" style="width:100%;justify-content:center;background:var(--cream);color:var(--brand-primary);border:1px solid var(--cream-3);display:flex">View Pathways →</a>
           </div>
@@ -747,13 +747,13 @@ input,select,textarea{font-family:'Inter',sans-serif}
           </div>
 
           <div class="sec-card" style="margin-bottom:0">
-            <div class="sec-card-title">ðŸ“… Application Deadlines</div>
+            <div class="sec-card-title">📅 Application Deadlines</div>
             <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">Stay updated on UGC intake deadlines, SAT/IELTS exam dates, and foreign university intakes (Feb/Sep).</p>
             <a href="/university" target="_blank" class="btn-book" style="width:100%;justify-content:center;background:var(--cream);color:var(--brand-primary);border:1px solid var(--cream-3);display:flex">View Calendar →</a>
           </div>
 
           <div class="sec-card" style="margin-bottom:0">
-            <div class="sec-card-title">ðŸ“‹ Required Qualifications</div>
+            <div class="sec-card-title">📋 Required Qualifications</div>
             <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">Check prerequisites, minimum Z-scores, English proficiency (IELTS/PTE) and entry exams for your dream degree.</p>
             <a href="/university" target="_blank" class="btn-book" style="width:100%;justify-content:center;background:var(--cream);color:var(--brand-primary);border:1px solid var(--cream-3);display:flex">Check Requirements →</a>
           </div>
@@ -781,7 +781,7 @@ input,select,textarea{font-family:'Inter',sans-serif}
 </div><!-- /app -->
 
 <script>
-// â”€â”€ DATA â”€â”€
+// ── DATA ──
 const DB={
   get(k){try{return JSON.parse(localStorage.getItem('sjc_'+k)||'null')}catch(e){return null}},
   set(k,v){localStorage.setItem('sjc_'+k,JSON.stringify(v))},
@@ -893,7 +893,7 @@ const CAREERS=[
 
 let currentUser=null;
 let regData={};
-const fieldEmoji={Medicine:'ðŸ©º',IT:'ðŸ’»',Engineering:'âš™ï¸',Law:'âš–ï¸',Business:'ðŸ“Š',Media:'ðŸ“¡',Design:'ðŸŽ¨',Aviation:'âœˆï¸',Government:'ðŸ›ï¸',Entrepreneurship:'ðŸš€'};
+const fieldEmoji={Medicine:'🩺',IT:'💻',Engineering:'⚙️',Law:'⚖️',Business:'📊',Media:'📡',Design:'🎨',Aviation:'✈️',Government:'🏛️',Entrepreneurship:'🚀'};
 
 window.addEventListener('DOMContentLoaded',()=>{
   const saved=DB.get('currentUser');
@@ -901,7 +901,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   renderCareerExplorer('All');
 });
 
-// â”€â”€ AUTH TABS â”€â”€
+// ── AUTH TABS ──
 function switchAuthTab(tab){
   const isLogin=tab==='login';
   document.getElementById('tabLogin').classList.toggle('active',isLogin);
@@ -911,7 +911,7 @@ function switchAuthTab(tab){
   if(!isLogin)showRegStep(1);
 }
 
-// â”€â”€ LOGIN â”€â”€
+// ── LOGIN ──
 function doLogin(){
   const email=document.getElementById('loginEmail').value.trim();
   const pass=document.getElementById('loginPass').value;
@@ -934,7 +934,7 @@ function doLogin(){
   currentUser=user;DB.set('currentUser',user);bootApp();
 }
 
-// â”€â”€ REGISTER STEPS â”€â”€
+// ── REGISTER STEPS ──
 function showRegStep(n){
   for(let i=1;i<=4;i++){
     const el=document.getElementById('regStep'+i);
@@ -1009,7 +1009,7 @@ function finishRegister(){
   document.getElementById('pendingScreen').style.display='block';
 }
 
-// â”€â”€ BOOT â”€â”€
+// ── BOOT ──
 function bootApp(){
   document.getElementById('authScreen').style.display='none';
   document.getElementById('app').style.display='flex';
@@ -1023,7 +1023,7 @@ function doLogout(){
   toast('Signed out successfully.','success');
 }
 
-// â”€â”€ SIDEBAR â”€â”€
+// ── SIDEBAR ──
 let sidebarOpen=true;
 function toggleSidebar(){
   sidebarOpen=!sidebarOpen;
@@ -1040,7 +1040,7 @@ function showPage(id){
   if(id==='events')renderEvents();
 }
 
-// â”€â”€ TOPBAR â”€â”€
+// ── TOPBAR ──
 function refreshTopbar(){
   if(!currentUser)return;
   const initials=(currentUser.firstName[0]||'')+(currentUser.lastName[0]||'');
@@ -1053,7 +1053,7 @@ function refreshTopbar(){
   }
 }
 
-// â”€â”€ DASHBOARD â”€â”€
+// ── DASHBOARD ──
 function refreshDashboard(){
   if(!currentUser)return;
   const h=new Date().getHours();
@@ -1114,10 +1114,10 @@ function renderDashCareers(){
   if(!interests.length){el.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:24px;color:var(--muted);font-size:0.88rem">Add career interests in your profile to see personalised recommendations.</div>';return;}
   const matched=CAREERS.filter(c=>interests.some(i=>c.field===i||c.tags.includes(i))).slice(0,4);
   if(!matched.length){el.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:24px;color:var(--muted);font-size:0.88rem">No exact matches. Try adding more interests in your profile.</div>';return;}
-  el.innerHTML=matched.map(c=>`<div class="career-card"><div class="career-icon" style="background:${c.bg};font-size:1.5rem;display:flex;align-items:center;justify-content:center">${fieldEmoji[c.field]||'â­'}</div><div class="career-title">${c.title}</div><div class="career-match">Matches your interests</div><div class="career-desc">${c.desc}</div></div>`).join('');
+  el.innerHTML=matched.map(c=>`<div class="career-card"><div class="career-icon" style="background:${c.bg};font-size:1.5rem;display:flex;align-items:center;justify-content:center">${fieldEmoji[c.field]||'⭐'}</div><div class="career-title">${c.title}</div><div class="career-match">Matches your interests</div><div class="career-desc">${c.desc}</div></div>`).join('');
 }
 
-// â”€â”€ PROFILE â”€â”€
+// ── PROFILE ──
 function renderProfilePage(){
   if(!currentUser)return;
   const initials=(currentUser.firstName||'?')[0]+(currentUser.lastName||'?')[0];
@@ -1230,14 +1230,14 @@ function persist(){
   document.getElementById('stat-careers').textContent=(currentUser.careerInterests||[]).length;
 }
 
-// â”€â”€ CAREER EXPLORER â”€â”€
+// ── CAREER EXPLORER ──
 function renderCareerExplorer(filter){
   const grid=document.getElementById('careerExplorerGrid');if(!grid)return;
   const list=filter==='All'?CAREERS:CAREERS.filter(c=>c.field.includes(filter)||c.tags.some(t=>t.includes(filter)));
   grid.innerHTML=list.map(c=>`
     <div class="career-exp-card" style="padding:20px;border-radius:12px;border:1px solid var(--cream-3);background:var(--white);">
       <div style="display:flex;gap:15px;align-items:flex-start;margin-bottom:15px">
-        <div class="career-exp-icon" style="background:${c.bg};padding:12px;border-radius:10px;font-size:1.5rem;display:flex;align-items:center;justify-content:center">${fieldEmoji[c.field]||'â­'}</div>
+        <div class="career-exp-icon" style="background:${c.bg};padding:12px;border-radius:10px;font-size:1.5rem;display:flex;align-items:center;justify-content:center">${fieldEmoji[c.field]||'⭐'}</div>
         <div>
           <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--brand-primary);line-height:1.1">${c.title}</div>
           <div style="font-size:0.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-top:4px">${c.field}</div>
@@ -1261,13 +1261,13 @@ function filterCareers(filter,el){
   el.classList.add('active');renderCareerExplorer(filter);
 }
 
-// â”€â”€ EVENTS â”€â”€
+// ── EVENTS ──
 function renderEvents(){
   const el=document.getElementById('eventsListPortal');if(!el)return;
   const events=DB.get('events')||[];
   if(!events.length){
     el.innerHTML=`<div style="text-align:center;padding:60px 20px;background:#fff;border-radius:16px;border:1px solid var(--rule)">
-      <div style="font-size:3rem;margin-bottom:16px">ðŸ“…</div>
+      <div style="font-size:3rem;margin-bottom:16px">📅</div>
       <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--brand-primary);margin-bottom:8px">No upcoming events</div>
       <p style="color:var(--muted);font-size:0.88rem">Check back soon – events will appear here when added by the admin.</p>
     </div>`;
@@ -1293,7 +1293,7 @@ function renderEvents(){
   }).join('')+'</div>';
 }
 
-// â”€â”€ APPOINTMENTS â”€â”€
+// ── APPOINTMENTS ──
 function renderApptsFull(){
   const allApts = DB.get('appointments') || [];
   const apts = allApts.filter(a => a.email === currentUser.email).reverse();
@@ -1339,7 +1339,7 @@ async function submitBooking(){
   document.getElementById('stat-appts').textContent = allApts.filter(a => a.email === currentUser.email).length;
 }
 
-// â”€â”€ MODALS & TOAST â”€â”€
+// ── MODALS & TOAST ──
 function openModal(id){document.getElementById(id).classList.add('open');}
 function closeModal(id){document.getElementById(id).classList.remove('open');}
 document.querySelectorAll('.modal-overlay').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');}));
