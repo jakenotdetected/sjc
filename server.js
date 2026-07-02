@@ -378,16 +378,6 @@ function writeApts(apts) {
   fs.writeFileSync(APT_FILE, JSON.stringify(apts, null, 2));
 }
 
-const EVENTS_FILE = path.join(__dirname, 'data', 'events.json');
-function readEvents() {
-  try { return JSON.parse(fs.readFileSync(EVENTS_FILE, 'utf8')); } catch(e) { return []; }
-}
-function writeEvents(events) {
-  const dir = path.dirname(EVENTS_FILE);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(EVENTS_FILE, JSON.stringify(events, null, 2));
-}
-
 const POSTS_FILE = path.join(__dirname, 'data', 'posts.json');
 function readPosts() {
   try { return JSON.parse(fs.readFileSync(POSTS_FILE, 'utf8')); } catch(e) { return []; }
@@ -978,66 +968,6 @@ const handleApiRequest = (req, res, urlPath) => {
           }
         }
 
-        // ── Events (admin/teacher managed, internal note stays server-side only via public route stripping) ──
-        if (urlPath === '/api/admin/events' && req.method === 'POST') {
-          const { id, title, date, time, location, category, description, capacity, adminNote, csrfToken, _delete } = data;
-
-          if (!csrfToken || !validateCsrfToken(csrfToken)) {
-            res.writeHead(403);
-            return res.end(JSON.stringify({ error: 'Invalid CSRF token' }));
-          }
-
-          const events = readEvents();
-
-          if (_delete) {
-            const idx = events.findIndex(e => e.id === id);
-            if (idx > -1) {
-              auditLog('EVENT_DELETED', session.email, session.role, 'success', `Deleted event ${events[idx].title}`, reqIp);
-              events.splice(idx, 1);
-            }
-            writeEvents(events);
-            res.writeHead(200);
-            return res.end(JSON.stringify({ success: true, events }));
-          }
-
-          if (!title || !date) { res.writeHead(400); return res.end(JSON.stringify({ error: 'Title and date are required' })); }
-
-          if (id) {
-            const idx = events.findIndex(e => e.id === id);
-            if (idx > -1) {
-              events[idx] = {
-                ...events[idx],
-                title: String(title).slice(0, 150),
-                date, time: time || '',
-                location: String(location || '').slice(0, 150),
-                category: String(category || 'general').toLowerCase(),
-                description: String(description || '').slice(0, 1000),
-                capacity: capacity ? Number(capacity) : null,
-                adminNote: String(adminNote || '').slice(0, 2000)
-              };
-              auditLog('EVENT_UPDATED', session.email, session.role, 'success', `Updated event ${title}`, reqIp);
-            }
-          } else {
-            events.unshift({
-              id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
-              title: String(title).slice(0, 150),
-              date, time: time || '',
-              location: String(location || '').slice(0, 150),
-              category: String(category || 'general').toLowerCase(),
-              description: String(description || '').slice(0, 1000),
-              capacity: capacity ? Number(capacity) : null,
-              adminNote: String(adminNote || '').slice(0, 2000),
-              registrations: [],
-              createdBy: session.email,
-              createdAt: new Date().toISOString()
-            });
-            auditLog('EVENT_CREATED', session.email, session.role, 'success', `Created event ${title}`, reqIp);
-          }
-          writeEvents(events);
-          res.writeHead(200);
-          return res.end(JSON.stringify({ success: true, events }));
-        }
-
         // ── Posts: Facebook-style updates shown on the public /events feed ────
         if (urlPath === '/api/admin/posts' && req.method === 'POST') {
           const { id, text, images, csrfToken, _delete } = data;
@@ -1280,32 +1210,6 @@ const handleApiRequest = (req, res, urlPath) => {
         res.writeHead(200);
         res.end(JSON.stringify({ success: true, id: apt.id }));
       }
-      else if (/^\/api\/events\/[^\/]+\/register$/.test(urlPath)) {
-        const id = urlPath.split('/')[3];
-        const events = readEvents();
-        const ev = events.find(e => e.id === id);
-        if (!ev) { res.writeHead(404); return res.end(JSON.stringify({ error: 'Event not found' })); }
-        const { name, admissionNumber, grade, phone } = data;
-        if (!name || !admissionNumber) {
-          res.writeHead(400);
-          return res.end(JSON.stringify({ error: 'Name and admission number are required' }));
-        }
-        ev.registrations = ev.registrations || [];
-        if (ev.capacity && ev.registrations.length >= Number(ev.capacity)) {
-          res.writeHead(400);
-          return res.end(JSON.stringify({ error: 'This event is full' }));
-        }
-        ev.registrations.push({
-          name: String(name).slice(0, 100),
-          admissionNumber: String(admissionNumber).slice(0, 50),
-          grade: String(grade || '').slice(0, 50),
-          phone: String(phone || '').slice(0, 30),
-          at: new Date().toISOString()
-        });
-        writeEvents(events);
-        res.writeHead(200);
-        return res.end(JSON.stringify({ success: true }));
-      }
       else if (urlPath === '/api/schedule-appointment') {
         const { email, name, date, time, notes, type } = data;
         if (!email) {
@@ -1426,14 +1330,6 @@ const server = http.createServer((req, res) => {
     if (req.method === 'GET' && urlPath === '/api/csrf-token') {
       return handleApiRequest(req, res, urlPath);
     }
-    if (req.method === 'GET' && urlPath === '/api/admin/events') {
-      const session = validateAdmin(req);
-      res.setHeader('Content-Type', 'application/json');
-      res.setHeader('Access-Control-Allow-Origin', '*');
-      if (!session) { res.writeHead(401); return res.end(JSON.stringify({ error: 'Unauthorized' })); }
-      res.writeHead(200);
-      return res.end(JSON.stringify(readEvents()));
-    }
     if (req.method === 'GET' && urlPath === '/api/admin/posts') {
       const session = validateAdmin(req);
       res.setHeader('Content-Type', 'application/json');
@@ -1441,16 +1337,6 @@ const server = http.createServer((req, res) => {
       if (!session) { res.writeHead(401); return res.end(JSON.stringify({ error: 'Unauthorized' })); }
       res.writeHead(200);
       return res.end(JSON.stringify(readPosts()));
-    }
-    if (req.method === 'GET' && urlPath === '/api/events/public') {
-      res.setHeader('Content-Type', 'application/json');
-      res.setHeader('Access-Control-Allow-Origin', '*');
-      const events = readEvents().map(e => {
-        const { adminNote, registrations, ...rest } = e;
-        return { ...rest, registrationCount: (registrations || []).length };
-      });
-      res.writeHead(200);
-      return res.end(JSON.stringify({ events }));
     }
     if (req.method === 'GET' && urlPath === '/api/posts/public') {
       res.setHeader('Content-Type', 'application/json');

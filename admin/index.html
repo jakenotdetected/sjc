@@ -2752,7 +2752,6 @@ function onCompStat(dropId, val){
 
 function getAllStudents(){ const a=Object.values(DB.get('users')||{}); const b=JSON.parse(localStorage.getItem('sjc_db_students')||'[]'); return [...a,...b] }
 function getTeachers(){ return DB.get('teachers')||[] }
-function getEvents(){ return DB.get('events')||[] }
 function getAllAppointments(){
   const apts = (DB.get('appointments') || []);
   return apts.map(a => ({
@@ -3106,8 +3105,7 @@ function showPane(id){
     else if(id === 'sa-students') p.innerHTML = rSAStudents();
     else p.innerHTML = renderPane(id);
     if(id === 'sa-apts') loadAppointmentsFromServer();
-    if(id === 'sa-events') loadEventsFromServer();
-    if(id === 'sa-posts') loadPostsFromServer();
+    if(id === 'sa-events') loadPostsFromServer();
     if(id === 't-posts') loadPostsFromServer();
     if(id === 'sa-settings') loadBookingLimit();
     if(id === 'sa-activity') loadActivityLog();
@@ -3142,8 +3140,7 @@ function renderPane(id){
     case 'sa-apts':        return rSAApts();
     case 'sa-students':    return rSAStudents();
     case 'sa-teachers':    return rSATeachers();
-    case 'sa-events':      return rSAEvents();
-    case 'sa-posts':       return rSAPosts();
+    case 'sa-events':      return rSAPosts();
       case 'sa-todos':       return rSATodos();
       case 'sa-complaints':  return rSAComplaints();
     case 'sa-settings':    return rSASettings();
@@ -3253,7 +3250,6 @@ function buildSA(){
       <a class="nav-item" id="nav-sa-students" onclick="showPane('sa-students')">${I.users} Students</a>
       <a class="nav-item" id="nav-sa-teachers" onclick="showPane('sa-teachers')">${I.uc} Teachers</a>
       <a class="nav-item" id="nav-sa-events" onclick="showPane('sa-events')">${I.ev} Events</a>
-      <a class="nav-item" id="nav-sa-posts" onclick="showPane('sa-posts')">${I.pen} Events Feed</a>
         <a class="nav-item" id="nav-sa-todos" onclick="showPane('sa-todos')">${I.cal} To-Do List</a>
         <a class="nav-item" id="nav-sa-complaints" onclick="showPane('sa-complaints')">${I.pen} Complains / Proposals</a>
     </div>
@@ -3274,7 +3270,6 @@ function buildSA(){
     <div class="pane" id="sa-students"></div>
     <div class="pane" id="sa-teachers"></div>
     <div class="pane" id="sa-events"></div>
-    <div class="pane" id="sa-posts"></div>
       <div class="pane" id="sa-todos"></div>
       <div class="pane" id="sa-complaints"></div>
     <div class="pane" id="sa-cms"></div>
@@ -3283,7 +3278,7 @@ function buildSA(){
     <div class="pane" id="sa-activity"></div>
     <div class="pane" id="sa-settings"></div>
   `;
-  loadEventsFromServer().then(() => {
+  loadPostsFromServer().then(() => {
     const ov = document.getElementById('sa-overview');
     if (ov && ov.classList.contains('active')) ov.innerHTML = rSAOverview();
   });
@@ -3374,13 +3369,11 @@ function buildSA(){
 function rSAOverview(){
   const students=getAllStudents();
   const apts=getAllAppointments();
-  const events=getEvents();
+  const posts=getPosts();
   const teachers=getTeachers();
   const pending=apts.filter(a=>a.status==='pending').length;
-  const upcoming=events.filter(e=>e.date>=today()).length;
   const recent5stu=[...students].sort((a,b)=>(b.createdAt||'')>(a.createdAt||'')?1:-1).slice(0,5);
   const recent5apt=apts.slice(0,5);
-  const upEvents=events.filter(e=>e.date>=today()).sort((a,b)=>a.date>b.date?1:-1).slice(0,3);
 
   return `
   <div class="page-hdr">
@@ -3403,8 +3396,8 @@ function rSAOverview(){
     <div class="stat-card">
       <div class="s-icon" style="background:#dcfce7">${I.ev.replace('currentColor','#15803d')}</div>
       <div class="s-label">Events</div>
-      <div class="s-value">${events.length}</div>
-      <div class="s-desc">${upcoming} upcoming</div>
+      <div class="s-value">${posts.length}</div>
+      <div class="s-desc">Posts published</div>
     </div>
     <div class="stat-card">
       <div class="s-icon" style="background:#fef3c7">${I.uc.replace('currentColor','#b45309')}</div>
@@ -3520,45 +3513,13 @@ function rSATeachers(){
 }
 
 /* ─── SA: EVENTS ─────────────────────────────── */
-function rSAEvents(){
-  const events=getEvents().sort((a,b)=>a.date>b.date?1:-1);
-  const now=today();
-  return `
-  <div class="page-hdr page-hdr-row">
-    <div><h2>Events</h2><p>${events.length} total &middot; ${events.filter(e=>e.date>=now).length} upcoming &middot; live on cgu.jakenetwork.xyz/events</p></div>
-    <button class="btn btn-primary" onclick="addEventModal()">${I.plus} Add Event</button>
-  </div>
-  <div class="card">
-    <div class="tbl-wrap">
-    <div class="search-bar" style="margin-bottom:15px; display:flex; gap:10px; align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input autocomplete="off" type="text" placeholder="Search records..." oninput="if(typeof filt === 'function') filt(this, 'tb_3b2bfaf0')" style="flex:1; border:none; outline:none; background:transparent; padding:8px;"></div>
-<table><thead><tr><th>Title</th><th>Date</th><th>Time</th><th>Location</th><th>Category</th><th>Registered</th><th>Internal Note</th><th>Actions</th></tr></thead>
-    <tbody id="tb_3b2bfaf0">
-    ${events.length?events.map(e=>`
-      <tr>
-        <td style="font-weight:600;font-size:.83rem">${esc(e.title)}</td>
-        <td style="font-size:.76rem">${fmtDate(e.date)}</td>
-        <td style="font-size:.76rem;color:#aaa">${esc(e.time||'–')}</td>
-        <td style="font-size:.76rem;color:#aaa">${esc(e.location||'–')}</td>
-        <td><span class="badge" style="background:#f0fdf4;color:#166534">${esc(EVENT_CAT_LABELS[(e.category||'general').toLowerCase()]||e.category||'General')}</span></td>
-        <td style="font-size:.76rem;color:#666">${(e.registrations||[]).length}${e.capacity?'/'+e.capacity:''}</td>
-        <td style="font-size:.76rem;color:#888;max-width:220px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="${esc(e.adminNote||'')}">${esc(e.adminNote||'–')}</td>
-        <td><div style="display:flex;gap:6px">
-          <button class="btn btn-ghost btn-sm" onclick="editEventModal('${esc(e.id)}')">${I.pen} Edit</button>
-          <button class="btn btn-danger btn-sm" onclick="removeEvent('${esc(e.id)}')">${I.bin} Delete</button>
-        </div></td>
-      </tr>
-    `).join(''):`<tr><td colspan="8" style="text-align:center;padding:36px;color:#ccc">No events yet</td></tr>`}
-    </tbody></table></div>
-  </div>`;
-}
-
-/* ─── SA: POSTS (Facebook-style updates on the public Events page) ──── */
+/* ─── SA: EVENTS (Facebook-style posts shown live on the public Events page) ──── */
 function rSAPosts(){
   const posts=getPosts();
   return `
   <div class="page-hdr">
-    <h2>Events Feed</h2>
-    <p>Post updates that appear instantly on cgu.jakenetwork.xyz/events</p>
+    <h2>Events</h2>
+    <p>Post updates and photos that appear instantly on cgu.jakenetwork.xyz/events</p>
   </div>
   <div class="card" style="max-width:640px;margin:0 auto 20px;">
     <textarea id="new-post-text" rows="3" placeholder="What's happening? Share an update, photos, or announcement…" style="width:100%;padding:14px;border:1px solid #e0d4c8;border-radius:10px;font-family:inherit;font-size:0.95rem;resize:vertical;"></textarea>
@@ -4095,7 +4056,7 @@ function buildTeacher(){
       <a class="nav-item" id="nav-t-students" onclick="showPane('t-students')">${I.users} Students</a>
       <a class="nav-item" id="nav-t-schedule" onclick="showPane('t-schedule')">${I.clk} Schedule</a>
         <a class="nav-item" id="nav-t-complaints" onclick="showPane('t-complaints')">${I.pen} Complains / Proposals</a>
-        <a class="nav-item" id="nav-t-posts" onclick="showPane('t-posts')">${I.pen} Events Feed</a>
+        <a class="nav-item" id="nav-t-posts" onclick="showPane('t-posts')">${I.ev} Events</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-section-label">Account</div>
@@ -4372,57 +4333,6 @@ function removeTeacher(id){
 }
 
 /* ─── MODALS: EVENTS ─────────────────────────── */
-const EVENT_CATS = ['workshop','career','wellness','leadership','academic','general'];
-const EVENT_CAT_LABELS = {workshop:'Workshop',career:'Career',wellness:'Wellness',leadership:'Leadership',academic:'Academic',general:'General'};
-function addEventModal(){
-  openModal(`
-    <h3>Add Event</h3>
-    <div class="form-group"><label>Event Title</label><input autocomplete="off" type="text" id="m-title" placeholder="Event name"></div>
-    <div class="two-col">
-      <div class="form-group"><label>Date</label><input autocomplete="off" type="text" class="flatpickr-date" id="m-date" value="${today()}" placeholder="2026-06-16" inputmode="numeric" pattern="\d{4}-\d{2}-\d{2}"></div>
-      <div class="form-group"><label>Time</label><input autocomplete="off" type="time" id="m-time" value="09:00"></div>
-    </div>
-    <div class="form-group"><label>Location</label><input autocomplete="off" type="text" id="m-loc" placeholder="Main Hall, School Grounds…"></div>
-    <div class="two-col">
-      <div class="form-group"><label>Category</label>
-        ${csHTML('m-type', EVENT_CATS.map(c=>EVENT_CAT_LABELS[c]), 'Workshop')}
-      </div>
-      <div class="form-group"><label>Capacity <span style="color:#bbb;font-weight:400">(optional)</span></label><input autocomplete="off" type="number" id="m-cap" placeholder="e.g. 80" min="1"></div>
-    </div>
-    <div class="form-group"><label>Description <span style="color:#bbb;font-weight:400">(shown publicly on the Events page)</span></label><textarea autocomplete="off" id="m-desc" rows="3" placeholder="Brief description…"></textarea></div>
-    <div class="form-group"><label>Internal Note <span style="color:#bbb;font-weight:400">(staff only — not shown to students)</span></label><textarea autocomplete="off" id="m-note" rows="2" placeholder="What was done, who's handling it, follow-ups…"></textarea></div>
-    <div class="modal-footer">
-      <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
-      <button class="btn btn-primary" onclick="saveEvent(null)">Add Event</button>
-    </div>
-  `);
-}
-function editEventModal(id){
-  const e=getEvents().find(x=>x.id===id); if(!e) return;
-  const cat=(e.category||'general').toLowerCase();
-  openModal(`
-    <h3>Edit Event</h3>
-    <div class="form-group"><label>Event Title</label><input type="text" id="m-title" value="${esc(e.title||'')}"></div>
-    <div class="two-col">
-      <div class="form-group"><label>Date</label><input type="date" id="m-date" value="${e.date||today()}"></div>
-      <div class="form-group"><label>Time</label><input type="time" id="m-time" value="${e.time||'09:00'}"></div>
-    </div>
-    <div class="form-group"><label>Location</label><input type="text" id="m-loc" value="${esc(e.location||'')}"></div>
-    <div class="two-col">
-      <div class="form-group"><label>Category</label>
-        ${csHTML('m-type', EVENT_CATS.map(c=>EVENT_CAT_LABELS[c]), EVENT_CAT_LABELS[cat]||'General')}
-      </div>
-      <div class="form-group"><label>Capacity <span style="color:#bbb;font-weight:400">(optional)</span></label><input type="number" id="m-cap" value="${e.capacity||''}" min="1"></div>
-    </div>
-    <div class="form-group"><label>Description <span style="color:#bbb;font-weight:400">(shown publicly on the Events page)</span></label><textarea id="m-desc" rows="3">${esc(e.description||'')}</textarea></div>
-    <div class="form-group"><label>Internal Note <span style="color:#bbb;font-weight:400">(staff only — not shown to students)</span></label><textarea id="m-note" rows="2">${esc(e.adminNote||'')}</textarea></div>
-    <div class="modal-footer">
-      <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
-      <button class="btn btn-primary" onclick="saveEvent('${esc(id)}')">Save Changes</button>
-    </div>
-  `);
-}
-
 function saveStudentData(id) {
   const name = document.getElementById('sName').value.trim();
   if(!name) { toast('Student name is required', 'err'); return; }
@@ -4924,7 +4834,7 @@ function exportData() {
     students: getAllStudents(),
     appointments: getAllAppointments(),
     teachers: getTeachers(),
-    events: getEvents(),
+    posts: getPosts(),
     complaints: getAllComplaints(),
     users: DB.get('users') || {},
     db_students: JSON.parse(localStorage.getItem('sjc_db_students') || '[]')
@@ -4953,57 +4863,6 @@ async function getCsrfToken(){
   try { const r = await adminFetch('/api/csrf-token'); const d = await r.json(); return d.csrfToken || ''; } catch(e) { return ''; }
 }
 
-async function saveEvent(id) {
-  const title = document.getElementById('m-title').value.trim();
-  const date = document.getElementById('m-date').value;
-  const time = document.getElementById('m-time').value;
-  const location = document.getElementById('m-loc').value.trim();
-  const category = (document.getElementById('m-type').value || 'general').toLowerCase();
-  const capacity = document.getElementById('m-cap').value.trim();
-  const description = document.getElementById('m-desc').value.trim();
-  const adminNote = document.getElementById('m-note').value.trim();
-  if (!title) { toast('Title required', 'err'); return; }
-  if (!date) { toast('Date required', 'err'); return; }
-  try {
-    const csrfToken = await getCsrfToken();
-    const r = await adminFetch('/api/admin/events', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id, title, date, time, location, category, capacity: capacity || null, description, adminNote, csrfToken })
-    });
-    const d = await r.json();
-    if (!r.ok || !d.success) { toast(d.error || 'Failed to save event', 'err'); return; }
-    closeModal();
-    toast(id ? 'Event updated' : 'Event added', 'ok');
-    await loadEventsFromServer();
-    showPane('sa-events');
-  } catch(e) { toast('Server error', 'err'); }
-}
-
-async function removeEvent(id) {
-  if (!window._confirmed) { customConfirm('Delete this event?', () => { window._confirmed = true; removeEvent(id); }); return; } window._confirmed = false;
-  try {
-    const csrfToken = await getCsrfToken();
-    const r = await adminFetch('/api/admin/events', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id, _delete: true, csrfToken })
-    });
-    const d = await r.json();
-    if (!r.ok || !d.success) { toast(d.error || 'Failed to delete event', 'err'); return; }
-    await loadEventsFromServer();
-    showPane('sa-events');
-  } catch(e) { toast('Server error', 'err'); }
-}
-
-async function loadEventsFromServer() {
-  try {
-    const r = await adminFetch('/api/admin/events');
-    if (!r.ok) return;
-    const events = await r.json();
-    DB.set('events', events);
-    const pane = document.getElementById('sa-events');
-    if (pane && pane.classList.contains('active')) pane.innerHTML = rSAEvents();
-  } catch(e) {}
-}
 
 function getPosts(){ return DB.get('posts')||[]; }
 async function loadPostsFromServer() {
@@ -5012,8 +4871,10 @@ async function loadPostsFromServer() {
     if (!r.ok) return;
     const posts = await r.json();
     DB.set('posts', posts);
-    const pane = document.getElementById('sa-posts');
-    if (pane && pane.classList.contains('active')) pane.innerHTML = rSAPosts();
+    ['sa-events', 't-posts'].forEach(id => {
+      const pane = document.getElementById(id);
+      if (pane && pane.classList.contains('active')) pane.innerHTML = rSAPosts();
+    });
   } catch(e) {}
 }
 

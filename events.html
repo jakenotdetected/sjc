@@ -109,66 +109,6 @@ section{padding:88px 0}
 .reveal-delay-2{transition-delay:.2s}
 .reveal-delay-3{transition-delay:.3s}
 
-/* FILTER TABS */
-.filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px;align-items:center}
-.filter-tab{padding:9px 20px;border-radius:30px;border:1.5px solid var(--rule);background:var(--white);font-size:0.82rem;font-weight:600;cursor:pointer;transition:all .18s;color:var(--ink-soft)}
-.filter-tab:hover{border-color:var(--maroon);color:var(--maroon)}
-.filter-tab.active{background:var(--maroon-deep);color:var(--cream);border-color:var(--maroon-deep)}
-.filter-count{display:inline-block;background:rgba(201,168,76,0.2);color:var(--maroon-deep);font-size:0.7rem;font-weight:700;padding:1px 7px;border-radius:10px;margin-left:4px}
-.filter-tab.active .filter-count{background:rgba(255,255,255,0.2);color:var(--cream)}
-
-/* EVENTS GRID */
-.events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;min-height:200px}
-.event-card{border-radius:20px;background:var(--white);border:1px solid var(--rule);overflow:hidden;transition:all .28s;display:flex;flex-direction:column}
-.event-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:rgba(201,168,76,0.3)}
-.event-card-header{padding:24px 24px 18px;position:relative}
-.event-cat-badge{display:inline-flex;align-items:center;gap:6px;font-size:0.7rem;font-weight:700;padding:5px 12px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
-.cat-workshop{background:rgba(59,130,246,0.1);color:#1d4ed8}
-.cat-career{background:rgba(201,168,76,0.15);color:var(--gold-dark)}
-.cat-wellness{background:rgba(16,185,129,0.1);color:#065f46}
-.cat-leadership{background:rgba(168,85,247,0.1);color:#7c3aed}
-.cat-orientation{background:rgba(234,179,8,0.1);color:#92400e}
-.cat-general{background:rgba(107,114,128,0.1);color:#374151}
-.event-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--maroon-deep);margin-bottom:10px;line-height:1.3}
-.event-desc{font-size:0.86rem;color:var(--muted);line-height:1.65;flex:1}
-.event-card-meta{padding:0 24px 16px;display:flex;flex-direction:column;gap:7px}
-.event-meta-row{display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--ink-soft)}
-.event-meta-icon{color:var(--maroon);flex-shrink:0}
-.event-card-footer{padding:16px 24px;border-top:1px solid var(--rule);background:var(--cream);display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto}
-.event-capacity{font-size:0.78rem;color:var(--muted);display:flex;align-items:center;gap:6px}
-.event-register-btn{font-size:0.78rem;font-weight:700;color:var(--cream);background:var(--maroon-deep);padding:9px 18px;border-radius:7px;border:none;cursor:pointer;transition:all .18s;letter-spacing:.03em}
-.event-register-btn:hover{background:var(--maroon);transform:translateY(-1px)}
-.event-register-btn:disabled{background:var(--muted);cursor:not-allowed;transform:none}
-.event-spots-low{font-size:0.7rem;font-weight:600;color:#dc2626;margin-left:4px}
-
-/* LOADING / EMPTY STATES */
-.events-loading{text-align:center;padding:60px 20px;color:var(--muted)}
-.events-loading-spinner{width:40px;height:40px;border:3px solid var(--cream-3);border-top-color:var(--maroon);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
-@keyframes spin{to{transform:rotate(360deg)}}
-.events-empty{text-align:center;padding:60px 20px;color:var(--muted);grid-column:1/-1}
-.events-empty-icon{font-size:3rem;margin-bottom:16px}
-.events-empty-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--maroon-deep);margin-bottom:8px}
-
-/* REGISTRATION MODAL */
-.modal-overlay{position:fixed;inset:0;background:rgba(42,8,8,0.7);z-index:300;display:none;align-items:center;justify-content:center;padding:20px}
-.modal-overlay.open{display:flex}
-.modal{background:var(--white);border-radius:20px;padding:40px;width:100%;max-width:460px;position:relative}
-.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--muted);width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:8px;transition:background .15s}
-.modal-close:hover{background:var(--cream-2)}
-.modal-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--maroon-deep);margin-bottom:6px}
-.modal-subtitle{font-size:0.88rem;color:var(--muted);margin-bottom:28px}
-.form-group{margin-bottom:18px}
-.form-label{display:block;font-size:0.8rem;font-weight:600;color:var(--ink);margin-bottom:7px;letter-spacing:.04em}
-.form-input{width:100%;padding:12px 16px;border:1.5px solid var(--cream-3);border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;color:var(--ink);background:var(--cream);outline:none;transition:border-color .15s}
-.form-input:focus{border-color:var(--gold);background:var(--white)}
-.form-submit{width:100%;padding:14px;background:var(--maroon-deep);color:var(--cream);border:none;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .18s;margin-top:4px}
-.form-submit:hover{background:var(--maroon)}
-.modal-success{text-align:center;padding:24px 0}
-.modal-success-icon{font-size:3rem;margin-bottom:14px}
-.modal-success-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--maroon-deep);margin-bottom:8px}
-.modal-success-text{font-size:0.9rem;color:var(--muted);line-height:1.65}
-.modal-err{font-size:0.83rem;color:#dc2626;margin-top:10px;display:none}
-
 /* CALENDAR HIGHLIGHT */
 .cal-section{background:linear-gradient(135deg,var(--cream),var(--cream-2));border-radius:20px;padding:40px 48px;display:flex;gap:48px;align-items:center;border:1px solid var(--cream-3)}
 .cal-icon{font-size:3rem;flex-shrink:0}
@@ -208,13 +148,11 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 .footer-bottom a{color:var(--maroon)}
 
 @media(max-width:1024px){
-  .events-grid{grid-template-columns:1fr 1fr}
   .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
   .cal-section{flex-direction:column;text-align:center;padding:32px 28px}
 }
 @media(max-width:1100px){
   section{padding:60px 0}
-  .events-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .nav-links{display:none}
   .burger{display:flex}
@@ -339,10 +277,10 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
   <div class="page-hero-orb"></div>
   <div class="page-hero-pattern"></div>
   <div class="wrap page-hero-inner">
-    <div class="page-breadcrumb"><a href="/">Home</a><span class="page-breadcrumb-sep">›</span><span>Events &amp; Workshops</span></div>
-    <div class="page-eyebrow"><span class="page-eyebrow-line"></span>What's Coming Up</div>
-    <h1>Events &amp; <em>Workshops</em></h1>
-    <p class="page-hero-lead">Join our upcoming workshops, career fairs, leadership camps, and wellness programmes – designed to develop Josephians beyond the classroom.</p>
+    <div class="page-breadcrumb"><a href="/">Home</a><span class="page-breadcrumb-sep">›</span><span>Events &amp; Updates</span></div>
+    <div class="page-eyebrow"><span class="page-eyebrow-line"></span>What's Happening</div>
+    <h1>Events &amp; <em>Updates</em></h1>
+    <p class="page-hero-lead">Live updates, photos, and announcements from the Counselling &amp; Career Guidance Unit – posted directly by our team.</p>
   </div>
 </div>
 
@@ -355,34 +293,9 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
       <p class="sec-lead" style="margin-bottom:0">Quick updates, photos, and announcements posted directly by our team.</p>
     </div>
     <div id="feedList" style="max-width:680px;margin:40px auto 0;display:flex;flex-direction:column;gap:20px"></div>
-  </div>
-</section>
-
-<!-- EVENTS LISTING -->
-<section style="background:var(--white)" id="eventsSection">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="sec-eyebrow"><span class="sec-eyebrow-line"></span>Upcoming Events</div>
-      <h2 class="sec-title">All <em>Events &amp; Programmes</em></h2>
-      <p class="sec-lead" style="margin-bottom:0">Filter by category to find events relevant to you. Registration is free for all students.</p>
-    </div>
-
-    <div style="margin-top:40px">
-      <div class="filter-bar" id="filterBar">
-        <button class="filter-tab active" data-cat="all">All Events</button>
-        <button class="filter-tab" data-cat="workshop">Workshops</button>
-        <button class="filter-tab" data-cat="career">Career</button>
-        <button class="filter-tab" data-cat="wellness">Wellness</button>
-        <button class="filter-tab" data-cat="leadership">Leadership</button>
-        <button class="filter-tab" data-cat="academic">Academic</button>
-      </div>
-
-      <div class="events-grid" id="eventsGrid">
-        <div class="events-loading" style="grid-column:1/-1;text-align:center;padding:60px">
-          <div class="events-loading-spinner"></div>
-          <div style="color:var(--muted);font-size:0.9rem">Loading events...</div>
-        </div>
-      </div>
+    <div id="feedEmpty" style="display:none;text-align:center;padding:60px 20px;color:var(--muted)">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--maroon-deep);margin-bottom:8px">No updates yet</div>
+      <p style="font-size:0.9rem">Check back soon for news from the Counselling Unit.</p>
     </div>
   </div>
 </section>
@@ -451,40 +364,6 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
   </div>
 </footer>
 
-<!-- REGISTRATION MODAL -->
-<div class="modal-overlay" id="regModal">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal()">&#x2715;</button>
-    <div id="modalForm">
-      <div class="modal-title" id="modalTitle">Register for Event</div>
-      <div class="modal-subtitle" id="modalSubtitle">Fill in your details to secure your spot.</div>
-      <div class="form-group">
-        <label class="form-label">Full Name</label>
-        <input autocomplete="off" type="text" class="form-input" id="regName" placeholder="Your full name"/>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Admission Number</label>
-        <input autocomplete="off" type="text" class="form-input" id="regAdmission" placeholder="e.g. SJC/2024/001"/>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Grade &amp; Class</label>
-        <input autocomplete="off" type="text" class="form-input" id="regGrade" placeholder="e.g. Grade 12 Science"/>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Contact Number</label>
-        <input autocomplete="off" type="tel" class="form-input" id="regPhone" placeholder="Your mobile number"/>
-      </div>
-      <div class="modal-err" id="modalErr"></div>
-      <button class="form-submit" onclick="submitRegistration()">Confirm Registration</button>
-    </div>
-    <div class="modal-success" id="modalSuccess" style="display:none">
-      <div class="modal-success-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2d7a2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-      <div class="modal-success-title">You're Registered!</div>
-      <p class="modal-success-text">Your registration has been received. Details will be shared by your form teacher closer to the event date. See you there!</p>
-    </div>
-  </div>
-</div>
-
 <script>
 
 const nav=document.getElementById('mainNav');
@@ -495,169 +374,20 @@ burger.addEventListener('click',()=>mobNav.classList.add('open'));
 const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -32px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-let allEvents=[];
-let currentFilter='all';
-let currentEventId=null;
-
-const catIcons={
-  workshop: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
-  career: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>`,
-  wellness: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
-  leadership: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>`,
-  orientation: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>`,
-  academic: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
-  general: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>`
-};
-const catColors={workshop:'cat-workshop',career:'cat-career',wellness:'cat-wellness',leadership:'cat-leadership',orientation:'cat-orientation',academic:'cat-workshop',general:'cat-general'};
-
 function formatDate(d){
   const dt=new Date(d);
   return dt.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'long',year:'numeric'});
 }
 
-function renderEvents(events){
-  const grid=document.getElementById('eventsGrid');
-  if(!events.length){
-    grid.innerHTML=`<div class="events-empty"><div class="events-empty-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="events-empty-title">No events in this category</div><p style="color:var(--muted);font-size:.9rem">Check back soon or explore other categories.</p></div>`;
-    return;
-  }
-  const catLabels={workshop:'Workshop',career:'Career Guidance',wellness:'Wellness',leadership:'Leadership',orientation:'Orientation',academic:'Academic',general:'General'};
-  grid.innerHTML=events.map(ev=>{
-    const regCount=ev.registrationCount!==undefined?ev.registrationCount:(Array.isArray(ev.registrations)?ev.registrations.length:(ev.registrations||0));
-    const spotsLeft=ev.capacity?(ev.capacity-regCount):null;
-    const isFull=spotsLeft!==null&&spotsLeft<=0;
-    const isLow=spotsLeft!==null&&spotsLeft>0&&spotsLeft<=5;
-    const catKey=(ev.category||'general').toLowerCase();
-    const catClass=catColors[catKey]||'cat-general';
-    const catIcon=catIcons[catKey]||catIcons.general;
-    const catLabel=catLabels[catKey]||ev.category||'General';
-    return `<div class="event-card">
-      <div class="event-card-header">
-        <div class="event-cat-badge ${catClass}">${catIcon} ${catLabel}</div>
-        <div class="event-title">${ev.title}</div>
-        <p class="event-desc">${ev.description||''}</p>
-      </div>
-      <div class="event-card-meta">
-        <div class="event-meta-row">
-          <svg class="event-meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <span>${formatDate(ev.date)}${ev.time?' at '+ev.time:''}</span>
-        </div>
-        ${ev.location?`<div class="event-meta-row"><svg class="event-meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>${ev.location}</span></div>`:''}
-      </div>
-      <div class="event-card-footer">
-        <div class="event-capacity">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          ${ev.capacity?`${regCount}/${ev.capacity} registered`:'Open Registration'}
-          ${isLow?`<span class="event-spots-low">(${spotsLeft} spots left!)</span>`:''}
-        </div>
-        <button class="event-register-btn" onclick="openRegModal('${ev.id}','${ev.title.replace(/'/g,"\\'")}',${isFull})" ${isFull?'disabled':''}>
-          ${isFull?'Full':'Register'}
-        </button>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-function filterEvents(cat){
-  currentFilter=cat;
-  if(cat==='all') renderEvents(allEvents);
-  else renderEvents(allEvents.filter(e=>(e.category||'general').toLowerCase()===cat||(e.category||'').toLowerCase().startsWith(cat)));
-}
-
-document.getElementById('filterBar').addEventListener('click',function(e){
-  const btn=e.target.closest('.filter-tab');
-  if(!btn)return;
-  document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
-  btn.classList.add('active');
-  filterEvents(btn.dataset.cat);
-});
-
-async function loadEvents(){
-  try{
-    const r=await fetch('/api/events/public');
-    if(!r.ok)throw new Error('Failed');
-    const data=await r.json();
-    allEvents=data.events||data||[];
-    filterEvents(currentFilter);
-  } catch(e){
-    // Show sample events when API fails (server may not be running)
-    allEvents=[
-      {id:'ev1',title:'O/L Exam Stress Management Workshop',description:'A practical workshop helping O/L students manage exam anxiety through breathing techniques, mindful study strategies, and peer support.',category:'wellness',date:'2026-06-15',time:'9:00 AM',location:'School Hall',capacity:80,registrations:52},
-      {id:'ev2',title:'Career Expo 2026',description:'Meet representatives from universities, professional bodies, and industries. Get CV advice and learn about scholarship opportunities.',category:'career',date:'2026-07-05',time:'8:30 AM',location:'Main Grounds',capacity:200,registrations:143},
-      {id:'ev3',title:'Annual Leadership Camp',description:'A 3-day residential camp for Grade 12 and 13 students focusing on leadership, team building, and personal development.',category:'leadership',date:'2026-08-18',time:'7:00 AM',location:'Wilpattu Camp Site',capacity:50,registrations:38},
-      {id:'ev4',title:'A/L Stream Selection Guidance',description:'An interactive session helping Grade 11 students choose the right A/L stream based on career goals, aptitude, and interests.',category:'workshop',date:'2026-06-28',time:'2:00 PM',location:'Library Hall',capacity:60,registrations:44},
-      {id:'ev5',title:'Mindfulness & Meditation Programme',description:'Learn mindfulness practices, journaling, and relaxation techniques that support mental clarity during exam season.',category:'wellness',date:'2026-07-12',time:'10:00 AM',location:'Counselling Room',capacity:30,registrations:28},
-      {id:'ev6',title:'University Application Workshop',description:'Step-by-step guidance on applying to state universities, private institutes, and scholarship programmes abroad.',category:'career',date:'2026-09-10',time:'9:00 AM',location:'Computer Lab',capacity:40,registrations:12},
-    ];
-    filterEvents(currentFilter);
-  }
-}
-
-function openRegModal(id,title,isFull){
-  if(isFull)return;
-  currentEventId=id;
-  document.getElementById('modalTitle').textContent='Register: '+title;
-  document.getElementById('modalSubtitle').textContent='Secure your spot for this event – free for all Josephians.';
-  document.getElementById('modalForm').style.display='block';
-  document.getElementById('modalSuccess').style.display='none';
-  document.getElementById('modalErr').style.display='none';
-  document.getElementById('regName').value='';
-  document.getElementById('regAdmission').value='';
-  document.getElementById('regGrade').value='';
-  document.getElementById('regPhone').value='';
-  document.getElementById('regModal').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-
-function closeModal(){
-  document.getElementById('regModal').classList.remove('open');
-  document.body.style.overflow='';
-  currentEventId=null;
-}
-
-document.getElementById('regModal').addEventListener('click',function(e){
-  if(e.target===this)closeModal();
-});
-
-async function submitRegistration(){
-  const name=document.getElementById('regName').value.trim();
-  const admission=document.getElementById('regAdmission').value.trim();
-  const grade=document.getElementById('regGrade').value.trim();
-  const phone=document.getElementById('regPhone').value.trim();
-  const errEl=document.getElementById('modalErr');
-  errEl.style.display='none';
-  if(!name||!admission){errEl.textContent='Please fill in your name and admission number.';errEl.style.display='block';return;}
-  try{
-    const r=await fetch('/api/events/'+currentEventId+'/register',{
-      method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({name,admissionNumber:admission,grade,phone})
-    });
-    if(r.ok){
-      document.getElementById('modalForm').style.display='none';
-      document.getElementById('modalSuccess').style.display='block';
-      loadEvents();
-    } else {
-      const d=await r.json();
-      errEl.textContent=d.error||'Registration failed. Please try again.';
-      errEl.style.display='block';
-    }
-  } catch(e){
-    document.getElementById('modalForm').style.display='none';
-    document.getElementById('modalSuccess').style.display='block';
-  }
-}
-
-loadEvents();
-
 async function loadFeed(){
   const list=document.getElementById('feedList');
-  const section=document.getElementById('feedSection');
+  const empty=document.getElementById('feedEmpty');
   try{
     const r=await fetch('/api/posts/public');
     if(!r.ok)throw new Error('Failed');
     const data=await r.json();
     const posts=data.posts||[];
-    if(!posts.length){ section.style.display='none'; return; }
+    if(!posts.length){ empty.style.display='block'; return; }
     list.innerHTML=posts.map(p=>{
       const imgs=(p.images&&p.images.length)?p.images:(p.image?[p.image]:[]);
       const cols=imgs.length===1?'1fr':(imgs.length===2?'1fr 1fr':'1fr 1fr 1fr');
@@ -672,7 +402,7 @@ async function loadFeed(){
       </div>
     `;}).join('');
   } catch(e){
-    section.style.display='none';
+    empty.style.display='block';
   }
 }
 loadFeed();
@@ -682,11 +412,6 @@ loadFeed();
 
   <script src="/custom_select.js?v=7"></script>
 
-  <!-- Smooth Scroll (Lenis) -->
-  <script>
-      requestAnimationFrame(raf);
-    }
-  </script>
   <script src="/dictionary.js"></script>
 <script src="/translate.js"></script>
 
