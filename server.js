@@ -666,7 +666,9 @@ const handleApiRequest = (req, res, urlPath) => {
   let aborted = false;
   // Student reports carry a base64 photo, so they need a larger cap. This route
   // is session-gated (checked below), so the extra size isn't exposed to anons.
-  const maxBodyBytes = (urlPath === '/api/admin/student-report-pdf' || urlPath === '/api/admin/posts') ? 8 * 1024 * 1024 : 100 * 1024;
+  const maxBodyBytes = urlPath === '/api/admin/student-report-pdf' ? 8 * 1024 * 1024
+    : urlPath === '/api/admin/posts' ? 60 * 1024 * 1024
+    : 100 * 1024;
   req.on('data', chunk => {
     if (aborted) return;
     body += chunk.toString();
@@ -1038,7 +1040,7 @@ const handleApiRequest = (req, res, urlPath) => {
 
         // ── Posts: Facebook-style updates shown on the public /events feed ────
         if (urlPath === '/api/admin/posts' && req.method === 'POST') {
-          const { id, text, image, csrfToken, _delete } = data;
+          const { id, text, images, csrfToken, _delete } = data;
 
           if (!csrfToken || !validateCsrfToken(csrfToken)) {
             res.writeHead(403);
@@ -1057,7 +1059,13 @@ const handleApiRequest = (req, res, urlPath) => {
           }
 
           if (!text || !String(text).trim()) { res.writeHead(400); return res.end(JSON.stringify({ error: 'Post text is required' })); }
-          if (image && image.length > 7 * 1024 * 1024) { res.writeHead(400); return res.end(JSON.stringify({ error: 'Image too large' })); }
+          const imgArr = Array.isArray(images) ? images.filter(Boolean) : [];
+          if (imgArr.length > 8) { res.writeHead(400); return res.end(JSON.stringify({ error: 'Up to 8 photos per post' })); }
+          for (const img of imgArr) {
+            if (typeof img !== 'string' || img.length > 7 * 1024 * 1024) {
+              res.writeHead(400); return res.end(JSON.stringify({ error: 'One of the images is too large' }));
+            }
+          }
 
           let authorName = session.role === 'superadmin' ? 'Administrator' : 'Counsellor';
           if (session.role === 'teacher') {
@@ -1068,7 +1076,7 @@ const handleApiRequest = (req, res, urlPath) => {
           posts.unshift({
             id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
             text: String(text).slice(0, 2000),
-            image: image || null,
+            images: imgArr,
             authorName,
             createdAt: new Date().toISOString()
           });

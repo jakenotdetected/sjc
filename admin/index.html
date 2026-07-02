@@ -3561,18 +3561,21 @@ function rSAPosts(){
     <p>Post updates that appear instantly on cgu.jakenetwork.xyz/events</p>
   </div>
   <div class="card" style="max-width:640px;margin:0 auto 20px;">
-    <textarea id="new-post-text" rows="3" placeholder="What's happening? Share an update, photo, or announcement…" style="width:100%;padding:14px;border:1px solid #e0d4c8;border-radius:10px;font-family:inherit;font-size:0.95rem;resize:vertical;"></textarea>
+    <textarea id="new-post-text" rows="3" placeholder="What's happening? Share an update, photos, or announcement…" style="width:100%;padding:14px;border:1px solid #e0d4c8;border-radius:10px;font-family:inherit;font-size:0.95rem;resize:vertical;"></textarea>
+    <div id="post-img-previews" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px;margin-top:12px;"></div>
     <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;gap:12px;">
       <label class="btn btn-ghost btn-sm" style="cursor:pointer;margin:0;">
-        ${I.pen} Add Photo
-        <input type="file" id="post-img-input" accept="image/*" style="display:none" onchange="onPostImagePick(this)">
+        ${I.pen} Add Photos
+        <input type="file" id="post-img-input" accept="image/*" multiple style="display:none" onchange="onPostImagePick(this)">
       </label>
       <button class="btn btn-primary" onclick="submitPost()">Post</button>
     </div>
-    <img id="post-img-preview" style="display:none;max-width:100%;margin-top:12px;border-radius:10px;">
   </div>
   <div style="max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:16px;">
-    ${posts.length?posts.map(p=>`
+    ${posts.length?posts.map(p=>{
+      const imgs=(p.images&&p.images.length)?p.images:(p.image?[p.image]:[]);
+      const gridCols=imgs.length===1?'1fr':(imgs.length===2?'1fr 1fr':'1fr 1fr 1fr');
+      return `
       <div class="card" style="padding:20px;">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;">
           <div>
@@ -3581,10 +3584,10 @@ function rSAPosts(){
           </div>
           <button class="btn btn-danger btn-sm" onclick="deletePost('${esc(p.id)}')">${I.bin}</button>
         </div>
-        <p style="font-size:.9rem;color:#333;white-space:pre-wrap;line-height:1.6;margin-bottom:${p.image?'12px':'0'}">${esc(p.text)}</p>
-        ${p.image?`<img src="${p.image}" style="max-width:100%;border-radius:10px;">`:''}
+        <p style="font-size:.9rem;color:#333;white-space:pre-wrap;line-height:1.6;margin-bottom:${imgs.length?'12px':'0'}">${esc(p.text)}</p>
+        ${imgs.length?`<div style="display:grid;grid-template-columns:${gridCols};gap:6px;">${imgs.map(src=>`<img src="${src}" style="width:100%;height:100%;max-height:320px;object-fit:cover;border-radius:10px;">`).join('')}</div>`:''}
       </div>
-    `).join(''):`<div class="empty-state">${I.pen}<p>No posts yet — share the first update.</p></div>`}
+    `;}).join(''):`<div class="empty-state">${I.pen}<p>No posts yet — share the first update.</p></div>`}
   </div>`;
 }
 
@@ -5014,18 +5017,38 @@ async function loadPostsFromServer() {
   } catch(e) {}
 }
 
-let _postImageData = null;
+let _postImages = [];
+const POST_MAX_IMAGES = 8;
+function renderPostImagePreviews(){
+  const wrap = document.getElementById('post-img-previews');
+  if (!wrap) return;
+  wrap.innerHTML = _postImages.map((src,i) => `
+    <div style="position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden">
+      <img src="${src}" style="width:100%;height:100%;object-fit:cover;display:block">
+      <button type="button" onclick="removePostImage(${i})" style="position:absolute;top:4px;right:4px;width:22px;height:22px;border-radius:50%;border:none;background:rgba(0,0,0,0.6);color:#fff;cursor:pointer;font-size:14px;line-height:1;display:flex;align-items:center;justify-content:center">&times;</button>
+    </div>
+  `).join('');
+}
+function removePostImage(i){
+  _postImages.splice(i,1);
+  renderPostImagePreviews();
+}
 function onPostImagePick(input){
-  const file = input.files && input.files[0];
-  if (!file) { _postImageData = null; return; }
-  if (file.size > 6*1024*1024) { toast('Image too large (max 6MB)', 'err'); input.value=''; return; }
-  const reader = new FileReader();
-  reader.onload = () => {
-    _postImageData = reader.result;
-    const prev = document.getElementById('post-img-preview');
-    if (prev) { prev.src = _postImageData; prev.style.display = 'block'; }
-  };
-  reader.readAsDataURL(file);
+  const files = Array.from(input.files || []);
+  if (!files.length) return;
+  if (_postImages.length + files.length > POST_MAX_IMAGES) {
+    toast(`You can attach up to ${POST_MAX_IMAGES} photos`, 'err');
+  }
+  files.slice(0, POST_MAX_IMAGES - _postImages.length).forEach(file => {
+    if (file.size > 6*1024*1024) { toast(`${file.name} is too large (max 6MB)`, 'err'); return; }
+    const reader = new FileReader();
+    reader.onload = () => {
+      _postImages.push(reader.result);
+      renderPostImagePreviews();
+    };
+    reader.readAsDataURL(file);
+  });
+  input.value = '';
 }
 
 async function submitPost() {
@@ -5036,12 +5059,13 @@ async function submitPost() {
     const csrfToken = await getCsrfToken();
     const r = await adminFetch('/api/admin/posts', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, image: _postImageData, csrfToken })
+      body: JSON.stringify({ text, images: _postImages, csrfToken })
     });
     const d = await r.json();
     if (!r.ok || !d.success) { toast(d.error || 'Failed to post', 'err'); return; }
     textEl.value = '';
-    _postImageData = null;
+    _postImages = [];
+    renderPostImagePreviews();
     const fileInput = document.getElementById('post-img-input');
     if (fileInput) fileInput.value = '';
     toast('Posted to Events page', 'ok');

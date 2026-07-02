@@ -658,16 +658,19 @@ async function loadFeed(){
     const data=await r.json();
     const posts=data.posts||[];
     if(!posts.length){ section.style.display='none'; return; }
-    list.innerHTML=posts.map(p=>`
+    list.innerHTML=posts.map(p=>{
+      const imgs=(p.images&&p.images.length)?p.images:(p.image?[p.image]:[]);
+      const cols=imgs.length===1?'1fr':(imgs.length===2?'1fr 1fr':'1fr 1fr 1fr');
+      return `
       <div style="background:var(--white);border:1px solid var(--rule);border-radius:16px;padding:22px 24px;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
           <div style="font-weight:700;color:var(--maroon-deep);font-size:0.92rem">${p.authorName||'SJC Counselling'}</div>
           <div style="font-size:0.76rem;color:var(--muted)">${formatDate(p.createdAt)}</div>
         </div>
-        <p style="font-size:0.92rem;color:var(--ink-soft);line-height:1.7;white-space:pre-wrap;margin-bottom:${p.image?'14px':'0'}">${(p.text||'').replace(/</g,'&lt;')}</p>
-        ${p.image?`<img src="${p.image}" style="width:100%;border-radius:12px;">`:''}
+        <p style="font-size:0.92rem;color:var(--ink-soft);line-height:1.7;white-space:pre-wrap;margin-bottom:${imgs.length?'14px':'0'}">${(p.text||'').replace(/</g,'&lt;')}</p>
+        ${imgs.length?`<div style="display:grid;grid-template-columns:${cols};gap:8px">${imgs.map(src=>`<img src="${src}" style="width:100%;height:100%;max-height:360px;object-fit:cover;border-radius:12px">`).join('')}</div>`:''}
       </div>
-    `).join('');
+    `;}).join('');
   } catch(e){
     section.style.display='none';
   }
