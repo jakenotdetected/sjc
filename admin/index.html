@@ -3106,6 +3106,9 @@ function showPane(id){
     else if(id === 'sa-students') p.innerHTML = rSAStudents();
     else p.innerHTML = renderPane(id);
     if(id === 'sa-apts') loadAppointmentsFromServer();
+    if(id === 'sa-events') loadEventsFromServer();
+    if(id === 'sa-posts') loadPostsFromServer();
+    if(id === 't-posts') loadPostsFromServer();
     if(id === 'sa-settings') loadBookingLimit();
     if(id === 'sa-activity') loadActivityLog();
     if(id === 't-overview' || id === 't-apts' || id === 't-schedule') loadAppointmentsFromServer().then(()=>{ if(document.getElementById(id)?.classList.contains('active')) p.innerHTML = renderPane(id); });
@@ -3140,6 +3143,7 @@ function renderPane(id){
     case 'sa-students':    return rSAStudents();
     case 'sa-teachers':    return rSATeachers();
     case 'sa-events':      return rSAEvents();
+    case 'sa-posts':       return rSAPosts();
       case 'sa-todos':       return rSATodos();
       case 'sa-complaints':  return rSAComplaints();
     case 'sa-settings':    return rSASettings();
@@ -3152,6 +3156,7 @@ function renderPane(id){
     case 't-students':     return rTStudents();
     case 't-schedule':     return rTSchedule();
       case 't-complaints':   return rTComplaints();
+    case 't-posts':        return rSAPosts();
     default: return '';
   }
 }
@@ -3248,6 +3253,7 @@ function buildSA(){
       <a class="nav-item" id="nav-sa-students" onclick="showPane('sa-students')">${I.users} Students</a>
       <a class="nav-item" id="nav-sa-teachers" onclick="showPane('sa-teachers')">${I.uc} Teachers</a>
       <a class="nav-item" id="nav-sa-events" onclick="showPane('sa-events')">${I.ev} Events</a>
+      <a class="nav-item" id="nav-sa-posts" onclick="showPane('sa-posts')">${I.pen} Events Feed</a>
         <a class="nav-item" id="nav-sa-todos" onclick="showPane('sa-todos')">${I.cal} To-Do List</a>
         <a class="nav-item" id="nav-sa-complaints" onclick="showPane('sa-complaints')">${I.pen} Complains / Proposals</a>
     </div>
@@ -3268,6 +3274,7 @@ function buildSA(){
     <div class="pane" id="sa-students"></div>
     <div class="pane" id="sa-teachers"></div>
     <div class="pane" id="sa-events"></div>
+    <div class="pane" id="sa-posts"></div>
       <div class="pane" id="sa-todos"></div>
       <div class="pane" id="sa-complaints"></div>
     <div class="pane" id="sa-cms"></div>
@@ -3276,6 +3283,10 @@ function buildSA(){
     <div class="pane" id="sa-activity"></div>
     <div class="pane" id="sa-settings"></div>
   `;
+  loadEventsFromServer().then(() => {
+    const ov = document.getElementById('sa-overview');
+    if (ov && ov.classList.contains('active')) ov.innerHTML = rSAOverview();
+  });
 }
 
 /* ─── SA: OVERVIEW ───────────────────────────── */
@@ -3514,13 +3525,13 @@ function rSAEvents(){
   const now=today();
   return `
   <div class="page-hdr page-hdr-row">
-    <div><h2>Events</h2><p>${events.length} total &middot; ${events.filter(e=>e.date>=now).length} upcoming</p></div>
+    <div><h2>Events</h2><p>${events.length} total &middot; ${events.filter(e=>e.date>=now).length} upcoming &middot; live on cgu.jakenetwork.xyz/events</p></div>
     <button class="btn btn-primary" onclick="addEventModal()">${I.plus} Add Event</button>
   </div>
   <div class="card">
     <div class="tbl-wrap">
     <div class="search-bar" style="margin-bottom:15px; display:flex; gap:10px; align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input autocomplete="off" type="text" placeholder="Search records..." oninput="if(typeof filt === 'function') filt(this, 'tb_3b2bfaf0')" style="flex:1; border:none; outline:none; background:transparent; padding:8px;"></div>
-<table><thead><tr><th>Title</th><th>Date</th><th>Time</th><th>Location</th><th>Type</th><th>Actions</th></tr></thead>
+<table><thead><tr><th>Title</th><th>Date</th><th>Time</th><th>Location</th><th>Category</th><th>Registered</th><th>Internal Note</th><th>Actions</th></tr></thead>
     <tbody id="tb_3b2bfaf0">
     ${events.length?events.map(e=>`
       <tr>
@@ -3528,14 +3539,52 @@ function rSAEvents(){
         <td style="font-size:.76rem">${fmtDate(e.date)}</td>
         <td style="font-size:.76rem;color:#aaa">${esc(e.time||'–')}</td>
         <td style="font-size:.76rem;color:#aaa">${esc(e.location||'–')}</td>
-        <td><span class="badge" style="background:#f0fdf4;color:#166534">${esc(e.type||'General')}</span></td>
+        <td><span class="badge" style="background:#f0fdf4;color:#166534">${esc(EVENT_CAT_LABELS[(e.category||'general').toLowerCase()]||e.category||'General')}</span></td>
+        <td style="font-size:.76rem;color:#666">${(e.registrations||[]).length}${e.capacity?'/'+e.capacity:''}</td>
+        <td style="font-size:.76rem;color:#888;max-width:220px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="${esc(e.adminNote||'')}">${esc(e.adminNote||'–')}</td>
         <td><div style="display:flex;gap:6px">
           <button class="btn btn-ghost btn-sm" onclick="editEventModal('${esc(e.id)}')">${I.pen} Edit</button>
           <button class="btn btn-danger btn-sm" onclick="removeEvent('${esc(e.id)}')">${I.bin} Delete</button>
         </div></td>
       </tr>
-    `).join(''):`<tr><td colspan="6" style="text-align:center;padding:36px;color:#ccc">No events yet</td></tr>`}
+    `).join(''):`<tr><td colspan="8" style="text-align:center;padding:36px;color:#ccc">No events yet</td></tr>`}
     </tbody></table></div>
+  </div>`;
+}
+
+/* ─── SA: POSTS (Facebook-style updates on the public Events page) ──── */
+function rSAPosts(){
+  const posts=getPosts();
+  return `
+  <div class="page-hdr">
+    <h2>Events Feed</h2>
+    <p>Post updates that appear instantly on cgu.jakenetwork.xyz/events</p>
+  </div>
+  <div class="card" style="max-width:640px;margin:0 auto 20px;">
+    <textarea id="new-post-text" rows="3" placeholder="What's happening? Share an update, photo, or announcement…" style="width:100%;padding:14px;border:1px solid #e0d4c8;border-radius:10px;font-family:inherit;font-size:0.95rem;resize:vertical;"></textarea>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;gap:12px;">
+      <label class="btn btn-ghost btn-sm" style="cursor:pointer;margin:0;">
+        ${I.pen} Add Photo
+        <input type="file" id="post-img-input" accept="image/*" style="display:none" onchange="onPostImagePick(this)">
+      </label>
+      <button class="btn btn-primary" onclick="submitPost()">Post</button>
+    </div>
+    <img id="post-img-preview" style="display:none;max-width:100%;margin-top:12px;border-radius:10px;">
+  </div>
+  <div style="max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:16px;">
+    ${posts.length?posts.map(p=>`
+      <div class="card" style="padding:20px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;">
+          <div>
+            <div style="font-weight:700;font-size:.9rem;color:var(--brand-primary)">${esc(p.authorName||'Staff')}</div>
+            <div style="font-size:.72rem;color:#aaa">${fmtDate(p.createdAt)}</div>
+          </div>
+          <button class="btn btn-danger btn-sm" onclick="deletePost('${esc(p.id)}')">${I.bin}</button>
+        </div>
+        <p style="font-size:.9rem;color:#333;white-space:pre-wrap;line-height:1.6;margin-bottom:${p.image?'12px':'0'}">${esc(p.text)}</p>
+        ${p.image?`<img src="${p.image}" style="max-width:100%;border-radius:10px;">`:''}
+      </div>
+    `).join(''):`<div class="empty-state">${I.pen}<p>No posts yet — share the first update.</p></div>`}
   </div>`;
 }
 
@@ -4043,6 +4092,7 @@ function buildTeacher(){
       <a class="nav-item" id="nav-t-students" onclick="showPane('t-students')">${I.users} Students</a>
       <a class="nav-item" id="nav-t-schedule" onclick="showPane('t-schedule')">${I.clk} Schedule</a>
         <a class="nav-item" id="nav-t-complaints" onclick="showPane('t-complaints')">${I.pen} Complains / Proposals</a>
+        <a class="nav-item" id="nav-t-posts" onclick="showPane('t-posts')">${I.pen} Events Feed</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-section-label">Account</div>
@@ -4056,6 +4106,7 @@ function buildTeacher(){
     <div class="pane" id="t-students"></div>
     <div class="pane" id="t-schedule"></div>
       <div class="pane" id="t-complaints"></div>
+      <div class="pane" id="t-posts"></div>
   `;
 }
 
@@ -4318,6 +4369,8 @@ function removeTeacher(id){
 }
 
 /* ─── MODALS: EVENTS ─────────────────────────── */
+const EVENT_CATS = ['workshop','career','wellness','leadership','academic','general'];
+const EVENT_CAT_LABELS = {workshop:'Workshop',career:'Career',wellness:'Wellness',leadership:'Leadership',academic:'Academic',general:'General'};
 function addEventModal(){
   openModal(`
     <h3>Add Event</h3>
@@ -4327,10 +4380,14 @@ function addEventModal(){
       <div class="form-group"><label>Time</label><input autocomplete="off" type="time" id="m-time" value="09:00"></div>
     </div>
     <div class="form-group"><label>Location</label><input autocomplete="off" type="text" id="m-loc" placeholder="Main Hall, School Grounds…"></div>
-    <div class="form-group"><label>Type</label>
-      ${csHTML('m-type', ['Academic','Career','Personal Development','Social','General'], 'Academic')}
+    <div class="two-col">
+      <div class="form-group"><label>Category</label>
+        ${csHTML('m-type', EVENT_CATS.map(c=>EVENT_CAT_LABELS[c]), 'Workshop')}
+      </div>
+      <div class="form-group"><label>Capacity <span style="color:#bbb;font-weight:400">(optional)</span></label><input autocomplete="off" type="number" id="m-cap" placeholder="e.g. 80" min="1"></div>
     </div>
-    <div class="form-group"><label>Description</label><textarea autocomplete="off" id="m-desc" rows="3" placeholder="Brief description…"></textarea></div>
+    <div class="form-group"><label>Description <span style="color:#bbb;font-weight:400">(shown publicly on the Events page)</span></label><textarea autocomplete="off" id="m-desc" rows="3" placeholder="Brief description…"></textarea></div>
+    <div class="form-group"><label>Internal Note <span style="color:#bbb;font-weight:400">(staff only — not shown to students)</span></label><textarea autocomplete="off" id="m-note" rows="2" placeholder="What was done, who's handling it, follow-ups…"></textarea></div>
     <div class="modal-footer">
       <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
       <button class="btn btn-primary" onclick="saveEvent(null)">Add Event</button>
@@ -4339,6 +4396,7 @@ function addEventModal(){
 }
 function editEventModal(id){
   const e=getEvents().find(x=>x.id===id); if(!e) return;
+  const cat=(e.category||'general').toLowerCase();
   openModal(`
     <h3>Edit Event</h3>
     <div class="form-group"><label>Event Title</label><input type="text" id="m-title" value="${esc(e.title||'')}"></div>
@@ -4347,10 +4405,14 @@ function editEventModal(id){
       <div class="form-group"><label>Time</label><input type="time" id="m-time" value="${e.time||'09:00'}"></div>
     </div>
     <div class="form-group"><label>Location</label><input type="text" id="m-loc" value="${esc(e.location||'')}"></div>
-    <div class="form-group"><label>Type</label>
-      ${csHTML('m-type', ['Academic','Career','Personal Development','Social','General'], e.type||'Academic')}
+    <div class="two-col">
+      <div class="form-group"><label>Category</label>
+        ${csHTML('m-type', EVENT_CATS.map(c=>EVENT_CAT_LABELS[c]), EVENT_CAT_LABELS[cat]||'General')}
+      </div>
+      <div class="form-group"><label>Capacity <span style="color:#bbb;font-weight:400">(optional)</span></label><input type="number" id="m-cap" value="${e.capacity||''}" min="1"></div>
     </div>
-    <div class="form-group"><label>Description</label><textarea id="m-desc" rows="3">${esc(e.description||'')}</textarea></div>
+    <div class="form-group"><label>Description <span style="color:#bbb;font-weight:400">(shown publicly on the Events page)</span></label><textarea id="m-desc" rows="3">${esc(e.description||'')}</textarea></div>
+    <div class="form-group"><label>Internal Note <span style="color:#bbb;font-weight:400">(staff only — not shown to students)</span></label><textarea id="m-note" rows="2">${esc(e.adminNote||'')}</textarea></div>
     <div class="modal-footer">
       <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
       <button class="btn btn-primary" onclick="saveEvent('${esc(id)}')">Save Changes</button>
@@ -4884,30 +4946,121 @@ function clearAllStudents() {
   });
 }
 
-function saveEvent(id) {
+async function getCsrfToken(){
+  try { const r = await adminFetch('/api/csrf-token'); const d = await r.json(); return d.csrfToken || ''; } catch(e) { return ''; }
+}
+
+async function saveEvent(id) {
   const title = document.getElementById('m-title').value.trim();
   const date = document.getElementById('m-date').value;
   const time = document.getElementById('m-time').value;
   const location = document.getElementById('m-loc').value.trim();
-  const type = document.getElementById('m-type').value;
+  const category = (document.getElementById('m-type').value || 'general').toLowerCase();
+  const capacity = document.getElementById('m-cap').value.trim();
   const description = document.getElementById('m-desc').value.trim();
-  if (!title) { alert('Title required'); return; }
-  const events = getEvents();
-  if (id) {
-    const idx = events.findIndex(e => e.id === id);
-    if (idx >= 0) events[idx] = { ...events[idx], title, date, time, location, type, description };
-  } else {
-    events.push({ id: uid(), title, date, time, location, type, description });
-  }
-  DB.set('events', events);
-  closeModal();
-  showPane('sa-events');
+  const adminNote = document.getElementById('m-note').value.trim();
+  if (!title) { toast('Title required', 'err'); return; }
+  if (!date) { toast('Date required', 'err'); return; }
+  try {
+    const csrfToken = await getCsrfToken();
+    const r = await adminFetch('/api/admin/events', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, title, date, time, location, category, capacity: capacity || null, description, adminNote, csrfToken })
+    });
+    const d = await r.json();
+    if (!r.ok || !d.success) { toast(d.error || 'Failed to save event', 'err'); return; }
+    closeModal();
+    toast(id ? 'Event updated' : 'Event added', 'ok');
+    await loadEventsFromServer();
+    showPane('sa-events');
+  } catch(e) { toast('Server error', 'err'); }
 }
 
-function removeEvent(id) {
+async function removeEvent(id) {
   if (!window._confirmed) { customConfirm('Delete this event?', () => { window._confirmed = true; removeEvent(id); }); return; } window._confirmed = false;
-  DB.set('events', getEvents().filter(e => e.id !== id));
-  showPane('sa-events');
+  try {
+    const csrfToken = await getCsrfToken();
+    const r = await adminFetch('/api/admin/events', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, _delete: true, csrfToken })
+    });
+    const d = await r.json();
+    if (!r.ok || !d.success) { toast(d.error || 'Failed to delete event', 'err'); return; }
+    await loadEventsFromServer();
+    showPane('sa-events');
+  } catch(e) { toast('Server error', 'err'); }
+}
+
+async function loadEventsFromServer() {
+  try {
+    const r = await adminFetch('/api/admin/events');
+    if (!r.ok) return;
+    const events = await r.json();
+    DB.set('events', events);
+    const pane = document.getElementById('sa-events');
+    if (pane && pane.classList.contains('active')) pane.innerHTML = rSAEvents();
+  } catch(e) {}
+}
+
+function getPosts(){ return DB.get('posts')||[]; }
+async function loadPostsFromServer() {
+  try {
+    const r = await adminFetch('/api/admin/posts');
+    if (!r.ok) return;
+    const posts = await r.json();
+    DB.set('posts', posts);
+    const pane = document.getElementById('sa-posts');
+    if (pane && pane.classList.contains('active')) pane.innerHTML = rSAPosts();
+  } catch(e) {}
+}
+
+let _postImageData = null;
+function onPostImagePick(input){
+  const file = input.files && input.files[0];
+  if (!file) { _postImageData = null; return; }
+  if (file.size > 6*1024*1024) { toast('Image too large (max 6MB)', 'err'); input.value=''; return; }
+  const reader = new FileReader();
+  reader.onload = () => {
+    _postImageData = reader.result;
+    const prev = document.getElementById('post-img-preview');
+    if (prev) { prev.src = _postImageData; prev.style.display = 'block'; }
+  };
+  reader.readAsDataURL(file);
+}
+
+async function submitPost() {
+  const textEl = document.getElementById('new-post-text');
+  const text = textEl.value.trim();
+  if (!text) { toast('Write something first', 'err'); return; }
+  try {
+    const csrfToken = await getCsrfToken();
+    const r = await adminFetch('/api/admin/posts', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, image: _postImageData, csrfToken })
+    });
+    const d = await r.json();
+    if (!r.ok || !d.success) { toast(d.error || 'Failed to post', 'err'); return; }
+    textEl.value = '';
+    _postImageData = null;
+    const fileInput = document.getElementById('post-img-input');
+    if (fileInput) fileInput.value = '';
+    toast('Posted to Events page', 'ok');
+    await loadPostsFromServer();
+  } catch(e) { toast('Server error', 'err'); }
+}
+
+async function deletePost(id) {
+  if (!window._confirmed) { customConfirm('Delete this post?', () => { window._confirmed = true; deletePost(id); }); return; } window._confirmed = false;
+  try {
+    const csrfToken = await getCsrfToken();
+    const r = await adminFetch('/api/admin/posts', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, _delete: true, csrfToken })
+    });
+    const d = await r.json();
+    if (!r.ok || !d.success) { toast(d.error || 'Failed to delete post', 'err'); return; }
+    await loadPostsFromServer();
+  } catch(e) { toast('Server error', 'err'); }
 }
 
 </script>
