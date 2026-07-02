@@ -3105,8 +3105,10 @@ function showPane(id){
     else if(id === 'sa-students') p.innerHTML = rSAStudents();
     else p.innerHTML = renderPane(id);
     if(id === 'sa-apts') loadAppointmentsFromServer();
-    if(id === 'sa-events') { loadPostsFromServer(); loadNotesFromServer(); }
-    if(id === 't-posts') { loadPostsFromServer(); loadNotesFromServer(); }
+    if(id === 'sa-events') loadPostsFromServer();
+    if(id === 't-posts') loadPostsFromServer();
+    if(id === 'sa-notes') loadNotesFromServer();
+    if(id === 't-notes') loadNotesFromServer();
     if(id === 'sa-settings') loadBookingLimit();
     if(id === 'sa-activity') loadActivityLog();
     if(id === 't-overview' || id === 't-apts' || id === 't-schedule') loadAppointmentsFromServer().then(()=>{ if(document.getElementById(id)?.classList.contains('active')) p.innerHTML = renderPane(id); });
@@ -3141,6 +3143,7 @@ function renderPane(id){
     case 'sa-students':    return rSAStudents();
     case 'sa-teachers':    return rSATeachers();
     case 'sa-events':      return rSAPosts();
+    case 'sa-notes':       return rSANotes();
       case 'sa-todos':       return rSATodos();
       case 'sa-complaints':  return rSAComplaints();
     case 'sa-settings':    return rSASettings();
@@ -3154,6 +3157,7 @@ function renderPane(id){
     case 't-schedule':     return rTSchedule();
       case 't-complaints':   return rTComplaints();
     case 't-posts':        return rSAPosts();
+    case 't-notes':        return rSANotes();
     default: return '';
   }
 }
@@ -3250,6 +3254,7 @@ function buildSA(){
       <a class="nav-item" id="nav-sa-students" onclick="showPane('sa-students')">${I.users} Students</a>
       <a class="nav-item" id="nav-sa-teachers" onclick="showPane('sa-teachers')">${I.uc} Teachers</a>
       <a class="nav-item" id="nav-sa-events" onclick="showPane('sa-events')">${I.ev} Events</a>
+      <a class="nav-item" id="nav-sa-notes" onclick="showPane('sa-notes')">${I.ev} Events Feed</a>
         <a class="nav-item" id="nav-sa-todos" onclick="showPane('sa-todos')">${I.cal} To-Do List</a>
         <a class="nav-item" id="nav-sa-complaints" onclick="showPane('sa-complaints')">${I.pen} Complains / Proposals</a>
     </div>
@@ -3270,6 +3275,7 @@ function buildSA(){
     <div class="pane" id="sa-students"></div>
     <div class="pane" id="sa-teachers"></div>
     <div class="pane" id="sa-events"></div>
+    <div class="pane" id="sa-notes"></div>
       <div class="pane" id="sa-todos"></div>
       <div class="pane" id="sa-complaints"></div>
     <div class="pane" id="sa-cms"></div>
@@ -3550,28 +3556,45 @@ function rSAPosts(){
         ${imgs.length?`<div style="display:grid;grid-template-columns:${gridCols};gap:6px;">${imgs.map(src=>`<img src="${src}" style="width:100%;height:100%;max-height:320px;object-fit:cover;border-radius:10px;">`).join('')}</div>`:''}
       </div>
     `;}).join(''):`<div class="empty-state">${I.pen}<p>No posts yet — share the first update.</p></div>`}
-  </div>
+  </div>`;
+}
 
-  <div style="max-width:640px;margin:48px auto 0;border-top:2px dashed #e0d4c8;padding-top:28px;">
-    <h3 style="font-size:1.15rem;font-weight:700;color:var(--brand-primary);margin-bottom:2px;">Staff Notes</h3>
-    <p style="font-size:.8rem;color:#999;margin-bottom:16px;">Private — visible only to staff here, never shown on the public site. Use this to log what's been done for events, follow-ups, etc.</p>
-    <div class="card" style="padding:16px;margin-bottom:16px;">
-      <textarea id="new-note-text" rows="2" placeholder="e.g. Booked the hall with the principal for Career Expo, waiting on caterer confirmation…" style="width:100%;padding:12px;border:1px solid #e0d4c8;border-radius:8px;font-family:inherit;font-size:0.9rem;resize:vertical;"></textarea>
-      <div style="display:flex;justify-content:flex-end;margin-top:10px;">
-        <button class="btn btn-primary btn-sm" onclick="submitNote()">Add Note</button>
-      </div>
+/* ─── SA: EVENTS FEED (private staff notes, same UI as Events, panel-only) ─── */
+function rSANotes(){
+  const notes=getNotes();
+  return `
+  <div class="page-hdr">
+    <h2>Events Feed</h2>
+    <p>Private — visible only to staff here, never shown on the public site. Log what's been done for events, follow-ups, photos, etc.</p>
+  </div>
+  <div class="card" style="max-width:640px;margin:0 auto 20px;">
+    <textarea id="new-note-text" rows="3" placeholder="e.g. Booked the hall with the principal for Career Expo, waiting on caterer confirmation…" style="width:100%;padding:14px;border:1px solid #e0d4c8;border-radius:10px;font-family:inherit;font-size:0.95rem;resize:vertical;"></textarea>
+    <div id="note-img-previews" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px;margin-top:12px;"></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;gap:12px;">
+      <label class="btn btn-ghost btn-sm" style="cursor:pointer;margin:0;">
+        ${I.pen} Add Photos
+        <input type="file" id="note-img-input" accept="image/*" multiple style="display:none" onchange="onNoteImagePick(this)">
+      </label>
+      <button class="btn btn-primary" onclick="submitNote()">Add Note</button>
     </div>
-    <div style="display:flex;flex-direction:column;gap:10px;">
-      ${notes.length?notes.map(n=>`
-        <div class="card" style="padding:14px 16px;background:#fdfaf3;">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:6px;">
-            <div style="font-size:.76rem;color:#aaa;">${esc(n.authorName||'Staff')} &middot; ${fmtDate(n.createdAt)}</div>
-            <button class="btn btn-ghost btn-sm" onclick="deleteNote('${esc(n.id)}')" style="padding:2px 6px;">${I.bin}</button>
+  </div>
+  <div style="max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:16px;">
+    ${notes.length?notes.map(n=>{
+      const imgs=(n.images&&n.images.length)?n.images:[];
+      const gridCols=imgs.length===1?'1fr':(imgs.length===2?'1fr 1fr':'1fr 1fr 1fr');
+      return `
+      <div class="card" style="padding:20px;background:#fdfaf3;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;">
+          <div>
+            <div style="font-weight:700;font-size:.9rem;color:var(--brand-primary)">${esc(n.authorName||'Staff')}</div>
+            <div style="font-size:.72rem;color:#aaa">${fmtDate(n.createdAt)}</div>
           </div>
-          <p style="font-size:.86rem;color:#444;white-space:pre-wrap;line-height:1.5;">${esc(n.text)}</p>
+          <button class="btn btn-danger btn-sm" onclick="deleteNote('${esc(n.id)}')">${I.bin}</button>
         </div>
-      `).join(''):`<div style="text-align:center;padding:24px;color:#ccc;font-size:.85rem;">No notes yet.</div>`}
-    </div>
+        <p style="font-size:.9rem;color:#333;white-space:pre-wrap;line-height:1.6;margin-bottom:${imgs.length?'12px':'0'}">${esc(n.text)}</p>
+        ${imgs.length?`<div style="display:grid;grid-template-columns:${gridCols};gap:6px;">${imgs.map(src=>`<img src="${src}" style="width:100%;height:100%;max-height:320px;object-fit:cover;border-radius:10px;">`).join('')}</div>`:''}
+      </div>
+    `;}).join(''):`<div class="empty-state">${I.pen}<p>No notes yet — log the first update.</p></div>`}
   </div>`;
 }
 
@@ -4080,6 +4103,7 @@ function buildTeacher(){
       <a class="nav-item" id="nav-t-schedule" onclick="showPane('t-schedule')">${I.clk} Schedule</a>
         <a class="nav-item" id="nav-t-complaints" onclick="showPane('t-complaints')">${I.pen} Complains / Proposals</a>
         <a class="nav-item" id="nav-t-posts" onclick="showPane('t-posts')">${I.ev} Events</a>
+        <a class="nav-item" id="nav-t-notes" onclick="showPane('t-notes')">${I.ev} Events Feed</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-section-label">Account</div>
@@ -4094,6 +4118,7 @@ function buildTeacher(){
     <div class="pane" id="t-schedule"></div>
       <div class="pane" id="t-complaints"></div>
       <div class="pane" id="t-posts"></div>
+      <div class="pane" id="t-notes"></div>
   `;
 }
 
@@ -4978,11 +5003,45 @@ async function loadNotesFromServer() {
     if (!r.ok) return;
     const notes = await r.json();
     DB.set('event_notes', notes);
-    ['sa-events', 't-posts'].forEach(id => {
+    ['sa-notes', 't-notes'].forEach(id => {
       const pane = document.getElementById(id);
-      if (pane && pane.classList.contains('active')) pane.innerHTML = rSAPosts();
+      if (pane && pane.classList.contains('active')) pane.innerHTML = rSANotes();
     });
   } catch(e) {}
+}
+
+let _noteImages = [];
+const NOTE_MAX_IMAGES = 8;
+function renderNoteImagePreviews(){
+  const wrap = document.getElementById('note-img-previews');
+  if (!wrap) return;
+  wrap.innerHTML = _noteImages.map((src,i) => `
+    <div style="position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden">
+      <img src="${src}" style="width:100%;height:100%;object-fit:cover;display:block">
+      <button type="button" onclick="removeNoteImage(${i})" style="position:absolute;top:4px;right:4px;width:22px;height:22px;border-radius:50%;border:none;background:rgba(0,0,0,0.6);color:#fff;cursor:pointer;font-size:14px;line-height:1;display:flex;align-items:center;justify-content:center">&times;</button>
+    </div>
+  `).join('');
+}
+function removeNoteImage(i){
+  _noteImages.splice(i,1);
+  renderNoteImagePreviews();
+}
+function onNoteImagePick(input){
+  const files = Array.from(input.files || []);
+  if (!files.length) return;
+  if (_noteImages.length + files.length > NOTE_MAX_IMAGES) {
+    toast(`You can attach up to ${NOTE_MAX_IMAGES} photos`, 'err');
+  }
+  files.slice(0, NOTE_MAX_IMAGES - _noteImages.length).forEach(file => {
+    if (file.size > 6*1024*1024) { toast(`${file.name} is too large (max 6MB)`, 'err'); return; }
+    const reader = new FileReader();
+    reader.onload = () => {
+      _noteImages.push(reader.result);
+      renderNoteImagePreviews();
+    };
+    reader.readAsDataURL(file);
+  });
+  input.value = '';
 }
 
 async function submitNote() {
@@ -4993,11 +5052,15 @@ async function submitNote() {
     const csrfToken = await getCsrfToken();
     const r = await adminFetch('/api/admin/notes', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, csrfToken })
+      body: JSON.stringify({ text, images: _noteImages, csrfToken })
     });
     const d = await r.json();
     if (!r.ok || !d.success) { toast(d.error || 'Failed to save note', 'err'); return; }
     textEl.value = '';
+    _noteImages = [];
+    renderNoteImagePreviews();
+    const fileInput = document.getElementById('note-img-input');
+    if (fileInput) fileInput.value = '';
     toast('Note saved', 'ok');
     await loadNotesFromServer();
   } catch(e) { toast('Server error', 'err'); }

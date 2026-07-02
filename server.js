@@ -668,7 +668,7 @@ const handleApiRequest = (req, res, urlPath) => {
   // Student reports carry a base64 photo, so they need a larger cap. This route
   // is session-gated (checked below), so the extra size isn't exposed to anons.
   const maxBodyBytes = urlPath === '/api/admin/student-report-pdf' ? 8 * 1024 * 1024
-    : urlPath === '/api/admin/posts' ? 60 * 1024 * 1024
+    : (urlPath === '/api/admin/posts' || urlPath === '/api/admin/notes') ? 60 * 1024 * 1024
     : 100 * 1024;
   req.on('data', chunk => {
     if (aborted) return;
@@ -1029,7 +1029,7 @@ const handleApiRequest = (req, res, urlPath) => {
 
         // ── Private staff notes: never shown on any public route ──────────────
         if (urlPath === '/api/admin/notes' && req.method === 'POST') {
-          const { id, text, csrfToken, _delete } = data;
+          const { id, text, images, csrfToken, _delete } = data;
 
           if (!csrfToken || !validateCsrfToken(csrfToken)) {
             res.writeHead(403);
@@ -1047,6 +1047,13 @@ const handleApiRequest = (req, res, urlPath) => {
           }
 
           if (!text || !String(text).trim()) { res.writeHead(400); return res.end(JSON.stringify({ error: 'Note text is required' })); }
+          const imgArr = Array.isArray(images) ? images.filter(Boolean) : [];
+          if (imgArr.length > 8) { res.writeHead(400); return res.end(JSON.stringify({ error: 'Up to 8 photos per note' })); }
+          for (const img of imgArr) {
+            if (typeof img !== 'string' || img.length > 7 * 1024 * 1024) {
+              res.writeHead(400); return res.end(JSON.stringify({ error: 'One of the images is too large' }));
+            }
+          }
 
           let authorName = session.role === 'superadmin' ? 'Administrator' : 'Counsellor';
           if (session.role === 'teacher') {
@@ -1057,6 +1064,7 @@ const handleApiRequest = (req, res, urlPath) => {
           notes.unshift({
             id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
             text: String(text).slice(0, 2000),
+            images: imgArr,
             authorName,
             createdAt: new Date().toISOString()
           });
