@@ -388,6 +388,17 @@ function writePosts(posts) {
   fs.writeFileSync(POSTS_FILE, JSON.stringify(posts, null, 2));
 }
 
+// Staff-only notes for events/tasks — never exposed on any public route.
+const NOTES_FILE = path.join(__dirname, 'data', 'event_notes.json');
+function readNotes() {
+  try { return JSON.parse(fs.readFileSync(NOTES_FILE, 'utf8')); } catch(e) { return []; }
+}
+function writeNotes(notes) {
+  const dir = path.dirname(NOTES_FILE);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(NOTES_FILE, JSON.stringify(notes, null, 2));
+}
+
 // ── Device / IP tracking for appointment limits ──────────────────────────────
 const DEVICES_FILE = path.join(__dirname, 'data', 'used_devices.json');
 function readDevices() {
@@ -1015,6 +1026,44 @@ const handleApiRequest = (req, res, urlPath) => {
           res.writeHead(200);
           return res.end(JSON.stringify({ success: true, posts }));
         }
+
+        // ── Private staff notes: never shown on any public route ──────────────
+        if (urlPath === '/api/admin/notes' && req.method === 'POST') {
+          const { id, text, csrfToken, _delete } = data;
+
+          if (!csrfToken || !validateCsrfToken(csrfToken)) {
+            res.writeHead(403);
+            return res.end(JSON.stringify({ error: 'Invalid CSRF token' }));
+          }
+
+          const notes = readNotes();
+
+          if (_delete) {
+            const idx = notes.findIndex(n => n.id === id);
+            if (idx > -1) notes.splice(idx, 1);
+            writeNotes(notes);
+            res.writeHead(200);
+            return res.end(JSON.stringify({ success: true, notes }));
+          }
+
+          if (!text || !String(text).trim()) { res.writeHead(400); return res.end(JSON.stringify({ error: 'Note text is required' })); }
+
+          let authorName = session.role === 'superadmin' ? 'Administrator' : 'Counsellor';
+          if (session.role === 'teacher') {
+            const t = readTeachers().find(x => x.id === session.teacherId);
+            if (t) authorName = t.name;
+          }
+
+          notes.unshift({
+            id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+            text: String(text).slice(0, 2000),
+            authorName,
+            createdAt: new Date().toISOString()
+          });
+          writeNotes(notes);
+          res.writeHead(200);
+          return res.end(JSON.stringify({ success: true, notes }));
+        }
       }
 
       // ── /api/schedule-appointment requires admin auth ─────────────────────
@@ -1337,6 +1386,14 @@ const server = http.createServer((req, res) => {
       if (!session) { res.writeHead(401); return res.end(JSON.stringify({ error: 'Unauthorized' })); }
       res.writeHead(200);
       return res.end(JSON.stringify(readPosts()));
+    }
+    if (req.method === 'GET' && urlPath === '/api/admin/notes') {
+      const session = validateAdmin(req);
+      res.setHeader('Content-Type', 'application/json');
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      if (!session) { res.writeHead(401); return res.end(JSON.stringify({ error: 'Unauthorized' })); }
+      res.writeHead(200);
+      return res.end(JSON.stringify(readNotes()));
     }
     if (req.method === 'GET' && urlPath === '/api/posts/public') {
       res.setHeader('Content-Type', 'application/json');

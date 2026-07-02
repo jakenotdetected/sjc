@@ -3105,8 +3105,8 @@ function showPane(id){
     else if(id === 'sa-students') p.innerHTML = rSAStudents();
     else p.innerHTML = renderPane(id);
     if(id === 'sa-apts') loadAppointmentsFromServer();
-    if(id === 'sa-events') loadPostsFromServer();
-    if(id === 't-posts') loadPostsFromServer();
+    if(id === 'sa-events') { loadPostsFromServer(); loadNotesFromServer(); }
+    if(id === 't-posts') { loadPostsFromServer(); loadNotesFromServer(); }
     if(id === 'sa-settings') loadBookingLimit();
     if(id === 'sa-activity') loadActivityLog();
     if(id === 't-overview' || id === 't-apts' || id === 't-schedule') loadAppointmentsFromServer().then(()=>{ if(document.getElementById(id)?.classList.contains('active')) p.innerHTML = renderPane(id); });
@@ -3516,6 +3516,7 @@ function rSATeachers(){
 /* ─── SA: EVENTS (Facebook-style posts shown live on the public Events page) ──── */
 function rSAPosts(){
   const posts=getPosts();
+  const notes=getNotes();
   return `
   <div class="page-hdr">
     <h2>Events</h2>
@@ -3549,6 +3550,28 @@ function rSAPosts(){
         ${imgs.length?`<div style="display:grid;grid-template-columns:${gridCols};gap:6px;">${imgs.map(src=>`<img src="${src}" style="width:100%;height:100%;max-height:320px;object-fit:cover;border-radius:10px;">`).join('')}</div>`:''}
       </div>
     `;}).join(''):`<div class="empty-state">${I.pen}<p>No posts yet — share the first update.</p></div>`}
+  </div>
+
+  <div style="max-width:640px;margin:48px auto 0;border-top:2px dashed #e0d4c8;padding-top:28px;">
+    <h3 style="font-size:1.15rem;font-weight:700;color:var(--brand-primary);margin-bottom:2px;">Staff Notes</h3>
+    <p style="font-size:.8rem;color:#999;margin-bottom:16px;">Private — visible only to staff here, never shown on the public site. Use this to log what's been done for events, follow-ups, etc.</p>
+    <div class="card" style="padding:16px;margin-bottom:16px;">
+      <textarea id="new-note-text" rows="2" placeholder="e.g. Booked the hall with the principal for Career Expo, waiting on caterer confirmation…" style="width:100%;padding:12px;border:1px solid #e0d4c8;border-radius:8px;font-family:inherit;font-size:0.9rem;resize:vertical;"></textarea>
+      <div style="display:flex;justify-content:flex-end;margin-top:10px;">
+        <button class="btn btn-primary btn-sm" onclick="submitNote()">Add Note</button>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      ${notes.length?notes.map(n=>`
+        <div class="card" style="padding:14px 16px;background:#fdfaf3;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:6px;">
+            <div style="font-size:.76rem;color:#aaa;">${esc(n.authorName||'Staff')} &middot; ${fmtDate(n.createdAt)}</div>
+            <button class="btn btn-ghost btn-sm" onclick="deleteNote('${esc(n.id)}')" style="padding:2px 6px;">${I.bin}</button>
+          </div>
+          <p style="font-size:.86rem;color:#444;white-space:pre-wrap;line-height:1.5;">${esc(n.text)}</p>
+        </div>
+      `).join(''):`<div style="text-align:center;padding:24px;color:#ccc;font-size:.85rem;">No notes yet.</div>`}
+    </div>
   </div>`;
 }
 
@@ -4948,6 +4971,51 @@ async function deletePost(id) {
   } catch(e) { toast('Server error', 'err'); }
 }
 
+function getNotes(){ return DB.get('event_notes')||[]; }
+async function loadNotesFromServer() {
+  try {
+    const r = await adminFetch('/api/admin/notes');
+    if (!r.ok) return;
+    const notes = await r.json();
+    DB.set('event_notes', notes);
+    ['sa-events', 't-posts'].forEach(id => {
+      const pane = document.getElementById(id);
+      if (pane && pane.classList.contains('active')) pane.innerHTML = rSAPosts();
+    });
+  } catch(e) {}
+}
+
+async function submitNote() {
+  const textEl = document.getElementById('new-note-text');
+  const text = textEl.value.trim();
+  if (!text) { toast('Write a note first', 'err'); return; }
+  try {
+    const csrfToken = await getCsrfToken();
+    const r = await adminFetch('/api/admin/notes', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, csrfToken })
+    });
+    const d = await r.json();
+    if (!r.ok || !d.success) { toast(d.error || 'Failed to save note', 'err'); return; }
+    textEl.value = '';
+    toast('Note saved', 'ok');
+    await loadNotesFromServer();
+  } catch(e) { toast('Server error', 'err'); }
+}
+
+async function deleteNote(id) {
+  if (!window._confirmed) { customConfirm('Delete this note?', () => { window._confirmed = true; deleteNote(id); }); return; } window._confirmed = false;
+  try {
+    const csrfToken = await getCsrfToken();
+    const r = await adminFetch('/api/admin/notes', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, _delete: true, csrfToken })
+    });
+    const d = await r.json();
+    if (!r.ok || !d.success) { toast(d.error || 'Failed to delete note', 'err'); return; }
+    await loadNotesFromServer();
+  } catch(e) { toast('Server error', 'err'); }
+}
 </script>
 
   <!-- PIN Reset Modal -->
