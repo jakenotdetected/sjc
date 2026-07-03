@@ -399,13 +399,15 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 .uni-card:hover { transform: translateY(-8px); box-shadow: 0 28px 70px rgba(42,8,8,0.14); border-color: rgba(201,168,76,0.4); }
 .uni-card-img {
   height: 180px; position: relative; overflow: hidden; flex-shrink: 0;
-  background: linear-gradient(135deg, #1a0404 0%, #2a0808 60%, #3d0c0c 100%);
+  background: linear-gradient(135deg, var(--cream-2) 0%, var(--cream-3) 100%);
+  display: flex; align-items: center; justify-content: center;
 }
 .uni-card-img img.campus-photo {
-  width: 100%; height: 100%; object-fit: cover; display: block;
-  transition: transform .5s ease; filter: brightness(0.82);
+  width: 68%; height: 68%; object-fit: contain; display: block;
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+  filter: drop-shadow(0 6px 16px rgba(42,8,8,0.16));
 }
-.uni-card:hover .uni-card-img img.campus-photo { transform: scale(1.07); }
+.uni-card:hover .uni-card-img img.campus-photo { transform: scale(1.08); }
 .uni-card-img-placeholder {
   width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
   background: linear-gradient(135deg, var(--maroon-deep) 0%, var(--maroon-mid) 100%);
@@ -414,25 +416,11 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
   font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 700;
   color: rgba(201,168,76,0.6); letter-spacing: .08em;
 }
-.uni-card-img-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to bottom, transparent 40%, rgba(10,2,2,0.7) 100%);
-}
-.uni-card-logo-wrap {
-  position: absolute; bottom: 12px; left: 14px; width: 48px; height: 48px;
-  background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.25); overflow: hidden; border: 1.5px solid rgba(255,255,255,0.9);
-}
-.uni-card-logo-wrap img { width: 100%; height: 100%; object-fit: contain; padding: 5px; }
-.uni-card-logo-initial {
-  font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 700;
-  color: var(--maroon-deep); line-height: 1;
-}
 .uni-type-badge {
   position: absolute; top: 12px; right: 12px;
   padding: 4px 10px; border-radius: 20px; font-size: 0.68rem; font-weight: 700;
   letter-spacing: .06em; text-transform: uppercase;
-  background: rgba(10,2,2,0.6); color: var(--gold); border: 1px solid rgba(201,168,76,0.3);
+  background: rgba(42,8,8,0.85); color: var(--gold); border: 1px solid rgba(201,168,76,0.3);
   backdrop-filter: blur(8px);
 }
 
@@ -516,24 +504,17 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 <script>
 (function(){
   function buildCard(id, uni) {
-    const hasImg = uni.image;
     const hasLogo = uni.logo;
     const short = uni.short || uni.name.split(' ').map(w=>w[0]).join('').slice(0,4);
     const chips = (uni.keyDegrees || []).slice(0,3).map(d=>`<span class="uni-card-degree-chip">${d}</span>`).join('');
 
-    const imgSection = hasImg
-      ? `<img class="campus-photo" src="${uni.image}" alt="${uni.name}" loading="lazy" onerror="this.style.display='none'">`
+    const imgSection = hasLogo
+      ? `<img class="campus-photo" src="${uni.logo}" alt="${uni.name} logo" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'uni-card-img-placeholder\\'><span class=\\'uni-initials\\'>${short}</span></div>'">`
       : `<div class="uni-card-img-placeholder"><span class="uni-initials">${short}</span></div>`;
-
-    const logoSection = hasLogo
-      ? `<img src="${uni.logo}" alt="${uni.name} logo" onerror="this.outerHTML='<span class=\\'uni-card-logo-initial\\'>${short.slice(0,2)}</span>'">`
-      : `<span class="uni-card-logo-initial">${short.slice(0,2)}</span>`;
 
     return `<a class="uni-card" href="/uni-details?id=${id}" data-name="${uni.name.toLowerCase()}" data-type="${uni.type}">
       <div class="uni-card-img">
         ${imgSection}
-        <div class="uni-card-img-overlay"></div>
-        <div class="uni-card-logo-wrap">${logoSection}</div>
         <span class="uni-type-badge">${uni.tag || (uni.type==='local'?'State Uni':'International')}</span>
       </div>
       <div class="uni-card-body">
