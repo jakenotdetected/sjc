@@ -402,13 +402,15 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
   background: linear-gradient(135deg, var(--cream-2) 0%, var(--cream-3) 100%);
   display: flex; align-items: center; justify-content: center;
 }
-.uni-card-img img.campus-photo {
-  width: 68%; height: 68%; object-fit: contain; display: block;
-  border-radius: 18px; overflow: hidden;
-  transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+.uni-card-logo-frame {
+  width: 68%; height: 68%; border-radius: 18px; overflow: hidden;
   filter: drop-shadow(0 6px 16px rgba(42,8,8,0.16));
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1);
 }
-.uni-card:hover .uni-card-img img.campus-photo { transform: scale(1.08); }
+.uni-card-img img.campus-photo {
+  width: 100%; height: 100%; object-fit: contain; display: block;
+}
+.uni-card:hover .uni-card-logo-frame { transform: scale(1.08); }
 .uni-card-img-placeholder {
   width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
   background: linear-gradient(135deg, var(--maroon-deep) 0%, var(--maroon-mid) 100%);
@@ -510,7 +512,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
     const chips = (uni.keyDegrees || []).slice(0,3).map(d=>`<span class="uni-card-degree-chip">${d}</span>`).join('');
 
     const imgSection = hasLogo
-      ? `<img class="campus-photo" src="${uni.logo}" alt="${uni.name} logo" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'uni-card-img-placeholder\\'><span class=\\'uni-initials\\'>${short}</span></div>'">`
+      ? `<div class="uni-card-logo-frame"><img class="campus-photo" src="${uni.logo}" alt="${uni.name} logo" loading="lazy" onerror="this.parentElement.outerHTML='<div class=\\'uni-card-img-placeholder\\'><span class=\\'uni-initials\\'>${short}</span></div>'"></div>`
       : `<div class="uni-card-img-placeholder"><span class="uni-initials">${short}</span></div>`;
 
     return `<a class="uni-card" href="/uni-details?id=${id}" data-name="${uni.name.toLowerCase()}" data-type="${uni.type}">
