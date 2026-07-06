@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Configs — V2Ray Vault</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/loader.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="28" stroke="#c9a24b" stroke-width="2" stroke-dasharray="6 5"/>
+        <circle cx="32" cy="32" r="17" stroke="#e7c874" stroke-width="2"/>
+        <circle cx="32" cy="32" r="5" fill="#e7c874"/>
+      </svg>
+      <span class="stack">V2Ray Vault<small>Jake Network</small></span>
+    </a>
+    <nav>
+      <span class="who" id="who"></span>
+      <a class="btn small" id="adminLink" href="/admin" style="display:none;">Admin</a>
+      <button class="btn small" id="logoutBtn">Logout</button>
+    </nav>
+  </header>
+  <main class="reveal">
+    <div class="orb hero hero-orb">
+      <span class="core"></span>
+      <span class="ring r1"></span>
+      <span class="ring r2"></span>
+      <span class="ring r3"></span>
+    </div>
+    <h1 class="page-title">The <span>Configs</span></h1>
+    <p class="page-sub">Tap copy, paste into your V2Ray app, and you're connected.</p>
+    <div class="divider"></div>
+    <div id="posts"><div class="empty">Loading&hellip;</div></div>
+  </main>
+  <script>
+    const postsEl = document.getElementById('posts');
+
+    function fmtDate(iso) {
+      return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    function el(tag, cls, text) {
+      const e = document.createElement(tag);
+      if (cls) e.className = cls;
+      if (text !== undefined) e.textContent = text;
+      return e;
+    }
+
+    function renderPost(p) {
+      const card = el('article', 'post');
+      card.appendChild(el('h2', '', p.title));
+      card.appendChild(el('div', 'date', fmtDate(p.createdAt)));
+      if (p.note) card.appendChild(el('div', 'note', p.note));
+      const block = el('div', 'config-block');
+      const pre = el('pre', '', p.body);
+      const btn = el('button', 'btn primary small copy-btn', 'Copy');
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(p.body);
+        } catch {
+          // fallback for older browsers / non-https
+          const ta = document.createElement('textarea');
+          ta.value = p.body; document.body.appendChild(ta);
+          ta.select(); document.execCommand('copy'); ta.remove();
+        }
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 1800);
+      });
+      block.appendChild(pre);
+      block.appendChild(btn);
+      card.appendChild(block);
+      return card;
+    }
+
+    async function load() {
+      const meRes = await fetch('/api/me');
+      if (meRes.status === 401) { location.href = '/login'; return; }
+      const me = await meRes.json();
+      document.getElementById('who').textContent = me.username;
+      if (me.isAdmin) document.getElementById('adminLink').style.display = '';
+
+      const res = await fetch('/api/posts');
+      const posts = await res.json();
+      postsEl.innerHTML = '';
+      if (!posts.length) {
+        postsEl.appendChild(el('div', 'empty', 'No configs posted yet. Check back soon.'));
+        return;
+      }
+      posts.forEach(p => postsEl.appendChild(renderPost(p)));
+    }
+
+    document.getElementById('logoutBtn').addEventListener('click', async () => {
+      await fetch('/api/logout', { method: 'POST' });
+      location.href = '/login';
+    });
+
+    load();
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+- generic [ref=e43]:
+  - generic [ref=e44]:
+    - generic [ref=e45]: 5:36 PM
+    - generic [ref=e46]:
+      - img [ref=e47]
+      - img [ref=e48]
+      - img [ref=e52]
+  - generic [ref=e55]:
+    - generic [ref=e56]:
+      - img [ref=e58]
+      - heading "garage" [level=1] [ref=e60]
+      - paragraph [ref=e61]: On-Demand Roadside Assistance
+    - generic [ref=e62] [cursor=pointer]:
+      - img [ref=e64]
+      - generic [ref=e67]:
+        - heading "I am a Customer" [level=3] [ref=e68]
+        - paragraph [ref=e69]: My vehicle is broken down and I need emergency roadside assistance.
+      - img [ref=e70]
+    - generic [ref=e72] [cursor=pointer]:
+      - img [ref=e74]
+      - generic [ref=e76]:
+        - heading "I am a Mechanic" [level=3] [ref=e77]
+        - paragraph [ref=e78]: I want to accept nearby breakdown repair jobs and earn money.
+      - img [ref=e79]

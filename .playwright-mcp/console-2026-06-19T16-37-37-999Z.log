@@ -1,0 +1,5 @@
+[   35963ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:3100/login:0
+[   43363ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://localhost:3100/admin:0
+[   43686ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3100/favicon.ico:0
+[   44147ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://localhost:3100/admin/settings:0
+[   54590ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:3100/login:0

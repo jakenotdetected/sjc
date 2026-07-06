@@ -1,5 +1,5 @@
 import { EmbedBuilder, ChannelType } from "discord.js";
-import { NEW_MEMBER_ROLE_NAME, WELCOME_CHANNEL_NAME } from "./config.js";
+import { NEW_MEMBER_ROLE_NAME, WELCOME_CHANNEL_NAME, MINECRAFT_IP } from "./config.js";
 import { logoAttachment, LOGO_URL } from "./branding.js";
 
 export async function handleMemberJoin(member, log = console.log) {
@@ -29,7 +29,8 @@ export async function handleMemberJoin(member, log = console.log) {
         "🔹 Drop your in-game name in 🎮│ign\n" +
         "🔹 Read 📜│rules before you dive in\n" +
         "🔹 Say hi in 💬│general\n" +
-        "🔹 Grab some roles in 📋│self-roles 🔔"
+        "🔹 Grab some roles in 📋│self-roles 🔔\n\n" +
+        `**🌐 Server IP:** \`${MINECRAFT_IP}\``
     )
     .addFields({ name: "👥 Member #", value: `${memberCount}`, inline: true })
     .setColor(0xDC143C)

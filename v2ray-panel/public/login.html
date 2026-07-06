@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Jake Network — V2Ray Vault</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/loader.js" defer></script>
+</head>
+<body>
+  <div class="login-wrap reveal">
+    <div class="login-box">
+      <div class="orb">
+        <span class="core"></span>
+        <span class="ring r1"></span>
+        <span class="ring r2"></span>
+        <span class="ring r3"></span>
+      </div>
+      <h1>V2Ray Vault</h1>
+      <div class="sub">Jake Network &bull; Family Only</div>
+      <form id="loginForm">
+        <div class="field">
+          <label for="username">Username</label>
+          <input id="username" name="username" autocomplete="username" required autofocus>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+        </div>
+        <button class="btn primary" type="submit" style="width:100%; margin-top:10px;">Enter the Vault</button>
+        <div class="error" id="error"></div>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const errEl = document.getElementById('error');
+      errEl.textContent = '';
+      try {
+        const res = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            username: document.getElementById('username').value.trim(),
+            password: document.getElementById('password').value,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok) { errEl.textContent = data.error || 'Login failed.'; return; }
+        location.href = '/';
+      } catch {
+        errEl.textContent = 'Network error — try again.';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Garage — Dual-Phone Simulation</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #F7F5F2; --ocean: #1E3859; --tea: #8C5C3D;
+    --sand: #FFC936; --canopy: #2C6B56; --line: #E7E2DB;
+    --surface: #FFFFFF; --oceanSoft: #E9EDF2; --sandSoft: #FFF4D6;
+    --canopySoft: #E2EFE9; --teaSoft: #F1E9E2; --danger: #C0492F;
+    --textMuted: #9B9088; --oceanDeep: #16293F;
+    --radius-card: 24px; --radius-pill: 30px; --radius-input: 24px; --radius-chip: 16px;
+    --shadow-card: 0 1px 2px rgba(22,41,63,0.04), 0 8px 24px rgba(22,41,63,0.06);
+    --shadow-soft: 0 1px 3px rgba(22,41,63,0.05);
+    --font: 'Plus Jakarta Sans', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  body {
+    background:
+      radial-gradient(1200px 700px at 18% -10%, rgba(44,107,86,0.18), transparent 55%),
+      radial-gradient(1000px 600px at 100% 0%, rgba(255,201,54,0.10), transparent 50%),
+      linear-gradient(160deg, #0C1623 0%, #0E1B2B 45%, #0A1320 100%);
+    font-family: var(--font);
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh; padding: 22px 16px; overflow-x: hidden;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  .sandbox {
+    background: var(--bg); border-radius: 30px;
+    padding: 16px 16px 14px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 2px 0 rgba(255,255,255,0.05) inset;
+    max-width: 980px; width: 100%;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  /* ---- Brand Header ---- */
+  .brand {
+    display: flex; align-items: center; gap: 12px;
+    padding: 6px 6px 14px; margin-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand-mark {
+    width: 44px; height: 44px; border-radius: 14px; flex-shrink: 0;
+    background: linear-gradient(150deg, var(--ocean), var(--oceanDeep));
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 16px rgba(30,56,89,0.28);
+  }
+  .brand-text { flex: 1; min-width: 0; }
+  .brand-title {
+    font-size: 22px; font-weight: 800; color: var(--ocean);
+    letter-spacing: 2.5px; line-height: 1;
+  }
+  .brand-sub { font-size: 11px; font-weight: 600; color: var(--tea); margin-top: 4px; letter-spacing: 0.2px; }
+  .brand-live {
+    display: flex; align-items: center; gap: 7px; flex-shrink: 0;
+    background: var(--canopySoft); border: 1px solid rgba(44,107,86,0.30);
+    border-radius: var(--radius-pill); padding: 7px 14px;
+    font-size: 11px; font-weight: 800; color: var(--canopy); letter-spacing: 1px;
+  }
+  .brand-live .live-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--canopy);
+    box-shadow: 0 0 0 0 rgba(44,107,86,0.5); animation: live-blink 1.8s ease-out infinite;
+  }
+  @keyframes live-blink {
+    0% { box-shadow: 0 0 0 0 rgba(44,107,86,0.45); }
+    70% { box-shadow: 0 0 0 7px rgba(44,107,86,0); }
+    100% { box-shadow: 0 0 0 0 rgba(44,107,86,0); }
+  }
+  @media (max-width:560px) { .brand-live { display: none; } }
+
+  /* ---- Role Switch ---- */
+  .role-switch {
+    display: flex; background: var(--oceanSoft); border-radius: 18px;
+    padding: 5px; margin-bottom: 16px; gap: 4px;
+    border: 1px solid var(--line);
+  }
+  .role-btn {
+    flex: 1; height: 40px; border-radius: 14px; border: none;
+    font-size: 13px; font-weight: 700; font-family: var(--font);
+    background: transparent; color: var(--tea); cursor: pointer;
+    transition: all 0.2s;
+  }
+  .role-btn:hover { color: var(--ocean); }
+  .role-btn.active {
+    background: var(--surface); color: var(--ocean); font-weight: 800;
+    box-shadow: 0 2px 8px rgba(30,56,89,0.12);
+  }
+
+  .phones { display: flex; gap: 22px; transition: opacity 0.25s; }
+
+  /* ---- Device Label ---- */
+  .phone-wrap { flex: 1; display: flex; flex-direction: column; }
+  .device-label {
+    display: flex; align-items: center; gap: 8px; justify-content: center;
+    margin-bottom: 10px;
+  }
+  .device-label .dl-icon {
+    width: 22px; height: 22px; border-radius: 7px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .device-label.customer .dl-icon { background: var(--canopySoft); }
+  .device-label.mechanic .dl-icon { background: var(--sandSoft); }
+  .device-label .dl-text { font-size: 12px; font-weight: 800; color: var(--ocean); letter-spacing: 0.6px; }
+  .device-label .dl-role { font-size: 10px; font-weight: 700; color: var(--tea); letter-spacing: 0.4px; }
+
+  /* ---- Dark Phone Bezel ---- */
+  .device {
+    background: linear-gradient(160deg, #11161D, #05080C 60%); border-radius: 46px; padding: 11px;
+    box-shadow: 0 24px 50px rgba(0,0,0,0.45), 0 4px 12px rgba(0,0,0,0.35),
+                inset 0 0 0 1.5px rgba(255,255,255,0.06), inset 0 0 0 3px #05080C;
+    flex: 1; display: flex; flex-direction: column; position: relative;
+  }
+  .screen {
+    border-radius: 38px; overflow: hidden; background: var(--bg);
+    flex: 1; display: flex; flex-direction: column; position: relative;
+    min-height: 480px;
+  }
+  .notch {
+    position: absolute; top: 10px; left: 50%; margin-left: -48px;
+    width: 96px; height: 26px; border-radius: 14px;
+    background: #05080C; z-index: 20;
+  }
+  .home-bar {
+    position: absolute; bottom: 7px; left: 50%; margin-left: -60px;
+    width: 120px; height: 5px; border-radius: 3px;
+    background: rgba(30,56,89,0.20); z-index: 20;
+  }
+  .phone-content {
+    flex: 1; padding: 36px 12px 16px; overflow-y: auto;
+    display: flex; flex-direction: column; gap: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .phone-content::-webkit-scrollbar { width: 0; }
+
+  /* ---- Shared Components ---- */
+  .card {
+    background: var(--surface); border-radius: var(--radius-card);
+    padding: 16px 14px; border: 1px solid var(--line);
+    box-shadow: var(--shadow-card);
+  }
+  .card-title { font-size: 15px; font-weight: 800; color: var(--ocean); margin-bottom: 10px; letter-spacing: 0.2px; }
+  .label { font-size: 11px; font-weight: 800; color: var(--tea); margin-top: 12px; margin-bottom: 7px; letter-spacing: 0.5px; text-transform: uppercase; }
+  .label:first-of-type { margin-top: 0; }
+  .input {
+    width: 100%; min-height: 50px;
+    border: 1.5px solid var(--line); border-radius: var(--radius-input);
+    padding: 12px 16px; font-size: 14px; font-weight: 600;
+    color: var(--ocean); background: #FCFBF9; outline: none;
+    font-family: var(--font); margin-bottom: 9px;
+    transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+  }
+  .input::placeholder { color: var(--textMuted); font-weight: 500; }
+  .input:focus { border-color: var(--ocean); background: var(--surface); box-shadow: 0 0 0 3.5px rgba(30,56,89,0.10); }
+
+  .chip-wrap { display: flex; flex-wrap: wrap; gap: 7px; }
+  .chip {
+    border-radius: var(--radius-chip); padding: 7px 13px;
+    font-size: 12px; font-weight: 700; cursor: pointer; border: none;
+    font-family: var(--font);
+    background: var(--surface); color: var(--tea); border: 1px solid var(--line);
+    transition: all 0.15s;
+  }
+  .chip:hover { border-color: var(--tea); }
+  .chip.active { background: var(--sandSoft); border-color: var(--sand); color: var(--ocean); box-shadow: 0 2px 6px rgba(255,201,54,0.22); }
+  .chip.active-canopy { background: var(--canopySoft); border-color: var(--canopy); color: var(--canopy); box-shadow: 0 2px 6px rgba(44,107,86,0.16); }
+  .chip.active-ocean { background: var(--ocean); border-color: var(--ocean); color: #fff; }
+
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    height: 52px; border-radius: var(--radius-pill); border: none; cursor: pointer;
+    font-size: 15px; font-weight: 800; font-family: var(--font); letter-spacing: 0.2px;
+    color: #fff; background: linear-gradient(180deg, #347E66, var(--canopy));
+    transition: transform 0.12s, filter 0.15s, box-shadow 0.15s; width: 100%;
+    box-shadow: 0 6px 16px rgba(44,107,86,0.28), inset 0 1px 0 rgba(255,255,255,0.18);
+  }
+  .btn:hover { filter: brightness(1.05); box-shadow: 0 8px 20px rgba(44,107,86,0.34), inset 0 1px 0 rgba(255,255,255,0.18); }
+  .btn:active { transform: scale(0.98); }
+  .btn:disabled { opacity: 0.5; cursor: default; }
+  .btn-sand { background: linear-gradient(180deg, #FFD45A, var(--sand)); color: var(--ocean); box-shadow: 0 6px 16px rgba(255,201,54,0.34), inset 0 1px 0 rgba(255,255,255,0.4); }
+  .btn-ocean { background: linear-gradient(180deg, #244563, var(--ocean)); color: #fff; box-shadow: 0 6px 16px rgba(30,56,89,0.30), inset 0 1px 0 rgba(255,255,255,0.12); }
+
+  /* ---- Mechanic Dashboard Header ---- */
+  .header-card {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--ocean); border-radius: var(--radius-card);
+    padding: 14px 16px;
+  }
+  .header-sub { color: #AEB9C6; font-size: 11px; font-weight: 700; }
+  .header-name { color: #fff; font-size: 19px; font-weight: 900; line-height: 1.1; }
+
+  /* ---- Online Switch ---- */
+  .switch-row { display: flex; align-items: center; gap: 8px; }
+  .switch-label { font-size: 11px; font-weight: 700; color: #AEB9C6; }
+  .switch {
+    width: 52px; height: 28px; border-radius: 14px; cursor: pointer;
+    background: var(--oceanSoft); transition: background 0.25s; position: relative;
+  }
+  .switch.on { background: var(--canopy); }
+  .switch-knob {
+    width: 22px; height: 22px; border-radius: 50%; background: #fff;
+    position: absolute; top: 3px; left: 3px;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  }
+  .switch.on .switch-knob { transform: translateX(24px); }
+
+  .online-badge {
+    display: flex; align-items: center; gap: 8px;
+    padding: 9px 14px; border-radius: var(--radius-card);
+    background: var(--canopySoft); border: 1px solid var(--canopy);
+    font-size: 12px; font-weight: 700; color: var(--canopy);
+  }
+  .online-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--canopy); flex-shrink: 0; }
+
+  /* ---- Map ---- */
+  .map-box {
+    border-radius: var(--radius-card); background: var(--oceanSoft);
+    height: 120px; position: relative; overflow: hidden;
+  }
+  .map-grid-v { position: absolute; top:0; bottom:0; left:33%; width:1px; background: rgba(30,56,89,0.06); }
+  .map-grid-v2 { left:66%; }
+  .map-grid-h { position: absolute; left:0; right:0; top:33%; height:1px; background: rgba(30,56,89,0.06); }
+  .map-grid-h2 { top:66%; }
+  .map-pin { position:absolute; width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+  .map-pin::after { content:''; width:8px; height:8px; border-radius:50%; background:#fff; }
+  .map-route {
+    position:absolute; width:4px; height:100px; border-radius:3px;
+    background: var(--tea); opacity:0.5;
+    transform:rotate(30deg); transform-origin:top center;
+  }
+  .map-route.active { background: var(--canopy); opacity:1; }
+  .map-badge {
+    position:absolute; left:10px; bottom:10px;
+    background:rgba(255,255,255,0.92); border-radius:10px;
+    padding:5px 10px; font-size:10px; font-weight:700; color:var(--ocean);
+  }
+  .map-badge-right { left:auto; right:10px; }
+
+  /* ---- Radar / Searching ---- */
+  .search-card { text-align:center; padding:18px 14px; }
+  .radar-wrap { position:relative; width:130px; height:130px; margin:0 auto 10px; }
+  .pulse-ring {
+    position:absolute; top:0; left:0; width:130px; height:130px;
+    border-radius:50%; background:var(--sand);
+    animation: pulse-expand 1.6s ease-out infinite;
+  }
+  .pulse-ring:nth-child(2) { animation-delay:0.5s; }
+  .pulse-ring:nth-child(3) { animation-delay:1.0s; }
+  @keyframes pulse-expand {
+    0% { transform:scale(0.5); opacity:0.35; }
+    100% { transform:scale(1.6); opacity:0; }
+  }
+  .radar-core {
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:56px; height:56px; border-radius:50%;
+    background:var(--ocean); display:flex; align-items:center; justify-content:center; z-index:2;
+  }
+  .radar-core-text { color:var(--sand); font-size:24px; font-weight:900; }
+  .search-title { color:var(--ocean); font-size:17px; font-weight:900; }
+  .search-sub { color:var(--tea); font-size:12px; margin-top:4px; line-height:18px; }
+
+  /* ---- Bottom Sheet (draggable) ---- */
+  .sheet-bg {
+    position:absolute; inset:0; z-index:30; overflow:hidden;
+    pointer-events:none;
+  }
+  .sheet-bg.open { pointer-events:auto; }
+  .sheet-scrim {
+    position:absolute; inset:0;
+    background:rgba(30,56,89,0.40);
+    opacity:0; transition:opacity 0.3s;
+  }
+  .sheet-bg.open .sheet-scrim { opacity:1; }
+  .sheet-panel {
+    position:absolute; bottom:0; left:0; right:0;
+    max-height:88%; background:var(--bg);
+    border-top-left-radius: var(--radius-card);
+    border-top-right-radius: var(--radius-card);
+    transform:translateY(100%);
+    transition:transform 0.35s cubic-bezier(0.22,1,0.36,1);
+    overflow-y:auto; padding:8px 18px 18px;
+    touch-action: pan-y;
+  }
+  .sheet-bg.open .sheet-panel { transform:translateY(0); }
+  .sheet-panel::-webkit-scrollbar { width:0; }
+  .sheet-handle {
+    width:40px; height:4px; border-radius:2px;
+    background:var(--line); margin:0 auto 8px; cursor:grab; touch-action:none;
+  }
+  .sheet-eyebrow { color:var(--tea); font-size:11px; font-weight:800; letter-spacing:1.2px; }
+
+  /* ---- Timer ---- */
+  .timer-section { display:flex; justify-content:center; align-items:center; height:130px; margin:2px 0; }
+  .timer-outer { position:relative; width:100px; height:100px; }
+  .timer-pulse {
+    position:absolute; top:0; left:0; width:100px; height:100px;
+    border-radius:50%; background:var(--sand);
+    animation: pulse-expand 1.6s ease-out infinite;
+  }
+  .timer-circle {
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:84px; height:84px; border-radius:50%;
+    background:var(--surface); border:4px solid var(--sand);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:2;
+  }
+  .timer-num { color:var(--ocean); font-size:30px; font-weight:900; line-height:1; }
+  .timer-unit { color:var(--tea); font-size:10px; font-weight:700; margin-top:2px; }
+
+  .info-card { background:var(--surface); border-radius:var(--radius-card); border:1px solid var(--line); overflow:hidden; margin-bottom:8px; }
+  .info-row {
+    display:flex; align-items:center; justify-content:space-between;
+    padding:10px 14px; border-bottom:1px solid var(--line);
+  }
+  .info-row:last-child { border:none; }
+  .info-label { color:var(--tea); font-size:12px; font-weight:700; }
+  .info-value { color:var(--ocean); font-size:13px; font-weight:800; }
+  .info-tag { background:var(--oceanSoft); border-radius:8px; padding:4px 10px; font-size:11px; font-weight:800; color:var(--ocean); }
+  .decline-link { text-align:center; padding:10px 0 2px; }
+  .decline-link a { color:var(--tea); font-weight:800; font-size:13px; cursor:pointer; text-decoration:none; }
+
+  /* ---- Price Card ---- */
+  .price-card { background:var(--surface); border-radius:var(--radius-card); border:1px solid var(--line); padding:14px; margin-bottom:8px; }
+  .price-title { color:var(--ocean); font-size:14px; font-weight:900; margin-bottom:8px; }
+  .price-row { display:flex; justify-content:space-between; padding:4px 0; }
+  .price-label { color:var(--tea); font-size:12px; font-weight:600; }
+  .price-value { color:var(--ocean); font-size:13px; font-weight:700; }
+  .price-div { height:1px; background:var(--line); margin:8px 0; }
+  .price-total { display:flex; justify-content:space-between; align-items:center; }
+  .price-total-label { color:var(--ocean); font-size:14px; font-weight:800; }
+  .price-total-value { color:var(--ocean); font-size:20px; font-weight:900; }
+
+  /* ---- Matched Banner ---- */
+  .matched-card {
+    background:var(--canopy); border-radius:var(--radius-card);
+    padding:16px 14px; text-align:center; color:#fff;
+  }
+  .matched-title { font-size:15px; font-weight:900; margin:6px 0 8px; }
+  .matched-mech { display:flex; align-items:center; justify-content:center; gap:6px; font-size:13px; font-weight:700; opacity:0.9; margin-bottom:12px; }
+  .btn-light {
+    display:flex; align-items:center; justify-content:center; gap:6px;
+    width:100%; height:44px; border-radius:var(--radius-pill); border:none; cursor:pointer;
+    font-size:13px; font-weight:800; font-family:var(--font);
+    color:var(--canopy); background:#fff; transition:all 0.15s;
+  }
+
+  /* ---- Auth ---- */
+  .auth-hero { text-align:center; margin-bottom:6px; }
+  .auth-logo {
+    width:52px; height:52px; border-radius:18px; background:var(--ocean);
+    display:flex; align-items:center; justify-content:center; margin:0 auto 10px;
+  }
+  .auth-logo-text { color:var(--sand); font-size:26px; font-weight:900; }
+  .auth-title { color:var(--ocean); font-size:20px; font-weight:900; }
+  .auth-sub { color:var(--tea); font-size:12px; margin-top:4px; }
+  .auth-toggle {
+    display:flex; background:var(--oceanSoft); border-radius:18px; padding:4px; margin-bottom:10px;
+  }
+  .auth-toggle-btn {
+    flex:1; height:38px; border-radius:var(--radius-chip); border:none;
+    font-size:12px; font-weight:800; font-family:var(--font);
+    background:transparent; color:var(--tea); cursor:pointer; transition:all 0.15s;
+  }
+  .auth-toggle-btn.active { background:var(--surface); color:var(--ocean); box-shadow:0 2px 6px rgba(30,56,89,0.06); }
+  .auth-link { text-align:center; padding:6px 0; }
+  .auth-link a { color:var(--canopy); font-weight:800; font-size:13px; cursor:pointer; text-decoration:none; }
+  .auth-link span { color:var(--tea); font-weight:600; font-size:13px; }
+
+  /* ---- Tracking ---- */
+  .track-header { display:flex; justify-content:space-between; align-items:flex-start; }
+  .track-eyebrow { color:var(--tea); font-size:10px; font-weight:800; letter-spacing:1px; }
+  .track-title { color:var(--ocean); font-size:18px; font-weight:900; margin-top:2px; }
+  .eta-pill { background:var(--canopy); border-radius:var(--radius-pill); padding:8px 16px; text-align:center; }
+  .eta-value { color:#fff; font-size:18px; font-weight:900; line-height:1.2; }
+  .eta-unit { color:#fff; font-size:10px; font-weight:700; opacity:0.85; }
+  .steps-card { background:var(--surface); border-radius:var(--radius-card); border:1px solid var(--line); padding:12px 14px; }
+  .step-row { display:flex; align-items:center; gap:10px; padding:7px 0; border-bottom:1px solid var(--line); }
+  .step-row:last-child { border:none; }
+  .step-bullet { width:22px; height:22px; border-radius:50%; background:var(--oceanSoft); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .step-bullet.on { background:var(--sand); }
+  .step-bullet-text { color:var(--ocean); font-weight:900; font-size:11px; }
+  .step-text { flex:1; color:var(--ocean); font-size:12px; font-weight:600; }
+  .step-dist { color:var(--tea); font-size:11px; font-weight:700; }
+  .mech-card { display:flex; align-items:center; gap:12px; background:var(--ocean); border-radius:var(--radius-card); padding:14px; }
+  .mech-avatar { width:42px; height:42px; border-radius:50%; background:var(--sand); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .mech-avatar-text { color:var(--ocean); font-size:18px; font-weight:900; }
+  .mech-name { color:#fff; font-size:15px; font-weight:900; }
+  .mech-meta { color:#AEB9C6; font-size:11px; font-weight:600; margin-top:1px; }
+  .mech-rating { background:var(--sand); border-radius:12px; padding:6px 10px; text-align:center; flex-shrink:0; }
+  .mech-rating-text { color:var(--ocean); font-weight:900; font-size:14px; }
+  .mech-rating-star { color:var(--ocean); font-size:10px; }
+  .track-actions { display:flex; gap:10px; }
+  .track-actions .btn { flex:1; }
+  .cancel-link { text-align:center; padding:8px 0 2px; }
+  .cancel-link a { color:var(--danger); font-weight:800; font-size:13px; cursor:pointer; text-decoration:none; }
+
+  /* ---- Status ---- */
+  .status-bar {
+    display:flex; align-items:center; justify-content:center; gap:9px;
+    padding:11px 18px; border-radius:var(--radius-pill);
+    font-size:12px; font-weight:700; color:var(--ocean);
+    margin:16px auto 4px; background:var(--surface);
+    border:1px solid var(--line); box-shadow:var(--shadow-soft);
+    max-width:fit-content;
+  }
+  .status-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; transition:background 0.2s;
+    box-shadow:0 0 0 4px rgba(0,0,0,0.04); }
+
+  .garage-list { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+  .garage-card {
+    background: var(--surface); border-radius: var(--radius-card);
+    padding: 12px; border: 1.5px solid var(--line);
+    display: flex; gap: 10px; cursor: pointer; transition: all 0.2s ease;
+    align-items: center; text-align: left; width: 100%;
+  }
+  .garage-card:hover { border-color: var(--canopy); transform: translateY(-1px); }
+  .garage-card.active { border-color: var(--canopy); background: var(--canopySoft); }
+  .garage-pic {
+    width: 60px; height: 60px; border-radius: 14px;
+    background: linear-gradient(135deg, var(--ocean), var(--oceanDeep));
+    display: flex; align-items: center; justify-content: center;
+    color: var(--sand); font-weight: 800; font-size: 18px;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-soft);
+  }
+  .garage-info { flex: 1; }
+  .garage-name { font-size: 14px; font-weight: 800; color: var(--ocean); }
+  .garage-meta { font-size: 11px; font-weight: 700; color: var(--tea); margin-top: 2px; }
+  .garage-rating { font-size: 11px; font-weight: 800; color: var(--ocean); background: var(--sand); border-radius: 8px; padding: 3px 6px; display: inline-flex; align-items: center; gap: 2px; margin-top: 4px; }
+
+  .hidden { display:none !important; }
+  @media (max-width:720px) {
+    .phones { flex-direction:column; }
+    .sandbox { max-width:420px; }
+  }
+</style>
+</head>
+<body>
+<div class="sandbox">
+  <div class="brand">
+    <div class="brand-mark">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFC936" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.1-2.1 2.7-2.5z"/>
+      </svg>
+    </div>
+    <div class="brand-text">
+      <div class="brand-title">GARAGE</div>
+      <div class="brand-sub">On-Demand Breakdown Assistance · Sri Lanka</div>
+    </div>
+    <div class="brand-live"><span class="live-dot"></span>LIVE SIM</div>
+  </div>
+  <div class="role-switch" id="role-switch">
+    <button class="role-btn active" data-role="both">Both Devices</button>
+    <button class="role-btn" data-role="customer">Customer Only</button>
+    <button class="role-btn" data-role="mechanic">Mechanic Only</button>
+  </div>
+
+  <div class="phones" id="phones-container">
+    <div class="phone-wrap" id="phone-customer">
+      <div class="device-label customer">
+        <span class="dl-icon">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#2C6B56" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </span>
+        <span class="dl-text">Customer App</span>
+        <span class="dl-role">· requests help</span>
+      </div>
+      <div class="device">
+        <div class="screen">
+          <div class="notch"></div><div class="home-bar"></div>
+          <div class="phone-content" id="customer-content">
+            <div id="auth-screen">
+              <div class="auth-hero">
+                <div class="auth-logo"><span class="auth-logo-text">G</span></div>
+                <div class="auth-title" id="auth-title">Create your account</div>
+                <div class="auth-sub" id="auth-sub">Sign up to request roadside mechanics fast.</div>
+              </div>
+              <div class="auth-toggle" id="auth-toggle">
+                <button class="auth-toggle-btn active" data-mode="signup">Sign up</button>
+                <button class="auth-toggle-btn" data-mode="login">Log in</button>
+              </div>
+              <div class="card">
+                <div id="auth-fields">
+                  <input class="input" id="auth-name" placeholder="Full name" value="Nimal Fernando" />
+                  <input class="input" id="auth-phone" placeholder="Phone number" value="077 987 6543" />
+                  <input class="input" id="auth-email" placeholder="Email (optional)" value="nimal@email.com" />
+                  <input class="input" id="auth-pass" placeholder="Password" type="password" value="1234" />
+                  <input class="input" id="auth-confirm" placeholder="Confirm password" type="password" value="1234" />
+                </div>
+                <div class="label">Your main vehicle</div>
+                <div class="chip-wrap" id="auth-vehicle-chips">
+                  <button class="chip">Motorbike</button>
+                  <button class="chip">Three-Wheeler</button>
+                  <button class="chip active">Car</button>
+                  <button class="chip">Van</button>
+                  <button class="chip">SUV</button>
+                </div>
+              </div>
+              <div style="margin-top:6px;"><button class="btn" id="btn-auth">Create account</button></div>
+              <div class="auth-link"><span>Already have an account? </span><a id="auth-switch-link">Log in</a></div>
+            </div>
+
+            <div id="request-screen" class="hidden">
+              <div class="card">
+                <div class="card-title">Select Vehicle & Issue</div>
+                <div class="label">Vehicle Type</div>
+                <div class="chip-wrap" id="req-vehicle-chips">
+                  <button class="chip">Motorbike</button>
+                  <button class="chip">Three-Wheeler</button>
+                  <button class="chip active">Car</button>
+                  <button class="chip">Van</button>
+                  <button class="chip">SUV</button>
+                </div>
+                <div class="label">Issue Category</div>
+                <div class="chip-wrap" id="req-category-chips">
+                  <button class="chip">Accessories</button>
+                  <button class="chip active-canopy">Engine</button>
+                  <button class="chip">Other Stuff</button>
+                </div>
+                <div class="label" style="margin-top:10px;">Select Specific Issue</div>
+                <div class="chip-wrap" id="req-issue-chips">
+                </div>
+              </div>
+
+              <div id="garage-section" class="hidden">
+                <div class="label">Select Nearby Garage</div>
+                <div class="garage-list" id="garage-list">
+                </div>
+              </div>
+
+              <div class="price-card hidden" id="price-estimate">
+                <div class="price-title">Live estimate</div>
+                <div class="price-row"><span class="price-label">Call-out base</span><span class="price-value">LKR 350</span></div>
+                <div class="price-row"><span class="price-label">Distance (matrix)</span><span class="price-value" id="price-dist">LKR 170</span></div>
+                <div class="price-row"><span class="price-label">Repair base rate</span><span class="price-value" id="price-repair">LKR 4,500</span></div>
+                <div class="price-div"></div>
+                <div class="price-total"><span class="price-total-label">Estimated total</span><span class="price-total-value" id="price-total">LKR 5,020</span></div>
+              </div>
+
+              <div id="request-action-container" class="hidden" style="margin-top: 10px;">
+                <button class="btn" id="btn-request">🔧 Request Rescue</button>
+              </div>
+              <div id="self-drive-action-container" class="hidden" style="margin-top: 10px;">
+                <button class="btn btn-ocean" id="btn-self-drive">🗺️ Get Directions (Self-Drive)</button>
+              </div>
+            </div>
+
+            <div id="customer-self-drive" class="hidden">
+              <div class="track-header">
+                <div>
+                  <div class="track-eyebrow">SELF-DRIVE NAVIGATION</div>
+                  <div class="track-title" id="sd-title">Drive to Anuradhapura Auto Care</div>
+                </div>
+                <div class="eta-pill" style="background:var(--ocean);"><div class="eta-value" id="sd-eta-val">4</div><div class="eta-unit">min</div></div>
+              </div>
+              <div class="map-box" style="height:140px; margin: 10px 0;">
+                <div class="map-grid-v"></div><div class="map-grid-v map-grid-v2"></div>
+                <div class="map-grid-h"></div><div class="map-grid-h map-grid-h2"></div>
+                <div class="map-pin" style="left:26%;top:20%;background:var(--ocean);"></div>
+                <div class="map-pin" style="right:22%;bottom:18%;background:var(--canopy);"><div style="width:8px;height:8px;border-radius:50%;background:var(--sand);"></div></div>
+                <div class="map-route active"></div>
+                <div class="map-badge" id="sd-badge">0.9 km remaining</div>
+              </div>
+              <div class="steps-card">
+                <div class="step-row"><div class="step-bullet on"><span class="step-bullet-text">1</span></div><span class="step-text">Head south-east toward town centre</span><span class="step-dist">200 m</span></div>
+                <div class="step-row"><div class="step-bullet on"><span class="step-bullet-text">2</span></div><span class="step-text">Turn right at the first cross street</span><span class="step-dist">600 m</span></div>
+                <div class="step-row" style="border:none;"><div class="step-bullet"><span class="step-bullet-text">3</span></div><span class="step-text">Destination is on your left</span><span class="step-dist">100 m</span></div>
+              </div>
+              <div class="track-actions" style="margin-top: 10px;">
+                <button class="btn btn-ocean" id="btn-sd-call">📞 Call Garage</button>
+                <button class="btn" id="btn-sd-end" style="background: var(--danger); box-shadow: none;">🏁 Arrived / End</button>
+              </div>
+            </div>
+
+            <div id="customer-searching" class="hidden">
+              <div class="card search-card">
+                <div class="radar-wrap">
+                  <div class="pulse-ring"></div><div class="pulse-ring"></div><div class="pulse-ring"></div>
+                  <div class="radar-core"><span class="radar-core-text">G</span></div>
+                </div>
+                <div class="search-title">Finding nearby mechanics…</div>
+                <div class="search-sub">Broadcasting your request to mechanics around you</div>
+              </div>
+            </div>
+
+            <div id="customer-tracking" class="hidden">
+              <div class="track-header">
+                <div>
+                  <div class="track-eyebrow" id="track-status-label">REQUEST ACCEPTED</div>
+                  <div class="track-title" id="track-title">On the way to you</div>
+                </div>
+                <div class="eta-pill"><div class="eta-value" id="eta-value">12</div><div class="eta-unit">min</div></div>
+              </div>
+              <div class="map-box" style="height:100px;">
+                <div class="map-grid-v"></div><div class="map-grid-v map-grid-v2"></div>
+                <div class="map-grid-h"></div><div class="map-grid-h map-grid-h2"></div>
+                <div class="map-pin" id="track-mech-pin" style="left:26%;top:20%;background:var(--ocean);"></div>
+                <div class="map-pin" style="right:22%;bottom:18%;background:var(--canopy);"><div style="width:8px;height:8px;border-radius:50%;background:var(--sand);"></div></div>
+                <div class="map-route" id="track-route"></div>
+                <div class="map-badge map-badge-right" id="track-badge">En route</div>
+              </div>
+              <div class="steps-card" id="steps-card">
+                <div class="step-row"><div class="step-bullet on" id="s0"><span class="step-bullet-text">1</span></div><span class="step-text">Request accepted</span></div>
+                <div class="step-row"><div class="step-bullet" id="s1"><span class="step-bullet-text">2</span></div><span class="step-text">Mechanic en route</span></div>
+                <div class="step-row"><div class="step-bullet" id="s2"><span class="step-bullet-text">3</span></div><span class="step-text">Almost there</span></div>
+                <div class="step-row" style="border:none;"><div class="step-bullet" id="s3"><span class="step-bullet-text">4</span></div><span class="step-text">Arrived</span></div>
+              </div>
+              <div class="mech-card">
+                <div class="mech-avatar"><span class="mech-avatar-text">K</span></div>
+                <div style="flex:1;"><div class="mech-name">Kamal Perera</div><div class="mech-meta">Car · Three-Wheeler</div><div class="mech-meta">Engine &amp; Brakes</div></div>
+                <div class="mech-rating"><div class="mech-rating-text">4.8</div><div class="mech-rating-star">★</div></div>
+              </div>
+              <div class="track-actions">
+                <button class="btn btn-ocean" id="btn-message">✉  Message</button>
+                <button class="btn" id="btn-call-tracking">📞  Call</button>
+              </div>
+              <div class="cancel-link"><a id="btn-cancel-request">Cancel request</a></div>
+            </div>
+
+            <div id="customer-matched" class="hidden">
+              <div class="matched-card">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="18" fill="rgba(255,255,255,0.12)"/><path d="M10 18l6 6 10-10" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div class="matched-title">Mechanic is on the way!</div>
+                <div class="matched-mech"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span id="matched-name">Kamal Perera</span></div>
+                <button class="btn-light" id="btn-matched-call">📞  Call Kamal Perera</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phone-wrap" id="phone-mechanic">
+      <div class="device-label mechanic">
+        <span class="dl-icon">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8C5C3D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.1-2.1 2.7-2.5z"/></svg>
+        </span>
+        <span class="dl-text">Mechanic App</span>
+        <span class="dl-role">· accepts jobs</span>
+      </div>
+      <div class="device">
+        <div class="screen" style="position:relative;">
+          <div class="notch"></div><div class="home-bar"></div>
+          <div class="phone-content" id="mechanic-content">
+            <div id="mech-form">
+              <div class="card">
+                <div class="card-title">Mechanic Profile</div>
+                <div class="auth-sub" style="margin-bottom:8px;">Tell customers who you are and exactly what you can repair.</div>
+                <input class="input" id="mech-name" placeholder="Full name" value="Kamal Perera" />
+                <input class="input" id="mech-address" placeholder="Home address" value="42, Galle Road, Colombo 03" />
+                <input class="input" id="mech-phone" placeholder="Phone number" value="+94 77 123 4567" />
+                <div class="label">Vehicle types you handle</div>
+                <div class="chip-wrap">
+                  <button class="chip active-canopy">Motorbike</button>
+                  <button class="chip active-canopy">Three-Wheeler</button>
+                  <button class="chip active-canopy">Car</button>
+                  <button class="chip active-canopy">Van</button>
+                  <button class="chip active-canopy">SUV</button>
+                </div>
+                <div class="label">Accessories</div>
+                <div class="chip-wrap"><button class="chip active">Wiring</button><button class="chip active">Lighting</button><button class="chip active">Audio Systems</button></div>
+                <div class="label">Engine</div>
+                <div class="chip-wrap"><button class="chip active">Tune-ups</button><button class="chip active">Overhauls</button><button class="chip active">Sensors</button><button class="chip active">Oil/Filters</button></div>
+                <div class="label">Other</div>
+                <div class="chip-wrap"><button class="chip active">Brakes</button><button class="chip active">Suspension</button><button class="chip active">Transmission</button><button class="chip active">AC Repair</button></div>
+              </div>
+              <button class="btn" id="btn-create-panel">🔧  Create mechanic panel</button>
+            </div>
+
+            <div id="mech-dashboard" class="hidden">
+              <div class="header-card">
+                <div><div class="header-sub">Good evening,</div><div class="header-name">Kamal</div></div>
+                <div class="switch-row">
+                  <span class="switch-label" id="switch-label">Offline</span>
+                  <div class="switch" id="online-switch"><div class="switch-knob"></div></div>
+                </div>
+              </div>
+              <div id="online-indicator" class="online-badge hidden">
+                <div class="online-dot"></div>
+                <span>Streaming live location · ready for job pings</span>
+              </div>
+              <div class="mech-card">
+                <div class="mech-avatar"><span class="mech-avatar-text">K</span></div>
+                <div style="flex:1;"><div class="mech-name">Kamal Perera</div><div class="mech-meta">+94 77 123 4567</div></div>
+                <div class="mech-rating"><div class="mech-rating-text">4.8</div><div class="mech-rating-star">★</div></div>
+              </div>
+              <div class="card" style="background:var(--sandSoft);border-color:var(--sand);">
+                <div class="card-title" style="font-size:14px;">Live job broadcast</div>
+                <div style="color:var(--tea);font-size:12px;font-weight:600;line-height:18px;margin-bottom:10px;">
+                  A request can ping your device any moment. Tap to simulate one.
+                </div>
+                <button class="btn btn-sand" id="btn-simulate">📡  Simulate incoming job</button>
+              </div>
+              <div class="card">
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                  <div class="card-title" style="margin:0;font-size:14px;">Your skills matrix</div>
+                  <a style="color:var(--canopy);font-weight:800;font-size:12px;cursor:pointer;text-decoration:none;" id="btn-edit-skills">Edit</a>
+                </div>
+                <div style="color:var(--tea);font-size:12px;font-weight:600;margin:4px 0 8px;">Motorbike · Three-Wheeler · Car · Van · SUV</div>
+                <div class="chip-wrap">
+                  <span style="background:var(--teaSoft);border-radius:10px;padding:5px 10px;font-size:11px;font-weight:700;color:var(--tea);">Wiring</span>
+                  <span style="background:var(--teaSoft);border-radius:10px;padding:5px 10px;font-size:11px;font-weight:700;color:var(--tea);">Lighting</span>
+                  <span style="background:var(--teaSoft);border-radius:10px;padding:5px 10px;font-size:11px;font-weight:700;color:var(--tea);">Audio</span>
+                  <span style="background:var(--teaSoft);border-radius:10px;padding:5px 10px;font-size:11px;font-weight:700;color:var(--tea);">Tune-ups</span>
+                  <span style="background:var(--teaSoft);border-radius:10px;padding:5px 10px;font-size:11px;font-weight:700;color:var(--tea);">Overhauls</span>
+                  <span style="background:var(--teaSoft);border-radius:10px;padding:5px 10px;font-size:11px;font-weight:700;color:var(--tea);">Sensors</span>
+                  <span style="background:var(--teaSoft);border-radius:10px;padding:5px 10px;font-size:11px;font-weight:700;color:var(--tea);">Brakes</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="mech-navigating" class="hidden">
+              <div class="track-header">
+                <div>
+                  <div class="track-eyebrow">NAVIGATING TO</div>
+                  <div class="track-title" style="font-size:20px;">Nimal Fernando</div>
+                  <div style="color:var(--tea);font-size:11px;font-weight:600;margin-top:2px;">Mihintale Road, Anuradhapura</div>
+                </div>
+                <div class="eta-pill"><div class="eta-value">13</div><div class="eta-unit">min</div></div>
+              </div>
+              <div class="map-box" style="height:100px;">
+                <div class="map-grid-v"></div><div class="map-grid-v map-grid-v2"></div>
+                <div class="map-grid-h"></div><div class="map-grid-h map-grid-h2"></div>
+                <div class="map-pin" style="left:26%;top:20%;background:var(--ocean);"></div>
+                <div class="map-pin" style="right:22%;bottom:18%;background:var(--canopy);"><div style="width:8px;height:8px;border-radius:50%;background:var(--sand);"></div></div>
+                <div class="map-route active"></div>
+                <div class="map-badge">~1.2 km</div>
+              </div>
+              <div class="steps-card">
+                <div class="step-row"><div class="step-bullet on"><span class="step-bullet-text">1</span></div><span class="step-text">Head north on Galle Road</span><span class="step-dist">400 m</span></div>
+                <div class="step-row"><div class="step-bullet on"><span class="step-bullet-text">2</span></div><span class="step-text">Turn right at the junction</span><span class="step-dist">1.2 km</span></div>
+                <div class="step-row"><div class="step-bullet"><span class="step-bullet-text">3</span></div><span class="step-text">Continue past the clock tower</span><span class="step-dist">650 m</span></div>
+                <div class="step-row" style="border:none;"><div class="step-bullet"><span class="step-bullet-text">4</span></div><span class="step-text">Arrive — look for hazard lights</span><span class="step-dist">150 m</span></div>
+              </div>
+              <div class="price-card">
+                <div class="price-title">Live estimate</div>
+                <div class="price-row"><span class="price-label">Call-out base</span><span class="price-value">LKR 350</span></div>
+                <div class="price-row"><span class="price-label">Distance (matrix)</span><span class="price-value">LKR 170</span></div>
+                <div class="price-row"><span class="price-label">Repair base rate</span><span class="price-value">LKR 4,500</span></div>
+                <div class="price-div"></div>
+                <div class="price-total"><span class="price-total-label">Estimated total</span><span class="price-total-value">LKR 5,020</span></div>
+              </div>
+              <button class="btn btn-ocean" id="btn-nav-message">✉  Message customer</button>
+              <div class="cancel-link"><a id="btn-end-job">End job</a></div>
+            </div>
+          </div>
+
+          <div class="sheet-bg" id="sheet-bg">
+            <div class="sheet-scrim" id="sheet-scrim"></div>
+            <div class="sheet-panel" id="sheet-panel">
+              <div class="sheet-handle" id="sheet-handle"></div>
+              <div class="sheet-eyebrow">INCOMING REQUEST</div>
+              <div class="timer-section">
+                <div class="timer-outer">
+                  <div class="timer-pulse"></div>
+                  <div class="timer-circle"><div class="timer-num" id="timer-num">30</div><div class="timer-unit">sec to claim</div></div>
+                </div>
+              </div>
+              <div class="map-box" style="height:90px;margin-bottom:6px;">
+                <div class="map-grid-v"></div><div class="map-grid-v map-grid-v2"></div>
+                <div class="map-grid-h"></div><div class="map-grid-h map-grid-h2"></div>
+                <div class="map-pin" style="right:22%;bottom:18%;background:var(--canopy);"><div style="width:8px;height:8px;border-radius:50%;background:var(--sand);"></div></div>
+                <div class="map-route"></div>
+                <div class="map-badge">~1.2 km away</div>
+              </div>
+              <div class="info-card">
+                <div class="info-row"><span class="info-label">Customer</span><span class="info-value">Nimal Fernando</span></div>
+                <div class="info-row"><span class="info-label">Vehicle</span><span class="info-tag">Car</span></div>
+                <div class="info-row"><span class="info-label">Breakdown</span><span class="info-value" style="color:var(--danger);">Engine overheating</span></div>
+                <div class="info-row"><span class="info-label">Distance</span><span class="info-value">1.2 km away</span></div>
+              </div>
+              <div class="price-card">
+                <div class="price-title">Live estimate</div>
+                <div class="price-row"><span class="price-label">Call-out base</span><span class="price-value">LKR 350</span></div>
+                <div class="price-row"><span class="price-label">Distance (matrix)</span><span class="price-value">LKR 170</span></div>
+                <div class="price-row"><span class="price-label">Repair base rate</span><span class="price-value">LKR 4,500</span></div>
+                <div class="price-div"></div>
+                <div class="price-total"><span class="price-total-label">Estimated total</span><span class="price-total-value">LKR 5,020</span></div>
+              </div>
+              <button class="btn" id="btn-claim">🔧  Claim this job</button>
+              <div class="decline-link"><a id="btn-decline">Decline</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="status-bar">
+    <div class="status-dot" id="status-dot" style="background:var(--tea);"></div>
+    <span id="status-text">Toggle mechanic online, create panel, then request</span>
+  </div>
+</div>
+
+<script>
+(function() {
+  const $ = id => document.getElementById(id);
+  const qs = (sel, ctx) => (ctx||document).querySelector(sel);
+  const qsa = (sel, ctx) => Array.from((ctx||document).querySelectorAll(sel));
+
+  // ---- State ----
+  const state = {
+    role: 'both',
+    booking: 'idle', // idle | searching | matched | tracking
+    online: false,
+    timer: 30, timerId: null,
+    trackingId: null, trackStep: 0,
+    authMode: 'signup', authed: false,
+    mechScreen: 'form', // form | dashboard
+    isDragging: false, dragStartY: 0, dragTranslate: 0, sheetOpen: false,
+  };
+
+  // ---- DOM refs ----
+  // Role
+  const roleBtns = qsa('.role-btn');
+  const phonesContainer = $('phones-container');
+  const phoneCustomer = $('phone-customer');
+  const phoneMechanic = $('phone-mechanic');
+
+  // Customer screens
+  const authScreen = $('auth-screen');
+  const requestScreen = $('request-screen');
+  const customerSearching = $('customer-searching');
+  const customerTracking = $('customer-tracking');
+  const customerMatched = $('customer-matched');
+
+  // Customer auth
+  const authToggle = $('auth-toggle');
+  const authTitle = $('auth-title');
+  const authSub = $('auth-sub');
+  const authFields = $('auth-fields');
+  const authName = $('auth-name');
+  const authPhone = $('auth-phone');
+  const authPass = $('auth-pass');
+  const authConfirm = $('auth-confirm');
+  const authSwitchLink = $('auth-switch-link');
+  const btnAuth = $('btn-auth');
+
+  // Customer request
+  const btnRequest = $('btn-request');
+  const priceDist = $('price-dist');
+  const priceRepair = $('price-repair');
+  const priceTotal = $('price-total');
+
+  // Customer tracking
+  const trackStatusLabel = $('track-status-label');
+  const trackTitle = $('track-title');
+  const etaValue = $('eta-value');
+  const trackMechPin = $('track-mech-pin');
+  const trackRoute = $('track-route');
+  const trackBadge = $('track-badge');
+  const steps = [0,1,2,3].map(i => $('s'+i));
+  const btnCancelRequest = $('btn-cancel-request');
+
+  // Customer matched
+  const matchedName = $('matched-name');
+
+  // Mechanic screens
+  const mechForm = $('mech-form');
+  const mechDashboard = $('mech-dashboard');
+  const mechNavigating = $('mech-navigating');
+  const btnCreatePanel = $('btn-create-panel');
+  const btnEditSkills = $('btn-edit-skills');
+  const btnSimulate = $('btn-simulate');
+  const onlineSwitch = $('online-switch');
+  const switchLabel = $('switch-label');
+  const onlineIndicator = $('online-indicator');
+
+  // Sheet
+  const sheetBg = $('sheet-bg');
+  const sheetScrim = $('sheet-scrim');
+  const sheetPanel = $('sheet-panel');
+  const sheetHandle = $('sheet-handle');
+  const timerNum = $('timer-num');
+  const btnClaim = $('btn-claim');
+  const btnDecline = $('btn-decline');
+
+  // Status
+  const statusDot = $('status-dot');
+  const statusText = $('status-text');
+
+  // ---- Role switching ----
+  roleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      roleBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.role = btn.dataset.role;
+      if (state.role === 'customer') { phoneMechanic.style.display = 'none'; phoneCustomer.style.display = 'flex'; }
+      else if (state.role === 'mechanic') { phoneCustomer.style.display = 'none'; phoneMechanic.style.display = 'flex'; }
+      else { phoneCustomer.style.display = 'flex'; phoneMechanic.style.display = 'flex'; }
+    });
+  });
+
+  // ---- Pricing helper ----
+  function computePrice(distanceKm, category) {
+    const calloutBase = 350, ratePerKm = 120;
+    const repairRates = { Accessories: 1500, Engine: 4500, 'Other Stuff': 2200 };
+    const distFee = Math.round(distanceKm * ratePerKm);
+    const repair = repairRates[category] || 2200;
+    const total = calloutBase + distFee + repair;
+    priceDist.textContent = 'LKR ' + distFee.toLocaleString();
+    priceRepair.textContent = 'LKR ' + repair.toLocaleString();
+    priceTotal.textContent = 'LKR ' + total.toLocaleString();
+  }
+
+  // ---- Audio Sound Engine (Web Audio API) ----
+  function playSound(type) {
+    try {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContext) return;
+      const ctx = new AudioContext();
+      
+      if (type === 'ping') {
+        // Double sonar pulse for incoming notifications
+        for (let i = 0; i < 2; i++) {
+          const delay = i * 0.22;
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(880, ctx.currentTime + delay);
+          gain.connect(ctx.destination);
+          osc.connect(gain);
+          gain.gain.setValueAtTime(0.12, ctx.currentTime + delay);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + delay + 0.18);
+          osc.start(ctx.currentTime + delay);
+          osc.stop(ctx.currentTime + delay + 0.18);
+        }
+      } else if (type === 'success') {
+        // High ascending success chord
+        const freqs = [523.25, 659.25, 783.99, 1046.5];
+        freqs.forEach((freq, idx) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(freq, ctx.currentTime + idx * 0.08);
+          gain.connect(ctx.destination);
+          osc.connect(gain);
+          gain.gain.setValueAtTime(0.08, ctx.currentTime + idx * 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + idx * 0.08 + 0.22);
+          osc.start(ctx.currentTime + idx * 0.08);
+          osc.stop(ctx.currentTime + idx * 0.08 + 0.22);
+        });
+      } else if (type === 'click') {
+        // Subtle interface tap sound
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(600, ctx.currentTime);
+        gain.connect(ctx.destination);
+        osc.connect(gain);
+        gain.gain.setValueAtTime(0.04, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.04);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.04);
+      }
+    } catch (e) {
+      console.warn("Sound play muted/blocked: ", e);
+    }
+  }
+
+  // Bind click sound helper globally to buttons and chips
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('button') || e.target.closest('.chip') || e.target.closest('.garage-card') || e.target.closest('a')) {
+      playSound('click');
+    }
+  });
+
+  // ---- Mock Garages Data ----
+  const MOCK_GARAGES = [
+    { id: 'g1', name: 'Anuradhapura Auto Care', dist: 1.2, rating: '4.9', reviews: 72, spec: 'Accessories & Brakes' },
+    { id: 'g2', name: 'Royal Garage & Repairs', dist: 3.4, rating: '4.8', reviews: 110, spec: 'AC & Overhauls' },
+    { id: 'g3', name: 'Lanka Super Mechanics', dist: 5.8, rating: '4.7', reviews: 45, spec: 'Electrical & Engine' }
+  ];
+
+  // ---- Issue Categories Taxonomy ----
+  const CATEGORY_ISSUES = {
+    Accessories: ['Wiring', 'Lighting', 'Audio Systems', 'ACC'],
+    Engine: ['Tune-ups', 'Overhauls', 'Sensors', 'Oil/Filters'],
+    'Other Stuff': ['Brakes', 'Suspension', 'Transmission', 'AC Repair']
+  };
+
+  let selectedGarage = MOCK_GARAGES[0];
+  let selectedIssue = '';
+
+  // ---- Chip helpers ----
+  qsa('#req-vehicle-chips .chip').forEach(c => c.addEventListener('click', function() {
+    qsa('#req-vehicle-chips .chip').forEach(x => x.classList.remove('active'));
+    this.classList.add('active');
+  }));
+
+  function renderIssueChips(categoryName) {
+    const container = $('req-issue-chips');
+    container.innerHTML = '';
+    const issues = CATEGORY_ISSUES[categoryName] || [];
+    issues.forEach((issueText) => {
+      const chip = document.createElement('button');
+      chip.className = 'chip';
+      chip.textContent = issueText;
+      chip.addEventListener('click', function() {
+        qsa('#req-issue-chips .chip').forEach(x => x.classList.remove('active'));
+        this.classList.add('active');
+        selectedIssue = issueText;
+        onIssueSelected();
+      });
+      container.appendChild(chip);
+    });
+    // Hide price and garage select on category change until specific issue is picked
+    hide($('garage-section'));
+    hide($('price-estimate'));
+    hide($('request-action-container'));
+    hide($('self-drive-action-container'));
+  }
+
+  qsa('#req-category-chips .chip').forEach(c => c.addEventListener('click', function() {
+    qsa('#req-category-chips .chip').forEach(x => x.classList.remove('active', 'active-canopy'));
+    this.classList.add('active-canopy');
+    renderIssueChips(this.textContent);
+  }));
+
+  qsa('#auth-vehicle-chips .chip').forEach(c => c.addEventListener('click', function() {
+    qsa('#auth-vehicle-chips .chip').forEach(x => x.classList.remove('active'));
+    this.classList.add('active');
+  }));
+
+  function onIssueSelected() {
+    // Populate and show garage list
+    const listEl = $('garage-list');
+    listEl.innerHTML = '';
+    MOCK_GARAGES.forEach((g) => {
+      const card = document.createElement('div');
+      card.className = 'garage-card' + (selectedGarage.id === g.id ? ' active' : '');
+      card.innerHTML = `
+        <div class="garage-pic">${g.name[0]}</div>
+        <div class="garage-info">
+          <div class="garage-name">${g.name}</div>
+          <div class="garage-meta">${g.spec} · ~${g.dist.toFixed(1)} km away</div>
+          <div class="garage-rating"><span>${g.rating}</span><span>★</span><span>(${g.reviews})</span></div>
+        </div>
+      `;
+      card.addEventListener('click', () => {
+        qsa('.garage-card').forEach(x => x.classList.remove('active'));
+        card.classList.add('active');
+        selectedGarage = g;
+        updateEstimates();
+      });
+      listEl.appendChild(card);
+    });
+    show($('garage-section'));
+    updateEstimates();
+  }
+
+  function updateEstimates() {
+    computePrice(selectedGarage.dist, qs('#req-category-chips .active-canopy')?.textContent || 'Engine');
+    show($('price-estimate'));
+    
+    // Toggle correct button based on simple issue (ACC) or breakdown rescue
+    if (selectedIssue === 'ACC') {
+      show($('self-drive-action-container'));
+      hide($('request-action-container'));
+    } else {
+      show($('request-action-container'));
+      hide($('self-drive-action-container'));
+    }
+  }
+
+  // ---- Auth ----
+  qsa('.auth-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      qsa('.auth-toggle-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      state.authMode = this.dataset.mode;
+      const isSignup = state.authMode === 'signup';
+      authTitle.textContent = isSignup ? 'Create your account' : 'Welcome back';
+      authSub.textContent = isSignup ? 'Sign up to request roadside mechanics fast.' : 'Log in to request a mechanic.';
+      qsa('[id="auth-name"], [id="auth-email"], [id="auth-confirm"]').forEach(el => {
+        el.style.display = isSignup ? '' : 'none';
+      });
+      qs('.label', authFields.parentElement).style.display = isSignup ? '' : 'none';
+      qs('#auth-vehicle-chips').style.display = isSignup ? '' : 'none';
+      btnAuth.textContent = isSignup ? 'Create account' : 'Log in';
+      authSwitchLink.textContent = isSignup ? 'Log in' : 'Create account';
+    });
+  });
+
+  authSwitchLink.addEventListener('click', function() {
+    const isSignup = state.authMode === 'signup';
+    const target = isSignup ? 'login' : 'signup';
+    qsa('.auth-toggle-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.mode === target);
+    });
+    state.authMode = target;
+    qsa('.auth-toggle-btn').forEach(b => {
+      if (b.dataset.mode === target) b.click();
+    });
+  });
+
+  btnAuth.addEventListener('click', () => {
+    state.authed = true;
+    hide(authScreen);
+    show(requestScreen);
+    renderIssueChips('Engine');
+    // Set first engine chip active as default
+    setTimeout(() => {
+      const firstIssue = qs('#req-issue-chips .chip');
+      if (firstIssue) firstIssue.click();
+    }, 100);
+    setStatus('#8C5C3D', 'Select your issue and vehicle to view nearby garages');
+  });
+
+  // ---- Request breakdown rescue (SOS) ----
+  btnRequest.addEventListener('click', () => {
+    if (!state.online && state.mechScreen === 'dashboard') {
+      setStatus('#FFC936', 'Enable Online on the mechanic panel first');
+      return;
+    }
+    if (state.booking !== 'idle') return;
+    state.booking = 'searching';
+    hide(requestScreen); show(customerSearching);
+    
+    // Play alert sound for incoming request
+    setTimeout(() => {
+      playSound('ping');
+    }, 100);
+    
+    openSheet();
+    startTimer();
+    setStatus('#FFC936', 'Rescue requested! Accept the breakdown ping on the mechanic panel');
+  });
+
+  // ---- Self-Drive Flow ----
+  $('btn-self-drive').addEventListener('click', () => {
+    hide(requestScreen);
+    show($('customer-self-drive'));
+    $('sd-title').textContent = `Drive to ${selectedGarage.name}`;
+    $('sd-badge').textContent = `~${selectedGarage.dist.toFixed(1)} km remaining`;
+    $('sd-eta-val').textContent = Math.round(selectedGarage.dist * 3.5);
+    setStatus('#2C6B56', `Self-driving path coordinates set to ${selectedGarage.name}`);
+  });
+
+  $('btn-sd-end').addEventListener('click', () => {
+    hide($('customer-self-drive'));
+    show(requestScreen);
+    setStatus('#8C5C3D', 'Arrived at garage safely');
+  });
+
+  $('btn-sd-call').addEventListener('click', () => {
+    setStatus('#2C6B56', `Calling ${selectedGarage.name}...`);
+  });
+
+  // ---- Online switch ----
+  onlineSwitch.addEventListener('click', () => {
+    state.online = !state.online;
+    onlineSwitch.classList.toggle('on', state.online);
+    switchLabel.textContent = state.online ? 'Online' : 'Offline';
+    onlineIndicator.classList.toggle('hidden', !state.online);
+    if (state.booking === 'idle')
+      setStatus('#8C5C3D', state.online ? 'Online — ready to receive requests' : 'Idle — toggle mechanic online');
+  });
+
+  // ---- Create panel ----
+  btnCreatePanel.addEventListener('click', () => {
+    state.mechScreen = 'dashboard';
+    hide(mechForm); show(mechDashboard);
+    state.online = true;
+    onlineSwitch.classList.add('on');
+    switchLabel.textContent = 'Online';
+    onlineIndicator.classList.remove('hidden');
+    setStatus('#8C5C3D', 'Online — ready to receive requests');
+  });
+  btnEditSkills.addEventListener('click', () => {
+    state.mechScreen = 'form';
+    hide(mechDashboard); show(mechForm);
+    btnCreatePanel.textContent = '🔧  Save profile';
+  });
+
+  // ---- Simulate job (from dashboard) ----
+  btnSimulate.addEventListener('click', () => {
+    if (!state.online) { setStatus('#FFC936', 'Go online first'); return; }
+    if (state.booking !== 'idle') return;
+    state.booking = 'searching';
+    openSheet();
+    startTimer();
+    playSound('ping');
+    setStatus('#FFC936', 'Incoming job — claim it on the right panel');
+  });
+
+  // ---- Sheet drag (mobile) ----
+  let dragStartY = 0, dragTranslate = 0, isDragging = false;
+  sheetHandle.addEventListener('pointerdown', e => {
+    isDragging = true; dragStartY = e.clientY;
+    sheetPanel.style.transition = 'none';
+    sheetPanel.setPointerCapture(e.pointerId);
+  });
+  document.addEventListener('pointermove', e => {
+    if (!isDragging) return;
+    const dy = e.clientY - dragStartY;
+    dragTranslate = Math.max(0, dy);
+    sheetPanel.style.transform = `translateY(${dragTranslate}px)`;
+  });
+  document.addEventListener('pointerup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    sheetPanel.style.transition = 'transform 0.35s cubic-bezier(0.22,1,0.36,1)';
+    if (dragTranslate > 100) { closeSheet(); resetToIdle(); }
+    else { sheetPanel.style.transform = ''; }
+    dragTranslate = 0;
+  });
+
+  // ---- Sheet open/close ----
+  function openSheet() {
+    sheetBg.classList.add('open');
+    state.sheetOpen = true;
+  }
+  function closeSheet() {
+    sheetBg.classList.remove('open');
+    sheetPanel.style.transform = '';
+    state.sheetOpen = false;
+  }
+  sheetScrim.addEventListener('click', () => { closeSheet(); resetToIdle(); });
+
+  // ---- Timer ----
+  function startTimer() {
+    state.timer = 30; timerNum.textContent = '30';
+    stopTimer();
+    state.timerId = setInterval(() => {
+      state.timer--;
+      timerNum.textContent = state.timer;
+      if (state.timer <= 0) {
+        resetToIdle();
+        setStatus('#C0492F', 'Request expired — no mechanic responded');
+      }
+    }, 1000);
+  }
+  function stopTimer() { if (state.timerId) { clearInterval(state.timerId); state.timerId = null; } }
+
+  // ---- Claim job ----
+  btnClaim.addEventListener('click', () => {
+    if (state.booking !== 'searching') return;
+    state.booking = 'matched';
+    closeSheet(); stopTimer();
+    playSound('success');
+    // Show tracking on customer side
+    hide(customerSearching); show(customerTracking);
+    startTracking();
+    // Show navigating on mechanic side
+    hide(mechDashboard); show(mechNavigating);
+    setStatus('#2C6B56', 'Job claimed — navigating to customer');
+  });
+
+  // ---- Decline ----
+  btnDecline.addEventListener('click', () => { closeSheet(); resetToIdle(); });
+
+  // ---- Tracking simulation ----
+  function startTracking() {
+    const STATUS = ['Request accepted', 'Mechanic en route', 'Almost there', 'Arrived'];
+    const pin = trackMechPin, route = trackRoute, badge = trackBadge;
+    let step = 0;
+    state.trackStep = 0;
+    pin.style.left = '26%'; pin.style.top = '20%';
+    route.classList.remove('active');
+    badge.textContent = 'En route';
+
+    function updateStep() {
+      trackStatusLabel.textContent = STATUS[step];
+      if (step === 3) {
+        trackTitle.textContent = 'Mechanic arrived';
+        etaValue.textContent = '0';
+        badge.textContent = 'Arrived';
+        route.classList.add('active');
+        pin.style.left = '40%'; pin.style.top = '45%';
+        playSound('success');
+      } else {
+        trackTitle.textContent = 'On the way to you';
+        etaValue.textContent = Math.max(2, 12 - step * 4);
+        const pct = step * 0.25;
+        pin.style.left = (26 + pct * 20) + '%';
+        pin.style.top = (20 + pct * 30) + '%';
+        badge.textContent = STATUS[step];
+        if (step >= 1) route.classList.add('active');
+      }
+      steps.forEach((el, i) => {
+        el.classList.toggle('on', i <= step);
+      });
+      step++;
+      if (step <= 3) { state.trackingId = setTimeout(updateStep, 2500); }
+      else { state.trackingId = null; }
+    }
+    updateStep();
+  }
+  function stopTracking() {
+    if (state.trackingId) { clearTimeout(state.trackingId); state.trackingId = null; }
+  }
+
+  // ---- Cancel / end ----
+  btnCancelRequest.addEventListener('click', () => { stopTracking(); resetToIdle(); setStatus('#C0492F', 'Request cancelled'); });
+  const btnEndJob = $('btn-end-job');
+  if (btnEndJob) btnEndJob.addEventListener('click', () => { stopTracking(); resetToIdle(); setStatus('#8C5C3D', 'Job ended'); });
+  const btnNavMessage = $('btn-nav-message');
+  if (btnNavMessage) btnNavMessage.addEventListener('click', () => {
+    setStatus('#FFC936', 'Pre-diagnosis chat opened (simulated)');
+  });
+
+  // ---- Helpers ----
+  function resetToIdle() {
+    state.booking = 'idle';
+    hide(customerSearching); hide(customerTracking); hide(customerMatched); hide($('customer-self-drive'));
+    if (state.authed) show(requestScreen);
+    stopTimer(); stopTracking();
+    if (state.mechScreen === 'dashboard') {
+      hide(mechNavigating); show(mechDashboard);
+    }
+    setStatus('#8C5C3D', state.online ? 'Online — ready' : 'Idle — toggle mechanic online');
+  }
+  function hide(el) { el.classList.add('hidden'); }
+  function show(el) { el.classList.remove('hidden'); }
+  function setStatus(color, text) { statusDot.style.background = color; statusText.textContent = text; }
+
+  console.log('Garage Simulation ready — interactive dual-device preview');
+})();
+</script>
+</body>
+</html>

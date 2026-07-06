@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Garage</string>
+    <string name="mechanic_panel_title">Mechanic Panel</string>
+    <string name="customer_panel_title">Customer Panel</string>
+    <string name="request_mechanic">Request Nearby Mechanic</string>
+    <string name="accept_job">Accept Job</string>
+    <string name="searching_message">Finding closest mechanics within 5km…</string>
+    <string name="mechanic_on_way">Mechanic is on the way!</string>
+    <string name="call_mechanic">Call</string>
+    <string name="go_online">Go Online</string>
+    <string name="go_offline">Go Offline</string>
+    <string name="incoming_request">Incoming Request</string>
+</resources>

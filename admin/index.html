@@ -2368,7 +2368,6 @@ function deleteStudent(id) {
 </head>
 
 <body>
-  <!-- Page Loader Overlay -->
   <div id="sjc-page-loader">
     <div class="sjc-loader-content">
       <img class="sjc-loader-logo" src="/logo.jpg" alt="SJC Logo">
@@ -2380,13 +2379,11 @@ function deleteStudent(id) {
     </div>
   </div>
 
-  <!-- Global Loader HTML -->
   <div class="loader-bar">
     <div class="loader-bar-fill"></div>
   </div>
 
 
-<!-- ══════════════ LOGIN SCREEN ══════════════ -->
 <div id="loginScreen">
   <div class="login-left">
     <div class="logo-mark">
@@ -2414,7 +2411,6 @@ function deleteStudent(id) {
         <button class="role-tab" onclick="switchTab('teacher')">Teacher</button>
       </div>
 
-      <!-- Admin -->
       <div class="login-pane active" id="lp-superadmin" data-role="superadmin">
         <div class="form-group" style="margin-bottom:15px">
           <label style="font-size:0.75rem;font-weight:700;color:var(--brand-primary);margin-bottom:6px;display:block">Email</label>
@@ -2430,7 +2426,6 @@ function deleteStudent(id) {
         <p class="pin-hint">Authorised personnel only</p>
       </div>
 
-      <!-- Teacher -->
       <div class="login-pane" id="lp-teacher" data-role="teacher">
         <div class="form-group" style="margin-bottom:15px">
           <label style="font-size:0.75rem;font-weight:700;color:var(--brand-primary);margin-bottom:6px;display:block">Email</label>
@@ -2449,7 +2444,6 @@ function deleteStudent(id) {
   </div>
 </div>
 
-<!-- â• â• â• â• â• â• â• â• â• â• â• â• â• â•  APP SHELL â• â• â• â• â• â• â• â• â• â• â• â• â• â•  -->
 <div id="appShell">
   <header class="topbar">
     <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" onclick="toggleSidebar()">
@@ -2488,7 +2482,6 @@ function deleteStudent(id) {
   <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="closeSidebar()"></div>
 </div>
 
-<!-- Modal -->
 <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
   <div class="modal" id="modalContent"></div>
 </div>
@@ -3306,7 +3299,6 @@ function buildSA(){
     
     <div style="max-width: 800px; margin: 0 auto;">
       
-      <!-- Progress Banner -->
       <div class="card" style="margin-bottom: 24px; padding: 24px; background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary)); color: #fff; border: none; overflow: hidden; position: relative;">
         <div style="position: relative; z-index: 2;">
           <h3 style="font-family:var(--font-display); font-size: 1.5rem; margin-bottom: 8px;">Productivity Overview</h3>
@@ -3320,7 +3312,6 @@ function buildSA(){
         </div>
       </div>
       
-      <!-- Input Area -->
       <div style="display:flex; gap: 12px; margin-bottom: 24px;">
          <input type="text" id="new-todo-input" placeholder="What needs to be done?" 
           style="flex:1; padding: 16px 20px; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; font-family: inherit; font-size: 1.05rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.3s ease; background: rgba(255,255,255,0.8); backdrop-filter: blur(10px);" 
@@ -3336,7 +3327,6 @@ function buildSA(){
          </button>
       </div>
 
-      <!-- Task List -->
       <div style="display:flex;flex-direction:column;gap:12px;">
          ${todos.map(t => `
            <div style="display:flex; align-items:center; justify-content:space-between; padding: 16px 20px; background: rgba(255,255,255,0.7); backdrop-filter: blur(8px); border-radius: 12px; border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 4px 15px rgba(0,0,0,0.02); transition: all 0.3s ease;"
@@ -3609,7 +3599,6 @@ function rSASettings(){
     <div id="set-msg" style="display:none;font-size:.78rem;padding:8px 12px;border-radius:6px;margin-bottom:12px"></div>
     <button class="btn btn-primary" onclick="changePIN()">Update Password</button>
     <p style="font-size:.72rem;color:#ccc;margin-top:8px"></p>
-    <!-- Teacher PIN Management -->
     <div style="margin-top:24px;border-top:1px solid #eee;padding-top:20px;">
       <h3 style="font-size:.9rem;font-weight:600;color:var(--brand-primary);margin-bottom:16px">Change Teacher Password</h3>
       <div class="form-group"><label>New Teacher PIN</label><input autocomplete="off" type="password" id="set-t-new" placeholder="Min. 4 characters"></div>
@@ -3617,7 +3606,6 @@ function rSASettings(){
       <div id="set-t-msg" style="display:none;font-size:.78rem;padding:8px 12px;border-radius:6px;margin-bottom:12px;margin-top:12px;"></div>
     </div>
 
-    <!-- Role Permissions -->
     <div style="margin-top:24px;border-top:1px solid #eee;padding-top:20px;">
       <h3 style="font-size:.9rem;font-weight:600;color:var(--brand-primary);margin-bottom:16px">Teacher Permissions</h3>
       <div style="display:flex;flex-direction:column;gap:12px;font-size:.85rem;color:#444;">
@@ -3702,7 +3690,6 @@ function rSADatabase(){
     <div><h2>Database</h2><p>Manage teachers, pending registrations, and stored data</p></div>
   </div>
 
-  <!-- Pending Student Registrations -->
   <div class="card" style="margin-bottom:20px;${pending.length?'border:2px solid rgba(201,168,76,0.4);':''}">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
       <div>
@@ -3731,7 +3718,6 @@ function rSADatabase(){
     </div>`}
   </div>
 
-  <!-- Teachers Management -->
   <div class="card" style="margin-bottom:20px;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
       <div>
@@ -3766,7 +3752,6 @@ function rSADatabase(){
     </div>
   </div>
 
-  <!-- Draft -->
   <div class="card" style="margin-bottom:20px;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
       <h3 style="font-size:.9rem;font-weight:700;color:var(--brand-primary);">Saved Student Draft</h3>
@@ -3775,7 +3760,6 @@ function rSADatabase(){
     ${draft ? `<pre style="background:#f8f8f8;padding:14px;border-radius:8px;font-size:.73rem;max-height:200px;overflow:auto;white-space:pre-wrap;word-break:break-all;">${esc(draft)}</pre>` : `<p style="color:var(--text-muted);font-size:.82rem;">No draft saved.</p>`}
   </div>
 
-  <!-- Students raw -->
   <div class="card" style="margin-bottom:20px;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
       <h3 style="font-size:.9rem;font-weight:700;color:var(--brand-primary);">Students (${students.length})</h3>
@@ -5114,7 +5098,6 @@ async function deleteNote(id) {
 }
 </script>
 
-  <!-- PIN Reset Modal -->
   <div class="modal-overlay" id="resetModal">
     <div class="modal">
       <div class="modal-hdr">
@@ -5135,7 +5118,6 @@ async function deleteNote(id) {
     </div>
   </div>
 
-  <!-- OTP Modal -->
   <div class="modal-overlay" id="otpModal">
     <div class="modal">
       <div class="modal-hdr">
@@ -5317,7 +5299,6 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 
-<!-- CUSTOM CONFIRM MODAL -->
 
 <div id="customConfirmOverlay">
   <div class="card" style="max-width: 380px; text-align: center; padding: 30px 20px; width:90%; background: #fff;">

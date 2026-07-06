@@ -1,0 +1,9 @@
+[
+  {
+    "id": "9702c0a5-17ac-463a-a2f8-b65b4480fda0",
+    "username": "jake",
+    "passwordHash": "981c4d9d5b491b7dab41992a699f830a:334fc14ec0d35594a174462b65986a386db2ad8bc9e31ff2659019a3677b2dd557ad47280d93909892c98981b04a6dce6889446589a6aabba9e416632a9bf48f",
+    "isAdmin": true,
+    "createdAt": "2026-07-03T17:35:32.527Z"
+  }
+]

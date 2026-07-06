@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Garage",
+    "slug": "garage",
+    "owner": "jakenotdetected",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.garage.mechanic",
+      "adaptiveIcon": {
+        "backgroundColor": "#1E3859"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0dfda668-5c66-42a6-921c-7dd9ef361a8f"
+      }
+    }
+  }
+}

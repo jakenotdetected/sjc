@@ -254,8 +254,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
   <link rel="stylesheet" href="/loader.css?v=12">
 </head>
 <body>
-  <!-- ════ STUDENT PORTAL UNDER MAINTENANCE ════
-       To bring the portal back online, delete this entire block. -->
   <div id="portal-maintenance" style="position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;padding:32px;background:radial-gradient(120% 120% at 50% 0%,#4a1010 0%,#2a0808 55%,#1a0505 100%);font-family:'Inter',system-ui,sans-serif;">
     <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(212,175,55,0.06) 1px,transparent 1px);background-size:22px 22px;opacity:.5;pointer-events:none;"></div>
     <div style="position:relative;text-align:center;max-width:520px;width:100%;">
@@ -277,7 +275,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
     </div>
   </div>
 
-  <!-- Page Loader Overlay -->
   <div id="sjc-page-loader">
     <div class="sjc-loader-content">
       <img class="sjc-loader-logo" src="/logo.jpg" alt="SJC Logo">
@@ -289,7 +286,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
     </div>
   </div>
 
-<!-- Global Loader HTML -->
 
     <div class="loader-bar">
       <div class="loader-bar-fill"></div>
@@ -301,7 +297,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
 
 <div id="toast"></div>
 
-<!-- BOOK MODAL -->
 <div class="modal-overlay" id="bookModal">
   <div class="modal-box">
     <div class="modal-title">Request an Appointment</div>
@@ -321,9 +316,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
   </div>
 </div>
 
-<!-- ═══════════════════════════════════
-     AUTH SCREEN
-════════════════════════════════════ -->
 <div id="authScreen">
   <div class="auth-left">
     <div class="auth-left-orb"></div><div class="auth-left-orb2"></div>
@@ -346,7 +338,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
         <button type="button" class="auth-tab active" id="tabLogin" style="position:relative;z-index:10" onclick="switchAuthTab('login')">Sign In</button>
         <button type="button" class="auth-tab" id="tabRegister" style="position:relative;z-index:10" onclick="switchAuthTab('register')">Create Account</button>
       </div>
-      <!-- LOGIN -->
       <div id="loginForm">
         <div class="form-group"><label>Email Address</label><input type="email" autocomplete="off" id="loginEmail" autocomplete="off" placeholder="your@email.com"/></div>
         <div class="form-group"><label>Password</label><input autocomplete="off" type="password" id="loginPass" placeholder="••••••••"/></div>
@@ -355,7 +346,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
       </div>
 
       
-        <!-- PENDING APPROVAL -->
         <div id="pendingScreen" style="display:none;text-align:center;padding:20px 0">
           <div style="width:64px;height:64px;border-radius:50%;background:rgba(201,168,76,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a07830" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -368,7 +358,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
           <button class="btn-auth btn-auth-secondary" onclick="document.getElementById('pendingScreen').style.display='none';document.getElementById('loginForm').style.display='block';switchAuthTab('login')">Back to Sign In</button>
         </div>
 
-        <!-- REGISTER (multi-step) -->
       <div id="registerForm" style="display:none">
         <div class="step-bar" id="stepBar">
           <div class="step-wrap"><div class="step-dot active" id="sdot1">1</div><div class="step-label">Account</div></div>
@@ -380,7 +369,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
           <div class="step-wrap"><div class="step-dot" id="sdot4">4</div><div class="step-label">Interests</div></div>
         </div>
 
-        <!-- STEP 1 -->
         <div id="regStep1">
           <div class="form-row">
             <div class="form-group"><label>First Name</label><input autocomplete="off" type="text" id="r1-first" placeholder="Kamal"/></div>
@@ -392,7 +380,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
           <button class="btn-auth btn-auth-primary" onclick="regNext(1)">Continue →</button>
         </div>
 
-        <!-- STEP 2 -->
         <div id="regStep2" style="display:none">
           <div class="form-row">
             <div class="form-group"><label>Grade / Year</label>
@@ -409,7 +396,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
           </div>
         </div>
 
-        <!-- STEP 3 -->
         <div id="regStep3" style="display:none">
           <div class="form-group"><label>Profile Photo</label>
             <div class="photo-upload" id="photoUploadZone">
@@ -435,7 +421,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
           </div>
         </div>
 
-        <!-- STEP 4 -->
         <div id="regStep4" style="display:none">
           <div class="form-group"><label>Skills (select all that apply)</label>
             <div class="tag-picker" id="skillPicker">
@@ -475,16 +460,12 @@ input,select,textarea{font-family:'Inter',sans-serif}
             <button class="btn-auth btn-auth-primary" style="flex:2" onclick="finishRegister()">Create My Account</button>
           </div>
         </div>
-      </div><!-- end registerForm -->
+      </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════
-     APP (after login)
-════════════════════════════════════ -->
 <div id="app">
-  <!-- TOPBAR -->
   <div class="tb">
     <button class="tb-burger" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
     <a href="/" class="tb-brand">
@@ -500,9 +481,7 @@ input,select,textarea{font-family:'Inter',sans-serif}
       </div>
     </div>
   </div>
-  <!-- BODY -->
   <div class="app-body">
-    <!-- SIDEBAR -->
     <div class="sb" id="sidebar">
       <div class="sb-section">Student</div>
       <button class="sb-item active" id="sbi-dashboard" onclick="showPage('dashboard')">
@@ -525,10 +504,8 @@ input,select,textarea{font-family:'Inter',sans-serif}
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Sign Out</button></div>
     </div>
 
-    <!-- MAIN CONTENT -->
     <div class="main" id="mainContent">
 
-      <!-- DASHBOARD -->
       <div class="page active" id="page-dashboard">
         <div class="pg-head">
           <div class="pg-title" id="dashGreeting">Good morning!</div>
@@ -549,7 +526,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
           </div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:18px;margin-bottom:20px">
-          <!-- COMPLETION RING -->
           <div class="completion-card">
             <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--brand-primary);margin-bottom:16px;display:flex;align-items:center;gap:8px">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Profile Completion</div>
@@ -571,7 +547,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
             </div>
             <button onclick="showPage('profile')" style="margin-top:16px;width:100%;padding:9px;border:1.5px solid var(--cream-3);border-radius:8px;background:var(--cream);font-size:0.8rem;font-weight:600;color:var(--brand-primary);cursor:pointer">Complete Profile →</button>
           </div>
-          <!-- UPCOMING APPOINTMENTS -->
           <div class="sec-card" style="margin-bottom:0">
             <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Upcoming Appointments</div>
             <div id="dashAppts"></div>
@@ -579,7 +554,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Book New Appointment</button>
           </div>
         </div>
-        <!-- RECOMMENDED CAREERS -->
         <div class="sec-card">
           <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>Recommended Careers</div>
           <div class="cards-grid" id="dashCareers">
@@ -588,10 +562,8 @@ input,select,textarea{font-family:'Inter',sans-serif}
         </div>
       </div>
 
-      <!-- PROFILE -->
       <div class="page" id="page-profile">
         <div class="pg-head"><div class="pg-title">My Profile</div><div class="pg-sub">Keep your information up to date for better career recommendations.</div></div>
-        <!-- Photo & Name -->
         <div class="sec-card">
           <div class="profile-photo-area">
             <div class="profile-avatar-big" id="profAvatarBig">
@@ -607,7 +579,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
           </div>
           <div class="form-group"><label>About Me</label><textarea autocomplete="off" id="profBio" placeholder="Tell us about yourself, your goals, and what you enjoy..." rows="3"></textarea></div>
         </div>
-        <!-- Academic -->
         <div class="sec-card">
           <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 8.5 12 15 2 8.5"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg>Academic Details</div>
           <div class="form-row">
@@ -620,7 +591,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
           </div>
           <button class="btn-save" onclick="saveAcademic()">Save Academic Details</button>
         </div>
-        <!-- Skills -->
         <div class="sec-card">
           <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>My Skills</div>
           <div class="skills-display" id="profSkillsDisplay"><span style="color:var(--muted);font-size:0.82rem">No skills added yet.</span></div>
@@ -640,7 +610,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
           </div>
           <button class="btn-save" style="margin-top:14px" onclick="saveSkills()">Save Skills</button>
         </div>
-        <!-- Career Interests -->
         <div class="sec-card">
           <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 8.5 12 15 2 8.5"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg>Career Interests</div>
           <div class="tag-picker" id="profCareerPicker">
@@ -659,7 +628,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
           </div>
           <button class="btn-save" style="margin-top:14px" onclick="saveCareerInterests()">Save Interests</button>
         </div>
-        <!-- CV -->
         <div class="sec-card">
           <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>CV / Resume</div>
           <div class="cv-display" id="cvDisplay" style="display:none">
@@ -673,7 +641,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
             <div><div style="font-size:0.82rem;font-weight:600;color:var(--brand-primary)">Upload your CV</div><div style="font-size:0.74rem;color:var(--muted)">PDF, DOC or DOCX – max 5MB</div></div>
           </div>
         </div>
-        <!-- Achievements -->
         <div class="sec-card">
           <div class="sec-card-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>Extracurricular Achievements</div>
           <div class="achievement-list" id="achievementList"><p style="color:var(--muted);font-size:0.85rem">No achievements added yet.</p></div>
@@ -685,7 +652,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
         <button class="btn-save" style="width:100%;padding:14px;font-size:0.9rem" onclick="saveFullProfile()">Save All Changes</button>
       </div>
 
-      <!-- CAREER EXPLORER -->
       <div class="page" id="page-careers">
         <div class="pg-head"><div class="pg-title">Career Explorer</div><div class="pg-sub">Discover careers that match your interests and stream.</div></div>
         <div class="sec-card" style="padding:20px 24px">
@@ -717,7 +683,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
       </div>
 
       
-      <!-- UNIVERSITY GUIDANCE -->
       <div class="page" id="page-university">
         <div class="pg-head"><div class="pg-title">University Guidance Portal</div><div class="pg-sub">Explore higher education opportunities locally and internationally.</div></div>
         
@@ -760,7 +725,6 @@ input,select,textarea{font-family:'Inter',sans-serif}
         </div>
       </div>
 
-      <!-- APPOINTMENTS -->
       <div class="page" id="page-appointments">
         <div class="pg-head"><div class="pg-title">My Appointments</div><div class="pg-sub">View and manage your counselling sessions.</div></div>
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
@@ -770,15 +734,14 @@ input,select,textarea{font-family:'Inter',sans-serif}
         <div id="apptListFull"></div>
       </div>
 
-      <!-- EVENTS -->
       <div class="page" id="page-events">
         <div class="pg-head"><div class="pg-title">School Events</div><div class="pg-sub">Upcoming events, workshops, and activities at SJC.</div></div>
         <div id="eventsListPortal"></div>
       </div>
 
-    </div><!-- /main -->
-  </div><!-- /app-body -->
-</div><!-- /app -->
+    </div>
+  </div>
+</div>
 
 <script>
 // ── DATA ──

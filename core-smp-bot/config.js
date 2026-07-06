@@ -2,6 +2,8 @@
 // project (../discord-server-setup/build-layout.js). If those roles get
 // renamed there, update the matching names here too.
 
+export const MINECRAFT_IP = "play.jakenetwork.xyz";
+
 export const STAFF_ROLE_NAMES = [
   "👑 Owner",
   "🔱 Co Owner",

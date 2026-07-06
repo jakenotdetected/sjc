@@ -1,0 +1,21 @@
+- generic [ref=e6]:
+  - generic [ref=e7]:
+    - generic [ref=e8]: 5:31 PM
+    - generic [ref=e9]:
+      - img [ref=e10]
+      - img [ref=e11]
+      - img [ref=e15]
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - img [ref=e21]
+      - heading "garage" [level=1] [ref=e24]
+      - paragraph [ref=e25]: Choose your language
+    - generic [ref=e26] [cursor=pointer]:
+      - heading "English" [level=3] [ref=e28]
+      - img [ref=e29]
+    - generic [ref=e31] [cursor=pointer]:
+      - heading "සිංහල" [level=3] [ref=e33]
+      - img [ref=e34]
+    - generic [ref=e36] [cursor=pointer]:
+      - heading "தமிழ்" [level=3] [ref=e38]
+      - img [ref=e39]

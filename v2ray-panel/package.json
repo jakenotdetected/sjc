@@ -1,0 +1,13 @@
+{
+  "name": "v2ray-vault",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jake Network family V2Ray config sharing panel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

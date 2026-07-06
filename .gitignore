@@ -89,3 +89,6 @@ skills-lock.json
 # Deployment artifacts
 deploy.bat
 
+# Security — never commit the attack-surface inventory (contains hosts, ports, known gaps)
+attacksurface.md
+

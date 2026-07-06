@@ -1,0 +1,341 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - img "SJC Logo"
+      - heading "St. Joseph's College" [level=1]
+      - paragraph: Career Guidance Unit
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e6]
+        - text: St. Joseph's College, Anuradhapura
+      - generic [ref=e9]:
+        - img [ref=e10]
+        - text: sjc.counselling.anuradhapura@gmail.com
+    - generic [ref=e13]:
+      - generic [ref=e14] [cursor=pointer]: English
+      - generic [ref=e15]: "|"
+      - generic [ref=e16] [cursor=pointer]: Sinhala
+      - generic [ref=e17]: "|"
+      - generic [ref=e18] [cursor=pointer]: Tamil
+      - generic [ref=e19]: "|"
+      - link "Student Login" [ref=e20] [cursor=pointer]:
+        - /url: /portal
+      - generic [ref=e21]: "|"
+      - link "Admin" [ref=e22] [cursor=pointer]:
+        - /url: /admin/
+  - navigation [ref=e23]:
+    - generic [ref=e25]:
+      - link "SJC Logo SJC Counselling & Career Guidance Unit St. Joseph's College · Anuradhapura" [ref=e26] [cursor=pointer]:
+        - /url: /
+        - img "SJC Logo" [ref=e28]
+        - generic [ref=e29]:
+          - generic [ref=e30]: SJC Counselling & Career Guidance Unit
+          - generic [ref=e31]: St. Joseph's College · Anuradhapura
+      - list [ref=e32]:
+        - listitem [ref=e33]:
+          - link "Home" [ref=e34] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e35]:
+          - link "About" [ref=e36] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e37]:
+          - link "School" [ref=e38] [cursor=pointer]:
+            - /url: /school
+        - listitem [ref=e39]:
+          - link "Services" [ref=e40] [cursor=pointer]:
+            - /url: /services
+        - listitem [ref=e41]:
+          - link "Careers" [ref=e42] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=e43]:
+          - link "University" [ref=e44] [cursor=pointer]:
+            - /url: /university
+        - listitem [ref=e45]:
+          - link "Wellness" [ref=e46] [cursor=pointer]:
+            - /url: /wellness
+        - listitem [ref=e47]:
+          - link "Events" [ref=e48] [cursor=pointer]:
+            - /url: /events
+        - listitem [ref=e49]:
+          - button "Portals" [ref=e50] [cursor=pointer]:
+            - text: Portals
+            - img [ref=e51]
+        - listitem [ref=e53]:
+          - link "Book Appointment" [ref=e54] [cursor=pointer]:
+            - /url: /appointments
+  - generic [ref=e59]:
+    - generic [ref=e60]:
+      - link "Home" [ref=e61] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e62]: —
+      - generic [ref=e63]: Mental Wellness
+    - generic [ref=e64]: Your Wellbeing Matters
+    - heading "Mental Wellness Resources" [level=1] [ref=e66]:
+      - text: Mental
+      - emphasis [ref=e67]:
+        - text: Wellness
+        - text: Resources
+    - paragraph [ref=e68]: Tools, exercises, and guidance to help you manage stress, build resilience, and maintain positive mental health through every stage of school life.
+  - generic [ref=e70]:
+    - generic [ref=e71]:
+      - generic [ref=e72]: Explore
+      - heading "Areas of Wellness Support" [level=2] [ref=e74]:
+        - text: Areas of
+        - emphasis [ref=e75]: Wellness Support
+      - paragraph [ref=e76]: We offer resources and workshops across the key areas of student mental health and emotional wellbeing.
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - img [ref=e80]
+        - generic [ref=e82]: Stress Management
+        - paragraph [ref=e83]: Techniques and strategies to identify, manage, and reduce the impact of academic and personal stress.
+      - generic [ref=e84]:
+        - img [ref=e86]
+        - generic [ref=e89]: Exam Anxiety
+        - paragraph [ref=e90]: Overcome fear, panic, and performance anxiety before O/L and A/L examinations with proven strategies.
+      - generic [ref=e91]:
+        - img [ref=e93]
+        - generic [ref=e97]: Mindfulness
+        - paragraph [ref=e98]: Breathing techniques, guided meditation, and mindful practices for focus, calm, and clarity of mind.
+      - generic [ref=e99]:
+        - img [ref=e101]
+        - generic [ref=e103]: Anger Management
+        - paragraph [ref=e104]: Identify triggers, develop healthy coping mechanisms, and build emotional self-regulation skills.
+      - generic [ref=e105]:
+        - img [ref=e107]
+        - generic [ref=e112]: Peer Relationships
+        - paragraph [ref=e113]: Navigating friendships, handling conflict, overcoming loneliness, and building healthy social connections.
+      - generic [ref=e114]:
+        - img [ref=e116]
+        - generic [ref=e119]: Family & Home
+        - paragraph [ref=e120]: Coping with family stress, parental pressure, and maintaining wellbeing when home life is difficult.
+      - generic [ref=e121]:
+        - img [ref=e123]
+        - generic [ref=e125]: Resilience
+        - paragraph [ref=e126]: Building the mental strength to bounce back from setbacks, failure, and difficult life events.
+      - generic [ref=e127]:
+        - img [ref=e129]
+        - generic [ref=e131]: Sleep & Energy
+        - paragraph [ref=e132]: Understanding the importance of sleep for mental health, study performance, and overall wellbeing.
+  - generic [ref=e135]:
+    - generic [ref=e136]:
+      - generic [ref=e137]: 4-7-8 Breathing Exercise
+      - paragraph [ref=e138]: This simple breathing technique can calm anxiety, reduce stress, and help you fall asleep faster. Practise it before exams, during stressful moments, or whenever you feel overwhelmed.
+      - paragraph [ref=e139]:
+        - text: Inhale for
+        - strong [ref=e140]: 4 counts
+        - text: "? Hold for"
+        - strong [ref=e141]: 7 counts
+        - text: "? Exhale for"
+        - strong [ref=e142]: 8 counts
+      - button "Start Exercise" [ref=e143] [cursor=pointer]
+    - generic [ref=e144]:
+      - generic [ref=e147]: Ready
+      - generic [ref=e148]: Press Start
+  - generic [ref=e150]:
+    - generic [ref=e151]:
+      - generic [ref=e152]: Practical Tips
+      - heading "Everyday Wellness Practices" [level=2] [ref=e154]:
+        - text: Everyday
+        - emphasis [ref=e155]: Wellness Practices
+    - generic [ref=e156]:
+      - generic [ref=e157]:
+        - img [ref=e159]
+        - generic [ref=e162]: During Exam Season
+        - generic [ref=e163]:
+          - generic [ref=e164]:
+            - generic [ref=e165]: ✔
+            - text: Create a realistic study timetable and stick to it
+          - generic [ref=e166]:
+            - generic [ref=e167]: ✔
+            - text: Take a 10-minute break every 50 minutes of study
+          - generic [ref=e168]:
+            - generic [ref=e169]: ✔
+            - text: Get 7—8 hours of sleep — your brain consolidates memory overnight
+          - generic [ref=e170]:
+            - generic [ref=e171]: ✔
+            - text: Eat proper meals and stay hydrated — avoid all-nighters
+          - generic [ref=e172]:
+            - generic [ref=e173]: ✔
+            - text: Talk to someone if exam worry feels too big to handle alone
+          - generic [ref=e174]:
+            - generic [ref=e175]: ✔
+            - text: "On exam day: breathe deeply, read questions twice, start with what you know"
+      - generic [ref=e176]:
+        - img [ref=e178]
+        - generic [ref=e180]: Daily Mental Health Habits
+        - generic [ref=e181]:
+          - generic [ref=e182]:
+            - generic [ref=e183]: ✔
+            - text: Spend at least 30 minutes outdoors or doing physical activity each day
+          - generic [ref=e184]:
+            - generic [ref=e185]: ✔
+            - text: Limit social media use to less than 1 hour per day during term
+          - generic [ref=e186]:
+            - generic [ref=e187]: ✔
+            - text: Practise gratitude — write down 3 good things each day before bed
+          - generic [ref=e188]:
+            - generic [ref=e189]: ✔
+            - text: Maintain a consistent bedtime and wake-up time
+          - generic [ref=e190]:
+            - generic [ref=e191]: ✔
+            - text: Connect with at least one friend or family member each day
+          - generic [ref=e192]:
+            - generic [ref=e193]: ✔
+            - text: Do one thing you enjoy every day — music, art, sport, or cooking
+      - generic [ref=e194]:
+        - img [ref=e196]
+        - generic [ref=e198]: When You Feel Overwhelmed
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - generic [ref=e201]: ✔
+            - text: Stop and take 5 slow, deep breaths before doing anything
+          - generic [ref=e202]:
+            - generic [ref=e203]: ✔
+            - text: Write down what is worrying you — getting it out of your head helps
+          - generic [ref=e204]:
+            - generic [ref=e205]: ✔
+            - text: Break the problem into the smallest possible next step
+          - generic [ref=e206]:
+            - generic [ref=e207]: ✔
+            - text: Talk to a trusted friend, teacher, or family member
+          - generic [ref=e208]:
+            - generic [ref=e209]: ✔
+            - text: Go for a walk — physical movement shifts mental state
+          - generic [ref=e210]:
+            - generic [ref=e211]: ✔
+            - text: Visit the counselling unit — you don't need to go through it alone
+  - generic [ref=e214]:
+    - generic [ref=e215]:
+      - generic [ref=e216]: Daily Mood Check
+      - generic [ref=e217]: How are you feeling today? Tracking your mood helps you notice patterns and seek support when needed.
+      - generic [ref=e218]:
+        - generic "Great" [ref=e219] [cursor=pointer]: 😍
+        - generic "Good" [ref=e220] [cursor=pointer]: 😄
+        - generic "Okay" [ref=e221] [cursor=pointer]: 🙂
+        - generic "Low" [ref=e222] [cursor=pointer]: 😔
+        - generic "Stressed" [ref=e223] [cursor=pointer]: 😫
+        - generic "Angry" [ref=e224] [cursor=pointer]: 😡
+      - textbox "Any notes about how you're feeling today? (optional)" [ref=e225]
+      - button "Save Entry" [ref=e226] [cursor=pointer]
+    - generic [ref=e227]:
+      - generic [ref=e228]: Daily Affirmation
+      - generic [ref=e230]: "\"You are stronger than you think, braver than you feel, and smarter than you know.\""
+      - generic [ref=e231]: — A.A. Milne
+      - button "Next Affirmation" [ref=e232] [cursor=pointer]
+  - generic [ref=e234]:
+    - generic [ref=e235]:
+      - generic [ref=e236]: Need Help Now?
+      - heading "Crisis Support & Emergency Contacts" [level=2] [ref=e238]:
+        - text: Crisis Support &
+        - emphasis [ref=e239]: Emergency Contacts
+      - paragraph [ref=e240]: If you or someone you know is in crisis, please don't face it alone. Help is always available.
+    - generic [ref=e241]:
+      - generic [ref=e242]:
+        - generic [ref=e243]: 🚨
+        - generic [ref=e244]:
+          - generic [ref=e245]: Emergency — Immediate Danger
+          - paragraph [ref=e246]: If you or someone is in immediate danger of harm, call emergency services right away.
+          - generic [ref=e247]: 119 — Police & Emergency Services
+          - generic [ref=e248]: 110 — Ambulance
+      - generic [ref=e249]:
+        - img [ref=e251]
+        - generic [ref=e253]:
+          - generic [ref=e254]: Mental Health Helpline — Sri Lanka
+          - paragraph [ref=e255]: Free, confidential counselling helpline available to anyone in Sri Lanka facing emotional difficulties.
+          - generic [ref=e256]: 1926 — Sumithrayo Sri Lanka
+          - generic [ref=e257]: 0800 222 200 — Mental Health Helpline
+      - generic [ref=e258]:
+        - generic [ref=e259]: 💬
+        - generic [ref=e260]:
+          - generic [ref=e261]: Talk to a Teacher or Counsellor
+          - paragraph [ref=e262]: Any teacher, form master, or our counselling unit team can help connect you to immediate support at school.
+          - generic [ref=e263]: Visit the Counselling Unit office during school hours
+      - generic [ref=e264]:
+        - generic [ref=e265]: 📧
+        - generic [ref=e266]:
+          - generic [ref=e267]: Contact Us Directly
+          - paragraph [ref=e268]: Reach out to the SJC Counselling by email or book an urgent appointment through the portal.
+          - generic [ref=e269]: ✉ sjc.counselling.anuradhapura@gmail.com
+          - link "Book Urgent Session →" [ref=e270] [cursor=pointer]:
+            - /url: /appointments
+  - generic [ref=e273]:
+    - generic [ref=e274]:
+      - heading "Struggling? Our counsellors are here for you." [level=2] [ref=e275]:
+        - text: Struggling? Our counsellors are
+        - emphasis [ref=e276]: here for you.
+      - paragraph [ref=e277]: Book a confidential wellness session — free for all Josephians, no referral needed.
+    - generic [ref=e278]:
+      - link "Book Wellness Session" [ref=e279] [cursor=pointer]:
+        - /url: /appointments
+      - link "Student Portal" [ref=e280] [cursor=pointer]:
+        - /url: /portal
+  - generic [ref=e282]:
+    - paragraph [ref=e283]: Book a Session
+    - heading "Ready to talk to someone?" [level=2] [ref=e284]
+    - paragraph [ref=e285]: Our counsellors are trained to listen without judgement. Book a free, confidential session today.
+    - link "Book a Session →" [ref=e286] [cursor=pointer]:
+      - /url: /appointments
+  - contentinfo [ref=e287]:
+    - generic [ref=e288]:
+      - generic [ref=e289]:
+        - generic [ref=e290]:
+          - generic [ref=e291]:
+            - img "SJC Logo" [ref=e293]
+            - generic [ref=e294]:
+              - generic [ref=e295]: SJC Counselling & Career Guidance Unit
+              - generic [ref=e296]: Duty First Since 1898
+          - paragraph [ref=e297]: Empowering Josephians with counselling, career guidance, and mental wellness support. Every student deserves the right path.
+        - generic [ref=e298]:
+          - generic [ref=e299]: Quick Links
+          - generic [ref=e300]:
+            - link "About the Unit" [ref=e301] [cursor=pointer]:
+              - /url: /about
+            - link "Our Services" [ref=e302] [cursor=pointer]:
+              - /url: /services
+            - link "Career Guidance" [ref=e303] [cursor=pointer]:
+              - /url: /careers
+            - link "University Guidance" [ref=e304] [cursor=pointer]:
+              - /url: /university
+            - link "Mental Wellness" [ref=e305] [cursor=pointer]:
+              - /url: /wellness
+            - link "Events & Workshops" [ref=e306] [cursor=pointer]:
+              - /url: /events
+            - link "For Parents" [ref=e307] [cursor=pointer]:
+              - /url: /parents
+            - link "Success Stories" [ref=e308] [cursor=pointer]:
+              - /url: /success
+        - generic [ref=e309]:
+          - generic [ref=e310]: Portals
+          - generic [ref=e311]:
+            - link "Student Portal" [ref=e312] [cursor=pointer]:
+              - /url: /student_portal
+            - link "Admin Panel" [ref=e313] [cursor=pointer]:
+              - /url: /admin/login.html
+            - link "Book Appointment" [ref=e314] [cursor=pointer]:
+              - /url: /appointments
+        - generic [ref=e315]:
+          - generic [ref=e316]: Contact
+          - generic [ref=e317]:
+            - img [ref=e318]
+            - text: St. Joseph's College, Anuradhapura, Sri Lanka
+          - generic [ref=e321]:
+            - img [ref=e322]
+            - text: sjc.counselling.anuradhapura@gmail.com
+          - generic [ref=e325]:
+            - img [ref=e326]
+            - text: +94 25 222 5678
+      - generic [ref=e328]:
+        - generic [ref=e329]: © 2026 SJC Counselling - St. Joseph's College, Anuradhapura
+        - generic [ref=e330]:
+          - generic [ref=e331]:
+            - text: Developed By
+            - strong [ref=e332]: Lusanda Yehen
+          - generic [ref=e333]: "|"
+          - generic [ref=e334]:
+            - text: Guidance By
+            - strong [ref=e335]: Asanga Bandara / Isira Didulatha
+          - generic [ref=e336]: "|"
+          - generic [ref=e337]:
+            - text: "Help:"
+            - strong [ref=e338]: 071 59 45 111 / 072 894 4864

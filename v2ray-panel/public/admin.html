@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin — V2Ray Vault</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/loader.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="28" stroke="#c9a24b" stroke-width="2" stroke-dasharray="6 5"/>
+        <circle cx="32" cy="32" r="17" stroke="#e7c874" stroke-width="2"/>
+        <circle cx="32" cy="32" r="5" fill="#e7c874"/>
+      </svg>
+      <span class="stack">V2Ray Vault<small>Admin Panel</small></span>
+    </a>
+    <nav>
+      <span class="who" id="who"></span>
+      <a class="btn small" href="/">View Site</a>
+      <button class="btn small" id="logoutBtn">Logout</button>
+    </nav>
+  </header>
+  <main class="reveal">
+    <h1 class="page-title">Admin <span>Panel</span></h1>
+    <div class="divider"></div>
+
+    <section class="panel">
+      <h2 id="formTitle">New Config Post</h2>
+      <form id="postForm">
+        <div class="field">
+          <label for="title">Title</label>
+          <input id="title" placeholder="e.g. Singapore Server — July" required>
+        </div>
+        <div class="field">
+          <label for="note">Note (optional — shown above the config)</label>
+          <input id="note" placeholder="e.g. Best for YouTube. Works on Dialog & Mobitel.">
+        </div>
+        <div class="field">
+          <label for="body">Config text (this is what gets copied)</label>
+          <textarea id="body" placeholder="vless://... or vmess://... or full JSON config" required></textarea>
+        </div>
+        <button class="btn primary" type="submit" id="submitBtn">Publish Post</button>
+        <button class="btn" type="button" id="cancelEdit" style="display:none;">Cancel Edit</button>
+        <div class="error" id="postError"></div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Posted Configs</h2>
+      <div id="adminPosts" class="admin-post-list"><div class="empty">Loading&hellip;</div></div>
+    </section>
+
+    <section class="panel">
+      <h2>Family Accounts</h2>
+      <form id="userForm">
+        <div class="row">
+          <div class="field">
+            <label for="newUser">Username</label>
+            <input id="newUser" placeholder="e.g. amma" required>
+          </div>
+          <div class="field">
+            <label for="newPass">Password (min 6 chars)</label>
+            <input id="newPass" required>
+          </div>
+        </div>
+        <button class="btn primary" type="submit">Add Account</button>
+        <div class="error" id="userError"></div>
+      </form>
+      <div style="margin-top:22px; overflow-x:auto;">
+        <table>
+          <thead><tr><th>Username</th><th>Role</th><th>Actions</th></tr></thead>
+          <tbody id="userRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Change My Password</h2>
+      <form id="pwForm">
+        <div class="row">
+          <div class="field">
+            <label for="curPw">Current password</label>
+            <input id="curPw" type="password" autocomplete="current-password" required>
+          </div>
+          <div class="field">
+            <label for="newPw">New password (min 6 chars)</label>
+            <input id="newPw" type="password" autocomplete="new-password" required>
+          </div>
+        </div>
+        <button class="btn primary" type="submit">Change Password</button>
+        <div class="error" id="pwMsg"></div>
+      </form>
+    </section>
+  </main>
+  <script>
+    let editingId = null;
+    let myUsername = '';
+
+    function el(tag, cls, text) {
+      const e = document.createElement(tag);
+      if (cls) e.className = cls;
+      if (text !== undefined) e.textContent = text;
+      return e;
+    }
+    async function api(url, opts = {}) {
+      const res = await fetch(url, {
+        headers: { 'Content-Type': 'application/json' },
+        ...opts,
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.status === 401) { location.href = '/login'; throw new Error('unauthorized'); }
+      if (!res.ok) throw new Error(data.error || 'Request failed');
+      return data;
+    }
+
+    // ---- posts ----
+    async function loadPosts() {
+      const posts = await api('/api/posts');
+      const wrap = document.getElementById('adminPosts');
+      wrap.innerHTML = '';
+      if (!posts.length) { wrap.appendChild(el('div', 'empty', 'Nothing posted yet.')); return; }
+      posts.forEach(p => {
+        const card = el('article', 'post');
+        card.appendChild(el('h2', '', p.title));
+        card.appendChild(el('div', 'date', new Date(p.createdAt).toLocaleString()));
+        if (p.note) card.appendChild(el('div', 'note', p.note));
+        const pre = el('pre', '', p.body.length > 400 ? p.body.slice(0, 400) + ' …' : p.body);
+        const block = el('div', 'config-block');
+        block.appendChild(pre);
+        card.appendChild(block);
+        const actions = el('div');
+        actions.style.marginTop = '12px';
+        const editBtn = el('button', 'btn small', 'Edit');
+        editBtn.addEventListener('click', () => {
+          editingId = p.id;
+          document.getElementById('title').value = p.title;
+          document.getElementById('note').value = p.note || '';
+          document.getElementById('body').value = p.body;
+          document.getElementById('formTitle').textContent = 'Edit Post';
+          document.getElementById('submitBtn').textContent = 'Save Changes';
+          document.getElementById('cancelEdit').style.display = '';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        const delBtn = el('button', 'btn small danger', 'Delete');
+        delBtn.addEventListener('click', async () => {
+          if (!confirm(`Delete "${p.title}"?`)) return;
+          await api('/api/posts/' + p.id, { method: 'DELETE' });
+          loadPosts();
+        });
+        actions.appendChild(editBtn);
+        actions.appendChild(delBtn);
+        card.appendChild(actions);
+        wrap.appendChild(card);
+      });
+    }
+
+    function resetForm() {
+      editingId = null;
+      document.getElementById('postForm').reset();
+      document.getElementById('formTitle').textContent = 'New Config Post';
+      document.getElementById('submitBtn').textContent = 'Publish Post';
+      document.getElementById('cancelEdit').style.display = 'none';
+    }
+    document.getElementById('cancelEdit').addEventListener('click', resetForm);
+
+    document.getElementById('postForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const errEl = document.getElementById('postError');
+      errEl.textContent = '';
+      const payload = {
+        title: document.getElementById('title').value,
+        note: document.getElementById('note').value,
+        body: document.getElementById('body').value,
+      };
+      try {
+        if (editingId) {
+          await api('/api/posts/' + editingId, { method: 'PUT', body: JSON.stringify(payload) });
+        } else {
+          await api('/api/posts', { method: 'POST', body: JSON.stringify(payload) });
+        }
+        resetForm();
+        loadPosts();
+      } catch (err) { errEl.textContent = err.message; }
+    });
+
+    // ---- users ----
+    async function loadUsers() {
+      const users = await api('/api/users');
+      const tbody = document.getElementById('userRows');
+      tbody.innerHTML = '';
+      users.forEach(u => {
+        const tr = el('tr');
+        tr.appendChild(el('td', '', u.username));
+        tr.appendChild(el('td', '', u.isAdmin ? 'Admin' : 'Family'));
+        const td = el('td');
+        if (u.username !== myUsername) {
+          const resetBtn = el('button', 'btn small', 'Set Password');
+          resetBtn.addEventListener('click', async () => {
+            const pw = prompt(`New password for ${u.username} (min 6 chars):`);
+            if (!pw) return;
+            try {
+              await api(`/api/users/${u.id}/reset-password`, { method: 'POST', body: JSON.stringify({ password: pw }) });
+              alert('Password updated.');
+            } catch (err) { alert(err.message); }
+          });
+          const delBtn = el('button', 'btn small danger', 'Remove');
+          delBtn.addEventListener('click', async () => {
+            if (!confirm(`Remove account "${u.username}"?`)) return;
+            try { await api('/api/users/' + u.id, { method: 'DELETE' }); loadUsers(); }
+            catch (err) { alert(err.message); }
+          });
+          td.appendChild(resetBtn);
+          td.appendChild(delBtn);
+        } else {
+          td.appendChild(el('span', 'who', 'you'));
+        }
+        tr.appendChild(td);
+        tbody.appendChild(tr);
+      });
+    }
+
+    document.getElementById('userForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const errEl = document.getElementById('userError');
+      errEl.textContent = '';
+      try {
+        await api('/api/users', {
+          method: 'POST',
+          body: JSON.stringify({
+            username: document.getElementById('newUser').value,
+            password: document.getElementById('newPass').value,
+          }),
+        });
+        document.getElementById('userForm').reset();
+        loadUsers();
+      } catch (err) { errEl.textContent = err.message; }
+    });
+
+    // ---- own password ----
+    document.getElementById('pwForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const msg = document.getElementById('pwMsg');
+      msg.textContent = ''; msg.className = 'error';
+      try {
+        await api('/api/change-password', {
+          method: 'POST',
+          body: JSON.stringify({
+            currentPassword: document.getElementById('curPw').value,
+            newPassword: document.getElementById('newPw').value,
+          }),
+        });
+        document.getElementById('pwForm').reset();
+        msg.className = 'success';
+        msg.textContent = 'Password changed.';
+      } catch (err) { msg.textContent = err.message; }
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', async () => {
+      await fetch('/api/logout', { method: 'POST' });
+      location.href = '/login';
+    });
+
+    (async function init() {
+      const me = await api('/api/me');
+      if (!me.isAdmin) { location.href = '/'; return; }
+      myUsername = me.username;
+      document.getElementById('who').textContent = me.username;
+      loadPosts();
+      loadUsers();
+    })();
+  </script>
+</body>
+</html>

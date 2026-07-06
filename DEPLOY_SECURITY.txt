@@ -1,0 +1,78 @@
+SECURITY HARDENING DEPLOYMENT
+==============================
+
+Commit: 44345de "Implement comprehensive security hardening for admin/teacher panels"
+Status: ✓ Pushed to GitHub (https://github.com/jakenotdetected/sjc)
+
+FILES DEPLOYED:
+- server.js (CSRF tokens, account lockout, audit logging, PIN hashing)
+- security-client.js (client-side security utilities)
+- admin/index.html (integrated security client)
+- teacher/index.html (integrated security client)
+- SECURITY.md (complete security documentation)
+- .env.example (environment configuration template)
+
+MANUAL DEPLOYMENT TO VPS (43.228.213.111):
+===========================================
+
+SSH into VPS:
+  ssh root@43.228.213.111
+
+Pull latest changes:
+  cd /var/www/sjc
+  git pull origin main
+
+Restart the application:
+  pm2 restart sjc-cgu
+  pm2 save
+
+Verify deployment:
+  curl -I https://cgu.jakenetwork.xyz/admin/
+  (Should return HTTP 200, not 526)
+
+Configure environment (if not already set):
+  nano /var/www/sjc/.env
+
+  Add/update:
+  ADMIN_EMAIL=asangabandara8@gmail.com
+  GMAIL_USER=sjc.counselling.anuradhpura@gmail.com
+  GMAIL_PASS=your-gmail-app-password
+  NODE_ENV=production
+
+Check logs:
+  pm2 logs sjc-cgu
+  tail -f /var/www/sjc/data/audit.log
+
+TROUBLESHOOTING:
+================
+
+If SSL 526 error persists:
+  1. Check PM2 status: pm2 status
+  2. Check server.js errors: pm2 logs sjc-cgu --err
+  3. Verify port 3000 is listening: netstat -tlnp | grep 3000
+  4. Check Cloudflare origin: https://dash.cloudflare.com
+
+If fail2ban stopped:
+  systemctl status fail2ban
+  systemctl restart fail2ban
+  fail2ban-client status sshd
+
+Check security implementation:
+  curl -I https://cgu.jakenetwork.xyz/api/csrf-token
+  (Should return 200 with CSRF token)
+
+SECURITY FEATURES NOW ACTIVE:
+=============================
+
+✓ CSRF token protection on all state-changing requests
+✓ Account lockout after 5 failed login attempts (30 min lock)
+✓ PIN hashing with SHA-256 + salt
+✓ Comprehensive audit logging (data/audit.log)
+✓ Session inactivity timeout (2 hours)
+✓ Multi-layer rate limiting
+✓ Security headers (CSP, HSTS, etc)
+✓ Input validation & sanitization
+✓ Path traversal protection
+✓ Role-based access control
+
+See SECURITY.md for complete documentation.

@@ -1,5 +1,6 @@
 import { SlashCommandBuilder, EmbedBuilder } from "discord.js";
 import { logoAttachment, LOGO_URL } from "./branding.js";
+import { MINECRAFT_IP } from "./config.js";
 
 export const infoCommands = [
   new SlashCommandBuilder()
@@ -64,7 +65,7 @@ export async function handleInfoCommand(interaction, client) {
 
     const embed = new EmbedBuilder()
       .setTitle(`🏰 ${guild.name}`)
-      .setDescription(guild.description ?? "")
+      .setDescription(guild.description || null)
       .setThumbnail(guild.iconURL({ size: 256 }) ?? LOGO_URL)
       .addFields(
         { name: "👑 Owner", value: `${owner.user}`, inline: true },
@@ -86,7 +87,8 @@ export async function handleInfoCommand(interaction, client) {
           name: "✅ Verification",
           value: ["None", "Low", "Medium", "High", "Very High"][guild.verificationLevel] ?? "Unknown",
           inline: true,
-        }
+        },
+        { name: "🌐 Minecraft IP", value: `\`${MINECRAFT_IP}\``, inline: true }
       )
       .setColor(0xDC143C)
       .setFooter({ text: "Core SMP S3", iconURL: LOGO_URL })

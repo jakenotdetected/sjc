@@ -1,0 +1,12 @@
+[     569ms] Unexpected token '<'
+[     596ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://cgu.jakenetwork.xyz/admin/:0
+[     597ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://cgu.jakenetwork.xyz/admin/:0
+[     598ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://cgu.jakenetwork.xyz/admin/:0
+[    8147ms] ReferenceError: openTeacherModal is not defined
+    at eval (eval at <anonymous> (eval at evaluate (:303:30)), <anonymous>:1:52)
+[   24532ms] Unexpected token '<'
+[   24563ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://cgu.jakenetwork.xyz/admin/:0
+[   24564ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://cgu.jakenetwork.xyz/admin/:0
+[   24564ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://cgu.jakenetwork.xyz/admin/:0
+[   29905ms] ReferenceError: openTeacherModal is not defined
+    at eval (eval at <anonymous> (eval at evaluate (:303:30)), <anonymous>:1:204)

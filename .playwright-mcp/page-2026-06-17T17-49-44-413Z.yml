@@ -1,0 +1,142 @@
+- generic [ref=e1]:
+  - generic [ref=e30]:
+    - banner [ref=e31]:
+      - generic [ref=e32]:
+        - img "SJC Logo" [ref=e34]
+        - generic [ref=e35]: SJC Admin
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38] [cursor=pointer]: English
+          - text: "|"
+          - generic [ref=e39] [cursor=pointer]: Sinhala
+          - text: "|"
+          - generic [ref=e40] [cursor=pointer]: Tamil
+        - generic [ref=e41]: Admin
+        - generic [ref=e42]:
+          - generic [ref=e43]: SA
+          - generic [ref=e44]: Administrator
+        - button "Logout" [ref=e45] [cursor=pointer]:
+          - img [ref=e46]
+          - text: Logout
+    - generic [ref=e49]:
+      - navigation [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]: Main
+          - generic [ref=e53] [cursor=pointer]:
+            - img [ref=e54]
+            - text: Overview
+          - generic [ref=e59] [cursor=pointer]:
+            - img [ref=e60]
+            - text: Appointments
+          - generic [ref=e62] [cursor=pointer]:
+            - img [ref=e63]
+            - text: Students
+          - generic [ref=e68] [cursor=pointer]:
+            - img [ref=e69]
+            - text: Teachers
+          - generic [ref=e73] [cursor=pointer]:
+            - img [ref=e74]
+            - text: Events
+          - generic [ref=e76] [cursor=pointer]:
+            - img [ref=e77]
+            - text: To-Do List
+          - generic [ref=e79] [cursor=pointer]:
+            - img [ref=e80]
+            - text: Complains / Proposals
+        - generic [ref=e83]:
+          - generic [ref=e84]: System
+          - generic [ref=e85] [cursor=pointer]:
+            - img [ref=e86]
+            - text: Database
+          - generic [ref=e91] [cursor=pointer]:
+            - img [ref=e92]
+            - text: Emails
+          - generic [ref=e95] [cursor=pointer]:
+            - img [ref=e96]
+            - text: Page Editor
+          - generic [ref=e99] [cursor=pointer]:
+            - img [ref=e100]
+            - text: Settings
+          - generic [ref=e103] [cursor=pointer]:
+            - img [ref=e104]
+            - text: Sign Out
+      - main [ref=e107]:
+        - generic [ref=e163]:
+          - generic [ref=e164]:
+            - generic [ref=e165]:
+              - heading "Teachers" [level=2] [ref=e166]
+              - paragraph [ref=e167]: Manage counsellors & teachers
+            - button "Add Teacher" [active] [ref=e168] [cursor=pointer]:
+              - img [ref=e169]
+              - text: Add Teacher
+          - generic [ref=e171]:
+            - generic [ref=e172]:
+              - img [ref=e173]
+              - textbox "Search records..." [ref=e176]
+            - table [ref=e177]:
+              - rowgroup [ref=e178]:
+                - row "Name Class Subject Phone Actions" [ref=e179]:
+                  - columnheader "Name" [ref=e180]
+                  - columnheader "Class" [ref=e181]
+                  - columnheader "Subject" [ref=e182]
+                  - columnheader "Phone" [ref=e183]
+                  - columnheader "Actions" [ref=e184]
+              - rowgroup [ref=e185]:
+                - row "DT Default Teacher — — — Edit Remove" [ref=e186]:
+                  - cell "DT Default Teacher" [ref=e187]:
+                    - generic [ref=e188]:
+                      - generic [ref=e189]: DT
+                      - generic [ref=e190]: Default Teacher
+                  - cell "—" [ref=e191]
+                  - cell "—" [ref=e192]
+                  - cell "—" [ref=e193]
+                  - cell "Edit Remove" [ref=e194]:
+                    - generic [ref=e195]:
+                      - button "Edit" [ref=e196] [cursor=pointer]:
+                        - img [ref=e197]
+                        - text: Edit
+                      - button "Remove" [ref=e200] [cursor=pointer]:
+                        - img [ref=e201]
+                        - text: Remove
+  - generic [ref=e207]:
+    - generic [ref=e208]:
+      - generic [ref=e209]:
+        - heading "Add Teacher" [level=2] [ref=e210]
+        - paragraph [ref=e211]: Create a teacher account with portal access
+      - button "✕" [ref=e212] [cursor=pointer]
+    - generic [ref=e214]:
+      - generic [ref=e215]:
+        - generic [ref=e216]:
+          - generic [ref=e217]: Full Name
+          - textbox "Mr. / Ms. Full Name" [ref=e219]
+        - generic [ref=e220]:
+          - generic [ref=e221]: Subject / Role
+          - textbox "Mathematics, Counsellor…" [ref=e223]
+      - generic [ref=e224]:
+        - generic [ref=e225]:
+          - generic [ref=e226]: Email
+          - textbox "name@sjc.lk" [ref=e228]
+        - generic [ref=e229]:
+          - generic [ref=e230]: Phone Number
+          - textbox "07XXXXXXXX" [ref=e232]
+      - generic [ref=e233]:
+        - generic [ref=e234]:
+          - generic [ref=e235]: Assigned Class
+          - textbox "e.g. 10A, 11B" [ref=e237]
+        - generic [ref=e238]:
+          - generic [ref=e239]: Register Number
+          - textbox "Reg No." [ref=e241]
+    - generic [ref=e242]:
+      - button "Cancel" [ref=e243] [cursor=pointer]
+      - button "Add Teacher" [ref=e244] [cursor=pointer]:
+        - img [ref=e245]
+        - text: Add Teacher
+  - generic:
+    - generic:
+      - generic:
+        - img
+      - heading "Are you sure?" [level=3]
+      - paragraph
+      - generic:
+        - button "Cancel"
+        - button "Yes, Confirm"
