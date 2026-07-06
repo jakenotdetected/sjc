@@ -4942,21 +4942,55 @@ function removePostImage(i){
   _postImages.splice(i,1);
   renderPostImagePreviews();
 }
-function onPostImagePick(input){
-  const files = Array.from(input.files || []);
-  if (!files.length) return;
-  if (_postImages.length + files.length > POST_MAX_IMAGES) {
-    toast(`You can attach up to ${POST_MAX_IMAGES} photos`, 'err');
-  }
-  files.slice(0, POST_MAX_IMAGES - _postImages.length).forEach(file => {
-    if (file.size > 6*1024*1024) { toast(`${file.name} is too large (max 6MB)`, 'err'); return; }
+// Downscale + recompress any picked image in the browser so uploads stay small
+// and never exceed server limits (phone photos are often 5-10MB, far past the
+// 7MB-per-image server cap once base64-encoded). Returns a compact JPEG data URL.
+function processPickedImage(file, maxDim = 1600, quality = 0.82) {
+  return new Promise((resolve, reject) => {
+    if (!file.type || !file.type.startsWith('image/')) { reject(new Error('not an image')); return; }
     const reader = new FileReader();
+    reader.onerror = () => reject(new Error('read failed'));
     reader.onload = () => {
-      _postImages.push(reader.result);
-      renderPostImagePreviews();
+      const img = new Image();
+      img.onload = () => {
+        let width = img.naturalWidth || img.width;
+        let height = img.naturalHeight || img.height;
+        if (width > maxDim || height > maxDim) {
+          const scale = maxDim / Math.max(width, height);
+          width = Math.round(width * scale);
+          height = Math.round(height * scale);
+        }
+        try {
+          const canvas = document.createElement('canvas');
+          canvas.width = width; canvas.height = height;
+          const ctx = canvas.getContext('2d');
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(0, 0, width, height);
+          ctx.drawImage(img, 0, 0, width, height);
+          resolve(canvas.toDataURL('image/jpeg', quality));
+        } catch(e) { reject(e); }
+      };
+      img.onerror = () => reject(new Error('decode failed'));
+      img.src = reader.result;
     };
     reader.readAsDataURL(file);
   });
+}
+
+async function onPostImagePick(input){
+  const files = Array.from(input.files || []);
+  if (!files.length) return;
+  const room = POST_MAX_IMAGES - _postImages.length;
+  if (files.length > room) toast(`You can attach up to ${POST_MAX_IMAGES} photos`, 'err');
+  for (const file of files.slice(0, Math.max(0, room))) {
+    try {
+      const dataUrl = await processPickedImage(file);
+      _postImages.push(dataUrl);
+      renderPostImagePreviews();
+    } catch(e) {
+      toast(`Couldn't add ${file.name}`, 'err');
+    }
+  }
   input.value = '';
 }
 
@@ -5026,21 +5060,20 @@ function removeNoteImage(i){
   _noteImages.splice(i,1);
   renderNoteImagePreviews();
 }
-function onNoteImagePick(input){
+async function onNoteImagePick(input){
   const files = Array.from(input.files || []);
   if (!files.length) return;
-  if (_noteImages.length + files.length > NOTE_MAX_IMAGES) {
-    toast(`You can attach up to ${NOTE_MAX_IMAGES} photos`, 'err');
-  }
-  files.slice(0, NOTE_MAX_IMAGES - _noteImages.length).forEach(file => {
-    if (file.size > 6*1024*1024) { toast(`${file.name} is too large (max 6MB)`, 'err'); return; }
-    const reader = new FileReader();
-    reader.onload = () => {
-      _noteImages.push(reader.result);
+  const room = NOTE_MAX_IMAGES - _noteImages.length;
+  if (files.length > room) toast(`You can attach up to ${NOTE_MAX_IMAGES} photos`, 'err');
+  for (const file of files.slice(0, Math.max(0, room))) {
+    try {
+      const dataUrl = await processPickedImage(file);
+      _noteImages.push(dataUrl);
       renderNoteImagePreviews();
-    };
-    reader.readAsDataURL(file);
-  });
+    } catch(e) {
+      toast(`Couldn't add ${file.name}`, 'err');
+    }
+  }
   input.value = '';
 }
 
