@@ -28,13 +28,24 @@
     }, 200);
   }
 
-  // Dismiss on whichever comes first: full load, or a hard cap so it NEVER hangs
-  if (document.readyState === 'complete') {
-    setTimeout(dismiss, 400);
-  } else {
-    window.addEventListener('load', function () { setTimeout(dismiss, 350); });
+  // Guarantee the loader is actually SEEN on every device. On a fast PC the page
+  // can finish loading in <0.4s, making the loader flash by so quickly it looks
+  // like it never appeared. So we hold it on screen for a minimum time, then
+  // dismiss once the page has also finished loading.
+  var START = Date.now();
+  var MIN_MS = 1100; // minimum time the loader stays visible, on any device
+
+  function requestDismiss() {
+    var waited = Date.now() - START;
+    setTimeout(dismiss, Math.max(0, MIN_MS - waited));
   }
-  setTimeout(dismiss, 3500); // safety cap — guarantees the loader always clears
+
+  if (document.readyState === 'complete') {
+    requestDismiss();
+  } else {
+    window.addEventListener('load', requestDismiss);
+  }
+  setTimeout(dismiss, 4000); // safety cap — guarantees the loader always clears
 })();
 
 // ── Page transition curtain ────────────────────────────────────────────────────
