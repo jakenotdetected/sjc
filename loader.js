@@ -104,40 +104,8 @@
   window.SJCNav = { go: navigate };
 })();
 
-// ── Smooth scroll ──────────────────────────────────────────────────────────────
-(function () {
-  var current = window.scrollY;
-  var target  = window.scrollY;
-  var ease    = 0.085;
-  var running = false;
-
-  window.addEventListener('scroll', function () {
-    if (!running) { current = window.scrollY; target = window.scrollY; }
-  }, { passive: true });
-
-  window.addEventListener('wheel', function (e) {
-    var el = e.target;
-    while (el && el !== document.body) {
-      var s = getComputedStyle(el);
-      if ((s.overflow + s.overflowY).match(/auto|scroll/) && el.scrollHeight > el.clientHeight) return;
-      el = el.parentElement;
-    }
-    e.preventDefault();
-    target += e.deltaY * 1.1;
-    target = Math.max(0, Math.min(target, document.body.scrollHeight - window.innerHeight));
-    if (!running) tick();
-  }, { passive: false });
-
-  function tick() {
-    running = true;
-    current += (target - current) * ease;
-    window.scrollTo(0, current);
-    if (Math.abs(target - current) < 0.5) {
-      current = target;
-      window.scrollTo(0, current);
-      running = false;
-      return;
-    }
-    requestAnimationFrame(tick);
-  }
-})();
+// ── Scroll ───────────────────────────────────────────────────────────────────
+// Native browser scrolling is used intentionally. A previous version hijacked the
+// mouse wheel and eased it in JS, which scrolled inconsistently across PCs (wheel
+// deltas differ per device — pixels vs lines) and broke keyboard/trackpad scroll.
+// Native scroll is smooth and consistent on every machine.
