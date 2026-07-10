@@ -115,8 +115,58 @@
   window.SJCNav = { go: navigate };
 })();
 
-// ── Scroll ───────────────────────────────────────────────────────────────────
-// Native browser scrolling is used intentionally. A previous version hijacked the
-// mouse wheel and eased it in JS, which scrolled inconsistently across PCs (wheel
-// deltas differ per device — pixels vs lines) and broke keyboard/trackpad scroll.
-// Native scroll is smooth and consistent on every machine.
+// ── Smooth scroll ──────────────────────────────────────────────────────────────
+// An earlier version eased wheel input in JS but assumed every device reports
+// e.deltaY in pixels. Many mice/PCs report it in "lines" instead (deltaMode 1) or
+// "pages" (deltaMode 2), so that version scrolled far too slowly on those devices.
+// This version normalizes the delta by deltaMode first, so the eased scroll speed
+// is consistent on every machine, then clamps each tick so a single notch never
+// causes a huge jump. Skips: reduced-motion users, ctrl+wheel (pinch zoom), and
+// wheel events inside anything that has its own internal scroll (dropdowns, modals).
+(function () {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var current = window.scrollY;
+  var target  = window.scrollY;
+  var ease    = 0.15;
+  var running = false;
+
+  window.addEventListener('scroll', function () {
+    if (!running) { current = window.scrollY; target = window.scrollY; }
+  }, { passive: true });
+
+  window.addEventListener('wheel', function (e) {
+    if (e.ctrlKey) return; // let pinch-zoom through untouched
+
+    var el = e.target;
+    while (el && el !== document.body) {
+      var s = getComputedStyle(el);
+      if ((s.overflow + s.overflowY).match(/auto|scroll/) && el.scrollHeight > el.clientHeight) return;
+      el = el.parentElement;
+    }
+
+    // Normalize to pixels regardless of how this device/browser reports the delta
+    var px = e.deltaY;
+    if (e.deltaMode === 1) px *= 18;                        // line mode
+    else if (e.deltaMode === 2) px *= window.innerHeight;   // page mode
+    px = Math.max(-140, Math.min(140, px));                 // clamp a single notch
+
+    e.preventDefault();
+    target += px;
+    target = Math.max(0, Math.min(target, document.body.scrollHeight - window.innerHeight));
+    if (!running) tick();
+  }, { passive: false });
+
+  function tick() {
+    running = true;
+    current += (target - current) * ease;
+    window.scrollTo(0, current);
+    if (Math.abs(target - current) < 0.5) {
+      current = target;
+      window.scrollTo(0, current);
+      running = false;
+      return;
+    }
+    requestAnimationFrame(tick);
+  }
+})();
