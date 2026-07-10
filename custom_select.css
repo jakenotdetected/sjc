@@ -36,7 +36,7 @@
   box-shadow: 0 0 0 4px rgba(122,24,24,0.08);
 }
 
-.custom-select-trigger span {
+.custom-select-trigger > span:not(.custom-select-trigger-icon) {
   flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;

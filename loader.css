@@ -2,6 +2,10 @@
    SJC Loading Screen + Page Transition
    ════════════════════════════════════════════════════════════════════════════ */
 
+/* ── Custom text-selection color (site-wide) ─────────────────────────────── */
+::selection { background: var(--maroon, #7a1818); color: #faf6ee; }
+::-moz-selection { background: var(--maroon, #7a1818); color: #faf6ee; }
+
 /* ── Loading screen ──────────────────────────────────────────────────────── */
 #sjc-page-loader {
   position: fixed;
