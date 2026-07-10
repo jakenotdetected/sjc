@@ -56,6 +56,30 @@
   transition: transform .22s cubic-bezier(.34,1.56,.64,1), color .18s;
 }
 
+.custom-select-trigger-icon,
+.custom-select-icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--maroon, #7a1818);
+}
+.custom-select-trigger-icon:empty { display: none; }
+
+.custom-option.has-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.custom-option .custom-select-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--muted, #7a6868);
+}
+.custom-option.selected .custom-select-icon,
+.custom-option:hover .custom-select-icon {
+  color: var(--maroon, #7a1818);
+}
+
 .custom-select-wrapper.open .custom-select-trigger svg {
   transform: rotate(180deg);
   color: var(--maroon, #7a1818);

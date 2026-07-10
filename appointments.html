@@ -158,7 +158,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 
 
 
-  <link rel="stylesheet" href="/custom_select.css?v=3" />
+  <link rel="stylesheet" href="/custom_select.css?v=4" />
   <link rel="icon" type="image/x-icon" href="./favicon-rounded.ico">
   <link rel="stylesheet" href="/loader.css?v=12">
 </head>
@@ -267,9 +267,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
         <div class="fg">
           <label for="bContactMethod">How Can We Contact You To Give A Date & Time *</label>
           <select id="bContactMethod" onchange="handleContactMethodChange(); updateSummary();">
-            <option value="From Email">From Email</option>
-            <option value="Meet And Schedule">Meet And Schedule</option>
-            <option value="Over The Phone">Over The Phone</option>
+            <option value="From Email" data-icon="mail">Email</option>
+            <option value="Meet And Schedule" data-icon="person">In Person</option>
+            <option value="Over The Phone" data-icon="phone">Phone Call</option>
           </select>
         </div>
         <div class="form-row" style="margin-top:16px;">
@@ -467,8 +467,8 @@ function updateSummary() {
     streamWrap.style.display = 'none';
   }
 
-  const contact = document.getElementById('bContactMethod').value;
-  document.getElementById('sumContact').textContent = contact;
+  const contactSel = document.getElementById('bContactMethod');
+  document.getElementById('sumContact').textContent = contactSel.options[contactSel.selectedIndex]?.text || '–';
 }
 
 // Stable per-device fingerprint (persisted; survives cache clear via localStorage,
@@ -589,7 +589,7 @@ updateSummary();
 
 
 
-  <script src="/custom_select.js?v=8"></script>
+  <script src="/custom_select.js?v=9"></script>
   <script src="/dictionary.js"></script>
 <script src="/translate.js"></script>
 
