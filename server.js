@@ -1361,9 +1361,9 @@ const server = http.createServer((req, res) => {
 
   // ── Site deactivation notice ─────────────────────────────────────────────
   // Toggle by setting SITE_DEACTIVATED=1 in the environment and restarting
-  // (`pm2 restart sjc-cgu --update-env`). Admin routes stay reachable so the
-  // site can still be managed/reactivated without editing code.
-  if (process.env.SITE_DEACTIVATED === '1' && !urlPath.startsWith('/admin') && !urlPath.startsWith('/api/')) {
+  // (`pm2 restart sjc-cgu --update-env`). Blocks every route, including
+  // /admin and /api — reactivate via SSH (env var), not through the site.
+  if (process.env.SITE_DEACTIVATED === '1') {
     const notice = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Site Deactivated</title><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/><style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{
