@@ -19,9 +19,14 @@ function changeLanguage(lang) {
   localStorage.setItem('sjc_lang', lang);
   if (!window.i18nDict) return;
   textNodes.forEach(item => {
+    if (item.current === undefined) {
+      item.current = item.original;
+    }
     const entry = window.i18nDict[item.original];
-    if (entry && entry[lang]) {
-      item.node.nodeValue = item.node.nodeValue.replace(item.original, entry[lang]);
+    if (entry) {
+      const translation = entry[lang] || item.original;
+      item.node.nodeValue = item.node.nodeValue.replace(item.current, translation);
+      item.current = translation;
     }
   });
   document.documentElement.lang = lang;
