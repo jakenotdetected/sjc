@@ -1,12 +1,9 @@
-// ── First-visit language picker ────────────────────────────────────────────────
-// Shown once, only on the homepage, after the page loader clears. Reuses the same
-// localStorage key ('sjc_lang') and changeLanguage() function that the top-bar
-// language links (translate.js) already use, so a pick here is fully consistent
-// with switching languages later from the top of any page.
+// ── Language picker ────────────────────────────────────────────────────────────
+// Shown on every visit to the homepage, after the page loader clears. Reuses the
+// same localStorage key ('sjc_lang') and changeLanguage() function that the
+// top-bar language links (translate.js) already use, so a pick here is fully
+// consistent with switching languages later from the top of any page.
 (function () {
-  var PICKED_KEY = 'sjc_lang_picked';
-  if (localStorage.getItem(PICKED_KEY)) return;
-
   var LANGS = [
     { code: 'en', label: 'English', native: 'English' },
     { code: 'si', label: 'Sinhala', native: 'සිංහල' },
@@ -86,7 +83,6 @@
   }
 
   function pick(code) {
-    localStorage.setItem(PICKED_KEY, '1');
     localStorage.setItem('sjc_lang', code);
     var overlay = document.getElementById('sjc-lang-picker');
     if (overlay) overlay.classList.remove('sjc-lp-in');
