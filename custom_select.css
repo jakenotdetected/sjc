@@ -161,3 +161,13 @@ nav.main .nav-links a:not(.nav-cta) { padding: 7px 9px; }
 /* Prevent decorative orbs / off-canvas elements from causing horizontal scroll
    on mobile. `clip` (not `hidden`) so it never breaks the sticky nav. */
 html { overflow-x: clip; scroll-behavior: smooth; }
+
+/* ── Google Translate: keep it invisible, let it just do the translating ──── */
+#google_translate_element,
+.goog-te-banner-frame,
+.goog-te-gadget-icon,
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight { display: none !important; background: none !important; box-shadow: none !important; }
+body { top: 0px !important; position: static !important; }
+.lang-opt-active { color: var(--gold-bright, #e8c96a) !important; font-weight: 700 !important; }

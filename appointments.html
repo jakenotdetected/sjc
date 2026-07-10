@@ -33,6 +33,11 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 .nav-links a{color:var(--ink-soft);font-size:0.82rem;font-weight:500;padding:8px 12px;border-radius:6px;transition:all .18s}
 .nav-links a:hover{color:var(--maroon);background:rgba(122,24,24,0.05)}
 .nav-cta{background:var(--maroon-deep)!important;color:var(--cream)!important;border-radius:8px!important;font-weight:600!important;padding:9px 18px!important}
+.nav-lang{display:flex;align-items:center;gap:2px;font-size:0.78rem}
+.nav-lang a{color:var(--muted);padding:6px 8px;border-radius:6px;font-weight:500;cursor:pointer;transition:all .15s}
+.nav-lang a:hover{color:var(--maroon);background:rgba(122,24,24,0.05)}
+.nav-lang .t-sep{color:var(--cream-3);font-size:0.7rem}
+@media(max-width:900px){.nav-lang{display:none}}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;margin-left:auto}
 .burger span{display:block;width:22px;height:2px;background:var(--maroon-deep);border-radius:1px}
 
@@ -158,7 +163,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 
 
 
-  <link rel="stylesheet" href="/custom_select.css?v=4" />
+  <link rel="stylesheet" href="/custom_select.css?v=5" />
   <link rel="icon" type="image/x-icon" href="./favicon-rounded.ico">
   <link rel="stylesheet" href="/loader.css?v=12">
 </head>
@@ -191,6 +196,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
             </li>
       <li><a href="/appointments" class="nav-cta">Book Now</a></li>
     </ul>
+    <div class="nav-lang">
+      <a onclick="changeLanguage('en')" style="cursor:pointer" class="lang-opt">EN</a><span class="t-sep">|</span><a onclick="changeLanguage('si')" style="cursor:pointer" class="lang-opt">SI</a><span class="t-sep">|</span><a onclick="changeLanguage('ta')" style="cursor:pointer" class="lang-opt">TA</a>
+    </div>
     <button class="burger" id="navBurger" onclick="toggleMobileNav()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -590,8 +598,7 @@ updateSummary();
 
 
   <script src="/custom_select.js?v=9"></script>
-  <script src="/dictionary.js"></script>
-<script src="/translate.js"></script>
+<script src="/google-translate.js?v=1"></script>
 
 <script src="/helper.js?v=7"></script>
   <script src="/loader.js?v=15" defer></script>
