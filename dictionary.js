@@ -3981,7 +3981,7 @@ window.i18nDict = {
   },
   "Students": {
     "en": "Students",
-    "si": "සිසුන්",
+    "si": "සිසුන් ගණන",
     "ta": "மாணவர்கள்"
   },
   "Students Guided": {
@@ -4848,5 +4848,1705 @@ window.i18nDict = {
     "en": "📋 Required Qualifications",
     "si": "📋 අවශ්‍ය සුදුසුකම්",
     "ta": "📋 தேவையான தகுதிகள்"
+  },
+  "#1 QS World 2024": {
+    "en": "#1 QS World 2024",
+    "si": "#1 QS ලෝක ශ්‍රේණිගත කිරීම 2024",
+    "ta": "#1 QS உலக தரவரிசை 2024"
+  },
+  "#1 in Asia": {
+    "en": "#1 in Asia",
+    "si": "ආසියාවේ අංක 1",
+    "ta": "ஆசியாவில் #1"
+  },
+  "#1 in Australia": {
+    "en": "#1 in Australia",
+    "si": "ඕස්ට්‍රේලියාවේ අංක 1",
+    "ta": "ஆஸ்திரேலியாவில் #1"
+  },
+  "#1 in Canada": {
+    "en": "#1 in Canada",
+    "si": "කැනඩාවේ අංක 1",
+    "ta": "கனடாவில் #1"
+  },
+  "#1 in Sri Lanka": {
+    "en": "#1 in Sri Lanka",
+    "si": "ශ්‍රී ලංකාවේ අංක 1",
+    "ta": "இலங்கையில் #1"
+  },
+  "#14 QS World 2024": {
+    "en": "#14 QS World 2024",
+    "si": "#14 QS ලෝක ශ්‍රේණිගත කිරීම 2024",
+    "ta": "#14 QS உலக தரவரிசை 2024"
+  },
+  "#2 for Management in Sri Lanka": {
+    "en": "#2 for Management in Sri Lanka",
+    "si": "කළමනාකරණ අංශයෙන් ශ්‍රී ලංකාවේ දෙවන ස්ථානය",
+    "ta": "இலங்கையில் மேலாண்மைக்கான #2 வது இடம்"
+  },
+  "#21 QS World 2024": {
+    "en": "#21 QS World 2024",
+    "si": "#21 QS ලෝක ශ්‍රේණිගත කිරීම 2024",
+    "ta": "#21 QS உலக தரவரிசை 2024"
+  },
+  "#22 QS World 2024": {
+    "en": "#22 QS World 2024",
+    "si": "#22 QS ලෝක ශ්‍රේණිගත කිරීම 2024",
+    "ta": "#22 QS உலக தரவரிசை 2024"
+  },
+  "#3 QS World 2024": {
+    "en": "#3 QS World 2024",
+    "si": "#3 QS ලෝක ශ්‍රේණිගත කිරීම 2024",
+    "ta": "#3 QS உலக தரவரிசை 2024"
+  },
+  "#37 QS World 2024": {
+    "en": "#37 QS World 2024",
+    "si": "#37 QS ලෝක ශ්‍රේණිගත කිරීම 2024",
+    "ta": "#37 QS உலக தரவரிசை 2024"
+  },
+  "#4 QS World 2024": {
+    "en": "#4 QS World 2024",
+    "si": "#4 QS ලෝක ශ්‍රේණිගත කිරීම 2024",
+    "ta": "#4 QS உலக தரவரிசை 2024"
+  },
+  "#6 QS World 2024": {
+    "en": "#6 QS World 2024",
+    "si": "#6 QS ලෝක ශ්‍රේණිගත කිරීම 2024",
+    "ta": "#6 QS உலக தரவரிசை 2024"
+  },
+  "#8 QS World 2024": {
+    "en": "#8 QS World 2024",
+    "si": "#8 QS ලෝක ශ්‍රේණිගත කිරීම 2024",
+    "ta": "#8 QS உலக தரவரிசை 2024"
+  },
+  "AI & Data Science": {
+    "en": "AI & Data Science",
+    "si": "කෘත්‍රිම බුද්ධිය සහ දත්ත විද්‍යාව",
+    "ta": "செயற்கை நுண்ணறிவு & தரவு அறிவியல்"
+  },
+  "AI & Machine Learning, Medicine, Computer Science, and Engineering.": {
+    "en": "AI & Machine Learning, Medicine, Computer Science, and Engineering.",
+    "si": "කෘත්‍රිම බුද්ධිය සහ යන්ත්‍ර ඉගෙනීම, වෛද්‍ය විද්‍යාව, පරිගණක විද්‍යාව සහ ඉංජිනේරු විද්‍යාව.",
+    "ta": "செயற்கை நுண்ணறிவு & இயந்திர கற்றல், மருத்துவம், கணினி அறிவியல் மற்றும் பொறியியல்."
+  },
+  "AI & Robotics": {
+    "en": "AI & Robotics",
+    "si": "කෘත්‍රිම බුද්ධිය සහ රොබෝ තාක්ෂණය",
+    "ta": "செயற்கை நுண்ணறிவு & ரோபாட்டிக்ஸ்"
+  },
+  "Aerospace Eng": {
+    "en": "Aerospace Eng",
+    "si": "අභ්‍යවකාශ ඉංජිනේරු විද්‍යාව",
+    "ta": "விண்வெளி பொறியியல்"
+  },
+  "Affectionately called 'Japura,' this university hosts the largest Management faculty in the country. If you want to enter the Sri Lankan corporate world — banking, finance, or marketing — Japura is the most respected choice. Its Faculty of Applied Sciences is also growing rapidly in tech-related fields.": {
+    "en": "Affectionately called 'Japura,' this university hosts the largest Management faculty in the country. If you want to enter the Sri Lankan corporate world — banking, finance, or marketing — Japura is the most respected choice. Its Faculty of Applied Sciences is also growing rapidly in tech-related fields.",
+    "si": "ආදරයෙන් 'ජපුර' නමින් හැඳින්වෙන මෙම විශ්වවිද්‍යාලය දිවයිනේ විශාලතම කළමනාකරණ පීඨයට හිමිකම් කියයි. ඔබට ශ්‍රී ලාංකේය ආයතනික ලෝකයට — බැංකු, මූල්‍ය හෝ අලෙවිකරණ ක්ෂේත්‍රයට ඇතුළු වීමට අවශ්‍ය නම්, ජපුර යනු වඩාත් ගෞරවනීය තේරීමයි. එහි ව්‍යවහාරික විද්‍යා පීඨය ද තාක්ෂණික ක්ෂේත්‍රයන් ඔස්සේ වේගයෙන් වර්ධනය වෙමින් පවතී.",
+    "ta": "அன்புடன் 'ஜபுர' என்று அழைக்கப்படும் இந்த பல்கலைக்கழகம், நாட்டின் மிகப்பெரிய மேலாண்மை பீடத்தைக் கொண்டுள்ளது. நீங்கள் இலங்கையின் கார்ப்பரேட் உலகில் — வங்கி, நிதி அல்லது சந்தைப்படுத்தல் துறையில் நுழைய விரும்பினால், ஜபுரா மிகவும் மதிக்கப்படும் தேர்வாகும். இதன் பயன்பாட்டு அறிவியல் பீடமும் தொழில்நுட்பம் சார்ந்த துறைகளில் வேகமாக வளர்ந்து வருகிறது."
+  },
+  "Agri-Business, Plantation Management, and Business.": {
+    "en": "Agri-Business, Plantation Management, and Business.",
+    "si": "කෘෂි ව්‍යාපාර, වතු කළමනාකරණය සහ ව්‍යාපාරික අධ්‍යයනය.",
+    "ta": "விவசாய வணிகம், தோட்ட மேலாண்மை மற்றும் வணிகம்."
+  },
+  "Agriculture": {
+    "en": "Agriculture",
+    "si": "කෘෂිකර්මය",
+    "ta": "விவசாயம்"
+  },
+  "Agriculture & Plantation": {
+    "en": "Agriculture & Plantation",
+    "si": "කෘෂිකර්මය සහ වතු වගාව",
+    "ta": "விவசாயம் & தோட்டம்"
+  },
+  "Agriculture, Social Sciences, and Management.": {
+    "en": "Agriculture, Social Sciences, and Management.",
+    "si": "කෘෂිකර්මය, සමාජ විද්‍යාව සහ කළමනාකරණය.",
+    "ta": "விவசாயம், சமூக அறிவியல் மற்றும் மேலாண்மை."
+  },
+  "Applied Sciences": {
+    "en": "Applied Sciences",
+    "si": "ව්‍යවහාරික විද්‍යාවන්",
+    "ta": "பயன்பாட்டு அறிவியல்"
+  },
+  "Applied Sciences & Tech": {
+    "en": "Applied Sciences & Tech",
+    "si": "ව්‍යවහාරික විද්‍යාවන් සහ තාක්ෂණය",
+    "ta": "பயன்பாட்டு அறிவியல் & தொழில்நுட்பம்"
+  },
+  "Architecture & Design": {
+    "en": "Architecture & Design",
+    "si": "ගෘහ නිර්මාණ ශිල්පය සහ සැලසුම්කරණය",
+    "ta": "கட்டிடக்கலை & வடிவமைப்பு"
+  },
+  "Architecture & Planning": {
+    "en": "Architecture & Planning",
+    "si": "ගෘහ නිර්මාණ ශිල්පය සහ සැලසුම්කරණය",
+    "ta": "கட்டிடக்கலை & திட்டமிடல்"
+  },
+  "Artificial Intelligence, Robotics, Quantum Computing, Aerospace Engineering, and Physics.": {
+    "en": "Artificial Intelligence, Robotics, Quantum Computing, Aerospace Engineering, and Physics.",
+    "si": "කෘත්‍රිම බුද්ධිය, රොබෝ තාක්ෂණය, ක්වොන්ටම් පරිගණකකරණය, අභ්‍යවකාශ ඉංජිනේරු විද්‍යාව සහ භෞතික විද්‍යාව.",
+    "ta": "செயற்கை நுண்ணறிவு, ரோபாட்டிக்ஸ், குவாண்டம் கணினி, விண்வெளி பொறியியல் மற்றும் இயற்பியல்."
+  },
+  "Arts & Humanities": {
+    "en": "Arts & Humanities",
+    "si": "කලා සහ මානුෂීය විද්‍යාවන්",
+    "ta": "கலை & மனிதநேயம்"
+  },
+  "Arts & Management": {
+    "en": "Arts & Management",
+    "si": "කලා සහ කළමනාකරණය",
+    "ta": "கலை & மேலாண்மை"
+  },
+  "Arts & Science": {
+    "en": "Arts & Science",
+    "si": "කලා සහ විද්‍යා",
+    "ta": "கலை & அறிவியல்"
+  },
+  "As America's oldest university, Harvard is the global symbol of academic prestige. It has produced 8 US Presidents, over 160 Nobel Laureates, and countless world leaders. Harvard is particularly dominant in Law, Medicine, Business, and Political Science, and has the largest academic library in the world.": {
+    "en": "As America's oldest university, Harvard is the global symbol of academic prestige. It has produced 8 US Presidents, over 160 Nobel Laureates, and countless world leaders. Harvard is particularly dominant in Law, Medicine, Business, and Political Science, and has the largest academic library in the world.",
+    "si": "ඇමරිකාවේ පැරණිතම විශ්වවිද්‍යාලය ලෙස, හාවඩ් යනු අධ්‍යයන කීර්තියේ ගෝලීය සංකේතයයි. එය ඇමරිකානු ජනාධිපතිවරුන් 8 දෙනෙකු, නොබෙල් සම්මානලාභීන් 160 කට අධික සංඛ්‍යාවක් සහ ගණන් කළ නොහැකි ලෝක නායකයින් බිහිකර ඇත. හාවඩ් විශ්වවිද්‍යාලය විශේෂයෙන් නීතිය, වෛද්‍ය විද්‍යාව, ව්‍යාපාර සහ දේශපාලන විද්‍යාව යන ක්ෂේත්‍රවල ප්‍රමුඛස්ථානයක් ගන්නා අතර ලොව විශාලතම අධ්‍යයන පුස්තකාලයට ද හිමිකම් කියයි.",
+    "ta": "அமெரிக்காவின் பழமையான பல்கலைக்கழகமான ஹார்வர்ட், கல்வித்துறையின் உலகளாவிய அடையாளமாகும். இது 8 அமெரிக்க அதிபர்கள், 160 க்கும் மேற்பட்ட நோபல் பரிசு பெற்றவர்கள் மற்றும் எண்ணற்ற உலகத் தலைவர்களை உருவாக்கியுள்ளது. ஹார்வர்ட் குறிப்பாக சட்டம், மருத்துவம், வணிகம் மற்றும் அரசியல் அறிவியல் ஆகியவற்றில் ஆதிக்கம் செலுத்துகிறது, மேலும் உலகின் மிகப்பெரிய கல்வி நூலகத்தைக் கொண்டுள்ளது."
+  },
+  "Australia": {
+    "en": "Australia",
+    "si": "ඕස්ට්‍රේලියාව",
+    "ta": "ஆஸ்திரேலியா"
+  },
+  "Australia's Global University": {
+    "en": "Australia's Global University",
+    "si": "ඕස්ට්‍රේලියාවේ ගෝලීය විශ්වවිද්‍යාලය",
+    "ta": "ஆஸ்திரேலியாவின் உலகளாவிய பல்கலைக்கழகம்"
+  },
+  "Australia's top-ranked university, the University of Melbourne sits in one of the world's most livable cities and has a global reputation for research. It is part of the Group of Eight elite Australian universities and is particularly strong in law, medicine, and arts. Australia's post-study work visa options make Melbourne especially attractive for international students.": {
+    "en": "Australia's top-ranked university, the University of Melbourne sits in one of the world's most livable cities and has a global reputation for research. It is part of the Group of Eight elite Australian universities and is particularly strong in law, medicine, and arts. Australia's post-study work visa options make Melbourne especially attractive for international students.",
+    "si": "ඕස්ට්‍රේලියාවේ ඉහළම ශ්‍රේණිගත විශ්වවිද්‍යාලය වන මෙල්බර්න් විශ්වවිද්‍යාලය ලොව ජීවත්වීමට වඩාත්ම සුදුසු නගරයක පිහිටා ඇති අතර පර්යේෂණ සඳහා ගෝලීය කීර්තියක් උසුලයි. එය ඕස්ට්‍රේලියාවේ ප්‍රභූ විශ්වවිද්‍යාල අටේ (Group of Eight) සාමාජිකයෙකු වන අතර නීතිය, වෛද්‍ය විද්‍යාව සහ කලා අංශ සඳහා විශේෂයෙන් ප්‍රසිද්ධය. ඕස්ට්‍රේලියාවේ පශ්චාත් අධ්‍යයන වැඩ වීසා විකල්ප හේතුවෙන් මෙල්බර්න් ජාත්‍යන්තර සිසුන් සඳහා වඩාත් ආකර්ෂණීය ගමනාන්තයකි.",
+    "ta": "ஆஸ்திரேலியாவின் மிக உயர்ந்த தரவரிசைப் பல்கலைக்கழகமான மெல்போர்ன் பல்கலைக்கழகம், உலகின் மிகவும் வாழக்கூடிய நகரங்களில் ஒன்றில் அமைந்துள்ளது மற்றும் ஆராய்ச்சிக்கு உலகளாவிய நற்பெயரைக் கொண்டுள்ளது. இது ஆஸ்திரேலியாவின் உயரடுக்கு பல்கலைக்கழகங்களின் (Group of Eight) ஒரு பகுதியாகும், மேலும் சட்டம், மருத்துவம் மற்றும் கலைகளில் குறிப்பாக வலுவானது. ஆஸ்திரேலியாவின் படிப்புக்கு பிந்தைய பணி விசா விருப்பங்கள் மெல்போர்னை சர்வதேச மாணவர்களுக்கு மிகவும் கவர்ச்சிகரமானதாக ஆக்குகின்றன."
+  },
+  "B.Architecture": {
+    "en": "B.Architecture",
+    "si": "ගෘහ නිර්මාණ ශිල්පවේදී (B.Arch)",
+    "ta": "கட்டிடக்கலை இளங்கலை (B.Arch)"
+  },
+  "BA Dance": {
+    "en": "BA Dance",
+    "si": "නර්තනවේදී උපාධිය (BA)",
+    "ta": "நடனக்கலையில் இளங்கலை (BA)"
+  },
+  "BA Drama": {
+    "en": "BA Drama",
+    "si": "නාට්‍ය හා රංග කලාවේදී උපාධිය (BA)",
+    "ta": "நாடகக் கலையில் இளங்கலை (BA)"
+  },
+  "BA Fine Arts": {
+    "en": "BA Fine Arts",
+    "si": "ලලිත කලාවේදී උපාධිය (BA)",
+    "ta": "நுண்கலைகளில் இளங்கலை (BA)"
+  },
+  "BA Mass Comm": {
+    "en": "BA Mass Comm",
+    "si": "ජන සන්නිවේදනය පිළිබඳ ශාස්ත්‍රවේදී උපාධිය (BA)",
+    "ta": "மக்கள் தொடர்பியலில் இளங்கலை (BA)"
+  },
+  "BA Medical Sciences (pre-clinical) leading to BM BCh — one of the most competitive degrees in the world": {
+    "en": "BA Medical Sciences (pre-clinical) leading to BM BCh — one of the most competitive degrees in the world",
+    "si": "BM BCh දක්වා දිවෙන වෛද්‍ය විද්‍යාව පිළිබඳ ශාස්ත්‍රවේදී උපාධිය (පූර්ව-සායනික) — ලොව වඩාත්ම තරඟකාරී උපාධිවලින් එකකි",
+    "ta": "BM BCh-க்கு வழிவகுக்கும் மருத்துவ அறிவியலில் இளங்கலை (முன்-மருத்துவ) — உலகின் மிக போட்டித்தன்மை வாய்ந்த பட்டங்களில் ஒன்று"
+  },
+  "BA Music": {
+    "en": "BA Music",
+    "si": "සංගීතවේදී උපාධිය (BA)",
+    "ta": "இசையியலில் இளங்கலை (BA)"
+  },
+  "BA PPE": {
+    "en": "BA PPE",
+    "si": "දේශපාලනය, දර්ශනය සහ ආර්ථික විද්‍යාව පිළිබඳ ශාස්ත්‍රවේදී උපාධිය (BA)",
+    "ta": "PPE (தத்துவம், அரசியல் & பொருளாதாரம்) இளங்கலை (BA)"
+  },
+  "BA Social Sciences": {
+    "en": "BA Social Sciences",
+    "si": "සමාජ විද්‍යාව පිළිබඳ ශාස්ත්‍රවේදී උපාධිය (BA)",
+    "ta": "சமூக அறிவியலில் இளங்கலை (BA)"
+  },
+  "BA in Archaeology, Sociology, Information Technology, and Public Administration": {
+    "en": "BA in Archaeology, Sociology, Information Technology, and Public Administration",
+    "si": "පුරාවිද්‍යාව, සමාජ විද්‍යාව, තොරතුරු තාක්ෂණය සහ රාජ්‍ය පරිපාලනය පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධිය",
+    "ta": "தொல்பொருளியல், சமூகவியல், தகவல் தொழில்நுட்பம் மற்றும் பொது நிர்வாகத்தில் இளங்கலை (BA) பட்டம்"
+  },
+  "BA in Communication & Media, BSc in Community Development": {
+    "en": "BA in Communication & Media, BSc in Community Development",
+    "si": "සන්නිවේදනය සහ මාධ්‍ය පිළිබඳ ශාස්ත්‍රවේදී (BA) සහ ප්‍රජා සංවර්ධනය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "தொடர்பாடல் & ஊடகத்தில் இளங்கலை (BA), சமூக மேம்பாட்டில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BA in Dance, Drama, and Music (multiple instruments & vocal)": {
+    "en": "BA in Dance, Drama, and Music (multiple instruments & vocal)",
+    "si": "නර්තනය, නාට්‍ය සහ සංගීතය (වාද්‍ය භාණ්ඩ සහ ගායනය) පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධි",
+    "ta": "நடனம், நாடகம் மற்றும் இசையில் இளங்கலை (BA) (பல கருவிகள் & குரல்)"
+  },
+  "BA in Economics and Applied Mathematics — the gateway to Harvard Business School": {
+    "en": "BA in Economics and Applied Mathematics — the gateway to Harvard Business School",
+    "si": "ආර්ථික විද්‍යාව සහ ව්‍යවහාරික ගණිතය පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධිය — හාවඩ් ව්‍යාපාරික පාසලට පිවිසීමේ ද්වාරය",
+    "ta": "பொருளாதாரம் மற்றும் பயன்பாட்டு கணிதத்தில் இளங்கலை (BA) — ஹார்வர்ட் பிசினஸ் ஸ்கூலுக்கான நுழைவாயில்"
+  },
+  "BA in Economics, International Relations, Political Science, and Psychology": {
+    "en": "BA in Economics, International Relations, Political Science, and Psychology",
+    "si": "ආර්ථික විද්‍යාව, ජාත්‍යන්තර සබඳතා, දේශපාලන විද්‍යාව සහ මනෝවිද්‍යාව පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධි",
+    "ta": "பொருளாதாரம், சர்வதேச உறவுகள், அரசியல் அறிவியல் மற்றும் உளவியலில் இளங்கலை (BA) பட்டங்கள்"
+  },
+  "BA in English, History, Philosophy, and Comparative Literature": {
+    "en": "BA in English, History, Philosophy, and Comparative Literature",
+    "si": "ඉංග්‍රීසි, ඉතිහාසය, දර්ශනය සහ සංසන්දනාත්මක සාහිත්‍යය පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධි",
+    "ta": "ஆங்கிலம், வரலாறு, தத்துவம் மற்றும் ஒப்பீட்டு இலக்கியத்தில் இளங்கலை (BA) பட்டங்கள்"
+  },
+  "BA in Fine Arts, Graphic Design, and Spatial Design": {
+    "en": "BA in Fine Arts, Graphic Design, and Spatial Design",
+    "si": "ලලිත කලා, ග්‍රැෆික් නිර්මාණය සහ අවකාශීය නිර්මාණය පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධි",
+    "ta": "நுண்கலைகள், கிராஃபிக் வடிவமைப்பு மற்றும் விண்வெளி வடிவமைப்பில் இளங்கலை (BA) பட்டங்கள்"
+  },
+  "BA in Government, Political Science, and Social Studies (LLB is a postgraduate degree at Harvard)": {
+    "en": "BA in Government, Political Science, and Social Studies (LLB is a postgraduate degree at Harvard)",
+    "si": "රාජ්‍ය පාලනය, දේශපාලන විද්‍යාව සහ සමාජ අධ්‍යයනය පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධිය (හාවඩ්හි LLB යනු පශ්චාත් උපාධියකි)",
+    "ta": "அரசாங்கம், அரசியல் அறிவியல் மற்றும் சமூக ஆய்வுகளில் இளங்கலை (BA) (ஹார்வர்ட்டில் LLB என்பது முதுகலை பட்டமாகும்)"
+  },
+  "BA in Mass Communication, English, International Studies, Modern Languages, Sinhala, History": {
+    "en": "BA in Mass Communication, English, International Studies, Modern Languages, Sinhala, History",
+    "si": "ජන සන්නිවේදනය, ඉංග්‍රීසි, ජාත්‍යන්තර අධ්‍යයනය, නවීන භාෂා, සිංහල සහ ඉතිහාසය පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධි",
+    "ta": "மக்கள் தொடர்பியல், ஆங்கிலம், சர்வதேச ஆய்வுகள், நவீன மொழிகள், சிங்களம், வரலாற்றில் இளங்கலை (BA) பட்டங்கள்"
+  },
+  "BA in Mathematics, BA in Computer Science, BA in Mathematics & Computer Science joint degree": {
+    "en": "BA in Mathematics, BA in Computer Science, BA in Mathematics & Computer Science joint degree",
+    "si": "ගණිතය පිළිබඳ ශාස්ත්‍රවේදී (BA), පරිගණක විද්‍යාව පිළිබඳ ශාස්ත්‍රවේදී (BA) සහ ගණිතය සහ පරිගණක විද්‍යාව ඒකාබද්ධ උපාධිය",
+    "ta": "கணிதத்தில் இளங்கலை (BA), கணினி அறிவியலில் இளங்கலை (BA), கணிதம் & கணினி அறிவியல் கூட்டு பட்டம்"
+  },
+  "BA in PPE (Philosophy, Politics & Economics) — the degree of Oxford prime ministers; BA in English, History, Law": {
+    "en": "BA in PPE (Philosophy, Politics & Economics) — the degree of Oxford prime ministers; BA in English, History, Law",
+    "si": "PPE (දර්ශනය, දේශපාලනය සහ ආර්ථික විද්‍යාව) පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධිය — ඔක්ස්ෆර්ඩ් අගමැතිවරුන්ගේ උපාධිය; ඉංග්‍රීසි, ඉතිහාසය සහ නීතිය පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධි",
+    "ta": "PPE (தத்துவம், அரசியல் & பொருளாதாரம்) இளங்கலை (BA) — ஆக்ஸ்போர்டு பிரதமர்களின் பட்டம்; ஆங்கிலம், வரலாறு, சட்டத்தில் இளங்கலை (BA)"
+  },
+  "BA in Political Science, Psychology, International Relations": {
+    "en": "BA in Political Science, Psychology, International Relations",
+    "si": "දේශපාලන විද්‍යාව, මනෝවිද්‍යාව සහ ජාත්‍යන්තර සබඳතා පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධි",
+    "ta": "அரசியல் அறிவியல், உளவியல், சர்வதேச உறவுகளில் இளங்கலை (BA) பட்டங்கள்"
+  },
+  "BA in Sinhala, English, History, Geography, Economics, Political Science, Philosophy, Pali & Buddhist Studies": {
+    "en": "BA in Sinhala, English, History, Geography, Economics, Political Science, Philosophy, Pali & Buddhist Studies",
+    "si": "සිංහල, ඉංග්‍රීසි, ඉතිහාසය, භූගෝල විද්‍යාව, ආර්ථික විද්‍යාව, දේශපාලන විද්‍යාව, දර්ශනය, පාලි සහ බෞද්ධ අධ්‍යයනය පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධි",
+    "ta": "சிங்களம், ஆங்கிலம், வரலாறு, புவியியல், பொருளாதாரம், அரசியல் அறிவியல், தத்துவம், பாலி & பௌத்த ஆய்வுகளில் இளங்கலை (BA) பட்டங்கள்"
+  },
+  "BA in Theatre and BA in Film Studies": {
+    "en": "BA in Theatre and BA in Film Studies",
+    "si": "නාට්‍ය හා රංග කලාව සහ සිනමා අධ්‍යයනය පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධි",
+    "ta": "நாடகக்கலையில் இளங்கலை (BA) மற்றும் திரைப்பட ஆய்வுகளில் இளங்கலை (BA) பட்டங்கள்"
+  },
+  "BA in a wide range of subjects including Cultural Studies, Creative Arts, and Political Science": {
+    "en": "BA in a wide range of subjects including Cultural Studies, Creative Arts, and Political Science",
+    "si": "සංස්කෘතික අධ්‍යයනය, නිර්මාණාත්මක කලා සහ දේශපාලන විද්‍යාව ඇතුළු පුළුල් පරාසයක විෂයයන් සඳහා වන ශාස්ත්‍රවේදී (BA) උපාධි",
+    "ta": "கலாச்சார ஆய்வுகள், படைப்பு கலைகள் மற்றும் அரசியல் அறிவியல் உட்பட பரந்த அளவிலான பாடங்களில் இளங்கலை (BA) பட்டங்கள்"
+  },
+  "BA with multiple discipline tracks": {
+    "en": "BA with multiple discipline tracks",
+    "si": "බහුවිධ විෂය ක්ෂේත්‍ර ඔස්සේ දිවෙන ශාස්ත්‍රවේදී (BA) උපාධිය",
+    "ta": "பல்வேறு பாடநெறி வழிகளைக் கொண்ட இளங்கலை (BA) பட்டம்"
+  },
+  "BA/BSc in Biochemistry, Biology, Chemistry, Physics, and Earth Sciences": {
+    "en": "BA/BSc in Biochemistry, Biology, Chemistry, Physics, and Earth Sciences",
+    "si": "ජෛව රසායන විද්‍යාව, ජීව විද්‍යාව, රසායන විද්‍යාව, භෞතික විද්‍යාව සහ පෘථිවි විද්‍යාව පිළිබඳ ශාස්ත්‍රවේදී (BA) / විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "உயிர்வேதியியல், உயிரியல், வேதியியல், இயற்பியல் மற்றும் புவி அறிவியலில் இளங்கலை (BA) / இளங்கலை அறிவியல் (BSc) பட்டங்கள்"
+  },
+  "BA/BSc in Molecular & Cellular Biology, Biomedical Engineering, Chemistry, and Neuroscience": {
+    "en": "BA/BSc in Molecular & Cellular Biology, Biomedical Engineering, Chemistry, and Neuroscience",
+    "si": "අණුක සහ සෛලීය ජීව විද්‍යාව, ජෛව වෛද්‍ය ඉංජිනේරු විද්‍යාව, රසායන විද්‍යාව සහ ස්නායු විද්‍යාව පිළිබඳ ශාස්ත්‍රවේදී (BA) / විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "மூலக்கூறு & செல்லுலார் உயிரியல், உயிரி மருத்துவ பொறியியல், வேதியியல் மற்றும் நரம்பியல் அறிவியலில் இளங்கலை (BA) / இளங்கலை அறிவியல் (BSc) பட்டங்கள்"
+  },
+  "BBA": {
+    "en": "BBA",
+    "si": "ව්‍යාපාර පරිපාලනවේදී උපාධිය (BBA)",
+    "ta": "வணிக நிர்வாக இளங்கலை (BBA)"
+  },
+  "BBA (Business Administration) — highly ranked globally; BSc in Accountancy": {
+    "en": "BBA (Business Administration) — highly ranked globally; BSc in Accountancy",
+    "si": "ගෝලීය වශයෙන් ඉහළින්ම ශ්‍රේණිගත කළ ව්‍යාපාර පරිපාලනවේදී (BBA) උපාධිය; ගිණුම්කරණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය",
+    "ta": "உலகளவில் உயர் தரவரிசையில் உள்ள வணிக நிர்வாக இளங்கலை (BBA); கணக்கியலில் இளங்கலை அறிவியல் (BSc) பட்டம்"
+  },
+  "BBA, BCom, BSc in Accounting": {
+    "en": "BBA, BCom, BSc in Accounting",
+    "si": "BBA, BCom සහ ගිණුම්කරණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "BBA, BCom, கணக்கியலில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BBA, BSc in Management": {
+    "en": "BBA, BSc in Management",
+    "si": "BBA සහ කළමනාකරණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "BBA, மேலாண்மையில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BBA, BSc in Management & Information Systems, BSc in Accounting": {
+    "en": "BBA, BSc in Management & Information Systems, BSc in Accounting",
+    "si": "BBA, කළමනාකරණ සහ තොරතුරු පද්ධති පිළිබඳ විද්‍යාවේදී (BSc) සහ ගිණුම්කරණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "BBA, மேலாண்மை & தகவல் அமைப்புகளில் இளங்கலை அறிவியல் (BSc), கணக்கியலில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BBA, BSc in Management Information Systems": {
+    "en": "BBA, BSc in Management Information Systems",
+    "si": "BBA සහ කළමනාකරණ තොරතුරු පද්ධති පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "BBA, மேலாண்மை தகவல் அமைப்புகளில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BCom": {
+    "en": "BCom",
+    "si": "වාණිජවේදී උපාධිය (BCom)",
+    "ta": "வணிகவியல் இளங்கலை (BCom)"
+  },
+  "BCom (Special), BSc in Finance, BSc in Management & Information Technology": {
+    "en": "BCom (Special), BSc in Finance, BSc in Management & Information Technology",
+    "si": "වාණිජවේදී (විශේෂ), මූල්‍ය පිළිබඳ විද්‍යාවේදී (BSc) සහ කළමනාකරණ සහ තොරතුරු තාක්ෂණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "BCom (சிறப்பு), நிதியியலில் இளங்கலை அறிவியல் (BSc), மேலாண்மை & தகவல் தொழில்நுட்பத்தில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BCom / BBA": {
+    "en": "BCom / BBA",
+    "si": "BCom / BBA",
+    "ta": "BCom / BBA"
+  },
+  "BCom at Rotman School of Management, BA in Economics": {
+    "en": "BCom at Rotman School of Management, BA in Economics",
+    "si": "රොට්මන් කළමනාකරණ පාසලෙහි වාණිජවේදී (BCom) සහ ආර්ථික විද්‍යාව පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධි",
+    "ta": "ரோட்மேன் மேலாண்மை பள்ளியில் BCom, பொருளாதாரத்தில் இளங்கலை (BA)"
+  },
+  "BCom — among the best in Australia; BA in Economics": {
+    "en": "BCom — among the best in Australia; BA in Economics",
+    "si": "ඕස්ට්‍රේලියාවේ විශිෂ්ටතම වාණිජවේදී (BCom) උපාධියක්; ආර්ථික විද්‍යාව පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධිය",
+    "ta": "ஆஸ்திரேலியாவின் சிறந்த BCom பட்டங்களில் ஒன்று; பொருளாதாரத்தில் இளங்கலை (BA)"
+  },
+  "BCom, BBA at Monash Business School": {
+    "en": "BCom, BBA at Monash Business School",
+    "si": "මොනෑෂ් ව්‍යාපාරික පාසලෙහි BCom සහ BBA උපාධි",
+    "ta": "மொனாஷ் வணிகப் பள்ளியில் BCom, BBA"
+  },
+  "BDS (Dental)": {
+    "en": "BDS (Dental)",
+    "si": "දන්ත ශල්‍ය වෛද්‍ය උපාධිය (BDS)",
+    "ta": "பல் மருத்துவ இளங்கலை (BDS)"
+  },
+  "BE in Software, Electrical, Civil, Aerospace, and Mechanical Engineering": {
+    "en": "BE in Software, Electrical, Civil, Aerospace, and Mechanical Engineering",
+    "si": "මෘදුකාංග, විදුලි, සිවිල්, අභ්‍යවකාශ සහ යාන්ත්‍රික ඉංජිනේරු විද්‍යාව පිළිබඳ ඉංජිනේරුවේදී (BE) උපාධි",
+    "ta": "மென்பொருள், மின்சார, சிவில், விண்வெளி மற்றும் இயந்திர பொறியியலில் இளங்கலை பொறியியல் (BE)"
+  },
+  "BEng": {
+    "en": "BEng",
+    "si": "ඉංජිනේරුවේදී උපාධිය (BEng)",
+    "ta": "பொறியியல் இளங்கலை (BEng)"
+  },
+  "BEng Computer": {
+    "en": "BEng Computer",
+    "si": "පරිගණක ඉංජිනේරුවේදී උපාධිය (BEng)",
+    "ta": "கணினி பொறியியல் இளங்கலை (BEng)"
+  },
+  "BEng Electrical": {
+    "en": "BEng Electrical",
+    "si": "විදුලි ඉංජිනේරුවේදී උපාධිය (BEng)",
+    "ta": "மின் பொறியியல் இளங்கலை (BEng)"
+  },
+  "BEng in Computer Engineering, Chemical Engineering, Civil Engineering, Electrical Engineering": {
+    "en": "BEng in Computer Engineering, Chemical Engineering, Civil Engineering, Electrical Engineering",
+    "si": "පරිගණක, රසායනික, සිවිල් සහ විදුලි ඉංජිනේරු විද්‍යාව පිළිබඳ ඉංජිනේරුවේදී (BEng) උපාධි",
+    "ta": "கணினி பொறியியல், இரசாயன பொறியியல், சிவில் பொறியியல், மின் பொறியியலில் இளங்கலை பொறியியல் (BEng)"
+  },
+  "BEng in Electrical, Mechanical, Computer, Chemical, and Industrial Engineering": {
+    "en": "BEng in Electrical, Mechanical, Computer, Chemical, and Industrial Engineering",
+    "si": "විදුලි, යාන්ත්‍රික, පරිගණක, රසායනික සහ කාර්මික ඉංජිනේරු විද්‍යාව පිළිබඳ ඉංජිනේරුවේදී (BEng) උපාධි",
+    "ta": "மின்சார, இயந்திர, கணினி, இரசாயன மற்றும் தொழில்துறை பொறியியலில் இளங்கலை பொறியியல் (BEng)"
+  },
+  "BSc AI": {
+    "en": "BSc AI",
+    "si": "කෘත්‍රිම බුද්ධිය පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය",
+    "ta": "செயற்கை நுண்ணறிவு இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Agri-Business": {
+    "en": "BSc Agri-Business",
+    "si": "කෘෂි ව්‍යාපාර පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය",
+    "ta": "விவசாய வணிகம் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Agriculture": {
+    "en": "BSc Agriculture",
+    "si": "කෘෂිකර්ම විද්‍යාවේදී උපාධිය (BSc)",
+    "ta": "விவசாயத்தில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Agriculture, BSc Agricultural Technology & Management": {
+    "en": "BSc Agriculture, BSc Agricultural Technology & Management",
+    "si": "කෘෂිකර්ම විද්‍යාවේදී (BSc) සහ කෘෂිකාර්මික තාක්ෂණය හා කළමනාකරණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "விவசாயத்தில் இளங்கலை அறிவியல் (BSc), விவசாய தொழில்நுட்பம் & மேலாண்மையில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Agriculture, BSc Food Science": {
+    "en": "BSc Agriculture, BSc Food Science",
+    "si": "කෘෂිකර්ම විද්‍යාවේදී (BSc) සහ ආහාර විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "விவசாயத்தில் இளங்கலை அறிவியல் (BSc), உணவு அறிவியலில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Agriculture, BSc Food Science & Technology": {
+    "en": "BSc Agriculture, BSc Food Science & Technology",
+    "si": "කෘෂිකර්ම විද්‍යාවේදී (BSc) සහ ආහාර විද්‍යාව හා තාක්ෂණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "விவசாயத்தில் இளங்கலை அறிவியல் (BSc), உணவு அறிவியல் & தொழில்நுட்பத்தில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Agriculture, BSc Food Science & Technology, BSc Agri-Business Management": {
+    "en": "BSc Agriculture, BSc Food Science & Technology, BSc Agri-Business Management",
+    "si": "කෘෂිකර්ම විද්‍යාවේදී (BSc), ආහාර විද්‍යාව හා තාක්ෂණය පිළිබඳ විද්‍යාවේදී (BSc) සහ කෘෂි ව්‍යාපාර කළමනාකරණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "விவசாயம் (BSc), உணவு அறிவியல் & தொழில்நுட்பம் (BSc), விவசாய வணிக மேலாண்மையில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Applied Sciences": {
+    "en": "BSc Applied Sciences",
+    "si": "ව්‍යවහාරික විද්‍යාවේදී උපාධිය (BSc)",
+    "ta": "பயன்பாட்டு அறிவியலில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Bio-Systems": {
+    "en": "BSc Bio-Systems",
+    "si": "ජෛව පද්ධති තාක්ෂණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය",
+    "ta": "உயிரியல் அமைப்புகள் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Computer Science": {
+    "en": "BSc Computer Science",
+    "si": "පරිගණක විද්‍යාව පිළිබඳ විද්‍යාවේදී උපාධිය (BSc)",
+    "ta": "கணினி அறிவியலில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Cyber Security": {
+    "en": "BSc Cyber Security",
+    "si": "සයිබර් ආරක්ෂණය පිළිබඳ විද්‍යාවේදී උපාධිය (BSc)",
+    "ta": "சைபர் பாதுகாப்பில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Eng in Civil, Electrical, Mechanical, and Computing": {
+    "en": "BSc Eng in Civil, Electrical, Mechanical, and Computing",
+    "si": "සිවිල්, විදුලි, යාන්ත්‍රික සහ පරිගණක ඉංජිනේරු විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc Eng) උපාධි",
+    "ta": "சிவில், மின்சார, இயந்திர மற்றும் கணினி பொறியியலில் இளங்கலை அறிவியல் (BSc Eng)"
+  },
+  "BSc Eng in Computer, Electrical, Civil, Mechanical, and Chemical Engineering": {
+    "en": "BSc Eng in Computer, Electrical, Civil, Mechanical, and Chemical Engineering",
+    "si": "පරිගණක, විදුලි, සිවිල්, යාන්ත්‍රික සහ රසායනික ඉංජිනේරු විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc Eng) උපාධි",
+    "ta": "கணினி, மின்சார, சிவில், இயந்திர மற்றும் இரசாயனப் பொறியியலில் இளங்கலை அறிவியல் (BSc Eng)"
+  },
+  "BSc Eng in Software, Electronic & Telecom, Mechanical, Civil, Chemical, Earth Resources, and Material Engineering": {
+    "en": "BSc Eng in Software, Electronic & Telecom, Mechanical, Civil, Chemical, Earth Resources, and Material Engineering",
+    "si": "මෘදුකාංග, ඉලෙක්ට්‍රොනික හා විදුලි සංදේශ, යාන්ත්‍රික, සිවිල්, රසායනික, පෘථිවි සම්පත් සහ ද්‍රව්‍ය ඉංජිනේරු විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc Eng) උපාධි",
+    "ta": "மென்பொருள், மின்னணு & தொலைத்தொடர்பு, இயந்திரம், சிவில், இரசாயன, புவி வளங்கள் மற்றும் பொருள் பொறியியலில் இளங்கலை அறிவியல் (BSc Eng)"
+  },
+  "BSc Engineering": {
+    "en": "BSc Engineering",
+    "si": "ඉංජිනේරු විද්‍යාවේදී උපාධිය (BSc Eng)",
+    "ta": "பொறியியலில் இளங்கலை அறிவியல் (BSc Eng)"
+  },
+  "BSc Engineering in Civil, Electrical, and Computer Engineering": {
+    "en": "BSc Engineering in Civil, Electrical, and Computer Engineering",
+    "si": "සිවිල්, විදුලි සහ පරිගණක ඉංජිනේරු විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc Eng) උපාධි",
+    "ta": "சிவில், மின்சார மற்றும் கணினி பொறியியலில் இளங்கலை அறிவியல் (BSc Eng)"
+  },
+  "BSc Finance": {
+    "en": "BSc Finance",
+    "si": "මූල්‍ය විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය",
+    "ta": "நிதியியலில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Fisheries": {
+    "en": "BSc Fisheries",
+    "si": "ධීවර විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය",
+    "ta": "மீன்வளர்ப்பில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc IT": {
+    "en": "BSc IT",
+    "si": "තොරතුරු තාක්ෂණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය",
+    "ta": "தகவல் தொழில்நுட்பத்தில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Life Sciences": {
+    "en": "BSc Life Sciences",
+    "si": "ජීව විද්‍යාවන් පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය",
+    "ta": "உயிர் அறிவியல் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc MIT": {
+    "en": "BSc MIT",
+    "si": "කළමනාකරණ සහ තොරතුරු තාක්ෂණය පිළිබඳ විද්‍යාවේදී (BSc MIT) උපාධිය",
+    "ta": "மேலாண்மை & தகவல் தொழில்நுட்பத்தில் இளங்கலை அறிவியல் (BSc MIT)"
+  },
+  "BSc Natural Sciences": {
+    "en": "BSc Natural Sciences",
+    "si": "ස්වාභාවික විද්‍යාවන් පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය",
+    "ta": "இயற்கை அறிவியல் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Physics": {
+    "en": "BSc Physics",
+    "si": "භෞතික විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය",
+    "ta": "இயற்பியலில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Technology": {
+    "en": "BSc Technology",
+    "si": "තාක්ෂණවේදී උපාධිය (BSc)",
+    "ta": "தொழில்நுட்பத்தில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc Tourism": {
+    "en": "BSc Tourism",
+    "si": "සංචාරක ව්‍යාපාරය පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය",
+    "ta": "சுற்றுலாவில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc in Accounting, Business Administration, Finance, Marketing, Human Resource Management": {
+    "en": "BSc in Accounting, Business Administration, Finance, Marketing, Human Resource Management",
+    "si": "ගිණුම්කරණය, ව්‍යාපාර පරිපාලනය, මූල්‍ය, අලෙවිකරණය සහ මානව සම්පත් කළමනාකරණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "கணக்கியல், வணிக நிர்வாகம், நிதி, சந்தைப்படுத்தல், மனித வள மேலாண்மையில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc in Agri-Business Management, BSc in Plantation Management": {
+    "en": "BSc in Agri-Business Management, BSc in Plantation Management",
+    "si": "කෘෂි ව්‍යාපාර කළමනාකරණය සහ වතු වගා කළමනාකරණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "விவசாய வணிக மேலாண்மை, தோட்ட மேலாண்மையில் இளங்கலை அறிவியல் (BSc) பட்டங்கள்"
+  },
+  "BSc in Applied Sciences": {
+    "en": "BSc in Applied Sciences",
+    "si": "ව්‍යවහාරික විද්‍යාවන් පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය",
+    "ta": "பயன்பாட்டு அறிவியலில் இளங்கலை அறிவியல் (BSc) பட்டம்"
+  },
+  "BSc in Chemistry, Physics, Mathematics, Molecular Biology, and BA in Humanities subjects": {
+    "en": "BSc in Chemistry, Physics, Mathematics, Molecular Biology, and BA in Humanities subjects",
+    "si": "රසායන විද්‍යාව, භෞතික විද්‍යාව, ගණිතය, අණුක ජීව විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) සහ මානුෂීය විෂයයන් පිළිබඳ ශාස්ත්‍රවේදී (BA) උපාධි",
+    "ta": "வேதியியல், இயற்பியல், கணிதம், மூலக்கூறு உயிரியலில் BSc மற்றும் மனிதநேய பாடங்களில் BA பட்டங்கள்"
+  },
+  "BSc in Computer Science with tracks in AI, HCI, Graphics, Systems, and Theory — the most sought-after CS degree in the world": {
+    "en": "BSc in Computer Science with tracks in AI, HCI, Graphics, Systems, and Theory — the most sought-after CS degree in the world",
+    "si": "කෘත්‍රිම බුද්ධිය (AI), මානව-පරිගණක අන්තර්ක්‍රියා (HCI), ග්‍රැෆික්ස්, පද්ධති සහ සිද්ධාන්ත පිළිබඳ විශේෂීකරණය සහිත පරිගණක විද්‍යාවේදී (BSc) උපාධිය — ලොව ඉහළින්ම ඉල්ලන පරිගණක විද්‍යා උපාධියයි",
+    "ta": "AI, HCI, கிராபிக்ஸ், சிஸ்டம்ஸ் மற்றும் தியரி ஆகிய பிரிவுகளைக் கொண்ட கணினி அறிவியல் (BSc) — உலகின் மிகவும் விரும்பப்படும் CS பட்டம்"
+  },
+  "BSc in Computer Science — the birthplace of modern deep learning research, with researchers like Geoffrey Hinton": {
+    "en": "BSc in Computer Science — the birthplace of modern deep learning research, with researchers like Geoffrey Hinton",
+    "si": "පරිගණක විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය — ජෙෆ්රි හින්ටන් වැනි පර්යේෂකයන් සිටි, නවීන ගැඹුරු ඉගෙනුම් (deep learning) පර්යේෂණවල උපන් බිමයි",
+    "ta": "கணினி அறிவியல் இளங்கலை அறிவியல் (BSc) — ஜெஃப்ரி ஹிண்டன் போன்ற ஆராய்ச்சியாளர்களுடன் நவீன ஆழ்ந்த கற்றல் (deep learning) ஆராய்ச்சியின் பிறப்பிடம்"
+  },
+  "BSc in Computer Science, BE in Software, Electrical, Civil, and Mechanical Engineering": {
+    "en": "BSc in Computer Science, BE in Software, Electrical, Civil, and Mechanical Engineering",
+    "si": "පරිගණක විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) සහ මෘදුකාංග, විදුලි, සිවිල් සහ යාන්ත්‍රික ඉංජිනේරු විද්‍යාව පිළිබඳ ඉංජිනේරුවේදී (BE) උපාධි",
+    "ta": "கணினி அறிவியலில் BSc, மென்பொருள், மின்சார, சிவில் மற்றும் இயந்திர பொறியியலில் BE பட்டங்கள்"
+  },
+  "BSc in Computer Science, BSc in Artificial Intelligence, BSc in Data Science": {
+    "en": "BSc in Computer Science, BSc in Artificial Intelligence, BSc in Data Science",
+    "si": "පරිගණක විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc), කෘත්‍රිම බුද්ධිය පිළිබඳ විද්‍යාවේදී (BSc) සහ දත්ත විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "கணினி அறிவியலில் BSc, செயற்கை நுண்ணறிவில் BSc, தரவு அறிவியலில் BSc பட்டங்கள்"
+  },
+  "BSc in Computer Science, BSc in Information Security, BSc in Business Analytics": {
+    "en": "BSc in Computer Science, BSc in Information Security, BSc in Business Analytics",
+    "si": "පරිගණක විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc), තොරතුරු ආරක්ෂණය පිළිබඳ විද්‍යාවේදී (BSc) සහ ව්‍යාපාර විශ්ලේෂණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "கணினி அறிவியலில் BSc, தகவல் பாதுகாப்பில் BSc, வணிக பகுப்பாய்வில் BSc பட்டங்கள்"
+  },
+  "BSc in Computer Science, BSc in Software Engineering, BSc in Data Science": {
+    "en": "BSc in Computer Science, BSc in Software Engineering, BSc in Data Science",
+    "si": "පරිගණක විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc), මෘදුකාංග ඉංජිනේරු විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) සහ දත්ත විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "கணினி அறிவியலில் BSc, மென்பொருள் பொறியியலில் BSc, தரவு அறிவியலில் BSc பட்டங்கள்"
+  },
+  "BSc in Cyber Security, Computing & Information Systems, Food Science, Environmental Science": {
+    "en": "BSc in Cyber Security, Computing & Information Systems, Food Science, Environmental Science",
+    "si": "සයිබර් ආරක්ෂණය, පරිගණක හා තොරතුරු පද්ධති, ආහාර විද්‍යාව සහ පාරිසරික විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "சைபர் பாதுகாப்பு, கணினி & தகவல் அமைப்புகள், உணவு அறிவியல், சுற்றுச்சூழல் அறிவியலில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc in EECS (Electrical Engineering & Computer Science), Course 6: the most competitive program at MIT": {
+    "en": "BSc in EECS (Electrical Engineering & Computer Science), Course 6: the most competitive program at MIT",
+    "si": "EECS (විදුලි ඉංජිනේරු සහ පරිගණක විද්‍යාව) පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය, පාඨමාලාව 6: MIT හි ඇති තරඟකාරීම වැඩසටහනයි",
+    "ta": "EECS (மின் பொறியியல் & கணினி அறிவியல்) இளங்கலை அறிவியல் (BSc), பாடநெறி 6: MIT இன் மிகவும் போட்டித்தன்மை வாய்ந்த திட்டம்"
+  },
+  "BSc in Earth Systems, Energy Resources Engineering": {
+    "en": "BSc in Earth Systems, Energy Resources Engineering",
+    "si": "පෘථිවි පද්ධති, බලශක්ති සම්පත් ඉංජිනේරු විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "புவி அமைப்புகள், ஆற்றல் வளப் பொறியியலில் இளங்கலை அறிவியல் (BSc) பட்டங்கள்"
+  },
+  "BSc in Economics, Management Science": {
+    "en": "BSc in Economics, Management Science",
+    "si": "ආර්ථික විද්‍යාව, කළමනාකරණ විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "பொருளாதாரம், மேலாண்மை அறிவியலில் இளங்கலை அறிவியல் (BSc) பட்டங்கள்"
+  },
+  "BSc in Electrical Engineering, Biomedical Engineering, Civil Engineering": {
+    "en": "BSc in Electrical Engineering, Biomedical Engineering, Civil Engineering",
+    "si": "විදුලි ඉංජිනේරු, ජෛව වෛද්‍ය ඉංජිනේරු, සිවිල් ඉංජිනේරු විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "மின் பொறியியல், உயிரி மருத்துவ பொறியியல், சிவில் பொறியியலில் இளங்கலை அறிவியல் (BSc) பட்டங்கள்"
+  },
+  "BSc in Fisheries & Marine Sciences — one of Sri Lanka's only programs": {
+    "en": "BSc in Fisheries & Marine Sciences — one of Sri Lanka's only programs",
+    "si": "ධීවර හා සාගර විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය — ශ්‍රී ලංකාවේ ඇති එකම සහ සුවිශේෂී වැඩසටහන්වලින් එකකි",
+    "ta": "மீன்வளம் & கடல்சார் அறிவியலில் இளங்கலை அறிவியல் (BSc) — இலங்கையின் ஒரேயொரு பிரத்யேக திட்டம்"
+  },
+  "BSc in Geomatics, BSc in Natural Resources, BSc in Applied Sciences": {
+    "en": "BSc in Geomatics, BSc in Natural Resources, BSc in Applied Sciences",
+    "si": "භූමිතිය (Geomatics), ස්වාභාවික සම්පත්, ව්‍යවහාරික විද්‍යාවන් පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "ஜியோமடிக்ஸ், இயற்கை வளங்கள், பயன்பாட்டு அறிவியலில் இளங்கலை அறிவியல் (BSc) பட்டங்கள்"
+  },
+  "BSc in IT, BSc in IT & Management, BSc in Artificial Intelligence": {
+    "en": "BSc in IT, BSc in IT & Management, BSc in Artificial Intelligence",
+    "si": "තොරතුරු තාක්ෂණය (IT), තොරතුරු තාක්ෂණය හා කළමනාකරණය, කෘත්‍රිම බුද්ධිය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "தகவல் தொழில்நுட்பத்தில் BSc, தகவல் தொழில்நுட்பம் & மேலாண்மையில் BSc, செயற்கை நுண்ணறிவில் BSc"
+  },
+  "BSc in Management — the Imperial College Business School is highly ranked for quantitative finance and entrepreneurship": {
+    "en": "BSc in Management — the Imperial College Business School is highly ranked for quantitative finance and entrepreneurship",
+    "si": "කළමනාකරණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය — ඉම්පීරියල් විද්‍යාලයීය ව්‍යාපාරික පාසල ප්‍රමාණාත්මක මූල්‍ය සහ ව්‍යවසායකත්වය සඳහා ඉහළින්ම ශ්‍රේණිගත කර ඇත",
+    "ta": "மேலாண்மையில் இளங்கலை அறிவியல் (BSc) — இம்பீரியல் கல்லூரி வணிகப் பள்ளி நிதி மற்றும் தொழில்முனைவோர் துறையில் உயர் தரவரிசையில் உள்ளது"
+  },
+  "BSc in Mechanical Engineering, Civil & Environmental Engineering, Aerospace Engineering, Nuclear Engineering": {
+    "en": "BSc in Mechanical Engineering, Civil & Environmental Engineering, Aerospace Engineering, Nuclear Engineering",
+    "si": "යාන්ත්‍රික ඉංජිනේරු, සිවිල් හා පාරිසරික ඉංජිනේරු, අභ්‍යවකාශ ඉංජිනේරු, න්‍යෂ්ටික ඉංජිනේරු විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "இயந்திரப் பொறியியல், சிவில் & சுற்றுச்சூழல் பொறியியல், விண்வெளிப் பொறியியல், அணுப் பொறியியலில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc in Physics, Chemistry, Mathematics, Biochemistry, and Biotechnology": {
+    "en": "BSc in Physics, Chemistry, Mathematics, Biochemistry, and Biotechnology",
+    "si": "භෞතික විද්‍යාව, රසායන විද්‍යාව, ගණිතය, ජෛව රසායන විද්‍යාව සහ ජෛව තාක්ෂණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "இயற்பியல், வேதியியல், கணிதம், உயிர்வேதியியல் மற்றும் உயிரி தொழில்நுட்பத்தில் இளங்கலை அறிவியல் (BSc) பட்டங்கள்"
+  },
+  "BSc in Physics, Chemistry, Mathematics, Biology, and Brain & Cognitive Sciences": {
+    "en": "BSc in Physics, Chemistry, Mathematics, Biology, and Brain & Cognitive Sciences",
+    "si": "භෞතික විද්‍යාව, රසායන විද්‍යාව, ගණිතය, ජීව විද්‍යාව සහ මොළය හා සංජානන විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "இயற்பியல், வேதியியல், கணிதம், உயிரியல் மற்றும் மூளை & அறிவாற்றல் அறிவியலில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc in Quantity Surveying — one of the best in Asia": {
+    "en": "BSc in Quantity Surveying — one of the best in Asia",
+    "si": "ප්‍රමාණ මැනුම්කරණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය — ආසියාවේ විශිෂ්ටතම වැඩසටහන්වලින් එකකි",
+    "ta": "அளவை கணிப்பில் இளங்கலை அறிவியல் (BSc) — ஆசியாவின் சிறந்த திட்டங்களில் ஒன்று"
+  },
+  "BSc in Software Engineering, BSc in Networking": {
+    "en": "BSc in Software Engineering, BSc in Networking",
+    "si": "මෘදුකාංග ඉංජිනේරු විද්‍යාව සහ ජාලකරණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "மென்பொருள் பொறியியல் மற்றும் நெட்வொர்க்கிங்கில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "BSc in Technology, BSc in Bio-Systems Technology": {
+    "en": "BSc in Technology, BSc in Bio-Systems Technology",
+    "si": "තාක්ෂණවේදය සහ ජෛව පද්ධති තාක්ෂණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "தொழில்நுட்பத்தில் BSc, உயிரியல் அமைப்புகள் தொழில்நுட்பத்தில் இளங்கலை அறிவியல் (BSc) பட்டங்கள்"
+  },
+  "BSc in Tourism & Hospitality Management — top-ranked program in Sri Lanka": {
+    "en": "BSc in Tourism & Hospitality Management — top-ranked program in Sri Lanka",
+    "si": "සංචාරක හා ආගන්තුක සත්කාර කළමනාකරණය පිළිබඳ විද්‍යාවේදී (BSc) උපාධිය — ශ්‍රී ලංකාවේ ඉහළම ශ්‍රේණිගත වැඩසටහනයි",
+    "ta": "சுற்றுலா & விருந்தோம்பல் மேலாண்மையில் இளங்கலை அறிவியல் (BSc) — இலங்கையின் முன்னணித் திட்டம்"
+  },
+  "BVSc": {
+    "en": "BVSc",
+    "si": "පශු වෛද්‍ය විද්‍යාවේදී උපාධිය (BVSc)",
+    "ta": "கால்நடை மருத்துவ இளங்கலை (BVSc)"
+  },
+  "BVSc — One of only two veterinary faculties in Sri Lanka": {
+    "en": "BVSc — One of only two veterinary faculties in Sri Lanka",
+    "si": "පශු වෛද්‍ය විද්‍යාවේදී උපාධිය (BVSc) — ශ්‍රී ලංකාවේ ඇති එකම පශු වෛද්‍ය පීඨ දෙකෙන් එකකි",
+    "ta": "கால்நடை மருத்துவ இளங்கலை (BVSc) — இலங்கையிலுள்ள இரண்டு கால்நடை மருத்துவப் பீடங்களில் ஒன்று"
+  },
+  "Bachelor of Architecture (BArch), Bachelor of Design in Fashion Design & Product Design": {
+    "en": "Bachelor of Architecture (BArch), Bachelor of Design in Fashion Design & Product Design",
+    "si": "ගෘහ නිර්මාණ ශිල්පවේදී (BArch) සහ විලාසිතා නිර්මාණකරණය හා නිෂ්පාදන සැලසුම්කරණය පිළිබඳ නිර්මාණවේදී උපාධි",
+    "ta": "கட்டிடக்கலை இளங்கலை (BArch), ஆடை வடிவமைப்பு & தயாரிப்பு வடிவமைப்பில் இளங்கலை வடிவமைப்பு"
+  },
+  "Bachelor of Pharmacy — one of Australia's top pharmacy programs; Doctor of Medicine": {
+    "en": "Bachelor of Pharmacy — one of Australia's top pharmacy programs; Doctor of Medicine",
+    "si": "ඖෂධවේදී උපාධිය — ඕස්ට්‍රේලියාවේ ඉහළම ඖෂධවේදී වැඩසටහනක්; වෛද්‍ය විද්‍යාවේදී උපාධිය",
+    "ta": "பார்மசி இளங்கலை — ஆஸ்திரேலியாவின் சிறந்த பார்மசி திட்டங்களில் ஒன்று; மருத்துவத்தில் டாக்டர் பட்டம்"
+  },
+  "Bachelor of Science in Architecture — one of the top programs globally": {
+    "en": "Bachelor of Science in Architecture — one of the top programs globally",
+    "si": "ගෘහ නිර්මාණ ශිල්පය පිළිබඳ විද්‍යාවේදී උපාධිය — ගෝලීය වශයෙන් ඉහළම මට්ටමේ පවතින වැඩසටහනකි",
+    "ta": "கட்டிடக்கலையில் இளங்கலை அறிவியல் — உலகளவில் முன்னணித் திட்டங்களில் ஒன்று"
+  },
+  "Belihuloya, Sri Lanka": {
+    "en": "Belihuloya, Sri Lanka",
+    "si": "බෙලිහුල්ඔය, ශ්‍රී ලංකාව",
+    "ta": "பெலிகுலோயா, இலங்கை"
+  },
+  "Biosciences": {
+    "en": "Biosciences",
+    "si": "ජීව විද්‍යාවන්",
+    "ta": "உயிர் அறிவியல்"
+  },
+  "Business & Economics": {
+    "en": "Business & Economics",
+    "si": "ව්‍යාපාර සහ ආර්ථික විද්‍යාව",
+    "ta": "வணிகம் & பொருளாதாரம்"
+  },
+  "Business Admin": {
+    "en": "Business Admin",
+    "si": "ව්‍යාපාර පරිපාලනය",
+    "ta": "வணிக நிர்வாகம்"
+  },
+  "CS & AI": {
+    "en": "CS & AI",
+    "si": "පරිගණක විද්‍යාව සහ කෘත්‍රිම බුද්ධිය",
+    "ta": "கணினி அறிவியல் & செயற்கை நுண்ணறிவு"
+  },
+  "Cambridge, Massachusetts, USA": {
+    "en": "Cambridge, Massachusetts, USA",
+    "si": "කේම්බ්‍රිජ්, මැසචුසෙට්ස්, ඇමරිකා එක්සත් ජනපදය",
+    "ta": "கேம்பிரிட்ஜ், மாசசூசெட்ஸ், அமெரிக்கா"
+  },
+  "Canada": {
+    "en": "Canada",
+    "si": "කැනඩාව",
+    "ta": "கனடா"
+  },
+  "Canada's top-ranked university and one of the world's great research institutions, U of T is located in one of the most multicultural cities on Earth. It is particularly known for its AI research (the university where deep learning was pioneered), medicine, and law. Canada's welcoming immigration pathways make U of T an attractive destination for international students.": {
+    "en": "Canada's top-ranked university and one of the world's great research institutions, U of T is located in one of the most multicultural cities on Earth. It is particularly known for its AI research (the university where deep learning was pioneered), medicine, and law. Canada's welcoming immigration pathways make U of T an attractive destination for international students.",
+    "si": "කැනඩාවේ අංක 1 ශ්‍රේණිගත විශ්වවිද්‍යාලය වන ටොරොන්ටෝ විශ්වවිද්‍යාලය ලොව ප්‍රමුඛතම පර්යේෂණ ආයතනයකි. එය ලොව බහුසංස්කෘතිකම නගරයක පිහිටා ඇත. එය විශේෂයෙන් කෘත්‍රිම බුද්ධි පර්යේෂණ (ගැඹුරු ඉගෙනුම් ක්ෂේත්‍රයේ මුලාරම්භය වූ විශ්වවිද්‍යාලය), වෛද්‍ය විද්‍යාව සහ නීතිය සඳහා ප්‍රසිද්ධය. කැනඩාවේ ලිහිල් සංක්‍රමණික ප්‍රතිපත්ති හේතුවෙන් ජාත්‍යන්තර සිසුන් සඳහා මෙය ඉතා ආකර්ෂණීය තේරීමකි.",
+    "ta": "கனடாவின் முதலிடத்தில் உள்ள பல்கலைக்கழகம் மற்றும் உலகின் சிறந்த ஆராய்ச்சி நிறுவனங்களில் ஒன்றான U of T, பூமியில் உள்ள பன்முக கலாச்சார நகரங்களில் ஒன்றில் அமைந்துள்ளது. இது குறிப்பாக அதன் AI ஆராய்ச்சி (ஆழ்ந்த கற்றல் முன்னோடியாக இருந்த பல்கலைக்கழகம்), மருத்துவம் மற்றும் சட்டத்திற்கு அறியப்படுகிறது. கனடாவின் வரவேற்கத்தக்க குடியேற்ற வழிகள் சர்வதேச மாணவர்களுக்கு U of T ஐ ஒரு கவர்ச்சிகரமான இடமாக மாற்றுகின்றன."
+  },
+  "Colombo, Sri Lanka": {
+    "en": "Colombo, Sri Lanka",
+    "si": "කොළඹ, ශ්‍රී ලංකාව",
+    "ta": "கொழும்பு, இலங்கை"
+  },
+  "Commerce & Economics": {
+    "en": "Commerce & Economics",
+    "si": "වාණිජ සහ ආර්ථික විද්‍යාව",
+    "ta": "வணிகவியல் & பொருளாதாரம்"
+  },
+  "Commerce & Management": {
+    "en": "Commerce & Management",
+    "si": "වාණිජ සහ කළමනාකරණය",
+    "ta": "வணிகவியல் & மேலாண்மை"
+  },
+  "Commerce, Information Technology, Languages, Mass Communication, and Medicine.": {
+    "en": "Commerce, Information Technology, Languages, Mass Communication, and Medicine.",
+    "si": "වාණිජ විද්‍යාව, තොරතුරු තාක්ෂණය, භාෂා අධ්‍යයනය, ජන සන්නිවේදනය සහ වෛද්‍ය විද්‍යාව.",
+    "ta": "வணிகவியல், தகவல் தொழில்நுட்பம், மொழிகள், மக்கள் தொடர்பியல் மற்றும் மருத்துவம்."
+  },
+  "Computer Science": {
+    "en": "Computer Science",
+    "si": "පරිගණක විද්‍යාව",
+    "ta": "கணினி அறிவியல்"
+  },
+  "Computer Science & AI": {
+    "en": "Computer Science & AI",
+    "si": "පරිගණක විද්‍යාව සහ කෘත්‍රිම බුද්ධිය",
+    "ta": "கணினி அறிவியல் & செயற்கை நுண்ணறிவு"
+  },
+  "Computer Science & Engineering": {
+    "en": "Computer Science & Engineering",
+    "si": "පරිගණක විද්‍යාව සහ ඉංජිනේරු විද්‍යාව",
+    "ta": "கணினி அறிவியல் & பொறியியல்"
+  },
+  "Computer Science, Artificial Intelligence, and Entrepreneurship.": {
+    "en": "Computer Science, Artificial Intelligence, and Entrepreneurship.",
+    "si": "පරිගණක විද්‍යාව, කෘත්‍රිම බුද්ධිය සහ ව්‍යවසායකත්වය.",
+    "ta": "கணினி அறிவியல், செயற்கை நுண்ணறிவு மற்றும் தொழில்முனைவு."
+  },
+  "Computer Science, Law, Medicine, Business, and Engineering.": {
+    "en": "Computer Science, Law, Medicine, Business, and Engineering.",
+    "si": "පරිගණක විද්‍යාව, නීතිය, වෛද්‍ය විද්‍යාව, ව්‍යාපාර සහ ඉංජිනේරු විද්‍යාව.",
+    "ta": "கணினி அறிவியல், சட்டம், மருத்துவம், வணிகம் மற்றும் பொறியியல்."
+  },
+  "Computing & Engineering": {
+    "en": "Computing & Engineering",
+    "si": "පරිගණකකරණය සහ ඉංජිනේරු විද්‍යාව",
+    "ta": "கணினி & பொறியியல்"
+  },
+  "Computing & Tech": {
+    "en": "Computing & Tech",
+    "si": "පරිගණකකරණය සහ තාක්ෂණය",
+    "ta": "கணினி & தொழில்நுட்பம்"
+  },
+  "Computing & Technology": {
+    "en": "Computing & Technology",
+    "si": "පරිගණකකරණය සහ තාක්ෂණය",
+    "ta": "கணினி & தொழில்நுட்பம்"
+  },
+  "Consistently ranked the #1 university in the world, MIT is the absolute pinnacle for science and technology. It is famous for its culture of innovation, hands-on research, and entrepreneurship. MIT alumni have founded companies worth trillions of dollars and have won 97+ Nobel Prizes.": {
+    "en": "Consistently ranked the #1 university in the world, MIT is the absolute pinnacle for science and technology. It is famous for its culture of innovation, hands-on research, and entrepreneurship. MIT alumni have founded companies worth trillions of dollars and have won 97+ Nobel Prizes.",
+    "si": "ලොව අංක 1 විශ්වවිද්‍යාලය ලෙස අඛණ්ඩව ශ්‍රේණිගත වන MIT යනු විද්‍යාව හා තාක්ෂණ ක්ෂේත්‍රයේ ප්‍රමුඛතම සන්ධිස්ථානයයි. එය නවෝත්පාදන සංස්කෘතිය, ප්‍රායෝගික පර්යේෂණ සහ ව්‍යවසායකත්වය සඳහා ප්‍රසිද්ධය. MIT හි ආදි සිසුන් ඩොලර් ට්‍රිලියන ගණනක් වටිනා සමාගම් ආරම්භ කර ඇති අතර නොබෙල් ත්‍යාග 97 කට වඩා දිනා ඇත.",
+    "ta": "தொடர்ந்து உலகின் #1 பல்கலைக்கழகமாக தரவரிசைப்படுத்தப்படும் MIT, அறிவியல் மற்றும் தொழில்நுட்பத்தின் உச்சமாகும். இது புதுமை கலாச்சாரம், நேரடி ஆராய்ச்சி மற்றும் தொழில்முனைவோர் மனப்பான்மைக்கு பிரபலமானது. MIT பழைய மாணவர்கள் டிரில்லியன் டாலர் மதிப்புள்ள நிறுவனங்களை நிறுவியுள்ளனர் மற்றும் 97-க்கும் மேற்பட்ட நோபல் பரிசுகளை வென்றுள்ளனர்."
+  },
+  "Data Science": {
+    "en": "Data Science",
+    "si": "දත්ත විද්‍යාව",
+    "ta": "தரவு அறிவியல்"
+  },
+  "Earth & Energy": {
+    "en": "Earth & Energy",
+    "si": "පෘථිවි විද්‍යාව සහ බලශක්තිය",
+    "ta": "புவி & ஆற்றல்"
+  },
+  "Economics": {
+    "en": "Economics",
+    "si": "ආර්ථික විද්‍යාව",
+    "ta": "பொருளாதாரம்"
+  },
+  "Economics & Business": {
+    "en": "Economics & Business",
+    "si": "ආර්ථික විද්‍යාව සහ ව්‍යාපාර",
+    "ta": "பொருளாதாரம் & வணிகம்"
+  },
+  "Economics & Management": {
+    "en": "Economics & Management",
+    "si": "ආර්ථික විද්‍යාව සහ කළමනාකරණය",
+    "ta": "பொருளாதாரம் & மேலாண்மை"
+  },
+  "Edinburgh, Scotland, UK": {
+    "en": "Edinburgh, Scotland, UK",
+    "si": "එඩින්බරෝ, ස්කොට්ලන්තය, එක්සත් රාජධානිය",
+    "ta": "எடின்பரோ, ஸ்காட்லாந்து, ஐக்கிய இராச்சியம்"
+  },
+  "Engineering & IT": {
+    "en": "Engineering & IT",
+    "si": "ඉංජිනේරු විද්‍යාව සහ තොරතුරු තාක්ෂණය",
+    "ta": "பொறியியல் & தகவல் தொழில்நுட்பம்"
+  },
+  "Engineering & Technology": {
+    "en": "Engineering & Technology",
+    "si": "ඉංජිනේරු විද්‍යාව සහ තාක්ෂණය",
+    "ta": "பொறியியல் & தொழில்நுட்பம்"
+  },
+  "Engineering Disciplines": {
+    "en": "Engineering Disciplines",
+    "si": "ඉංජිනේරු විෂය ක්ෂේත්‍රයන්",
+    "ta": "பொறியியல் துறைகள்"
+  },
+  "Engineering, Computing, Biosciences, and Medicine.": {
+    "en": "Engineering, Computing, Biosciences, and Medicine.",
+    "si": "ඉංජිනේරු විද්‍යාව, පරිගණකකරණය, ජීව විද්‍යාවන් සහ වෛද්‍ය විද්‍යාව.",
+    "ta": "பொறியியல், கணினி, உயிரியல் அறிவியல் மற்றும் மருத்துவம்."
+  },
+  "Engineering, Fisheries, Agriculture, and Humanities.": {
+    "en": "Engineering, Fisheries, Agriculture, and Humanities.",
+    "si": "ඉංජිනේරු විද්‍යාව, ධීවර විද්‍යාව, කෘෂිකර්මය සහ මානුෂීය විද්‍යාවන්.",
+    "ta": "பொறியியல், மீன்வளம், விவசாயம் மற்றும் மனிதநேயம்."
+  },
+  "Fine Arts & Design": {
+    "en": "Fine Arts & Design",
+    "si": "ලලිත කලා සහ සැලසුම්කරණය",
+    "ta": "நுண்கலைகள் & வடிவமைப்பு"
+  },
+  "Fine Arts, Dance, Drama, Music, and Design.": {
+    "en": "Fine Arts, Dance, Drama, Music, and Design.",
+    "si": "ලලිත කලා, නර්තනය, නාට්‍ය, සංගීතය සහ සැලසුම්කරණය.",
+    "ta": "நுண்கலைகள், நடனம், நாடகம், இசை மற்றும் வடிவமைப்பு."
+  },
+  "Fisheries & Marine": {
+    "en": "Fisheries & Marine",
+    "si": "ධීවර සහ සාගර විද්‍යාව",
+    "ta": "மீன்வளம் & கடல்சார்"
+  },
+  "Government": {
+    "en": "Government",
+    "si": "රාජ්‍ය පාලනය",
+    "ta": "அரசாங்கம்"
+  },
+  "Graduate Studies": {
+    "en": "Graduate Studies",
+    "si": "පශ්චාත් උපාධි අධ්‍යයන",
+    "ta": "முதுகலை படிப்புகள்"
+  },
+  "Harvard University": {
+    "en": "Harvard University",
+    "si": "හාවඩ් විශ්වවිද්‍යාලය",
+    "ta": "ஹார்வர்ட் பல்கலைக்கழகம்"
+  },
+  "Humanities": {
+    "en": "Humanities",
+    "si": "මානුෂීය විද්‍යාවන්",
+    "ta": "மனிதநேயம்"
+  },
+  "Humanities & Arts": {
+    "en": "Humanities & Arts",
+    "si": "මානුෂීය විද්‍යාවන් සහ කලා",
+    "ta": "மனிதநேயம் & கலை"
+  },
+  "Humanities & Social Sciences": {
+    "en": "Humanities & Social Sciences",
+    "si": "මානුෂීය සහ සමාජ විද්‍යාවන්",
+    "ta": "மனிதநேயம் & சமூக அறிவியல்"
+  },
+  "Imperial College London": {
+    "en": "Imperial College London",
+    "si": "ලන්ඩන් ඉම්පීරියල් විද්‍යාලය",
+    "ta": "இம்பீரியல் கல்லூரி லண்டன்"
+  },
+  "Informatics & Computing": {
+    "en": "Informatics & Computing",
+    "si": "තොරතුරු විද්‍යාව සහ පරිගණකකරණය",
+    "ta": "தகவலியல் & கணினி"
+  },
+  "International Relations": {
+    "en": "International Relations",
+    "si": "ජාත්‍යන්තර සබඳතා",
+    "ta": "சர்வதேச உறவுகள்"
+  },
+  "Jaffna, Sri Lanka": {
+    "en": "Jaffna, Sri Lanka",
+    "si": "යාපනය, ශ්‍රී ලංකාව",
+    "ta": "யாழ்ப்பாணம், இலங்கை"
+  },
+  "Kandy, Sri Lanka": {
+    "en": "Kandy, Sri Lanka",
+    "si": "මහනුවර, ශ්‍රී ලංකාව",
+    "ta": "கண்டி, இலங்கை"
+  },
+  "Kelaniya, Sri Lanka": {
+    "en": "Kelaniya, Sri Lanka",
+    "si": "කැලණිය, ශ්‍රී ලංකාව",
+    "ta": "களனி, இலங்கை"
+  },
+  "Kuliyapitiya, Sri Lanka": {
+    "en": "Kuliyapitiya, Sri Lanka",
+    "si": "කුලියාපිටිය, ශ්‍රී ලංකාව",
+    "ta": "குளியாப்பிட்டிய, இலங்கை"
+  },
+  "LLB": {
+    "en": "LLB",
+    "si": "නීතිවේදී උපාධිය (LLB)",
+    "ta": "சட்ட இளங்கலை (LLB)"
+  },
+  "LLB (Bachelor of Laws) — oldest and most competitive law program in Sri Lanka": {
+    "en": "LLB (Bachelor of Laws) — oldest and most competitive law program in Sri Lanka",
+    "si": "නීතිවේදී (LLB) උපාධිය — ශ්‍රී ලංකාවේ පැරණිතම සහ වඩාත්ම තරඟකාරී නීති වැඩසටහන",
+    "ta": "சட்ட இளங்கலை (LLB) — இலங்கையின் பழமையான மற்றும் மிகவும் போட்டித்தன்மை வாய்ந்த சட்டத் திட்டம்"
+  },
+  "LLB / JD": {
+    "en": "LLB / JD",
+    "si": "LLB / JD",
+    "ta": "LLB / JD"
+  },
+  "LLB — Monash Law School is among Australia's most prestigious": {
+    "en": "LLB — Monash Law School is among Australia's most prestigious",
+    "si": "නීතිවේදී (LLB) උපාධිය — මොනෑෂ් නීති විද්‍යාලය ඕස්ට්‍රේලියාවේ වඩාත්ම කීර්තිමත් පාසල්වලින් එකකි",
+    "ta": "சட்ட இளங்கலை (LLB) — மொனாஷ் சட்டப் பள்ளி ஆஸ்திரேலியாவின் மிகவும் மதிப்புமிக்க சட்டப் பள்ளிகளில் ஒன்றாகும்"
+  },
+  "LLB — the #1 law school in Asia": {
+    "en": "LLB — the #1 law school in Asia",
+    "si": "නීතිවේදී (LLB) උපාධිය — ආසියාවේ අංක 1 නීති විද්‍යාලය",
+    "ta": "சட்ட இளங்கலை (LLB) — ஆசியாவின் #1 சட்டப் பள்ளி"
+  },
+  "LLB, MA in Politics, MA in Economics, MA in International Relations": {
+    "en": "LLB, MA in Politics, MA in Economics, MA in International Relations",
+    "si": "LLB, දේශපාලන විද්‍යාව පිළිබඳ ශාස්ත්‍රපති, ආර්ථික විද්‍යාව පිළිබඳ ශාස්ත්‍රපති සහ ජාත්‍යන්තර සබඳතා පිළිබඳ ශාස්ත්‍රපති උපාධි",
+    "ta": "சட்ட இளங்கலை, அரசியலில் முதுகலை (MA), பொருளாதாரத்தில் முதுகலை (MA), சர்வதேச உறவுகளில் முதுகலை (MA)"
+  },
+  "LLB/JD — Australia's top law program, highly respected internationally": {
+    "en": "LLB/JD — Australia's top law program, highly respected internationally",
+    "si": "LLB/JD — ඕස්ට්‍රේලියාවේ ඉහළම නීති වැඩසටහන, ජාත්‍යන්තර වශයෙන් ඉහළ ගෞරවයට පාත්‍ර වූ",
+    "ta": "LLB/JD — ஆஸ்திரேலியாவின் சிறந்த சட்டத் திட்டம், சர்வதேச அளவில் மிகவும் மதிக்கப்படுகிறது"
+  },
+  "Largest University in Sri Lanka": {
+    "en": "Largest University in Sri Lanka",
+    "si": "ශ්‍රී ලංකාවේ විශාලතම විශ්වවිද්‍යාලය",
+    "ta": "இலங்கையின் மிகப்பெரிய பல்கலைக்கழகம்"
+  },
+  "Law & Government": {
+    "en": "Law & Government",
+    "si": "නීතිය සහ රාජ්‍ය පාලනය",
+    "ta": "சட்டம் & அரசாங்கம்"
+  },
+  "Law & Social Sciences": {
+    "en": "Law & Social Sciences",
+    "si": "නීතිය සහ සමාජ විද්‍යාවන්",
+    "ta": "சட்டம் & சமூக அறிவியல்"
+  },
+  "Law (LLB)": {
+    "en": "Law (LLB)",
+    "si": "නීතිය (LLB)",
+    "ta": "சட்டம் (LLB)"
+  },
+  "Law, Medicine, Arts, Engineering, and Business.": {
+    "en": "Law, Medicine, Arts, Engineering, and Business.",
+    "si": "නීතිය, වෛද්‍ය විද්‍යාව, කලා, ඉංජිනේරු විද්‍යාව සහ ව්‍යාපාරික අධ්‍යයනය.",
+    "ta": "சட்டம், மருத்துவம், கலை, பொறியியல் மற்றும் வணிகம்."
+  },
+  "Law, Medicine, Business, Political Science, and Economics.": {
+    "en": "Law, Medicine, Business, Political Science, and Economics.",
+    "si": "නීතිය, වෛද්‍ය විද්‍යාව, ව්‍යාපාරික අධ්‍යයනය, දේශපාලන විද්‍යාව සහ ආර්ථික විද්‍යාව.",
+    "ta": "சட்டம், மருத்துவம், வணிகம், அரசியல் அறிவியல் மற்றும் பொருளாதாரம்."
+  },
+  "Liberal Arts": {
+    "en": "Liberal Arts",
+    "si": "ලිබරල් කලා (Liberal Arts)",
+    "ta": "லிபரல் ஆர்ட்ஸ்"
+  },
+  "Located in the heart of Silicon Valley, Stanford is the university that shaped the modern tech world. Google, Netflix, Instagram, Yahoo, and hundreds of other companies were founded by Stanford alumni. It has an unmatched entrepreneurial culture and is particularly dominant in Computer Science and Business.": {
+    "en": "Located in the heart of Silicon Valley, Stanford is the university that shaped the modern tech world. Google, Netflix, Instagram, Yahoo, and hundreds of other companies were founded by Stanford alumni. It has an unmatched entrepreneurial culture and is particularly dominant in Computer Science and Business.",
+    "si": "සිලිකන් වැලී (Silicon Valley) හදවතෙහි පිහිටා ඇති ස්ටැන්ෆර්ඩ් යනු නවීන තාක්ෂණික ලෝකය හැඩගැස්වූ විශ්වවිද්‍යාලයයි. ගූගල්, නෙට්ෆ්ලික්ස්, ඉන්ස්ටග්‍රෑම්, යාහූ ඇතුළු සමාගම් සිය ගණනක් ආරම්භ කර ඇත්තේ ස්ටැන්ෆර්ඩ් ආදි සිසුන් විසිනි. එය අසමසම ව්‍යවසායකත්ව සංස්කෘතියකට හිමිකම් කියන අතර පරිගණක විද්‍යාව සහ ව්‍යාපාරික ක්ෂේත්‍රයේ ප්‍රමුඛස්ථානයක් ගනී.",
+    "ta": "சிலிக்கான் வேலியின் மையப்பகுதியில் அமைந்துள்ள ஸ்டான்போர்ட், நவீன தொழில்நுட்ப உலகை வடிவமைத்த பல்கலைக்கழகமாகும். கூகுள், நெட்ஃபிக்ஸ், இன்ஸ்டாகிராம், யாகூ மற்றும் நூற்றுக்கணக்கான பிற நிறுவனங்கள் ஸ்டான்போர்ட் பழைய மாணவர்களால் நிறுவப்பட்டன. இது இணையற்ற தொழில்முனைவோர் கலாச்சாரத்தைக் கொண்டுள்ளது மற்றும் கணினி அறிவியல் மற்றும் வணிகத்தில் குறிப்பாக ஆதிக்கம் செலுத்துகிறது."
+  },
+  "Located in the heart of the capital, the University of Colombo is consistently ranked as the #1 university in Sri Lanka. It is highly competitive and known for producing top-tier professionals in medicine, law, and the corporate sector. Its Faculty of Law is the oldest and most prestigious in the country.": {
+    "en": "Located in the heart of the capital, the University of Colombo is consistently ranked as the #1 university in Sri Lanka. It is highly competitive and known for producing top-tier professionals in medicine, law, and the corporate sector. Its Faculty of Law is the oldest and most prestigious in the country.",
+    "si": "අගනුවර හදවතෙහි පිහිටා ඇති කොළඹ විශ්වවිද්‍යාලය අඛණ්ඩව ශ්‍රී ලංකාවේ අංක 1 විශ්වවිද්‍යාලය ලෙස ශ්‍රේණිගත වේ. එය ඉතා තරඟකාරී වන අතර වෛද්‍ය, නීති සහ ආයතනික ක්ෂේත්‍රවල ඉහළම මට්ටමේ වෘත්තිකයන් බිහිකිරීම සඳහා ප්‍රසිද්ධය. එහි නීති පීඨය දිවයිනේ පැරණිතම සහ කීර්තිමත්ම නීති පීඨයයි.",
+    "ta": "தலைநகரின் மையப்பகுதியில் அமைந்துள்ள கொழும்பு பல்கலைக்கழகம் இலங்கையின் #1 பல்கலைக்கழகமாக தொடர்ந்து தரவரிசைப்படுத்தப்பட்டுள்ளது. இது மிகவும் போட்டித்தன்மை வாய்ந்தது மற்றும் மருத்துவம், சட்டம் மற்றும் கார்ப்பரேட் துறையில் சிறந்த நிபுணர்களை உருவாக்குவதில் பெயர் பெற்றது. இதன் சட்ட பீடம் நாட்டின் பழமையான மற்றும் மிகவும் மதிப்புமிக்க ஒன்றாகும்."
+  },
+  "Located in the scenic Belihuloya area, Sabaragamuwa University is known for its natural sciences, tourism, and social sciences faculties. Its Tourism & Hospitality Management program is considered among the best in Sri Lanka, attracting students from across the country.": {
+    "en": "Located in the scenic Belihuloya area, Sabaragamuwa University is known for its natural sciences, tourism, and social sciences faculties. Its Tourism & Hospitality Management program is considered among the best in Sri Lanka, attracting students from across the country.",
+    "si": "නෙත්කළු බෙලිහුල්ඔය ප්‍රදේශයේ පිහිටා ඇති සබරගමුව විශ්වවිද්‍යාලය එහි ස්වභාවික විද්‍යා, සංචාරක සහ සමාජ විද්‍යා පීඨ සඳහා ප්‍රසිද්ධය. එහි සංචාරක හා ආගන්තුක සත්කාර කළමනාකරණ පාඨමාලාව ශ්‍රී ලංකාවේ හොඳම පාඨමාලා අතරින් එකක් ලෙස සැලකෙන අතර ඒ සඳහා දිවයින පුරා සිටින සිසුන් ආකර්ෂණය වේ.",
+    "ta": "இயற்கை எழில் கொஞ்சும் பெலிகுலோயா பகுதியில் அமைந்துள்ள சபரகமுவ பல்கலைக்கழகம் அதன் இயற்கை அறிவியல், சுற்றுலா மற்றும் சமூக அறிவியல் பீடங்களுக்கு பெயர் பெற்றது. இதன் சுற்றுலா & விருந்தோம்பல் மேலாண்மை திட்டம் இலங்கையின் சிறந்த திட்டங்களில் ஒன்றாகக் கருதப்படுகிறது, இது நாடு முழுவதிலுமிருந்து மாணவர்களை ஈர்க்கிறது."
+  },
+  "London, United Kingdom": {
+    "en": "London, United Kingdom",
+    "si": "ලන්ඩන්, එක්සත් රාජධානිය",
+    "ta": "லண்டன், ஐக்கிய இராச்சியம்"
+  },
+  "MA in English Literature, History, Philosophy, and Linguistics": {
+    "en": "MA in English Literature, History, Philosophy, and Linguistics",
+    "si": "ඉංග්‍රීසි සාහිත්‍යය, ඉතිහාසය, දර්ශනය සහ වාග් විද්‍යාව පිළිබඳ ශාස්ත්‍රපති (MA) උපාධි",
+    "ta": "ஆங்கில இலக்கியம், வரலாறு, தத்துவம் மற்றும் மொழியியலில் முதுகலை (MA) பட்டங்கள்"
+  },
+  "MBBS": {
+    "en": "MBBS",
+    "si": "MBBS",
+    "ta": "MBBS"
+  },
+  "MBBS (Medicine), BDS (Bachelor of Dental Surgery), BSc in Physiotherapy, BSc in Nursing": {
+    "en": "MBBS (Medicine), BDS (Bachelor of Dental Surgery), BSc in Physiotherapy, BSc in Nursing",
+    "si": "MBBS (වෛද්‍ය), BDS (දන්ත ශල්‍ය වෛද්‍ය), භෞතචිකිත්සාව පිළිබඳ විද්‍යාවේදී (BSc) සහ හෙද විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "MBBS (மருத்துவம்), BDS (பல் அறுவை சிகிச்சை), பிசியோதெரபியில் BSc, செவிலியரில் BSc பட்டங்கள்"
+  },
+  "MBBS / MBChB": {
+    "en": "MBBS / MBChB",
+    "si": "MBBS / MBChB",
+    "ta": "MBBS / MBChB"
+  },
+  "MBBS — Faculty of Medicine is one of the most respected in Northern Sri Lanka": {
+    "en": "MBBS — Faculty of Medicine is one of the most respected in Northern Sri Lanka",
+    "si": "MBBS — වෛද්‍ය පීඨය උතුරු ශ්‍රී ලංකාවේ වඩාත්ම ගෞරවයට පාත්‍ර වූ වෛද්‍ය පීඨවලින් එකකි",
+    "ta": "MBBS — மருத்துவ பீடம் வட இலங்கையில் மிகவும் மதிக்கப்படும் பீடங்களில் ஒன்றாகும்"
+  },
+  "MBBS, BDS — highly competitive, world-class facilities": {
+    "en": "MBBS, BDS — highly competitive, world-class facilities",
+    "si": "MBBS, BDS — ඉහළ තරඟකාරීත්වයකින් යුත්, ලෝක මට්ටමේ පහසුකම් සහිත",
+    "ta": "MBBS, BDS — மிகவும் போட்டித்தன்மை வாய்ந்த, உலகத்தரம் வாய்ந்த வசதிகள்"
+  },
+  "MBBS, BDS, BSc in Speech & Hearing Sciences": {
+    "en": "MBBS, BDS, BSc in Speech & Hearing Sciences",
+    "si": "MBBS, BDS සහ කථන හා ශ්‍රවණ විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "MBBS, BDS, பேச்சு & செவிப்புலன் அறிவியலில் இளங்கலை அறிவியல் (BSc) பட்டங்கள்"
+  },
+  "MBBS, BSc in Health Promotion Sciences": {
+    "en": "MBBS, BSc in Health Promotion Sciences",
+    "si": "MBBS සහ සෞඛ්‍ය ප්‍රවර්ධන විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "MBBS, சுகாதார மேம்பாட்டு அறிவியலில் இளங்கலை அறிவியல் (BSc)"
+  },
+  "MBBS, BSc in Medical Laboratory Science, BSc in Pharmacy": {
+    "en": "MBBS, BSc in Medical Laboratory Science, BSc in Pharmacy",
+    "si": "MBBS, වෛද්‍ය රසායනාගාර විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) සහ ඖෂධවේදය පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "MBBS, மருத்துவ ஆய்வக அறிவியலில் BSc, பார்மசியில் BSc பட்டங்கள்"
+  },
+  "MBBS, BSc in Nursing, BSc in Physiotherapy, BSc in Medical Laboratory Science": {
+    "en": "MBBS, BSc in Nursing, BSc in Physiotherapy, BSc in Medical Laboratory Science",
+    "si": "MBBS, හෙද විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc), භෞතචිකිත්සාව පිළිබඳ විද්‍යාවේදී (BSc) සහ වෛද්‍ය රසායනාගාර විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "MBBS, செவிலியரில் BSc, பிசியோதெரபியில் BSc, மருத்துவ ஆய்வக அறிவியலில் BSc பட்டங்கள்"
+  },
+  "MBBS/BSc — six-year integrated medical program": {
+    "en": "MBBS/BSc — six-year integrated medical program",
+    "si": "MBBS/BSc — වසර හයක ඒකාබද්ධ වෛද්‍ය වැඩසටහන",
+    "ta": "MBBS/BSc — ஆறு வருட ஒருங்கிணைந்த மருத்துவத் திட்டம்"
+  },
+  "MBChB (6-year Medicine), BSc in Nursing, BVSc (Veterinary Science)": {
+    "en": "MBChB (6-year Medicine), BSc in Nursing, BVSc (Veterinary Science)",
+    "si": "MBChB (වසර 6 ක වෛද්‍ය උපාධිය), හෙද විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) සහ පශු වෛද්‍ය විද්‍යාවේදී (BVSc) උපාධි",
+    "ta": "MBChB (6 வருட மருத்துவம்), செவிலியரில் BSc, BVSc (கால்நடை மருத்துவம்)"
+  },
+  "MD (Doctor of Medicine) — one of Canada's top medical programs": {
+    "en": "MD (Doctor of Medicine) — one of Canada's top medical programs",
+    "si": "MD (වෛද්‍ය විද්‍යාවේදී උපාධිය) — කැනඩාවේ ඉහළම වෛද්‍ය විද්‍යා වැඩසටහන්වලින් එකකි",
+    "ta": "MD (மருத்துவத்தில் டாக்டர்) — கனடாவின் சிறந்த மருத்துவ திட்டங்களில் ஒன்று"
+  },
+  "MD (Doctor of Medicine), Bachelor of Biomedicine, BSc in Nursing": {
+    "en": "MD (Doctor of Medicine), Bachelor of Biomedicine, BSc in Nursing",
+    "si": "MD (වෛද්‍ය විද්‍යාවේදී උපාධිය), ජෛව වෛද්‍ය විද්‍යාව පිළිබඳ උපාධිය සහ හෙද විද්‍යාව පිළිබඳ විද්‍යාවේදී (BSc) උපාධි",
+    "ta": "MD (மருத்துவத்தில் டாக்டர்), பயோமெடிசின் இளங்கலை, செவிலியரில் BSc"
+  },
+  "MEng Computing": {
+    "en": "MEng Computing",
+    "si": "පරිගණක ඉංජිනේරු විද්‍යාව පිළිබඳ පශ්චාත් උපාධිය (MEng)",
+    "ta": "கணினி கணக்கீட்டில் முதுகலை பொறியியல் (MEng)"
+  },
+  "MEng Computing (a 4-year integrated master's), BEng in Electronic & Electrical Engineering, Mechanical Engineering, Civil Engineering": {
+    "en": "MEng Computing (a 4-year integrated master's), BEng in Electronic & Electrical Engineering, Mechanical Engineering, Civil Engineering",
+    "si": "MEng පරිගණකකරණය (වසර 4ක ඒකාබද්ධ පශ්චාත් උපාධියක්), ඉලෙක්ට්‍රොනික හා විදුලි ඉංජිනේරු, යාන්ත්‍රික ඉංජිනේරු, සිවිල් ඉංජිනේරු විද්‍යාව පිළිබඳ ඉංජිනේරුවේදී (BEng) උපාධි",
+    "ta": "முதுகலை கணினி பொறியியல் MEng (4 வருட ஒருங்கிணைந்த முதுகலை), மின்னணு & மின் பொறியியல், இயந்திர பொறியியல், சிவில் பொறியியலில் BEng பட்டங்கள்"
+  },
+  "Management": {
+    "en": "Management",
+    "si": "කළමනාකරණය",
+    "ta": "மேலாண்மை"
+  },
+  "Management & Business": {
+    "en": "Management & Business",
+    "si": "කළමනාකරණය සහ ව්‍යාපාර",
+    "ta": "மேலாண்மை & வணிகம்"
+  },
+  "Management & Commerce": {
+    "en": "Management & Commerce",
+    "si": "කළමනාකරණය සහ වාණිජ විද්‍යාව",
+    "ta": "மேலாண்மை & வணிகவியல்"
+  },
+  "Management, Business Administration, Applied Sciences, and Medicine.": {
+    "en": "Management, Business Administration, Applied Sciences, and Medicine.",
+    "si": "කළමනාකරණය, ව්‍යාපාර පරිපාලනය, ව්‍යවහාරික විද්‍යාවන් සහ වෛද්‍ය විද්‍යාව.",
+    "ta": "மேலாண்மை, வணிக நிர்வாகம், பயன்பாட்டு அறிவியல் மற்றும் மருத்துவம்."
+  },
+  "Massachusetts Institute of Technology": {
+    "en": "Massachusetts Institute of Technology",
+    "si": "මැසචුසෙට්ස් තාක්ෂණ ආයතනය (MIT)",
+    "ta": "மாசசூசெட்ஸ் தொழில்நுட்ப நிறுவனம்"
+  },
+  "Matara, Sri Lanka": {
+    "en": "Matara, Sri Lanka",
+    "si": "මාතර, ශ්‍රී ලංකාව",
+    "ta": "மாத்தறை, இலங்கை"
+  },
+  "Mathematics & Computing": {
+    "en": "Mathematics & Computing",
+    "si": "ගණිතය සහ පරිගණකකරණය",
+    "ta": "கணிதம் & கணினியியல்"
+  },
+  "Medical & Dental Sciences": {
+    "en": "Medical & Dental Sciences",
+    "si": "වෛද්‍ය සහ දන්ත වෛද්‍ය විද්‍යාවන්",
+    "ta": "மருத்துவ & பல் மருத்துவ அறிவியல்"
+  },
+  "Medical Sciences": {
+    "en": "Medical Sciences",
+    "si": "වෛද්‍ය විද්‍යාවන්",
+    "ta": "மருத்துவ அறிவியல்"
+  },
+  "Medicine & Dentistry": {
+    "en": "Medicine & Dentistry",
+    "si": "වෛද්‍ය විද්‍යාව සහ දන්ත වෛද්‍ය විද්‍යාව",
+    "ta": "மருத்துவம் & பல் மருத்துவம்"
+  },
+  "Medicine & Health": {
+    "en": "Medicine & Health",
+    "si": "වෛද්‍ය විද්‍යාව සහ සෞඛ්‍යය",
+    "ta": "மருத்துவம் & சுகாதாரம்"
+  },
+  "Medicine & Health Sciences": {
+    "en": "Medicine & Health Sciences",
+    "si": "වෛද්‍ය විද්‍යාව සහ සෞඛ්‍ය විද්‍යාවන්",
+    "ta": "மருத்துவம் & சுகாதார அறிவியல்"
+  },
+  "Medicine & Veterinary": {
+    "en": "Medicine & Veterinary",
+    "si": "වෛද්‍ය සහ පශු වෛද්‍ය විද්‍යාව",
+    "ta": "மருத்துவம் & கால்நடை மருத்துவம்"
+  },
+  "Medicine (MBBS)": {
+    "en": "Medicine (MBBS)",
+    "si": "වෛද්‍ය විද්‍යාව (MBBS)",
+    "ta": "மருத்துவம் (MBBS)"
+  },
+  "Medicine (MBChB)": {
+    "en": "Medicine (MBChB)",
+    "si": "වෛද්‍ය විද්‍යාව (MBChB)",
+    "ta": "மருத்துவம் (MBChB)"
+  },
+  "Medicine, Agriculture, Engineering, and Humanities.": {
+    "en": "Medicine, Agriculture, Engineering, and Humanities.",
+    "si": "වෛද්‍ය විද්‍යාව, කෘෂිකර්මය, ඉංජිනේරු විද්‍යාව සහ මානුෂීය විද්‍යාවන්.",
+    "ta": "மருத்துவம், விவசாயம், பொறியியல் மற்றும் மனிதநேயம்."
+  },
+  "Medicine, Informatics, Law, and Social Sciences.": {
+    "en": "Medicine, Informatics, Law, and Social Sciences.",
+    "si": "වෛද්‍ය විද්‍යාව, තොරතුරු විද්‍යාව, නීතිය සහ සමාජ විද්‍යාවන්.",
+    "ta": "மருத்துவம், தகவல் அறிவியல், சட்டம் மற்றும் சமூக அறிவியல்."
+  },
+  "Medicine, Law, Management, and Computer Science.": {
+    "en": "Medicine, Law, Management, and Computer Science.",
+    "si": "වෛද්‍ය විද්‍යාව, නීතිය, කළමනාකරණය සහ පරිගණක විද්‍යාව.",
+    "ta": "மருத்துவம், சட்டம், மேலாண்மை மற்றும் கணினி அறிவியல்."
+  },
+  "Medicine, Law, Philosophy, Mathematics, and English Literature.": {
+    "en": "Medicine, Law, Philosophy, Mathematics, and English Literature.",
+    "si": "වෛද්‍ය විද්‍යාව, නීතිය, දර්ශනය, ගණිතය සහ ඉංග්‍රීසි සාහිත්‍යය.",
+    "ta": "மருத்துவம், சட்டம், தத்துவம், கணிதம் மற்றும் ஆங்கில இலக்கியம்."
+  },
+  "Medicine, Veterinary Science, Agriculture, Engineering, and Allied Health Sciences.": {
+    "en": "Medicine, Veterinary Science, Agriculture, Engineering, and Allied Health Sciences.",
+    "si": "වෛද්‍ය විද්‍යාව, පශු වෛද්‍ය විද්‍යාව, කෘෂිකර්මය, ඉංජිනේරු විද්‍යාව සහ අනුබද්ධ සෞඛ්‍ය විද්‍යාවන්.",
+    "ta": "மருத்துவம், கால்நடை அறிவியல், விவசாயம், பொறியியல் மற்றும் அது சார்ந்த சுகாதார அறிவியல்."
+  },
+  "Melbourne, Victoria, Australia": {
+    "en": "Melbourne, Victoria, Australia",
+    "si": "මෙල්බර්න්, වික්ටෝරියා, ඕස්ට්‍රේලියාව",
+    "ta": "மெல்போர்ன், விக்டோரியா, ஆஸ்திரேலியா"
+  },
+  "Mihintale, Sri Lanka": {
+    "en": "Mihintale, Sri Lanka",
+    "si": "මිහින්තලය, ශ්‍රී ලංකාව",
+    "ta": "மிஹிந்தலை, இலங்கை"
+  },
+  "Monash University": {
+    "en": "Monash University",
+    "si": "මොනෑෂ් විශ්වවිද්‍යාලය",
+    "ta": "மொனாஷ் பல்கலைக்கழகம்"
+  },
+  "Monash is Australia's largest university and one of the country's elite research institutions. It has a large and welcoming international community, generous scholarships, and a campus in Kuala Lumpur that allows students to experience Australia-quality education at lower cost. Strong pathways to permanent residency in Australia make Monash a popular choice.": {
+    "en": "Monash is Australia's largest university and one of the country's elite research institutions. It has a large and welcoming international community, generous scholarships, and a campus in Kuala Lumpur that allows students to experience Australia-quality education at lower cost. Strong pathways to permanent residency in Australia make Monash a popular choice.",
+    "si": "මොනෑෂ් යනු ඕස්ට්‍රේලියාවේ විශාලතම විශ්වවිද්‍යාලය වන අතර එරට ප්‍රමුඛතම පර්යේෂණ ආයතනයකි. එය විශාල ජාත්‍යන්තර ශිෂ්‍ය ප්‍රජාවකින්, ඉහළ ශිෂ්‍යත්වවලින් සමන්විත වන අතර ක්වාලාලම්පූර්හි පිහිටි එහි ශාඛා කැම්පස් එක මඟින් අඩු පිරිවැයකින් ඕස්ට්‍රේලියානු මට්ටමේ අධ්‍යාපනයක් ලැබීමට අවස්ථාව සලසා දෙයි. ඕස්ට්‍රේලියාවේ ස්ථිර පදිංචිය ලබා ගැනීම සඳහා වන ශක්තිමත් මාවතක් හේතුවෙන් මොනෑෂ් ජනප්‍රිය තේරීමක් වී ඇත.",
+    "ta": "மொனாஷ் ஆஸ்திரேலியாவின் மிகப்பெரிய பல்கலைக்கழகமாகும் மற்றும் நாட்டின் உயரடுக்கு ஆராய்ச்சி நிறுவனங்களில் ஒன்றாகும். இது ஒரு பெரிய மற்றும் வரவேற்கத்தக்க சர்வதேச சமூகத்தைக் கொண்டுள்ளது, தாராளமான உதவித்தொகைகள் மற்றும் கோலாலம்பூரில் ஒரு வளாகத்தைக் கொண்டுள்ளது, இது மாணவர்கள் ஆஸ்திரேலியா தரமான கல்வியை குறைந்த செலவில் அனுபவிக்க அனுமதிக்கிறது. ஆஸ்திரேலியாவில் நிரந்தர வதிவிடத்திற்கான வலுவான வழிகள் மொனாஷை ஒரு பிரபலமான தேர்வாக ஆக்குகின்றன."
+  },
+  "Moratuwa, Sri Lanka": {
+    "en": "Moratuwa, Sri Lanka",
+    "si": "මොරටුව, ශ්‍රී ලංකාව",
+    "ta": "மொறட்டுவை, இலங்கை"
+  },
+  "National University of Singapore": {
+    "en": "National University of Singapore",
+    "si": "සිංගප්පූරු ජාතික විශ්වවිද්‍යාලය (NUS)",
+    "ta": "சிங்கப்பூர் தேசிய பல்கலைக்கழகம்"
+  },
+  "Natural Sciences": {
+    "en": "Natural Sciences",
+    "si": "ස්වාභාවික විද්‍යාවන්",
+    "ta": "இயற்கை அறிவியல்"
+  },
+  "Nugegoda, Sri Lanka": {
+    "en": "Nugegoda, Sri Lanka",
+    "si": "නුගේගොඩ, ශ්‍රී ලංකාව",
+    "ta": "நுகேகொட, இலங்கை"
+  },
+  "Often described as the UK's equivalent of MIT, Imperial College London focuses exclusively on science, engineering, medicine, and business. It is right in central London and has produced some of the world's most influential scientists and engineers. Its graduates are among the highest earners in the UK.": {
+    "en": "Often described as the UK's equivalent of MIT, Imperial College London focuses exclusively on science, engineering, medicine, and business. It is right in central London and has produced some of the world's most influential scientists and engineers. Its graduates are among the highest earners in the UK.",
+    "si": "බොහෝ විට එක්සත් රාජධානියේ MIT ලෙස හැඳින්වෙන, ලන්ඩන් ඉම්පීරියල් විද්‍යාලය ප්‍රධාන වශයෙන් විද්‍යාව, ඉංජිනේරු විද්‍යාව, වෛද්‍ය විද්‍යාව සහ ව්‍යාපාර යන ක්ෂේත්‍ර කෙරෙහි පමණක් අවධානය යොමු කරයි. එය මධ්‍යම ලන්ඩන්හි පිහිටා ඇති අතර ලොව වඩාත්ම බලගතු විද්‍යාඥයින් සහ ඉංජිනේරුවන් බිහිකර ඇත. එහි උපාධිධාරීන් එක්සත් රාජධානියේ ඉහළම ආදායම් ලබන්නන් අතර වේ.",
+    "ta": "பெரும்பாலும் இங்கிலாந்தின் MIT க்கு இணையானதாக விவரிக்கப்படும் இம்பீரியல் கல்லூரி லண்டன், அறிவியல், பொறியியல், மருத்துவம் மற்றும் வணிகத்தில் மட்டுமே கவனம் செலுத்துகிறது. இது மத்திய லண்டனில் உள்ளது மற்றும் உலகின் மிகவும் செல்வாக்கு மிக்க விஞ்ஞானிகள் மற்றும் பொறியியலாளர்களை உருவாக்கியுள்ளது. இதன் பட்டதாரிகள் இங்கிலாந்தில் அதிக சம்பளம் பெறுபவர்களில் அடங்குவர்."
+  },
+  "One of the ancient universities of Scotland and among the oldest in the world, the University of Edinburgh has produced an extraordinary list of alumni including Charles Darwin, David Hume, and James Clerk Maxwell. It is a research powerhouse particularly strong in medicine, AI, and informatics.": {
+    "en": "One of the ancient universities of Scotland and among the oldest in the world, the University of Edinburgh has produced an extraordinary list of alumni including Charles Darwin, David Hume, and James Clerk Maxwell. It is a research powerhouse particularly strong in medicine, AI, and informatics.",
+    "si": "ස්කොට්ලන්තයේ පැරණිතම විශ්වවිද්‍යාලවලින් එකක් මෙන්ම ලොව පැරණිතම විශ්වවිද්‍යාල අතරින් එකක් වන එඩින්බරෝ විශ්වවිද්‍යාලය චාල්ස් ඩාවින්, ඩේවිඩ් හියුම් සහ ජේම්ස් ක්ලර්ක් මැක්ස්වෙල් ඇතුළු අතිවිශිෂ්ට ආදි සිසුන් පිරිසක් බිහිකර ඇත. එය විශේෂයෙන් වෛද්‍ය විද්‍යාව, කෘත්‍රිම බුද්ධිය (AI) සහ තොරතුරු විද්‍යාව සඳහා ප්‍රබල පර්යේෂණ කේන්ද්‍රස්ථානයකි.",
+    "ta": "ஸ்காட்லாந்தின் பழமையான பல்கலைக்கழகங்களில் ஒன்றான எடின்பரோ பல்கலைக்கழகம் சார்லஸ் டார்வின், டேவிட் ஹியூம் மற்றும் ஜேம்ஸ் கிளார்க் மேக்ஸ்வெல் உள்ளிட்ட அசாதாரண பழைய மாணவர்களை உருவாக்கியுள்ளது. இது மருத்துவம், AI மற்றும் கணினி அறிவியலில் குறிப்பாக வலுவான ஒரு ஆராய்ச்சி மையமாகும்."
+  },
+  "Only Arts Focused State University": {
+    "en": "Only Arts Focused State University",
+    "si": "කලා විෂයන් සඳහා පමණක් වෙන්වූ එකම රාජ්‍ය විශ්වවිද්‍යාලය",
+    "ta": "கலைகளை மட்டுமே இலக்காகக் கொண்ட ஒரே அரசுப் பல்கலைக்கழகம்"
+  },
+  "Oxford, United Kingdom": {
+    "en": "Oxford, United Kingdom",
+    "si": "ඔක්ස්ෆර්ඩ්, එක්සත් රාජධානිය",
+    "ta": "ஆக்ஸ்போர்டு, ஐக்கிய இராச்சியம்"
+  },
+  "Performing Arts": {
+    "en": "Performing Arts",
+    "si": "ප්‍රසාංගික කලා",
+    "ta": "நிகழ்த்துகலைகள்"
+  },
+  "Pharmacy & Medicine": {
+    "en": "Pharmacy & Medicine",
+    "si": "ඖෂධවේදය සහ වෛද්‍ය විද්‍යාව",
+    "ta": "பார்மசி & மருத்துவம்"
+  },
+  "Pharmacy, Engineering, Law, and Business.": {
+    "en": "Pharmacy, Engineering, Law, and Business.",
+    "si": "ඖෂධවේදය, ඉංජිනේරු විද්‍යාව, නීතිය සහ ව්‍යාපාරික අධ්‍යයනය.",
+    "ta": "பார்மசி, பொறியியல், சட்டம் மற்றும் வணிகம்."
+  },
+  "Postgraduate degrees in Business, Science, and Social Sciences": {
+    "en": "Postgraduate degrees in Business, Science, and Social Sciences",
+    "si": "ව්‍යාපාර, විද්‍යා සහ සමාජ විද්‍යා අංශවල පශ්චාත් උපාධි",
+    "ta": "வணிகம், அறிவியல் மற்றும் சமூக அறிவியலில் முதுகலை பட்டங்கள்"
+  },
+  "Pre-Law": {
+    "en": "Pre-Law",
+    "si": "පූර්ව-නීති අධ්‍යයන",
+    "ta": "சட்டத்திற்கு முந்தைய படிப்புகள்"
+  },
+  "Pre-Med": {
+    "en": "Pre-Med",
+    "si": "පූර්ව-වෛද්‍ය අධ්‍යයන",
+    "ta": "மருத்துவத்திற்கு முந்தைய படிப்புகள்"
+  },
+  "Pre-Medical Sciences": {
+    "en": "Pre-Medical Sciences",
+    "si": "පූර්ව-වෛද්‍ය විද්‍යාවන්",
+    "ta": "மருத்துவத்திற்கு முந்தைய அறிவியல்"
+  },
+  "Quantity Surveying": {
+    "en": "Quantity Surveying",
+    "si": "ප්‍රමාණ මැනුම්කරණය",
+    "ta": "அளவை கணிப்பு"
+  },
+  "Rajarata University of Sri Lanka": {
+    "en": "Rajarata University of Sri Lanka",
+    "si": "ශ්‍රී ලංකා රජරට විශ්වවිද්‍යාලය",
+    "ta": "இலங்கை ரஜரட்ட பல்கலைக்கழகம்"
+  },
+  "Rajarata University, close to Anuradhapura in the North Central Province, offers programs in agriculture, social sciences, management, and applied sciences. It is an important institution for the northern agricultural heartland of Sri Lanka and holds special significance for students from the Anuradhapura district.": {
+    "en": "Rajarata University, close to Anuradhapura in the North Central Province, offers programs in agriculture, social sciences, management, and applied sciences. It is an important institution for the northern agricultural heartland of Sri Lanka and holds special significance for students from the Anuradhapura district.",
+    "si": "උතුරු මැද පළාතේ අනුරාධපුරයට නුදුරින් පිහිටි රජරට විශ්වවිද්‍යාලය කෘෂිකර්මය, සමාජ විද්‍යාවන්, කළමනාකරණය සහ ව්‍යවහාරික විද්‍යාවන් පිළිබඳ පාඨමාලා පවත්වයි. එය ශ්‍රී ලංකාවේ උතුරු කෘෂිකාර්මික හදවතට ඉතා වැදගත් ආයතනයක් වන අතර අනුරාධපුර දිස්ත්‍රික්කයේ සිසුන්ට සුවිශේෂී වැදගත්කමක් උසුලයි.",
+    "ta": "வட மத்திய மாகாணத்தில் அனுராதபுரத்திற்கு அருகில் உள்ள ரஜரட்ட பல்கலைக்கழகம் விவசாயம், சமூக அறிவியல், மேலாண்மை மற்றும் பயன்பாட்டு அறிவியல் ஆகியவற்றில் திட்டங்களை வழங்குகிறது. இது இலங்கையின் வடக்கு விவசாயப் பகுதிக்கு ஒரு முக்கியமான நிறுவனமாகும் மற்றும் அனுராதபுரம் மாவட்ட மாணவர்களுக்கு சிறப்பு முக்கியத்துவம் வாய்ந்தது."
+  },
+  "Sabaragamuwa University of Sri Lanka": {
+    "en": "Sabaragamuwa University of Sri Lanka",
+    "si": "ශ්‍රී ලංකා සබරගමුව විශ්වවිද්‍යාලය",
+    "ta": "இலங்கை சபரகமுவ பல்கலைக்கழகம்"
+  },
+  "Sciences": {
+    "en": "Sciences",
+    "si": "විද්‍යාවන්",
+    "ta": "அறிவியல்"
+  },
+  "Sciences & Arts": {
+    "en": "Sciences & Arts",
+    "si": "විද්‍යා සහ කලා",
+    "ta": "அறிவியல் & கலை"
+  },
+  "Scotland's Top University": {
+    "en": "Scotland's Top University",
+    "si": "ස්කොට්ලන්තයේ ඉහළම විශ්වවිද්‍යාලය",
+    "ta": "ஸ்காட்லாந்தின் சிறந்த பல்கலைக்கழகம்"
+  },
+  "Set on a breathtaking riverside campus in Kandy, the University of Peradeniya is the largest university in Sri Lanka. It is a comprehensive research university, excelling in medical sciences, agricultural research, and engineering. The campus is considered one of the most beautiful in Asia.": {
+    "en": "Set on a breathtaking riverside campus in Kandy, the University of Peradeniya is the largest university in Sri Lanka. It is a comprehensive research university, excelling in medical sciences, agricultural research, and engineering. The campus is considered one of the most beautiful in Asia.",
+    "si": "මහනුවර ඉතා සුන්දර ගංගා අසබඩ භූමියක පිහිටා ඇති පේරාදෙණිය විශ්වවිද්‍යාලය ශ්‍රී ලංකාවේ විශාලතම විශ්වවිද්‍යාලයයි. එය වෛද්‍ය විද්‍යාව, කෘෂිකාර්මික පර්යේෂණ සහ ඉංජිනේරු විද්‍යාවන් සඳහා විශිෂ්ටතම පර්යේෂණ විශ්වවිද්‍යාලයකි. මෙම සරසවි භූමිය ආසියාවේ ලස්සනම සරසවි පරිශ්‍රයන්ගෙන් එකක් ලෙස සැලකේ.",
+    "ta": "கண்டியில் மூச்சடைக்கக்கூடிய நதிக்கரை வளாகத்தில் அமைந்துள்ள பேராதனைப் பல்கலைக்கழகம் இலங்கையின் மிகப்பெரிய பல்கலைக்கழகமாகும். இது மருத்துவ அறிவியல், விவசாய ஆராய்ச்சி மற்றும் பொறியியல் துறைகளில் சிறந்து விளங்கும் ஒரு விரிவான ஆராய்ச்சி பல்கலைக்கழகமாகும். இந்த வளாகம் ஆசியாவின் மிக அழகான வளாகங்களில் ஒன்றாக கருதப்படுகிறது."
+  },
+  "Silicon Valley's University": {
+    "en": "Silicon Valley's University",
+    "si": "සිලිකන් වැලි විශ්වවිද්‍යාලය",
+    "ta": "சிலிக்கான் வேலி பல்கலைக்கழகம்"
+  },
+  "Silicon Valley, California, USA": {
+    "en": "Silicon Valley, California, USA",
+    "si": "සිලිකන් වැලි, කැලිෆෝනියා, ඇමරිකා එක්සත් ජනපදය",
+    "ta": "சிலிக்கான் வேலி, கலிபோர்னியா, அமெரிக்கா"
+  },
+  "Singapore": {
+    "en": "Singapore",
+    "si": "සිංගප්පූරුව",
+    "ta": "சிங்கப்பூர்"
+  },
+  "Social Sciences": {
+    "en": "Social Sciences",
+    "si": "සමාජ විද්‍යාවන්",
+    "ta": "சமூக அறிவியல்"
+  },
+  "Social Sciences & Humanities": {
+    "en": "Social Sciences & Humanities",
+    "si": "සමාජ හා මානුෂීය විද්‍යාවන්",
+    "ta": "சமூக அறிவியல் & மனிதநேயம்"
+  },
+  "Software Engineering, Computer Science, Civil & Electronic Engineering, and Architecture.": {
+    "en": "Software Engineering, Computer Science, Civil & Electronic Engineering, and Architecture.",
+    "si": "මෘදුකාංග ඉංජිනේරු, පරිගණක විද්‍යාව, සිවිල් හා ඉලෙක්ට්‍රොනික ඉංජිනේරු විද්‍යාව සහ ගෘහ නිර්මාණ ශිල්පය.",
+    "ta": "மென்பொருள் பொறியியல், கணினி அறிவியல், சிவில் & மின்னணு பொறியியல் மற்றும் கட்டடக்கலை."
+  },
+  "Sri Lanka": {
+    "en": "Sri Lanka",
+    "si": "ශ්‍රී ලංකාව",
+    "ta": "இலங்கை"
+  },
+  "Sri Lanka's only state university dedicated entirely to the visual and performing arts. It offers degrees in dance, drama, music, fine arts, and design. Students who are passionate about creative disciplines and want a professionally recognized degree in the arts will find UVPA as their ideal destination.": {
+    "en": "Sri Lanka's only state university dedicated entirely to the visual and performing arts. It offers degrees in dance, drama, music, fine arts, and design. Students who are passionate about creative disciplines and want a professionally recognized degree in the arts will find UVPA as their ideal destination.",
+    "si": "දෘශ්‍ය සහ ප්‍රසාංගික කලා සඳහාම පමණක් වෙන්වූ ශ්‍රී ලංකාවේ එකම රාජ්‍ය විශ්වවිද්‍යාලයයි. එය නර්තනය, නාට්‍ය, සංගීතය, ලලිත කලා සහ සැලසුම්කරණය පිළිබඳ උපාධි පිරිනමයි. නිර්මාණාත්මක විෂයන් කෙරෙහි උනන්දුවක් දක්වන සහ කලාව පිළිබඳ වෘත්තීයමය වශයෙන් පිළිගත් උපාධියක් ලබා ගැනීමට කැමති සිසුන්ට වඩාත් සුදුසුම ගමනාන්තය මෙයයි.",
+    "ta": "இலங்கையில் காட்சி மற்றும் நிகழ்த்துகலைகளுக்காக மட்டுமே அர்ப்பணிக்கப்பட்ட ஒரே அரசுப் பல்கலைக்கழகம். இது நடனம், நாடகம், இசை, நுண்கலைகள் மற்றும் வடிவமைப்பில் பட்டங்களை வழங்குகிறது. படைப்பாற்றல் துறைகளில் ஆர்வம் கொண்ட மற்றும் கலைகளில் தொழில் ரீதியாக அங்கீகரிக்கப்பட்ட பட்டத்தைப் பெற விரும்பும் மாணவர்களுக்கு இது சிறந்த இடமாகும்."
+  },
+  "Stanford University": {
+    "en": "Stanford University",
+    "si": "ස්ටැන්ෆර්ඩ් විශ්වවිද්‍යාලය",
+    "ta": "ஸ்டான்போர்ட் பல்கலைக்கழகம்"
+  },
+  "State University": {
+    "en": "State University",
+    "si": "රාජ්‍ය විශ්වවිද්‍යාලය",
+    "ta": "அரசுப் பல்கலைக்கழகம்"
+  },
+  "The National University of Singapore is the top-ranked university in Asia and one of the best globally. It is an excellent option for Sri Lankan students given its relative proximity, multicultural environment, and generous scholarship opportunities. Singapore's tech and finance ecosystem makes NUS graduates extremely valuable in the job market.": {
+    "en": "The National University of Singapore is the top-ranked university in Asia and one of the best globally. It is an excellent option for Sri Lankan students given its relative proximity, multicultural environment, and generous scholarship opportunities. Singapore's tech and finance ecosystem makes NUS graduates extremely valuable in the job market.",
+    "si": "සිංගප්පූරු ජාතික විශ්වවිද්‍යාලය ආසියාවේ ඉහළම ශ්‍රේණිගත විශ්වවිද්‍යාලය වන අතර ලොව හොඳම විශ්වවිද්‍යාලවලින් එකකි. ශ්‍රී ලංකාවේ පිහිටීමට ඇති සාපේක්ෂ සමීප බව, බහුසංස්කෘතික පරිසරය සහ විශාල ශිෂ්‍යත්ව අවස්ථා හේතුවෙන් ශ්‍රී ලාංකික සිසුන් සඳහා මෙය කදිම විකල්පයකි. සිංගප්පූරුවේ තාක්ෂණික සහ මූල්‍ය පරිසරය නිසා NUS උපාධිධාරීන්ට රැකියා වෙළඳපොලේ ඉහළ වටිනාකමක් ඇත.",
+    "ta": "சிங்கப்பூர் தேசிய பல்கலைக்கழகம் ஆசியாவில் முதலிடத்திலும், உலகளவில் சிறந்த பல்கலைக்கழகங்களில் ஒன்றாகவும் உள்ளது. ஒப்பீட்டளவில் அருகாமை, பன்முக கலாச்சார சூழல் மற்றும் தாராளமான உதவித்தொகை வாய்ப்புகள் ஆகியவற்றைக் கருத்தில் கொண்டு இலங்கை மாணவர்களுக்கு இது ஒரு சிறந்த வழி. சிங்கப்பூரின் தொழில்நுட்ப மற்றும் நிதி சுற்றுச்சூழல் அமைப்பானது NUS பட்டதாரிகளை வேலை சந்தையில் மிகவும் மதிப்புமிக்கதாக ஆக்குகிறது."
+  },
+  "The University of Jaffna is the premier institution of the Northern Province and an important center for higher education in Sri Lanka. It offers faculties in medicine, agriculture, engineering, arts, and management, making it a comprehensive university serving the Northern and Eastern communities.": {
+    "en": "The University of Jaffna is the premier institution of the Northern Province and an important center for higher education in Sri Lanka. It offers faculties in medicine, agriculture, engineering, arts, and management, making it a comprehensive university serving the Northern and Eastern communities.",
+    "si": "යාපනය විශ්වවිද්‍යාලය උතුරු පළාතේ ප්‍රමුඛතම ආයතනය වන අතර ශ්‍රී ලංකාවේ උසස් අධ්‍යාපනය සඳහා වැදගත් මධ්‍යස්ථානයකි. එය උතුරු සහ නැගෙනහිර ප්‍රජාවන් සඳහා සේවය කරමින් වෛද්‍ය, කෘෂිකර්ම, ඉංජිනේරු, කලා සහ කළමනාකරණ පීඨවලින් සමන්විත පරිපූර්ණ විශ්වවිද්‍යාලයකි.",
+    "ta": "யாழ்ப்பாணப் பல்கலைக்கழகம் வட மாகாணத்தின் முதன்மையான நிறுவனமாகும் மற்றும் இலங்கையில் உயர் கல்விக்கான முக்கிய மையமாகும். இது வட மற்றும் கிழக்கு சமூகங்களுக்கு சேவை செய்யும் வகையில் மருத்துவம், விவசாயம், பொறியியல், கலை மற்றும் மேலாண்மை ஆகிய துறைகளில் பீடங்களை வழங்குகிறது."
+  },
+  "The University of Kelaniya is highly ranked for its humanities, modern languages, and social sciences. It has a very strong Commerce faculty and a growing IT footprint. The Medical faculty, based in Ragama, is among the country's finest, known particularly for excellence in speech sciences and dentistry.": {
+    "en": "The University of Kelaniya is highly ranked for its humanities, modern languages, and social sciences. It has a very strong Commerce faculty and a growing IT footprint. The Medical faculty, based in Ragama, is among the country's finest, known particularly for excellence in speech sciences and dentistry.",
+    "si": "කැලණිය විශ්වවිද්‍යාලය මානුෂීය, නවීන භාෂා සහ සමාජ විද්‍යා අංශ සඳහා ඉහළ ශ්‍රේණිගත කිරීම් ලබා ගෙන ඇත. එහි ඉතා ශක්තිමත් වාණිජ පීඨයක් සහ වේගයෙන් වර්ධනය වන තොරතුරු තාක්ෂණ අංශයක් ඇත. රාගම පිහිටි එහි වෛද්‍ය පීඨය රටේ විශිෂ්ටතම වෛද්‍ය පීඨ අතරින් එකක් වන අතර කථන සේවා සහ දන්ත වෛද්‍ය විද්‍යාව සඳහා විශේෂයෙන් ප්‍රසිද්ධය.",
+    "ta": "களனிப் பல்கலைக்கழகம் அதன் மனிதநேயம், நவீன மொழிகள் மற்றும் சமூக அறிவியலுக்கு உயர் தரவரிசையைப் பெற்றுள்ளது. இது மிகவும் வலுவான வணிகப் பீடத்தையும் வளர்ந்து வரும் தகவல் தொழில்நுட்ப தடத்தையும் கொண்டுள்ளது. ராகமையில் அமைந்துள்ள மருத்துவ பீடம் நாட்டின் சிறந்தவற்றில் ஒன்றாகும், குறிப்பாக பேச்சு அறிவியல் மற்றும் பல் மருத்துவத்தில் சிறந்து விளங்குகிறது."
+  },
+  "The University of Moratuwa is the undisputed powerhouse of technology and engineering in Sri Lanka. If you dream of becoming a software engineer, data scientist, or technical architect, this is the most sought-after destination. Its graduates are recruited heavily by global tech companies.": {
+    "en": "The University of Moratuwa is the undisputed powerhouse of technology and engineering in Sri Lanka. If you dream of becoming a software engineer, data scientist, or technical architect, this is the most sought-after destination. Its graduates are recruited heavily by global tech companies.",
+    "si": "මොරටුව විශ්වවිද්‍යාලය ශ්‍රී ලංකාවේ තාක්ෂණික සහ ඉංජිනේරු අධ්‍යාපනයේ අසමසම කේන්ද්‍රස්ථානයයි. ඔබ මෘදුකාංග ඉංජිනේරුවෙකු, දත්ත විද්‍යාඥයෙකු හෝ තාක්ෂණික සැලසුම්කරුවෙකු වීමට සිහින දකිනවා නම්, මෙය වඩාත්ම සුදුසුම ගමනාන්තයයි. එහි උපාධිධාරීන් ගෝලීය තාක්ෂණික සමාගම් විසින් බහුලව බඳවා ගනු ලැබේ.",
+    "ta": "மொறட்டுவைப் பல்கலைக்கழகம் இலங்கையின் தொழில்நுட்பம் மற்றும் பொறியியல் துறையில் முதன்மையானது. நீங்கள் ஒரு மென்பொருள் பொறியாளர், தரவு விஞ்ஞானி அல்லது தொழில்நுட்ப கட்டிடக் கலைஞராக ஆக விரும்பினால், இது மிகவும் விரும்பப்படும் இடமாகும். இதன் பட்டதாரிகள் உலகளாவிய தொழில்நுட்ப நிறுவனங்களால் பெருமளவில் பணியமர்த்தப்படுகிறார்கள்."
+  },
+  "The University of Ruhuna, situated in the beautiful Southern Province, is a well-rounded state university with particular strengths in engineering, fisheries, agriculture, and medicine. It serves as the main higher education institution for southern Sri Lanka and is growing in its research output.": {
+    "en": "The University of Ruhuna, situated in the beautiful Southern Province, is a well-rounded state university with particular strengths in engineering, fisheries, agriculture, and medicine. It serves as the main higher education institution for southern Sri Lanka and is growing in its research output.",
+    "si": "සුන්දර දකුණු පළාතේ පිහිටා ඇති රුහුණ විශ්වවිද්‍යාලය ඉංජිනේරු විද්‍යාව, ධීවර විද්‍යාව, කෘෂිකර්මය සහ වෛද්‍ය විද්‍යාව යන අංශයන්හි සුවිශේෂී ශක්තීන් සහිත පරිපූර්ණ රාජ්‍ය විශ්වවිද්‍යාලයකි. එය දකුණු ශ්‍රී ලංකාවේ ප්‍රධාන උසස් අධ්‍යාපන ආයතනය ලෙස ක්‍රියා කරයි.",
+    "ta": "அழகான தென் மாகாணத்தில் அமைந்துள்ள ருகுணப் பல்கலைக்கழகம், பொறியியல், மீன்வளம், விவசாயம் மற்றும் மருத்துவம் ஆகியவற்றில் குறிப்பிட்ட பலங்களைக் கொண்ட ஒரு சிறந்த அரசுப் பல்கலைக்கழகமாகும். இது தென்னிலங்கையின் முக்கிய உயர் கல்வி நிறுவனமாக செயல்படுகிறது."
+  },
+  "The oldest university in the English-speaking world, Oxford uses a unique tutorial system where students study in tiny groups of 1-3 with world-class professors. Oxford alumni have included 28 British Prime Ministers, 28 Nobel Laureates, and some of the world's most influential thinkers. It is especially strong in both classical scholarship and modern science.": {
+    "en": "The oldest university in the English-speaking world, Oxford uses a unique tutorial system where students study in tiny groups of 1-3 with world-class professors. Oxford alumni have included 28 British Prime Ministers, 28 Nobel Laureates, and some of the world's most influential thinkers. It is especially strong in both classical scholarship and modern science.",
+    "si": "ඉංග්‍රීසි කතා කරන ලෝකයේ පැරණිතම විශ්වවිද්‍යාලය වන ඔක්ස්ෆර්ඩ්, සිසුන් 1-3 දෙනෙකුගෙන් යුත් කුඩා කණ්ඩායම් ලෙස ලෝක මට්ටමේ මහාචාර්යවරුන් යටතේ ඉගෙන ගන්නා සුවිශේෂී නිබන්ධන ක්‍රමයක් (tutorial system) භාවිතා කරයි. ඔක්ස්ෆර්ඩ් ආදි සිසුන් අතර බ්‍රිතාන්‍ය අගමැතිවරුන් 28 දෙනෙකු, නොබෙල් සම්මානලාභීන් 28 දෙනෙකු සහ ලොව වඩාත්ම බලගතු චින්තකයින් කිහිප දෙනෙකු සිටිති. එය සම්භාව්‍ය ශාස්ත්‍රය සහ නවීන විද්‍යාව යන දෙකටම විශේෂයෙන් ප්‍රසිද්ධය.",
+    "ta": "ஆங்கிலம் பேசும் உலகின் பழமையான பல்கலைக்கழகமான ஆக்ஸ்போர்டு, ஒரு தனித்துவமான பயிற்சி முறையைப் பயன்படுத்துகிறது, அங்கு மாணவர்கள் 1-3 பேர் கொண்ட சிறிய குழுக்களாக உலகத்தரம் வாய்ந்த பேராசிரியர்களுடன் படிக்கிறார்கள். ஆக்ஸ்போர்டு பழைய மாணவர்களில் 28 பிரிட்டிஷ் பிரதமர்கள், 28 நோபல் பரிசு பெற்றவர்கள் மற்றும் உலகின் மிகச் செல்வாக்கு மிக்க சிந்தனையாளர்கள் சிலர் அடங்குவர். இது கிளாசிக்கல் படிப்பு மற்றும் நவீன அறிவியல் இரண்டிலும் குறிப்பாக வலுவானது."
+  },
+  "Theatre & Film": {
+    "en": "Theatre & Film",
+    "si": "නාට්‍ය හා සිනමාව",
+    "ta": "நாடகம் & திரைப்படம்"
+  },
+  "Top 10 in Sri Lanka": {
+    "en": "Top 10 in Sri Lanka",
+    "si": "ශ්‍රී ලංකාවේ ඉහළම 10 අතර",
+    "ta": "இலங்கையில் முதல் 10 இடங்களில்"
+  },
+  "Top 12 in Sri Lanka": {
+    "en": "Top 12 in Sri Lanka",
+    "si": "ශ්‍රී ලංකාවේ ඉහළම 12 අතර",
+    "ta": "இலங்கையில் முதல் 12 இடங்களில்"
+  },
+  "Top 5 in Sri Lanka": {
+    "en": "Top 5 in Sri Lanka",
+    "si": "ශ්‍රී ලංකාවේ ඉහළම 5 අතර",
+    "ta": "இலங்கையில் முதல் 5 இடங்களில்"
+  },
+  "Top 8 in Sri Lanka": {
+    "en": "Top 8 in Sri Lanka",
+    "si": "ශ්‍රී ලංකාවේ ඉහළම 8 අතර",
+    "ta": "இலங்கையில் முதல் 8 இடங்களில்"
+  },
+  "Top Engineering University in Sri Lanka": {
+    "en": "Top Engineering University in Sri Lanka",
+    "si": "ශ්‍රී ලංකාවේ ප්‍රමුඛතම ඉංජිනේරු විශ්වවිද්‍යාලය",
+    "ta": "இலங்கையின் சிறந்த பொறியியல் பல்கலைக்கழகம்"
+  },
+  "Toronto, Ontario, Canada": {
+    "en": "Toronto, Ontario, Canada",
+    "si": "ටොරොන්ටෝ, ඔන්ටාරියෝ, කැනඩාව",
+    "ta": "டொராண்டோ, ஒன்டாரியோ, கனடா"
+  },
+  "Tourism & Hospitality": {
+    "en": "Tourism & Hospitality",
+    "si": "සංචාරක සහ ආගන්තුක සත්කාරය",
+    "ta": "சுற்றுலா & விருந்தோம்பல்"
+  },
+  "Tourism, Social Sciences, Natural Sciences, and Management.": {
+    "en": "Tourism, Social Sciences, Natural Sciences, and Management.",
+    "si": "සංචාරක ව්‍යාපාරය, සමාජ විද්‍යාවන්, ස්වාභාවික විද්‍යාවන් සහ කළමනාකරණය.",
+    "ta": "சுற்றுலா, சமூக அறிவியல், இயற்கை அறிவியல் மற்றும் மேலாண்மை."
+  },
+  "UK": {
+    "en": "UK",
+    "si": "එක්සත් රාජධානිය (UK)",
+    "ta": "ஐக்கிய இராச்சியம்"
+  },
+  "UK's Top Tech University": {
+    "en": "UK's Top Tech University",
+    "si": "එක්සත් රාජධානියේ ප්‍රමුඛතම තාක්ෂණික විශ්වවිද්‍යාලය",
+    "ta": "இங்கிலாந்தின் சிறந்த தொழில்நுட்ப பல்கலைக்கழகம்"
+  },
+  "USA": {
+    "en": "USA",
+    "si": "ඇමරිකා එක්සත් ජනපදය (USA)",
+    "ta": "அமெரிக்கா"
+  },
+  "University of Colombo": {
+    "en": "University of Colombo",
+    "si": "කොළඹ විශ්වවිද්‍යාලය",
+    "ta": "கொழும்பு பல்கலைக்கழகம்"
+  },
+  "University of Edinburgh": {
+    "en": "University of Edinburgh",
+    "si": "එඩින්බරෝ විශ්වවිද්‍යාලය",
+    "ta": "எடின்பரோ பல்கலைக்கழகம்"
+  },
+  "University of Jaffna": {
+    "en": "University of Jaffna",
+    "si": "යාපනය විශ්වවිද්‍යාලය",
+    "ta": "யாழ்ப்பாணப் பல்கலைக்கழகம்"
+  },
+  "University of Kelaniya": {
+    "en": "University of Kelaniya",
+    "si": "කැලණිය විශ්වවිද්‍යාලය",
+    "ta": "களனிப் பல்கலைக்கழகம்"
+  },
+  "University of Melbourne": {
+    "en": "University of Melbourne",
+    "si": "මෙල්බර්න් විශ්වවිද්‍යාලය",
+    "ta": "மெல்போர்ன் பல்கலைக்கழகம்"
+  },
+  "University of Moratuwa": {
+    "en": "University of Moratuwa",
+    "si": "මොරටුව විශ්වවිද්‍යාලය",
+    "ta": "மொறட்டுவைப் பல்கலைக்கழகம்"
+  },
+  "University of Oxford": {
+    "en": "University of Oxford",
+    "si": "ඔක්ස්ෆර්ඩ් විශ්වවිද්‍යාලය",
+    "ta": "ஆக்ஸ்போர்டு பல்கலைக்கழகம்"
+  },
+  "University of Peradeniya": {
+    "en": "University of Peradeniya",
+    "si": "පේරාදෙණිය විශ්වවිද්‍යාලය",
+    "ta": "பேராதனைப் பல்கலைக்கழகம்"
+  },
+  "University of Ruhuna": {
+    "en": "University of Ruhuna",
+    "si": "රුහුණ විශ්වවිද්‍යාලය",
+    "ta": "ருகுணப் பல்கலைக்கழகம்"
+  },
+  "University of Sri Jayewardenepura": {
+    "en": "University of Sri Jayewardenepura",
+    "si": "ශ්‍රී ජයවර්ධනපුර විශ්වවිද්‍යාලය",
+    "ta": "ஸ்ரீ ஜெயவர்தனபுர பல்கலைக்கழகம்"
+  },
+  "University of Toronto": {
+    "en": "University of Toronto",
+    "si": "ටොරොන්ටෝ විශ්වවිද්‍යාලය",
+    "ta": "டொராண்டோ பல்கலைக்கழகம்"
+  },
+  "University of the Visual & Performing Arts": {
+    "en": "University of the Visual & Performing Arts",
+    "si": "දෘශ්‍ය හා ප්‍රසාංගික කලා විශ්වවිද්‍යාලය",
+    "ta": "காட்சி மற்றும் நிகழ்த்துகலைகள் பல்கலைக்கழகம்"
+  },
+  "Veterinary Science": {
+    "en": "Veterinary Science",
+    "si": "පශු වෛද්‍ය විද්‍යාව",
+    "ta": "கால்நடை அறிவியல்"
+  },
+  "Wayamba University of Sri Lanka": {
+    "en": "Wayamba University of Sri Lanka",
+    "si": "ශ්‍රී ලංකා වයඹ විශ්වවිද්‍යාලය",
+    "ta": "இலங்கை வயம்ப பல்கலைக்கழகம்"
+  },
+  "Wayamba University, in the North Western Province, focuses on business management, agriculture and plantation, and applied sciences. It has a growing reputation for its agri-business programs that prepare graduates for Sri Lanka's plantation and export agriculture sectors.": {
+    "en": "Wayamba University, in the North Western Province, focuses on business management, agriculture and plantation, and applied sciences. It has a growing reputation for its agri-business programs that prepare graduates for Sri Lanka's plantation and export agriculture sectors.",
+    "si": "වයඹ පළාතේ පිහිටි වයඹ විශ්වවිද්‍යාලය ව්‍යාපාර කළමනාකරණය, කෘෂිකර්මාන්තය සහ වතු වගාව මෙන්ම ව්‍යවහාරික විද්‍යාවන් කෙරෙහි අවධානය යොමු කරයි. ශ්‍රී ලංකාවේ වතු සහ අපනයන කෘෂිකාර්මික අංශ සඳහා උපාධිධාරීන් සූදානම් කරන එහි කෘෂි ව්‍යාපාර පාඨමාලා සඳහා ඉහළ කීර්තියක් ඇත.",
+    "ta": "வடமேற்கு மாகாணத்தில் உள்ள வயம்ப பல்கலைக்கழகம், வணிக மேலாண்மை, விவசாயம் மற்றும் தோட்டம் மற்றும் பயன்பாட்டு அறிவியல் ஆகியவற்றில் கவனம் செலுத்துகிறது. இலங்கையின் தோட்டக்கலை மற்றும் ஏற்றுமதி விவசாயத் துறைகளுக்கு பட்டதாரிகளைத் தயார்படுத்தும் அதன் விவசாய வணிகத் திட்டங்களுக்கு வளர்ந்து வரும் நற்பெயர் உள்ளது."
+  },
+  "World #1 Engineering": {
+    "en": "World #1 Engineering",
+    "si": "ලොව අංක 1 ඉංජිනේරු විද්‍යාව",
+    "ta": "உலகின் #1 பொறியியல்"
+  },
+  "World's Most Prestigious": {
+    "en": "World's Most Prestigious",
+    "si": "ලොව වඩාත්ම කීර්තිමත්",
+    "ta": "உலகின் மிகவும் மதிப்புமிக்க"
+  },
+  "World's Oldest English University": {
+    "en": "World's Oldest English University",
+    "si": "ලොව පැරණිතම ඉංග්‍රීසි විශ්වවිද්‍යාලය",
+    "ta": "உலகின் பழமையான ஆங்கிலப் பல்கலைக்கழகம்"
+  },
+  "Status": {
+    "en": "Status",
+    "si": "තත්ත්වය",
+    "ta": "நிலை"
+  },
+  "UGC Approved": {
+    "en": "UGC Approved",
+    "si": "UGC අනුමත",
+    "ta": "UGC அங்கீகரிக்கப்பட்டது"
+  },
+  "Global Rank": {
+    "en": "Global Rank",
+    "si": "ගෝලීය ශ්‍රේණිගත කිරීම",
+    "ta": "உலகளாவிய தரம்"
+  },
+  "Type": {
+    "en": "Type",
+    "si": "වර්ගය",
+    "ta": "வகை"
+  },
+  "Country": {
+    "en": "Country",
+    "si": "රට",
+    "ta": "நாடு"
+  },
+  "International": {
+    "en": "International",
+    "si": "ජාත්‍යන්තර",
+    "ta": "சர்வதேச"
+  },
+  "Founded": {
+    "en": "Founded",
+    "si": "ආරම්භය",
+    "ta": "நிறுவப்பட்டது"
+  },
+  "Ranking": {
+    "en": "Ranking",
+    "si": "ශ්‍රේණිගත කිරීම",
+    "ta": "தரவரிசை"
+  },
+  "~10,000": {
+    "en": "~10,000",
+    "si": "~10,000",
+    "ta": "~10,000"
+  },
+  "~11,000": {
+    "en": "~11,000",
+    "si": "~11,000",
+    "ta": "~11,000"
+  },
+  "~12,000": {
+    "en": "~12,000",
+    "si": "~12,000",
+    "ta": "~12,000"
+  },
+  "~15,000": {
+    "en": "~15,000",
+    "si": "~15,000",
+    "ta": "~15,000"
+  },
+  "~16,000": {
+    "en": "~16,000",
+    "si": "~16,000",
+    "ta": "~16,000"
+  },
+  "~17,000": {
+    "en": "~17,000",
+    "si": "~17,000",
+    "ta": "~17,000"
+  },
+  "~19,000": {
+    "en": "~19,000",
+    "si": "~19,000",
+    "ta": "~19,000"
+  },
+  "~23,000": {
+    "en": "~23,000",
+    "si": "~23,000",
+    "ta": "~23,000"
+  },
+  "~26,000": {
+    "en": "~26,000",
+    "si": "~26,000",
+    "ta": "~26,000"
+  },
+  "~39,000": {
+    "en": "~39,000",
+    "si": "~39,000",
+    "ta": "~39,000"
+  },
+  "~40,000": {
+    "en": "~40,000",
+    "si": "~40,000",
+    "ta": "~40,000"
+  },
+  "~56,000": {
+    "en": "~56,000",
+    "si": "~56,000",
+    "ta": "~56,000"
+  },
+  "~6,000": {
+    "en": "~6,000",
+    "si": "~6,000",
+    "ta": "~6,000"
+  },
+  "~7,000": {
+    "en": "~7,000",
+    "si": "~7,000",
+    "ta": "~7,000"
+  },
+  "~8,000": {
+    "en": "~8,000",
+    "si": "~8,000",
+    "ta": "~8,000"
+  },
+  "~86,000": {
+    "en": "~86,000",
+    "si": "~86,000",
+    "ta": "~86,000"
+  },
+  "~97,000": {
+    "en": "~97,000",
+    "si": "~97,000",
+    "ta": "~97,000"
+  },
+  "~2,500": {
+    "en": "~2,500",
+    "si": "~2,500",
+    "ta": "~2,500"
+  },
+  "BA in multiple disciplines, BBA, BCom": {
+    "en": "BA in multiple disciplines, BBA, BCom",
+    "si": "බහුවිධ විෂය ක්ෂේත්‍ර ඔස්සේ දිවෙන ශාස්ත්‍රවේදී (BA), ව්‍යාපාර පරිපාලනවේදී (BBA) සහ වාණිජවේදී (BCom) උපාධි",
+    "ta": "பல்துறை வழிகளைக் கொண்ட இளங்கலை (BA), வணிக நிர்வாக இளங்கலை (BBA), வணிகவியல் இளங்கலை (BCom) பட்டங்கள்"
+  },
+  "BA programs in Sinhala, History, Economics, and Sociology": {
+    "en": "BA programs in Sinhala, History, Economics, and Sociology",
+    "si": "සිංහල, ඉතිහාසය, ආර්ථික විද්‍යාව සහ සමාජ විද්‍යාව පිළිබඳ ශාස්ත්‍රවේදී (BA) පාඨමාලා",
+    "ta": "சிங்களம், வரலாறு, பொருளாதாரம் மற்றும் சமூகவியலில் இளங்கலை (BA) திட்டங்கள்"
   }
 };
