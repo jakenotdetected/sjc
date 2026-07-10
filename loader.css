@@ -161,23 +161,7 @@
 }
 
 /* ── Sinhala / Tamil typefaces ───────────────────────────────────────────── */
-@font-face {
-  font-family: 'Vecpriyangani';
-  src: url('/fonts/Vecpriyangani.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap');
-
-html[lang="si"] body,
-html[lang="si"] input,
-html[lang="si"] select,
-html[lang="si"] textarea,
-html[lang="si"] button {
-  font-family: 'Vecpriyangani', 'Noto Sans Sinhala', 'Inter', system-ui, sans-serif !important;
-}
 
 html[lang="ta"] body,
 html[lang="ta"] input,
