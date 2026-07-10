@@ -13,7 +13,9 @@ function customSelectIconSvg(key) {
 }
 
 function initCustomSelects() {
-    document.querySelectorAll('select:not(.custom-initialized)').forEach(select => {
+    // Skip Google Translate's own internal <select> — it drives the actual
+    // translation and must be left completely alone, or switching languages breaks.
+    document.querySelectorAll('select:not(.custom-initialized):not(.goog-te-combo)').forEach(select => {
         select.classList.add('custom-initialized');
 
         // Build wrapper

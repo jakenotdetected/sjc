@@ -82,10 +82,37 @@
     document.body.appendChild(s);
   }
 
+  // The googtrans cookie alone isn't reliably picked up by Google's widget on
+  // load — the guaranteed way to trigger translation is to set the value on
+  // its own <select class="goog-te-combo"> and fire a change event (the same
+  // thing that happens when a visitor uses Google's native dropdown UI). That
+  // select is created asynchronously once the widget script finishes, so we
+  // poll briefly for it.
+  function waitForCombo(callback, timeoutMs) {
+    var deadline = Date.now() + (timeoutMs || 8000);
+    (function poll() {
+      var combo = document.querySelector('select.goog-te-combo');
+      if (combo) { callback(combo); return; }
+      if (Date.now() > deadline) return;
+      setTimeout(poll, 150);
+    })();
+  }
+
+  function applyCurrentLang() {
+    var lang = currentLang();
+    if (lang === 'en') return; // nothing to trigger — page is already English
+    waitForCombo(function (combo) {
+      if (combo.value === lang) return;
+      combo.value = lang;
+      combo.dispatchEvent(new Event('change'));
+    });
+  }
+
   function init() {
     ensureContainer();
     loadScript();
     document.documentElement.setAttribute('data-lang', currentLang());
+    applyCurrentLang();
 
     // Highlight the active language link in the topbar, if present
     document.querySelectorAll('.lang-opt').forEach(function (a) {

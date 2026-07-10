@@ -207,7 +207,9 @@ const securityHeaders = {
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
   'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
-  'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'"
+  // Google Translate (translate.google.com) needs script/style/connect/frame allowances —
+  // without them the browser silently blocks its script and the language switcher does nothing.
+  'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com https://translate.google.com https://translate.googleapis.com https://www.gstatic.com https://www.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.gstatic.com; font-src 'self' https://fonts.gstatic.com https://www.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://translate.googleapis.com https://translate.google.com; frame-src https://translate.google.com https://translate.googleapis.com"
 };
 
 // ── Student report PDF (server-rendered — avoids fragile client-side html2canvas) ──
