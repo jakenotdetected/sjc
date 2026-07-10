@@ -31,8 +31,8 @@ window.i18nDict = {
   },
   "&nbsp;·&nbsp; Developed by": {
     "en": "&nbsp;·&nbsp; Developed by",
-    "si": "·  විසින් සංවර්ධනය කරන ලදී",
-    "ta": "·  உருவாக்கியது"
+    "si": " ·  විසින් සංවර්ධනය කරන ලදී",
+    "ta": " ·  உருவாக்கியது"
   },
   "&times;": {
     "en": "&times;",
@@ -392,7 +392,7 @@ window.i18nDict = {
   "Advising and representing individuals, businesses, or government agencies on legal issues and disputes.": {
     "en": "Advising and representing individuals, businesses, or government agencies on legal issues and disputes.",
     "si": "නීතිමය ගැටළු සහ ආරවුල් සම්බන්ධයෙන් පුද්ගලයන්ට, ව්‍යාපාරවලට හෝ රාජ්‍ය ආයතනවලට උපදෙස් දීම සහ නියෝජනය කිරීම.",
-    "ta": "சட்டச் சிக்கல்கள் மற்றும் தகராறுகளில் தனிநபர்கள், வணிகங்கள் அல்லது அரசு நிறுவனங்களுக்கு ஆலோசனை வழங்குதல் மற்றும் பிரதிநிதித்துவம் செய்தல்."
+    "ta": "சட்டச் சிக்கல்கள் மற்றும் தகராறுகளில் தனிநபர்கள், வணிகங்கள் அல்லது அரசு நிறுவனங்களுக்கு ஆலோசனை மற்றும் பிரதிநிதித்துவம்."
   },
   "All": {
     "en": "All",
@@ -462,7 +462,7 @@ window.i18nDict = {
   "Anxious": {
     "en": "Anxious",
     "si": "කනස්සල්ලෙන්",
-    "ta": "கவலையுடன்"
+    "ta": "கவலை"
   },
   "Any State or Recognized Private Degree": {
     "en": "Any State or Recognized Private Degree",
@@ -576,7 +576,7 @@ window.i18nDict = {
   },
   "Automatically generate a professional CV using your profile data and portfolio records.": {
     "en": "Automatically generate a professional CV using your profile data and portfolio records.",
-    "si": "ඔබේ පැතිකඩ දත්ත සහ කළඹ වාර්තා භාවිතයෙන් ස්වයංක්‍රීයව වෘත්තීය CV එකක් ජනනය කරන්න.",
+    "si": "ඔබේ පැතිකඩ දත්ත සහ කළඹ වාර්තා භාවිතයෙන් ස්වයංක්‍රීයව වෘත්තීය CV ​​එකක් ජනනය කරන්න.",
     "ta": "உங்கள் சுயவிவரத் தரவு மற்றும் போர்ட்ஃபோலியோ பதிவுகளைப் பயன்படுத்தி ஒரு தொழில்முறை CVயை தானாக உருவாக்கவும்."
   },
   "Aviation": {
@@ -726,7 +726,7 @@ window.i18nDict = {
   },
   "Book Wellness Session": {
     "en": "Book Wellness Session",
-    "si": "පොත් සුවතා සැසිය",
+    "si": "පොත් සුව සැසිය",
     "ta": "புத்தக ஆரோக்கிய அமர்வு"
   },
   "Book a Counselling Session": {
@@ -1127,7 +1127,7 @@ window.i18nDict = {
   "Confidentiality &amp; Trust": {
     "en": "Confidentiality &amp; Trust",
     "si": "රහස්‍යභාවය සහ විශ්වාසය",
-    "ta": "ரகசியம் & நம்பிக்கை"
+    "ta": "ரகசியம் மற்றும் நம்பிக்கை"
   },
   "Confirm Appointment Booking": {
     "en": "Confirm Appointment Booking",
@@ -1241,7 +1241,7 @@ window.i18nDict = {
   },
   "Create Account": {
     "en": "Create Account",
-    "si": "ගිණුමක් සාදන්න",
+    "si": "ගිණුම තනන්න",
     "ta": "கணக்கை உருவாக்கவும்"
   },
   "Create My Account": {
@@ -1287,7 +1287,7 @@ window.i18nDict = {
   "DUTY FIRST &#183; EST. 1898": {
     "en": "DUTY FIRST &#183; EST. 1898",
     "si": "රාජකාරි පළමු · EST. 1898",
-    "ta": "கடமை முதல் · EST. 1898"
+    "ta": "கடமை முதலில் · EST. 1898"
   },
   "DW": {
     "en": "DW",
@@ -1332,7 +1332,7 @@ window.i18nDict = {
   "Dedicated to Every": {
     "en": "Dedicated to Every",
     "si": "සෑම කෙනෙකුටම කැපවී ඇත",
-    "ta": "அனைவருக்கும் அர்ப்பணிக்கப்பட்டது"
+    "ta": "ஒவ்வொருவருக்கும் அர்ப்பணிக்கப்பட்டது"
   },
   "Dedicated to guiding Josephians towards academic excellence, career development, and strong mental wellness.": {
     "en": "Dedicated to guiding Josephians towards academic excellence, career development, and strong mental wellness.",
@@ -1412,7 +1412,7 @@ window.i18nDict = {
   "Discover Your": {
     "en": "Discover Your",
     "si": "ඔබේ සොයා ගන්න",
-    "ta": "உங்கள் கண்டுபிடி"
+    "ta": "உங்களைக் கண்டறியவும்"
   },
   "Discover careers that match your interests and stream.": {
     "en": "Discover careers that match your interests and stream.",
@@ -1466,12 +1466,12 @@ window.i18nDict = {
   },
   "Email (optional)": {
     "en": "Email (optional)",
-    "si": "විද්‍යුත් තැපෑල (විකල්ප)",
+    "si": "ඊමේල් (විකල්ප)",
     "ta": "மின்னஞ்சல் (விரும்பினால்)"
   },
   "Email Address": {
     "en": "Email Address",
-    "si": "ඊමේල් ලිපිනය",
+    "si": "ඊතැපැල් ලිපිනය",
     "ta": "மின்னஞ்சல் முகவரி"
   },
   "Emergency Contacts": {
@@ -1601,7 +1601,7 @@ window.i18nDict = {
   },
   "Everyday": {
     "en": "Everyday",
-    "si": "හැමදාම",
+    "si": "සෑම දිනම",
     "ta": "தினமும்"
   },
   "Everything discussed in counselling sessions remains strictly confidential between you and your counsellor. Information is only shared with a third party in exceptional circumstances where there is a serious risk of harm — and you will always be informed first. We are committed to creating a safe, judgement-free space where every student feels heard and respected.": {
@@ -1747,7 +1747,7 @@ window.i18nDict = {
   "Fire": {
     "en": "Fire",
     "si": "ගිනි",
-    "ta": "நெருப்பு"
+    "ta": "தீ"
   },
   "First Name": {
     "en": "First Name",
@@ -1761,7 +1761,7 @@ window.i18nDict = {
   },
   "Follow-Up": {
     "en": "Follow-Up",
-    "si": "පසු විපරම්",
+    "si": "පසු විපරම",
     "ta": "பின்தொடர்தல்"
   },
   "For Parents": {
@@ -1786,7 +1786,7 @@ window.i18nDict = {
   },
   "Forgot Password?": {
     "en": "Forgot Password?",
-    "si": "මුරපදය අමතකද?",
+    "si": "මුරපදය අමතක වුණා ද?",
     "ta": "கடவுச்சொல் மறந்துவிட்டதா?"
   },
   "Foundation Programs": {
@@ -2011,7 +2011,7 @@ window.i18nDict = {
   },
   "HR": {
     "en": "HR",
-    "si": "HR",
+    "si": "එච්.ආර්",
     "ta": "எச்.ஆர்"
   },
   "Head of Counselling Unit": {
@@ -2361,7 +2361,7 @@ window.i18nDict = {
   },
   "Last Name": {
     "en": "Last Name",
-    "si": "අවසාන නම",
+    "si": "අවසන් නම",
     "ta": "கடைசி பெயர்"
   },
   "Law": {
@@ -2411,7 +2411,7 @@ window.i18nDict = {
   },
   "Learn More": {
     "en": "Learn More",
-    "si": "තව දැනගන්න",
+    "si": "තවත් හදාරන්න",
     "ta": "மேலும் அறிக"
   },
   "Learn about our confidential counselling sessions — what they cover, how they work, and how they help your child navigate personal and academic challenges.": {
@@ -2467,7 +2467,7 @@ window.i18nDict = {
   "Located in the heart of the capital city, it is renowned for Medicine, Law, Science, and Management. Highly prestigious state university.": {
     "en": "Located in the heart of the capital city, it is renowned for Medicine, Law, Science, and Management. Highly prestigious state university.",
     "si": "අගනුවර මධ්‍යයේ පිහිටා ඇති එය වෛද්‍ය විද්‍යාව, නීතිය, විද්‍යාව සහ කළමනාකරණය සඳහා ප්‍රසිද්ධය. ඉතා කීර්තිමත් රාජ්ය විශ්ව විද්යාලය.",
-    "ta": "தலைநகரின் மையப்பகுதியில் அமைந்துள்ள இது மருத்துவம், சட்டம், அறிவியல் மற்றும் மேலாண்மை ஆகியவற்றிற்கு புகழ்பெற்றது. மிகவும் மதிப்புமிக்க மாநில பல்கலைக்கழகம்."
+    "ta": "தலைநகரின் மையப்பகுதியில் அமைந்துள்ள இது மருத்துவம், சட்டம், அறிவியல் மற்றும் மேலாண்மைக்கு புகழ்பெற்றது. மிகவும் மதிப்புமிக்க மாநில பல்கலைக்கழகம்."
   },
   "Located in the historic city of Mihintale, this university offers comprehensive degrees in Medicine, Agriculture, Applied Sciences, and Management.": {
     "en": "Located in the historic city of Mihintale, this university offers comprehensive degrees in Medicine, Agriculture, Applied Sciences, and Management.",
@@ -2561,8 +2561,8 @@ window.i18nDict = {
   },
   "Medicine": {
     "en": "Medicine",
-    "si": "ඖෂධ",
-    "ta": "மருத்துவம்"
+    "si": "ඖෂධය",
+    "ta": "மருந்து"
   },
   "Medicine &amp; Surgery": {
     "en": "Medicine &amp; Surgery",
@@ -2941,7 +2941,7 @@ window.i18nDict = {
   },
   "Parent of Past Student": {
     "en": "Parent of Past Student",
-    "si": "ආදි ශිෂ්‍යයාගේ දෙමාපියෙක්",
+    "si": "ආදි ශිෂ්‍යයාගේ දෙමාපියන්",
     "ta": "கடந்த மாணவரின் பெற்றோர்"
   },
   "Parents": {
@@ -3041,7 +3041,7 @@ window.i18nDict = {
   },
   "Period 8": {
     "en": "Period 8",
-    "si": "කාලසීමාව 8",
+    "si": "කාල සීමාව 8",
     "ta": "காலம் 8"
   },
   "Personal Counselling": {
@@ -3556,7 +3556,7 @@ window.i18nDict = {
   },
   "Select Time": {
     "en": "Select Time",
-    "si": "වේලාව තෝරන්න",
+    "si": "කාලය තෝරන්න",
     "ta": "நேரத்தைத் தேர்ந்தெடுக்கவும்"
   },
   "Select class": {
@@ -3626,12 +3626,12 @@ window.i18nDict = {
   },
   "Sign In": {
     "en": "Sign In",
-    "si": "පුරනය වන්න",
+    "si": "පුරන්න",
     "ta": "உள்நுழையவும்"
   },
   "Sign Out": {
     "en": "Sign Out",
-    "si": "වරනය වන්න",
+    "si": "වරන්න",
     "ta": "வெளியேறு"
   },
   "Sign in or create your student account below.": {
@@ -4166,7 +4166,7 @@ window.i18nDict = {
   },
   "University Pathways:": {
     "en": "University Pathways:",
-    "si": "විශ්ව විද්‍යාල මාර්ග:",
+    "si": "විශ්වවිද්‍යාල මාර්ග:",
     "ta": "பல்கலைக்கழக பாதைகள்:"
   },
   "University application and scholarship guidance": {
@@ -4412,7 +4412,7 @@ window.i18nDict = {
   "When I was going through a really difficult time at home, my grades dropped and I lost motivation. The one-to-one counselling sessions gave me a safe space to talk. The counsellor helped me refocus and build a plan. I'm genuinely grateful.": {
     "en": "When I was going through a really difficult time at home, my grades dropped and I lost motivation. The one-to-one counselling sessions gave me a safe space to talk. The counsellor helped me refocus and build a plan. I'm genuinely grateful.",
     "si": "මම ගෙදර ඉතා දුෂ්කර කාලයක් ගත කරන විට, මගේ ලකුණු පහත වැටුණු අතර මට අභිප්‍රේරණය නැති විය. එකින් එක උපදේශන සැසි මට කතා කිරීමට ආරක්ෂිත ඉඩක් ලබා දුන්නේය. උපදේශකයා මට නැවත අවධානය යොමු කර සැලැස්මක් ගොඩනඟා ගැනීමට උදව් කළා. මම අවංකවම කෘතඥ වෙනවා.",
-    "ta": "நான் வீட்டில் மிகவும் கடினமான நேரத்தைச் சந்தித்தபோது, எனது மதிப்பெண்கள் குறைந்து, ஊக்கத்தை இழந்தேன். ஒருவருக்கு ஒருவர் ஆலோசனை அமர்வுகள் எனக்கு பேசுவதற்கு ஒரு பாதுகாப்பான இடத்தை அளித்தன. ஆலோசகர் எனக்கு மீண்டும் கவனம் செலுத்தி ஒரு திட்டத்தை உருவாக்க உதவினார். நான் உண்மையிலேயே நன்றியுள்ளவனாக இருக்கிறேன்."
+    "ta": "நான் வீட்டில் மிகவும் கடினமான நேரத்தைச் சந்தித்தபோது, ​​எனது மதிப்பெண்கள் குறைந்து, ஊக்கத்தை இழந்தேன். ஒருவருக்கு ஒருவர் ஆலோசனை அமர்வுகள் எனக்கு பேசுவதற்கு ஒரு பாதுகாப்பான இடத்தை அளித்தன. ஆலோசகர் எனக்கு மீண்டும் கவனம் செலுத்தி ஒரு திட்டத்தை உருவாக்க உதவினார். நான் உண்மையிலேயே நன்றியுள்ளவனாக இருக்கிறேன்."
   },
   "When You Feel Overwhelmed": {
     "en": "When You Feel Overwhelmed",
