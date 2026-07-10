@@ -59,7 +59,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
 .form-card-title{font-weight:700;font-size:1.05rem;color:var(--maroon-deep);margin-bottom:20px;display:flex;align-items:center;gap:10px;padding-bottom:14px;border-bottom:2px solid var(--cream-2)}
 .fg{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
 .fg:last-child{margin-bottom:0}
-.fg label{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--maroon-mid)}
+.fg label{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--maroon-mid);display:flex;align-items:center;gap:6px}
+.fg label svg{width:13px;height:13px;stroke:var(--maroon-mid);flex-shrink:0}
 .fg input,.fg select,.fg textarea{padding:13px 16px;border:1.5px solid var(--cream-3);border-radius:10px;background:#fff;font-family:'Inter',sans-serif;font-size:1rem;color:var(--ink);outline:none;transition:all .15s;width:100%}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--maroon);box-shadow:0 0 0 4px rgba(122,24,24,0.08)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -223,14 +224,14 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
     <div class="booking-form">
 
       <div class="form-card">
-        <div class="form-card-title">Student Information</div>
+        <div class="form-card-title"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 12 15 2 8.5"/><path d="M6 11.5v5.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.5"/></svg>Student Information</div>
         <div class="fg">
-          <label for="bName">Your Name *</label>
+          <label for="bName"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Your Name *</label>
           <input autocomplete="off" type="text" id="bName" placeholder="Your full name" oninput="updateSummary()"/>
         </div>
         <div class="form-row" style="margin-top: 16px;">
           <div class="fg">
-            <label for="bGrade">What is your Grade *</label>
+            <label for="bGrade"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>What is your Grade *</label>
             <select id="bGrade" onchange="handleGradeChange(); updateSummary();">
               <option value="">Select Grade</option>
               <option value="Grade 6">Grade 6</option>
@@ -244,7 +245,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
             </select>
           </div>
           <div class="fg">
-            <label for="bClass">What is your Class ( A-F ) *</label>
+            <label for="bClass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>What is your Class ( A-F ) *</label>
             <select id="bClass" onchange="updateSummary()">
               <option value="">Select Class</option>
               <option value="A">A</option>
@@ -271,9 +272,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
       </div>
 
       <div class="form-card">
-        <div class="form-card-title">Contact Preference</div>
+        <div class="form-card-title"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Contact Preference</div>
         <div class="fg">
-          <label for="bContactMethod">How Can We Contact You To Give A Date & Time *</label>
+          <label for="bContactMethod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>How Can We Contact You To Give A Date & Time *</label>
           <select id="bContactMethod" onchange="handleContactMethodChange(); updateSummary();">
             <option value="From Email" data-icon="mail">Email</option>
             <option value="Meet And Schedule" data-icon="person">In Person</option>
@@ -282,20 +283,20 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop
         </div>
         <div class="form-row" style="margin-top:16px;">
           <div class="fg" id="phoneFieldWrap">
-            <label for="bPhone">Phone / WhatsApp <span class="req-star">*</span></label>
+            <label for="bPhone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Phone / WhatsApp <span class="req-star">*</span></label>
             <input autocomplete="off" type="tel" id="bPhone" placeholder="+94 7X XXX XXXX" oninput="updateSummary()"/>
           </div>
           <div class="fg" id="emailFieldWrap">
-            <label for="bEmail">Email Address <span class="req-star">*</span></label>
+            <label for="bEmail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email Address <span class="req-star">*</span></label>
             <input autocomplete="off" type="email" id="bEmail" placeholder="student@email.com" oninput="updateSummary()"/>
           </div>
         </div>
       </div>
 
       <div class="form-card">
-        <div class="form-card-title">What Is The Issue</div>
+        <div class="form-card-title"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>What Is The Issue</div>
         <div class="fg">
-          <label for="bNotes">Please describe what you want to discuss *</label>
+          <label for="bNotes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Please describe what you want to discuss *</label>
           <textarea autocomplete="off" id="bNotes" rows="5" placeholder="Write details about the issue or topics you'd like guidance on..." style="resize:vertical;font-size:0.95rem;line-height:1.6" oninput="updateSummary()"></textarea>
         </div>
         <p style="font-size:0.8rem;color:var(--muted);margin-top:4px">All information shared is strictly confidential.</p>
