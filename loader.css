@@ -6,6 +6,32 @@
 ::selection { background: var(--maroon, #7a1818); color: #faf6ee; }
 ::-moz-selection { background: var(--maroon, #7a1818); color: #faf6ee; }
 
+/* ── Skeleton loaders (site-wide) ────────────────────────────────────────── */
+/* Used for content that renders dynamically (e.g. university cards) so
+   visitors see a shaped placeholder instead of a blank gap while it loads.
+   The splash screen above (#sjc-page-loader) is untouched — this is a
+   separate, additional loading pattern for in-page content. */
+.skel {
+  position: relative;
+  overflow: hidden;
+  background: rgba(122,24,24,0.09);
+  border-radius: 8px;
+}
+.skel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(176,48,48,0.4), transparent);
+  transform: translateX(-100%);
+  animation: sjc-skel-shimmer 1.4s ease-in-out infinite;
+}
+@keyframes sjc-skel-shimmer {
+  100% { transform: translateX(100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .skel::after { animation: none; }
+}
+
 /* ── Loading screen ──────────────────────────────────────────────────────── */
 #sjc-page-loader {
   position: fixed;

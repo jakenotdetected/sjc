@@ -241,7 +241,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 
   <link rel="stylesheet" href="/custom_select.css?v=6" />
   <link rel="icon" type="image/x-icon" href="./favicon-rounded.ico">
-  <link rel="stylesheet" href="/loader.css?v=15">
+  <link rel="stylesheet" href="/loader.css?v=16">
 </head>
 <body>
   <div id="sjc-page-loader">
@@ -449,6 +449,15 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 }
 .uni-grid.no-match .uni-no-results { display: block; }
 .uni-card.hidden { display: none; }
+
+.uni-skel-card { border-radius: 20px; overflow: hidden; border: 1px solid var(--rule); background: #fff; }
+.uni-skel-card .skel-img { height: 200px; }
+.uni-skel-card .skel-body { padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; }
+.uni-skel-card .skel-line { height: 14px; }
+.uni-skel-card .skel-line.w-70 { width: 70%; }
+.uni-skel-card .skel-line.w-45 { width: 45%; }
+.uni-skel-card .skel-chips { display: flex; gap: 6px; margin-top: 4px; }
+.uni-skel-card .skel-chip { height: 22px; width: 64px; border-radius: 20px; }
 </style>
 
 <section class="uni-dir-section">
@@ -472,6 +481,12 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
       <div class="uni-section-sep-line"></div>
     </div>
     <div class="uni-grid" id="localGrid">
+      <div class="uni-skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line w-70 skel"></div><div class="skel-line w-45 skel"></div><div class="skel-chips"><div class="skel-chip skel"></div><div class="skel-chip skel"></div></div></div></div>
+      <div class="uni-skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line w-70 skel"></div><div class="skel-line w-45 skel"></div><div class="skel-chips"><div class="skel-chip skel"></div><div class="skel-chip skel"></div></div></div></div>
+      <div class="uni-skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line w-70 skel"></div><div class="skel-line w-45 skel"></div><div class="skel-chips"><div class="skel-chip skel"></div><div class="skel-chip skel"></div></div></div></div>
+      <div class="uni-skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line w-70 skel"></div><div class="skel-line w-45 skel"></div><div class="skel-chips"><div class="skel-chip skel"></div><div class="skel-chip skel"></div></div></div></div>
+      <div class="uni-skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line w-70 skel"></div><div class="skel-line w-45 skel"></div><div class="skel-chips"><div class="skel-chip skel"></div><div class="skel-chip skel"></div></div></div></div>
+      <div class="uni-skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line w-70 skel"></div><div class="skel-line w-45 skel"></div><div class="skel-chips"><div class="skel-chip skel"></div><div class="skel-chip skel"></div></div></div></div>
       <div class="uni-no-results">No universities match your search.</div>
     </div>
 
@@ -481,15 +496,21 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
       <div class="uni-section-sep-line"></div>
     </div>
     <div class="uni-grid" id="foreignGrid">
+      <div class="uni-skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line w-70 skel"></div><div class="skel-line w-45 skel"></div><div class="skel-chips"><div class="skel-chip skel"></div><div class="skel-chip skel"></div></div></div></div>
+      <div class="uni-skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line w-70 skel"></div><div class="skel-line w-45 skel"></div><div class="skel-chips"><div class="skel-chip skel"></div><div class="skel-chip skel"></div></div></div></div>
+      <div class="uni-skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line w-70 skel"></div><div class="skel-line w-45 skel"></div><div class="skel-chips"><div class="skel-chip skel"></div><div class="skel-chip skel"></div></div></div></div>
+      <div class="uni-skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line w-70 skel"></div><div class="skel-line w-45 skel"></div><div class="skel-chips"><div class="skel-chip skel"></div><div class="skel-chip skel"></div></div></div></div>
+      <div class="uni-skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line w-70 skel"></div><div class="skel-line w-45 skel"></div><div class="skel-chips"><div class="skel-chip skel"></div><div class="skel-chip skel"></div></div></div></div>
+      <div class="uni-skel-card"><div class="skel-img skel"></div><div class="skel-body"><div class="skel-line w-70 skel"></div><div class="skel-line w-45 skel"></div><div class="skel-chips"><div class="skel-chip skel"></div><div class="skel-chip skel"></div></div></div></div>
       <div class="uni-no-results">No universities match your search.</div>
     </div>
 
   </div>
 </section>
 
-<script src="/universities.js?v=4"></script>
+<script src="/universities.js?v=4" defer></script>
 <script>
-(function(){
+document.addEventListener('DOMContentLoaded', function(){
   function buildCard(id, uni) {
     const hasLogo = uni.logo;
     const short = uni.short || uni.name.split(' ').map(w=>w[0]).join('').slice(0,4);
@@ -521,6 +542,9 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 
   const localGrid = document.getElementById('localGrid');
   const foreignGrid = document.getElementById('foreignGrid');
+
+  localGrid.querySelectorAll('.uni-skel-card').forEach(el => el.remove());
+  foreignGrid.querySelectorAll('.uni-skel-card').forEach(el => el.remove());
 
   Object.entries(universitiesData).forEach(([id, uni]) => {
     const card = document.createElement('div');
@@ -568,7 +592,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
   }
 
   document.getElementById('uniSearch').addEventListener('input', applySearch);
-})();
+});
 </script>
 
 <div class="cta-band">
