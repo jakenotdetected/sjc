@@ -1359,6 +1359,16 @@ const handleApiRequest = (req, res, urlPath) => {
 const server = http.createServer((req, res) => {
   let urlPath = decodeURIComponent(req.url.split('?')[0]);
 
+  // ── Site deactivation notice ─────────────────────────────────────────────
+  // Toggle by setting SITE_DEACTIVATED=1 in the environment and restarting
+  // (`pm2 restart sjc-cgu --update-env`). Admin routes stay reachable so the
+  // site can still be managed/reactivated without editing code.
+  if (process.env.SITE_DEACTIVATED === '1' && !urlPath.startsWith('/admin') && !urlPath.startsWith('/api/')) {
+    const notice = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Site Deactivated</title><style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;background:#2a0808;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}.card{background:#faf6ee;border-radius:18px;padding:48px 40px;max-width:480px;width:100%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.3)}h1{font-size:1.6rem;font-weight:800;color:#2a0808;line-height:1.3;margin-bottom:16px}p{font-size:1rem;color:#5a4444;line-height:1.7}</style></head><body><div class="card"><h1>This Website Has Been Deactivated By Jake</h1><p>Will be activated after payment.</p></div></body></html>`;
+    res.writeHead(503, { ...securityHeaders, 'Content-Type': 'text/html', 'Retry-After': '86400' });
+    return res.end(notice);
+  }
+
   if (urlPath.startsWith('/api/')) {
     if (req.method === 'GET' && urlPath.startsWith('/api/admin/emails')) {
       // Auth check for email routes
