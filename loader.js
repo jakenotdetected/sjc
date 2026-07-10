@@ -157,13 +157,23 @@
     if (!running) tick();
   }, { passive: false });
 
+  // Site-wide CSS sets `scroll-behavior: smooth` (for anchor-link jumps). That
+  // also applies to plain window.scrollTo(x, y) calls, which meant every one of
+  // our ~60/sec easing ticks was ITSELF kicking off the browser's own smooth-
+  // scroll animation — fighting the next frame 16ms later. Passing
+  // behavior:'instant' here bypasses that, so our JS easing is the only thing
+  // animating the scroll position (this is the actual fix for the residual jank).
+  function setScroll(y) {
+    window.scrollTo({ top: y, left: 0, behavior: 'instant' });
+  }
+
   function tick() {
     running = true;
     current += (target - current) * ease;
-    window.scrollTo(0, current);
+    setScroll(current);
     if (Math.abs(target - current) < 0.5) {
       current = target;
-      window.scrollTo(0, current);
+      setScroll(current);
       running = false;
       return;
     }
