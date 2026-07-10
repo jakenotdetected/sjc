@@ -1364,7 +1364,67 @@ const server = http.createServer((req, res) => {
   // (`pm2 restart sjc-cgu --update-env`). Admin routes stay reachable so the
   // site can still be managed/reactivated without editing code.
   if (process.env.SITE_DEACTIVATED === '1' && !urlPath.startsWith('/admin') && !urlPath.startsWith('/api/')) {
-    const notice = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Site Deactivated</title><style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',sans-serif;background:#2a0808;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}.card{background:#faf6ee;border-radius:18px;padding:48px 40px;max-width:480px;width:100%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.3)}h1{font-size:1.6rem;font-weight:800;color:#2a0808;line-height:1.3;margin-bottom:16px}p{font-size:1rem;color:#5a4444;line-height:1.7}</style></head><body><div class="card"><h1>This Website Has Been Deactivated By Jake</h1><p>Will be activated after payment.</p></div></body></html>`;
+    const notice = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Site Deactivated</title><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Inter',sans-serif;
+  min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+  overflow:hidden;
+  position:relative;
+  background:radial-gradient(circle at 50% 25%,#3a0e0e 0%,#2a0808 45%,#160404 100%);
+}
+.bg-orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.35;pointer-events:none}
+.orb-1{width:520px;height:520px;background:radial-gradient(circle,rgba(201,168,76,.5),transparent 70%);top:-160px;left:-120px;animation:drift1 14s ease-in-out infinite}
+.orb-2{width:420px;height:420px;background:radial-gradient(circle,rgba(122,24,24,.6),transparent 70%);bottom:-140px;right:-100px;animation:drift2 16s ease-in-out infinite}
+@keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,20px)}}
+@keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(-25px,-15px)}}
+.grid-overlay{position:absolute;inset:0;opacity:.04;pointer-events:none;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 1px,transparent 1px,transparent 48px),repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 1px,transparent 1px,transparent 48px)}
+.card{
+  position:relative;z-index:2;
+  background:rgba(250,246,238,0.98);
+  border-radius:22px;
+  padding:56px 44px 44px;
+  max-width:460px;width:100%;text-align:center;
+  box-shadow:0 30px 90px rgba(0,0,0,0.45),0 0 0 1px rgba(201,168,76,0.15);
+  animation:riseIn .7s cubic-bezier(.16,1,.3,1);
+}
+@keyframes riseIn{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+.badge{
+  width:64px;height:64px;margin:0 auto 22px;border-radius:16px;
+  background:linear-gradient(135deg,#2a0808,#5a1010);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 24px rgba(42,8,8,0.35);
+}
+.badge svg{width:30px;height:30px;stroke:#e8c96a}
+.eyebrow{
+  font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:#a07830;margin-bottom:14px;
+}
+h1{
+  font-family:'Cormorant Garamond',serif;font-weight:700;
+  font-size:1.9rem;line-height:1.25;color:#2a0808;margin-bottom:14px;
+}
+h1 em{font-style:italic;color:#7a1818}
+p{font-size:.95rem;color:#7a6868;line-height:1.75;max-width:360px;margin:0 auto}
+.divider{width:44px;height:1px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);margin:26px auto}
+.pulse-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#c0392b;margin-right:8px;animation:pulse 1.8s ease-in-out infinite;vertical-align:1px}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(192,57,43,.5)}50%{opacity:.6;box-shadow:0 0 0 6px rgba(192,57,43,0)}}
+.status-line{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#c0392b}
+</style></head><body>
+<div class="grid-overlay"></div>
+<div class="bg-orb orb-1"></div>
+<div class="bg-orb orb-2"></div>
+<div class="card">
+  <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+  <div class="eyebrow">St. Joseph&rsquo;s College &middot; Counselling Unit</div>
+  <h1>This website has been <em>deactivated</em> by Jake</h1>
+  <p>Access will be restored once payment has been settled. Please get in touch with Jake to resolve this.</p>
+  <div class="divider"></div>
+  <div class="status-line"><span class="pulse-dot"></span>Site offline</div>
+</div>
+</body></html>`;
     res.writeHead(503, { ...securityHeaders, 'Content-Type': 'text/html', 'Retry-After': '86400' });
     return res.end(notice);
   }
