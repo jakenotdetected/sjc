@@ -9,85 +9,115 @@
     "si": "% ශිෂ්‍ය තෘප්තිය",
     "ta": "% மாணவர் திருப்தி"
   },
-  "&#x2715;": {
-    "en": "&#x2715;",
-    "si": "✕",
-    "ta": "✕"
+  "+94 7X XXX XXXX": {
+    "en": "+94 7X XXX XXXX",
+    "si": "+94 7X XXX XXXX",
+    "ta": "+94 7X XXX XXXX"
   },
-  "&copy; 2026 SJC Counselling - St. Joseph's College, Anuradhapura": {
-    "en": "&copy; 2026 SJC Counselling - St. Joseph's College, Anuradhapura",
-    "si": "© 2026 SJC උපදේශනය - ශාන්ත ජෝශප් විද්‍යාලය, අනුරාධපුර",
-    "ta": "© 2026 SJC கவுன்சிலிங் - செயின்ட் ஜோசப் கல்லூரி, அனுராதபுரம்"
+  ", SJC has shaped Josephian scholars, athletes, and leaders since 1898 – welcoming boys of every faith.": {
+    "en": ", SJC has shaped Josephian scholars, athletes, and leaders since 1898 – welcoming boys of every faith.",
+    "si": ", 1898 වසරේ සිට සෑම ආගමකම පිරිමි ළමුන් සාදරයෙන් පිළිගනිමින්, ශාන්ත ජෝශප් විද්‍යාලය විසින් ජෝශප්වරුන් උගතුන්, ක්‍රීඩකයන් සහ නායකයන් ලෙස හැඩගස්වා ඇත.",
+    "ta": ", 1898 ஆம் ஆண்டு முதல் அனைத்து மதங்களைச் சேர்ந்த மாணவர்களையும் வரவேற்று, அவர்களை சிறந்த அறிஞர்களாகவும், தடகள வீரர்களாகவும், தலைவர்களாகவும் செயின்ட் ஜோசப் கல்லூரி உருவாக்கி வருகிறது."
   },
-  "&copy; 2026 SJC Counselling —": {
-    "en": "&copy; 2026 SJC Counselling —",
-    "si": "© 2026 SJC උපදේශනය —",
-    "ta": "© 2026 SJC ஆலோசனை —"
+  "0 appointments": {
+    "en": "0 appointments",
+    "si": "හමුවීම් 0 ක්",
+    "ta": "0 சந்திப்புகள்"
   },
-  "&gt;": {
-    "en": "&gt;",
-    "si": ">",
-    "ta": ">"
+  "01:00 PM": {
+    "en": "01:00 PM",
+    "si": "පස්වරු 01:00",
+    "ta": "பிற்பகல் 01:00"
   },
-  "&nbsp;·&nbsp; Developed by": {
-    "en": "&nbsp;·&nbsp; Developed by",
-    "si": " ·  විසින් සංවර්ධනය කරන ලදී",
-    "ta": " ·  உருவாக்கியது"
+  "02:00 PM": {
+    "en": "02:00 PM",
+    "si": "පස්වරු 02:00",
+    "ta": "பிற்பகல் 02:00"
   },
-  "&times;": {
-    "en": "&times;",
-    "si": "×",
-    "ta": "×"
+  "03:00 PM": {
+    "en": "03:00 PM",
+    "si": "පස්වරු 03:00",
+    "ta": "பிற்பகல் 03:00"
   },
-  "(o)": {
-    "en": "(o)",
-    "si": "(ඕ)",
-    "ta": "(ஓ)"
-  },
-  "+ Add Position": {
-    "en": "+ Add Position",
-    "si": "+ ස්ථානය එකතු කරන්න",
-    "ta": "+ நிலையைச் சேர்க்கவும்"
-  },
-  "+ Add Record": {
-    "en": "+ Add Record",
-    "si": "+ වාර්තාව එක් කරන්න",
-    "ta": "+ பதிவைச் சேர்க்கவும்"
-  },
-  ". They inherit the surrounding text color, making them easy to theme.": {
-    "en": ". They inherit the surrounding text color, making them easy to theme.",
-    "si": ". ඔවුන් අවට ඇති අකුරු වර්ණයට උරුමකම් කියයි, ඒවා තේමාවට පහසු කරයි.",
-    "ta": ". அவை சுற்றியுள்ள உரை நிறத்தை மரபுரிமையாகப் பெறுகின்றன, அவற்றை கருப்பொருளுக்கு எளிதாக்குகின்றன."
+  "0800 222 200 – Mental Health Helpline": {
+    "en": "0800 222 200 – Mental Health Helpline",
+    "si": "0800 222 200 — මානසික සෞඛ්‍ය උපකාරක දුරකථන අංකය",
+    "ta": "0800 222 200 — மனநல உதவி எண்"
   },
   "0800 222 200 — Mental Health Helpline": {
     "en": "0800 222 200 — Mental Health Helpline",
     "si": "0800 222 200 — මානසික සෞඛ්‍ය උපකාරක දුරකථන අංකය",
     "ta": "0800 222 200 — மனநல உதவி எண்"
   },
+  "08:00 AM": {
+    "en": "08:00 AM",
+    "si": "පෙරවරු 08:00",
+    "ta": "முற்பகல் 08:00"
+  },
+  "09:00 AM": {
+    "en": "09:00 AM",
+    "si": "පෙරවරු 09:00",
+    "ta": "முற்பகல் 09:00"
+  },
+  "10:00 AM": {
+    "en": "10:00 AM",
+    "si": "පෙරවරු 10:00",
+    "ta": "முற்பகல் 10:00"
+  },
+  "110 – Ambulance": {
+    "en": "110 – Ambulance",
+    "si": "110 - ගිලන් රථය",
+    "ta": "110 - ஆம்புலன்ஸ்"
+  },
   "110 — Ambulance": {
     "en": "110 — Ambulance",
     "si": "110 - ගිලන් රථය",
     "ta": "110 - ஆம்புலன்ஸ்"
   },
-  "119 — Police &amp; Emergency Services": {
-    "en": "119 — Police &amp; Emergency Services",
+  "119 – Police & Emergency Services": {
+    "en": "119 – Police & Emergency Services",
     "si": "119 - පොලිස් සහ හදිසි සේවා",
     "ta": "119 — போலீஸ் & அவசர சேவைகள்"
+  },
+  "119 — Police & Emergency Services": {
+    "en": "119 — Police & Emergency Services",
+    "si": "119 - පොලිස් සහ හදිසි සේවා",
+    "ta": "119 — போலீஸ் & அவசர சேவைகள்"
+  },
+  "11:00 AM": {
+    "en": "11:00 AM",
+    "si": "පෙරවරු 11:00",
+    "ta": "முற்பகல் 11:00"
+  },
+  "128 Years in the": {
+    "en": "128 Years in the",
+    "si": "වසර 128 ක",
+    "ta": "128 வருடங்களாக"
+  },
+  "128 years on, more than 200 teachers guide thousands of Josephians in the shadow of Anuradhapura's ancient stupas.": {
+    "en": "128 years on, more than 200 teachers guide thousands of Josephians in the shadow of Anuradhapura's ancient stupas.",
+    "si": "වසර 128 ක් ඉක්මවා යන මේ ගමනේදී, අනුරාධපුරයේ ඓතිහාසික චෛත්‍ය රාජයාණන්ගේ සෙවණේ ගුරුවරුන් 200 කට අධික සංඛ්‍යාවක් දහස් සංඛ්‍යාත ජෝශප්වරුන්ට මඟ පෙන්වති.",
+    "ta": "128 வருடங்களுக்குப் பிறகும், அனுராதபுரத்தின் பண்டைய தூபிகளின் நிழலில் 200 க்கும் மேற்பட்ட ஆசிரியர்கள் ஆயிரக்கணக்கான ஜோசப்வியன்களுக்கு வழிகாட்டுகின்றனர்."
+  },
+  "1926 – Sumithrayo Sri Lanka": {
+    "en": "1926 – Sumithrayo Sri Lanka",
+    "si": "1926 - සුමිත්‍රයෝ ශ්‍රී ලංකාව",
+    "ta": "1926 - சுமித்ராயோ இலங்கை"
   },
   "1926 — Sumithrayo Sri Lanka": {
     "en": "1926 — Sumithrayo Sri Lanka",
     "si": "1926 - සුමිත්‍රයෝ ශ්‍රී ලංකාව",
     "ta": "1926 - சுமித்ராயோ இலங்கை"
   },
-  "2:00 PM – 5:00 PM · Counselling Room": {
-    "en": "2:00 PM – 5:00 PM · Counselling Room",
+  "1AB": {
+    "en": "1AB",
+    "si": "1AB",
+    "ta": "1AB"
+  },
+  "2:00 PM — 5:00 PM · Counselling Room": {
+    "en": "2:00 PM — 5:00 PM · Counselling Room",
     "si": "2:00 PM - 5:00 PM · උපදේශන කාමරය",
     "ta": "2:00 PM - 5:00 PM · ஆலோசனை அறை"
-  },
-  "4 Modules": {
-    "en": "4 Modules",
-    "si": "4 මොඩියුල",
-    "ta": "4 தொகுதிகள்"
   },
   "4 counts": {
     "en": "4 counts",
@@ -99,34 +129,24 @@
     "si": "4-7-8 හුස්ම ගැනීමේ ව්‍යායාමය",
     "ta": "4-7-8 மூச்சுப் பயிற்சி"
   },
-  "6 Modules": {
-    "en": "6 Modules",
-    "si": "6 මොඩියුල",
-    "ta": "6 தொகுதிகள்"
-  },
   "7 counts": {
     "en": "7 counts",
     "si": "ගණන් 7 ක්",
     "ta": "7 எண்ணிக்கைகள்"
-  },
-  "8 Modules": {
-    "en": "8 Modules",
-    "si": "8 මොඩියුල",
-    "ta": "8 தொகுதிகள்"
   },
   "8 counts": {
     "en": "8 counts",
     "si": "ගණන් 8 ක්",
     "ta": "8 எண்ணிக்கைகள்"
   },
-  "9:00 AM – 3:00 PM · Main Hall": {
-    "en": "9:00 AM – 3:00 PM · Main Hall",
+  "9:00 AM — 3:00 PM · Main Hall": {
+    "en": "9:00 AM — 3:00 PM · Main Hall",
     "si": "9:00 AM - 3:00 PM · ප්‍රධාන ශාලාව",
     "ta": "9:00 AM - 3:00 PM · பிரதான மண்டபம்"
   },
   "? Exhale for": {
     "en": "? Exhale for",
-    "si": "? සඳහා හුස්ම ගන්න",
+    "si": "? ප්‍රශ්වාස කරන්න",
     "ta": "? மூச்சை வெளிவிடவும்"
   },
   "? Free Attendance": {
@@ -136,26 +156,41 @@
   },
   "? Hold for": {
     "en": "? Hold for",
-    "si": "? සඳහා රැඳී සිටින්න",
-    "ta": "? பிடி"
+    "si": "? හුස්ම අල්ලාගෙන සිටින්න",
+    "ta": "? மூச்சை அடக்கவும்"
   },
   "? Mood saved — thanks for checking in with yourself!": {
     "en": "? Mood saved — thanks for checking in with yourself!",
     "si": "? මනෝභාවය සුරකින ලදි - ඔබ සමඟ පරීක්ෂා කිරීම ගැන ස්තූතියි!",
     "ta": "? மனநிலை சேமிக்கப்பட்டது — உங்களுடன் சரிபார்த்ததற்கு நன்றி!"
   },
-  "?? info@sjc.lk": {
-    "en": "?? info@sjc.lk",
-    "si": "?? info@sjc.lk",
-    "ta": "?? info@sjc.lk"
+  "A Government School": {
+    "en": "A Government School",
+    "si": "රජයේ පාසලක්",
+    "ta": "அரசுப் பள்ளி"
   },
-  "A complete breakdown of mandatory O/L mathematics and English requirements, specific A/L subject combos, and the value of extracurriculars.": {
-    "en": "A complete breakdown of mandatory O/L mathematics and English requirements, specific A/L subject combos, and the value of extracurriculars.",
-    "si": "අනිවාර්ය O/L ගණිතය සහ ඉංග්‍රීසි අවශ්‍යතා, විශේෂිත A/L විෂය සංයෝජන, සහ විෂය බාහිර කරුණු වල වටිනාකම පිළිබඳ සම්පූර්ණ බිඳවැටීමක්.",
-    "ta": "கட்டாய O/L கணிதம் மற்றும் ஆங்கிலத் தேவைகள், குறிப்பிட்ட A/L பாடம் சேர்க்கைகள் மற்றும் கூடுதல் பாடநெறிகளின் மதிப்பு ஆகியவற்றின் முழுமையான முறிவு."
+  "A Legacy That Shapes": {
+    "en": "A Legacy That Shapes",
+    "si": "හෙට දවස හැඩගස්වන උරුමයක්",
+    "ta": "எதிர்காலத்தை வடிவமைக்கும் பாரம்பரியம்"
   },
-  "A dedicated space for parents and guardians — understand how our counselling unit supports your child's academic, emotional, and career development at St. Joseph's College.": {
-    "en": "A dedicated space for parents and guardians — understand how our counselling unit supports your child's academic, emotional, and career development at St. Joseph's College.",
+  "A Living Legacy": {
+    "en": "A Living Legacy",
+    "si": "ජීවමාන උරුමයක්",
+    "ta": "வாழும் பாரம்பரியம்"
+  },
+  "A National School of Distinction": {
+    "en": "A National School of Distinction",
+    "si": "සුවිශේෂී ජාතික පාසලක්",
+    "ta": "சிறப்புமிக்க தேசிய பள்ளி"
+  },
+  "A century of excellence in the sacred city of Anuradhapura. Guided by the motto": {
+    "en": "A century of excellence in the sacred city of Anuradhapura. Guided by the motto",
+    "si": "අනුරාධපුර පූජනීය නගරයේ ශතවර්ෂයකට අධික විශිෂ්ටත්වය. පාසල් තේමාවෙන් මඟ පෙන්වනු ලබයි",
+    "ta": "புனித நகரான அனுராதபுரத்தில் ஒரு நூற்றாண்டு கால சிறப்பு. பள்ளியின் கொள்கையுரையின் வழிகாட்டலில்"
+  },
+  "A dedicated space for parents and guardians – understand how our counselling unit supports your child's academic, emotional, and career development at St. Joseph's College.": {
+    "en": "A dedicated space for parents and guardians – understand how our counselling unit supports your child's academic, emotional, and career development at St. Joseph's College.",
     "si": "දෙමාපියන් සහ භාරකරුවන් සඳහා කැපවූ ඉඩක් — අපගේ උපදේශන ඒකකය ශාන්ත ජෝසප් විද්‍යාලයේ ඔබේ දරුවාගේ අධ්‍යාපනික, චිත්තවේගීය සහ වෘත්තීය සංවර්ධනයට සහාය වන ආකාරය තේරුම් ගන්න.",
     "ta": "பெற்றோர் மற்றும் பாதுகாவலர்களுக்கான பிரத்யேக இடம் — செயின்ட் ஜோசப் கல்லூரியில் உங்கள் பிள்ளையின் கல்வி, உணர்ச்சி மற்றும் தொழில் வளர்ச்சிக்கு எங்கள் ஆலோசனைப் பிரிவு எவ்வாறு துணைபுரிகிறது என்பதைப் புரிந்து கொள்ளுங்கள்."
   },
@@ -163,11 +198,6 @@
     "en": "A full-day camp developing leadership qualities, teamwork and public speaking for senior students.",
     "si": "ජ්‍යෙෂ්ඨ සිසුන් සඳහා නායකත්ව ගුණාංග, කණ්ඩායම් ක්‍රියා සහ ප්‍රසිද්ධ කථා වර්ධනය කරන පූර්ණ දින කඳවුරක්.",
     "ta": "மூத்த மாணவர்களுக்கான தலைமைப் பண்பு, குழுப்பணி மற்றும் பொதுப் பேச்சு ஆகியவற்றை வளர்க்கும் முழு நாள் முகாம்."
-  },
-  "A globally ranked UK university with an affordable branch campus in Malaysia. Great for Engineering, Bioscience, and Business.": {
-    "en": "A globally ranked UK university with an affordable branch campus in Malaysia. Great for Engineering, Bioscience, and Business.",
-    "si": "මැලේසියාවේ දැරිය හැකි ශාඛා මණ්ඩපයක් සහිත ගෝලීය වශයෙන් ශ්‍රේණිගත කරන ලද එක්සත් රාජධානියේ විශ්ව විද්‍යාලයක්. ඉංජිනේරු, ජීව විද්‍යාව සහ ව්‍යාපාර සඳහා විශිෂ්ටයි.",
-    "ta": "மலேசியாவில் மலிவு விலையில் கிளை வளாகத்துடன் உலக அளவில் தரவரிசையில் உள்ள UK பல்கலைக்கழகம். பொறியியல், உயிரியல் மற்றும் வணிகத்திற்கு சிறந்தது."
   },
   "A guide for parents on university admissions, scholarship opportunities, and how to support your child's higher education journey from A/Levels onwards.": {
     "en": "A guide for parents on university admissions, scholarship opportunities, and how to support your child's higher education journey from A/Levels onwards.",
@@ -179,30 +209,20 @@
     "si": "මානව සෞඛ්‍යය වැඩි දියුණු කිරීම සඳහා රෝග විනිශ්චය කිරීම, ප්‍රතිකාර කිරීම සහ වැළැක්වීම කෙරෙහි අවධානය යොමු කරන ලද ඉහළ ගෞරවනීය වෘත්තියක්.",
     "ta": "மனித ஆரோக்கியத்தை மேம்படுத்த நோய்களைக் கண்டறிதல், சிகிச்சை செய்தல் மற்றும் தடுப்பதில் கவனம் செலுத்தும் மிகவும் மரியாதைக்குரிய தொழில்."
   },
-  "A/L 3 'B' passes, IELTS/PTE required": {
-    "en": "A/L 3 'B' passes, IELTS/PTE required",
-    "si": "A/L 3 'B' සාමාර්ථ, IELTS/PTE අවශ්‍යයි",
-    "ta": "A/L 3 'B' தேர்ச்சிகள், IELTS/PTE தேவை"
-  },
-  "A/L 3 'C' passes, IELTS 6.0+": {
-    "en": "A/L 3 'C' passes, IELTS 6.0+",
-    "si": "A/L 3 'C' සාමාර්ථ, IELTS 6.0+",
-    "ta": "A/L 3 'C' தேர்ச்சி, IELTS 6.0+"
+  "A strong network of Old Josephians uniting alumni across Sri Lanka and beyond in service and brotherhood.": {
+    "en": "A strong network of Old Josephians uniting alumni across Sri Lanka and beyond in service and brotherhood.",
+    "si": "ශ්‍රී ලංකාව සහ ඉන් ඔබ්බෙහි සිටින ආදි ශිෂ්‍යයන් සේවා සහ සහෝදරත්වයෙන් එක්සත් කරන ප්‍රබල ආදි ජෝශප්වරුන්ගේ ජාලය.",
+    "ta": "இலங்கை மற்றும் அதற்கு அப்பால் உள்ள பழைய மாணவர்களை சேவை மற்றும் சகோதரத்துவத்தில் இணைக்கும் பழைய ஜோசப்வியன்களின் வலுவான வலையமைப்பு."
   },
   "A/L Stream": {
     "en": "A/L Stream",
     "si": "උසස් පෙළ විෂය ධාරාව",
-    "ta": "A/L ஸ்ட்ரீம்"
+    "ta": "உயர்தரப் பிரிவு"
   },
   "A/L Streams": {
     "en": "A/L Streams",
     "si": "උසස් පෙළ විෂය ධාරාවන්",
-    "ta": "A/L ஸ்ட்ரீம்கள்"
-  },
-  "A/L minimum 3 'C' passes, IELTS 6.5+": {
-    "en": "A/L minimum 3 'C' passes, IELTS 6.5+",
-    "si": "A/L අවම 'C' සාමාර්ථ 3ක්, IELTS 6.5+",
-    "ta": "A/L குறைந்தபட்சம் 3 'C' தேர்ச்சி, IELTS 6.5+"
+    "ta": "உயர்தரப் பிரிவுகள்"
   },
   "A/L stream and subject selection advice": {
     "en": "A/L stream and subject selection advice",
@@ -212,7 +232,7 @@
   "AB": {
     "en": "AB",
     "si": "AB",
-    "ta": "ஏபி"
+    "ta": "AB"
   },
   "AP": {
     "en": "AP",
@@ -221,8 +241,8 @@
   },
   "About": {
     "en": "About",
-    "si": "ගැන",
-    "ta": "பற்றி"
+    "si": "විද්‍යාලය පිළිබඳව",
+    "ta": "வித்தியாலயம் பற்றி"
   },
   "About Me": {
     "en": "About Me",
@@ -231,8 +251,8 @@
   },
   "About Unit": {
     "en": "About Unit",
-    "si": "ඒකකය ගැන",
-    "ta": "அலகு பற்றி"
+    "si": "උපදේශන ඒකකය ගැන",
+    "ta": "ஆலோசனைப் பிரிவு பற்றி"
   },
   "About the": {
     "en": "About the",
@@ -241,48 +261,48 @@
   },
   "About the Unit": {
     "en": "About the Unit",
-    "si": "ඒකකය ගැන",
-    "ta": "அலகு பற்றி"
+    "si": "උපදේශන ඒකකය ගැන",
+    "ta": "ஆலோசனைப் பிரிவு பற்றி"
   },
-  "About the Unit — SJC Counselling": {
-    "en": "About the Unit — SJC Counselling",
-    "si": "ඒකකය ගැන - SJC උපදේශනය",
-    "ta": "யூனிட் பற்றி - SJC கவுன்சிலிங்"
+  "About the Unit – SJC Counselling": {
+    "en": "About the Unit – SJC Counselling",
+    "si": "උපදේශන ඒකකය ගැන – SJC උපදේශන සේවය",
+    "ta": "ஆலோசனைப் பிரிவு பற்றி – SJC ஆலோசனை"
   },
   "Academic": {
     "en": "Academic",
-    "si": "ශාස්ත්රීය",
+    "si": "අධ්‍යයන",
     "ta": "கல்விசார்"
   },
   "Academic Details": {
     "en": "Academic Details",
-    "si": "අධ්‍යයන විස්තර",
-    "ta": "கல்வி விவரங்கள்"
+    "si": "අධ්‍යයන තොරතුරු",
+    "ta": "கல்வித் தகவல்கள்"
+  },
+  "Academic Powerhouse": {
+    "en": "Academic Powerhouse",
+    "si": "අධ්‍යයන විශිෂ්ටත්වය",
+    "ta": "கல்விச் சிறப்பு"
   },
   "Academic Stream": {
     "en": "Academic Stream",
-    "si": "ශාස්ත්‍රීය ධාරාව",
-    "ta": "அகாடமிக் ஸ்ட்ரீம்"
+    "si": "අධ්‍යයන විෂය ධාරාව",
+    "ta": "கல்விப் பிரிவு"
+  },
+  "Academic Stream *": {
+    "en": "Academic Stream *",
+    "si": "අධ්‍යයන විෂය ධාරාව *",
+    "ta": "கல்விப் பிரிவு *"
   },
   "Academic Support": {
     "en": "Academic Support",
-    "si": "ශාස්ත්රීය සහාය",
+    "si": "අධ්‍යයන සහයෝගය",
     "ta": "கல்வி ஆதரவு"
   },
-  "Access Admin Panel": {
-    "en": "Access Admin Panel",
-    "si": "පරිපාලක පැනලය වෙත පිවිසෙන්න",
-    "ta": "நிர்வாக குழுவை அணுகவும்"
-  },
-  "Access Levels": {
-    "en": "Access Levels",
-    "si": "ප්රවේශ මට්ටම්",
-    "ta": "அணுகல் நிலைகள்"
-  },
-  "Access Teacher Panel": {
-    "en": "Access Teacher Panel",
-    "si": "ගුරු මණ්ඩලයට ප්‍රවේශ වන්න",
-    "ta": "ஆசிரியர் குழுவை அணுகவும்"
+  "Acclaimed film actor and Member of Parliament – a familiar face of Sri Lankan cinema and public life.": {
+    "en": "Acclaimed film actor and Member of Parliament – a familiar face of Sri Lankan cinema and public life.",
+    "si": "ප්‍රකට සිනමා නළුවෙකු සහ පාර්ලිමේන්තු මන්ත්‍රීවරයෙකු වන – ශ්‍රී ලාංකේය සිනමාවේ සහ පොදු ජීවිතයේ සුපුරුදු මුහුණකි.",
+    "ta": "புகழ்பெற்ற திரைப்பட நடிகரும் நாடாளுமன்ற உறுப்பினருமான – இலங்கை சினிமா மற்றும் பொது வாழ்வின் பழக்கமான முகம்."
   },
   "Account": {
     "en": "Account",
@@ -339,55 +359,25 @@
     "si": "පෞද්ගලීකරණය කළ නිර්දේශ බැලීමට ඔබේ පැතිකඩෙහි වෘත්තීය රුචිකත්වයන් එක් කරන්න.",
     "ta": "தனிப்பயனாக்கப்பட்ட பரிந்துரைகளைப் பார்க்க உங்கள் சுயவிவரத்தில் தொழில் ஆர்வங்களைச் சேர்க்கவும்."
   },
-  "Add skills relevant to the role &mdash; languages, IT skills, certifications": {
-    "en": "Add skills relevant to the role &mdash; languages, IT skills, certifications",
+  "Add skills relevant to the role — languages, IT skills, certifications": {
+    "en": "Add skills relevant to the role — languages, IT skills, certifications",
     "si": "භූමිකාවට අදාළ කුසලතා එක් කරන්න - භාෂා, තොරතුරු තාක්ෂණ කුසලතා, සහතික",
     "ta": "மொழிகள், தகவல் தொழில்நுட்பத் திறன்கள், சான்றிதழ்கள் - பாத்திரத்திற்குத் தொடர்புடைய திறன்களைச் சேர்க்கவும்"
-  },
-  "Additional Notes": {
-    "en": "Additional Notes",
-    "si": "අමතර සටහන්",
-    "ta": "கூடுதல் குறிப்புகள்"
   },
   "Admin": {
     "en": "Admin",
     "si": "පරිපාලක",
     "ta": "நிர்வாகி"
   },
-  "Admin Dashboard": {
-    "en": "Admin Dashboard",
-    "si": "පරිපාලක උපකරණ පුවරුව",
-    "ta": "நிர்வாக டாஷ்போர்டு"
-  },
   "Admin Panel": {
     "en": "Admin Panel",
     "si": "පරිපාලක මණ්ඩලය",
     "ta": "நிர்வாக குழு"
   },
-  "Admin — Full system access": {
-    "en": "Admin — Full system access",
-    "si": "පරිපාලක - සම්පූර්ණ පද්ධති ප්රවේශය",
-    "ta": "நிர்வாகம் - முழு கணினி அணுகல்"
-  },
-  "Administrator": {
-    "en": "Administrator",
-    "si": "පරිපාලක",
-    "ta": "நிர்வாகி"
-  },
-  "Administrator Email": {
-    "en": "Administrator Email",
-    "si": "පරිපාලක ඊමේල්",
-    "ta": "நிர்வாகி மின்னஞ்சல்"
-  },
-  "Administrator Password": {
-    "en": "Administrator Password",
-    "si": "පරිපාලක මුරපදය",
-    "ta": "நிர்வாகி கடவுச்சொல்"
-  },
-  "Admission Number": {
-    "en": "Admission Number",
-    "si": "ඇතුළත් වීමේ අංකය",
-    "ta": "சேர்க்கை எண்"
+  "Administration": {
+    "en": "Administration",
+    "si": "පරිපාලනය",
+    "ta": "நிர்வாகம்"
   },
   "Advising and representing individuals, businesses, or government agencies on legal issues and disputes.": {
     "en": "Advising and representing individuals, businesses, or government agencies on legal issues and disputes.",
@@ -399,15 +389,10 @@
     "si": "සියල්ල",
     "ta": "அனைத்து"
   },
-  "All Events": {
-    "en": "All Events",
-    "si": "සියලුම සිදුවීම්",
-    "ta": "அனைத்து நிகழ்வுகள்"
-  },
   "All Grades": {
     "en": "All Grades",
-    "si": "සියලුම ශ්රේණි",
-    "ta": "அனைத்து தரங்களும்"
+    "si": "සියලුම ශ්‍රේණි",
+    "ta": "அனைத்து வகுப்புகளும்"
   },
   "All Services": {
     "en": "All Services",
@@ -416,8 +401,13 @@
   },
   "All Streams": {
     "en": "All Streams",
-    "si": "සියලුම ප්‍රවාහ",
-    "ta": "அனைத்து ஸ்ட்ரீம்கள்"
+    "si": "සියලුම විෂය ධාරාවන්",
+    "ta": "அனைத்துப் பிரிவுகளும்"
+  },
+  "All Universities": {
+    "en": "All Universities",
+    "si": "සියලුම විශ්වවිද්‍යාල",
+    "ta": "அனைத்துப் பல்கலைக்கழகங்களும்"
   },
   "All information shared is strictly confidential.": {
     "en": "All information shared is strictly confidential.",
@@ -429,10 +419,20 @@
     "si": "සෑම ජෝසප් ජාතිකයෙකුටම සියලුම සේවාවන් නොමිලේ සහ රහස්‍ය වේ.",
     "ta": "ஒவ்வொரு ஜோசபியனுக்கும் அனைத்து சேவைகளும் இலவசம் மற்றும் ரகசியமானது."
   },
-  "All services are free, confidential, and available to every student at St. Joseph's College. No referral is needed — just book an appointment.": {
-    "en": "All services are free, confidential, and available to every student at St. Joseph's College. No referral is needed — just book an appointment.",
-    "si": "සියලුම සේවාවන් නොමිලේ, රහසිගත වන අතර ශාන්ත ජෝසප් විද්‍යාලයේ සෑම සිසුවෙකුටම ලබා ගත හැකිය. යොමු කිරීමක් අවශ්‍ය නොවේ - හමුවීමක් වෙන්කරවා ගන්න.",
-    "ta": "அனைத்து சேவைகளும் இலவசம், ரகசியமானது மற்றும் செயின்ட் ஜோசப் கல்லூரியில் உள்ள ஒவ்வொரு மாணவருக்கும் கிடைக்கும். பரிந்துரை தேவையில்லை - ஒரு சந்திப்பை பதிவு செய்யுங்கள்."
+  "All services are free, confidential, and available to every student at St. Joseph's College. No referral is needed – just request an appointment.": {
+    "en": "All services are free, confidential, and available to every student at St. Joseph's College. No referral is needed – just request an appointment.",
+    "si": "සියලුම සේවාවන් නොමිලේ, රහස්‍යභාවය සුරැකෙන පරිදි සහ ශාන්ත ජෝශප් විද්‍යාලයේ සෑම සිසුවෙකුටම ලබා ගත හැකිය. කිසිදු නිර්දේශයක් අවශ්‍ය නොවේ – හමුවීමක් ඉල්ලා සිටින්න.",
+    "ta": "செயின்ட் ஜோசப் கல்லூரியின் ஒவ்வொரு மாணவருக்கும் அனைத்து சேவைகளும் இலவசமாகவும், ரகசியமாகவும் வழங்கப்படுகின்றன. எவரது பரிந்துரையும் தேவையில்லை – நேரடியாக ஒரு சந்திப்பைக் கோரலாம்."
+  },
+  "Alumni Making Global Impact": {
+    "en": "Alumni Making Global Impact",
+    "si": "ලොව දිනූ ආදි සිසුන්",
+    "ta": "உலகளவில் முத்திரை பதிக்கும் பழைய மாணவர்கள்"
+  },
+  "Alumni Who Shaped": {
+    "en": "Alumni Who Shaped",
+    "si": "විද්‍යාලයීය ඉතිහාසය හැඩගැස්වූ ආදි සිසුන්",
+    "ta": "வித்தியாலயத்தை வடிவமைத்த பழைய மாணவர்கள்"
   },
   "Anger Management": {
     "en": "Anger Management",
@@ -449,25 +449,25 @@
     "si": "ජ්‍යෙෂ්ඨ සිසුන් සඳහා වාර්ෂික නායකත්ව කඳවුර",
     "ta": "மூத்த மாணவர்களுக்கான வருடாந்திர தலைமைத்துவ முகாம்"
   },
-  "Anonymous Request": {
-    "en": "Anonymous Request",
-    "si": "නිර්නාමික ඉල්ලීම",
-    "ta": "அநாமதேய கோரிக்கை"
+  "Anuradhapura": {
+    "en": "Anuradhapura",
+    "si": "අනුරාධපුරය",
+    "ta": "அனுராதபுரம்"
   },
   "Anxiety, depression, and emotional difficulties": {
     "en": "Anxiety, depression, and emotional difficulties",
     "si": "කාංසාව, මානසික අවපීඩනය සහ චිත්තවේගීය දුෂ්කරතා",
     "ta": "கவலை, மனச்சோர்வு மற்றும் உணர்ச்சி சிக்கல்கள்"
   },
-  "Anxious": {
-    "en": "Anxious",
-    "si": "කනස්සල්ලෙන්",
-    "ta": "கவலை"
-  },
   "Any State or Recognized Private Degree": {
     "en": "Any State or Recognized Private Degree",
     "si": "ඕනෑම රාජ්‍ය හෝ පිළිගත් පෞද්ගලික උපාධියක්",
     "ta": "ஏதேனும் மாநில அல்லது அங்கீகரிக்கப்பட்ட தனியார் பட்டம்"
+  },
+  "Any notes about how you're feeling today? (optional)": {
+    "en": "Any notes about how you're feeling today? (optional)",
+    "si": "අද දවසේ ඔබේ හැඟීම් පිළිබඳ කෙටි සටහනක්? (විකල්ප)",
+    "ta": "இன்று நீங்கள் எப்படி உணர்கிறீர்கள் என்பது பற்றிய குறிப்புகள்? (விருப்பத்திற்குரியது)"
   },
   "Any recognized Degree, Passing SLAS/SLFS Competitive Exams": {
     "en": "Any recognized Degree, Passing SLAS/SLFS Competitive Exams",
@@ -484,35 +484,15 @@
     "si": "ඕනෑම, නමුත් විශේෂිත ව්‍යවසායකත්ව උපාධි පවතී (NSBM, SLIIT)",
     "ta": "ஏதேனும், ஆனால் சிறப்பு தொழில் முனைவோர் பட்டங்கள் உள்ளன (NSBM, SLIIT)"
   },
-  "Application Deadlines": {
-    "en": "Application Deadlines",
-    "si": "අයදුම් කිරීමේ කාලසීමාවන්",
-    "ta": "விண்ணப்ப காலக்கெடு"
-  },
-  "Application Deadlines:": {
-    "en": "Application Deadlines:",
-    "si": "අයදුම් කිරීමේ කාලසීමාවන්:",
-    "ta": "விண்ணப்ப காலக்கெடு:"
-  },
   "Applying scientific and mathematical principles to design, build, and maintain structures, machines, and systems.": {
     "en": "Applying scientific and mathematical principles to design, build, and maintain structures, machines, and systems.",
     "si": "ව්‍යුහයන්, යන්ත්‍ර සහ පද්ධති සැලසුම් කිරීම, ගොඩනැගීම සහ නඩත්තු කිරීම සඳහා විද්‍යාත්මක හා ගණිතමය මූලධර්ම යෙදීම.",
     "ta": "கட்டமைப்புகள், இயந்திரங்கள் மற்றும் அமைப்புகளை வடிவமைக்க, உருவாக்க மற்றும் பராமரிக்க அறிவியல் மற்றும் கணிதக் கொள்கைகளைப் பயன்படுத்துதல்."
   },
-  "Appointment Booked!": {
-    "en": "Appointment Booked!",
-    "si": "හමුවීම වෙන්කරවා ඇත!",
-    "ta": "அப்பாயிண்ட்மெண்ட் பதிவு செய்யப்பட்டது!"
-  },
   "Appointments": {
     "en": "Appointments",
     "si": "පත්වීම්",
     "ta": "நியமனங்கள்"
-  },
-  "Aptitude Test preparation for specialized degrees": {
-    "en": "Aptitude Test preparation for specialized degrees",
-    "si": "විශේෂිත උපාධි සඳහා යෝග්‍යතා පරීක්ෂණ සූදානම් වීම",
-    "ta": "சிறப்புப் பட்டங்களுக்கான திறனாய்வுத் தேர்வுக்கான தயாரிப்பு"
   },
   "Architecture": {
     "en": "Architecture",
@@ -564,20 +544,20 @@
     "si": "මගේ පුතා විභාගයට පෙර ඉවත් වී කනස්සල්ලට පත් වූ විට දෙමාපියෙකු ලෙස මම කනස්සල්ලට පත්ව සිටියෙමි. උපදේශන කණ්ඩායම ක්‍රියාශීලීව ළඟා වී අප දෙදෙනා සමඟ වැඩ කළා. ඔහු කනස්සල්ලෙන් සිටින පිරිමි ළමයෙකුගේ සිට ලෝකයට සූදානම්ව සිටින විශ්වාසවන්ත තරුණයෙකු දක්වා වර්ධනය වන ආකාරය දැකීම ඇදහිය නොහැකි තරම්ය.",
     "ta": "ஒரு பெற்றோராக, என் மகன் தேர்வுக்கு முன் பின்வாங்கி, கவலைப்பட்டபோது நான் கவலைப்பட்டேன். ஆலோசனைக் குழுவினர் முன்னோக்கிச் சென்று எங்கள் இருவருடனும் பணியாற்றினார்கள். ஆர்வமுள்ள சிறுவனாக இருந்து உலகுக்குத் தயாராக இருக்கும் தன்னம்பிக்கை இளைஞனாக அவன் வளர்வதைப் பார்ப்பது நம்பமுடியாதது."
   },
+  "Asanga Bandara / Isira Didulatha": {
+    "en": "Asanga Bandara / Isira Didulatha",
+    "si": "අසංග බණ්ඩාර / ඉසිර දිදුලත",
+    "ta": "அசங்க பண்டார / இஸிர திதுலத"
+  },
   "Ashen Perera": {
     "en": "Ashen Perera",
     "si": "අශේන් පෙරේරා",
     "ta": "அஷேன் பெரேரா"
   },
-  "Authorised personnel only": {
-    "en": "Authorised personnel only",
-    "si": "බලයලත් පුද්ගලයින් පමණි",
-    "ta": "அங்கீகரிக்கப்பட்ட பணியாளர்கள் மட்டுமே"
-  },
-  "Automatically generate a professional CV using your profile data and portfolio records.": {
-    "en": "Automatically generate a professional CV using your profile data and portfolio records.",
-    "si": "ඔබේ පැතිකඩ දත්ත සහ කළඹ වාර්තා භාවිතයෙන් ස්වයංක්‍රීයව වෘත්තීය CV ​​එකක් ජනනය කරන්න.",
-    "ta": "உங்கள் சுயவிவரத் தரவு மற்றும் போர்ட்ஃபோலியோ பதிவுகளைப் பயன்படுத்தி ஒரு தொழில்முறை CVயை தானாக உருவாக்கவும்."
+  "Athletics Meet": {
+    "en": "Athletics Meet",
+    "si": "නිවාසාන්තර ක්‍රීඩා උළෙල",
+    "ta": "விளையாட்டு விழா"
   },
   "Aviation": {
     "en": "Aviation",
@@ -619,25 +599,45 @@
     "si": "ආපසු නිවසට",
     "ta": "முகப்புக்குத் திரும்பு"
   },
+  "Back to Sign In": {
+    "en": "Back to Sign In",
+    "si": "නැවත ඇතුල් වීමට",
+    "ta": "மீண்டும் உள்நுழைய"
+  },
   "Banks, FMCG sector (John Keells, MAS, Hemas), Auditing firms": {
     "en": "Banks, FMCG sector (John Keells, MAS, Hemas), Auditing firms",
     "si": "බැංකු, FMCG අංශය (John Keells, MAS, Hemas), විගණන ආයතන",
     "ta": "வங்கிகள், FMCG துறை (ஜான் கீல்ஸ், MAS, ஹேமாஸ்), தணிக்கை நிறுவனங்கள்"
   },
-  "Basics of web development and logical thinking for all streams.": {
-    "en": "Basics of web development and logical thinking for all streams.",
-    "si": "සියලුම ප්‍රවාහ සඳහා වෙබ් සංවර්ධනය සහ තාර්කික චින්තනයේ මූලික කරුණු.",
-    "ta": "அனைத்து ஸ்ட்ரீம்களுக்கும் இணைய மேம்பாடு மற்றும் தருக்க சிந்தனையின் அடிப்படைகள்."
+  "Battle of the Legends": {
+    "en": "Battle of the Legends",
+    "si": "ලෙජන්ඩ්ස් සටන",
+    "ta": "புராணங்களின் போர்"
+  },
+  "Be Part of the": {
+    "en": "Be Part of the",
+    "si": "කොටස්කරුවෙකු වන්න",
+    "ta": "பங்குதாரராகுங்கள்"
   },
   "Be Prepared": {
     "en": "Be Prepared",
     "si": "සූදානම් වෙන්න",
     "ta": "தயாராக இருங்கள்"
   },
+  "Best Known For": {
+    "en": "Best Known For",
+    "si": "වඩාත් ප්‍රසිද්ධ",
+    "ta": "மிகவும் பிரபலமானது"
+  },
   "Better Future": {
     "en": "Better Future",
     "si": "වඩා හොඳ අනාගතයක්",
     "ta": "சிறந்த எதிர்காலம்"
+  },
+  "Beyond the Classroom": {
+    "en": "Beyond the Classroom",
+    "si": "පන්ති කාමරයෙන් ඔබ්බට",
+    "ta": "வகுப்பறைக்கு அப்பாற்பட்டது"
   },
   "Bio Added": {
     "en": "Bio Added",
@@ -664,25 +664,10 @@
     "si": "ජීව විද්යාව, රසායන විද්යාව, භෞතික විද්යාව. වෛද්‍ය විද්‍යාව, ජෛව වෛද්‍ය ක්ෂේත්‍ර සහ ජීව විද්‍යාව සඳහා දොරටුව.",
     "ta": "உயிரியல், வேதியியல், இயற்பியல். மருத்துவம், பயோமெடிக்கல் துறைகள் மற்றும் வாழ்க்கை அறிவியலுக்கான நுழைவாயில்."
   },
-  "Bioscience, Engineering, Psychology, Business": {
-    "en": "Bioscience, Engineering, Psychology, Business",
-    "si": "ජෛව විද්යාව, ඉංජිනේරු විද්යාව, මනෝවිද්යාව, ව්යාපාර",
-    "ta": "உயிரியல், பொறியியல், உளவியல், வணிகம்"
-  },
   "Book": {
     "en": "Book",
     "si": "පොත",
     "ta": "புத்தகம்"
-  },
-  "Book Appointment": {
-    "en": "Book Appointment",
-    "si": "පොත් පත් කිරීම",
-    "ta": "புத்தக நியமனம்"
-  },
-  "Book Appointment — SJC Counselling": {
-    "en": "Book Appointment — SJC Counselling",
-    "si": "පොත් පත් කිරීම - SJC උපදේශනය",
-    "ta": "புத்தக நியமனம் - SJC ஆலோசனை"
   },
   "Book Career Guidance": {
     "en": "Book Career Guidance",
@@ -719,35 +704,35 @@
     "si": "පොත් සැසිය",
     "ta": "புத்தக அமர்வு"
   },
-  "Book Urgent Session ?": {
-    "en": "Book Urgent Session ?",
-    "si": "හදිසි සැසියක් වෙන්කරවා ගන්නද?",
-    "ta": "அவசர அமர்வை பதிவு செய்யவா?"
+  "Book Urgent Session": {
+    "en": "Book Urgent Session",
+    "si": "හදිසි උපදේශන වාරයක් වෙන්කරවා ගන්න",
+    "ta": "அவசர அமர்வை முன்பதிவு செய்"
+  },
+  "Book Urgent Session →": {
+    "en": "Book Urgent Session →",
+    "si": "හදිසි උපදේශන වාරයක් වෙන්කරවා ගන්න →",
+    "ta": "அவசர அமர்வை முன்பதிவு செய் →"
   },
   "Book Wellness Session": {
     "en": "Book Wellness Session",
     "si": "පොත් සුව සැසිය",
     "ta": "புத்தக ஆரோக்கிய அமர்வு"
   },
-  "Book a Counselling Session": {
-    "en": "Book a Counselling Session",
-    "si": "උපදේශන සැසියක් වෙන්කරවා ගන්න",
-    "ta": "ஒரு ஆலோசனை அமர்வை பதிவு செய்யவும்"
-  },
   "Book a Parent Meeting": {
     "en": "Book a Parent Meeting",
     "si": "දෙමාපිය රැස්වීමක් වෙන්කරවා ගන්න",
     "ta": "பெற்றோர் சந்திப்பை பதிவு செய்யவும்"
   },
-  "Book a Session": {
-    "en": "Book a Session",
-    "si": "සැසියක් වෙන්කරවා ගන්න",
-    "ta": "ஒரு அமர்வை பதிவு செய்யவும்"
-  },
-  "Book a confidential one-to-one session — completely free for all Josephians.": {
-    "en": "Book a confidential one-to-one session — completely free for all Josephians.",
+  "Book a confidential one-to-one session – completely free for all Josephians.": {
+    "en": "Book a confidential one-to-one session – completely free for all Josephians.",
     "si": "රහස්‍ය එකින් එක සැසියක් වෙන්කරවා ගන්න — සියලුම ජෝසප්වරුන් සඳහා සම්පූර්ණයෙන්ම නොමිලේ.",
     "ta": "அனைத்து ஜோசபியன்களுக்கும் முற்றிலும் இலவசம் - ரகசியமான ஒருவருக்கு ஒரு அமர்வை பதிவு செய்யவும்."
+  },
+  "Book a confidential wellness session – free for all Josephians, no referral needed.": {
+    "en": "Book a confidential wellness session – free for all Josephians, no referral needed.",
+    "si": "රහසිගත සුවතා සැසියක් වෙන්කරවා ගන්න - සියලුම ජෝසප්වරුන් සඳහා නොමිලේ, යොමු කිරීමක් අවශ්‍ය නොවේ.",
+    "ta": "ரகசிய ஆரோக்கிய அமர்வை முன்பதிவு செய்யுங்கள் - அனைத்து ஜோசபியர்களுக்கும் இலவசம், பரிந்துரை தேவையில்லை."
   },
   "Book a confidential wellness session — free for all Josephians, no referral needed.": {
     "en": "Book a confidential wellness session — free for all Josephians, no referral needed.",
@@ -759,8 +744,8 @@
     "si": "අදම උපදේශන සැසියක් වෙන්කරවා ගන්න. සෑම ජෝසප් ජාතිකයෙකුටම දීප්තිමත් අනාගතයක් කරා සවන් දීමට, මඟ පෙන්වීමට සහ සහාය දීමට අපගේ කැපවූ කණ්ඩායම මෙහි සිටී.",
     "ta": "இன்றே ஆலோசனை அமர்வுக்கு முன்பதிவு செய்யுங்கள். பிரகாசமான எதிர்காலத்தை நோக்கி ஒவ்வொரு ஜோசபியனுக்கும் செவிசாய்க்கவும், வழிகாட்டவும் மற்றும் ஆதரவளிக்கவும் எங்கள் அர்ப்பணிப்புள்ள குழு இங்கே உள்ளது."
   },
-  "Book a one-to-one career guidance session with our experts &mdash; free for all Josephians.": {
-    "en": "Book a one-to-one career guidance session with our experts &mdash; free for all Josephians.",
+  "Book a one-to-one career guidance session with our experts — free for all Josephians.": {
+    "en": "Book a one-to-one career guidance session with our experts — free for all Josephians.",
     "si": "අපගේ ප්‍රවීණයන් සමඟ එකින් එක වෘත්තීය මාර්ගෝපදේශ සැසියක් වෙන්කරවා ගන්න — සියලුම ජෝසප්වරුන් සඳහා නොමිලේ.",
     "ta": "எங்கள் நிபுணர்களுடன் ஒருவருக்கு ஒருவர் தொழில் வழிகாட்டுதல் அமர்வை முன்பதிவு செய்யுங்கள் — அனைத்து ஜோசபியன்களுக்கும் இலவசம்."
   },
@@ -769,20 +754,15 @@
     "si": "අපගේ උපදේශකයින් සමඟ එකින් එක සැසියක් වෙන්කරවා ගන්න",
     "ta": "எங்கள் ஆலோசகர்களுடன் ஒருவருக்கு ஒரு அமர்வை பதிவு செய்யவும்"
   },
-  "Book an Appointment": {
-    "en": "Book an Appointment",
-    "si": "හමුවීමක් වෙන්කරවා ගන්න",
-    "ta": "ஒரு சந்திப்பை பதிவு செய்யுங்கள்"
+  "Booking Request Submitted!": {
+    "en": "Booking Request Submitted!",
+    "si": "වෙන්කිරීමේ ඉල්ලීම ඉදිරිපත් කරන ලදී!",
+    "ta": "முன்பதிவு கோரிக்கை சமர்ப்பிக்கப்பட்டது!"
   },
   "Booking Summary": {
     "en": "Booking Summary",
     "si": "වෙන්කිරීමේ සාරාංශය",
     "ta": "முன்பதிவு சுருக்கம்"
-  },
-  "Brain": {
-    "en": "Brain",
-    "si": "මොළය",
-    "ta": "மூளை"
   },
   "Break the problem into the smallest possible next step": {
     "en": "Break the problem into the smallest possible next step",
@@ -804,16 +784,6 @@
     "si": "සියලුම උසස් පෙළ විෂය ධාරාවන් හරහා වෘත්තීය මාර්ග පිරික්සන්න. සෑම මාර්ගයකටම ප්‍රධාන අවශ්‍යතා, විශ්ව විද්‍යාල විකල්ප සහ භූමිකාවට ඇතුළත් වන්නේ කුමක්ද යන්න ඇතුළත් වේ.",
     "ta": "அனைத்து A/L ஸ்ட்ரீம்களிலும் தொழில் பாதைகளை உலாவவும். ஒவ்வொரு பாதையிலும் முக்கிய தேவைகள், பல்கலைக்கழக விருப்பங்கள் மற்றும் பங்கு என்ன என்பதை உள்ளடக்கியது."
   },
-  "Build confidence and learn how to present your ideas effectively.": {
-    "en": "Build confidence and learn how to present your ideas effectively.",
-    "si": "විශ්වාසය ගොඩනඟා ඔබේ අදහස් ඵලදායී ලෙස ඉදිරිපත් කරන්නේ කෙසේදැයි ඉගෙන ගන්න.",
-    "ta": "நம்பிக்கையை வளர்த்து, உங்கள் யோசனைகளை எவ்வாறு திறம்பட முன்வைப்பது என்பதைக் கற்றுக்கொள்ளுங்கள்."
-  },
-  "Build your CV and track your extracurricular achievements.": {
-    "en": "Build your CV and track your extracurricular achievements.",
-    "si": "ඔබේ CV ගොඩනඟා ඔබේ විෂය බාහිර ජයග්‍රහණ නිරීක්ෂණය කරන්න.",
-    "ta": "உங்கள் CVயை உருவாக்கி, உங்கள் பாடநெறிக்கு அப்பாற்பட்ட சாதனைகளைக் கண்காணிக்கவும்."
-  },
   "Building a Strong CV": {
     "en": "Building a Strong CV",
     "si": "ශක්තිමත් CV එකක් ගොඩනැගීම",
@@ -834,11 +804,6 @@
     "si": "බුලන්කුලම දිසා මාවත, අනුරාධපුර 50000",
     "ta": "புலங்குளம திசா மாவத்தை, அனுராதபுரம் 50000"
   },
-  "Bulankulama Disa Mawatha, Anuradhapura 50000, Sri Lanka": {
-    "en": "Bulankulama Disa Mawatha, Anuradhapura 50000, Sri Lanka",
-    "si": "බුලන්කුලම දිසා මාවත, අනුරාධපුර 50000, ශ්‍රී ලංකාව",
-    "ta": "புலங்குளம திசா மாவத்தை, அனுராதபுரம் 50000, இலங்கை"
-  },
   "Bullying, peer pressure, and social difficulties": {
     "en": "Bullying, peer pressure, and social difficulties",
     "si": "හිරිහැර කිරීම, මිතුරන්ගේ පීඩනය සහ සමාජ දුෂ්කරතා",
@@ -849,8 +814,8 @@
     "si": "ව්යාපාර",
     "ta": "வணிகம்"
   },
-  "Business &amp; Finance": {
-    "en": "Business &amp; Finance",
+  "Business & Finance": {
+    "en": "Business & Finance",
     "si": "ව්යාපාර සහ මූල්ය",
     "ta": "வணிகம் & நிதி"
   },
@@ -858,11 +823,6 @@
     "en": "Business Studies, Accounting, IT",
     "si": "ව්‍යාපාර අධ්‍යයනය, ගිණුම්කරණය, තොරතුරු තාක්ෂණ",
     "ta": "வணிக ஆய்வுகள், கணக்கியல், ஐ.டி"
-  },
-  "Business, Engineering, IT, Medicine, Science": {
-    "en": "Business, Engineering, IT, Medicine, Science",
-    "si": "ව්‍යාපාර, ඉංජිනේරු, තොරතුරු තාක්ෂණ, වෛද්‍ය, විද්‍යාව",
-    "ta": "வணிகம், பொறியியல், ஐடி, மருத்துவம், அறிவியல்"
   },
   "CPL/ATPL (Pilots), BEng Aeronautical (Engineers)": {
     "en": "CPL/ATPL (Pilots), BEng Aeronautical (Engineers)",
@@ -874,18 +834,13 @@
     "si": "CV / Resume",
     "ta": "CV / Resume"
   },
-  "CV Builder": {
-    "en": "CV Builder",
-    "si": "CV සාදන්නා",
-    "ta": "சிவி பில்டர்"
-  },
   "CV Uploaded": {
     "en": "CV Uploaded",
     "si": "CV උඩුගත කරන ලදී",
     "ta": "CV பதிவேற்றப்பட்டது"
   },
-  "CV Writing &amp;": {
-    "en": "CV Writing &amp;",
+  "CV Writing &": {
+    "en": "CV Writing &",
     "si": "CV ලිවීම සහ",
     "ta": "CV எழுதுதல் &"
   },
@@ -893,6 +848,11 @@
     "en": "CV building and interview preparation",
     "si": "CV ගොඩනැගීම සහ සම්මුඛ පරීක්ෂණ සකස් කිරීම",
     "ta": "CV கட்டிடம் மற்றும் நேர்காணல் தயாரித்தல்"
+  },
+  "Cadeting": {
+    "en": "Cadeting",
+    "si": "කැඩෙට් බලකාය",
+    "ta": "கேடட் பயிற்சி"
   },
   "Cancel": {
     "en": "Cancel",
@@ -914,15 +874,15 @@
     "si": "වෘත්තීය මාර්ගෝපදේශනය",
     "ta": "தொழில் வழிகாட்டுதல்"
   },
-  "Career Guidance &mdash; SJC Counselling": {
-    "en": "Career Guidance &mdash; SJC Counselling",
-    "si": "වෘත්තීය මාර්ගෝපදේශනය - SJC උපදේශනය",
-    "ta": "தொழில் வழிகாட்டுதல் - SJC ஆலோசனை"
-  },
   "Career Guidance Unit": {
     "en": "Career Guidance Unit",
     "si": "වෘත්තීය මාර්ගෝපදේශ ඒකකය",
     "ta": "தொழில் வழிகாட்டல் பிரிவு"
+  },
+  "Career Guidance — SJC Counselling": {
+    "en": "Career Guidance — SJC Counselling",
+    "si": "වෘත්තීය මාර්ගෝපදේශනය - SJC උපදේශනය",
+    "ta": "தொழில் வழிகாட்டுதல் - SJC ஆலோசனை"
   },
   "Career Interests": {
     "en": "Career Interests",
@@ -959,15 +919,10 @@
     "si": "වෘත්තීය යෝග්‍යතා සහ පොලී ඇගයීම්",
     "ta": "தொழில் திறன் மற்றும் வட்டி மதிப்பீடுகள்"
   },
-  "Career planning and pathway advice": {
-    "en": "Career planning and pathway advice",
-    "si": "වෘත්තීය සැලසුම් සහ මාර්ග උපදෙස්",
-    "ta": "தொழில் திட்டமிடல் மற்றும் பாதை ஆலோசனை"
-  },
   "Careers": {
     "en": "Careers",
-    "si": "වෘත්තීන්",
-    "ta": "தொழில்"
+    "si": "වෘත්තීය අවස්ථා",
+    "ta": "வேலைவாய்ப்புகள்"
   },
   "Careers high in the sky, including Commercial Pilots, Air Traffic Controllers, and Aeronautical Engineers.": {
     "en": "Careers high in the sky, including Commercial Pilots, Air Traffic Controllers, and Aeronautical Engineers.",
@@ -984,10 +939,30 @@
     "si": "ඡායාරූපය වෙනස් කරන්න",
     "ta": "புகைப்படத்தை மாற்றவும்"
   },
-  "Chat": {
-    "en": "Chat",
-    "si": "කතාබස් කරන්න",
-    "ta": "அரட்டை"
+  "Character, service and the outdoors": {
+    "en": "Character, service and the outdoors",
+    "si": "චරිතය, සේවය සහ එළිමහන් ක්‍රියාකාරකම්",
+    "ta": "ஆளுமை, சேவை மற்றும் திறந்தவெளிச் செயல்பாடுகள்"
+  },
+  "Check Requirements →": {
+    "en": "Check Requirements →",
+    "si": "අවශ්‍යතා පරීක්ෂා කරන්න →",
+    "ta": "தேவைகளைச் சரிபார்க்கவும் →"
+  },
+  "Check back soon for news from the Counselling Unit.": {
+    "en": "Check back soon for news from the Counselling Unit.",
+    "si": "උපදේශන ඒකකයේ නවතම තොරතුරු සඳහා ළඟදීම නැවත පිවිසෙන්න.",
+    "ta": "ஆலோசனைப் பிரிவின் செய்திகளுக்கு விரைவில் மீண்டும் சரிபார்க்கவும்."
+  },
+  "Check prerequisites, minimum Z-scores, English proficiency (IELTS/PTE) and entry exams for your dream degree.": {
+    "en": "Check prerequisites, minimum Z-scores, English proficiency (IELTS/PTE) and entry exams for your dream degree.",
+    "si": "ඔබේ සිහින උපාධිය සඳහා පූර්ව අවශ්‍යතා, අවම Z-ලකුණු, ඉංග්‍රීසි ප්‍රවීණතාවය (IELTS/PTE) සහ ප්‍රවේශ විභාග පරීක්ෂා කරන්න.",
+    "ta": "உங்கள் கனவுப் பட்டப்படிப்புக்கான தகுதிகள், குறைந்தபட்ச Z-புள்ளிகள், ஆங்கிலத் தேர்ச்சி (IELTS/PTE) மற்றும் நுழைவுத் தேர்வுகளைச் சரிபார்க்கவும்."
+  },
+  "Chess": {
+    "en": "Chess",
+    "si": "චෙස්",
+    "ta": "சதுரங்கம்"
   },
   "Child": {
     "en": "Child",
@@ -1014,35 +989,25 @@
     "si": "සිවිල් ඉදිකිරීම්, විදුලි සංදේශ, නිෂ්පාදන",
     "ta": "சிவில் கட்டுமானம், தொலைத்தொடர்பு, உற்பத்தி"
   },
-  "Class": {
-    "en": "Class",
-    "si": "පන්තිය",
-    "ta": "வகுப்பு"
-  },
   "Class / Section": {
     "en": "Class / Section",
     "si": "පන්තිය / අංශය",
     "ta": "வகுப்பு / பிரிவு"
+  },
+  "Classroom Excellence": {
+    "en": "Classroom Excellence",
+    "si": "පන්ති කාමරයේ විශිෂ්ටත්වය",
+    "ta": "வகுப்பறைச் சிறப்பு"
   },
   "Click to upload photo": {
     "en": "Click to upload photo",
     "si": "ඡායාරූපය උඩුගත කිරීමට ක්ලික් කරන්න",
     "ta": "புகைப்படத்தை பதிவேற்ற கிளிக் செய்யவும்"
   },
-  "Clock": {
-    "en": "Clock",
-    "si": "ඔරලෝසුව",
-    "ta": "கடிகாரம்"
-  },
-  "Close": {
-    "en": "Close",
-    "si": "වසන්න",
-    "ta": "மூடு"
-  },
-  "Cloud": {
-    "en": "Cloud",
-    "si": "වලාකුළු",
-    "ta": "மேகம்"
+  "Co-curricular Life": {
+    "en": "Co-curricular Life",
+    "si": "සහ-විෂය සමගාමී ක්‍රියාකාරකම්",
+    "ta": "இணை பாடத்திட்ட நடவடிக்கைகள்"
   },
   "Colombo Law Faculty, Peradeniya, Sri Lanka Law College, Royal Institute": {
     "en": "Colombo Law Faculty, Peradeniya, Sri Lanka Law College, Royal Institute",
@@ -1064,6 +1029,11 @@
     "si": "Graphic Design, UI/UX, Fashion, සහ Architecture හරහා ක්‍රියාකාරීත්වය සමඟ නිර්මාණශීලිත්වය ඒකාබද්ධ කිරීම.",
     "ta": "கிராஃபிக் டிசைன், யுஐ/யுஎக்ஸ், ஃபேஷன் மற்றும் கட்டிடக்கலை முழுவதும் செயல்பாட்டுடன் படைப்பாற்றலை இணைத்தல்."
   },
+  "Commander of the Sri Lanka Navy – rising to the highest ranks of national service.": {
+    "en": "Commander of the Sri Lanka Navy – rising to the highest ranks of national service.",
+    "si": "ශ්‍රී ලංකා නාවික හමුදාවේ අණදෙන නිලධාරී – ජාතික සේවයේ ඉහළම තනතුර දක්වා ඉහළට ගිය.",
+    "ta": "இலங்கை கடற்படையின் தளபதி – தேசிய சேவையின் மிக உயர்ந்த பதவிகளுக்கு உயர்ந்தவர்."
+  },
   "Commerce": {
     "en": "Commerce",
     "si": "වාණිජ",
@@ -1079,15 +1049,15 @@
     "si": "මාපිය-ළමා සබඳතා සඳහා සන්නිවේදන උපාය මාර්ග",
     "ta": "பெற்றோர்-குழந்தை உறவுகளுக்கான தொடர்பு உத்திகள்"
   },
-  "Community Service & Clubs": {
-    "en": "Community Service & Clubs",
-    "si": "ප්‍රජා සේවා සහ සමාජ ශාලා",
-    "ta": "சமூக சேவை & கிளப்புகள்"
-  },
   "Community service and volunteering projects": {
     "en": "Community service and volunteering projects",
     "si": "ප්‍රජා සේවා සහ ස්වේච්ඡා ව්‍යාපෘති",
     "ta": "சமூக சேவை மற்றும் தன்னார்வத் திட்டங்கள்"
+  },
+  "Competing at national level": {
+    "en": "Competing at national level",
+    "si": "ජාතික මට්ටමින් තරග වැදීම",
+    "ta": "தேசிய அளவில் போட்டியிடுதல்"
   },
   "Complete Profile →": {
     "en": "Complete Profile →",
@@ -1098,6 +1068,11 @@
     "en": "Completed",
     "si": "සම්පූර්ණ කළා",
     "ta": "முடிக்கப்பட்டது"
+  },
+  "Composed in Sinhala by Marsalin Jayakody in 1968 – sung with pride at every gathering of Josephians.": {
+    "en": "Composed in Sinhala by Marsalin Jayakody in 1968 – sung with pride at every gathering of Josephians.",
+    "si": "මර්සලින් ජයකොඩි පියතුමා විසින් 1968 දී සිංහලෙන් රචනා කරන ලදී – සෑම ජෝශප් හමුවකදීම සාඩම්බරයෙන් ගායනා කරනු ලැබේ.",
+    "ta": "1968 இல் மர்சலின் ஜெயக்கொடியால் சிங்களத்தில் இயற்றப்பட்டது – ஒவ்வொரு ஜோசப்வியன் கூட்டங்களிலும் பெருமையுடன் பாடப்படுகிறது."
   },
   "Comprehensive Support for": {
     "en": "Comprehensive Support for",
@@ -1124,20 +1099,10 @@
     "si": "ශිෂ්‍යයෙකුගේ පාසල් ජීවිතයට බලපාන පුද්ගලික අභියෝග, චිත්තවේගීය යහපැවැත්ම, පවුල් ගැටලු සහ සමාජ දුෂ්කරතා ආමන්ත්‍රණය කරන රහස්‍ය එකින් එක සැසි.",
     "ta": "தனிப்பட்ட சவால்கள், உணர்ச்சி நல்வாழ்வு, குடும்பப் பிரச்சினைகள் மற்றும் ஒரு மாணவரின் பள்ளி வாழ்க்கையைப் பாதிக்கும் சமூகச் சிக்கல்கள் ஆகியவற்றைக் கையாளும் ரகசியமான ஒருவருக்கு ஒருவர் அமர்வுகள்."
   },
-  "Confidentiality &amp; Trust": {
-    "en": "Confidentiality &amp; Trust",
+  "Confidentiality & Trust": {
+    "en": "Confidentiality & Trust",
     "si": "රහස්‍යභාවය සහ විශ්වාසය",
     "ta": "ரகசியம் மற்றும் நம்பிக்கை"
-  },
-  "Confirm Appointment Booking": {
-    "en": "Confirm Appointment Booking",
-    "si": "හමුවීම් වෙන්කරවා ගැනීම තහවුරු කරන්න",
-    "ta": "சந்திப்பு முன்பதிவை உறுதிப்படுத்தவும்"
-  },
-  "Confirm Registration": {
-    "en": "Confirm Registration",
-    "si": "ලියාපදිංචිය තහවුරු කරන්න",
-    "ta": "பதிவை உறுதிப்படுத்தவும்"
   },
   "Confirm Request": {
     "en": "Confirm Request",
@@ -1154,20 +1119,20 @@
     "si": "අමතන්න",
     "ta": "தொடர்பு கொள்ளவும்"
   },
-  "Contact Number": {
-    "en": "Contact Number",
-    "si": "සම්බන්ධතා අංකය",
-    "ta": "தொடர்பு எண்"
+  "Contact Preference": {
+    "en": "Contact Preference",
+    "si": "සම්බන්ධ කර ගැනීමට කැමති ක්‍රමය",
+    "ta": "தொடர்பு விருப்பம்"
   },
   "Contact Us Directly": {
     "en": "Contact Us Directly",
     "si": "අපව කෙලින්ම සම්බන්ධ කරගන්න",
     "ta": "எங்களை நேரடியாக தொடர்பு கொள்ளவும்"
   },
-  "Contact your administrator for access": {
-    "en": "Contact your administrator for access",
-    "si": "ප්‍රවේශය සඳහා ඔබේ පරිපාලක අමතන්න",
-    "ta": "அணுகலுக்கு உங்கள் நிர்வாகியைத் தொடர்பு கொள்ளவும்"
+  "Contact Via": {
+    "en": "Contact Via",
+    "si": "සම්බන්ධ කර ගන්නා ක්‍රමය",
+    "ta": "இதன் மூலம் தொடர்பு கொள்ளவும்"
   },
   "Continue →": {
     "en": "Continue →",
@@ -1199,16 +1164,6 @@
     "si": "උපදේශනය සහ",
     "ta": "ஆலோசனை &"
   },
-  "Counselling &amp;": {
-    "en": "Counselling &amp;",
-    "si": "උපදේශනය සහ",
-    "ta": "ஆலோசனை &"
-  },
-  "Counselling &amp; Guidance Unit": {
-    "en": "Counselling &amp; Guidance Unit",
-    "si": "උපදේශන සහ මාර්ගෝපදේශ ඒකකය",
-    "ta": "ஆலோசனை மற்றும் வழிகாட்டல் பிரிவு"
-  },
   "Counselling Appointments": {
     "en": "Counselling Appointments",
     "si": "උපදේශන පත්වීම්",
@@ -1219,8 +1174,8 @@
     "si": "උපදේශන සේවා",
     "ta": "ஆலோசனை சேவைகள்"
   },
-  "Counselling Services — SJC Counselling": {
-    "en": "Counselling Services — SJC Counselling",
+  "Counselling Services – SJC Counselling": {
+    "en": "Counselling Services – SJC Counselling",
     "si": "උපදේශන සේවා - SJC උපදේශනය",
     "ta": "ஆலோசனை சேவைகள் - SJC ஆலோசனை"
   },
@@ -1234,10 +1189,10 @@
     "si": "උපදේශන කණ්ඩායම",
     "ta": "ஆலோசனைக் குழு"
   },
-  "Course Selection": {
-    "en": "Course Selection",
-    "si": "පාඨමාලා තේරීම",
-    "ta": "பாடத் தேர்வு"
+  "Counselling Unit": {
+    "en": "Counselling Unit",
+    "si": "උපදේශන ඒකකය",
+    "ta": "ஆலோசனைப் பிரிவு"
   },
   "Create Account": {
     "en": "Create Account",
@@ -1269,8 +1224,18 @@
     "si": "නිර්මාණාත්මක කලා",
     "ta": "கிரியேட்டிவ் ஆர்ட்ஸ்"
   },
-  "Crisis Support &amp;": {
-    "en": "Crisis Support &amp;",
+  "Cricket": {
+    "en": "Cricket",
+    "si": "ක්‍රිකට්",
+    "ta": "கிரிக்கெட்"
+  },
+  "Cricket Fest": {
+    "en": "Cricket Fest",
+    "si": "ක්‍රිකට් මහෝත්සවය",
+    "ta": "கிரிக்கெட் விழா"
+  },
+  "Crisis Support &": {
+    "en": "Crisis Support &",
     "si": "අර්බුද සහය",
     "ta": "நெருக்கடி ஆதரவு &"
   },
@@ -1279,13 +1244,13 @@
     "si": "වත්මන් ශිෂ්‍යයා · 12 ශ්‍රේණිය",
     "ta": "தற்போதைய மாணவர் · 12 ஆம் வகுப்பு"
   },
-  "Currently School Prefect &amp; inter-school debate champion": {
-    "en": "Currently School Prefect &amp; inter-school debate champion",
+  "Currently School Prefect & inter-school debate champion": {
+    "en": "Currently School Prefect & inter-school debate champion",
     "si": "දැනට පාසල් ශිෂ්‍ය නායක හා අන්තර් පාසල් විවාද ශූරයා",
     "ta": "தற்போது பள்ளி முதல்வர் & பள்ளிகளுக்கிடையேயான விவாத சாம்பியன்"
   },
-  "DUTY FIRST &#183; EST. 1898": {
-    "en": "DUTY FIRST &#183; EST. 1898",
+  "DUTY FIRST · EST. 1898": {
+    "en": "DUTY FIRST · EST. 1898",
     "si": "රාජකාරි පළමු · EST. 1898",
     "ta": "கடமை முதலில் · EST. 1898"
   },
@@ -1314,20 +1279,10 @@
     "si": "උපකරණ පුවරුව",
     "ta": "டாஷ்போர்டு"
   },
-  "Date": {
-    "en": "Date",
-    "si": "දිනය",
-    "ta": "தேதி"
-  },
-  "Deakin College Diploma Pathways": {
-    "en": "Deakin College Diploma Pathways",
-    "si": "ඩීකින් විද්‍යාලයේ ඩිප්ලෝමා මාර්ග",
-    "ta": "டீக்கின் கல்லூரி டிப்ளமோ பாதைகள்"
-  },
-  "Deakin University (Australia)": {
-    "en": "Deakin University (Australia)",
-    "si": "ඩීකින් විශ්ව විද්‍යාලය (ඕස්ට්‍රේලියාව)",
-    "ta": "டீக்கின் பல்கலைக்கழகம் (ஆஸ்திரேலியா)"
+  "Date & Time": {
+    "en": "Date & Time",
+    "si": "දිනය සහ වේලාව",
+    "ta": "தேதி & நேரம்"
   },
   "Dedicated to Every": {
     "en": "Dedicated to Every",
@@ -1339,28 +1294,48 @@
     "si": "අධ්‍යයන විශිෂ්ටත්වය, වෘත්තීය සංවර්ධනය සහ ශක්තිමත් මානසික සුවය සඳහා ජෝසප්වරුන්ට මග පෙන්වීමට කැපවී ඇත.",
     "ta": "ஜோசபியர்களை கல்விசார் சிறந்து, தொழில் மேம்பாடு மற்றும் வலுவான மனநலம் நோக்கி வழிநடத்த அர்ப்பணிக்கப்பட்டுள்ளது."
   },
-  "Degree Pathways": {
-    "en": "Degree Pathways",
-    "si": "උපාධි මාර්ග",
-    "ta": "பட்டம் பாதைகள்"
-  },
-  "Degree Pathways:": {
-    "en": "Degree Pathways:",
-    "si": "උපාධි මාර්ග:",
-    "ta": "டிகிரி பாதைகள்:"
-  },
   "Dentistry": {
     "en": "Dentistry",
     "si": "දන්ත වෛද්ය විද්යාව",
     "ta": "பல் மருத்துவம்"
+  },
+  "Deputy Principal (Admin)": {
+    "en": "Deputy Principal (Admin)",
+    "si": "නියෝජ්‍ය විදුහල්පති (පරිපාලන)",
+    "ta": "உதவி அதிபர் (நிர்வாகம்)"
+  },
+  "Deputy Principal (Education)": {
+    "en": "Deputy Principal (Education)",
+    "si": "නියෝජ්‍ය විදුහල්පති (අධ්‍යාපන)",
+    "ta": "உதவி அதிபர் (கல்வி)"
+  },
+  "Deputy Principal (Planning)": {
+    "en": "Deputy Principal (Planning)",
+    "si": "නියෝජ්‍ය විදුහල්පති (සැලසුම්)",
+    "ta": "உதவி அதிபர் (திட்டமிடல்)"
+  },
+  "Deputy Principal · Admin": {
+    "en": "Deputy Principal · Admin",
+    "si": "නියෝජ්‍ය විදුහල්පති · පරිපාලන",
+    "ta": "உதவி அதிபர் · நிர்வாகம்"
+  },
+  "Deputy Principal · Education": {
+    "en": "Deputy Principal · Education",
+    "si": "නියෝජ්‍ය විදුහල්පති · අධ්‍යාපන",
+    "ta": "உதவி அதிபர் · கல்வி"
+  },
+  "Deputy Principal · Planning": {
+    "en": "Deputy Principal · Planning",
+    "si": "නියෝජ්‍ය විදුහල්පති · සැලසුම්",
+    "ta": "உதவி அதிபர் · திட்டமிடல்"
   },
   "Design": {
     "en": "Design",
     "si": "නිර්මාණය",
     "ta": "வடிவமைப்பு"
   },
-  "Design &amp; Architecture": {
-    "en": "Design &amp; Architecture",
+  "Design & Architecture": {
+    "en": "Design & Architecture",
     "si": "සැලසුම් සහ ගෘහ නිර්මාණ ශිල්පය",
     "ta": "வடிவமைப்பு & கட்டிடக்கலை"
   },
@@ -1374,25 +1349,10 @@
     "si": "විසින් සංවර්ධනය කරන ලදී",
     "ta": "உருவாக்கியது"
   },
-  "Development": {
-    "en": "Development",
-    "si": "සංවර්ධනය",
-    "ta": "வளர்ச்சி"
-  },
-  "Diamond": {
-    "en": "Diamond",
-    "si": "දියමන්ති",
-    "ta": "வைரம்"
-  },
   "Digital Nomad opportunities, International News Agencies": {
     "en": "Digital Nomad opportunities, International News Agencies",
     "si": "ඩිජිටල් නෝමැඩ් අවස්ථා, ජාත්‍යන්තර ප්‍රවෘත්ති ඒජන්සි",
     "ta": "டிஜிட்டல் நாடோடி வாய்ப்புகள், சர்வதேச செய்தி நிறுவனங்கள்"
-  },
-  "Digital Portfolio": {
-    "en": "Digital Portfolio",
-    "si": "ඩිජිටල් කළඹ",
-    "ta": "டிஜிட்டல் போர்ட்ஃபோலியோ"
   },
   "Dilshan Weerasinghe": {
     "en": "Dilshan Weerasinghe",
@@ -1404,10 +1364,10 @@
     "si": "රාජ්‍යතාන්ත්‍රික පළ කිරීම් (විදේශ සේවා), එක්සත් ජාතීන්ගේ නියෝජිතායතන",
     "ta": "இராஜதந்திர இடுகைகள் (வெளிநாட்டு சேவை), ஐ.நா"
   },
-  "Direct entry vs Transfer pathways": {
-    "en": "Direct entry vs Transfer pathways",
-    "si": "සෘජු ඇතුල්වීම එදිරිව මාරු කිරීමේ මාර්ග",
-    "ta": "நேரடி நுழைவு vs பரிமாற்ற பாதைகள்"
+  "Discover": {
+    "en": "Discover",
+    "si": "සොයා යන්න",
+    "ta": "கண்டறியுங்கள்"
   },
   "Discover Your": {
     "en": "Discover Your",
@@ -1424,6 +1384,11 @@
     "si": "ඔබේ දක්ෂතා සහ රුචිකත්වයට ගැලපෙන මාර්ග සොයා ගන්න",
     "ta": "உங்கள் திறமைகள் மற்றும் ஆர்வங்களுக்கு ஏற்ற பாதைகளைக் கண்டறியவும்"
   },
+  "Do one thing you enjoy every day – music, art, sport, or cooking": {
+    "en": "Do one thing you enjoy every day – music, art, sport, or cooking",
+    "si": "ඔබ දිනපතා ප්‍රිය කරන එක් දෙයක් කරන්න - සංගීතය, කලාව, ක්‍රීඩාව, හෝ ඉවුම් පිහුම්",
+    "ta": "இசை, கலை, விளையாட்டு அல்லது சமையல் - நீங்கள் ஒவ்வொரு நாளும் ரசிக்கும் ஒன்றைச் செய்யுங்கள்"
+  },
   "Do one thing you enjoy every day — music, art, sport, or cooking": {
     "en": "Do one thing you enjoy every day — music, art, sport, or cooking",
     "si": "ඔබ දිනපතා ප්‍රිය කරන එක් දෙයක් කරන්න - සංගීතය, කලාව, ක්‍රීඩාව, හෝ ඉවුම් පිහුම්",
@@ -1439,15 +1404,25 @@
     "si": "විභාග සමයේදී",
     "ta": "தேர்வுக் காலத்தில்"
   },
+  "Duty First": {
+    "en": "Duty First",
+    "si": "පළමුව රාජකාරිය",
+    "ta": "கடமையே முதன்மை"
+  },
   "Duty First Since 1898": {
     "en": "Duty First Since 1898",
     "si": "1898 සිට පළමු රාජකාරිය",
     "ta": "1898 முதல் கடமை"
   },
-  "Early action and scholarship deadlines": {
-    "en": "Early action and scholarship deadlines",
-    "si": "මුල් ක්‍රියාමාර්ග සහ ශිෂ්‍යත්ව කාලසීමාවන්",
-    "ta": "ஆரம்ப நடவடிக்கை மற்றும் உதவித்தொகை காலக்கெடு"
+  "EN": {
+    "en": "EN",
+    "si": "EN",
+    "ta": "EN"
+  },
+  "Eat proper meals and stay hydrated – avoid all-nighters": {
+    "en": "Eat proper meals and stay hydrated – avoid all-nighters",
+    "si": "නිසි ආහාර වේලක් අනුභව කරන්න සහ සජලනය වන්න - රාත්‍රී ආහාර ගැනීමෙන් වළකින්න",
+    "ta": "சரியான உணவை உண்ணுங்கள் மற்றும் நீரேற்றத்துடன் இருங்கள் - இரவு முழுவதும் சாப்பிடுவதைத் தவிர்க்கவும்"
   },
   "Eat proper meals and stay hydrated — avoid all-nighters": {
     "en": "Eat proper meals and stay hydrated — avoid all-nighters",
@@ -1464,10 +1439,10 @@
     "si": "විදුලි",
     "ta": "மின்சாரம்"
   },
-  "Email (optional)": {
-    "en": "Email (optional)",
-    "si": "ඊමේල් (විකල්ප)",
-    "ta": "மின்னஞ்சல் (விரும்பினால்)"
+  "Email": {
+    "en": "Email",
+    "si": "විද්‍යුත් තැපෑල",
+    "ta": "மின்னஞ்சல்"
   },
   "Email Address": {
     "en": "Email Address",
@@ -1479,25 +1454,20 @@
     "si": "හදිසි සම්බන්ධතා",
     "ta": "அவசரத் தொடர்புகள்"
   },
+  "Emergency – Immediate Danger": {
+    "en": "Emergency – Immediate Danger",
+    "si": "හදිසි - ක්ෂණික අනතුර",
+    "ta": "அவசரநிலை - உடனடி ஆபத்து"
+  },
   "Emergency — Immediate Danger": {
     "en": "Emergency — Immediate Danger",
     "si": "හදිසි - ක්ෂණික අනතුර",
     "ta": "அவசரநிலை - உடனடி ஆபத்து"
   },
-  "Emerging fields in Tech, Data, and Bioscience": {
-    "en": "Emerging fields in Tech, Data, and Bioscience",
-    "si": "තාක්ෂණික, දත්ත සහ ජෛව විද්‍යාවේ නැගී එන ක්ෂේත්‍ර",
-    "ta": "தொழில்நுட்பம், தரவு மற்றும் உயிரியலில் வளர்ந்து வரும் துறைகள்"
-  },
   "Emirates, Qatar Airways, Global Airlines": {
     "en": "Emirates, Qatar Airways, Global Airlines",
     "si": "එමිරේට්ස්, කටාර් එයාර්වේස්, ග්ලෝබල් එයාර්ලයින්ස්",
     "ta": "எமிரேட்ஸ், கத்தார் ஏர்வேஸ், குளோபல் ஏர்லைன்ஸ்"
-  },
-  "Emoji Demo – Updated Stroke‑Only Icons": {
-    "en": "Emoji Demo – Updated Stroke‑Only Icons",
-    "si": "Emoji Demo - යාවත්කාලීන කරන ලද ස්ට්රෝක්-පමණක් අයිකන",
-    "ta": "ஈமோஜி டெமோ - புதுப்பிக்கப்பட்ட ஸ்ட்ரோக்-ஒன்லி ஐகான்கள்"
   },
   "Empowering Josephians with counselling, career guidance, and mental wellness support.": {
     "en": "Empowering Josephians with counselling, career guidance, and mental wellness support.",
@@ -1509,8 +1479,8 @@
     "si": "උපදේශනය, වෘත්තීය මාර්ගෝපදේශනය සහ මානසික සුවතා සහය සමඟ ජෝසප්වරුන් සවිබල ගැන්වීම. සෑම සිසුවෙකුටම නිවැරදි මාර්ගය ලැබිය යුතුය.",
     "ta": "ஜோசபியன்களுக்கு ஆலோசனை, தொழில் வழிகாட்டுதல் மற்றும் மனநல ஆதரவுடன் அதிகாரமளித்தல். ஒவ்வொரு மாணவரும் சரியான பாதைக்கு தகுதியானவர்கள்."
   },
-  "Empowering Josephians with counselling, career guidance, leadership development, and future opportunities — because every student deserves the right path.": {
-    "en": "Empowering Josephians with counselling, career guidance, leadership development, and future opportunities — because every student deserves the right path.",
+  "Empowering Josephians with counselling, career guidance, leadership development, and future opportunities – because every student deserves the right path.": {
+    "en": "Empowering Josephians with counselling, career guidance, leadership development, and future opportunities – because every student deserves the right path.",
     "si": "උපදේශනය, වෘත්තීය මාර්ගෝපදේශනය, නායකත්ව සංවර්ධනය සහ අනාගත අවස්ථා සමඟින් ජෝසප්වරුන් සවිබල ගැන්වීම - සෑම සිසුවෙකුම නිවැරදි මාර්ගයට සුදුසු බැවිනි.",
     "ta": "ஜோசபியன்களுக்கு ஆலோசனை, தொழில் வழிகாட்டுதல், தலைமைத்துவ மேம்பாடு மற்றும் எதிர்கால வாய்ப்புகள் மூலம் அதிகாரமளித்தல் - ஏனெனில் ஒவ்வொரு மாணவரும் சரியான பாதைக்கு தகுதியானவர்கள்."
   },
@@ -1529,83 +1499,83 @@
     "si": "ඉංග්රීසි",
     "ta": "ஆங்கிலம்"
   },
-  "English proficiency (O/L Credit, IELTS)": {
-    "en": "English proficiency (O/L Credit, IELTS)",
-    "si": "ඉංග්‍රීසි ප්‍රවීණතාවය (සා.පෙළ ණය, IELTS)",
-    "ta": "ஆங்கில புலமை (O/L கடன், IELTS)"
-  },
-  "Enter your new password below.": {
-    "en": "Enter your new password below.",
-    "si": "ඔබගේ නව මුරපදය පහතින් ඇතුලත් කරන්න.",
-    "ta": "உங்கள் புதிய கடவுச்சொல்லை கீழே உள்ளிடவும்."
-  },
   "Entrepreneurship": {
     "en": "Entrepreneurship",
     "si": "ව්යවසායකත්වය",
     "ta": "தொழில்முனைவு"
   },
-  "Entry Criteria": {
-    "en": "Entry Criteria",
-    "si": "ඇතුළත් වීමේ නිර්ණායක",
-    "ta": "நுழைவு அளவுகோல்கள்"
+  "Est. 1898 · Anuradhapura, Sri Lanka": {
+    "en": "Est. 1898 · Anuradhapura, Sri Lanka",
+    "si": "ස්ථාපිතය 1898 · අනුරාධපුරය, ශ්‍රී ලංකාව",
+    "ta": "நிறுவப்பட்டது 1898 · அனுராதபுரம், இலங்கை"
   },
-  "Essential skills for future prefects and club presidents.": {
-    "en": "Essential skills for future prefects and club presidents.",
-    "si": "අනාගත ශිෂ්‍ය නායකයින් සහ සමාජශාලා සභාපතිවරුන් සඳහා අත්‍යවශ්‍ය කුසලතා.",
-    "ta": "எதிர்கால அதிபர்கள் மற்றும் கிளப் தலைவர்களுக்கான அத்தியாவசிய திறன்கள்."
-  },
-  "Established to nurture every Josephian's potential — we provide holistic support through professional counselling, career mentorship, and mental wellness programmes.": {
-    "en": "Established to nurture every Josephian's potential — we provide holistic support through professional counselling, career mentorship, and mental wellness programmes.",
+  "Established to nurture every Josephian's potential – we provide holistic support through professional counselling, career mentorship, and mental wellness programmes.": {
+    "en": "Established to nurture every Josephian's potential – we provide holistic support through professional counselling, career mentorship, and mental wellness programmes.",
     "si": "සෑම ජෝසප් ජාතිකයෙකුගේම හැකියාවන් පෝෂණය කිරීම සඳහා ස්ථාපිත කර ඇත - අපි වෘත්තීය උපදේශනය, වෘත්තීය උපදේශනය සහ මානසික සුවතා වැඩසටහන් හරහා පරිපූර්ණ සහය ලබා දෙන්නෙමු.",
     "ta": "ஒவ்வொரு ஜோசபியனின் திறனை வளர்ப்பதற்காக நிறுவப்பட்டது - நாங்கள் தொழில்முறை ஆலோசனை, தொழில் வழிகாட்டுதல் மற்றும் மனநலத் திட்டங்கள் மூலம் முழுமையான ஆதரவை வழங்குகிறோம்."
   },
   "Events": {
     "en": "Events",
-    "si": "සිදුවීම්",
+    "si": "වැඩසටහන්",
     "ta": "நிகழ்வுகள்"
+  },
+  "Events &": {
+    "en": "Events &",
+    "si": "සිදුවීම් සහ",
+    "ta": "நிகழ்வுகள் &"
+  },
+  "Events & Updates": {
+    "en": "Events & Updates",
+    "si": "උත්සව සහ නවතම තොරතුරු",
+    "ta": "நிகழ்வுகள் & அறிவிப்புகள்"
+  },
+  "Events & Updates – SJC Counselling": {
+    "en": "Events & Updates – SJC Counselling",
+    "si": "උත්සව සහ නවතම තොරතුරු – SJC උපදේශන සේවය",
+    "ta": "நிகழ்வுகள் & அறிவிப்புகள் – SJC ஆலோசனை"
   },
   "Events & Workshops": {
     "en": "Events & Workshops",
     "si": "සිදුවීම් සහ වැඩමුළු",
     "ta": "நிகழ்வுகள் & பட்டறைகள்"
   },
-  "Events & Workshops — SJC Counselling": {
-    "en": "Events & Workshops — SJC Counselling",
-    "si": "සිදුවීම් සහ වැඩමුළු - SJC උපදේශනය",
-    "ta": "நிகழ்வுகள் & பட்டறைகள் - SJC ஆலோசனை"
+  "Every Generation": {
+    "en": "Every Generation",
+    "si": "සෑම පරම්පරාවක්ම",
+    "ta": "ஒவ்வொரு தலைமுறையும்"
   },
-  "Events &amp;": {
-    "en": "Events &amp;",
-    "si": "සිදුවීම් සහ",
-    "ta": "நிகழ்வுகள் &"
-  },
-  "Events &amp; Programmes": {
-    "en": "Events &amp; Programmes",
-    "si": "සිදුවීම් සහ වැඩසටහන්",
-    "ta": "நிகழ்வுகள் & நிகழ்ச்சிகள்"
-  },
-  "Events &amp; Workshops": {
-    "en": "Events &amp; Workshops",
-    "si": "සිදුවීම් සහ වැඩමුළු",
-    "ta": "நிகழ்வுகள் & பட்டறைகள்"
+  "Every Josephian belongs to a house named after a great river of Sri Lanka – the framework for sports, competition, and lifelong friendship.": {
+    "en": "Every Josephian belongs to a house named after a great river of Sri Lanka – the framework for sports, competition, and lifelong friendship.",
+    "si": "සෑම ජෝශප්වරයෙකුම ශ්‍රී ලංකාවේ ප්‍රධාන ගංගාවක නමින් නම් කරන ලද නිවාසයකට අයත් වේ – මෙය ක්‍රීඩා, තරඟකාරිත්වය සහ ජීවිත කාලයටම පවතින මිත්‍රත්වයට මඟ පාදයි.",
+    "ta": "ஒவ்வொரு ஜோசப்வியனும் இலங்கையின் ஒரு முக்கிய நதியின் பெயரைக் கொண்ட இல்லத்தைச் சேர்ந்தவர் – இது விளையாட்டு, போட்டிகள் மற்றும் வாழ்நாள் நட்பிற்கான கட்டமைப்பாக அமைகிறது."
   },
   "Every Student": {
     "en": "Every Student",
     "si": "සෑම සිසුවෙක්ම",
     "ta": "ஒவ்வொரு மாணவரும்"
   },
+  "Every day is a new chapter – of learning, friendship, achievement, and memories that last a lifetime.": {
+    "en": "Every day is a new chapter – of learning, friendship, achievement, and memories that last a lifetime.",
+    "si": "සෑම දිනක්ම ඉගෙනීම, මිත්‍රත්වය, ජයග්‍රහණ සහ ජීවිත කාලයටම පවතින මතකයන්ගෙන් පිරි නව පරිච්ඡේදයකි.",
+    "ta": "ஒவ்வொரு நாளும் ஒரு புதிய அத்தியாயம் — கற்றல், நட்பு, சாதனை மற்றும் வாழ்நாள் முழுதும் நிலைத்திருக்கும் நினைவுகள்."
+  },
   "Every student who walks through our doors carries potential. Here are the stories of Josephians whose futures were shaped by guidance, support, and belief in themselves.": {
     "en": "Every student who walks through our doors carries potential. Here are the stories of Josephians whose futures were shaped by guidance, support, and belief in themselves.",
     "si": "අපගේ දොරටු හරහා ගමන් කරන සෑම සිසුවෙක්ම විභවයන් දරයි. මග පෙන්වීම, සහයෝගය සහ තමන් ගැන විශ්වාස කිරීම මගින් අනාගතය හැඩගස්වාගත් ජෝසප්වරුන්ගේ කථා මෙන්න.",
     "ta": "எங்கள் கதவுகள் வழியாக செல்லும் ஒவ்வொரு மாணவரும் திறனைக் கொண்டு செல்கிறார்கள். வழிகாட்டுதல், ஆதரவு மற்றும் நம்பிக்கையால் எதிர்காலத்தை வடிவமைத்த ஜோசபியன்களின் கதைகள் இங்கே."
+  },
+  "Every year SJC meets Anuradhapura Central College in the \"Battle of the Legends\" – an annual cricket and football encounter that fills the city with maroon and gold and bonds every Josephian, past and present.": {
+    "en": "Every year SJC meets Anuradhapura Central College in the \"Battle of the Legends\" – an annual cricket and football encounter that fills the city with maroon and gold and bonds every Josephian, past and present.",
+    "si": "සෑම වසරකම SJC කණ්ඩායම අනුරාධපුර මධ්‍ය මහා විද්‍යාලය සමඟ \"ලෙජන්ඩ්ස් සටන\" සඳහා තරඟ වදී – මෙය මුළු නගරයම රතු-දුඹුරු සහ රන්වන් වර්ණයෙන් සරසන, අතීත සහ වර්තමාන සියලුම ජෝශප්වරුන් එක් කරන වාර්ෂික ක්‍රිකට් සහ පාපන්දු තරඟයකි.",
+    "ta": "ஒவ்வொரு வருடமும் SJC மற்றும் அனுராதபுரம் மத்திய கல்லூரி மோதும் \"புராணங்களின் போர்\" கிரிக்கெட் மற்றும் கால்பந்து போட்டி நடைபெறுகிறது – இது நகரம் முழுவதையும் மெரூன் மற்றும் தங்க நிறத்தால் நிரப்பி, கடந்த கால மற்றும் தற்போதைய ஜோசப்வியன்களை இணைக்கும் ஒரு வருட நிகழ்வாகும்."
   },
   "Everyday": {
     "en": "Everyday",
     "si": "සෑම දිනම",
     "ta": "தினமும்"
   },
-  "Everything discussed in counselling sessions remains strictly confidential between you and your counsellor. Information is only shared with a third party in exceptional circumstances where there is a serious risk of harm — and you will always be informed first. We are committed to creating a safe, judgement-free space where every student feels heard and respected.": {
-    "en": "Everything discussed in counselling sessions remains strictly confidential between you and your counsellor. Information is only shared with a third party in exceptional circumstances where there is a serious risk of harm — and you will always be informed first. We are committed to creating a safe, judgement-free space where every student feels heard and respected.",
+  "Everything discussed in counselling sessions remains strictly confidential between you and your counsellor. Information is only shared with a third party in exceptional circumstances where there is a serious risk of harm – and you will always be informed first. We are committed to creating a safe, judgement-free space where every student feels heard and respected.": {
+    "en": "Everything discussed in counselling sessions remains strictly confidential between you and your counsellor. Information is only shared with a third party in exceptional circumstances where there is a serious risk of harm – and you will always be informed first. We are committed to creating a safe, judgement-free space where every student feels heard and respected.",
     "si": "උපදේශන සැසිවලදී සාකච්ඡා කරන සෑම දෙයක්ම ඔබ සහ ඔබේ උපදේශකයා අතර දැඩි ලෙස රහසිගතව පවතී. හානියක් වීමේ බරපතල අවදානමක් පවතින සුවිශේෂී අවස්ථාවන්හිදී පමණක් තොරතුරු තෙවන පාර්ශවයක් සමඟ බෙදා ගනු ලැබේ - සහ ඔබ සැම විටම පළමුවෙන් දැනුම් දෙනු ලැබේ. සෑම සිසුවෙකුටම ඇහුම්කන් දීමට සහ ගෞරවයට පත්වන ආරක්ෂිත, විනිශ්චය-නිදහස් අවකාශයක් නිර්මාණය කිරීමට අපි කැපවී සිටිමු.",
     "ta": "ஆலோசனை அமர்வுகளில் விவாதிக்கப்படும் அனைத்தும் உங்களுக்கும் உங்கள் ஆலோசகருக்கும் இடையே கண்டிப்பாக ரகசியமாக இருக்கும். தீங்கு விளைவிக்கும் அபாயம் உள்ள விதிவிலக்கான சூழ்நிலைகளில் மட்டுமே மூன்றாம் தரப்பினருடன் தகவல் பகிரப்படும் - மேலும் உங்களுக்கு எப்போதும் முதலில் தெரிவிக்கப்படும். ஒவ்வொரு மாணவரும் கேட்கப்பட்ட மற்றும் மரியாதைக்குரியதாக உணரும் பாதுகாப்பான, தீர்ப்பு இல்லாத இடத்தை உருவாக்க நாங்கள் கடமைப்பட்டுள்ளோம்."
   },
@@ -1634,16 +1604,6 @@
     "si": "Graphic/UI/UX නිර්මාණකරුවන් සඳහා විශිෂ්ට දුරස්ථ වැඩ හැකියාව",
     "ta": "கிராஃபிக்/யுஐ/யுஎக்ஸ் டிசைனர்களுக்கான சிறந்த ரிமோட் வேலை வாய்ப்பு"
   },
-  "Excited": {
-    "en": "Excited",
-    "si": "උද්යෝගිමත්",
-    "ta": "உற்சாகம்"
-  },
-  "Expand your skills beyond the classroom.": {
-    "en": "Expand your skills beyond the classroom.",
-    "si": "පන්ති කාමරයෙන් ඔබ්බට ඔබේ කුසලතා පුළුල් කරන්න.",
-    "ta": "வகுப்பறைக்கு அப்பால் உங்கள் திறமைகளை விரிவுபடுத்துங்கள்."
-  },
   "Expert Speakers": {
     "en": "Expert Speakers",
     "si": "විශේෂඥ කථිකයන්",
@@ -1654,13 +1614,23 @@
     "si": "ගවේෂණය කරන්න",
     "ta": "ஆராயுங்கள்"
   },
+  "Explore Abroad →": {
+    "en": "Explore Abroad →",
+    "si": "විදේශ අධ්‍යාපනය ගවේෂණය කරන්න →",
+    "ta": "வெளிநாட்டு கல்வியை ஆராயுங்கள் →"
+  },
+  "Explore Career Paths →": {
+    "en": "Explore Career Paths →",
+    "si": "වෘත්තීය මාර්ග ගවේෂණය කරන්න →",
+    "ta": "தொழில் பாதைகளை ஆராயுங்கள் →"
+  },
   "Explore Careers": {
     "en": "Explore Careers",
     "si": "වෘත්තීන් ගවේෂණය කරන්න",
     "ta": "தொழில்களை ஆராயுங்கள்"
   },
-  "Explore careers aligned with your strengths, interests, and A/L stream &mdash; with expert guidance, CV support, and university pathway planning from our counsellors.": {
-    "en": "Explore careers aligned with your strengths, interests, and A/L stream &mdash; with expert guidance, CV support, and university pathway planning from our counsellors.",
+  "Explore careers aligned with your strengths, interests, and A/L stream — with expert guidance, CV support, and university pathway planning from our counsellors.": {
+    "en": "Explore careers aligned with your strengths, interests, and A/L stream — with expert guidance, CV support, and university pathway planning from our counsellors.",
     "si": "ඔබේ ශක්තීන්, රුචිකත්වයන් සහ උසස් පෙළ විෂය ධාරාවන් සමඟ පෙළගැසුණු වෘත්තීන් ගවේෂණය කරන්න — විශේෂඥ මගපෙන්වීම, CV සහාය සහ අපගේ උපදේශකයින්ගෙන් විශ්ව විද්‍යාල මාර්ග සැලසුම් කිරීම.",
     "ta": "உங்கள் பலம், ஆர்வங்கள் மற்றும் A/L ஸ்ட்ரீம் ஆகியவற்றுடன் இணைந்த தொழில்களை ஆராயுங்கள் — நிபுணர் வழிகாட்டுதல், CV ஆதரவு மற்றும் எங்கள் ஆலோசகர்களின் பல்கலைக்கழக பாதை திட்டமிடல்."
   },
@@ -1674,33 +1644,18 @@
     "si": "දේශීය හා ජාත්‍යන්තර උපාධි මාර්ග ගවේෂණය කරන්න",
     "ta": "உள்ளூர் மற்றும் சர்வதேச பட்டப்படிப்பு வழிகளை ஆராயுங்கள்"
   },
-  "Explore prominent universities abroad across the UK, Australia, and USA.": {
-    "en": "Explore prominent universities abroad across the UK, Australia, and USA.",
-    "si": "එක්සත් රාජධානිය, ඕස්ට්‍රේලියාව සහ ඇමරිකා එක්සත් ජනපදය හරහා විදේශයන්හි ප්‍රමුඛ විශ්ව විද්‍යාල ගවේෂණය කරන්න.",
-    "ta": "UK, ஆஸ்திரேலியா மற்றும் அமெரிக்கா முழுவதும் வெளிநாடுகளில் உள்ள முக்கிய பல்கலைக்கழகங்களை ஆராயுங்கள்."
-  },
-  "Explore top state and private universities in Sri Lanka and their admission pathways.": {
-    "en": "Explore top state and private universities in Sri Lanka and their admission pathways.",
-    "si": "ශ්‍රී ලංකාවේ ඉහළම රාජ්‍ය සහ පෞද්ගලික විශ්වවිද්‍යාල සහ ඒවාට ඇතුළත් වීමේ මාර්ග ගවේෂණය කරන්න.",
-    "ta": "இலங்கையில் உள்ள சிறந்த அரச மற்றும் தனியார் பல்கலைக்கழகங்கள் மற்றும் அவற்றின் சேர்க்கை வழிகளை ஆராயுங்கள்."
-  },
-  "Exploring which degree matches your A/L stream and career aspirations, including cross-disciplinary options and transferring from HNDs to Top-Up degrees.": {
-    "en": "Exploring which degree matches your A/L stream and career aspirations, including cross-disciplinary options and transferring from HNDs to Top-Up degrees.",
-    "si": "හරස් විනය විකල්ප සහ HNDs සිට Top-Up උපාධි දක්වා මාරු කිරීම ඇතුළුව, ඔබේ උසස් පෙළ විෂය ධාරාවට සහ වෘත්තීය අභිලාෂයන්ට ගැලපෙන උපාධිය ගවේෂණය කිරීම.",
-    "ta": "உங்கள் A/L ஸ்ட்ரீம் மற்றும் தொழில் அபிலாஷைகளுடன் எந்தப் பட்டம் பொருந்துகிறது என்பதை ஆராய்வது, குறுக்கு-ஒழுங்குமுறை விருப்பங்கள் மற்றும் HND களில் இருந்து டாப்-அப் பட்டங்களுக்கு மாற்றுவது உட்பட."
+  "Explore studying abroad in UK, Australia, USA, Canada, and Europe. Find scholarships and agents.": {
+    "en": "Explore studying abroad in UK, Australia, USA, Canada, and Europe. Find scholarships and agents.",
+    "si": "එක්සත් රාජධානිය, ඕස්ට්‍රේලියාව, ඇමරිකා එක්සත් ජනපදය, කැනඩාව සහ යුරෝපයේ උසස් අධ්‍යාපන අවස්ථා ගවේෂණය කරන්න. ශිෂ්‍යත්ව සහ නියෝජිතයන් සොයා ගන්න.",
+    "ta": "இங்கிலாந்து, ஆஸ்திரேலியா, அமெரிக்கா, கனடா மற்றும் ஐரோப்பாவில் வெளிநாட்டுப் படிப்புகளை ஆராயுங்கள். கல்வித்தொகை மற்றும் முகவர்களைக் கண்டறியவும்."
   },
   "Extracurricular Achievements": {
     "en": "Extracurricular Achievements",
     "si": "විෂය බාහිර ජයග්රහණ",
     "ta": "சாராத சாதனைகள்"
   },
-  "Fall/Spring Intakes for Foreign Unis": {
-    "en": "Fall/Spring Intakes for Foreign Unis",
-    "si": "Fall/Spring Intakes for Foreign Unis",
-    "ta": "வெளிநாட்டு யூனிஸிற்கான இலையுதிர்/வசந்த உட்கொள்ளல்"
-  },
-  "Family &amp; Home": {
-    "en": "Family &amp; Home",
+  "Family & Home": {
+    "en": "Family & Home",
     "si": "පවුල සහ නිවස",
     "ta": "குடும்பம் & வீடு"
   },
@@ -1709,30 +1664,15 @@
     "si": "පවුල් ආරවුල් සහ සබඳතා ගැටළු",
     "ta": "குடும்ப மோதல்கள் மற்றும் உறவு பிரச்சினைகள்"
   },
-  "Fast-Track": {
-    "en": "Fast-Track",
-    "si": "වේගවත් ධාවන පථය",
-    "ta": "ஃபாஸ்ட் டிராக்"
+  "Fast, competitive and full of heart": {
+    "en": "Fast, competitive and full of heart",
+    "si": "වේගවත්, තරඟකාරී සහ උද්‍යෝගිමත්",
+    "ta": "வேகமான, போட்டித்தன்மை மற்றும் அர்ப்பணிப்பு நிறைந்த"
   },
-  "Fast-track routes and alternatives to traditional A/Levels for O/L graduates. Complete a 1-year foundation to directly enter a bachelor's degree.": {
-    "en": "Fast-track routes and alternatives to traditional A/Levels for O/L graduates. Complete a 1-year foundation to directly enter a bachelor's degree.",
-    "si": "සා/පෙළ උපාධිධාරීන් සඳහා සාම්ප්‍රදායික උසස් පෙළ සඳහා වේගවත් මාර්ග සහ විකල්ප. කෙලින්ම උපාධියකට ඇතුළත් වීමට වසර 1ක පදනමක් සම්පූර්ණ කරන්න.",
-    "ta": "O/L பட்டதாரிகளுக்கான பாரம்பரிய A/Levelகளுக்கு விரைவான பாதைகள் மற்றும் மாற்று வழிகள். இளங்கலை பட்டப்படிப்பில் நேரடியாக நுழைவதற்கு 1 வருட அடித்தளத்தை முடிக்கவும்."
-  },
-  "February, July, and November intakes": {
-    "en": "February, July, and November intakes",
-    "si": "පෙබරවාරි, ජූලි සහ නොවැම්බර් මාසවල ආහාර ගැනීම",
-    "ta": "பிப்ரவரி, ஜூலை மற்றும் நவம்பர் மாதங்களில் உட்கொள்ளல்"
-  },
-  "Fill in your details to secure your spot.": {
-    "en": "Fill in your details to secure your spot.",
-    "si": "ඔබේ ස්ථානය සුරක්ෂිත කිරීමට ඔබේ විස්තර පුරවන්න.",
-    "ta": "உங்கள் இடத்தைப் பாதுகாக்க உங்கள் விவரங்களை நிரப்பவும்."
-  },
-  "Filter by category to find events relevant to you. Registration is free for all students.": {
-    "en": "Filter by category to find events relevant to you. Registration is free for all students.",
-    "si": "ඔබට අදාළ සිදුවීම් සොයා ගැනීමට ප්‍රවර්ගය අනුව පෙරහන් කරන්න. සියලුම සිසුන් සඳහා ලියාපදිංචිය නොමිලේ.",
-    "ta": "உங்களுக்குத் தொடர்புடைய நிகழ்வுகளைக் கண்டறிய வகை வாரியாக வடிகட்டவும். அனைத்து மாணவர்களுக்கும் பதிவு இலவசம்."
+  "Fast-track options after O/L exams. Enter university earlier without completing traditional A/Levels.": {
+    "en": "Fast-track options after O/L exams. Enter university earlier without completing traditional A/Levels.",
+    "si": "සාමාන්‍ය පෙළ විභාගයෙන් පසු ඉක්මන් මාර්ග. සාම්ප්‍රදායික උසස් පෙළ නිම නොකර විශ්වවිද්‍යාලයට ඉක්මනින් ප්‍රවේශ වන්න.",
+    "ta": "O/L தேர்வுகளுக்குப் பிறகு விரைவான விருப்பங்கள். பாரம்பரிய A/L முடிக்காமல் பல்கலைக்கழகத்தில் விரைவாக நுழையுங்கள்."
   },
   "Filter by interest": {
     "en": "Filter by interest",
@@ -1743,11 +1683,6 @@
     "en": "Finance",
     "si": "මූල්ය",
     "ta": "நிதி"
-  },
-  "Fire": {
-    "en": "Fire",
-    "si": "ගිනි",
-    "ta": "தீ"
   },
   "First Name": {
     "en": "First Name",
@@ -1764,13 +1699,18 @@
     "si": "පසු විපරම",
     "ta": "பின்தொடர்தல்"
   },
+  "Football": {
+    "en": "Football",
+    "si": "පාපන්දු",
+    "ta": "கால்பந்து"
+  },
   "For Parents": {
     "en": "For Parents",
     "si": "දෙමාපියන් සඳහා",
     "ta": "பெற்றோருக்கு"
   },
-  "For Parents &amp; Guardians": {
-    "en": "For Parents &amp; Guardians",
+  "For Parents & Guardians": {
+    "en": "For Parents & Guardians",
     "si": "දෙමාපියන් සහ භාරකරුවන් සඳහා",
     "ta": "பெற்றோர் மற்றும் பாதுகாவலர்களுக்கு"
   },
@@ -1779,73 +1719,58 @@
     "si": "විදේශීය",
     "ta": "வெளிநாட்டு"
   },
-  "Foreign Universities": {
-    "en": "Foreign Universities",
-    "si": "විදේශීය විශ්වවිද්‍යාල",
-    "ta": "வெளிநாட்டு பல்கலைக்கழகங்கள்"
-  },
-  "Forgot Password?": {
-    "en": "Forgot Password?",
-    "si": "මුරපදය අමතක වුණා ද?",
-    "ta": "கடவுச்சொல் மறந்துவிட்டதா?"
-  },
-  "Foundation Programs": {
-    "en": "Foundation Programs",
-    "si": "පදනම් වැඩසටහන්",
-    "ta": "அறக்கட்டளை திட்டங்கள்"
-  },
-  "Foundation Programs:": {
-    "en": "Foundation Programs:",
-    "si": "පදනම් වැඩසටහන්:",
-    "ta": "அறக்கட்டளை திட்டங்கள்:"
-  },
-  "Foundation in Engineering/Science (September intake)": {
-    "en": "Foundation in Engineering/Science (September intake)",
-    "si": "ඉංජිනේරු/විද්‍යාව පිළිබඳ පදනම (සැප්තැම්බර් බඳවා ගැනීම)",
-    "ta": "பொறியியல்/அறிவியலில் அறக்கட்டளை (செப்டம்பர் உட்கொள்ளல்)"
+  "Fr. Bonjean begins English classes in Anuradhapura — the first English education in the North Central Province.": {
+    "en": "Fr. Bonjean begins English classes in Anuradhapura — the first English education in the North Central Province.",
+    "si": "බොන්ජියන් පියතුමා අනුරාධපුරයේ ඉංග්‍රීසි පන්ති ආරම්භ කරයි — මෙය උතුරු මැද පළාතේ ප්‍රථම ඉංග්‍රීසි අධ්‍යාපනයයි.",
+    "ta": "அனுராதபுரத்தில் அருட்தந்தை பொன்ஜியன் ஆங்கில வகுப்புகளைத் தொடங்குகிறார் — இது வட மத்திய மாகாணத்தின் முதலாவது ஆங்கிலக் கல்வியாகும்."
   },
   "Free, confidential counselling helpline available to anyone in Sri Lanka facing emotional difficulties.": {
     "en": "Free, confidential counselling helpline available to anyone in Sri Lanka facing emotional difficulties.",
     "si": "චිත්තවේගීය දුෂ්කරතාවන්ට මුහුණ දෙන ශ්‍රී ලංකාවේ ඕනෑම කෙනෙකුට නොමිලේ, රහසිගත උපදේශන උපකාරක සේවාව ලබා ගත හැකිය.",
     "ta": "இலங்கையில் உணர்ச்சிகரமான சிரமங்களை எதிர்கொள்ளும் எவருக்கும் இலவச, ரகசிய ஆலோசனை உதவி எண் உள்ளது."
   },
+  "From Email": {
+    "en": "From Email",
+    "si": "යොමු කළ විද්‍යුත් තැපෑල",
+    "ta": "அனுப்புநர் மின்னஞ்சல்"
+  },
+  "From a handful of English classes to a leading national school — the milestones that shaped St. Joseph's College.": {
+    "en": "From a handful of English classes to a leading national school — the milestones that shaped St. Joseph's College.",
+    "si": "ඉංග්‍රීසි පන්ති කිහිපයක සිට ප්‍රමුඛ පෙළේ ජාතික පාසලක් දක්වා — ශාන්ත ජෝශප් විද්‍යාලය හැඩගැස්වූ සන්ධිස්ථාන.",
+    "ta": "ஒரு சில ஆங்கில வகுப்புகளில் இருந்து ஒரு முன்னணி தேசிய பள்ளி வரை — செயின்ட் ஜோசப் கல்லூரியை வடிவமைத்த மைல்கற்கள்."
+  },
   "From local state universities to leading international degree pathways, explore the right higher education destination tailored to your A/L stream and goals.": {
     "en": "From local state universities to leading international degree pathways, explore the right higher education destination tailored to your A/L stream and goals.",
     "si": "දේශීය රාජ්‍ය විශ්වවිද්‍යාලවල සිට ප්‍රමුඛ පෙළේ ජාත්‍යන්තර උපාධි මාර්ග දක්වා, ඔබේ උසස් පෙළ විෂය ධාරාවට සහ ඉලක්කවලට ගැලපෙන නිවැරදි උසස් අධ්‍යාපන ගමනාන්තය ගවේෂණය කරන්න.",
     "ta": "உள்ளூர் மாநிலப் பல்கலைக்கழகங்கள் முதல் முன்னணி சர்வதேச பட்டப்படிப்பு வரை, உங்கள் A/L ஸ்ட்ரீம் மற்றும் இலக்குகளுக்கு ஏற்ப சரியான உயர்கல்வி இலக்கை ஆராயுங்கள்."
+  },
+  "From parliament to the high seas to the silver screen – Old Josephians have carried the maroon and gold across every walk of Sri Lankan life.": {
+    "en": "From parliament to the high seas to the silver screen – Old Josephians have carried the maroon and gold across every walk of Sri Lankan life.",
+    "si": "පාර්ලිමේන්තුවේ සිට සාගරය සහ රිදී තිරය දක්වා – ආදි ජෝශප්වරුන් ශ්‍රී ලාංකේය සමාජයේ සෑම තරාතිරමකම තම විද්‍යාලීය වර්ණ රතු-දුඹුරු සහ රන්වන් ගෞරවයෙන් ඔසවා තබා ඇත.",
+    "ta": "நாடாளுமன்றம் முதல் கடல் மற்றும் திரையுலகம் வரை – பழைய ஜோசப்வியன்கள் இலங்கை வாழ்வின் அனைத்துத் துறைகளிலும் மெரூன் மற்றும் தங்க நிறப் பெருமையை ஏந்திச் சென்றுள்ளனர்."
+  },
+  "From the": {
+    "en": "From the",
+    "si": "සිට",
+    "ta": "இருந்து"
   },
   "Full Day · SJC Grounds": {
     "en": "Full Day · SJC Grounds",
     "si": "සම්පූර්ණ දිනය · SJC ක්‍රීඩාංගණය",
     "ta": "முழு நாள் · SJC மைதானம்"
   },
-  "Full Name": {
-    "en": "Full Name",
-    "si": "සම්පූර්ණ නම",
-    "ta": "முழுப் பெயர்"
-  },
-  "Full Name *": {
-    "en": "Full Name *",
-    "si": "සම්පූර්ණ නම *",
-    "ta": "முழு பெயர் *"
-  },
-  "Full scholarship — studying Medicine at University of Kelaniya": {
-    "en": "Full scholarship — studying Medicine at University of Kelaniya",
+  "Full scholarship – studying Medicine at University of Kelaniya": {
+    "en": "Full scholarship – studying Medicine at University of Kelaniya",
     "si": "සම්පූර්ණ ශිෂ්‍යත්වය - කැලණිය විශ්වවිද්‍යාලයේ වෛද්‍ය විද්‍යාව හැදෑරීම",
     "ta": "முழு புலமைப்பரிசில் - களனி பல்கலைக்கழகத்தில் மருத்துவம் படிப்பது"
   },
-  "General (Grade 6-11)": {
-    "en": "General (Grade 6-11)",
-    "si": "සාමාන්‍ය (6-11 ශ්‍රේණිය)",
-    "ta": "பொது (கிரேடு 6-11)"
+  "Get 7—8 hours of sleep – your brain consolidates memory overnight": {
+    "en": "Get 7—8 hours of sleep – your brain consolidates memory overnight",
+    "si": "පැය 7-8 ක් නිදාගන්න - ඔබේ මොළය එක රැයකින් මතකය තහවුරු කරයි",
+    "ta": "7-8 மணிநேரம் தூங்குங்கள் - உங்கள் மூளை ஒரே இரவில் நினைவகத்தை ஒருங்கிணைக்கிறது"
   },
-  "Generate My CV": {
-    "en": "Generate My CV",
-    "si": "මගේ CV ජනනය කරන්න",
-    "ta": "எனது CV ஐ உருவாக்கவும்"
-  },
-  "Get 7–8 hours of sleep — your brain consolidates memory overnight": {
-    "en": "Get 7–8 hours of sleep — your brain consolidates memory overnight",
+  "Get 7—8 hours of sleep — your brain consolidates memory overnight": {
+    "en": "Get 7—8 hours of sleep — your brain consolidates memory overnight",
     "si": "පැය 7-8 ක් නිදාගන්න - ඔබේ මොළය එක රැයකින් මතකය තහවුරු කරයි",
     "ta": "7-8 மணிநேரம் தூங்குங்கள் - உங்கள் மூளை ஒரே இரவில் நினைவகத்தை ஒருங்கிணைக்கிறது"
   },
@@ -1863,6 +1788,11 @@
     "en": "Global markets via e-commerce, SaaS, and freelance platforms",
     "si": "ඊ-වාණිජ්‍යය, SaaS, සහ නිදහස් වේදිකා හරහා ගෝලීය වෙලඳපොලවල්",
     "ta": "இ-காமர்ஸ், சாஸ் மற்றும் ஃப்ரீலான்ஸ் தளங்கள் வழியாக உலகளாவிய சந்தைகள்"
+  },
+  "Go for a walk – physical movement shifts mental state": {
+    "en": "Go for a walk – physical movement shifts mental state",
+    "si": "ඇවිදින්න යන්න - ශාරීරික චලනය මානසික තත්වය වෙනස් කරයි",
+    "ta": "ஒரு நடைக்கு செல்லுங்கள் - உடல் இயக்கம் மன நிலையை மாற்றுகிறது"
   },
   "Go for a walk — physical movement shifts mental state": {
     "en": "Go for a walk — physical movement shifts mental state",
@@ -1894,13 +1824,8 @@
     "si": "රාජ්ය සේවා",
     "ta": "அரசு சேவைகள்"
   },
-  "Grade": {
-    "en": "Grade",
-    "si": "ශ්රේණිය",
-    "ta": "தரம்"
-  },
-  "Grade &amp; Class": {
-    "en": "Grade &amp; Class",
+  "Grade & Class": {
+    "en": "Grade & Class",
     "si": "ශ්‍රේණිය සහ පන්තිය",
     "ta": "தரம் & வகுப்பு"
   },
@@ -1914,8 +1839,8 @@
     "si": "10 ශ්‍රේණිය",
     "ta": "தரம் 10"
   },
-  "Grade 10–13": {
-    "en": "Grade 10–13",
+  "Grade 10—13": {
+    "en": "Grade 10—13",
     "si": "10-13 ශ්‍රේණිය",
     "ta": "தரம் 10–13"
   },
@@ -1949,6 +1874,11 @@
     "si": "13 ශ්‍රේණිය (උ/පෙළ වසර 2)",
     "ta": "தரம் 13 (A/L ஆண்டு 2)"
   },
+  "Grade 1AB national school for boys": {
+    "en": "Grade 1AB national school for boys",
+    "si": "පිරිමි ළමුන් සඳහා වන 1AB ශ්‍රේණියේ ජාතික පාසලක්",
+    "ta": "ஆண்களுக்கான தரம் 1AB தேசிய பள்ளி"
+  },
   "Grade 6": {
     "en": "Grade 6",
     "si": "6 ශ්‍රේණිය",
@@ -1974,6 +1904,11 @@
     "si": "ශෝකය, අහිමි වීම සහ ජීවිත සංක්‍රාන්ති",
     "ta": "துக்கம், இழப்பு மற்றும் வாழ்க்கை மாற்றங்கள்"
   },
+  "Grit and teamwork on the pitch": {
+    "en": "Grit and teamwork on the pitch",
+    "si": "ක්‍රීඩා පිටියේ ධෛර්යය සහ කණ්ඩායම් හැඟීම",
+    "ta": "விளையாட்டு மைதானத்தில் உறுதி மற்றும் குழுப்பணி"
+  },
   "Group workshops and individual support focused on building emotional resilience, managing stress, and promoting positive mental health.": {
     "en": "Group workshops and individual support focused on building emotional resilience, managing stress, and promoting positive mental health.",
     "si": "කණ්ඩායම් වැඩමුළු සහ පුද්ගල සහයෝගය චිත්තවේගීය ඔරොත්තු දීමේ හැකියාව ගොඩනැගීම, ආතතිය කළමනාකරණය කිරීම සහ ධනාත්මක මානසික සෞඛ්‍යය ප්‍රවර්ධනය කිරීම කෙරෙහි අවධානය යොමු කරයි.",
@@ -1994,20 +1929,15 @@
     "si": "මාර්ගෝපදේශ සේවා",
     "ta": "வழிகாட்டல் சேவைகள்"
   },
-  "Guidance on state university admissions under the UGC, Z-score requirements across different districts, and local private degree options recognized by the Ministry of Higher Education.": {
-    "en": "Guidance on state university admissions under the UGC, Z-score requirements across different districts, and local private degree options recognized by the Ministry of Higher Education.",
-    "si": "UGC යටතේ රාජ්‍ය විශ්ව විද්‍යාල ප්‍රවේශය පිළිබඳ මාර්ගෝපදේශය, විවිධ දිස්ත්‍රික්ක හරහා Z-ස්කෝර් අවශ්‍යතා සහ උසස් අධ්‍යාපන අමාත්‍යාංශය විසින් පිළිගත් දේශීය පෞද්ගලික උපාධි විකල්ප.",
-    "ta": "UGC இன் கீழ் மாநில பல்கலைக்கழக சேர்க்கைக்கான வழிகாட்டுதல், பல்வேறு மாவட்டங்களில் Z- மதிப்பெண் தேவைகள் மற்றும் உயர்கல்வி அமைச்சகத்தால் அங்கீகரிக்கப்பட்ட உள்ளூர் தனியார் பட்டப்படிப்பு விருப்பங்கள்."
-  },
   "Guiding Students": {
     "en": "Guiding Students",
     "si": "සිසුන්ට මග පෙන්වීම",
     "ta": "மாணவர்களுக்கு வழிகாட்டுதல்"
   },
-  "HND, Diplomas and Top-Up Degree routes": {
-    "en": "HND, Diplomas and Top-Up Degree routes",
-    "si": "HND, ඩිප්ලෝමා සහ Top-Up උපාධි මාර්ග",
-    "ta": "HND, டிப்ளோமாக்கள் மற்றும் டாப்-அப் டிகிரி வழிகள்"
+  "H. A. G. Madhu De Alwis": {
+    "en": "H. A. G. Madhu De Alwis",
+    "si": "එච්. ඒ. ජී. මධු ද අල්විස්",
+    "ta": "எச். ஏ. ஜி. மது த அல்விஸ்"
   },
   "HR": {
     "en": "HR",
@@ -2018,6 +1948,11 @@
     "en": "Head of Counselling Unit",
     "si": "උපදේශන ඒකකයේ ප්‍රධානියා",
     "ta": "கவுன்சிலிங் பிரிவின் தலைவர்"
+  },
+  "Help:": {
+    "en": "Help:",
+    "si": "උදවු:",
+    "ta": "உதவி:"
   },
   "Helping students discover their strengths, explore career pathways, understand university requirements, and plan strategically for life after school.": {
     "en": "Helping students discover their strengths, explore career pathways, understand university requirements, and plan strategically for life after school.",
@@ -2049,6 +1984,26 @@
     "si": "නිවස",
     "ta": "வீடு"
   },
+  "Home to dedicated teachers and world-class facilities that push every Josephian to reach their highest potential.": {
+    "en": "Home to dedicated teachers and world-class facilities that push every Josephian to reach their highest potential.",
+    "si": "සෑම ජෝශප්වරයෙකුටම තම උපරිම දක්ෂතා කරා ළඟාවීමට මඟ පෙන්වන කැපවූ ගුරුවරුන් සහ ලෝක මට්ටමේ පහසුකම්වලින් සමන්විත තෝතැන්නකි.",
+    "ta": "ஒவ்வொரு ஜோசப்வியனும் தனது உயர்ந்த திறனை அடைய ஊக்குவிக்கும் அர்ப்பணிப்புள்ள ஆசிரியர்கள் மற்றும் உலகத்தரம் வாய்ந்த வசதிகளின் தாயகம்."
+  },
+  "House System": {
+    "en": "House System",
+    "si": "නිවාස ක්‍රමය",
+    "ta": "இல்ல முறை"
+  },
+  "Houses": {
+    "en": "Houses",
+    "si": "නිවාස",
+    "ta": "இல்லங்கள்"
+  },
+  "How Can We Contact You To Give A Date & Time *": {
+    "en": "How Can We Contact You To Give A Date & Time *",
+    "si": "හමුවීමේ දිනය සහ වේලාව ලබා දීමට අප ඔබව සම්බන්ධ කර ගත යුත්තේ කෙසේද *",
+    "ta": "சந்திப்பு தேதி & நேரத்தை உங்களுக்குத் தெரிவிக்க நாங்கள் உங்களை எவ்வாறு தொடர்பு கொள்வது *"
+  },
   "How It Works": {
     "en": "How It Works",
     "si": "එය ක්රියා කරන ආකාරය",
@@ -2079,11 +2034,6 @@
     "si": "පුද්ගලික තොරතුරු තාක්ෂණ උපාධි සඳහා ICT, Logic, ඕනෑම විෂය ධාරාවක් පිළිගත හැකිය",
     "ta": "ஐசிடி, லாஜிக், எந்த ஸ்ட்ரீம் தனியார் ஐடி பட்டங்களுக்கு ஏற்கத்தக்கது"
   },
-  "IELTS/SAT entry exam requirements": {
-    "en": "IELTS/SAT entry exam requirements",
-    "si": "IELTS/SAT ප්‍රවේශ විභාග අවශ්‍යතා",
-    "ta": "IELTS/SAT நுழைவுத் தேர்வுக்கான தேவைகள்"
-  },
   "IT": {
     "en": "IT",
     "si": "තොරතුරු තාක්ෂණ",
@@ -2109,6 +2059,11 @@
     "si": "වැදගත් තොරතුරු",
     "ta": "முக்கியமான தகவல்"
   },
+  "In Person": {
+    "en": "In Person",
+    "si": "පෞද්ගලිකව පැමිණ",
+    "ta": "நேரில்"
+  },
   "Include a brief personal statement highlighting your goals and strengths": {
     "en": "Include a brief personal statement highlighting your goals and strengths",
     "si": "ඔබේ ඉලක්ක සහ ශක්තීන් ඉස්මතු කරන කෙටි පුද්ගලික ප්‍රකාශයක් ඇතුළත් කරන්න",
@@ -2119,20 +2074,10 @@
     "si": "විෂය බාහිර ක්‍රියාකාරකම්, නායකත්ව භූමිකාවන් සහ ක්‍රීඩා ජයග්‍රහණ ඇතුළත් කරන්න",
     "ta": "சாராத செயல்பாடுகள், தலைமைப் பாத்திரங்கள் மற்றும் விளையாட்டு சாதனைகள் ஆகியவை அடங்கும்"
   },
-  "Inclusivity &amp; Respect": {
-    "en": "Inclusivity &amp; Respect",
+  "Inclusivity & Respect": {
+    "en": "Inclusivity & Respect",
     "si": "ඇතුළත් කිරීම සහ ගෞරවය",
     "ta": "உள்ளடக்கம் மற்றும் மரியாதை"
-  },
-  "Incorrect Password. Contact your administrator.": {
-    "en": "Incorrect Password. Contact your administrator.",
-    "si": "වැරදි මුරපදය. ඔබේ පරිපාලක අමතන්න.",
-    "ta": "தவறான கடவுச்சொல். உங்கள் நிர்வாகியைத் தொடர்புகொள்ளவும்."
-  },
-  "Incorrect Password. Please try again.": {
-    "en": "Incorrect Password. Please try again.",
-    "si": "වැරදි මුරපදය. කරුණාකර නැවත උත්සාහ කරන්න.",
-    "ta": "தவறான கடவுச்சொல். மீண்டும் முயற்சிக்கவும்."
   },
   "Index Number": {
     "en": "Index Number",
@@ -2144,20 +2089,15 @@
     "si": "තොරතුරු තාක්ෂණය",
     "ta": "தகவல் தொழில்நுட்பம்"
   },
+  "Information on state universities (UGC), Z-score cutoffs, and local private degree awarding institutes.": {
+    "en": "Information on state universities (UGC), Z-score cutoffs, and local private degree awarding institutes.",
+    "si": "රාජ්‍ය විශ්වවිද්‍යාල (UGC), Z-ලකුණු කඩඉම් සහ දේශීය පුද්ගලික උපාධි පිරිනමන ආයතන පිළිබඳ තොරතුරු.",
+    "ta": "அரசுப் பல்கலைக்கழகங்கள் (UGC), Z-புள்ளி வெட்டுக்கள் மற்றும் உள்ளூர் தனியார் பட்டப்படிப்பு வழங்கும் நிறுவனங்கள் பற்றிய தகவல்கள்."
+  },
   "Inhale for": {
     "en": "Inhale for",
-    "si": "සඳහා ආශ්වාස කරන්න",
-    "ta": "உள்ளிழுக்கவும்"
-  },
-  "Institutions": {
-    "en": "Institutions",
-    "si": "ආයතන",
-    "ta": "நிறுவனங்கள்"
-  },
-  "Intake 1 (February), Intake 2 (July)": {
-    "en": "Intake 1 (February), Intake 2 (July)",
-    "si": "ඉන්ටේක් 1 (පෙබරවාරි), ඉන්ටේක් 2 (ජූලි)",
-    "ta": "உட்கொள்ளல் 1 (பிப்ரவரி), உட்கொள்ளல் 2 (ஜூலை)"
+    "si": "ආශ්වාස කරන්න",
+    "ta": "மூச்சை உள்ளிழுக்கவும்"
   },
   "Interactive Activities": {
     "en": "Interactive Activities",
@@ -2169,25 +2109,10 @@
     "si": "රුචිකත්වයන්",
     "ta": "ஆர்வங்கள்"
   },
-  "International": {
-    "en": "International",
-    "si": "ජාත්යන්තර",
-    "ta": "சர்வதேசம்"
-  },
-  "International Ed": {
-    "en": "International Ed",
-    "si": "ජාත්‍යන්තර එඩ්",
-    "ta": "சர்வதேச எட்"
-  },
   "International Opportunities:": {
     "en": "International Opportunities:",
     "si": "ජාත්‍යන්තර අවස්ථා:",
     "ta": "சர்வதேச வாய்ப்புகள்:"
-  },
-  "International Scholarships and Grants": {
-    "en": "International Scholarships and Grants",
-    "si": "ජාත්‍යන්තර ශිෂ්‍යත්ව සහ ප්‍රදාන",
-    "ta": "சர்வதேச உதவித்தொகை மற்றும் மானியங்கள்"
   },
   "Interview Preparation": {
     "en": "Interview Preparation",
@@ -2199,16 +2124,6 @@
     "si": "සම්මුඛ පරීක්ෂණ ඉඟි",
     "ta": "நேர்காணல் குறிப்புகள்"
   },
-  "Intro to IT & Coding": {
-    "en": "Intro to IT & Coding",
-    "si": "තොරතුරු තාක්ෂණ සහ කේතනය සඳහා හැඳින්වීම",
-    "ta": "IT & கோடிங் அறிமுகம்"
-  },
-  "Isira Didulatha": {
-    "en": "Isira Didulatha",
-    "si": "ඉසිර දිදුලතා",
-    "ta": "இசிர திதுலதா"
-  },
   "JAKE": {
     "en": "JAKE",
     "si": "ජේක්",
@@ -2219,15 +2134,15 @@
     "si": "JPG, PNG 5MB දක්වා",
     "ta": "JPG, PNG 5MB வரை"
   },
-  "Jake": {
-    "en": "Jake",
-    "si": "ජේක්",
-    "ta": "ஜேக்"
-  },
   "Jayewardenepura (Management), Colombo, NSBM, NIBM": {
     "en": "Jayewardenepura (Management), Colombo, NSBM, NIBM",
     "si": "ජයවර්ධනපුර (කළමනාකරණය), කොළඹ, NSBM, NIBM",
     "ta": "ஜெயவர்தனபுர (மேலாண்மை), கொழும்பு, NSBM, NIBM"
+  },
+  "Join as Student": {
+    "en": "Join as Student",
+    "si": "ශිෂ්‍යයෙකු ලෙස ඇතුල් වන්න",
+    "ta": "மாணவராக உள்நுழையவும்"
   },
   "Join hundreds of Josephians who have found their path through our counselling and career guidance unit. Your journey starts with one conversation.": {
     "en": "Join hundreds of Josephians who have found their path through our counselling and career guidance unit. Your journey starts with one conversation.",
@@ -2239,15 +2154,15 @@
     "si": "ධනාත්මක මාපියන්, විභාග ආතති සහාය, සහ ඔබේ යොවුන් වියේ මානසික සෞඛ්‍ය අවශ්‍යතා අවබෝධ කර ගැනීම වැනි මාතෘකා පිළිබඳ අපගේ වරින් වර මාපිය සැසිවලට සම්බන්ධ වන්න.",
     "ta": "நேர்மறை பெற்றோர், தேர்வு அழுத்த ஆதரவு மற்றும் உங்கள் பதின்ம வயதினரின் மனநலத் தேவைகளைப் புரிந்துகொள்வது போன்ற தலைப்புகளில் அவ்வப்போது எங்கள் பெற்றோர் அமர்வுகளில் சேரவும்."
   },
-  "Join our upcoming workshops, career fairs, leadership camps, and wellness programmes — designed to develop Josephians beyond the classroom.": {
-    "en": "Join our upcoming workshops, career fairs, leadership camps, and wellness programmes — designed to develop Josephians beyond the classroom.",
-    "si": "අපගේ ඉදිරි වැඩමුළු, වෘත්තීය ප්‍රදර්ශන, නායකත්ව කඳවුරු සහ සුවතා වැඩසටහන් වලට සම්බන්ධ වන්න - පන්ති කාමරයෙන් ඔබ්බට ජෝසප්වරුන් සංවර්ධනය කිරීමට සැලසුම් කර ඇත.",
-    "ta": "எங்கள் வரவிருக்கும் பட்டறைகள், தொழில் கண்காட்சிகள், தலைமைத்துவ முகாம்கள் மற்றும் ஆரோக்கிய திட்டங்களில் சேருங்கள் — வகுப்பறைக்கு அப்பால் ஜோசபியன்களை வளர்க்க வடிவமைக்கப்பட்டுள்ளது."
-  },
   "Josephian Journeys": {
     "en": "Josephian Journeys",
     "si": "ජෝසප් චාරිකා",
     "ta": "ஜோசஃபியன் பயணங்கள்"
+  },
+  "Josephian Legacy": {
+    "en": "Josephian Legacy",
+    "si": "ජෝශප් උරුමය",
+    "ta": "ஜோசப்வியன் பாரம்பரியம்"
   },
   "Josephian's": {
     "en": "Josephian's",
@@ -2284,30 +2199,40 @@
     "si": "ජූනි",
     "ta": "ஜூன்"
   },
-  "Keep track of crucial UGC timelines, intake months for private institutions (Jan/Sep), and international university admission deadlines.": {
-    "en": "Keep track of crucial UGC timelines, intake months for private institutions (Jan/Sep), and international university admission deadlines.",
-    "si": "තීරණාත්මක UGC කාල නියමයන්, පුද්ගලික ආයතන සඳහා ගතවන මාස (ජන/සැප්තැම්බර්) සහ ජාත්‍යන්තර විශ්ව විද්‍යාල ප්‍රවේශ කාලසීමාවන් පිළිබඳව සටහන් තබා ගන්න.",
-    "ta": "முக்கியமான யுஜிசி காலக்கெடு, தனியார் நிறுவனங்களுக்கான உட்கொள்ளும் மாதங்கள் (ஜன/செப்) மற்றும் சர்வதேச பல்கலைக்கழக சேர்க்கை காலக்கெடுவைக் கண்காணிக்கவும்."
+  "K. T. H. Gunasskara": {
+    "en": "K. T. H. Gunasskara",
+    "si": "කේ. ටී. එච්. ගුණසේකර",
+    "ta": "கே. டி. எச். குணசேகர"
+  },
+  "Kamal": {
+    "en": "Kamal",
+    "si": "කමල්",
+    "ta": "கமல்"
   },
   "Keep your information up to date for better career recommendations.": {
     "en": "Keep your information up to date for better career recommendations.",
     "si": "වඩා හොඳ වෘත්තීය නිර්දේශ සඳහා ඔබේ තොරතුරු යාවත්කාලීනව තබා ගන්න.",
     "ta": "சிறந்த தொழில் பரிந்துரைகளுக்கு உங்கள் தகவலை புதுப்பித்த நிலையில் வைத்திருங்கள்."
   },
+  "Kelani": {
+    "en": "Kelani",
+    "si": "කැළණි",
+    "ta": "களனி"
+  },
   "Kelaniya, Colombo (Sripalee), Private Media Academies": {
     "en": "Kelaniya, Colombo (Sripalee), Private Media Academies",
     "si": "කැලණිය, කොළඹ (ශ්‍රීපාලී), පෞද්ගලික මාධ්‍ය ඇකඩමි",
     "ta": "களனி, கொழும்பு (ஸ்ரீபாலி), தனியார் ஊடக அகாடமிகள்"
   },
-  "Key Information": {
-    "en": "Key Information",
-    "si": "ප්රධාන තොරතුරු",
-    "ta": "முக்கிய தகவல்"
+  "Key Degrees": {
+    "en": "Key Degrees",
+    "si": "ප්‍රධාන උපාධි",
+    "ta": "முக்கிய பட்டங்கள்"
   },
-  "Known for its state-of-the-art facilities and excellent student satisfaction. Popular among Sri Lankan students for IT and Nursing.": {
-    "en": "Known for its state-of-the-art facilities and excellent student satisfaction. Popular among Sri Lankan students for IT and Nursing.",
-    "si": "එහි අති නවීන පහසුකම් සහ විශිෂ්ට ශිෂ්‍ය තෘප්තිය සඳහා ප්‍රසිද්ධය. තොරතුරු තාක්ෂණ සහ හෙද සේවය සඳහා ශ්‍රී ලාංකික සිසුන් අතර ජනප්‍රියයි.",
-    "ta": "அதிநவீன வசதிகள் மற்றும் சிறந்த மாணவர் திருப்திக்கு பெயர் பெற்றது. IT மற்றும் தாதியர்களுக்கு இலங்கை மாணவர்கள் மத்தியில் பிரபலமானது."
+  "Knowledge Hub": {
+    "en": "Knowledge Hub",
+    "si": "දැනුම කේන්ද්‍රස්ථානය",
+    "ta": "அடுக்கு மையம்"
   },
   "LKR 100K - 1M+ (Highly dependent on clientele)": {
     "en": "LKR 100K - 1M+ (Highly dependent on clientele)",
@@ -2354,6 +2279,11 @@
     "si": "LLB උපාධිය සහ නීතීඥ (නීති විද්‍යාලය)",
     "ta": "LLB பட்டம் மற்றும் வழக்கறிஞர் (சட்டக் கல்லூரி)"
   },
+  "Language": {
+    "en": "Language",
+    "si": "භාෂාව",
+    "ta": "மொழி"
+  },
   "Languages": {
     "en": "Languages",
     "si": "භාෂා",
@@ -2364,13 +2294,18 @@
     "si": "අවසන් නම",
     "ta": "கடைசி பெயர்"
   },
+  "Latest Updates": {
+    "en": "Latest Updates",
+    "si": "නවතම පුවත්",
+    "ta": "சமீபத்திய அறிவிப்புகள்"
+  },
   "Law": {
     "en": "Law",
     "si": "නීතිය",
     "ta": "சட்டம்"
   },
-  "Law &amp; Legal Services": {
-    "en": "Law &amp; Legal Services",
+  "Law & Legal Services": {
+    "en": "Law & Legal Services",
     "si": "නීති සහ නීති සේවා",
     "ta": "சட்டம் & சட்ட சேவைகள்"
   },
@@ -2379,13 +2314,13 @@
     "si": "නායකත්වය",
     "ta": "தலைமைத்துவம்"
   },
-  "Leadership &amp; Communication Skills Camp": {
-    "en": "Leadership &amp; Communication Skills Camp",
+  "Leadership & Communication Skills Camp": {
+    "en": "Leadership & Communication Skills Camp",
     "si": "නායකත්ව සහ සන්නිවේදන කුසලතා කඳවුර",
     "ta": "தலைமை மற்றும் தகவல் தொடர்பு திறன் முகாம்"
   },
-  "Leadership &amp; Development": {
-    "en": "Leadership &amp; Development",
+  "Leadership & Development": {
+    "en": "Leadership & Development",
     "si": "නායකත්වය සහ සංවර්ධනය",
     "ta": "தலைமை மற்றும் மேம்பாடு"
   },
@@ -2394,50 +2329,55 @@
     "si": "නායකත්ව සංවර්ධනය",
     "ta": "தலைமைத்துவ வளர்ச்சி"
   },
-  "Leadership Fundamentals": {
-    "en": "Leadership Fundamentals",
-    "si": "නායකත්වයේ මූලික කරුණු",
-    "ta": "தலைமைத்துவ அடிப்படைகள்"
-  },
-  "Leadership Positions": {
-    "en": "Leadership Positions",
-    "si": "නායකත්ව තනතුරු",
-    "ta": "தலைமை பதவிகள்"
-  },
   "Leadership camps, public speaking training, and extracurricular development programmes that equip students with 21st-century soft skills.": {
     "en": "Leadership camps, public speaking training, and extracurricular development programmes that equip students with 21st-century soft skills.",
     "si": "21 වැනි සියවසේ මෘදු කුසලතා සහිත සිසුන් සන්නද්ධ කරන නායකත්ව කඳවුරු, ප්‍රසිද්ධ කථන පුහුණුව සහ විෂය බාහිර සංවර්ධන වැඩසටහන්.",
     "ta": "தலைமைத்துவ முகாம்கள், பொதுப் பேச்சுப் பயிற்சி மற்றும் 21ஆம் நூற்றாண்டின் மென் திறன்களைக் கொண்ட மாணவர்களைச் சித்தப்படுத்தும் சாராத மேம்பாட்டுத் திட்டங்கள்."
+  },
+  "Leadership, drill and national service": {
+    "en": "Leadership, drill and national service",
+    "si": "නායකත්වය, සරඹ පුහුණුව සහ ජාතික සේවය",
+    "ta": "தலைமைத்துவம், பயிற்சி மற்றும் தேசிய சேவை"
+  },
+  "Leading International Universities": {
+    "en": "Leading International Universities",
+    "si": "ප්‍රමුඛ පෙළේ ජාත්‍යන්තර විශ්වවිද්‍යාල",
+    "ta": "முன்னணி சர்வதேச பல்கலைக்கழகங்கள்"
+  },
+  "Leading St. Joseph's College, Anuradhapura — overseeing academic excellence, discipline, and the welfare of every Josephian across the school's five sections.": {
+    "en": "Leading St. Joseph's College, Anuradhapura — overseeing academic excellence, discipline, and the welfare of every Josephian across the school's five sections.",
+    "si": "ශාන්ත ජෝශප් විද්‍යාලය, අනුරාධපුරය මෙහෙයවීම — විද්‍යාලයේ අංශ පහේම සියලුම ජෝශප්වරුන්ගේ අධ්‍යයන විශිෂ්ටත්වය, විනය සහ සුභසාධනය අධීක්ෂණය කිරීම.",
+    "ta": "அனுராதபுரம் செயின்ட் ஜோசப் கல்லூரியை வழிநடத்துதல் — பள்ளியின் ஐந்து பிரிவுகளிலும் கல்வித் தரம், ஒழுக்கம் மற்றும் ஒவ்வொரு ஜோசப்வியனின் நலனையும் மேற்பார்வை செய்தல்."
   },
   "Learn More": {
     "en": "Learn More",
     "si": "තවත් හදාරන්න",
     "ta": "மேலும் அறிக"
   },
-  "Learn about our confidential counselling sessions — what they cover, how they work, and how they help your child navigate personal and academic challenges.": {
-    "en": "Learn about our confidential counselling sessions — what they cover, how they work, and how they help your child navigate personal and academic challenges.",
+  "Learn about our confidential counselling sessions – what they cover, how they work, and how they help your child navigate personal and academic challenges.": {
+    "en": "Learn about our confidential counselling sessions – what they cover, how they work, and how they help your child navigate personal and academic challenges.",
     "si": "අපගේ රහස්‍ය උපදේශන සැසි ගැන ඉගෙන ගන්න - ඒවා ආවරණය කරන දේ, ඔවුන් ක්‍රියා කරන ආකාරය සහ ඒවා ඔබේ දරුවාට පුද්ගලික සහ ශාස්ත්‍රීය අභියෝග සැරිසැරීමට උදවු කරන ආකාරය ගැන ඉගෙන ගන්න.",
     "ta": "எங்கள் ரகசிய ஆலோசனை அமர்வுகள் - அவை எதை உள்ளடக்குகின்றன, அவை எவ்வாறு செயல்படுகின்றன, மேலும் அவை உங்கள் பிள்ளையின் தனிப்பட்ட மற்றும் கல்வி சார்ந்த சவால்களுக்கு எவ்வாறு உதவுகின்றன என்பதைப் பற்றி அறிந்து கொள்ளுங்கள்."
-  },
-  "Learning & Growth": {
-    "en": "Learning & Growth",
-    "si": "ඉගෙනීම සහ වර්ධනය",
-    "ta": "கற்றல் மற்றும் வளர்ச்சி"
-  },
-  "Learning &amp; Growth": {
-    "en": "Learning &amp; Growth",
-    "si": "ඉගෙනීම සහ වර්ධනය",
-    "ta": "கற்றல் மற்றும் வளர்ச்சி"
   },
   "Learning difficulties and focus challenges": {
     "en": "Learning difficulties and focus challenges",
     "si": "ඉගෙනීමේ දුෂ්කරතා සහ අවධානය යොමු කිරීමේ අභියෝග",
     "ta": "கற்றல் சிரமங்கள் மற்றும் கவனம் சவால்கள்"
   },
-  "Let us know what topics matter to you — we design programmes based on student needs.": {
-    "en": "Let us know what topics matter to you — we design programmes based on student needs.",
+  "Legends": {
+    "en": "Legends",
+    "si": "ලෙජන්ඩ්ස්",
+    "ta": "புராணங்கள்"
+  },
+  "Let us know what topics matter to you – we design programmes based on student needs.": {
+    "en": "Let us know what topics matter to you – we design programmes based on student needs.",
     "si": "ඔබට වැදගත් වන මාතෘකා මොනවාදැයි අපට දන්වන්න - අපි ශිෂ්‍ය අවශ්‍යතා මත පදනම්ව වැඩසටහන් සැලසුම් කරමු.",
     "ta": "உங்களுக்கு என்ன தலைப்புகள் முக்கியம் என்பதை எங்களுக்குத் தெரியப்படுத்துங்கள் - மாணவர்களின் தேவைகளின் அடிப்படையில் நாங்கள் திட்டங்களை வடிவமைக்கிறோம்."
+  },
+  "Life at SJC": {
+    "en": "Life at SJC",
+    "si": "විද්‍යාලයීය ජීවිතය",
+    "ta": "SJC பள்ளி வாழ்க்கை"
   },
   "Limit social media use to less than 1 hour per day during term": {
     "en": "Limit social media use to less than 1 hour per day during term",
@@ -2449,40 +2389,40 @@
     "si": "අසීමිත (ව්‍යාපාර සාර්ථකත්වය සහ සාධාරණත්වය මත රඳා පවතී)",
     "ta": "வரம்பற்றது (வணிக வெற்றி மற்றும் சமபங்கு சார்ந்தது)"
   },
-  "List education in reverse chronological order &mdash; A/Ls, O/Ls, primary school": {
-    "en": "List education in reverse chronological order &mdash; A/Ls, O/Ls, primary school",
+  "List education in reverse chronological order — A/Ls, O/Ls, primary school": {
+    "en": "List education in reverse chronological order — A/Ls, O/Ls, primary school",
     "si": "ප්‍රතිලෝම කාලානුක්‍රමික අනුපිළිවෙලට අධ්‍යාපනය ලැයිස්තුගත කරන්න - උ/පෙළ, සා/පෙළ, ප්‍රාථමික පාසල",
     "ta": "தலைகீழ் காலவரிசைப்படி கல்வியை பட்டியலிடுங்கள் — A/Ls, O/Ls, ஆரம்ப பள்ளி"
   },
-  "Loading events...": {
-    "en": "Loading events...",
-    "si": "සිදුවීම් පූරණය වෙමින්...",
-    "ta": "நிகழ்வுகளை ஏற்றுகிறது..."
+  "Live updates, photos, and announcements from the Counselling & Career Guidance Unit – posted directly by our team.": {
+    "en": "Live updates, photos, and announcements from the Counselling & Career Guidance Unit – posted directly by our team.",
+    "si": "උපදේශන සහ වෘත්තීය මාර්ගෝපදේශන ඒකකයෙන් සජීවී යාවත්කාලීන කිරීම්, ඡායාරූප සහ නිවේදන – අපගේ කණ්ඩායම විසින් සෘජුවම පළ කරනු ලැබේ.",
+    "ta": "ஆலோசனை & தொழில் வழிகாட்டல் பிரிவில் இருந்து நேரடி அறிவிப்புகள், புகைப்படங்கள் மற்றும் செய்திகள் – எங்கள் குழுவால் நேரடியாகப் பதிவேற்றப்படும்."
   },
-  "Local Higher Ed": {
-    "en": "Local Higher Ed",
-    "si": "දේශීය උසස් එඩ්",
-    "ta": "உள்ளூர் உயர் எட்"
-  },
-  "Located in the heart of the capital city, it is renowned for Medicine, Law, Science, and Management. Highly prestigious state university.": {
-    "en": "Located in the heart of the capital city, it is renowned for Medicine, Law, Science, and Management. Highly prestigious state university.",
-    "si": "අගනුවර මධ්‍යයේ පිහිටා ඇති එය වෛද්‍ය විද්‍යාව, නීතිය, විද්‍යාව සහ කළමනාකරණය සඳහා ප්‍රසිද්ධය. ඉතා කීර්තිමත් රාජ්ය විශ්ව විද්යාලය.",
-    "ta": "தலைநகரின் மையப்பகுதியில் அமைந்துள்ள இது மருத்துவம், சட்டம், அறிவியல் மற்றும் மேலாண்மைக்கு புகழ்பெற்றது. மிகவும் மதிப்புமிக்க மாநில பல்கலைக்கழகம்."
-  },
-  "Located in the historic city of Mihintale, this university offers comprehensive degrees in Medicine, Agriculture, Applied Sciences, and Management.": {
-    "en": "Located in the historic city of Mihintale, this university offers comprehensive degrees in Medicine, Agriculture, Applied Sciences, and Management.",
-    "si": "ඓතිහාසික මිහින්තලේ නගරයේ පිහිටා ඇති මෙම විශ්වවිද්‍යාලය වෛද්‍ය විද්‍යාව, කෘෂිකර්මය, ව්‍යවහාරික විද්‍යාව සහ කළමනාකරණය පිළිබඳ පුළුල් උපාධි පිරිනමයි.",
-    "ta": "வரலாற்று நகரமான மிஹிந்தலையில் அமைந்துள்ள இப்பல்கலைக்கழகம் மருத்துவம், விவசாயம், பயன்பாட்டு விஞ்ஞானம் மற்றும் முகாமைத்துவம் ஆகியவற்றில் விரிவான பட்டங்களை வழங்குகிறது."
+  "Location": {
+    "en": "Location",
+    "si": "ස්ථානය",
+    "ta": "இடம்"
   },
   "Logic, Political Science, Languages, History": {
     "en": "Logic, Political Science, Languages, History",
     "si": "තර්කය, දේශපාලන විද්‍යාව, භාෂා, ඉතිහාසය",
     "ta": "தர்க்கம், அரசியல் அறிவியல், மொழிகள், வரலாறு"
   },
-  "Logout": {
-    "en": "Logout",
-    "si": "පිටවීම",
-    "ta": "வெளியேறு"
+  "Longest river": {
+    "en": "Longest river",
+    "si": "ශ්‍රී ලංකාවේ දිගම ගඟ",
+    "ta": "நீளமான நதி"
+  },
+  "Lusanda Yehen": {
+    "en": "Lusanda Yehen",
+    "si": "ලුසඳ යෙහෙන්",
+    "ta": "லுசந்த யெஹென்"
+  },
+  "M. A. A. Silva": {
+    "en": "M. A. A. Silva",
+    "si": "එම්. ඒ. ඒ. සිල්වා",
+    "ta": "எம். ஏ. ஏ. சில்வா"
   },
   "M.Sc. Psychology": {
     "en": "M.Sc. Psychology",
@@ -2494,6 +2434,11 @@
     "si": "MBBS, MD හෝ ඊට සමාන වෛද්‍ය උපාධිය, SLMC ලියාපදිංචිය",
     "ta": "MBBS, MD அல்லது அதற்கு சமமான மருத்துவப் பட்டம், SLMC பதிவு"
   },
+  "Mahaweli": {
+    "en": "Mahaweli",
+    "si": "මහවැලි",
+    "ta": "மகாவலி"
+  },
   "Maintain a consistent bedtime and wake-up time": {
     "en": "Maintain a consistent bedtime and wake-up time",
     "si": "ස්ථාවර නින්දට යන වේලාවක් සහ අවදි වන වේලාවක් පවත්වා ගන්න",
@@ -2504,10 +2449,30 @@
     "si": "පිළිතුරු දීමට පෙර ඇස් සම්බන්ධතා පවත්වා ගෙන හොඳින් සවන් දෙන්න",
     "ta": "பதில் சொல்வதற்கு முன் கண் தொடர்பு வைத்து கவனமாகக் கேளுங்கள்"
   },
-  "Mandatory subject prerequisites": {
-    "en": "Mandatory subject prerequisites",
-    "si": "අනිවාර්ය විෂය පූර්වාවශ්යතාවයන්",
-    "ta": "கட்டாய பாட முன்நிபந்தனைகள்"
+  "Maithripala Senanayake": {
+    "en": "Maithripala Senanayake",
+    "si": "මෛත්‍රීපාල සේනානායක",
+    "ta": "மைத்திரிபால சேனநாயக்க"
+  },
+  "Making": {
+    "en": "Making",
+    "si": "නිර්මාණය කිරීම",
+    "ta": "உருவாக்குதல்"
+  },
+  "Malwathu": {
+    "en": "Malwathu",
+    "si": "මල්වතු",
+    "ta": "மல்வத்து"
+  },
+  "Management passes from the Catholic Church to the state; J. G. Jayasuriya is appointed the college's first principal.": {
+    "en": "Management passes from the Catholic Church to the state; J. G. Jayasuriya is appointed the college's first principal.",
+    "si": "විද්‍යාලයීය කළමනාකරණය කතෝලික සභාවෙන් රජයට පැවරේ; ජේ. ජී. ජයසූරිය මහතා විද්‍යාලයේ ප්‍රථම විදුහල්පතිවරයා ලෙස පත් කරනු ලැබේ.",
+    "ta": "நிர்வாகம் கத்தோலிக்க திருச்சபையிடமிருந்து அரசிடம் ஒப்படைக்கப்படுகிறது; ஜே. ஜி. ஜெயசூரியா கல்லூரியின் முதல் அதிபராக நியமிக்கப்படுகிறார்."
+  },
+  "Manik": {
+    "en": "Manik",
+    "si": "මැණික්",
+    "ta": "மெனிக்"
   },
   "Marketing": {
     "en": "Marketing",
@@ -2518,11 +2483,6 @@
     "en": "Massive demand in Middle East, Australia (Civil/Mining), and Europe",
     "si": "මැද පෙරදිග, ඕස්ට්‍රේලියාව (සිවිල්/පතල්), සහ යුරෝපයේ දැවැන්ත ඉල්ලුම",
     "ta": "மத்திய கிழக்கு, ஆஸ்திரேலியா (சிவில்/மைனிங்) மற்றும் ஐரோப்பாவில் பாரிய தேவை"
-  },
-  "Matching A/L subjects to degree programs": {
-    "en": "Matching A/L subjects to degree programs",
-    "si": "උසස් පෙළ විෂයයන් උපාධි වැඩසටහන් වලට ගැලපීම",
-    "ta": "A/L பாடங்களை பட்டப்படிப்புகளுக்கு பொருத்துதல்"
   },
   "Mathematics": {
     "en": "Mathematics",
@@ -2539,18 +2499,13 @@
     "si": "යාන්ත්රික",
     "ta": "இயந்திரவியல்"
   },
-  "Medal": {
-    "en": "Medal",
-    "si": "පදක්කම",
-    "ta": "பதக்கம்"
-  },
   "Media": {
     "en": "Media",
     "si": "මාධ්ය",
     "ta": "ஊடகம்"
   },
-  "Media &amp; Communications": {
-    "en": "Media &amp; Communications",
+  "Media & Communications": {
+    "en": "Media & Communications",
     "si": "මාධ්ය සහ සන්නිවේදනය",
     "ta": "மீடியா & தகவல் தொடர்பு"
   },
@@ -2564,8 +2519,8 @@
     "si": "ඖෂධය",
     "ta": "மருந்து"
   },
-  "Medicine &amp; Surgery": {
-    "en": "Medicine &amp; Surgery",
+  "Medicine & Surgery": {
+    "en": "Medicine & Surgery",
     "si": "ඖෂධ සහ සැත්කම්",
     "ta": "மருத்துவம் & அறுவை சிகிச்சை"
   },
@@ -2584,6 +2539,11 @@
     "si": "මානසික",
     "ta": "மனரீதியான"
   },
+  "Mental Health Helpline – Sri Lanka": {
+    "en": "Mental Health Helpline – Sri Lanka",
+    "si": "මානසික සෞඛ්‍ය උපකාරක සේවාව - ශ්‍රී ලංකාව",
+    "ta": "மனநல ஹெல்ப்லைன் - இலங்கை"
+  },
   "Mental Health Helpline — Sri Lanka": {
     "en": "Mental Health Helpline — Sri Lanka",
     "si": "මානසික සෞඛ්‍ය උපකාරක සේවාව - ශ්‍රී ලංකාව",
@@ -2599,6 +2559,11 @@
     "si": "මානසික සුවතා වැඩසටහන්",
     "ta": "மனநலத் திட்டங்கள்"
   },
+  "Mental Wellness Resources – SJC Counselling": {
+    "en": "Mental Wellness Resources – SJC Counselling",
+    "si": "මානසික සුවතා සම්පත් - SJC උපදේශනය",
+    "ta": "மனநல வளங்கள் - SJC ஆலோசனை"
+  },
   "Mental Wellness Resources — SJC Counselling": {
     "en": "Mental Wellness Resources — SJC Counselling",
     "si": "මානසික සුවතා සම්පත් - SJC උපදේශනය",
@@ -2608,6 +2573,11 @@
     "en": "Mental Wellness Support",
     "si": "මානසික සුවතා සහාය",
     "ta": "மனநல ஆதரவு"
+  },
+  "Min. 6 characters": {
+    "en": "Min. 6 characters",
+    "si": "අවම වශයෙන් අක්ෂර 6ක්",
+    "ta": "குறைந்தது 6 எழுத்துக்கள்"
   },
   "Mindfulness": {
     "en": "Mindfulness",
@@ -2624,25 +2594,15 @@
     "si": "අමාත්‍යාංශ, තානාපති කාර්යාල, හමුදා ඇකඩමි (KDU/දියතලාව)",
     "ta": "அமைச்சுக்கள், தூதரகங்கள், இராணுவ அகாடமிகள் (KDU/தியத்தலாவ)"
   },
-  "Monash College Foundation Year (12 months)": {
-    "en": "Monash College Foundation Year (12 months)",
-    "si": "මොනෑෂ් විද්‍යාලයේ පදනම් වර්ෂය (මාස 12)",
-    "ta": "மோனாஷ் கல்லூரி நிறுவப்பட்ட ஆண்டு (12 மாதங்கள்)"
-  },
-  "Monash University (Australia)": {
-    "en": "Monash University (Australia)",
-    "si": "මොනෑෂ් විශ්ව විද්‍යාලය (ඕස්ට්‍රේලියාව)",
-    "ta": "மோனாஷ் பல்கலைக்கழகம் (ஆஸ்திரேலியா)"
-  },
-  "Monday – Friday, 7:50 AM – 1:30 PM": {
-    "en": "Monday – Friday, 7:50 AM – 1:30 PM",
+  "Monday — Friday, 7:50 AM — 1:30 PM": {
+    "en": "Monday — Friday, 7:50 AM — 1:30 PM",
     "si": "සඳුදා - සිකුරාදා, 7:50 AM - 1:30 PM",
     "ta": "திங்கள் - வெள்ளி, 7:50 AM - 1:30 PM"
   },
-  "Mon–Fri, 7:50 AM – 1:30 PM": {
-    "en": "Mon–Fri, 7:50 AM – 1:30 PM",
-    "si": "සඳු-සිකු, 7:50 AM - 1:30 PM",
-    "ta": "திங்கள்-வெள்ளி, 7:50 AM - 1:30 PM"
+  "Mon—Fri, 7:30 AM — 4:00 PM": {
+    "en": "Mon—Fri, 7:30 AM — 4:00 PM",
+    "si": "සඳුදා — සිකුරාදා, පෙ.ව. 7:30 — ප.ව. 4:00",
+    "ta": "திங்கள் — வெள்ளி, மு.ப. 7:30 — பி.ப. 4:00"
   },
   "Moratuwa (Architecture/Design), AOD, AMDT": {
     "en": "Moratuwa (Architecture/Design), AOD, AMDT",
@@ -2689,6 +2649,11 @@
     "si": "NF",
     "ta": "NF"
   },
+  "National School Status": {
+    "en": "National School Status",
+    "si": "ජාතික පාසල් තත්ත්වය",
+    "ta": "தேசிய பள்ளி அந்தஸ்து"
+  },
   "Navigate your": {
     "en": "Navigate your",
     "si": "ඔබගේ සංචාලනය කරන්න",
@@ -2709,16 +2674,6 @@
     "si": "හදිසි උදව් අවශ්‍යද?",
     "ta": "அவசர உதவி தேவையா?"
   },
-  "Nervous": {
-    "en": "Nervous",
-    "si": "ස්නායු",
-    "ta": "நரம்புத்தளர்ச்சி"
-  },
-  "New Password": {
-    "en": "New Password",
-    "si": "නව මුරපදය",
-    "ta": "புதிய கடவுச்சொல்"
-  },
   "Next Affirmation": {
     "en": "Next Affirmation",
     "si": "ඊළඟ තහවුරු කිරීම",
@@ -2734,20 +2689,20 @@
     "si": "ගොනුවක් තෝරා නැත",
     "ta": "கோப்பு எதுவும் தேர்ந்தெடுக்கப்படவில்லை"
   },
-  "No leadership roles added.": {
-    "en": "No leadership roles added.",
-    "si": "නායකත්ව භූමිකාවන් එකතු කර නැත.",
-    "ta": "தலைமைப் பாத்திரங்கள் எதுவும் சேர்க்கப்படவில்லை."
-  },
-  "No records added yet. Add your club memberships or volunteer work!": {
-    "en": "No records added yet. Add your club memberships or volunteer work!",
-    "si": "තවමත් වාර්තා එකතු කර නැත. ඔබේ සමාජ ශාලාවේ සාමාජිකත්වය හෝ ස්වේච්ඡා සේවය එක් කරන්න!",
-    "ta": "இதுவரை பதிவுகள் எதுவும் சேர்க்கப்படவில்லை. உங்கள் கிளப் உறுப்பினர்களை அல்லது தன்னார்வப் பணியைச் சேர்க்கவும்!"
-  },
   "No skills added yet.": {
     "en": "No skills added yet.",
     "si": "තවම කුසලතා එකතු කර නැත.",
     "ta": "இன்னும் திறமைகள் சேர்க்கப்படவில்லை."
+  },
+  "No universities match your search.": {
+    "en": "No universities match your search.",
+    "si": "ඔබේ සෙවීමට ගැළපෙන විශ්වවිද්‍යාල කිසිවක් හමු නොවීය.",
+    "ta": "உங்கள் தேடலுக்குப் பொருந்தக்கூடிய பல்கலைக்கழகங்கள் எதுவும் இல்லை."
+  },
+  "No updates yet": {
+    "en": "No updates yet",
+    "si": "තවමත් නවතම තොරතුරු නොමැත",
+    "ta": "இதுவரை அறிவிப்புகள் இல்லை"
   },
   "None strictly required, but Business/Tech degrees help": {
     "en": "None strictly required, but Business/Tech degrees help",
@@ -2759,10 +2714,10 @@
     "si": "තවම විශ්වාස නැද්ද?",
     "ta": "இன்னும் உறுதியாக தெரியவில்லையா?"
   },
-  "Not selected": {
-    "en": "Not selected",
-    "si": "තෝරා නැත",
-    "ta": "தேர்ந்தெடுக்கப்படவில்லை"
+  "Not sure what career path is right for you?": {
+    "en": "Not sure what career path is right for you?",
+    "si": "ඔබට ගැළපෙන වෘත්තීය මාවත කුමක්දැයි තවමත් අවිශ්වාසද?",
+    "ta": "உங்களுக்கு எந்தத் தொழில் பாதை சரியானது என்று தெரியவில்லையா?"
   },
   "Not sure which A/L stream to choose? Each stream opens different career doors. Here's a quick guide to help you decide.": {
     "en": "Not sure which A/L stream to choose? Each stream opens different career doors. Here's a quick guide to help you decide.",
@@ -2774,6 +2729,11 @@
     "si": "තවම තෝරා නැත",
     "ta": "இன்னும் தேர்ந்தெடுக்கப்படவில்லை"
   },
+  "Notable Josephians": {
+    "en": "Notable Josephians",
+    "si": "ප්‍රමුඛ ජෝශප්වරුන්",
+    "ta": "குறிப்பிடத்தக்க ஜோசப்வியன்கள்"
+  },
   "Now studying Engineering at University of Moratuwa": {
     "en": "Now studying Engineering at University of Moratuwa",
     "si": "දැන් මොරටුව විශ්වවිද්‍යාලයේ ඉංජිනේරු විද්‍යාව හදාරනවා",
@@ -2784,10 +2744,10 @@
     "si": "හෙද සේවය",
     "ta": "நர்சிங்"
   },
-  "Nursing, IT, Cyber Security, Commerce": {
-    "en": "Nursing, IT, Cyber Security, Commerce",
-    "si": "හෙද, තොරතුරු තාක්ෂණ, සයිබර් ආරක්ෂාව, වාණිජ",
-    "ta": "நர்சிங், ஐடி, சைபர் செக்யூரிட்டி, வர்த்தகம்"
+  "Nurturing every talent": {
+    "en": "Nurturing every talent",
+    "si": "සෑම සහජ දක්ෂතාවයක්ම පෝෂණය කිරීම",
+    "ta": "ஒவ்வொரு திறமையையும் வளர்த்தல்"
   },
   "Nuwan Fernando": {
     "en": "Nuwan Fernando",
@@ -2799,20 +2759,50 @@
     "si": "O/L & A/L අවධානය",
     "ta": "O/L & A/L கவனம்"
   },
-  "O/L entry pathways (Post O/L)": {
-    "en": "O/L entry pathways (Post O/L)",
-    "si": "සා/පෙළ ප්‍රවේශ මාර්ග (සා.පෙළ පසු)",
-    "ta": "O/L நுழைவுப் பாதைகள் (O/Lக்குப் பின்)"
+  "Offered": {
+    "en": "Offered",
+    "si": "පිරිනමනු ලැබේ",
+    "ta": "வழங்கப்படுகிறது"
+  },
+  "Official Website": {
+    "en": "Official Website",
+    "si": "නිල වෙබ් අඩවිය",
+    "ta": "அதிகாரப்பூர்வ இணையதளம்"
+  },
+  "Officially Founded": {
+    "en": "Officially Founded",
+    "si": "නිල වශයෙන් ආරම්භ කරන ලදී",
+    "ta": "அதிகாரப்பூர்வமாக நிறுவப்பட்டது"
+  },
+  "Old Boys' Association": {
+    "en": "Old Boys' Association",
+    "si": "ආදි ශිෂ්‍ය සංගමය",
+    "ta": "பழைய மாணவர் சங்கம்"
+  },
+  "On 19 March, Bishop Henri Joulain of Jaffna registers the school as a public English school, named after St. Joseph's Church.": {
+    "en": "On 19 March, Bishop Henri Joulain of Jaffna registers the school as a public English school, named after St. Joseph's Church.",
+    "si": "මාර්තු 19 වන දින, යාපනයේ හෙන්රි ජූලේන් රදගුරුතුමා විසින් පාසල ශාන්ත ජෝශප් දේවස්ථානය නමින් රජයේ ඉංග්‍රීසි පාසලක් ලෙස ලියාපදිංචි කරයි.",
+    "ta": "மார்ச் 19 அன்று, யாழ்ப்பாண ஆயர் ஹென்றி ஜுலெய்ன் இப்பாடசாலையை செயின்ட் ஜோசப் தேவாலயத்தின் பெயரில் ஒரு பொது ஆங்கிலப் பள்ளியாகப் பதிவு செய்கிறார்."
   },
   "On exam day: breathe deeply, read questions twice, start with what you know": {
     "en": "On exam day: breathe deeply, read questions twice, start with what you know",
     "si": "විභාග දිනයේදී: ගැඹුරින් හුස්ම ගන්න, ප්රශ්න දෙවරක් කියවන්න, ඔබ දන්නා දේ සමඟ ආරම්භ කරන්න",
     "ta": "பரீட்சை நாளில்: ஆழமாக சுவாசிக்கவும், கேள்விகளை இரண்டு முறை படிக்கவும், உங்களுக்குத் தெரிந்ததைத் தொடங்கவும்"
   },
-  "One of the top-ranked universities in the world. Requires excellent academic standing and provides world-class research opportunities.": {
-    "en": "One of the top-ranked universities in the world. Requires excellent academic standing and provides world-class research opportunities.",
-    "si": "ලෝකයේ ඉහළම ශ්‍රේණිගත විශ්ව විද්‍යාල වලින් එකකි. විශිෂ්ට අධ්‍යයන ස්ථාවරයක් අවශ්‍ය වන අතර ලෝක මට්ටමේ පර්යේෂණ අවස්ථා සපයයි.",
-    "ta": "உலகின் முதல் தரவரிசைப் பல்கலைக்கழகங்களில் ஒன்று. சிறந்த கல்வி நிலை தேவை மற்றும் உலகத்தரம் வாய்ந்த ஆராய்ச்சி வாய்ப்புகளை வழங்குகிறது."
+  "On the field, on the board, and in uniform – Josephians grow through discipline, teamwork, and service.": {
+    "en": "On the field, on the board, and in uniform – Josephians grow through discipline, teamwork, and service.",
+    "si": "ක්‍රීඩා පිටියේදී, චෙස් පුවරුවේදී සහ නිල ඇඳුමින් සැරසී – ජෝශප්වරුන් විනය, කණ්ඩායම් හැඟීම සහ සේවය තුළින් වර්ධනය වේ.",
+    "ta": "விளையாட்டு மைதானத்திலும், சதுரங்கப் பலகையிலும், சீருடையிலும் – ஜோசப்வியன்கள் ஒழுக்கம், குழுப்பணி மற்றும் சேவையின் மூலம் வளர்கிறார்கள்."
+  },
+  "Once approved, return here and sign in with the email and password you registered with.": {
+    "en": "Once approved, return here and sign in with the email and password you registered with.",
+    "si": "අනුමත වූ පසු, නැවත මෙහි පැමිණ ඔබ ලියාපදිංචි වූ විද්‍යුත් තැපෑල සහ මුරපදය භාවිතා කර ඇතුල් වන්න.",
+    "ta": "அனுமதிக்கப்பட்டதும், இங்கே திரும்பி வந்து நீங்கள் பதிவு செய்த மின்னஞ்சல் மற்றும் கடவுச்சொல்லைப் பயன்படுத்தி உள்நுழையவும்."
+  },
+  "One of Sri Lanka's premier national schools, recognized for consistent academic excellence at O/L and A/L examinations nationwide.": {
+    "en": "One of Sri Lanka's premier national schools, recognized for consistent academic excellence at O/L and A/L examinations nationwide.",
+    "si": "සාමාන්‍ය පෙළ සහ උසස් පෙළ විභාගවලින් ජාතික මට්ටමින් විශිෂ්ට අධ්‍යයන ප්‍රතිඵල අඛණ්ඩව ලබා ගන්නා ශ්‍රී ලංකාවේ ප්‍රමුඛ පෙළේ ජාතික පාසලකි.",
+    "ta": "நாடளாவிய ரீதியில் O/L மற்றும் A/L பரீட்சைகளில் தொடர்ச்சியான கல்விச் சிறப்பிற்காக அங்கீகரிக்கப்பட்ட இலங்கையின் முதன்மையான தேசிய பள்ளிகளில் ஒன்று."
   },
   "One-to-one sessions in a safe, confidential space for students dealing with personal, emotional, or social challenges affecting their school life.": {
     "en": "One-to-one sessions in a safe, confidential space for students dealing with personal, emotional, or social challenges affecting their school life.",
@@ -2838,6 +2828,21 @@
     "en": "Our Foundation",
     "si": "අපේ පදනම",
     "ta": "எங்கள் அறக்கட்டளை"
+  },
+  "Our Heritage": {
+    "en": "Our Heritage",
+    "si": "අපගේ උරුමය",
+    "ta": "எங்கள் பாரம்பரியம்"
+  },
+  "Our Journey": {
+    "en": "Our Journey",
+    "si": "අපගේ ගමන",
+    "ta": "எங்கள் பயணம்"
+  },
+  "Our Leadership": {
+    "en": "Our Leadership",
+    "si": "අපගේ නායකත්වය",
+    "ta": "எங்கள் தலைமை"
   },
   "Our Mission": {
     "en": "Our Mission",
@@ -2879,15 +2884,35 @@
     "si": "අපගේ උපදේශන ඒකකය සෑම ජෝසප් ජාතිකයෙකුටම ඔවුන්ට දියුණු වීමට අවශ්‍ය සහය ලැබෙන බව සහතික කිරීම සඳහා දෙමාපියන් සමඟ සමීපව කටයුතු කරයි.",
     "ta": "ஒவ்வொரு ஜோசபியனும் செழிக்கத் தேவையான ஆதரவைப் பெறுவதை உறுதிசெய்ய, எங்கள் ஆலோசனைப் பிரிவு பெற்றோருடன் நெருக்கமாகச் செயல்படுகிறது."
   },
+  "Our counsellors are trained to listen without judgement. Book a free, confidential session today.": {
+    "en": "Our counsellors are trained to listen without judgement. Book a free, confidential session today.",
+    "si": "අපගේ උපදේශකයන් කිසිදු විනිශ්චයකින් තොරව ඔබට ඇහුම්කන් දීමට පුහුණු කර ඇත. අදම නොමිලේ, රහස්‍ය උපදේශන වාරයක් වෙන්කරවා ගන්න.",
+    "ta": "எங்கள் ஆலோசகர்கள் உங்களை எவ்வித பாகுபாடுமின்றி கவனிக்க பயிற்சி பெற்றவர்கள். இன்று ஒரு இலவச, ரகசிய ஆலோசனையை முன்பதிவு செய்யுங்கள்."
+  },
+  "Our counsellors will help you discover the path that matches your talents, interests, and ambitions.": {
+    "en": "Our counsellors will help you discover the path that matches your talents, interests, and ambitions.",
+    "si": "ඔබේ කුසලතා, රුචිකත්වයන් සහ අභිලාෂයන්ට ගැළපෙන නිවැරදි මාවත සොයා ගැනීමට අපගේ උපදේශකයින් ඔබට උපකාර කරනු ඇත.",
+    "ta": "உங்கள் திறமைகள், ஆர்வங்கள் மற்றும் லட்சியங்களுக்குப் பொருந்தக்கூடிய பாதையைக் கண்டறிய எங்கள் ஆலோசகர்கள் உங்களுக்கு உதவுவார்கள்."
+  },
   "Our dedicated team of professionally trained counsellors and educators are here for every student.": {
     "en": "Our dedicated team of professionally trained counsellors and educators are here for every student.",
     "si": "සෑම සිසුවෙකු සඳහාම අපගේ කැපවූ වෘත්තීය පුහුණු උපදේශකයින් සහ අධ්‍යාපනඥයින් කණ්ඩායම මෙහි සිටී.",
     "ta": "ஒவ்வொரு மாணவருக்கும் தொழில்ரீதியாக பயிற்சி பெற்ற ஆலோசகர்கள் மற்றும் கல்வியாளர்களின் அர்ப்பணிப்புள்ள குழு இங்கே உள்ளது."
   },
-  "Our events are designed for active participation — not just passive listening. From interactive workshops to outdoor leadership camps, every programme is built to give you skills, connections, and confidence that last well beyond school.": {
-    "en": "Our events are designed for active participation — not just passive listening. From interactive workshops to outdoor leadership camps, every programme is built to give you skills, connections, and confidence that last well beyond school.",
+  "Our events are designed for active participation – not just passive listening. From interactive workshops to outdoor leadership camps, every programme is built to give you skills, connections, and confidence that last well beyond school.": {
+    "en": "Our events are designed for active participation – not just passive listening. From interactive workshops to outdoor leadership camps, every programme is built to give you skills, connections, and confidence that last well beyond school.",
     "si": "අපගේ සිදුවීම් සක්‍රිය සහභාගීත්වය සඳහා නිර්මාණය කර ඇත - නිෂ්ක්‍රීය සවන්දීම පමණක් නොවේ. අන්තර්ක්‍රියාකාරී වැඩමුළුවල සිට එළිමහන් නායකත්ව කඳවුරු දක්වා, සෑම වැඩසටහනක්ම ගොඩනඟා ඇත්තේ ඔබට පාසලෙන් ඔබ්බට පවතින කුසලතා, සම්බන්ධතා සහ විශ්වාසය ලබා දීම සඳහා ය.",
     "ta": "எங்கள் நிகழ்வுகள் செயலில் பங்கேற்பதற்காக வடிவமைக்கப்பட்டுள்ளன - செயலற்ற முறையில் கேட்பது மட்டுமல்ல. ஊடாடும் பட்டறைகள் முதல் வெளிப்புற தலைமைத்துவ முகாம்கள் வரை, ஒவ்வொரு திட்டமும் உங்களுக்கு திறன்கள், இணைப்புகள் மற்றும் பள்ளிக்கு அப்பால் நீடிக்கும் நம்பிக்கையை வழங்குவதற்காக கட்டமைக்கப்பட்டுள்ளது."
+  },
+  "Our graduates serve as ministers, doctors, engineers, and leaders across Sri Lanka and the world.": {
+    "en": "Our graduates serve as ministers, doctors, engineers, and leaders across Sri Lanka and the world.",
+    "si": "අපගේ ආදි සිසුන් ශ්‍රී ලංකාව සහ මුළු ලොව පුරා අමාත්‍යවරුන්, වෛද්‍යවරුන්, ඉංජිනේරුවන් සහ නායකයන් ලෙස සේවය කරති.",
+    "ta": "எங்கள் பழைய மாணவர்கள் இலங்கை மற்றும் உலகம் முழுவதும் அமைச்சர்களாக, மருத்துவர்களாக, பொறியியலாளர்களாக மற்றும் தலைவர்களாக சேவை செய்கிறார்கள்."
+  },
+  "Our library – the heart of learning": {
+    "en": "Our library – the heart of learning",
+    "si": "අපගේ පුස්තකාලය – ඉගෙනීමේ හදවත",
+    "ta": "எங்கள் நூலகம் – கற்றலின் இதயம்"
   },
   "Overcome fear, panic, and performance anxiety before O/L and A/L examinations with proven strategies.": {
     "en": "Overcome fear, panic, and performance anxiety before O/L and A/L examinations with proven strategies.",
@@ -2909,8 +2934,8 @@
     "si": "PDF, DOC හෝ DOCX",
     "ta": "PDF, DOC அல்லது DOCX"
   },
-  "PDF, DOC or DOCX — max 5MB": {
-    "en": "PDF, DOC or DOCX — max 5MB",
+  "PDF, DOC or DOCX – max 5MB": {
+    "en": "PDF, DOC or DOCX – max 5MB",
     "si": "PDF, DOC හෝ DOCX - උපරිම 5MB",
     "ta": "PDF, DOC அல்லது DOCX - அதிகபட்சம் 5MB"
   },
@@ -2929,8 +2954,8 @@
     "si": "මාපිය සම්පත්",
     "ta": "பெற்றோர் வளங்கள்"
   },
-  "Parent Resources — SJC Counselling": {
-    "en": "Parent Resources — SJC Counselling",
+  "Parent Resources – SJC Counselling": {
+    "en": "Parent Resources – SJC Counselling",
     "si": "මාපිය සම්පත් - SJC උපදේශනය",
     "ta": "பெற்றோர் வளங்கள் - SJC ஆலோசனை"
   },
@@ -2999,60 +3024,15 @@
     "si": "සම සහායක කණ්ඩායම්",
     "ta": "சக ஆதரவு குழுக்கள்"
   },
-  "Pencil": {
-    "en": "Pencil",
-    "si": "පැන්සල",
-    "ta": "பென்சில்"
-  },
-  "Period 1": {
-    "en": "Period 1",
-    "si": "කාල සීමාව 1",
-    "ta": "காலம் 1"
-  },
-  "Period 2": {
-    "en": "Period 2",
-    "si": "කාලසීමාව 2",
-    "ta": "காலம் 2"
-  },
-  "Period 3": {
-    "en": "Period 3",
-    "si": "කාලසීමාව 3",
-    "ta": "காலம் 3"
-  },
-  "Period 4": {
-    "en": "Period 4",
-    "si": "කාලසීමාව 4",
-    "ta": "காலம் 4"
-  },
-  "Period 5": {
-    "en": "Period 5",
-    "si": "කාල සීමාව 5",
-    "ta": "காலம் 5"
-  },
-  "Period 6": {
-    "en": "Period 6",
-    "si": "කාලසීමාව 6",
-    "ta": "காலம் 6"
-  },
-  "Period 7": {
-    "en": "Period 7",
-    "si": "කාලසීමාව 7",
-    "ta": "காலம் 7"
-  },
-  "Period 8": {
-    "en": "Period 8",
-    "si": "කාල සීමාව 8",
-    "ta": "காலம் 8"
+  "Perera": {
+    "en": "Perera",
+    "si": "පෙරේරා",
+    "ta": "பெரேரா"
   },
   "Personal Counselling": {
     "en": "Personal Counselling",
     "si": "පුද්ගලික උපදේශනය",
     "ta": "தனிப்பட்ட ஆலோசனை"
-  },
-  "Personal, social, or emotional challenges": {
-    "en": "Personal, social, or emotional challenges",
-    "si": "පුද්ගලික, සමාජීය හෝ චිත්තවේගීය අභියෝග",
-    "ta": "தனிப்பட்ட, சமூக அல்லது உணர்ச்சி சவால்கள்"
   },
   "Personalised career pathway testing across 20+ fields": {
     "en": "Personalised career pathway testing across 20+ fields",
@@ -3064,10 +3044,15 @@
     "si": "ෆාමසිය",
     "ta": "மருந்தகம்"
   },
-  "Phone / WhatsApp *": {
-    "en": "Phone / WhatsApp *",
-    "si": "දුරකථන / WhatsApp *",
-    "ta": "தொலைபேசி / வாட்ஸ்அப்*"
+  "Phone / WhatsApp": {
+    "en": "Phone / WhatsApp",
+    "si": "දුරකථන / WhatsApp",
+    "ta": "தொலைபேசி / வாட்ஸ்அப்"
+  },
+  "Phone Call": {
+    "en": "Phone Call",
+    "si": "දුරකථන ඇමතුම",
+    "ta": "தொலைபேசி அழைப்பு"
   },
   "Physical Science": {
     "en": "Physical Science",
@@ -3089,10 +3074,10 @@
     "si": "භෞතික විද්යාව, ඒකාබද්ධ ගණිතය, විශිෂ්ට ඉංග්රීසි",
     "ta": "இயற்பியல், ஒருங்கிணைந்த கணிதம், சிறந்த ஆங்கிலம்"
   },
-  "Please arrive 5 minutes early": {
-    "en": "Please arrive 5 minutes early",
-    "si": "කරුණාකර විනාඩි 5කට කලින් එන්න",
-    "ta": "தயவு செய்து 5 நிமிடம் முன்னதாக வரவும்"
+  "Please describe what you want to discuss *": {
+    "en": "Please describe what you want to discuss *",
+    "si": "කරුණාකර ඔබ සාකච්ඡා කිරීමට බලාපොරොත්තු වන කරුණු පැහැදිලි කරන්න *",
+    "ta": "தயவுசெய்து நீங்கள் விவாதிக்க விரும்புவதைச் சுருக்கமாகக் குறிப்பிடவும் *"
   },
   "Political Science, Economics, History, Languages": {
     "en": "Political Science, Economics, History, Languages",
@@ -3101,18 +3086,13 @@
   },
   "Portal": {
     "en": "Portal",
-    "si": "ද්වාරය",
-    "ta": "போர்டல்"
+    "si": "ශිෂ්‍ය ද්වාරය",
+    "ta": "மாணவர் இணையதளம்"
   },
   "Portals": {
     "en": "Portals",
     "si": "ද්වාර",
     "ta": "போர்ட்டல்கள்"
-  },
-  "Portfolio requirements for Design/Architecture": {
-    "en": "Portfolio requirements for Design/Architecture",
-    "si": "සැලසුම්/ගෘහ නිර්මාණ ශිල්පය සඳහා කළඹ අවශ්‍යතා",
-    "ta": "வடிவமைப்பு/கட்டிடக்கலைக்கான போர்ட்ஃபோலியோ தேவைகள்"
   },
   "Practical Tips": {
     "en": "Practical Tips",
@@ -3124,10 +3104,15 @@
     "si": "විභාග කාංසාව කළමනාකරණය කිරීම සහ විභාග සමයේදී මානසික සුවතාවය පවත්වා ගැනීම සඳහා ප්‍රායෝගික තාක්ෂණික ක්‍රම.",
     "ta": "பரீட்சை பதட்டத்தை நிர்வகிப்பதற்கும், பரீட்சை காலத்தில் மன ஆரோக்கியத்தைப் பேணுவதற்கும் நடைமுறை உத்திகள்."
   },
-  "Practise answering \"Tell me about yourself\" &mdash; keep it to 2 minutes": {
-    "en": "Practise answering \"Tell me about yourself\" &mdash; keep it to 2 minutes",
+  "Practise answering \"Tell me about yourself\" — keep it to 2 minutes": {
+    "en": "Practise answering \"Tell me about yourself\" — keep it to 2 minutes",
     "si": "\"ඔබ ගැන මට කියන්න\" පිළිතුරු දීමට පුරුදු වන්න — එය විනාඩි 2 දක්වා තබා ගන්න",
     "ta": "\"உங்களைப் பற்றி என்னிடம் சொல்லுங்கள்\" என்று பதிலளிப்பதைப் பயிற்சி செய்யுங்கள் — அதை 2 நிமிடங்களுக்கு வைத்திருங்கள்"
+  },
+  "Practise gratitude – write down 3 good things each day before bed": {
+    "en": "Practise gratitude – write down 3 good things each day before bed",
+    "si": "කෘතඥතාව පුහුණු කරන්න - නින්දට පෙර සෑම දිනකම හොඳ දේවල් 3 ක් ලියන්න",
+    "ta": "நன்றியுணர்வைப் பயிற்சி செய்யுங்கள் - ஒவ்வொரு நாளும் படுக்கைக்கு முன் 3 நல்ல விஷயங்களை எழுதுங்கள்"
   },
   "Practise gratitude — write down 3 good things each day before bed": {
     "en": "Practise gratitude — write down 3 good things each day before bed",
@@ -3139,13 +3124,13 @@
     "si": "කැමති දිනය",
     "ta": "விருப்பமான தேதி"
   },
-  "Preferred Period": {
-    "en": "Preferred Period",
-    "si": "කැමති කාල සීමාව",
-    "ta": "விருப்பமான காலம்"
+  "Preferred Time": {
+    "en": "Preferred Time",
+    "si": "කැමති වේලාව",
+    "ta": "விருப்பமான நேரம்"
   },
-  "Prepare 2-3 thoughtful questions to ask the interviewer": {
-    "en": "Prepare 2-3 thoughtful questions to ask the interviewer",
+  "Prepare 2–3 thoughtful questions to ask the interviewer": {
+    "en": "Prepare 2–3 thoughtful questions to ask the interviewer",
     "si": "සම්මුඛ පරීක්ෂකගෙන් ඇසීමට කල්පනාකාරී ප්රශ්න 2-3ක් සූදානම් කරන්න",
     "ta": "நேர்காணல் செய்பவரிடம் கேட்க 2-3 சிந்தனைமிக்க கேள்விகளைத் தயாரிக்கவும்"
   },
@@ -3159,10 +3144,30 @@
     "si": "ආරම්භය ඔබන්න",
     "ta": "தொடக்கத்தை அழுத்தவும்"
   },
+  "Preview": {
+    "en": "Preview",
+    "si": "පෙරදසුන",
+    "ta": "முன்னோட்டம்"
+  },
+  "Principal": {
+    "en": "Principal",
+    "si": "විදුහල්පති",
+    "ta": "அதிபர்"
+  },
+  "Principal M.A.A. Silva": {
+    "en": "Principal M.A.A. Silva",
+    "si": "විදුහල්පති එම්. ඒ. ඒ. සිල්වා",
+    "ta": "அதிபர் எம். ஏ. ஏ. சில்வா"
+  },
   "Private Practice, Corporate Law, State Counsel, Judiciary": {
     "en": "Private Practice, Corporate Law, State Counsel, Judiciary",
     "si": "පුද්ගලික පරිචය, ආයතනික නීතිය, රජයේ නීතිඥ, අධිකරණය",
     "ta": "தனியார் பயிற்சி, கார்ப்பரேட் சட்டம், மாநில வழக்கறிஞர், நீதித்துறை"
+  },
+  "Prize Giving Day": {
+    "en": "Prize Giving Day",
+    "si": "ත්‍යාග ප්‍රදානෝත්සවය",
+    "ta": "பரிசளிப்பு விழா"
   },
   "Problem Solving": {
     "en": "Problem Solving",
@@ -3204,10 +3209,10 @@
     "si": "වැඩසටහන් ඇතුළත් වේ",
     "ta": "நிகழ்ச்சிகள் அடங்கும்"
   },
-  "Proud": {
-    "en": "Proud",
-    "si": "ආඩම්බරයි",
-    "ta": "பெருமை"
+  "Proud Traditions": {
+    "en": "Proud Traditions",
+    "si": "ආඩම්බර සම්ප්‍රදායන්",
+    "ta": "பெருமைமிக்க பாரம்பரியங்கள்"
   },
   "Public Service": {
     "en": "Public Service",
@@ -3219,11 +3224,6 @@
     "si": "ප්රසිද්ධියේ කතා කිරීම",
     "ta": "பொதுப் பேச்சு"
   },
-  "Public Speaking Masterclass": {
-    "en": "Public Speaking Masterclass",
-    "si": "ප්‍රසිද්ධ කථන මාස්ටර් පන්තිය",
-    "ta": "பொது பேசும் மாஸ்டர் வகுப்பு"
-  },
   "Public speaking and debating workshops": {
     "en": "Public speaking and debating workshops",
     "si": "ප්රසිද්ධ කතා සහ විවාද වැඩමුළු",
@@ -3234,20 +3234,25 @@
     "si": "සෑම සිසුවෙකුටම කැපවී සිටින සුදුසුකම් ලත් උපදේශන වෘත්තිකයන්",
     "ta": "தகுதிவாய்ந்த ஆலோசனை வல்லுநர்கள் ஒவ்வொரு மாணவருக்கும் உறுதியளிக்கிறார்கள்"
   },
+  "Qualified teaching staff": {
+    "en": "Qualified teaching staff",
+    "si": "සුදුසුකම් ලත් ගුරු මණ්ඩලය",
+    "ta": "தகுதிவாய்ந்த கற்பித்தல் பணியாளர்கள்"
+  },
   "Quick Links": {
     "en": "Quick Links",
     "si": "ඉක්මන් සබැඳි",
     "ta": "விரைவு இணைப்புகள்"
   },
+  "Quick updates, photos, and announcements posted directly by our team.": {
+    "en": "Quick updates, photos, and announcements posted directly by our team.",
+    "si": "අපගේ කණ්ඩායම විසින් සෘජුවම පළ කරනු ලබන ඉක්මන් යාවත්කාලීන කිරීම්, ඡායාරූප සහ නිවේදන.",
+    "ta": "எங்கள் குழுவினால் நேரடியாகப் பதிவேற்றப்படும் விரைவான செய்திகள், புகைப்படங்கள் மற்றும் அறிவிப்புகள்."
+  },
   "RM": {
     "en": "RM",
     "si": "ආර්එම්",
     "ta": "ஆர்.எம்"
-  },
-  "Rajarata University of Sri Lanka": {
-    "en": "Rajarata University of Sri Lanka",
-    "si": "ශ්‍රී ලංකා රජරට විශ්වවිද්‍යාලය",
-    "ta": "இலங்கை ரஜரட்ட பல்கலைக்கழகம்"
   },
   "Rate": {
     "en": "Rate",
@@ -3288,6 +3293,11 @@
     "en": "Ready to book your",
     "si": "ඔබගේ වෙන්කරවා ගැනීමට සූදානම්",
     "ta": "உங்கள் முன்பதிவு செய்ய தயார்"
+  },
+  "Ready to talk to someone?": {
+    "en": "Ready to talk to someone?",
+    "si": "කවුරුන් සමඟ හෝ අදහස් බෙදා ගැනීමට සූදානම්ද?",
+    "ta": "யாரிடமாவது பேசத் தயாரா?"
   },
   "Ready to talk with our": {
     "en": "Ready to talk with our",
@@ -3334,25 +3344,55 @@
     "si": "ශිෂ්‍යයෙකු ලෙස ලියාපදිංචි වන්න",
     "ta": "மாணவராக பதிவு செய்யுங்கள்"
   },
-  "Register for Event": {
-    "en": "Register for Event",
-    "si": "උත්සවය සඳහා ලියාපදිංචි වන්න",
-    "ta": "நிகழ்வுக்கு பதிவு செய்யவும்"
+  "Register on the SJC Counselling Portal to access career guidance, mental wellness support, and opportunities that will shape your future.": {
+    "en": "Register on the SJC Counselling Portal to access career guidance, mental wellness support, and opportunities that will shape your future.",
+    "si": "ඔබේ අනාගතය හැඩගස්වන වෘත්තීය මාර්ගෝපදේශන, මානසික සුවතා සහාය සහ වෘත්තීය අවස්ථාවන් ලබා ගැනීමට SJC උපදේශන පෝටලයෙහි ලියාපදිංචි වන්න.",
+    "ta": "உங்கள் எதிர்காலத்தை வடிவமைக்கும் தொழில் வழிகாட்டல், மனநல ஆதரவு மற்றும் வாய்ப்புகளைப் பெற SJC ஆலோசனை இணையதளத்தில் பதிவு செய்யவும்."
+  },
+  "Registered 19 March 1898 · motto \"Duty First\"": {
+    "en": "Registered 19 March 1898 · motto \"Duty First\"",
+    "si": "ලියාපදිංචිය 1898 මාර්තු 19 · තේමාව \"පළමුව රාජකාරිය\"",
+    "ta": "பதிவு செய்யப்பட்டது 19 மார்ச் 1898 · கொள்கையுரை \"கடமையே முதன்மை\""
   },
   "Replace": {
     "en": "Replace",
     "si": "ආදේශ කරන්න",
     "ta": "மாற்றவும்"
   },
+  "Request Appointment": {
+    "en": "Request Appointment",
+    "si": "හමුවීමක් වෙන්කරවා ගන්න",
+    "ta": "சந்திப்பை முன்பதிவு செய்"
+  },
+  "Request Appointment – SJC Counselling": {
+    "en": "Request Appointment – SJC Counselling",
+    "si": "හමුවීමක් වෙන්කරවා ගන්න – SJC උපදේශන සේවය",
+    "ta": "சந்திப்பை முன்பதிவு செய் – SJC ஆலோசனை"
+  },
+  "Request Appointment →": {
+    "en": "Request Appointment →",
+    "si": "හමුවීමක් වෙන්කරවා ගන්න →",
+    "ta": "சந்திப்பை முன்பதிவு செய் →"
+  },
+  "Request Submitted!": {
+    "en": "Request Submitted!",
+    "si": "ඉල්ලීම ඉදිරිපත් කරන ලදී!",
+    "ta": "கோரிக்கை சமர்ப்பிக்கப்பட்டது!"
+  },
+  "Request a Counselling Session": {
+    "en": "Request a Counselling Session",
+    "si": "උපදේශන වාරයක් ඉල්ලන්න",
+    "ta": "ஆலோசனை அமர்வைக் கோருங்கள்"
+  },
   "Request a counselling session with the SJC career guidance unit.": {
     "en": "Request a counselling session with the SJC career guidance unit.",
     "si": "SJC වෘත්තීය මාර්ගෝපදේශ ඒකකය සමඟ උපදේශන සැසියක් ඉල්ලන්න.",
     "ta": "SJC தொழில் வழிகாட்டல் பிரிவுடன் ஆலோசனை அமர்வுக்கு கோரிக்கை விடுங்கள்."
   },
-  "Required Qualifications": {
-    "en": "Required Qualifications",
-    "si": "අවශ්ය සුදුසුකම්",
-    "ta": "தேவையான தகுதிகள்"
+  "Request an Appointment": {
+    "en": "Request an Appointment",
+    "si": "හමුවීමක් වෙන්කරවා ගන්න",
+    "ta": "சந்திப்பை முன்பதிவு செய்க"
   },
   "Required Qualifications:": {
     "en": "Required Qualifications:",
@@ -3368,11 +3408,6 @@
     "en": "Research the institution or company thoroughly before the interview",
     "si": "සම්මුඛ පරීක්ෂණයට පෙර ආයතනය හෝ සමාගම හොඳින් සොයා බලන්න",
     "ta": "நேர்காணலுக்கு முன் நிறுவனம் அல்லது நிறுவனத்தை முழுமையாக ஆராயுங்கள்"
-  },
-  "Reset Password": {
-    "en": "Reset Password",
-    "si": "මුරපදය යළි පිහිටුවන්න",
-    "ta": "கடவுச்சொல்லை மீட்டமைக்கவும்"
   },
   "Resilience": {
     "en": "Resilience",
@@ -3394,65 +3429,120 @@
     "si": "ආතතිය, කාංසාව සහ විභාග සූදානම් කිරීම සඳහා සම්පත්",
     "ta": "மன அழுத்தம், பதட்டம் மற்றும் தேர்வுக்கான தயாரிப்புக்கான ஆதாரங்கள்"
   },
-  "Resources to help you recognise signs of stress and anxiety in your child — and how to work with our counsellors to provide the right support at home and school.": {
-    "en": "Resources to help you recognise signs of stress and anxiety in your child — and how to work with our counsellors to provide the right support at home and school.",
+  "Resources to help you recognise signs of stress and anxiety in your child – and how to work with our counsellors to provide the right support at home and school.": {
+    "en": "Resources to help you recognise signs of stress and anxiety in your child – and how to work with our counsellors to provide the right support at home and school.",
     "si": "ඔබේ දරුවා තුළ ඇති ආතතිය සහ කාංසාවේ සලකුණු හඳුනා ගැනීමට ඔබට උපකාර වන සම්පත් — සහ නිවසේ සහ පාසැලේදී නිවැරදි සහය ලබා දීම සඳහා අපගේ උපදේශකයින් සමඟ වැඩ කරන්නේ කෙසේද.",
     "ta": "உங்கள் பிள்ளையின் மன அழுத்தம் மற்றும் பதட்டத்தின் அறிகுறிகளை அடையாளம் காண உங்களுக்கு உதவும் ஆதாரங்கள் — மற்றும் வீட்டிலும் பள்ளியிலும் சரியான ஆதரவை வழங்க எங்கள் ஆலோசகர்களுடன் எவ்வாறு பணியாற்றுவது."
   },
-  "Rocket": {
-    "en": "Rocket",
-    "si": "රොකට්",
-    "ta": "ராக்கெட்"
+  "Rev. Fr. J. K. L. D. Perera": {
+    "en": "Rev. Fr. J. K. L. D. Perera",
+    "si": "ගරු ජේ. කේ. එල්. ඩී. පෙරේරා පියතුමා",
+    "ta": "அருட்தந்தை ஜே. கே. எல். டி. பெரேரா"
+  },
+  "River of Anuradhapura": {
+    "en": "River of Anuradhapura",
+    "si": "අනුරාධපුරයේ ගංගාව",
+    "ta": "அனுராதபுரத்தின் நதி"
+  },
+  "River of gems": {
+    "en": "River of gems",
+    "si": "මැණික් ගංගාව",
+    "ta": "இரத்தினக்கல் நதி"
+  },
+  "River of the west": {
+    "en": "River of the west",
+    "si": "බස්නාහිර ගංගාව",
+    "ta": "மேற்கு நதி"
   },
   "Roles spanning from corporate management, banking, and marketing to accounting and human resources.": {
     "en": "Roles spanning from corporate management, banking, and marketing to accounting and human resources.",
     "si": "ආයතනික කළමනාකරණය, බැංකුකරණය සහ අලෙවිකරණයේ සිට ගිණුම්කරණය සහ මානව සම්පත් දක්වා විහිදෙන භූමිකාවන්.",
     "ta": "கார்ப்பரேட் மேலாண்மை, வங்கி மற்றும் சந்தைப்படுத்தல் முதல் கணக்கியல் மற்றும் மனித வளங்கள் வரையிலான பாத்திரங்கள்."
   },
-  "Rooted in 125+ years of educational excellence, St. Joseph's College &middot; Anuradhapura — home to 30,000+ students — nurtures futures through expert counselling, career guidance, and compassionate mental wellness support.": {
-    "en": "Rooted in 125+ years of educational excellence, St. Joseph's College &middot; Anuradhapura — home to 30,000+ students — nurtures futures through expert counselling, career guidance, and compassionate mental wellness support.",
-    "si": "වසර 125+ ක අධ්‍යාපන විශිෂ්ටත්වය තුළ මුල් බැසගත් ශාන්ත ජෝසප් විද්‍යාලය · අනුරාධපුරය - සිසුන් 30,000+ ක් සිටින - විශේෂඥ උපදේශනය, වෘත්තීය මාර්ගෝපදේශනය සහ සානුකම්පිත මානසික සුවතා සහාය තුළින් අනාගතය පෝෂණය කරයි.",
-    "ta": "125+ ஆண்டுகால கல்விச் சிறப்புடன் வேரூன்றிய செயின்ட் ஜோசப் கல்லூரி · அனுராதபுரம் - 30,000+ மாணவர்களைக் கொண்டுள்ளது - நிபுணர் ஆலோசனை, தொழில் வழிகாட்டுதல் மற்றும் இரக்கமுள்ள மனநல ஆதரவு ஆகியவற்றின் மூலம் எதிர்காலத்தை வளர்க்கிறது."
+  "Rooted in 125+ years of educational excellence,": {
+    "en": "Rooted in 125+ years of educational excellence,",
+    "si": "වසර 125 කට අධික අධ්‍යාපනික විශිෂ්ටත්වයට උරුමකම් කියන,",
+    "ta": "125 ஆண்டுகளுக்கும் மேலான கல்விச் சிறப்புடன்,"
+  },
+  "Rugby": {
+    "en": "Rugby",
+    "si": "රග්බි",
+    "ta": "ரக்பி"
+  },
+  "SI": {
+    "en": "SI",
+    "si": "සිංහල",
+    "ta": "සිංහල"
   },
   "SJC": {
     "en": "SJC",
     "si": "එස්.ජේ.සී",
     "ta": "எஸ்.ஜே.சி"
   },
-  "SJC Admin": {
-    "en": "SJC Admin",
-    "si": "SJC පරිපාලක",
-    "ta": "SJC நிர்வாகி"
+  "SJC Arts": {
+    "en": "SJC Arts",
+    "si": "SJC කලා අංශය",
+    "ta": "SJC கலைப் பிரிவு"
   },
-  "SJC Admin Panel": {
-    "en": "SJC Admin Panel",
-    "si": "SJC පරිපාලක මණ්ඩලය",
-    "ta": "SJC நிர்வாக குழு"
+  "SJC Athletics": {
+    "en": "SJC Athletics",
+    "si": "SJC මලල ක්‍රීඩා",
+    "ta": "SJC தடகளம்"
+  },
+  "SJC Battle of the Legends cricket match": {
+    "en": "SJC Battle of the Legends cricket match",
+    "si": "SJC ලෙජන්ඩ්ස් ක්‍රිකට් තරගය",
+    "ta": "SJC புராணங்களின் போர் கிரிக்கெட் போட்டி"
   },
   "SJC Counselling": {
     "en": "SJC Counselling",
     "si": "SJC උපදේශනය",
     "ta": "SJC ஆலோசனை"
   },
-  "SJC Counselling &amp;": {
-    "en": "SJC Counselling &amp;",
+  "SJC Counselling &": {
+    "en": "SJC Counselling &",
     "si": "SJC උපදේශනය සහ",
     "ta": "SJC ஆலோசனை &"
   },
-  "SJC Counselling &amp; Career Guidance Unit": {
-    "en": "SJC Counselling &amp; Career Guidance Unit",
+  "SJC Counselling & Career Guidance Unit": {
+    "en": "SJC Counselling & Career Guidance Unit",
     "si": "SJC උපදේශන සහ වෘත්තීය මාර්ගෝපදේශ ඒකකය",
     "ta": "SJC ஆலோசனை & தொழில் வழிகாட்டல் பிரிவு"
   },
-  "SJC Counselling - St. Joseph's College": {
-    "en": "SJC Counselling - St. Joseph's College",
-    "si": "SJC උපදේශනය - ශාන්ත ජෝශප් විද්‍යාලය",
-    "ta": "SJC கவுன்சிலிங் - செயின்ட் ஜோசப் கல்லூரி"
+  "SJC Counselling & Career Guidance Unit · St. Joseph's College, Anuradhapura": {
+    "en": "SJC Counselling & Career Guidance Unit · St. Joseph's College, Anuradhapura",
+    "si": "SJC උපදේශන සහ වෘත්තීය මාර්ගෝපදේශන ඒකකය · ශාන්ත ජෝශප් විද්‍යාලය, අනුරාධපුරය",
+    "ta": "SJC ஆலோசனை & தொழில் வழிகாட்டல் பிரிவு · செயின்ட் ஜோசப் கல்லூரி, அனுராதபுரம்"
   },
-  "SJC — Admin Panel": {
-    "en": "SJC — Admin Panel",
-    "si": "SJC - පරිපාලක මණ්ඩලය",
-    "ta": "SJC - நிர்வாக குழு"
+  "SJC Counselling & Guidance Unit - St. Joseph's College, Anuradhapura": {
+    "en": "SJC Counselling & Guidance Unit - St. Joseph's College, Anuradhapura",
+    "si": "SJC උපදේශන සහ මාර්ගෝපදේශන ඒකකය - ශාන්ත ජෝශප් විද්‍යාලය, අනුරාධපුරය",
+    "ta": "SJC ஆலோசனை & வழிகாட்டல் பிரிவு - செயின்ட் ஜோசப் கல்லூரி, அனுராதபுரம்"
+  },
+  "SJC Library": {
+    "en": "SJC Library",
+    "si": "SJC පුස්තකාලය",
+    "ta": "SJC நூலகம்"
+  },
+  "SJC Logo": {
+    "en": "SJC Logo",
+    "si": "SJC ලාංඡනය",
+    "ta": "SJC சின்னம்"
+  },
+  "SJC Science": {
+    "en": "SJC Science",
+    "si": "SJC විද්‍යා අංශය",
+    "ta": "SJC அறிவியல் பிரிவு"
+  },
+  "SJC Sports": {
+    "en": "SJC Sports",
+    "si": "SJC ක්‍රීඩා",
+    "ta": "SJC விளையாட்டுகள்"
+  },
+  "SJC becomes a Grade 1AB national school for boys — a status it proudly holds today.": {
+    "en": "SJC becomes a Grade 1AB national school for boys — a status it proudly holds today.",
+    "si": "SJC පිරිමි ළමුන් සඳහා වන 1AB ශ්‍රේණියේ ජාතික පාසලක් බවට පත් වේ — එය අදටත් සාඩම්බරයෙන් රඳවා තබා ගන්නා තත්ත්වයකි.",
+    "ta": "SJC ஆண்களுக்கான தரம் 1AB தேசிய பள்ளியாக மாறுகிறது — இந்த அந்தஸ்தை இன்றும் பெருமையுடன் தக்கவைத்துள்ளது."
   },
   "SK": {
     "en": "SK",
@@ -3489,30 +3579,50 @@
     "si": "උනන්දුව ඉතිරි කරන්න",
     "ta": "ஆர்வங்களைச் சேமிக்கவும்"
   },
-  "Save Password": {
-    "en": "Save Password",
-    "si": "මුරපදය සුරකින්න",
-    "ta": "கடவுச்சொல்லை சேமிக்கவும்"
-  },
   "Save Skills": {
     "en": "Save Skills",
     "si": "කුසලතා සුරකින්න",
     "ta": "திறன்களை சேமிக்கவும்"
-  },
-  "Schedule a confidential one-to-one session with our qualified counsellors. Choose a date and time that works for you.": {
-    "en": "Schedule a confidential one-to-one session with our qualified counsellors. Choose a date and time that works for you.",
-    "si": "අපගේ සුදුසුකම් ලත් උපදේශකයින් සමඟ රහස්‍ය එකින් එක සැසියක් උපලේඛනගත කරන්න. ඔබට වැඩ කරන දිනයක් සහ වේලාවක් තෝරන්න.",
-    "ta": "எங்கள் தகுதிவாய்ந்த ஆலோசகர்களுடன் ரகசியமான ஒருவருக்கு ஒரு அமர்வைத் திட்டமிடுங்கள். உங்களுக்காக வேலை செய்யும் தேதி மற்றும் நேரத்தை தேர்வு செய்யவும்."
   },
   "Scholarships": {
     "en": "Scholarships",
     "si": "ශිෂ්‍යත්ව",
     "ta": "உதவித்தொகை"
   },
+  "School": {
+    "en": "School",
+    "si": "පාසල",
+    "ta": "பள்ளி"
+  },
+  "School Events": {
+    "en": "School Events",
+    "si": "පාසල් උත්සව",
+    "ta": "பள்ளி நிகழ்வுகள்"
+  },
+  "School Gate": {
+    "en": "School Gate",
+    "si": "පාසල් ගේට්ටුව",
+    "ta": "பள்ளி வாசல்"
+  },
+  "School Life": {
+    "en": "School Life",
+    "si": "පාසල් ජීවිතය",
+    "ta": "பள்ளி வாழ்க்கை"
+  },
+  "School Life — St. Joseph's College, Anuradhapura": {
+    "en": "School Life — St. Joseph's College, Anuradhapura",
+    "si": "පාසල් ජීවිතය — ශාන්ත ජෝශප් විද්‍යාලය, අනුරාධපුරය",
+    "ta": "பள்ளி வாழ்க்கை — செயின்ட் ஜோசப் கல்லூரி, அனுராதபுரம்"
+  },
   "Science": {
     "en": "Science",
     "si": "විද්‍යාව",
     "ta": "அறிவியல்"
+  },
+  "Science & Discovery": {
+    "en": "Science & Discovery",
+    "si": "විද්‍යාව සහ සොයා ගැනීම්",
+    "ta": "அறிவியல் & கண்டுபிடிப்பு"
   },
   "Science Research": {
     "en": "Science Research",
@@ -3524,10 +3634,10 @@
     "si": "විද්‍යා විෂය ධාරාව",
     "ta": "அறிவியல் ஸ்ட்ரீம்"
   },
-  "Science, Business, and IT foundation streams": {
-    "en": "Science, Business, and IT foundation streams",
-    "si": "විද්‍යාව, ව්‍යාපාර සහ තොරතුරු තාක්ෂණ පදනම් ප්‍රවාහ",
-    "ta": "அறிவியல், வணிகம் மற்றும் IT அறக்கட்டளை நீரோடைகள்"
+  "Scouting": {
+    "en": "Scouting",
+    "si": "බාලදක්ෂ ව්‍යාපාරය",
+    "ta": "சாரணியம்"
   },
   "Scroll": {
     "en": "Scroll",
@@ -3539,30 +3649,30 @@
     "si": "බාධාවකින් තොරව ගෝලීය සංචලනය, ලොව පුරා ඉහළ දුරස්ථ වැඩ හැකියාව",
     "ta": "தடையற்ற உலகளாவிய இயக்கம், உலகளவில் அதிக தொலைதூர வேலை திறன்"
   },
+  "Search universities…": {
+    "en": "Search universities…",
+    "si": "විශ්වවිද්‍යාල සොයන්න…",
+    "ta": "பல்கலைக்கழகங்களைத் தேடுங்கள்…"
+  },
   "See Events": {
     "en": "See Events",
     "si": "සිදුවීම් බලන්න",
     "ta": "நிகழ்வுகளைப் பார்க்கவும்"
   },
-  "Select Date": {
-    "en": "Select Date",
-    "si": "දිනය තෝරන්න",
-    "ta": "தேதியைத் தேர்ந்தெடுக்கவும்"
+  "Select Academic Stream": {
+    "en": "Select Academic Stream",
+    "si": "අධ්‍යයන විෂය ධාරාව තෝරන්න",
+    "ta": "கல்விப் பிரிவைத் தேர்ந்தெடுக்கவும்"
+  },
+  "Select Class": {
+    "en": "Select Class",
+    "si": "පන්තිය තෝරන්න",
+    "ta": "வகுப்பைத் தேர்ந்தெடுக்கவும்"
   },
   "Select Grade": {
     "en": "Select Grade",
     "si": "ශ්රේණිය තෝරන්න",
     "ta": "தரத்தைத் தேர்ந்தெடுக்கவும்"
-  },
-  "Select Time": {
-    "en": "Select Time",
-    "si": "කාලය තෝරන්න",
-    "ta": "நேரத்தைத் தேர்ந்தெடுக்கவும்"
-  },
-  "Select class": {
-    "en": "Select class",
-    "si": "පන්තිය තෝරන්න",
-    "ta": "வகுப்பைத் தேர்ந்தெடுக்கவும்"
   },
   "Select grade": {
     "en": "Select grade",
@@ -3573,16 +3683,6 @@
     "en": "Select stream",
     "si": "ප්‍රවාහය තෝරන්න",
     "ta": "ஸ்ட்ரீமைத் தேர்ந்தெடுக்கவும்"
-  },
-  "Select your role to access the panel": {
-    "en": "Select your role to access the panel",
-    "si": "පැනලයට ප්‍රවේශ වීමට ඔබේ භූමිකාව තෝරන්න",
-    "ta": "பேனலை அணுக உங்கள் பங்கைத் தேர்ந்தெடுக்கவும்"
-  },
-  "September (UK), February/September (Malaysia)": {
-    "en": "September (UK), February/September (Malaysia)",
-    "si": "සැප්තැම්බර් (එක්සත් රාජධානිය), පෙබරවාරි/සැප්තැම්බර් (මැලේසියාව)",
-    "ta": "செப்டம்பர் (யுகே), பிப்ரவரி/செப்டம்பர் (மலேசியா)"
   },
   "Services": {
     "en": "Services",
@@ -3614,11 +3714,6 @@
     "si": "අධ්‍යයන පීඩනය, චර්යාත්මක අභියෝග සහ වෘත්තීය තීරණ හරහා තම දරුවාට උපකාර කිරීම සඳහා මග පෙන්වීම සොයන දෙමාපියන් සඳහා සැසි.",
     "ta": "கல்வி அழுத்தம், நடத்தை சார்ந்த சவால்கள் மற்றும் தொழில் முடிவுகள் மூலம் தங்கள் குழந்தைக்கு ஆதரவளிப்பதற்கான வழிகாட்டுதலைத் தேடும் பெற்றோருக்கான அமர்வுகள்."
   },
-  "Shield": {
-    "en": "Shield",
-    "si": "පලිහ",
-    "ta": "கேடயம்"
-  },
   "Short Bio (optional)": {
     "en": "Short Bio (optional)",
     "si": "කෙටි ජීව දත්ත (විකල්ප)",
@@ -3628,6 +3723,11 @@
     "en": "Sign In",
     "si": "පුරන්න",
     "ta": "உள்நுழையவும்"
+  },
+  "Sign In to Portal": {
+    "en": "Sign In to Portal",
+    "si": "පෝටලයට ඇතුල් වන්න",
+    "ta": "வலைத்தளத்தில் உள்நுழையவும்"
   },
   "Sign Out": {
     "en": "Sign Out",
@@ -3649,8 +3749,8 @@
     "si": "සිංහල, ඉතිහාසය, භූගෝල විද්යාව, ආර්ථික විද්යාව හෝ වෙනත් මානව ශාස්ත්ර. නීතිය, අධ්‍යාපනය සහ සමාජ විද්‍යාවට මඟ පෙන්වයි.",
     "ta": "சிங்களம், வரலாறு, புவியியல், பொருளாதாரம் அல்லது பிற மனிதநேயம். சட்டம், கல்வி மற்றும் சமூக அறிவியலுக்கு வழிவகுக்கிறது."
   },
-  "Six core service areas designed to support every dimension of a Josephian's growth — from personal challenges to career planning and mental wellness.": {
-    "en": "Six core service areas designed to support every dimension of a Josephian's growth — from personal challenges to career planning and mental wellness.",
+  "Six core service areas designed to support every dimension of a Josephian's growth – from personal challenges to career planning and mental wellness.": {
+    "en": "Six core service areas designed to support every dimension of a Josephian's growth – from personal challenges to career planning and mental wellness.",
     "si": "ජෝසප් ජාතිකයෙකුගේ වර්ධනයේ සෑම මානයකටම සහාය වීම සඳහා නිර්මාණය කර ඇති මූලික සේවා ක්ෂේත්‍ර හයක් - පුද්ගලික අභියෝගවල සිට වෘත්තීය සැලසුම් සහ මානසික සුවතාවය දක්වා.",
     "ta": "ஜோசபியனின் வளர்ச்சியின் ஒவ்வொரு பரிமாணத்தையும் ஆதரிக்கும் வகையில் வடிவமைக்கப்பட்ட ஆறு முக்கிய சேவைப் பகுதிகள் - தனிப்பட்ட சவால்கள் முதல் தொழில் திட்டமிடல் மற்றும் மன ஆரோக்கியம் வரை."
   },
@@ -3664,8 +3764,8 @@
     "si": "කුසලතා එකතු කරන ලදී",
     "ta": "திறன்கள் சேர்க்கப்பட்டது"
   },
-  "Sleep &amp; Energy": {
-    "en": "Sleep &amp; Energy",
+  "Sleep & Energy": {
+    "en": "Sleep & Energy",
     "si": "නින්ද සහ ශක්තිය",
     "ta": "தூக்கம் மற்றும் ஆற்றல்"
   },
@@ -3684,6 +3784,11 @@
     "si": "ගුරුවරයෙකුට කතා කරන්න හෝ අපව කෙලින්ම අමතන්න",
     "ta": "ஆசிரியரிடம் பேசுங்கள் அல்லது எங்களை நேரடியாக அழைக்கவும்"
   },
+  "Speed, strength and school pride": {
+    "en": "Speed, strength and school pride",
+    "si": "වේගය, ශක්තිය සහ පාසල් අභිමානය",
+    "ta": "வேகம், வலிமை மற்றும் பள்ளிப் பெருமை"
+  },
   "Spend at least 30 minutes outdoors or doing physical activity each day": {
     "en": "Spend at least 30 minutes outdoors or doing physical activity each day",
     "si": "සෑම දිනකම අවම වශයෙන් විනාඩි 30 ක් එළිමහනේ හෝ ශාරීරික ක්‍රියාකාරකම්වල යෙදෙන්න",
@@ -3694,10 +3799,15 @@
     "si": "ක්රීඩා",
     "ta": "விளையாட்டு"
   },
-  "Sri Lanka's premier technological university, specializing in Engineering, Architecture, and IT. Graduates are highly sought after globally.": {
-    "en": "Sri Lanka's premier technological university, specializing in Engineering, Architecture, and IT. Graduates are highly sought after globally.",
-    "si": "ශ්‍රී ලංකාවේ ප්‍රමුඛතම තාක්ෂණික විශ්ව විද්‍යාලය, ඉංජිනේරු විද්‍යාව, වාස්තු විද්‍යාව සහ තොරතුරු තාක්ෂණය පිළිබඳ විශේෂඥතාවක් ඇත. උපාධිධාරීන් ගෝලීය වශයෙන් ඉහළ ඉල්ලුමක් ඇත.",
-    "ta": "பொறியியல், கட்டிடக்கலை மற்றும் தகவல் தொழில்நுட்பம் ஆகியவற்றில் நிபுணத்துவம் பெற்ற இலங்கையின் முதன்மையான தொழில்நுட்ப பல்கலைக்கழகம். உலக அளவில் பட்டதாரிகள் அதிகம் விரும்பப்படுகிறார்கள்."
+  "Sports &": {
+    "en": "Sports &",
+    "si": "ක්‍රීඩා සහ",
+    "ta": "விளையாட்டு &"
+  },
+  "Sports Champions": {
+    "en": "Sports Champions",
+    "si": "ක්‍රීඩා ශූරයන්",
+    "ta": "விளையாட்டு சாம்பியன்கள்"
   },
   "Sri Lankan": {
     "en": "Sri Lankan",
@@ -3709,25 +3819,40 @@
     "si": "ශ්‍රී ලාංකික අවස්ථා:",
     "ta": "இலங்கை வாய்ப்புகள்:"
   },
-  "Sri Lankan Universities": {
-    "en": "Sri Lankan Universities",
-    "si": "ශ්‍රී ලංකාවේ විශ්වවිද්‍යාල",
-    "ta": "இலங்கைப் பல்கலைக்கழகங்கள்"
-  },
-  "Sri Lankan Universities (Ranked)": {
-    "en": "Sri Lankan Universities (Ranked)",
-    "si": "ශ්‍රී ලංකා විශ්වවිද්‍යාල (ශ්‍රේණිගත කර ඇත)",
-    "ta": "இலங்கைப் பல்கலைக்கழகங்கள் (தரப்படுத்தப்பட்டவை)"
+  "Sri Lankan State Universities": {
+    "en": "Sri Lankan State Universities",
+    "si": "ශ්‍රී ලංකාවේ රාජ්‍ය විශ්වවිද්‍යාල",
+    "ta": "இலங்கை அரசுப் பல்கலைக்கழகங்கள்"
   },
   "SriLankan Airlines, FitsAir, Civil Aviation Authority": {
     "en": "SriLankan Airlines, FitsAir, Civil Aviation Authority",
     "si": "SriLankan Airlines, FitsAir, සිවිල් ගුවන් සේවා අධිකාරිය",
     "ta": "ஸ்ரீலங்கன் ஏர்லைன்ஸ், ஃபிட்ஸ் ஏர், சிவில் விமான போக்குவரத்து ஆணையம்"
   },
-  "St. Joseph's College &middot; Anuradhapura": {
-    "en": "St. Joseph's College &middot; Anuradhapura",
+  "St. Joseph's College": {
+    "en": "St. Joseph's College",
+    "si": "ශාන්ත ජෝශප් විද්‍යාලය",
+    "ta": "செயின்ட் ஜோசப் கல்லூரி"
+  },
+  "St. Joseph's College . Anuradhapura": {
+    "en": "St. Joseph's College . Anuradhapura",
+    "si": "ශාන්ත ජෝශප් විද්‍යාලය . අනුරාධපුරය",
+    "ta": "செயின்ட் ஜோசப் கல்லூரி . அனுராதபுரம்"
+  },
+  "St. Joseph's College Gate": {
+    "en": "St. Joseph's College Gate",
+    "si": "ශාන්ත ජෝශප් විද්‍යාලීය ගේට්ටුව",
+    "ta": "செயின்ட் ஜோசப் கல்லூரி வாசல்"
+  },
+  "St. Joseph's College · Anuradhapura": {
+    "en": "St. Joseph's College · Anuradhapura",
     "si": "ශාන්ත ජෝශප් විද්‍යාලය · අනුරාධපුරය",
     "ta": "புனித ஜோசப் கல்லூரி · அனுராதபுரம்"
+  },
+  "St. Joseph's College,": {
+    "en": "St. Joseph's College,",
+    "si": "ශාන්ත ජෝශප් විද්‍යාලය,",
+    "ta": "செயின்ட் ஜோசப் கல்லூரி,"
   },
   "St. Joseph's College, Anuradhapura": {
     "en": "St. Joseph's College, Anuradhapura",
@@ -3743,11 +3868,6 @@
     "en": "Staff",
     "si": "කාර්ය මණ්ඩලය",
     "ta": "பணியாளர்கள்"
-  },
-  "Start Course": {
-    "en": "Start Course",
-    "si": "පාඨමාලාව ආරම්භ කරන්න",
-    "ta": "பாடத்தைத் தொடங்குங்கள்"
   },
   "Start Exercise": {
     "en": "Start Exercise",
@@ -3769,10 +3889,15 @@
     "si": "රාජ්ය වෛද්ය පීඨ (කොළඹ, පේරා, ආදිය), KDU, විදේශ වෛද්ය විද්යාල",
     "ta": "அரச மருத்துவ பீடங்கள் (கொழும்பு, பேரா, முதலியன), KDU, வெளிநாட்டு மருத்துவப் பள்ளிகள்"
   },
-  "State University UGC Application Process": {
-    "en": "State University UGC Application Process",
-    "si": "රාජ්ය විශ්ව විද්යාල UGC අයදුම් කිරීමේ ක්රියාවලිය",
-    "ta": "மாநில பல்கலைக்கழக யுஜிசி விண்ணப்ப செயல்முறை"
+  "Stay updated on UGC intake deadlines, SAT/IELTS exam dates, and foreign university intakes (Feb/Sep).": {
+    "en": "Stay updated on UGC intake deadlines, SAT/IELTS exam dates, and foreign university intakes (Feb/Sep).",
+    "si": "විශ්වවිද්‍යාල ප්‍රතිපාදන කොමිෂන් සභාවේ (UGC) බඳවා ගැනීම්, SAT/IELTS විභාග දින සහ විදේශීය විශ්වවිද්‍යාල ඇතුළත් කිරීම් (පෙබරවාරි/සැප්තැම්බර්) පිළිබඳ නවතම තොරතුරු ලබා ගන්න.",
+    "ta": "பல்கலைக்கழக மானியக் குழுவின் (UGC) சேர்க்கை காலக்கெடு, SAT/IELTS தேர்வு தேதிகள் மற்றும் வெளிநாட்டுப் பல்கலைக்கழக சேர்க்கைகள் (பிப்ரவரி/செப்டம்பர்) பற்றிய தகவல்களைப் பெறுங்கள்."
+  },
+  "Step-by-step guides from A/L to Bachelors, Masters, and Professional Qualifications (CIMA, CIM, ACCA).": {
+    "en": "Step-by-step guides from A/L to Bachelors, Masters, and Professional Qualifications (CIMA, CIM, ACCA).",
+    "si": "උසස් පෙළ සිට උපාධිය, පශ්චාත් උපාධිය සහ වෘත්තීය සුදුසුකම් (CIMA, CIM, ACCA) දක්වා පියවරෙන් පියවර මාර්ගෝපදේශ.",
+    "ta": "A/L முதல் பட்டப்படிப்பு, முதுகலை மற்றும் தொழில்முறை தகுதிகள் (CIMA, CIM, ACCA) வரையிலான படிப்படியான வழிகாட்டிகள்."
   },
   "Stop and take 5 slow, deep breaths before doing anything": {
     "en": "Stop and take 5 slow, deep breaths before doing anything",
@@ -3784,6 +3909,11 @@
     "si": "කතන්දර",
     "ta": "என்ற கதைகள்"
   },
+  "Strategy, focus and quiet discipline": {
+    "en": "Strategy, focus and quiet discipline",
+    "si": "උපායශීලී බව, අවධානය සහ නිහඬ විනය",
+    "ta": "யுக்தி, கவனம் மற்றும் அமைதியான ஒழுக்கம்"
+  },
   "Stress Management": {
     "en": "Stress Management",
     "si": "ආතති කළමනාකරණය",
@@ -3793,11 +3923,6 @@
     "en": "Stress and anxiety management workshops",
     "si": "ආතතිය සහ කාංසාව කළමනාකරණ වැඩමුළු",
     "ta": "மன அழுத்தம் மற்றும் கவலை மேலாண்மை பட்டறைகள்"
-  },
-  "Stress, anxiety, or motivation support": {
-    "en": "Stress, anxiety, or motivation support",
-    "si": "ආතතිය, කාංසාව හෝ අභිප්‍රේරණ සහාය",
-    "ta": "மன அழுத்தம், பதட்டம் அல்லது ஊக்க ஆதரவு"
   },
   "Strictly confidential": {
     "en": "Strictly confidential",
@@ -3819,6 +3944,11 @@
     "si": "ශිෂ්යයා",
     "ta": "மாணவர்"
   },
+  "Student Information": {
+    "en": "Student Information",
+    "si": "ශිෂ්‍ය තොරතුරු",
+    "ta": "மாணவர் தகவல்"
+  },
   "Student Login": {
     "en": "Student Login",
     "si": "ශිෂ්‍ය පිවිසුම",
@@ -3834,8 +3964,8 @@
     "si": "ශිෂ්‍ය ද්වාරය",
     "ta": "மாணவர் போர்டல்"
   },
-  "Student Portal — SJC Counselling": {
-    "en": "Student Portal — SJC Counselling",
+  "Student Portal – SJC Counselling": {
+    "en": "Student Portal – SJC Counselling",
     "si": "ශිෂ්‍ය ද්වාරය - SJC උපදේශනය",
     "ta": "மாணவர் போர்டல் - SJC கவுன்சிலிங்"
   },
@@ -3859,6 +3989,11 @@
     "si": "සිසුන් මඟ පෙන්වයි",
     "ta": "மாணவர்கள் வழிகாட்டினர்"
   },
+  "Students at SJC": {
+    "en": "Students at SJC",
+    "si": "SJC හි සිසුන්",
+    "ta": "SJC மாணவர்கள்"
+  },
   "Students explore 20+ career fields through hands-on activities and professional guest speakers.": {
     "en": "Students explore 20+ career fields through hands-on activities and professional guest speakers.",
     "si": "සිසුන් ප්‍රායෝගික ක්‍රියාකාරකම් සහ වෘත්තීය ආගන්තුක කථිකයන් හරහා 20+ වෘත්තීය ක්ෂේත්‍ර ගවේෂණය කරයි.",
@@ -3869,10 +4004,10 @@
     "si": "අධ්‍යයන කුසලතා සහ කාල කළමනාකරණ උපාය මාර්ග",
     "ta": "படிப்பு திறன் மற்றும் நேர மேலாண்மை உத்திகள்"
   },
-  "Study skills, exam preparation, results": {
-    "en": "Study skills, exam preparation, results",
-    "si": "අධ්යයන කුසලතා, විභාග සූදානම් කිරීම, ප්රතිඵල",
-    "ta": "படிப்பு திறன், தேர்வு தயாரிப்பு, முடிவுகள்"
+  "Submit a request for a confidential one-to-one session with our qualified counsellors. We will contact you to confirm the date and time.": {
+    "en": "Submit a request for a confidential one-to-one session with our qualified counsellors. We will contact you to confirm the date and time.",
+    "si": "අපගේ සුදුසුකම් ලත් උපදේශකයන් සමඟ පෞද්ගලික සාකච්ඡාවක් සඳහා ඉල්ලීමක් ඉදිරිපත් කරන්න. දිනය සහ වේලාව තහවුරු කිරීමට අපි ඔබව සම්බන්ධ කර ගන්නෙමු.",
+    "ta": "எங்கள் தகுதிவாய்ந்த ஆலோசகர்களுடன் தனிப்பட்ட ஆலோசனை அமர்வுக்கு விண்ணப்பிக்கவும். தேதி மற்றும் நேரத்தை உறுதிப்படுத்த நாங்கள் உங்களைத் தொடர்புகொள்வோம்."
   },
   "Success": {
     "en": "Success",
@@ -3884,8 +4019,8 @@
     "si": "සාර්ථක කතා",
     "ta": "வெற்றிக் கதைகள்"
   },
-  "Success Stories — SJC Counselling": {
-    "en": "Success Stories — SJC Counselling",
+  "Success Stories – SJC Counselling": {
+    "en": "Success Stories – SJC Counselling",
     "si": "සාර්ථක කතා - SJC උපදේශනය",
     "ta": "வெற்றிக் கதைகள் - SJC ஆலோசனை"
   },
@@ -3893,16 +4028,6 @@
     "en": "Suggest a Topic",
     "si": "මාතෘකාවක් යෝජනා කරන්න",
     "ta": "ஒரு தலைப்பைப் பரிந்துரைக்கவும்"
-  },
-  "Sun": {
-    "en": "Sun",
-    "si": "හිරු",
-    "ta": "சூரியன்"
-  },
-  "Support for applying to international universities across the UK, Australia, Canada, USA, and Malaysia, including assistance with personal statements and visa documentation.": {
-    "en": "Support for applying to international universities across the UK, Australia, Canada, USA, and Malaysia, including assistance with personal statements and visa documentation.",
-    "si": "පුද්ගලික ප්‍රකාශ සහ වීසා ලියකියවිලි සමඟ සහාය ඇතුළුව එක්සත් රාජධානිය, ඕස්ට්‍රේලියාව, කැනඩාව, ඇමරිකා එක්සත් ජනපදය සහ මැලේසියාව පුරා ජාත්‍යන්තර විශ්ව විද්‍යාල සඳහා අයදුම් කිරීමට සහාය.",
-    "ta": "UK, ஆஸ்திரேலியா, கனடா, அமெரிக்கா மற்றும் மலேசியா முழுவதும் உள்ள சர்வதேச பல்கலைக்கழகங்களுக்கு விண்ணப்பிப்பதற்கான ஆதரவு, தனிப்பட்ட அறிக்கைகள் மற்றும் விசா ஆவணங்கள் ஆகியவற்றுடன் உதவி."
   },
   "Supporting Your Child's": {
     "en": "Supporting Your Child's",
@@ -3913,6 +4038,16 @@
     "en": "Supporting children through exams and stress",
     "si": "විභාග සහ මානසික ආතතිය හරහා දරුවන්ට උපකාර කිරීම",
     "ta": "பரீட்சை மற்றும் மன அழுத்தத்தின் மூலம் குழந்தைகளை ஆதரித்தல்"
+  },
+  "TA": {
+    "en": "TA",
+    "si": "සිංහල",
+    "ta": "தமிழ்"
+  },
+  "TBD (We will contact you)": {
+    "en": "TBD (We will contact you)",
+    "si": "තීරණය කර නොමැත (අපි ඔබව සම්බන්ධ කර ගන්නෙමු)",
+    "ta": "தீர்மானிக்கப்படவில்லை (நாங்கள் உங்களைத் தொடர்புகொள்வோம்)"
   },
   "TV Networks (Derana, Hiru), Ad Agencies, Digital Media Agencies": {
     "en": "TV Networks (Derana, Hiru), Ad Agencies, Digital Media Agencies",
@@ -3949,35 +4084,10 @@
     "si": "දෙමළ",
     "ta": "தமிழ்"
   },
-  "Target": {
-    "en": "Target",
-    "si": "ඉලක්කය",
-    "ta": "இலக்கு"
-  },
-  "Teacher": {
-    "en": "Teacher",
-    "si": "ගුරුවරයා",
-    "ta": "ஆசிரியர்"
-  },
-  "Teacher Email": {
-    "en": "Teacher Email",
-    "si": "ගුරු විද්‍යුත් තැපෑල",
-    "ta": "ஆசிரியர் மின்னஞ்சல்"
-  },
-  "Teacher Password": {
-    "en": "Teacher Password",
-    "si": "ගුරු මුරපදය",
-    "ta": "ஆசிரியர் கடவுச்சொல்"
-  },
   "Teacher Portal": {
     "en": "Teacher Portal",
     "si": "ගුරු ද්වාරය",
     "ta": "ஆசிரியர் போர்டல்"
-  },
-  "Teacher — Appointment management": {
-    "en": "Teacher — Appointment management",
-    "si": "ගුරුවරයා - පත්වීම් කළමනාකරණය",
-    "ta": "ஆசிரியர் - நியமன மேலாண்மை"
   },
   "Teaching": {
     "en": "Teaching",
@@ -4009,50 +4119,115 @@
     "si": "තාක්ෂණ ධාරාව",
     "ta": "தொழில்நுட்ப ஸ்ட்ரீம்"
   },
+  "Tell us a bit about yourself – your hobbies, goals, or what you enjoy at school.": {
+    "en": "Tell us a bit about yourself – your hobbies, goals, or what you enjoy at school.",
+    "si": "ඔබ ගැන කෙටි විස්තරයක් අපට පවසන්න – ඔබේ විනෝදාංශ, ඉලක්ක හෝ පාසලේදී ඔබ වඩාත් ප්‍රිය කරන දේවල්.",
+    "ta": "உங்களைப் பற்றிச் சுருக்கமாகக் கூறுங்கள் – உங்கள் பொழுதுபோக்குகள், இலக்குகள் அல்லது பள்ளியில் நீங்கள் விரும்பியவை."
+  },
+  "Tell us about yourself, your goals, and what you enjoy...": {
+    "en": "Tell us about yourself, your goals, and what you enjoy...",
+    "si": "ඔබ ගැන, ඔබේ ඉලක්ක සහ ඔබ ප්‍රිය කරන දේවල් පවසන්න...",
+    "ta": "உங்களைப் பற்றி, உங்கள் இலக்குகள் மற்றும் நீங்கள் விரும்புபவை பற்றிச் சொல்லுங்கள்..."
+  },
   "That's completely normal. Book a career guidance session with our counsellors to take an aptitude assessment and find the right path for you.": {
     "en": "That's completely normal. Book a career guidance session with our counsellors to take an aptitude assessment and find the right path for you.",
     "si": "ඒක සම්පූර්ණයෙන්ම සාමාන්‍ය දෙයක්. යෝග්‍යතා තක්සේරුවක් කිරීමට සහ ඔබ සඳහා නිවැරදි මාර්ගය සොයා ගැනීමට අපගේ උපදේශකයින් සමඟ වෘත්තීය මාර්ගෝපදේශ සැසියක් වෙන්කරවා ගන්න.",
     "ta": "அது முற்றிலும் சாதாரணமானது. தகுதி மதிப்பீட்டை மேற்கொள்ளவும், உங்களுக்கான சரியான பாதையைக் கண்டறியவும் எங்கள் ஆலோசகர்களுடன் ஒரு தொழில் வழிகாட்டல் அமர்வை முன்பதிவு செய்யவும்."
+  },
+  "The Battle of": {
+    "en": "The Battle of",
+    "si": "ලෙජන්ඩ්ස් සටන",
+    "ta": "சமரசம்"
   },
   "The CV building workshop and mock interview sessions gave me the confidence I needed to apply for university scholarships. The counsellors reviewed my application multiple times and coached me on how to present myself. It made all the difference.": {
     "en": "The CV building workshop and mock interview sessions gave me the confidence I needed to apply for university scholarships. The counsellors reviewed my application multiple times and coached me on how to present myself. It made all the difference.",
     "si": "CV ගොඩනැගීමේ වැඩමුළුව සහ ආදර්ශ සම්මුඛ සාකච්ඡා සැසි මට විශ්ව විද්‍යාල ශිෂ්‍යත්ව සඳහා අයදුම් කිරීමට අවශ්‍ය විශ්වාසය ලබා දුන්නේය. උපදේශකයින් මගේ අයදුම්පත කිහිප වතාවක් සමාලෝචනය කර මා ඉදිරිපත් කරන ආකාරය පිළිබඳව මට පුහුණු කළා. එය සියලු වෙනස්කම් ඇති කළේය.",
     "ta": "CV கட்டிடப் பட்டறை மற்றும் போலி நேர்காணல் அமர்வுகள் பல்கலைக்கழக உதவித்தொகைக்கு விண்ணப்பிக்கத் தேவையான நம்பிக்கையை எனக்கு அளித்தன. ஆலோசகர்கள் எனது விண்ணப்பத்தை பலமுறை மதிப்பாய்வு செய்து, என்னை எப்படி முன்வைப்பது என்று எனக்கு பயிற்சி அளித்தனர். இது எல்லா வித்தியாசத்தையும் ஏற்படுத்தியது."
   },
+  "The First Classes": {
+    "en": "The First Classes",
+    "si": "ප්‍රථම ඉංග්‍රීසි පන්ති",
+    "ta": "முதலாவது வகுப்புகள்"
+  },
+  "The Four": {
+    "en": "The Four",
+    "si": "ප්‍රධාන නිවාස හතර",
+    "ta": "நான்கு இல்லங்கள்"
+  },
   "The Four Pillars of": {
     "en": "The Four Pillars of",
     "si": "කණු හතර",
     "ta": "நான்கு தூண்கள்"
+  },
+  "The Iconic Gate": {
+    "en": "The Iconic Gate",
+    "si": "සුවිශේෂී ගේට්ටුව",
+    "ta": "பிரபலமான வாயில்"
+  },
+  "The School Anthem": {
+    "en": "The School Anthem",
+    "si": "විද්‍යාලයීය ගීතය",
+    "ta": "பள்ளி கீதம்"
+  },
+  "The annual cricket & football clash with Anuradhapura Central College – the highlight of the sporting calendar.": {
+    "en": "The annual cricket & football clash with Anuradhapura Central College – the highlight of the sporting calendar.",
+    "si": "අනුරාධපුර මධ්‍ය මහා විද්‍යාලය සමඟ පැවැත්වෙන වාර්ෂික ක්‍රිකට් සහ පාපන්දු තරගය – ක්‍රීඩා දින දර්ශනයේ සුවිශේෂී සන්ධිස්ථානයයි.",
+    "ta": "அனுராதபுரம் மத்திய கல்லூரியுடனான வருடாந்த கிரிக்கெட் மற்றும் கால்பந்து போட்டி – விளையாட்டு நாட்காட்டியின் முக்கிய நிகழ்வு."
   },
   "The career guidance session changed my life. I had no idea what to do after A/Ls, but after career pathway testing I found my passion for engineering. The counsellors helped me prepare my university application and I got accepted into my first choice.": {
     "en": "The career guidance session changed my life. I had no idea what to do after A/Ls, but after career pathway testing I found my passion for engineering. The counsellors helped me prepare my university application and I got accepted into my first choice.",
     "si": "වෘත්තීය මාර්ගෝපදේශන සැසිය මගේ ජීවිතය වෙනස් කළා. A/Ls වලින් පස්සේ මොනවා කරන්නද කියලා මට අදහසක් තිබුණේ නැහැ, නමුත් වෘත්තීය මාර්ග පරීක්ෂාවෙන් පසුව මම ඉංජිනේරු විද්‍යාව සඳහා මගේ ආශාව සොයාගත්තා. මගේ විශ්ව විද්‍යාල අයදුම්පත්‍රය සකස් කිරීමට උපදේශකයින් මට උදව් කළ අතර මගේ පළමු තේරීමට මා පිළිගනු ලැබුවා.",
     "ta": "தொழில் வழிகாட்டுதல் அமர்வு என் வாழ்க்கையை மாற்றியது. A/L களுக்குப் பிறகு என்ன செய்வது என்று எனக்குத் தெரியவில்லை, ஆனால் தொழில் பாதை சோதனைக்குப் பிறகு பொறியியல் மீதான எனது ஆர்வத்தைக் கண்டேன். எனது பல்கலைக்கழக விண்ணப்பத்தைத் தயாரிக்க ஆலோசகர்கள் எனக்கு உதவினார்கள், மேலும் எனது முதல் தேர்வில் நான் ஏற்றுக்கொள்ளப்பட்டேன்."
   },
+  "The celebrated annual big match": {
+    "en": "The celebrated annual big match",
+    "si": "සුප්‍රසිද්ධ වාර්ෂික මහා ක්‍රිකට් තරඟය",
+    "ta": "புகழ்பெற்ற வருடாந்த பெரிய போட்டி"
+  },
+  "The dedicated team guiding St. Joseph's College — carrying forward the motto \"Duty First\" into its 128th year.": {
+    "en": "The dedicated team guiding St. Joseph's College — carrying forward the motto \"Duty First\" into its 128th year.",
+    "si": "ශාන්ත ජෝශප් විද්‍යාලය මෙහෙයවන කැපවූ කණ්ඩායම — විද්‍යාලයේ 128 වන වසරේද \"පළමුව රාජකාරිය\" යන තේමාව පෙරට ගෙන යමින්.",
+    "ta": "செயின்ட் ஜோசப் கல்லூரியை வழிநடத்தும் அர்ப்பணிப்புள்ள குழு — அதன் 128 ஆவது ஆண்டிலும் \"கடமையே முதன்மை\" என்ற கொள்கையுரையை முன் எடுத்துச் செல்கிறது."
+  },
   "The fastest-growing global industry covering software development, data science, cybersecurity, and cloud computing.": {
     "en": "The fastest-growing global industry covering software development, data science, cybersecurity, and cloud computing.",
     "si": "මෘදුකාංග සංවර්ධනය, දත්ත විද්‍යාව, සයිබර් ආරක්‍ෂාව සහ වලාකුළු පරිගණකකරණය ආවරණය වන පරිදි වේගයෙන් වර්ධනය වන ගෝලීය කර්මාන්තය.",
     "ta": "மென்பொருள் மேம்பாடு, தரவு அறிவியல், இணைய பாதுகாப்பு மற்றும் கிளவுட் கம்ப்யூட்டிங் ஆகியவற்றை உள்ளடக்கிய வேகமாக வளர்ந்து வரும் உலகளாவிய தொழில்."
   },
-  "The largest and oldest university in Sri Lanka. Known for its extensive faculties including Medicine, Engineering, Science, and Arts. Admission is highly competitive and based on top Z-scores.": {
-    "en": "The largest and oldest university in Sri Lanka. Known for its extensive faculties including Medicine, Engineering, Science, and Arts. Admission is highly competitive and based on top Z-scores.",
-    "si": "ශ්‍රී ලංකාවේ විශාලතම සහ පැරණිතම විශ්වවිද්‍යාලය. වෛද්‍ය විද්‍යාව, ඉංජිනේරු විද්‍යාව, විද්‍යාව සහ කලා ඇතුළු එහි පුළුල් පීඨ සඳහා ප්‍රසිද්ධය. ඇතුළත් වීම ඉතා තරඟකාරී වන අතර ඉහළම Z ලකුණු මත පදනම් වේ.",
-    "ta": "இலங்கையின் மிகப் பெரிய மற்றும் பழமையான பல்கலைக்கழகம். மருத்துவம், பொறியியல், அறிவியல் மற்றும் கலை உள்ளிட்ட விரிவான பீடங்களுக்கு பெயர் பெற்றது. சேர்க்கை மிகவும் போட்டித்தன்மை வாய்ந்தது மற்றும் சிறந்த Z- மதிப்பெண்களை அடிப்படையாகக் கொண்டது."
+  "The gateway to a world-class education": {
+    "en": "The gateway to a world-class education",
+    "si": "ලෝක මට්ටමේ අධ්‍යාපනයකට පිවිසෙන මාවත",
+    "ta": "உலகத்தரம் வாய்ந்த கல்விக்கான நுழைவாயில்"
+  },
+  "The grandest ceremony of the year, celebrating excellence in academics, sports, arts, and leadership.": {
+    "en": "The grandest ceremony of the year, celebrating excellence in academics, sports, arts, and leadership.",
+    "si": "අධ්‍යයන, ක්‍රීඩා, කලා සහ නායකත්ව විශිෂ්ටතා ඇගයීමට ලක් කෙරෙන වසරේ අති උදකෘෂ්ට උත්සවය.",
+    "ta": "கல்வி, விளையாட்டு, கலை மற்றும் தலைமைத்துவத்தில் சிறந்தவர்களைக் கொண்டாடும் ஆண்டின் மிக உன்னதமான விழா."
   },
   "The leadership camp opened my eyes to skills I never knew I had. I used to be terrified of public speaking. After the communication skills sessions, I represented my school in an inter-school debate and we won. The counsellors genuinely care.": {
     "en": "The leadership camp opened my eyes to skills I never knew I had. I used to be terrified of public speaking. After the communication skills sessions, I represented my school in an inter-school debate and we won. The counsellors genuinely care.",
     "si": "නායකත්ව කඳවුර මගේ දෑස් විවර කළේ මා සතුව නොතිබූ දක්ෂතා වෙතය. මම ඉස්සර ප්‍රසිද්ධියේ කතා කරන්න බයයි. සන්නිවේදන කුසලතා සැසිවාරයෙන් පසු, මම මගේ පාසල නියෝජනය කරමින් අන්තර් පාසල් විවාදයකට සහභාගී වූ අතර අපි ජයග්‍රහණය කළෙමු. උපදේශකයින් අවංකවම සැලකිලිමත් වේ.",
     "ta": "தலைமைத்துவ முகாம் நான் அறிந்திராத திறமைகளுக்கு என் கண்களைத் திறந்தது. நான் பொதுவில் பேசுவதற்கு பயந்தேன். தகவல்தொடர்பு திறன் அமர்வுகளுக்குப் பிறகு, பள்ளிகளுக்கிடையேயான விவாதத்தில் எனது பள்ளியைப் பிரதிநிதித்துவப்படுத்தினேன், நாங்கள் வெற்றி பெற்றோம். ஆலோசகர்கள் உண்மையிலேயே அக்கறை காட்டுகிறார்கள்."
   },
+  "The pride of SJC and its biggest rivalry": {
+    "en": "The pride of SJC and its biggest rivalry",
+    "si": "SJC හි අභිමානය සහ එහි විශාලතම ක්‍රීඩා තරඟකාරිත්වය",
+    "ta": "SJC இன் பெருமை மற்றும் அதன் மிகப்பெரிய போட்டி"
+  },
   "The principles that guide our work and define our commitment to every student we serve.": {
     "en": "The principles that guide our work and define our commitment to every student we serve.",
     "si": "අපගේ කාර්යයට මඟ පෙන්වන සහ අප සේවය කරන සෑම සිසුවෙකුටම අපගේ කැපවීම නිර්වචනය කරන මූලධර්ම.",
     "ta": "எங்கள் பணியை வழிநடத்தும் கொள்கைகள் மற்றும் நாங்கள் சேவை செய்யும் ஒவ்வொரு மாணவருக்கும் எங்கள் அர்ப்பணிப்பை வரையறுக்கிறது."
   },
-  "This page demonstrates the 18 custom emojis that were modified to use": {
-    "en": "This page demonstrates the 18 custom emojis that were modified to use",
-    "si": "මෙම පිටුව භාවිතා කිරීමට වෙනස් කරන ලද අභිරුචි ඉමෝජි 18 පෙන්වයි",
-    "ta": "இந்தப் பக்கம் பயன்படுத்துவதற்கு மாற்றியமைக்கப்பட்ட 18 தனிப்பயன் ஈமோஜிகளை விளக்குகிறது"
+  "The story began in 1874, when Fr. Bonjean started English classes for the children of the North Central Province. On 19 March 1898, Bishop Henri Joulain of Jaffna registered it as a public English school – named after St. Joseph's Church and open to boys of every faith. Today it stands as a Grade 1AB national school and one of the region's most respected institutions.": {
+    "en": "The story began in 1874, when Fr. Bonjean started English classes for the children of the North Central Province. On 19 March 1898, Bishop Henri Joulain of Jaffna registered it as a public English school – named after St. Joseph's Church and open to boys of every faith. Today it stands as a Grade 1AB national school and one of the region's most respected institutions.",
+    "si": "මෙම ඉතිහාසය ආරම්භ වූයේ 1874 වසරේදී බොන්ජියන් පියතුමා විසින් උතුරු මැද පළාතේ දරුවන් වෙනුවෙන් ඉංග්‍රීසි පන්ති ආරම්භ කිරීමත් සමඟිනි. 1898 මාර්තු 19 වන දින, යාපනයේ හෙන්රි ජූලේන් රදගුරුතුමා විසින් පාසල ශාන්ත ජෝශප් දේවස්ථානය නමින් පොදු ඉංග්‍රීසි පාසලක් ලෙස ලියාපදිංචි කරන ලදී. අද වන විට එය 1AB ශ්‍රේණියේ ජාතික පාසලක් වන අතර පළාතේ වඩාත්ම ගෞරවනීය අධ්‍යාපන ආයතනයකි.",
+    "ta": "இந்த வரலாறு 1874 இல் தொடங்கியது, அருட்தந்தை பொன்ஜியன் வட மத்திய மாகாணக் குழந்தைகளுக்காக ஆங்கில வகுப்புகளைத் தொடங்கினார். 1898 மார்ச் 19 அன்று, யாழ்ப்பாண ஆயர் ஹென்றி ஜுலெய்ன் இப்பாடசாலையை செயின்ட் ஜோசப் தேவாலயத்தின் பெயரில் ஒரு பொது ஆங்கிலப் பள்ளியாகப் பதிவு செய்தார். இன்று இது தரம் 1AB தேசியப் பள்ளியாகவும் இப்பிராந்தியத்தின் மிகவும் மதிக்கப்படும் கல்வி நிறுவனங்களில் ஒன்றாகவும் திகழ்கிறது."
+  },
+  "The student portal is currently undergoing scheduled maintenance and improvements. Thank you for your patience — please check back soon.": {
+    "en": "The student portal is currently undergoing scheduled maintenance and improvements. Thank you for your patience — please check back soon.",
+    "si": "ශිෂ්‍ය පෝටලය මේ වන විට නඩත්තු කටයුතු සහ වැඩිදියුණු කිරීම් වලට භාජනය වෙමින් පවතී. ඔබේ ඉවසීමට ස්තූතියි — කරුණාකර ළඟදීම නැවත පරීක්ෂා කරන්න.",
+    "ta": "மாணவர் இணையதளம் தற்போது திட்டமிடப்பட்ட பராமரிப்பு மற்றும் மேம்பாடுகளுக்கு உட்பட்டுள்ளது. உங்கள் பொறுமைக்கு நன்றி — தயவுசெய்து விரைவில் மீண்டும் சரிபார்க்கவும்."
   },
   "This simple breathing technique can calm anxiety, reduce stress, and help you fall asleep faster. Practise it before exams, during stressful moments, or whenever you feel overwhelmed.": {
     "en": "This simple breathing technique can calm anxiety, reduce stress, and help you fall asleep faster. Practise it before exams, during stressful moments, or whenever you feel overwhelmed.",
@@ -4064,18 +4239,8 @@
     "si": "උපදේශනය හරහා",
     "ta": "கவுன்சிலிங் மூலம்"
   },
-  "Time": {
-    "en": "Time",
-    "si": "කාලය",
-    "ta": "நேரம்"
-  },
-  "Timelines": {
-    "en": "Timelines",
-    "si": "කාල නියමයන්",
-    "ta": "காலவரிசைகள்"
-  },
-  "To be the leading career guidance unit in the North Central Province — empowering every Josephian to discover their purpose, develop their potential, and step confidently into the future.": {
-    "en": "To be the leading career guidance unit in the North Central Province — empowering every Josephian to discover their purpose, develop their potential, and step confidently into the future.",
+  "To be the leading career guidance unit in the North Central Province – empowering every Josephian to discover their purpose, develop their potential, and step confidently into the future.": {
+    "en": "To be the leading career guidance unit in the North Central Province – empowering every Josephian to discover their purpose, develop their potential, and step confidently into the future.",
     "si": "උතුරු මැද පළාතේ ප්‍රමුඛතම වෘත්තීය මාර්ගෝපදේශක ඒකකය වීමට - සෑම ජෝසප් ජාතිකයෙකුටම තම අරමුණ සොයා ගැනීමටත්, ඔවුන්ගේ හැකියාවන් වර්ධනය කර ගැනීමටත්, අනාගතයට විශ්වාසයෙන් යුතුව පියවර ගැනීමටත් බලය ලබා දීම.",
     "ta": "வட மத்திய மாகாணத்தில் முன்னணி தொழில் வழிகாட்டல் பிரிவாக இருத்தல் - ஒவ்வொரு ஜோசபியனுக்கும் அவர்களின் நோக்கத்தைக் கண்டறியவும், அவர்களின் திறனை வளர்த்துக் கொள்ளவும், எதிர்காலத்தில் நம்பிக்கையுடன் அடியெடுத்து வைக்கவும்."
   },
@@ -4083,6 +4248,11 @@
     "en": "To provide accessible, confidential, and compassionate counselling services that support the academic, personal, and career development of students at St. Joseph's College.",
     "si": "ශාන්ත ජෝශප් විද්‍යාලයේ සිසුන්ගේ අධ්‍යයන, පුද්ගලික සහ වෘත්තීය සංවර්ධනයට සහාය වන ප්‍රවේශ විය හැකි, රහසිගත සහ දයානුකම්පිත උපදේශන සේවා සැපයීම.",
     "ta": "செயின்ட் ஜோசப் கல்லூரியில் மாணவர்களின் கல்வி, தனிப்பட்ட மற்றும் தொழில் வளர்ச்சிக்கு ஆதரவளிக்கும் அணுகக்கூடிய, ரகசியமான மற்றும் இரக்கமுள்ள ஆலோசனை சேவைகளை வழங்குதல்."
+  },
+  "Today": {
+    "en": "Today",
+    "si": "අද",
+    "ta": "இன்று"
   },
   "Tools, exercises, and guidance to help you manage stress, build resilience, and maintain positive mental health through every stage of school life.": {
     "en": "Tools, exercises, and guidance to help you manage stress, build resilience, and maintain positive mental health through every stage of school life.",
@@ -4104,13 +4274,18 @@
     "si": "UCSC, Moratuwa (IT), SLIIT, IIT, APIIT",
     "ta": "UCSC, மொரட்டுவை (IT), SLIIT, IIT, APIIT"
   },
-  "UGC Handbook release &amp; application dates": {
-    "en": "UGC Handbook release &amp; application dates",
-    "si": "UGC අත්පොත නිකුත් කිරීම සහ අයදුම් කිරීමේ දිනයන්",
-    "ta": "UGC கையேடு வெளியீடு & விண்ணப்ப தேதிகள்"
+  "Uddika Premarathna": {
+    "en": "Uddika Premarathna",
+    "si": "උද්දික ප්‍රේමරත්න",
+    "ta": "உத்திக பிரேமரத்ன"
   },
-  "Understand the aptitude assessments and career pathway mapping we offer — and how you can support your child's interests alongside our professional guidance.": {
-    "en": "Understand the aptitude assessments and career pathway mapping we offer — and how you can support your child's interests alongside our professional guidance.",
+  "Under Maintenance": {
+    "en": "Under Maintenance",
+    "si": "නඩත්තු වෙමින් පවතී",
+    "ta": "பராமரிப்பில் உள்ளது"
+  },
+  "Understand the aptitude assessments and career pathway mapping we offer – and how you can support your child's interests alongside our professional guidance.": {
+    "en": "Understand the aptitude assessments and career pathway mapping we offer – and how you can support your child's interests alongside our professional guidance.",
     "si": "අප විසින් පිරිනමනු ලබන යෝග්‍යතා තක්සේරු කිරීම් සහ වෘත්තීය මාර්ග සිතියම්ගත කිරීම - සහ අපගේ වෘත්තීය මගපෙන්වීම සමඟින් ඔබේ දරුවාගේ අවශ්‍යතා සඳහා ඔබට සහාය විය හැකි ආකාරය තේරුම් ගන්න.",
     "ta": "நாங்கள் வழங்கும் திறன் மதிப்பீடுகள் மற்றும் தொழில் பாதை மேப்பிங்கைப் புரிந்து கொள்ளுங்கள் — மேலும் எங்கள் தொழில்முறை வழிகாட்டுதலுடன் உங்கள் குழந்தையின் நலன்களை நீங்கள் எவ்வாறு ஆதரிக்கலாம்."
   },
@@ -4129,10 +4304,10 @@
     "si": "මානසික සෞඛ්‍යය, අධ්‍යයන කාර්ය සාධනය සහ සමස්ත යහපැවැත්ම සඳහා නින්දේ වැදගත්කම අවබෝධ කර ගැනීම.",
     "ta": "மன ஆரோக்கியம், படிப்பு செயல்திறன் மற்றும் ஒட்டுமொத்த நல்வாழ்வுக்கு தூக்கத்தின் முக்கியத்துவத்தைப் புரிந்துகொள்வது."
   },
-  "Universities": {
-    "en": "Universities",
-    "si": "විශ්ව විද්යාල",
-    "ta": "பல்கலைக்கழகங்கள்"
+  "University": {
+    "en": "University",
+    "si": "විශ්වවිද්‍යාලය",
+    "ta": "பல்கலைக்கழகம்"
   },
   "University Guidance": {
     "en": "University Guidance",
@@ -4154,11 +4329,6 @@
     "si": "විශ්වවිද්‍යාල ගමන",
     "ta": "பல்கலைக்கழக பயணம்"
   },
-  "University Name": {
-    "en": "University Name",
-    "si": "විශ්වවිද්‍යාල නාමය",
-    "ta": "பல்கலைக்கழகத்தின் பெயர்"
-  },
   "University Pathways": {
     "en": "University Pathways",
     "si": "විශ්වවිද්‍යාල මාර්ග",
@@ -4174,36 +4344,6 @@
     "si": "විශ්ව විද්‍යාල අයදුම්පත් සහ ශිෂ්‍යත්ව මාර්ගෝපදේශය",
     "ta": "பல்கலைக்கழக விண்ணப்பம் மற்றும் உதவித்தொகை வழிகாட்டுதல்"
   },
-  "University of Colombo": {
-    "en": "University of Colombo",
-    "si": "කොළඹ විශ්වවිද්‍යාලය",
-    "ta": "கொழும்பு பல்கலைக்கழகம்"
-  },
-  "University of Moratuwa": {
-    "en": "University of Moratuwa",
-    "si": "මොරටුව විශ්වවිද්‍යාලය",
-    "ta": "மொரட்டுவ பல்கலைக்கழகம்"
-  },
-  "University of Nottingham (UK/Malaysia)": {
-    "en": "University of Nottingham (UK/Malaysia)",
-    "si": "නොටින්හැම් විශ්ව විද්‍යාලය (එක්සත් රාජධානිය/මැලේසියාව)",
-    "ta": "நாட்டிங்ஹாம் பல்கலைக்கழகம் (யுகே/மலேசியா)"
-  },
-  "University of Peradeniya": {
-    "en": "University of Peradeniya",
-    "si": "පේරාදෙණිය විශ්වවිද්‍යාලය",
-    "ta": "பேராதனை பல்கலைக்கழகம்"
-  },
-  "University of Toronto (Canada)": {
-    "en": "University of Toronto (Canada)",
-    "si": "ටොරොන්ටෝ විශ්ව විද්‍යාලය (කැනඩාව)",
-    "ta": "டொராண்டோ பல்கலைக்கழகம் (கனடா)"
-  },
-  "University progression guarantees": {
-    "en": "University progression guarantees",
-    "si": "විශ්ව විද්‍යාල ප්‍රගතිය සහතික කරයි",
-    "ta": "பல்கலைக்கழக முன்னேற்றம் உத்தரவாதம்"
-  },
   "Unsure about your": {
     "en": "Unsure about your",
     "si": "ඔබේ ගැන අවිනිශ්චිතයි",
@@ -4214,20 +4354,20 @@
     "si": "ඉදිරි පත්වීම්",
     "ta": "வரவிருக்கும் நியமனங்கள்"
   },
-  "Upcoming Events": {
-    "en": "Upcoming Events",
-    "si": "ඉදිරි සිදුවීම්",
-    "ta": "வரவிருக்கும் நிகழ்வுகள்"
-  },
   "Upcoming Programmes": {
     "en": "Upcoming Programmes",
     "si": "ඉදිරි වැඩසටහන්",
     "ta": "வரவிருக்கும் நிகழ்ச்சிகள்"
   },
-  "Updated Emoji Set – Stroke‑Only Line‑Art": {
-    "en": "Updated Emoji Set – Stroke‑Only Line‑Art",
-    "si": "යාවත්කාලීන කරන ලද ඉමොජි කට්ටලය - ආඝාතය-පමණක් රේඛා-කලා",
-    "ta": "புதுப்பிக்கப்பட்ட ஈமோஜி தொகுப்பு - ஸ்ட்ரோக்-ஒன்லி லைன்-ஆர்ட்"
+  "Upcoming events, workshops, and activities at SJC.": {
+    "en": "Upcoming events, workshops, and activities at SJC.",
+    "si": "SJC හි පැවැත්වීමට නියමිත උත්සව, වැඩමුළු සහ ක්‍රියාකාරකම්.",
+    "ta": "SJC இல் வரவிருக்கும் நிகழ்வுகள், பயிலரங்குகள் மற்றும் செயல்பாடுகள்."
+  },
+  "Updates": {
+    "en": "Updates",
+    "si": "යාවත්කාලීන කිරීම්",
+    "ta": "அறிவிப்புகள்"
   },
   "Upload CV / Resume (optional)": {
     "en": "Upload CV / Resume (optional)",
@@ -4244,23 +4384,18 @@
     "si": "සාර්ථකව උඩුගත කරන ලදී",
     "ta": "வெற்றிகரமாக பதிவேற்றப்பட்டது"
   },
-  "Urgent Support": {
-    "en": "Urgent Support",
-    "si": "හදිසි සහාය",
-    "ta": "அவசர ஆதரவு"
+  "Veteran statesman and Member of Parliament (1947–1989), a leading political figure of independent Sri Lanka.": {
+    "en": "Veteran statesman and Member of Parliament (1947–1989), a leading political figure of independent Sri Lanka.",
+    "si": "ප්‍රවීණ දේශපාලනඥයෙකු සහ පාර්ලිමේන්තු මන්ත්‍රීවරයෙකු (1947-1989), ස්වාධීන ශ්‍රී ලංකාවේ ප්‍රමුඛ දේශපාලන චරිතයකි.",
+    "ta": "மூத்த அரசியல்வாதியும் நாடாளுமன்ற உறுப்பினருமான (1947-1989), சுதந்திர இலங்கையின் முன்னணி அரசியல் தலைவர்களில் ஒருவர்."
   },
-  "Verify Code": {
-    "en": "Verify Code",
-    "si": "කේතය සත්‍යාපනය කරන්න",
-    "ta": "குறியீட்டைச் சரிபார்க்கவும்"
+  "Vice Admiral Sirimevan Ranasinghe": {
+    "en": "Vice Admiral Sirimevan Ranasinghe",
+    "si": "වයිස් ඇඩ්මිරල් සිරිමෙවන් රණසිංහ",
+    "ta": "வைஸ் அட்மிரல் சிறிமேவன் ரணசிங்க"
   },
-  "Verify Your Identity": {
-    "en": "Verify Your Identity",
-    "si": "ඔබගේ අනන්‍යතාවය තහවුරු කරන්න",
-    "ta": "உங்கள் அடையாளத்தைச் சரிபார்க்கவும்"
-  },
-  "View All Events &amp; Workshops →": {
-    "en": "View All Events &amp; Workshops →",
+  "View All Events & Workshops →": {
+    "en": "View All Events & Workshops →",
     "si": "සියලුම සිදුවීම් සහ වැඩමුළු බලන්න →",
     "ta": "அனைத்து நிகழ்வுகளையும் பட்டறைகளையும் காண்க →"
   },
@@ -4268,6 +4403,11 @@
     "en": "View All Services",
     "si": "සියලුම සේවාවන් බලන්න",
     "ta": "அனைத்து சேவைகளையும் பார்க்கவும்"
+  },
+  "View Calendar →": {
+    "en": "View Calendar →",
+    "si": "දින දර්ශනය බලන්න →",
+    "ta": "நாட்காட்டியைப் பார்க்கவும் →"
   },
   "View Career Details": {
     "en": "View Career Details",
@@ -4278,6 +4418,21 @@
     "en": "View Events",
     "si": "සිදුවීම් බලන්න",
     "ta": "நிகழ்வுகளைக் காண்க"
+  },
+  "View Foundations →": {
+    "en": "View Foundations →",
+    "si": "පදනම් පාඨමාලා බලන්න →",
+    "ta": "அடிப்படைப் படிப்புகளைப் பார்க்கவும் →"
+  },
+  "View Local Options →": {
+    "en": "View Local Options →",
+    "si": "දේශීය විකල්ප බලන්න →",
+    "ta": "உள்ளூர் விருப்பங்களைப் பார்க்கவும் →"
+  },
+  "View Pathways →": {
+    "en": "View Pathways →",
+    "si": "උපාධි මාර්ග බලන්න →",
+    "ta": "பட்டப்படிப்பு பாதைகளைப் பார்க்கவும் →"
   },
   "View Resources": {
     "en": "View Resources",
@@ -4294,20 +4449,25 @@
     "si": "ඔබගේ උපදේශන සැසි බලන්න සහ කළමනාකරණය කරන්න.",
     "ta": "உங்கள் ஆலோசனை அமர்வுகளைப் பார்த்து நிர்வகிக்கவும்."
   },
-  "View in My Portal": {
-    "en": "View in My Portal",
-    "si": "මගේ ද්වාරය තුළ බලන්න",
-    "ta": "எனது போர்ட்டலில் பார்க்கவும்"
-  },
-  "Vision, Mission &amp;": {
-    "en": "Vision, Mission &amp;",
+  "Vision, Mission &": {
+    "en": "Vision, Mission &",
     "si": "දැක්ම, මෙහෙවර සහ",
     "ta": "பார்வை, பணி &"
+  },
+  "Visit Official Website →": {
+    "en": "Visit Official Website →",
+    "si": "නිල වෙබ් අඩවියට පිවිසෙන්න →",
+    "ta": "அதிகாரப்பூர்வ இணையதளத்தைப் பார்வையிடவும் →"
   },
   "Visit the Counselling Unit office during school hours": {
     "en": "Visit the Counselling Unit office during school hours",
     "si": "පාසල් වේලාව තුළ උපදේශන ඒකක කාර්යාලයට පැමිණෙන්න",
     "ta": "பள்ளி நேரங்களில் கவுன்சிலிங் பிரிவு அலுவலகத்தை பார்வையிடவும்"
+  },
+  "Visit the counselling unit – you don't need to go through it alone": {
+    "en": "Visit the counselling unit – you don't need to go through it alone",
+    "si": "උපදේශන ඒකකයට පිවිසෙන්න - ඔබට එය තනිවම කිරීමට අවශ්‍ය නැත",
+    "ta": "ஆலோசனைப் பிரிவைப் பார்வையிடவும் - நீங்கள் தனியாகச் செல்ல வேண்டியதில்லை"
   },
   "Visit the counselling unit — you don't need to go through it alone": {
     "en": "Visit the counselling unit — you don't need to go through it alone",
@@ -4339,10 +4499,10 @@
     "si": "අපි ශිෂ්‍ය මානසික සෞඛ්‍යය සහ චිත්තවේගීය යහපැවැත්මේ ප්‍රධාන ක්ෂේත්‍ර හරහා සම්පත් සහ වැඩමුළු පිරිනමන්නෙමු.",
     "ta": "மாணவர்களின் மன ஆரோக்கியம் மற்றும் உணர்ச்சி நல்வாழ்வின் முக்கிய பகுதிகள் முழுவதும் வளங்கள் மற்றும் பட்டறைகளை நாங்கள் வழங்குகிறோம்."
   },
-  "We sent a 6-digit code to your email.": {
-    "en": "We sent a 6-digit code to your email.",
-    "si": "අපි ඔබේ විද්‍යුත් තැපෑලට ඉලක්කම් 6ක කේතයක් යැව්වෙමු.",
-    "ta": "உங்கள் மின்னஞ்சலுக்கு 6 இலக்கக் குறியீட்டை அனுப்பியுள்ளோம்."
+  "We will contact you to schedule": {
+    "en": "We will contact you to schedule",
+    "si": "හමුවීම වෙන්කරවා ගැනීම සඳහා අපි ඔබව සම්බන්ධ කර ගන්නෙමු",
+    "ta": "அட்டவணையைத் தீர்மானிக்க நாங்கள் உங்களைத் தொடர்புகொள்வோம்"
   },
   "Website": {
     "en": "Website",
@@ -4379,6 +4539,11 @@
     "si": "සුවතා සහාය",
     "ta": "ஆரோக்கிய ஆதரவு"
   },
+  "What Is The Issue": {
+    "en": "What Is The Issue",
+    "si": "ගැටලුව කුමක්ද",
+    "ta": "பிரச்சனை என்ன"
+  },
   "What Josephians": {
     "en": "What Josephians",
     "si": "මොකක්ද ජොසපියන්",
@@ -4388,6 +4553,16 @@
     "en": "What We Offer",
     "si": "අපි ඉදිරිපත් කරන දේ",
     "ta": "நாங்கள் என்ன வழங்குகிறோம்"
+  },
+  "What is your Class ( A-F ) *": {
+    "en": "What is your Class ( A-F ) *",
+    "si": "ඔබේ පන්තිය කුමක්ද ( A-F ) *",
+    "ta": "உங்கள் வகுப்பு எது ( A-F ) *"
+  },
+  "What is your Grade *": {
+    "en": "What is your Grade *",
+    "si": "ඔබේ ශ්‍රේණිය කුමක්ද *",
+    "ta": "உங்கள் தரம் எது *"
   },
   "What to Expect at Our Events": {
     "en": "What to Expect at Our Events",
@@ -4399,15 +4574,15 @@
     "si": "අපි උදව් කරන දේ",
     "ta": "நாம் என்ன உதவுகிறோம்"
   },
-  "What would you like to discuss? (optional)": {
-    "en": "What would you like to discuss? (optional)",
-    "si": "ඔබ සාකච්ඡා කිරීමට කැමති කුමක්ද? (විකල්ප)",
-    "ta": "நீங்கள் என்ன விவாதிக்க விரும்புகிறீர்கள்? (விரும்பினால்)"
+  "What would you like to discuss?": {
+    "en": "What would you like to discuss?",
+    "si": "ඔබ සාකච්ඡා කිරීමට කැමති කුමක් ගැනද?",
+    "ta": "நீங்கள் எதைப் பற்றி விவாதிக்க விரும்புகிறீர்கள்?"
   },
-  "What's Coming Up": {
-    "en": "What's Coming Up",
-    "si": "මොනවද එන්නෙ",
-    "ta": "என்ன வருகிறது"
+  "What's Happening": {
+    "en": "What's Happening",
+    "si": "සිදුවීම්",
+    "ta": "நிகழ்வுகள்"
   },
   "When I was going through a really difficult time at home, my grades dropped and I lost motivation. The one-to-one counselling sessions gave me a safe space to talk. The counsellor helped me refocus and build a plan. I'm genuinely grateful.": {
     "en": "When I was going through a really difficult time at home, my grades dropped and I lost motivation. The one-to-one counselling sessions gave me a safe space to talk. The counsellor helped me refocus and build a plan. I'm genuinely grateful.",
@@ -4419,6 +4594,16 @@
     "si": "ඔබට අධික ලෙස දැනෙන විට",
     "ta": "நீங்கள் அதிகமாக உணரும்போது"
   },
+  "Where curiosity meets discovery": {
+    "en": "Where curiosity meets discovery",
+    "si": "කුතුහලය සහ සොයාගැනීම් හමුවන තැන",
+    "ta": "ஆர்வமும் கண்டுபிடிப்பும் சந்திக்கும் இடம்"
+  },
+  "Where great minds are shaped": {
+    "en": "Where great minds are shaped",
+    "si": "විශිෂ්ට මනස් හැඩගැස්වෙන තැන",
+    "ta": "சிறந்த சிந்தனைகள் வடிவமைக்கப்படும் இடம்"
+  },
   "Who We Are": {
     "en": "Who We Are",
     "si": "අපි කවුද",
@@ -4428,11 +4613,6 @@
     "en": "Why Choose Us",
     "si": "ඇයි අපිව තෝරගන්නේ",
     "ta": "எங்களை ஏன் தேர்வு செய்யவும்"
-  },
-  "Workshops": {
-    "en": "Workshops",
-    "si": "වැඩමුළු",
-    "ta": "பட்டறைகள்"
   },
   "Workshops Available": {
     "en": "Workshops Available",
@@ -4444,6 +4624,16 @@
     "si": "වැඩමුළු, සම්පත් සහ කණ්ඩායම් සැසි ආතති කළමනාකරණය, විභාග කාංසාව, සිහිකල්පනාව සහ සිසුන් තුළ චිත්තවේගීය ඔරොත්තු දීමේ හැකියාව ගොඩනැගීම කෙරෙහි අවධානය යොමු කරන ලදී.",
     "ta": "பட்டறைகள், வளங்கள் மற்றும் குழு அமர்வுகள் மன அழுத்த மேலாண்மை, தேர்வு கவலை, நினைவாற்றல் மற்றும் மாணவர்களின் உணர்ச்சி ரீதியான பின்னடைவை உருவாக்குதல் ஆகியவற்றில் கவனம் செலுத்துகின்றன."
   },
+  "Write details about the issue or topics you'd like guidance on...": {
+    "en": "Write details about the issue or topics you'd like guidance on...",
+    "si": "ඔබට උපදෙස් අවශ්‍ය ගැටලුව හෝ මාතෘකා පිළිබඳ විස්තර ලියන්න...",
+    "ta": "உங்களுக்கு வழிகாட்டல் தேவைப்படும் சிக்கல் அல்லது தலைப்புகள் பற்றிய விவரங்களை எழுதவும்..."
+  },
+  "Write down what is worrying you – getting it out of your head helps": {
+    "en": "Write down what is worrying you – getting it out of your head helps",
+    "si": "ඔබ කනස්සල්ලට පත්වන දේ ලියන්න - එය ඔබේ හිසෙන් ඉවත් කිරීමට උපකාරී වේ",
+    "ta": "நீங்கள் கவலைப்படுவதை எழுதுங்கள் - அதை உங்கள் தலையில் இருந்து வெளியேற்றுவது உதவுகிறது"
+  },
   "Write down what is worrying you — getting it out of your head helps": {
     "en": "Write down what is worrying you — getting it out of your head helps",
     "si": "ඔබ කනස්සල්ලට පත්වන දේ ලියන්න - එය ඔබේ හිසෙන් ඉවත් කිරීමට උපකාරී වේ",
@@ -4454,55 +4644,55 @@
     "si": "ලිවීම",
     "ta": "எழுதுதல்"
   },
-  "You're Registered!": {
-    "en": "You're Registered!",
-    "si": "ඔබ ලියාපදිංචි වී ඇත!",
-    "ta": "நீங்கள் பதிவு செய்துள்ளீர்கள்!"
+  "Years of Legacy": {
+    "en": "Years of Legacy",
+    "si": "වසර ගණනාවක උරුමය",
+    "ta": "பல வருட பாரம்பரியம்"
   },
   "Your Future Starts Here": {
     "en": "Your Future Starts Here",
     "si": "ඔබේ අනාගතය මෙතැනින් ආරම්භ වේ",
     "ta": "உங்கள் எதிர்காலம் இங்கே தொடங்குகிறது"
   },
-  "Your Information": {
-    "en": "Your Information",
-    "si": "ඔබේ තොරතුරු",
-    "ta": "உங்கள் தகவல்"
-  },
   "Your Journey with": {
     "en": "Your Journey with",
     "si": "සමඟ ඔබේ ගමන",
     "ta": "உடன் உங்கள் பயணம்"
+  },
+  "Your Mental Wellness Matters": {
+    "en": "Your Mental Wellness Matters",
+    "si": "ඔබේ මානසික සුවතාවය වැදගත් වේ",
+    "ta": "உங்கள் மனநலம் முக்கியமானது"
+  },
+  "Your Name *": {
+    "en": "Your Name *",
+    "si": "ඔබේ නම *",
+    "ta": "உங்கள் பெயர் *"
   },
   "Your Wellbeing Matters": {
     "en": "Your Wellbeing Matters",
     "si": "ඔබේ යහපැවැත්ම වැදගත් වේ",
     "ta": "உங்கள் நல்வாழ்வு முக்கியம்"
   },
-  "Your counselling session has been submitted. You will receive a confirmation soon. Please arrive 5 minutes before your appointment time.": {
-    "en": "Your counselling session has been submitted. You will receive a confirmation soon. Please arrive 5 minutes before your appointment time.",
-    "si": "ඔබගේ උපදේශන සැසිය ඉදිරිපත් කර ඇත. ඔබට ඉක්මනින් තහවුරු කිරීමක් ලැබෙනු ඇත. කරුණාකර ඔබගේ හමුවීම් වේලාවට විනාඩි 5කට පෙර පැමිණෙන්න.",
-    "ta": "உங்கள் ஆலோசனை அமர்வு சமர்ப்பிக்கப்பட்டது. நீங்கள் விரைவில் உறுதிப்படுத்தலைப் பெறுவீர்கள். உங்கள் சந்திப்பு நேரத்திற்கு 5 நிமிடங்களுக்கு முன் வந்து சேருங்கள்."
+  "Your full name": {
+    "en": "Your full name",
+    "si": "ඔබේ සම්පූර්ණ නම",
+    "ta": "உங்கள் முழு பெயர்"
   },
   "Your personalised gateway to counselling, career guidance, and academic resources at St. Joseph's College.": {
     "en": "Your personalised gateway to counselling, career guidance, and academic resources at St. Joseph's College.",
     "si": "ශාන්ත ජෝශප් විද්‍යාලයේ උපදේශනය, වෘත්තීය මාර්ගෝපදේශනය සහ අධ්‍යයන සම්පත් සඳහා ඔබේ පුද්ගලාරෝපිත ද්වාරය.",
     "ta": "செயின்ட் ஜோசப் கல்லூரியில் ஆலோசனை, தொழில் வழிகாட்டுதல் மற்றும் கல்வி ஆதாரங்களுக்கான உங்கள் தனிப்பயனாக்கப்பட்ட நுழைவாயில்."
   },
-  "Your registration has been received. Details will be shared by your form teacher closer to the event date. See you there!": {
-    "en": "Your registration has been received. Details will be shared by your form teacher closer to the event date. See you there!",
-    "si": "ඔබගේ ලියාපදිංචිය ලැබී ඇත. සිදුවීම් දිනයට ආසන්නව ඔබේ පෝරම ගුරුවරයා විසින් විස්තර බෙදාගනු ඇත. එහිදී ඔබව හමුවෙමු!",
-    "ta": "உங்கள் பதிவு பெறப்பட்டது. நிகழ்வு தேதிக்கு அருகில் உங்கள் படிவ ஆசிரியரால் விவரங்கள் பகிரப்படும். அங்கே சந்திப்போம்!"
+  "Your registration is pending admin approval. You will be notified once your account is activated. This usually takes 1—2 school days.": {
+    "en": "Your registration is pending admin approval. You will be notified once your account is activated. This usually takes 1—2 school days.",
+    "si": "ඔබේ ලියාපදිංචිය පරිපාලක අනුමැතිය සඳහා රැඳී පවතී. ඔබේ ගිණුම සක්‍රීය වූ පසු ඔබට දැනුම් දෙනු ලැබේ. මේ සඳහා සාමාන්‍යයෙන් පාසල් දින 1-2ක් ගත වේ.",
+    "ta": "உங்கள் பதிவு நிர்வாகியின் அனுமதிக்காகக் காத்திருக்கிறது. உங்கள் கணக்கு செயல்படுத்தப்பட்டதும் உங்களுக்குத் தெரிவிக்கப்படும். இதற்குப் பொதுவாக 1—2 பள்ளி நாட்கள் ஆகும்."
   },
-  "Z-Score tracking and District quotas": {
-    "en": "Z-Score tracking and District quotas",
-    "si": "Z-ස්කෝර් ලුහුබැඳීම සහ දිස්ත්‍රික් කෝටාවන්",
-    "ta": "Z-ஸ்கோர் கண்காணிப்பு மற்றும் மாவட்ட ஒதுக்கீடுகள்"
-  },
-  "and": {
-    "en": "and",
-    "si": "සහ",
-    "ta": "மற்றும்"
+  "Your request has been sent successfully. Our Guidance Unit will review your issue and contact you via your preferred contact method to confirm the date and time.": {
+    "en": "Your request has been sent successfully. Our Guidance Unit will review your issue and contact you via your preferred contact method to confirm the date and time.",
+    "si": "ඔබේ ඉල්ලීම සාර්ථකව යවන ලදී. අපගේ උපදේශන ඒකකය ඔබේ ගැටලුව සමාලෝචනය කර, හමුවීමේ දිනය සහ වේලාව තහවුරු කිරීමට ඔබ කැමති සන්නිවේදන ක්‍රමය ඔස්සේ ඔබව සම්බන්ධ කර ගනු ඇත.",
+    "ta": "உங்கள் கோரிக்கை வெற்றிகரமாக அனுப்பப்பட்டது. எங்கள் ஆலோசனைப் பிரிவு உங்கள் சிக்கலை ஆய்வு செய்து, சந்திப்பு தேதி & நேரத்தை உறுதிப்படுத்த நீங்கள் விரும்பிய தொடர்பு முறை மூலம் உங்களைத் தொடர்பு கொள்ளும்."
   },
   "career path?": {
     "en": "career path?",
@@ -4514,15 +4704,20 @@
     "si": "උපදේශකයින්?",
     "ta": "ஆலோசகர்களா?"
   },
+  "e.g. 10A": {
+    "en": "e.g. 10A",
+    "si": "උදා: 10A",
+    "ta": "உதா: 10A"
+  },
+  "e.g. 1st Place — Inter-school Debate 2024": {
+    "en": "e.g. 1st Place — Inter-school Debate 2024",
+    "si": "උදා: 1 වන ස්ථානය — පාසල් අතර විවාද තරගය 2024",
+    "ta": "உதா: முதலிடம் — பாடசாலைகளுக்கிடையிலான விவாதம் 2024"
+  },
   "event or workshop?": {
     "en": "event or workshop?",
     "si": "උත්සවයක් හෝ වැඩමුළුවක්?",
     "ta": "நிகழ்வு அல்லது பட்டறை?"
-  },
-  "fill=\"none\"": {
-    "en": "fill=\"none\"",
-    "si": "පුරවන්න = \"කිසිවක් නැත\"",
-    "ta": "நிரப்பு = \"இல்லை\""
   },
   "first session?": {
     "en": "first session?",
@@ -4539,29 +4734,119 @@
     "si": "info@sjc.lk",
     "ta": "info@sjc.lk"
   },
+  "kamal@email.com": {
+    "en": "kamal@email.com",
+    "si": "kamal@email.com",
+    "ta": "kamal@email.com"
+  },
   "resume.pdf": {
     "en": "resume.pdf",
     "si": "resume.pdf",
     "ta": "resume.pdf"
   },
-  "stroke=\"currentColor\"": {
-    "en": "stroke=\"currentColor\"",
-    "si": "ආඝාතය = \"වත්මන් වර්ණ\"",
-    "ta": "பக்கவாதம்=\"தற்போதைய நிறம்\""
+  "sjc.counselling.anuradhapura@gmail.com": {
+    "en": "sjc.counselling.anuradhapura@gmail.com",
+    "si": "sjc.counselling.anuradhapura@gmail.com",
+    "ta": "sjc.counselling.anuradhapura@gmail.com"
+  },
+  "student@email.com": {
+    "en": "student@email.com",
+    "si": "student@email.com",
+    "ta": "student@email.com"
+  },
+  "the": {
+    "en": "the",
+    "si": "the",
+    "ta": "the"
+  },
+  "the Nation": {
+    "en": "the Nation",
+    "si": "දේශය",
+    "ta": "தேசம்"
+  },
+  "your@email.com": {
+    "en": "your@email.com",
+    "si": "your@email.com",
+    "ta": "your@email.com"
+  },
+  "© 2026 SJC Counselling - St. Joseph's College, Anuradhapura": {
+    "en": "© 2026 SJC Counselling - St. Joseph's College, Anuradhapura",
+    "si": "© 2026 SJC උපදේශනය - ශාන්ත ජෝශප් විද්‍යාලය, අනුරාධපුර",
+    "ta": "© 2026 SJC கவுன்சிலிங் - செயின்ட் ஜோசப் கல்லூரி, அனுராதபுரம்"
+  },
+  "© 2026 SJC Counselling –": {
+    "en": "© 2026 SJC Counselling –",
+    "si": "© 2026 SJC උපදේශනය —",
+    "ta": "© 2026 SJC ஆலோசனை —"
+  },
+  "· Developed by": {
+    "en": "· Developed by",
+    "si": " ·  විසින් සංවර්ධනය කරන ලදී",
+    "ta": " ·  உருவாக்கியது"
+  },
+  "âš¡ Foundation Programs": {
+    "en": "âš¡ Foundation Programs",
+    "si": "⚡ පදනම් පාඨමාලා",
+    "ta": "⚡ அடிப்படைப் படிப்புகள்"
+  },
+  "– A.A. Milne": {
+    "en": "– A.A. Milne",
+    "si": "- ඒ.ඒ. මිල්න්",
+    "ta": "- ஏ.ஏ. மில்னே"
   },
   "— A.A. Milne": {
     "en": "— A.A. Milne",
     "si": "- ඒ.ඒ. මිල්න්",
     "ta": "- ஏ.ஏ. மில்னே"
   },
+  "— home to 30,000+ students — nurtures futures through expert counselling, career guidance, and compassionate mental wellness support.": {
+    "en": "— home to 30,000+ students — nurtures futures through expert counselling, career guidance, and compassionate mental wellness support.",
+    "si": "— සිසුන් 30,000 කට අධික සංඛ්‍යාවකගේ නිවහන වන — විශේෂඥ උපදේශනය, වෘත්තීය මාර්ගෝපදේශනය සහ කාරුණික මානසික සුවතා සහාය හරහා අනාගතය පෝෂණය කරයි.",
+    "ta": "— 30,000 க்கும் மேற்பட்ட மாணவர்களின் புகலிடம் — நிபுணத்துவ ஆலோசனை, தொழில் வழிகாட்டல் மற்றும் அன்பான மனநல ஆதரவு மூலம் எதிர்காலத்தை வளர்க்கிறது."
+  },
   "← Back": {
     "en": "← Back",
     "si": "← ආපසු",
     "ta": "← பின்"
   },
-  "← Back to Home": {
-    "en": "← Back to Home",
-    "si": "← ආපසු නිවසට",
-    "ta": "← முகப்புக்குத் திரும்பு"
+  "← Back to University Guidance": {
+    "en": "← Back to University Guidance",
+    "si": "← නැවත විශ්වවිද්‍යාල මාර්ගෝපදේශනය වෙත",
+    "ta": "← பல்கலைக்கழக வழிகாட்டுதலுக்குத் திரும்புக"
+  },
+  "✈️ Foreign Universities": {
+    "en": "✈️ Foreign Universities",
+    "si": "✈️ විදේශීය විශ්වවිද්‍යාල",
+    "ta": "✈️ வெளிநாட்டுப் பல்கலைக்கழகங்கள்"
+  },
+  "✉ sjc.counselling.anuradhapura@gmail.com": {
+    "en": "✉ sjc.counselling.anuradhapura@gmail.com",
+    "si": "✉ sjc.counselling.anuradhapura@gmail.com",
+    "ta": "✉ sjc.counselling.anuradhapura@gmail.com"
+  },
+  "✓ Mood saved – thanks for checking in with yourself!": {
+    "en": "✓ Mood saved – thanks for checking in with yourself!",
+    "si": "✓ මනෝභාවය සුරකින ලදි – ඔබ සමඟ පරීක්ෂා කිරීම ගැන ස්තූතියි!",
+    "ta": "✓ மனநிலை சேமிக்கப்பட்டது — உங்களுடன் சரிபார்த்ததற்கு நன்றி!"
+  },
+  "🎓 Degree Pathways": {
+    "en": "🎓 Degree Pathways",
+    "si": "🎓 උපාධි පාඨමාලා",
+    "ta": "🎓 பட்டப்படிப்பு பாதைகள்"
+  },
+  "🏛️ Sri Lankan Universities": {
+    "en": "🏛️ Sri Lankan Universities",
+    "si": "🏛️ ශ්‍රී ලාංකික විශ්වවිද්‍යාල",
+    "ta": "🏛️ இலங்கை பல்கலைக்கழகங்கள்"
+  },
+  "📅 Application Deadlines": {
+    "en": "📅 Application Deadlines",
+    "si": "📅 අයදුම්පත් කැඳවීමේ අවසාන දිනයන්",
+    "ta": "📅 விண்ணப்ப காலக்கெடு"
+  },
+  "📋 Required Qualifications": {
+    "en": "📋 Required Qualifications",
+    "si": "📋 අවශ්‍ය සුදුසුකම්",
+    "ta": "📋 தேவையான தகுதிகள்"
   }
 }
