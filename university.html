@@ -544,12 +544,37 @@ document.addEventListener('DOMContentLoaded', function(){
   const foreignGrid = document.getElementById('foreignGrid');
 
   // universitiesData is a local script, not a network fetch, so it's ready
-  // instantly — too fast to actually see the skeleton cards. Hold them on
-  // screen for a minimum time (same idea as the page loader's MIN_MS) so the
-  // shimmer is actually visible instead of flashing for a few milliseconds.
+  // instantly — too fast to actually see the skeleton cards. Worse, the
+  // full-screen splash loader (#sjc-page-loader) stays up well past
+  // DOMContentLoaded, so an immediate setTimeout here finishes while still
+  // hidden behind it and the swap is never actually visible. Wait for the
+  // splash to actually be gone first, then hold the skeletons for a minimum
+  // time (same idea as the page loader's own MIN_MS) before swapping in the
+  // real cards.
   var SKEL_MIN_MS = 500;
-  var skelShownAt = Date.now();
-  setTimeout(populateGrids, Math.max(0, SKEL_MIN_MS - (Date.now() - skelShownAt)));
+
+  function afterSplash(cb) {
+    var splash = document.getElementById('sjc-page-loader');
+    if (!splash) { cb(); return; }
+    var done = false;
+    var obs = new MutationObserver(function () {
+      if (done || document.body.contains(splash)) return;
+      done = true;
+      obs.disconnect();
+      cb();
+    });
+    obs.observe(document.body, { childList: true });
+    setTimeout(function () {
+      if (done) return;
+      done = true;
+      obs.disconnect();
+      cb();
+    }, 5000);
+  }
+
+  afterSplash(function () {
+    setTimeout(populateGrids, SKEL_MIN_MS);
+  });
 
   function populateGrids() {
   localGrid.querySelectorAll('.uni-skel-card').forEach(el => el.remove());
