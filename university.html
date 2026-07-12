@@ -241,7 +241,7 @@ footer{background:var(--cream);border-top:1px solid var(--cream-3);padding:70px 
 
   <link rel="stylesheet" href="/custom_select.css?v=6" />
   <link rel="icon" type="image/x-icon" href="./favicon-rounded.ico">
-  <link rel="stylesheet" href="/loader.css?v=16">
+  <link rel="stylesheet" href="/loader.css?v=17">
 </head>
 <body>
   <div id="sjc-page-loader">
@@ -543,6 +543,15 @@ document.addEventListener('DOMContentLoaded', function(){
   const localGrid = document.getElementById('localGrid');
   const foreignGrid = document.getElementById('foreignGrid');
 
+  // universitiesData is a local script, not a network fetch, so it's ready
+  // instantly — too fast to actually see the skeleton cards. Hold them on
+  // screen for a minimum time (same idea as the page loader's MIN_MS) so the
+  // shimmer is actually visible instead of flashing for a few milliseconds.
+  var SKEL_MIN_MS = 500;
+  var skelShownAt = Date.now();
+  setTimeout(populateGrids, Math.max(0, SKEL_MIN_MS - (Date.now() - skelShownAt)));
+
+  function populateGrids() {
   localGrid.querySelectorAll('.uni-skel-card').forEach(el => el.remove());
   foreignGrid.querySelectorAll('.uni-skel-card').forEach(el => el.remove());
 
@@ -553,6 +562,7 @@ document.addEventListener('DOMContentLoaded', function(){
     if(uni.type === 'local') localGrid.appendChild(el);
     else foreignGrid.appendChild(el);
   });
+  }
 
   // Filter tabs
   document.querySelectorAll('.uni-tab').forEach(btn => {

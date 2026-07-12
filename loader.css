@@ -137,7 +137,7 @@
   inset: 0;
   width: 0%;
   border-radius: 99px;
-  background: linear-gradient(90deg, #9b0618, #e20c22 60%, #ffce6b);
+  background: linear-gradient(90deg, #7a1818, #b03030 60%, #e8c96a);
   transition: width 0.3s ease;
 }
 
