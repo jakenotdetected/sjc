@@ -139,7 +139,12 @@
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: linear-gradient(135deg, #7a1818 0%, #5a0f0f 100%);
+  /* Same dark tone as the splash loader's own background (not the bright
+     maroon/red brand accent) — as this wipes back out on every page/tab
+     navigation, a saturated red here reads as a stray "red dash" flashing
+     across the screen for a few frames. Matching the loader's own backdrop
+     makes the transition invisible instead of an accent-colored flash. */
+  background: radial-gradient(1200px 600px at 50% 38%, #2a0a0a 0%, #1a0606 55%, #120404 100%);
   pointer-events: none;
   transform: translateX(-100%);
   transition: none;
