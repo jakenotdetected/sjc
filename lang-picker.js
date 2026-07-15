@@ -79,7 +79,17 @@
 
     overlay.appendChild(card);
     document.body.appendChild(overlay);
-    requestAnimationFrame(function () { overlay.classList.add('sjc-lp-in'); });
+    // Same rAF-starvation issue as the page-transition curtain: if this tab
+    // isn't actively visible when the page loads, requestAnimationFrame can
+    // be paused indefinitely, so fall back to a plain timeout too.
+    var fadedIn = false;
+    function fadeIn() {
+      if (fadedIn) return;
+      fadedIn = true;
+      overlay.classList.add('sjc-lp-in');
+    }
+    requestAnimationFrame(fadeIn);
+    setTimeout(fadeIn, 60);
   }
 
   function pick(code) {

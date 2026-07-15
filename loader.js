@@ -76,12 +76,22 @@
     var c = getCurtain();
     c.classList.add('sjc-curtain-start');
     c.offsetHeight;
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () {
-        c.classList.remove('sjc-curtain-start');
-        c.classList.add('sjc-curtain-out');
-      });
-    });
+    var done = false;
+    function slideOut() {
+      if (done) return;
+      done = true;
+      c.classList.remove('sjc-curtain-start');
+      c.classList.add('sjc-curtain-out');
+    }
+    // requestAnimationFrame is paused by the browser while a tab is
+    // backgrounded (opened from another app, switched away from mid-load,
+    // etc). If that happens here the curtain gets stuck fully covering the
+    // screen — and since the whole point of this element is to sit on top
+    // of the page, a stuck full-screen div silently eats every click even
+    // though the page underneath looks completely normal. A plain timeout
+    // fallback guarantees this always resolves regardless of tab focus.
+    requestAnimationFrame(function () { requestAnimationFrame(slideOut); });
+    setTimeout(slideOut, 200);
   }
 
   document.addEventListener('click', function (e) {
